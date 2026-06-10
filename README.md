@@ -1,36 +1,40 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 近人協議
 
-## Getting Started
+《近人協議》是一個 AI 文明後題材的原創縱向網漫網站。首版包含完整 20 集第一季、200 張分鏡資產、播放器式閱讀器、PWA 安裝圖示與社群分享圖。
 
-First, run the development server:
+## Features
+
+- Next.js App Router + TypeScript + Tailwind CSS
+- 手機優先縱向 webtoon 閱讀
+- 播放/暫停、上一格/下一格、章節切換與閱讀進度保存
+- 20 集完整故事資料與本地分鏡資產
+- PWA manifest、service worker、install icon、Apple touch icon
+- Open Graph / Twitter 分享預覽圖
+
+## Commands
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm run lint
+npm run build
+npm run assets
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+`npm run assets` 會重新產生 `public/comic/season-01/` 的 200 張分鏡 SVG，以及 `public/icons/` 的 PWA 圖示。
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Content
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- 主題：AI 文明後，人與 AI 逐漸失去界線
+- 標題：《近人協議》
+- 語言：繁體中文
+- 分級：13+ 科幻劇情
+- 美術方向：電影概念感，冷調城市、霓虹、寫實比例、強光影
 
-## Learn More
+## Deployment
 
-To learn more about Next.js, take a look at the following resources:
+這是靜態可預渲染的 Next.js 專案，可直接部署到 Vercel。部署前請確認：
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+npm run lint
+npm run build
+```
