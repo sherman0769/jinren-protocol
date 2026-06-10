@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import { season } from "@/lib/comic";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -16,15 +15,15 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://jinren-protocol.vercel.app"),
   title: {
-    default: "漫畫書庫｜原創漫畫閱讀器",
-    template: "%s｜漫畫書庫",
+    default: "書籍書庫｜數位閱讀器",
+    template: "%s｜書籍書庫",
   },
-  description: "一個可持續新增原創漫畫作品、章節與正式圖像的網頁漫畫閱讀器。",
-  applicationName: "漫畫書庫",
+  description: "一個可持續新增書籍、章節與長文內容的網頁書籍閱讀器。",
+  applicationName: "書籍書庫",
   appleWebApp: {
     capable: true,
     statusBarStyle: "black-translucent",
-    title: "漫畫書庫",
+    title: "書籍書庫",
   },
   manifest: "/manifest.webmanifest",
   icons: {
@@ -36,24 +35,24 @@ export const metadata: Metadata = {
     shortcut: ["/favicon-48.png"],
   },
   openGraph: {
-    title: `${season.title}｜${season.subtitle}`,
-    description: season.description,
+    title: "書籍書庫｜數位閱讀器",
+    description: "選擇一本書，進入乾淨、可調字級、有進度保存的長文閱讀器。",
     type: "website",
     locale: "zh_TW",
     images: [
       {
-        url: season.ogImage,
+        url: "/books/exponential-ai-life/cover.png",
         width: 1200,
         height: 630,
-        alt: `${season.title} 分享預覽圖`,
+        alt: "書籍書庫分享預覽圖",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: `${season.title}｜${season.subtitle}`,
-    description: season.description,
-    images: [season.ogImage],
+    title: "書籍書庫｜數位閱讀器",
+    description: "選擇一本書，進入乾淨、可調字級、有進度保存的長文閱讀器。",
+    images: ["/books/exponential-ai-life/cover.png"],
   },
 };
 

@@ -1,10 +1,8 @@
-const CACHE_NAME = "jinren-protocol-v1";
+const CACHE_NAME = "digital-book-library-v1";
 const CORE_ASSETS = [
   "/",
   "/manifest.webmanifest",
-  "/comic/assets/cover.png",
-  "/comic/assets/og-image.png",
-  "/comic/assets/character-reference.png",
+  "/books/exponential-ai-life/cover.png",
   "/icons/icon-192.png",
   "/icons/icon-512.png",
 ];
@@ -31,6 +29,21 @@ self.addEventListener("activate", (event) => {
 
 self.addEventListener("fetch", (event) => {
   if (event.request.method !== "GET") return;
+
+  if (event.request.mode === "navigate") {
+    event.respondWith(
+      fetch(event.request)
+        .then((response) => {
+          const copy = response.clone();
+          caches.open(CACHE_NAME).then((cache) => {
+            if (response.ok) cache.put("/", copy);
+          });
+          return response;
+        })
+        .catch(() => caches.match("/") || Response.error()),
+    );
+    return;
+  }
 
   event.respondWith(
     caches.match(event.request).then((cached) => {

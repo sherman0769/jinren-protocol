@@ -1,17 +1,13 @@
-# 近人協議
+# 書籍書庫
 
-這是一個原創漫畫閱讀器網站。首頁是書庫，可以選擇作品；進入書籍後使用縱向 webtoon 閱讀器閱讀章節。首本作品保留《近人協議》，包含 20 集第一季、200 張分鏡資產、播放器式閱讀器、PWA 安裝圖示與社群分享圖。
+這是一個 Next.js 數位書籍閱讀器。首頁顯示書籍，進入後可依章節閱讀長文內容，支援目錄、閱讀進度保存、字級調整、PWA 安裝與分享預覽。
 
-## Features
+## First Book
 
-- Next.js App Router + TypeScript + Tailwind CSS
-- 首頁書庫，可持續新增由我們建立的漫畫作品
-- 書籍路由：`/books/[bookId]`
-- 手機優先縱向 webtoon 閱讀器
-- 播放/暫停、上一格/下一格、章節切換與閱讀進度保存
-- 20 集完整故事資料與本地分鏡資產
-- PWA manifest、service worker、install icon、Apple touch icon
-- Open Graph / Twitter 分享預覽圖
+- 書名：數量級躍升：AI 時代的多面人生與自由之路
+- 作者：李詩民
+- 來源：Google Drive `.docx`
+- 狀態：已匯入為 23 章、約 11.4 萬字
 
 ## Commands
 
@@ -19,28 +15,21 @@
 npm run dev
 npm run lint
 npm run build
-npm run assets
+npm run import:book
 ```
 
-`npm run assets` 會重新產生 `public/comic/season-01/` 的 200 張分鏡 SVG，以及 `public/icons/` 的 PWA 圖示。
+`npm run import:book` 會從 `tmp/book.docx` 重新解析書稿並更新 `src/content/books.json`。
 
 ## Content Model
 
-- `Book`: 書籍資料、封面、分享圖、角色表、章節列表
-- `Episode`: 章節資料、摘要、封面、分鏡列表
-- `Panel`: 圖像、文字節拍、對白、播放器停留時間
-
-## First Book
-
-- 標題：《近人協議》
-- 主題：AI 文明後，人與 AI 逐漸失去界線
-- 語言：繁體中文
-- 分級：13+ 科幻劇情
-- 美術方向：電影概念感，冷調城市、霓虹、寫實比例、強光影
+- `Book`: 書籍資料、封面、作者、分類、章節列表
+- `Chapter`: 章節標題、摘要、閱讀時間、段落
+- `src/content/books.json`: 書籍內容資料來源
+- `/books/[bookId]`: 書籍閱讀路由
 
 ## Deployment
 
-這是靜態可預渲染的 Next.js 專案，可直接部署到 Vercel。部署前請確認：
+部署前確認：
 
 ```bash
 npm run lint

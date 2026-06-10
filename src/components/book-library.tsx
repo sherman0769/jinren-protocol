@@ -1,46 +1,56 @@
-import { BookOpen, Layers, Play, Plus } from "lucide-react";
+import { BookOpen, Clock, Library, Play } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import type { Book } from "@/lib/comic";
+import { getBookStats, type Book } from "@/lib/books";
 
 type BookLibraryProps = {
   books: Book[];
 };
 
 export function BookLibrary({ books }: BookLibraryProps) {
-  const totalEpisodes = books.reduce((total, book) => total + book.episodes.length, 0);
-  const totalPanels = books.reduce(
-    (total, book) =>
-      total +
-      book.episodes.reduce((episodeTotal, episode) => episodeTotal + episode.panels.length, 0),
-    0,
+  const libraryStats = books.reduce(
+    (total, book) => {
+      const stats = getBookStats(book);
+      return {
+        chapters: total.chapters + stats.chapters,
+        minutes: total.minutes + stats.minutes,
+      };
+    },
+    { chapters: 0, minutes: 0 },
   );
 
   return (
     <main className="library-shell">
       <header className="library-header">
         <div>
-          <span className="eyebrow">Original Comic Reader</span>
-          <h1>漫畫書庫</h1>
-          <p>選擇一本作品開始閱讀。書籍內容由我們在專案資料中建立，之後可以持續新增漫畫、章節與正式圖像。</p>
+          <span className="eyebrow">Digital Book Reader</span>
+          <h1>書籍書庫</h1>
+          <p>選擇一本書開始閱讀。內容由我們建立與整理，首頁只放書籍，進入後提供章節目錄、閱讀進度與舒適的長文閱讀介面。</p>
         </div>
         <div className="library-stats" aria-label="書庫統計">
           <span>
-            <BookOpen aria-hidden="true" size={16} />
+            <Library aria-hidden="true" size={16} />
             {books.length} books
           </span>
           <span>
-            <Layers aria-hidden="true" size={16} />
-            {totalEpisodes} episodes
+            <BookOpen aria-hidden="true" size={16} />
+            {libraryStats.chapters} chapters
           </span>
-          <span>{totalPanels} panels</span>
+          <span>
+            <Clock aria-hidden="true" size={16} />
+            {libraryStats.minutes} min
+          </span>
         </div>
       </header>
 
       <section className="book-grid" aria-label="作品列表">
         {books.map((book) => (
           <article className="book-card" key={book.id}>
-            <Link className="book-cover-link" href={`/books/${book.slug}`} aria-label={`閱讀${book.title}`}>
+            <Link
+              className="book-cover-link"
+              href={`/books/${book.slug}`}
+              aria-label={`閱讀${book.title}`}
+            >
               <Image
                 src={book.cover}
                 alt={`${book.title} 封面`}
@@ -51,11 +61,13 @@ export function BookLibrary({ books }: BookLibraryProps) {
             </Link>
             <div className="book-card-body">
               <div className="book-status-row">
-                <span className="book-status">{book.status === "published" ? "已發布" : "創作中"}</span>
+                <span className="book-status">
+                  {book.status === "published" ? "已發布" : "整理中"}
+                </span>
                 <span>{book.rating}</span>
               </div>
               <h2>{book.title}</h2>
-              <p>{book.subtitle}</p>
+              <p>{book.author}</p>
               <p className="book-description">{book.description}</p>
               <div className="tag-row">
                 {book.genre.map((tag) => (
@@ -69,20 +81,6 @@ export function BookLibrary({ books }: BookLibraryProps) {
             </div>
           </article>
         ))}
-
-        <article className="book-card book-card--new">
-          <div className="new-book-mark">
-            <Plus aria-hidden="true" size={26} />
-          </div>
-          <div className="book-card-body">
-            <span className="book-status">下一本</span>
-            <h2>新增作品槽</h2>
-            <p>新的漫畫會從資料層加入，首頁自動出現，並使用同一套閱讀器。</p>
-            <p className="book-description">
-              可建立新書封面、章節資料、正式漫畫圖、角色表與分享圖，不需要改閱讀器核心。
-            </p>
-          </div>
-        </article>
       </section>
     </main>
   );
