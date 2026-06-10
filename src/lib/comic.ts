@@ -29,6 +29,22 @@ export type Episode = {
   panels: Panel[];
 };
 
+export type Book = {
+  id: string;
+  slug: string;
+  title: string;
+  subtitle: string;
+  description: string;
+  status: "creating" | "published";
+  genre: string[];
+  rating: string;
+  cover: string;
+  ogImage: string;
+  referenceSheet: string;
+  characters: Character[];
+  episodes: Episode[];
+};
+
 export const characters: Character[] = [
   {
     id: "lin-yao",
@@ -484,3 +500,25 @@ export const season = {
   ogImage: "/comic/assets/og-image.png",
   referenceSheet: "/comic/assets/character-reference.png",
 };
+
+export const books: Book[] = [
+  {
+    id: "jinren-protocol",
+    slug: "jinren-protocol",
+    title: season.title,
+    subtitle: season.subtitle,
+    description: season.description,
+    status: "creating",
+    genre: ["AI文明", "近未來", "心理科幻"],
+    rating: "13+",
+    cover: season.cover,
+    ogImage: season.ogImage,
+    referenceSheet: season.referenceSheet,
+    characters,
+    episodes,
+  },
+];
+
+export function getBookBySlug(slug: string) {
+  return books.find((book) => book.slug === slug);
+}

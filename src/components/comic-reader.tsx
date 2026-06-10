@@ -5,6 +5,7 @@ import {
   ChevronLeft,
   ChevronRight,
   Download,
+  Home,
   List,
   Pause,
   Play,
@@ -12,13 +13,12 @@ import {
   Sparkles,
 } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import type { Character, Episode } from "@/lib/comic";
+import type { Book } from "@/lib/comic";
 
 type ComicReaderProps = {
-  episodes: Episode[];
-  characters: Character[];
-  referenceSheet: string;
+  book: Book;
 };
 
 type BeforeInstallPromptEvent = Event & {
@@ -26,13 +26,10 @@ type BeforeInstallPromptEvent = Event & {
   userChoice: Promise<{ outcome: "accepted" | "dismissed"; platform: string }>;
 };
 
-const progressKey = "jinren-protocol-reader-progress";
+const progressKeyPrefix = "comic-reader-progress";
 
-export function ComicReader({
-  episodes,
-  characters,
-  referenceSheet,
-}: ComicReaderProps) {
+export function ComicReader({ book }: ComicReaderProps) {
+  const { characters, episodes, referenceSheet } = book;
   const [episodeIndex, setEpisodeIndex] = useState(0);
   const [panelIndex, setPanelIndex] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
@@ -40,6 +37,7 @@ export function ComicReader({
   const [installPrompt, setInstallPrompt] =
     useState<BeforeInstallPromptEvent | null>(null);
   const panelRefs = useRef<Array<HTMLElement | null>>([]);
+  const progressKey = `${progressKeyPrefix}:${book.slug}`;
 
   const episode = episodes[episodeIndex];
   const panel = episode.panels[panelIndex];
@@ -118,14 +116,14 @@ export function ComicReader({
     } catch {
       window.localStorage.removeItem(progressKey);
     }
-  }, [episodes]);
+  }, [episodes, progressKey]);
 
   useEffect(() => {
     window.localStorage.setItem(
       progressKey,
       JSON.stringify({ episodeIndex, panelIndex }),
     );
-  }, [episodeIndex, panelIndex]);
+  }, [episodeIndex, panelIndex, progressKey]);
 
   useEffect(() => {
     const registerWorker = async () => {
@@ -188,7 +186,7 @@ export function ComicReader({
       <aside className={`episode-rail ${isMenuOpen ? "episode-rail--open" : ""}`}>
         <div className="rail-heading">
           <BookOpen aria-hidden="true" size={18} />
-          <span>Season 01</span>
+            <span>Library / {book.title}</span>
         </div>
         <nav className="episode-list" aria-label="章節">
           {episodes.map((item, index) => (
@@ -209,10 +207,13 @@ export function ComicReader({
         <header className="series-header">
           <div>
             <span className="eyebrow">{activeArc}</span>
-            <h1>近人協議</h1>
-            <p>當AI學會痛苦，人還剩下什麼？</p>
+            <h1>{book.title}</h1>
+            <p>{book.subtitle}</p>
           </div>
           <div className="header-actions">
+            <Link aria-label="返回書庫" className="icon-button" href="/" title="書庫">
+              <Home aria-hidden="true" size={20} />
+            </Link>
             <button
               aria-label="開啟章節"
               className="icon-button"

@@ -46,6 +46,11 @@ button {
   font: inherit;
 }
 
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
 button:focus-visible,
 a:focus-visible {
   outline: 2px solid var(--cyan);
@@ -56,6 +61,173 @@ a:focus-visible {
   display: grid;
   grid-template-columns: 280px minmax(0, 1fr) 310px;
   min-height: 100vh;
+}
+
+.library-shell {
+  width: min(1180px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 38px 0 70px;
+}
+
+.library-header {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: end;
+  gap: 24px;
+  min-height: 260px;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 28px;
+}
+
+.library-header h1 {
+  margin: 0;
+  font-size: clamp(46px, 8vw, 104px);
+  font-weight: 740;
+  line-height: 0.95;
+}
+
+.library-header p {
+  max-width: 720px;
+  margin: 18px 0 0;
+  color: var(--muted);
+  font-size: clamp(16px, 2.4vw, 21px);
+  line-height: 1.7;
+}
+
+.library-stats {
+  display: grid;
+  gap: 10px;
+  min-width: 180px;
+}
+
+.library-stats span {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 38px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 8px 10px;
+  background: rgba(245, 241, 231, 0.05);
+  color: #dce6ec;
+  font-family: var(--font-mono);
+  font-size: 13px;
+}
+
+.book-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  padding-top: 28px;
+}
+
+.book-card {
+  display: grid;
+  grid-template-columns: minmax(170px, 0.42fr) minmax(0, 1fr);
+  min-height: 420px;
+  overflow: clip;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: rgba(14, 23, 32, 0.82);
+}
+
+.book-cover-link {
+  display: block;
+  min-height: 100%;
+  background: #03070a;
+}
+
+.book-cover-link img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.book-card-body {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  padding: 22px;
+}
+
+.book-status-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  color: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 12px;
+}
+
+.book-status {
+  color: var(--green);
+}
+
+.book-card h2 {
+  margin: 28px 0 10px;
+  font-size: clamp(27px, 4vw, 42px);
+  line-height: 1.05;
+}
+
+.book-card p {
+  margin: 0;
+  color: #d7e1e6;
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+.book-description {
+  margin-top: 18px !important;
+  color: var(--muted) !important;
+}
+
+.tag-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: auto;
+  padding-top: 18px;
+}
+
+.tag-row span {
+  border: 1px solid rgba(66, 211, 255, 0.24);
+  border-radius: 8px;
+  padding: 6px 8px;
+  background: rgba(66, 211, 255, 0.07);
+  color: #dff8ff;
+  font-size: 12px;
+}
+
+.read-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 44px;
+  margin-top: 18px;
+  border: 1px solid rgba(66, 211, 255, 0.38);
+  border-radius: 8px;
+  background: linear-gradient(135deg, rgba(66, 211, 255, 0.2), rgba(255, 79, 216, 0.14));
+  color: var(--foreground);
+  font-weight: 650;
+}
+
+.book-card--new {
+  grid-template-columns: 180px minmax(0, 1fr);
+  border-style: dashed;
+  background: rgba(10, 18, 25, 0.58);
+}
+
+.new-book-mark {
+  display: grid;
+  place-items: center;
+  min-height: 100%;
+  background:
+    linear-gradient(135deg, rgba(66, 211, 255, 0.12), transparent),
+    rgba(245, 241, 231, 0.04);
+  color: var(--cyan);
 }
 
 .episode-rail,
@@ -197,6 +369,10 @@ a:focus-visible {
     transform 150ms ease,
     border-color 150ms ease,
     background 150ms ease;
+}
+
+a.icon-button {
+  flex: 0 0 auto;
 }
 
 .icon-button:hover,
@@ -462,6 +638,44 @@ a:focus-visible {
 }
 
 @media (max-width: 720px) {
+  .library-shell {
+    width: min(100% - 24px, 680px);
+    padding-top: 24px;
+  }
+
+  .library-header {
+    grid-template-columns: 1fr;
+    min-height: 220px;
+  }
+
+  .library-stats {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    min-width: 0;
+  }
+
+  .library-stats span {
+    justify-content: center;
+    min-width: 0;
+    font-size: 11px;
+  }
+
+  .book-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .book-card,
+  .book-card--new {
+    grid-template-columns: 1fr;
+  }
+
+  .book-cover-link {
+    aspect-ratio: 16 / 10;
+  }
+
+  .new-book-mark {
+    min-height: 140px;
+  }
+
   .reader-stage {
     padding: 18px 12px 104px;
   }

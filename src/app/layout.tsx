@@ -16,15 +16,15 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://jinren-protocol.vercel.app"),
   title: {
-    default: `${season.title}｜AI文明後原創網漫`,
-    template: `%s｜${season.title}`,
+    default: "漫畫書庫｜原創漫畫閱讀器",
+    template: "%s｜漫畫書庫",
   },
-  description: season.description,
-  applicationName: season.title,
+  description: "一個可持續新增原創漫畫作品、章節與正式圖像的網頁漫畫閱讀器。",
+  applicationName: "漫畫書庫",
   appleWebApp: {
     capable: true,
     statusBarStyle: "black-translucent",
-    title: season.title,
+    title: "漫畫書庫",
   },
   manifest: "/manifest.webmanifest",
   icons: {
