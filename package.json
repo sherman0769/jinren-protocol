@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "import:book": "node scripts/import-docx-book.mjs"
+    "import:book": "node scripts/import-docx-book.mjs",
+    "normalize:books": "node scripts/normalize-books.mjs"
   },
   "dependencies": {
     "lucide-react": "^1.17.0",

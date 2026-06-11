@@ -37,7 +37,12 @@ Chapter parsing rules:
 
 - Prefer explicit headings such as `第 1 章`, `第1章`, `第 一 章`, `Chapter 1`, `序`, `前言`, `終章`, and similar book-section headings.
 - For Markdown, preserve paragraph order and ignore horizontal-rule separators used only as visual dividers.
-- Split long prose into readable paragraphs, but do not rewrite the author's text unless the user explicitly asks for editing.
+- Normalize Markdown / transcript line breaks into human-readable book paragraphs before publishing.
+- Split long prose into readable paragraphs and merge excessive one-line transcript fragments into natural paragraphs.
+- Remove manuscript-production artifacts and AI prompt residue, including lines that instruct an AI to write, rewrite, scan, output, preserve style, or generate the chapter, unless the passage is clearly part of a teaching example that the reader needs.
+- Remove drafting notes such as "以下這版", "我直接用可授課、可錄音的版本來寫", "這一講的核心命題是" when they are scaffolding rather than reader-facing prose.
+- Preserve actual reader-facing structure: chapter titles, section headings such as `一、...`, key concepts, examples, and intentional lists.
+- Do not let source-file line breaks dictate final book paragraphs; the final reading experience should look like a polished book, not raw Markdown, prompt notes, or lecture draft fragments.
 - Estimate reading time with the existing project convention: at least 2 minutes per chapter, based on approximate Chinese character count.
 
 Operational workflow:

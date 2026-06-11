@@ -35,6 +35,13 @@ type BeforeInstallPromptEvent = Event & {
 
 const progressKeyPrefix = "book-reader-progress";
 const narrationRates = [0.75, 1, 1.25, 1.5, 2];
+const subheadingPattern =
+  /^(開場|前言|序言|導讀|結語|結論|總結|小結|後記|終章|附錄|延伸補充|核心命題|核心概念|案例|練習|實作|問答|重點整理)$|^第\s*[一二三四五六七八九十百千\d]+\s*[講章节章課部]\b|^[一二三四五六七八九十]+、.+|^\d+(\.\d+)+\s+.+|^\d+[、.]\s*.+/;
+
+function isSubheading(paragraph: string, index: number) {
+  const text = paragraph.trim();
+  return text.length <= 80 && (index > 0 || /^(開場|前言|序言|導讀)$/.test(text)) && subheadingPattern.test(text);
+}
 
 export function BookReader({ book }: BookReaderProps) {
   const [chapterIndex, setChapterIndex] = useState(0);
@@ -516,7 +523,7 @@ export function BookReader({ book }: BookReaderProps) {
 
         <section className="book-prose">
           {chapter.paragraphs.map((paragraph, index) => {
-            const isSubhead = paragraph.length <= 34 && index > 0;
+            const isSubhead = isSubheading(paragraph, index);
             const paragraphId = `chapter-${chapter.id}-paragraph-${index}`;
             const paragraphClassName =
               activeParagraphIndex === index ? "readable-block is-speaking" : "readable-block";

@@ -16,9 +16,12 @@ npm run dev
 npm run lint
 npm run build
 npm run import:book
+npm run normalize:books
 ```
 
 `npm run import:book` 會從 `tmp/book.docx` 重新解析書稿並更新 `src/content/books.json`。
+
+`npm run normalize:books` 會將 `src/content/books.json` 內的書籍內容整理成人類閱讀版：合併過碎的 Markdown / 講稿換行、清理生成提示語與製作痕跡、保留章節與小標，並重新計算章節摘要與閱讀時間。新書上架後應先執行此整理，再檢查閱讀器畫面。
 
 ## Content Model
 
