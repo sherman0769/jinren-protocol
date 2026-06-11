@@ -54,6 +54,10 @@ export function BookReader({ book }: BookReaderProps) {
   const stats = useMemo(() => getBookStats(book), [book]);
   const progressKey = `${progressKeyPrefix}:${book.slug}`;
   const progress = Math.round(((chapterIndex + 1) / book.chapters.length) * 100);
+  const narrationProgress =
+    activeParagraphIndex === null
+      ? 0
+      : Math.round(((activeParagraphIndex + 1) / chapter.paragraphs.length) * 100);
 
   const scrollToParagraph = useCallback((index: number) => {
     window.requestAnimationFrame(() => {
@@ -305,6 +309,12 @@ export function BookReader({ book }: BookReaderProps) {
           ))}
         </nav>
       </aside>
+      <button
+        aria-label="關閉章節選單"
+        className={`chapter-scrim ${isMenuOpen ? "chapter-scrim--open" : ""}`}
+        onClick={() => setIsMenuOpen(false)}
+        type="button"
+      />
 
       <article className="reading-stage" style={{ "--reader-scale": fontScale } as CSSProperties}>
         <header className="book-header">
@@ -350,6 +360,35 @@ export function BookReader({ book }: BookReaderProps) {
           </div>
         </section>
 
+        <nav className="reader-control-bar" aria-label="閱讀控制">
+          <button aria-label="上一章" onClick={goPrevious} title="上一章" type="button">
+            <ChevronLeft aria-hidden="true" size={22} />
+          </button>
+          <button
+            aria-label="縮小字級"
+            onClick={() => setFontScale((value) => Math.max(0.92, value - 0.04))}
+            title="縮小字級"
+            type="button"
+          >
+            <Minus aria-hidden="true" size={20} />
+          </button>
+          <button
+            aria-label="放大字級"
+            onClick={() => setFontScale((value) => Math.min(1.18, value + 0.04))}
+            title="放大字級"
+            type="button"
+          >
+            <Plus aria-hidden="true" size={20} />
+          </button>
+          <button aria-label="下一章" onClick={goNext} title="下一章" type="button">
+            <ChevronRight aria-hidden="true" size={22} />
+          </button>
+          <div className="player-readout">
+            <span>{book.title}</span>
+            <strong>{chapter.title}</strong>
+          </div>
+        </nav>
+
         <section className="narration-panel" aria-label="書本朗讀">
           <div className="narration-primary">
             <Volume2 aria-hidden="true" size={20} />
@@ -362,9 +401,13 @@ export function BookReader({ book }: BookReaderProps) {
               </strong>
             </div>
           </div>
+          <div aria-hidden="true" className="narration-progress-track">
+            <span style={{ width: `${narrationProgress}%` }} />
+          </div>
           <div className="narration-controls">
             <button
               aria-label="上一段"
+              className="narration-step-button"
               disabled={!speechSupported}
               onClick={() => goToNarrationParagraph(-1)}
               title="上一段"
@@ -374,6 +417,7 @@ export function BookReader({ book }: BookReaderProps) {
             </button>
             <button
               aria-label={isNarrating && !isNarrationPaused ? "暫停朗讀" : "開始朗讀"}
+              className="narration-play-button"
               disabled={!speechSupported}
               onClick={toggleNarration}
               title={isNarrating && !isNarrationPaused ? "暫停" : "播放"}
@@ -387,6 +431,7 @@ export function BookReader({ book }: BookReaderProps) {
             </button>
             <button
               aria-label="停止朗讀"
+              className="narration-stop-button"
               disabled={!speechSupported || !isNarrating}
               onClick={stopNarration}
               title="停止"
@@ -396,6 +441,7 @@ export function BookReader({ book }: BookReaderProps) {
             </button>
             <button
               aria-label="下一段"
+              className="narration-step-button"
               disabled={!speechSupported}
               onClick={() => goToNarrationParagraph(1)}
               title="下一段"
@@ -485,35 +531,6 @@ export function BookReader({ book }: BookReaderProps) {
           </section>
         </div>
       </aside>
-
-      <nav className="reader-control-bar" aria-label="閱讀控制">
-        <button aria-label="上一章" onClick={goPrevious} title="上一章" type="button">
-          <ChevronLeft aria-hidden="true" size={22} />
-        </button>
-        <button
-          aria-label="縮小字級"
-          onClick={() => setFontScale((value) => Math.max(0.92, value - 0.04))}
-          title="縮小字級"
-          type="button"
-        >
-          <Minus aria-hidden="true" size={20} />
-        </button>
-        <button
-          aria-label="放大字級"
-          onClick={() => setFontScale((value) => Math.min(1.18, value + 0.04))}
-          title="放大字級"
-          type="button"
-        >
-          <Plus aria-hidden="true" size={20} />
-        </button>
-        <button aria-label="下一章" onClick={goNext} title="下一章" type="button">
-          <ChevronRight aria-hidden="true" size={22} />
-        </button>
-        <div className="player-readout">
-          <span>{book.title}</span>
-          <strong>{chapter.title}</strong>
-        </div>
-      </nav>
     </main>
   );
 }
