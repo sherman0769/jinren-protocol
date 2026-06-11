@@ -1,13 +1,24 @@
+"use client";
+
 import { BookOpen, Clock, Library, Play } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 import { getBookStats, type Book } from "@/lib/books";
 
 type BookLibraryProps = {
   books: Book[];
 };
 
+type SavedProgress = {
+  chapterIndex?: number;
+  updatedAt?: number;
+};
+
+const progressKeyPrefix = "book-reader-progress";
+
 export function BookLibrary({ books }: BookLibraryProps) {
+  const [savedProgress, setSavedProgress] = useState<Record<string, SavedProgress>>({});
   const libraryStats = books.reduce(
     (total, book) => {
       const stats = getBookStats(book);
@@ -19,13 +30,35 @@ export function BookLibrary({ books }: BookLibraryProps) {
     { chapters: 0, minutes: 0 },
   );
 
+  useEffect(() => {
+    const progress = books.reduce<Record<string, SavedProgress>>((current, book) => {
+      const saved = window.localStorage.getItem(`${progressKeyPrefix}:${book.slug}`);
+      if (!saved) return current;
+
+      try {
+        const parsed = JSON.parse(saved) as SavedProgress;
+        if (Number.isInteger(parsed.chapterIndex)) {
+          current[book.slug] = parsed;
+        }
+      } catch {
+        window.localStorage.removeItem(`${progressKeyPrefix}:${book.slug}`);
+      }
+
+      return current;
+    }, {});
+
+    const frame = window.requestAnimationFrame(() => setSavedProgress(progress));
+
+    return () => window.cancelAnimationFrame(frame);
+  }, [books]);
+
   return (
     <main className="library-shell">
       <header className="library-header">
         <div>
           <span className="eyebrow">Digital Book Reader</span>
-          <h1>書籍書庫</h1>
-          <p>選擇一本書開始閱讀。內容由我們建立與整理，首頁只放書籍，進入後提供章節目錄、閱讀進度與舒適的長文閱讀介面。</p>
+          <h1>Li`s Meet 私人書庫</h1>
+          <p>整理 AI 時代的知識理解方法：把書、課程、工作流與長任務思考放在同一座私人書架中，方便持續閱讀、對照與沉澱。</p>
         </div>
         <div className="library-stats" aria-label="書庫統計">
           <span>
@@ -46,6 +79,14 @@ export function BookLibrary({ books }: BookLibraryProps) {
       <section className="book-grid" aria-label="作品列表">
         {books.map((book) => {
           const stats = getBookStats(book);
+          const progress = savedProgress[book.slug];
+          const savedChapterIndex =
+            typeof progress?.chapterIndex === "number" &&
+            book.chapters[progress.chapterIndex]
+              ? progress.chapterIndex
+              : null;
+          const hasBookmark = savedChapterIndex !== null;
+          const savedChapter = hasBookmark ? book.chapters[savedChapterIndex] : null;
 
           return (
             <article className="book-card" key={book.id}>
@@ -83,14 +124,22 @@ export function BookLibrary({ books }: BookLibraryProps) {
                 <h2>{book.title}</h2>
                 <p>{book.author}</p>
                 <p className="book-description">{book.description}</p>
+                {savedChapter && (
+                  <p className="continue-note">
+                    書籤：第 {savedChapter.number} 章｜{savedChapter.title}
+                  </p>
+                )}
                 <div className="tag-row">
                   {book.genre.map((tag) => (
                     <span key={tag}>{tag}</span>
                   ))}
                 </div>
-                <Link className="read-link" href={`/books/${book.slug}`}>
+                <Link
+                  className={`read-link ${hasBookmark ? "read-link--continue" : ""}`}
+                  href={`/books/${book.slug}`}
+                >
                   <Play aria-hidden="true" size={17} />
-                  開始閱讀
+                  {hasBookmark ? "繼續閱讀" : "開始閱讀"}
                 </Link>
               </div>
             </article>

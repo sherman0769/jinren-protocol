@@ -1,8 +1,11 @@
-const CACHE_NAME = "digital-book-library-v1";
+const CACHE_NAME = "li-meet-private-library-v2";
 const CORE_ASSETS = [
   "/",
   "/manifest.webmanifest",
   "/books/exponential-ai-life/cover.png",
+  "/books/claude-latest-guide/cover.png",
+  "/books/ai-philosophy-20-lectures/cover.png",
+  "/books/cognitive-revolution-ai-core-capabilities/cover.png",
   "/icons/icon-192.png",
   "/icons/icon-512.png",
 ];

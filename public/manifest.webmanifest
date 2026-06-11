@@ -1,7 +1,7 @@
 {
-  "name": "書籍書庫｜數位閱讀器",
-  "short_name": "書籍書庫",
-  "description": "可選書、進入作品並閱讀章節的網頁書籍閱讀器。",
+  "name": "Li`s Meet 私人書庫",
+  "short_name": "Li`s Meet",
+  "description": "整理 AI 時代知識理解方法的私人書庫，支援長文閱讀、書籤保存與繼續閱讀。",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
@@ -25,10 +25,10 @@
   ],
   "shortcuts": [
     {
-      "name": "開啟書庫",
+      "name": "開啟私人書庫",
       "short_name": "閱讀",
       "url": "/",
-      "description": "開啟書籍書庫"
+      "description": "開啟 Li`s Meet 私人書庫"
     }
   ]
 }

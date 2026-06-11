@@ -15,15 +15,15 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://jinren-protocol.vercel.app"),
   title: {
-    default: "書籍書庫｜數位閱讀器",
-    template: "%s｜書籍書庫",
+    default: "Li`s Meet 私人書庫",
+    template: "%s｜Li`s Meet 私人書庫",
   },
-  description: "一個可持續新增書籍、章節與長文內容的網頁書籍閱讀器。",
-  applicationName: "書籍書庫",
+  description: "整理 AI 時代知識理解方法的私人書庫，支援長文閱讀、書籤保存與繼續閱讀。",
+  applicationName: "Li`s Meet 私人書庫",
   appleWebApp: {
     capable: true,
     statusBarStyle: "black-translucent",
-    title: "書籍書庫",
+    title: "Li`s Meet 私人書庫",
   },
   manifest: "/manifest.webmanifest",
   icons: {
@@ -35,8 +35,8 @@ export const metadata: Metadata = {
     shortcut: ["/favicon-48.png"],
   },
   openGraph: {
-    title: "書籍書庫｜數位閱讀器",
-    description: "選擇一本書，進入乾淨、可調字級、有進度保存的長文閱讀器。",
+    title: "Li`s Meet 私人書庫",
+    description: "整理 AI 時代知識理解方法的私人書庫，支援長文閱讀、書籤保存與繼續閱讀。",
     type: "website",
     locale: "zh_TW",
     images: [
@@ -44,14 +44,14 @@ export const metadata: Metadata = {
         url: "/books/exponential-ai-life/cover.png",
         width: 1200,
         height: 630,
-        alt: "書籍書庫分享預覽圖",
+        alt: "Li`s Meet 私人書庫分享預覽圖",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "書籍書庫｜數位閱讀器",
-    description: "選擇一本書，進入乾淨、可調字級、有進度保存的長文閱讀器。",
+    title: "Li`s Meet 私人書庫",
+    description: "整理 AI 時代知識理解方法的私人書庫，支援長文閱讀、書籤保存與繼續閱讀。",
     images: ["/books/exponential-ai-life/cover.png"],
   },
 };

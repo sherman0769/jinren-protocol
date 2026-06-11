@@ -1,6 +1,7 @@
 "use client";
 
 import {
+  BookmarkCheck,
   BookOpen,
   ChevronLeft,
   ChevronRight,
@@ -44,6 +45,7 @@ export function BookReader({ book }: BookReaderProps) {
   const [isNarrationPaused, setIsNarrationPaused] = useState(false);
   const [activeParagraphIndex, setActiveParagraphIndex] = useState<number | null>(null);
   const [speechError, setSpeechError] = useState<string | null>(null);
+  const [bookmarkNotice, setBookmarkNotice] = useState<string | null>(null);
   const [installPrompt, setInstallPrompt] =
     useState<BeforeInstallPromptEvent | null>(null);
   const paragraphIndexRef = useRef(0);
@@ -207,6 +209,15 @@ export function BookReader({ book }: BookReaderProps) {
     scrollToParagraph(nextIndex);
   }
 
+  function saveBookmark() {
+    window.localStorage.setItem(
+      progressKey,
+      JSON.stringify({ chapterIndex, fontScale, speechRate, updatedAt: Date.now() }),
+    );
+    setBookmarkNotice(`已保存：第 ${chapter.number} 章`);
+    window.setTimeout(() => setBookmarkNotice(null), 2200);
+  }
+
   useEffect(() => {
     const saved = window.localStorage.getItem(progressKey);
     if (!saved) return;
@@ -242,7 +253,7 @@ export function BookReader({ book }: BookReaderProps) {
   useEffect(() => {
     window.localStorage.setItem(
       progressKey,
-      JSON.stringify({ chapterIndex, fontScale, speechRate }),
+      JSON.stringify({ chapterIndex, fontScale, speechRate, updatedAt: Date.now() }),
     );
   }, [chapterIndex, fontScale, progressKey, speechRate]);
 
@@ -347,6 +358,15 @@ export function BookReader({ book }: BookReaderProps) {
               <List aria-hidden="true" size={20} />
             </button>
             <button
+              aria-label="儲存書籤"
+              className="icon-button"
+              onClick={saveBookmark}
+              title="儲存書籤"
+              type="button"
+            >
+              <BookmarkCheck aria-hidden="true" size={20} />
+            </button>
+            <button
               aria-label="安裝網頁App"
               className="icon-button"
               disabled={!installPrompt}
@@ -358,6 +378,11 @@ export function BookReader({ book }: BookReaderProps) {
             </button>
           </div>
         </header>
+        {bookmarkNotice && (
+          <p className="bookmark-status" role="status">
+            {bookmarkNotice}
+          </p>
+        )}
 
         <section className="chapter-intro" aria-labelledby="chapter-title">
           <span>CH {String(chapter.number).padStart(2, "0")}</span>
