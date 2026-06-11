@@ -117,40 +117,99 @@ a:focus-visible {
 }
 
 .book-grid {
+  position: relative;
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 18px;
-  padding-top: 28px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  align-items: start;
+  gap: 36px 24px;
+  padding-top: 38px;
+}
+
+.book-grid::before {
+  content: "";
+  position: absolute;
+  inset: 36px -16px auto;
+  height: calc(100% - 20px);
+  pointer-events: none;
+  background:
+    repeating-linear-gradient(
+      to bottom,
+      transparent 0,
+      transparent 438px,
+      rgba(245, 241, 231, 0.12) 438px,
+      rgba(245, 241, 231, 0.12) 440px,
+      rgba(4, 8, 13, 0.58) 440px,
+      rgba(4, 8, 13, 0.58) 456px
+    );
+  mask-image: linear-gradient(to bottom, transparent, #000 24px, #000 calc(100% - 24px), transparent);
 }
 
 .book-card {
-  display: grid;
-  grid-template-columns: minmax(180px, 0.38fr) minmax(0, 1fr);
-  min-height: 430px;
-  overflow: clip;
-  border: 1px solid var(--line);
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  min-height: 100%;
+  border: 1px solid rgba(245, 241, 231, 0.1);
   border-radius: 8px;
-  background: rgba(14, 23, 32, 0.82);
+  background: linear-gradient(180deg, rgba(20, 31, 42, 0.9), rgba(9, 16, 24, 0.92));
+  box-shadow: 0 22px 58px rgba(0, 0, 0, 0.28);
 }
 
 .book-cover-link {
+  position: relative;
   display: block;
-  min-height: 100%;
+  width: min(76%, 300px);
+  aspect-ratio: 2 / 3;
+  margin: 22px auto 0;
+  border-radius: 6px;
   background: #03070a;
+  box-shadow:
+    0 20px 32px rgba(0, 0, 0, 0.34),
+    10px 0 0 rgba(255, 255, 255, 0.08) inset,
+    -8px 0 0 rgba(0, 0, 0, 0.24) inset;
+  transform-origin: bottom center;
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.book-cover-link::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  background:
+    linear-gradient(90deg, rgba(255, 255, 255, 0.16), transparent 12%, transparent 84%, rgba(0, 0, 0, 0.24)),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.14), transparent 22%);
+  mix-blend-mode: screen;
+  opacity: 0.45;
+}
+
+.book-card:hover .book-cover-link {
+  box-shadow:
+    0 24px 42px rgba(0, 0, 0, 0.42),
+    10px 0 0 rgba(255, 255, 255, 0.1) inset,
+    -8px 0 0 rgba(0, 0, 0, 0.28) inset;
+  transform: translateY(-4px);
 }
 
 .book-cover-link img {
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  border-radius: inherit;
+  object-fit: contain;
 }
 
 .book-card-body {
   display: flex;
   flex-direction: column;
   min-width: 0;
-  padding: 24px;
+  flex: 1;
+  padding: 20px 20px 22px;
 }
 
 .book-status-row {
@@ -166,10 +225,31 @@ a:focus-visible {
   color: var(--green);
 }
 
+.book-card-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.book-card-meta span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 30px;
+  border: 1px solid rgba(245, 241, 231, 0.12);
+  border-radius: 8px;
+  padding: 5px 8px;
+  background: rgba(245, 241, 231, 0.045);
+  color: #dce6ec;
+  font-family: var(--font-mono);
+  font-size: 12px;
+}
+
 .book-card h2 {
-  margin: 28px 0 10px;
-  font-size: clamp(27px, 4vw, 42px);
-  line-height: 1.05;
+  margin: 18px 0 10px;
+  font-size: clamp(24px, 3vw, 34px);
+  line-height: 1.14;
 }
 
 .book-card p {
@@ -725,14 +805,43 @@ a:focus-visible {
 
   .book-grid {
     grid-template-columns: 1fr;
+    gap: 30px;
+    padding-top: 28px;
   }
 
-  .book-card {
-    grid-template-columns: 1fr;
+  .book-grid::before {
+    inset-inline: -12px;
+    background:
+      repeating-linear-gradient(
+        to bottom,
+        transparent 0,
+        transparent 504px,
+        rgba(245, 241, 231, 0.12) 504px,
+        rgba(245, 241, 231, 0.12) 506px,
+        rgba(4, 8, 13, 0.62) 506px,
+        rgba(4, 8, 13, 0.62) 522px
+      );
   }
 
   .book-cover-link {
-    aspect-ratio: 16 / 10;
+    width: min(82vw, 310px);
+    margin-top: 18px;
+  }
+
+  .book-card-body {
+    padding: 18px;
+  }
+
+  .book-card h2 {
+    font-size: clamp(24px, 7vw, 31px);
+  }
+
+  .book-card p {
+    font-size: 15px;
+  }
+
+  .book-card-meta span {
+    font-size: 11px;
   }
 
   .book-reader-shell {
