@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     locale: "zh_TW",
     images: [
       {
-        url: "/books/exponential-ai-life/cover.png",
+        url: "/share/li-meet-private-library-og.png",
         width: 1200,
         height: 630,
         alt: "Li`s Meet 私人書庫分享預覽圖",
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Li`s Meet 私人書庫",
     description: "整理 AI 時代知識理解方法的私人書庫，支援長文閱讀、書籤保存與繼續閱讀。",
-    images: ["/books/exponential-ai-life/cover.png"],
+    images: ["/share/li-meet-private-library-og.png"],
   },
 };
 

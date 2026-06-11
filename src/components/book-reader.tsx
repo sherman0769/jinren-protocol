@@ -14,6 +14,7 @@ import {
   Plus,
   SkipBack,
   SkipForward,
+  Sparkles,
   Square,
   Volume2,
 } from "lucide-react";
@@ -368,13 +369,15 @@ export function BookReader({ book }: BookReaderProps) {
             </button>
             <button
               aria-label="安裝網頁App"
-              className="icon-button"
+              className="icon-button install-button"
               disabled={!installPrompt}
               onClick={installApp}
               title="安裝"
               type="button"
             >
-              <Download aria-hidden="true" size={20} />
+              <span aria-hidden="true" className="install-button-glow" />
+              <Download aria-hidden="true" className="install-main-icon" size={20} />
+              <Sparkles aria-hidden="true" className="install-spark-icon" size={12} />
             </button>
           </div>
         </header>
