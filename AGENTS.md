@@ -52,3 +52,21 @@ Operational workflow:
 8. Report the new book title, slug, chapter count, validation result, pushed commit, and production deployment URL.
 
 Do not ask for confirmation before publishing a clearly new manuscript in `books/` unless required metadata is genuinely ambiguous or the file cannot be parsed safely.
+
+## UI / Visual Asset Workflow
+
+When the user requests interface polish, mobile improvements, cover updates, social sharing images, download/install icons, or other reusable visual rules, record the resulting rule in this file before considering the task complete.
+
+Visual quality rules:
+
+- Book covers and major share images must be treated as high-quality designed assets, not simple placeholders.
+- For new book covers, use AI image generation in the conversation first, then save and reuse the selected image under the appropriate `public/books/<slug>/` asset folder.
+- Social sharing images should use a dedicated landscape asset when possible. Prefer `1200x630` for Open Graph / Twitter large-card images, and keep metadata dimensions aligned with the actual file.
+- Mobile icon-only controls should remain compact and accessible, with `aria-label` and `title`, but may use layered styling, glow, texture, or secondary glyphs when the user asks for a more artistic look.
+- After visual changes, verify the relevant mobile viewport with a browser check or Playwright screenshot when the app can run locally.
+
+Completion rules:
+
+- For any task that changes app code, public assets, metadata, or project workflow rules, run the appropriate validation, commit the relevant files, push the branch, and deploy to production.
+- A task is not considered complete until the pushed commit and production deployment have succeeded.
+- When a user adds a new repeatable preference or workflow requirement, update `AGENTS.md` as part of the same task.
