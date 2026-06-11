@@ -33,6 +33,22 @@ type BeforeInstallPromptEvent = Event & {
   userChoice: Promise<{ outcome: "accepted" | "dismissed"; platform: string }>;
 };
 
+type WakeLockSentinelLike = {
+  release: () => Promise<void>;
+  addEventListener?: (type: "release", listener: () => void) => void;
+  removeEventListener?: (type: "release", listener: () => void) => void;
+};
+
+type NavigatorWithWakeLock = Navigator & {
+  wakeLock?: {
+    request: (type: "screen") => Promise<WakeLockSentinelLike>;
+  };
+};
+
+type NavigatorWithMediaSession = Navigator & {
+  mediaSession?: MediaSession;
+};
+
 const progressKeyPrefix = "book-reader-progress";
 const narrationRates = [0.75, 1, 1.25, 1.5, 2];
 const subheadingPattern =
@@ -59,7 +75,11 @@ export function BookReader({ book }: BookReaderProps) {
   const paragraphIndexRef = useRef(0);
   const manuallyStoppedRef = useRef(false);
   const activeParagraphRef = useRef<number | null>(null);
+  const chapterIndexRef = useRef(0);
+  const speechRateRef = useRef(1);
   const speechRunRef = useRef(0);
+  const wakeLockRef = useRef<WakeLockSentinelLike | null>(null);
+  const wakeLockReleaseHandlerRef = useRef<(() => void) | null>(null);
 
   const chapter = book.chapters[chapterIndex];
   const stats = useMemo(() => getBookStats(book), [book]);
@@ -70,18 +90,71 @@ export function BookReader({ book }: BookReaderProps) {
       ? 0
       : Math.round(((activeParagraphIndex + 1) / chapter.paragraphs.length) * 100);
 
-  const scrollToParagraph = useCallback((index: number) => {
+  const scrollToParagraph = useCallback((chapterId: string, index: number) => {
     window.requestAnimationFrame(() => {
       document
-        .getElementById(`chapter-${chapter.id}-paragraph-${index}`)
+        .getElementById(`chapter-${chapterId}-paragraph-${index}`)
         ?.scrollIntoView({ behavior: "smooth", block: "center" });
     });
-  }, [chapter.id]);
+  }, []);
+
+  const requestNarrationWakeLock = useCallback(async () => {
+    const wakeLock = (navigator as NavigatorWithWakeLock).wakeLock;
+    if (!wakeLock || wakeLockRef.current) return;
+
+    try {
+      const sentinel = await wakeLock.request("screen");
+      const onRelease = () => {
+        wakeLockRef.current = null;
+        wakeLockReleaseHandlerRef.current = null;
+      };
+      wakeLockRef.current = sentinel;
+      wakeLockReleaseHandlerRef.current = onRelease;
+      sentinel.addEventListener?.("release", onRelease);
+    } catch {
+      wakeLockRef.current = null;
+      wakeLockReleaseHandlerRef.current = null;
+    }
+  }, []);
+
+  const releaseNarrationWakeLock = useCallback(() => {
+    const sentinel = wakeLockRef.current;
+    if (!sentinel) return;
+
+    const onRelease = wakeLockReleaseHandlerRef.current;
+    if (onRelease) sentinel.removeEventListener?.("release", onRelease);
+    wakeLockRef.current = null;
+    wakeLockReleaseHandlerRef.current = null;
+    sentinel.release().catch(() => undefined);
+  }, []);
+
+  const setMediaSessionState = useCallback((state: MediaSessionPlaybackState) => {
+    const mediaSession = (navigator as NavigatorWithMediaSession).mediaSession;
+    if (!mediaSession) return;
+
+    mediaSession.playbackState = state;
+  }, []);
+
+  const updateMediaSessionMetadata = useCallback((nextChapterIndex: number) => {
+    const mediaSession = (navigator as NavigatorWithMediaSession).mediaSession;
+    const nextChapter = book.chapters[nextChapterIndex];
+    if (!mediaSession || !nextChapter || !("MediaMetadata" in window)) return;
+
+    mediaSession.metadata = new window.MediaMetadata({
+      title: nextChapter.title,
+      artist: book.author,
+      album: book.title,
+      artwork: [
+        { src: book.cover, sizes: "512x512", type: "image/png" },
+      ],
+    });
+  }, [book.author, book.chapters, book.cover, book.title]);
 
   const stopNarration = useCallback(() => {
     if (!("speechSynthesis" in window)) return;
     manuallyStoppedRef.current = true;
     speechRunRef.current += 1;
+    releaseNarrationWakeLock();
     window.speechSynthesis.resume();
     window.speechSynthesis.cancel();
     window.setTimeout(() => window.speechSynthesis.cancel(), 0);
@@ -90,42 +163,91 @@ export function BookReader({ book }: BookReaderProps) {
     setIsNarrationPaused(false);
     setActiveParagraphIndex(null);
     activeParagraphRef.current = null;
-  }, []);
+    setMediaSessionState("none");
+  }, [releaseNarrationWakeLock, setMediaSessionState]);
 
-  const speakFromParagraph = useCallback((startIndex: number, nextRate = speechRate) => {
+  const speakFromLocation = useCallback((startChapterIndex: number, startIndex: number, nextRate = speechRateRef.current) => {
     if (!("speechSynthesis" in window)) {
       setSpeechError("此瀏覽器不支援朗讀");
       return;
     }
 
-    const paragraphs = book.chapters[chapterIndex]?.paragraphs ?? [];
+    const startChapter = book.chapters[startChapterIndex];
+    const paragraphs = startChapter?.paragraphs ?? [];
     if (paragraphs.length === 0) return;
 
     const clampedIndex = Math.min(Math.max(startIndex, 0), paragraphs.length - 1);
     manuallyStoppedRef.current = false;
     const speechRun = speechRunRef.current + 1;
     speechRunRef.current = speechRun;
+    speechRateRef.current = nextRate;
+    requestNarrationWakeLock();
     window.speechSynthesis.resume();
     window.speechSynthesis.cancel();
     setSpeechError(null);
     setIsNarrating(true);
     setIsNarrationPaused(false);
+    setMediaSessionState("playing");
 
-    const speakAt = (index: number) => {
-      if (index >= paragraphs.length) {
+    const finishNarration = () => {
+      releaseNarrationWakeLock();
+      setIsNarrating(false);
+      setIsNarrationPaused(false);
+      setActiveParagraphIndex(null);
+      activeParagraphRef.current = null;
+      setMediaSessionState("none");
+    };
+
+    const speakAt = (nextChapterIndex: number, index: number) => {
+      if (manuallyStoppedRef.current || speechRunRef.current !== speechRun) return;
+
+      const nextChapter = book.chapters[nextChapterIndex];
+      if (!nextChapter) {
+        finishNarration();
+        return;
+      }
+
+      if (index >= nextChapter.paragraphs.length) {
+        const followingChapterIndex = nextChapterIndex + 1;
+        const followingChapter = book.chapters[followingChapterIndex];
+        if (!followingChapter) {
+          finishNarration();
+          return;
+        }
+
+        chapterIndexRef.current = followingChapterIndex;
+        paragraphIndexRef.current = 0;
+        activeParagraphRef.current = 0;
+        setChapterIndex(followingChapterIndex);
+        updateMediaSessionMetadata(followingChapterIndex);
+        window.setTimeout(() => {
+          if (!manuallyStoppedRef.current && speechRunRef.current === speechRun) {
+            speakAt(followingChapterIndex, 0);
+          }
+        }, 80);
+        return;
+      }
+
+      const paragraph = nextChapter.paragraphs[index];
+      if (!paragraph) {
+        releaseNarrationWakeLock();
         setIsNarrating(false);
         setIsNarrationPaused(false);
         setActiveParagraphIndex(null);
         activeParagraphRef.current = null;
+        setMediaSessionState("none");
         return;
       }
 
+      chapterIndexRef.current = nextChapterIndex;
       paragraphIndexRef.current = index;
       activeParagraphRef.current = index;
+      setChapterIndex(nextChapterIndex);
       setActiveParagraphIndex(index);
-      scrollToParagraph(index);
+      updateMediaSessionMetadata(nextChapterIndex);
+      scrollToParagraph(nextChapter.id, index);
 
-      const utterance = new SpeechSynthesisUtterance(paragraphs[index]);
+      const utterance = new SpeechSynthesisUtterance(paragraph);
       utterance.lang = "zh-TW";
       utterance.rate = nextRate;
       utterance.pitch = 1;
@@ -137,22 +259,38 @@ export function BookReader({ book }: BookReaderProps) {
 
       utterance.onend = () => {
         if (!manuallyStoppedRef.current && speechRunRef.current === speechRun) {
-          speakAt(index + 1);
+          speakAt(nextChapterIndex, index + 1);
         }
       };
 
       utterance.onerror = () => {
         if (manuallyStoppedRef.current || speechRunRef.current !== speechRun) return;
+        releaseNarrationWakeLock();
         setSpeechError("朗讀中斷，請再試一次");
         setIsNarrating(false);
         setIsNarrationPaused(false);
+        setMediaSessionState("none");
       };
 
       window.speechSynthesis.speak(utterance);
     };
 
-    speakAt(clampedIndex);
-  }, [book.chapters, chapterIndex, scrollToParagraph, speechRate]);
+    chapterIndexRef.current = startChapterIndex;
+    setChapterIndex(startChapterIndex);
+    updateMediaSessionMetadata(startChapterIndex);
+    speakAt(startChapterIndex, clampedIndex);
+  }, [
+    book.chapters,
+    releaseNarrationWakeLock,
+    requestNarrationWakeLock,
+    scrollToParagraph,
+    setMediaSessionState,
+    updateMediaSessionMetadata,
+  ]);
+
+  const speakFromParagraph = useCallback((startIndex: number, nextRate = speechRateRef.current) => {
+    speakFromLocation(chapterIndexRef.current, startIndex, nextRate);
+  }, [speakFromLocation]);
 
   const selectChapter = useCallback((nextIndex: number) => {
     stopNarration();
@@ -184,11 +322,13 @@ export function BookReader({ book }: BookReaderProps) {
     if (isNarrationPaused) {
       window.speechSynthesis.resume();
       setIsNarrationPaused(false);
+      setMediaSessionState("playing");
       return;
     }
 
     window.speechSynthesis.pause();
     setIsNarrationPaused(true);
+    setMediaSessionState("paused");
   }
 
   function changeRate(nextRate: number) {
@@ -200,22 +340,38 @@ export function BookReader({ book }: BookReaderProps) {
     }
   }
 
-  function goToNarrationParagraph(offset: number) {
-    const nextIndex = Math.min(
-      Math.max((activeParagraphRef.current ?? paragraphIndexRef.current) + offset, 0),
-      chapter.paragraphs.length - 1,
-    );
+  const goToNarrationParagraph = useCallback((offset: number) => {
+    let nextChapterIndex = chapterIndexRef.current;
+    let nextIndex = (activeParagraphRef.current ?? paragraphIndexRef.current) + offset;
+
+    if (nextIndex < 0 && nextChapterIndex > 0) {
+      nextChapterIndex -= 1;
+      nextIndex = book.chapters[nextChapterIndex].paragraphs.length - 1;
+    } else if (
+      nextIndex >= book.chapters[nextChapterIndex].paragraphs.length &&
+      nextChapterIndex < book.chapters.length - 1
+    ) {
+      nextChapterIndex += 1;
+      nextIndex = 0;
+    } else {
+      nextIndex = Math.min(
+        Math.max(nextIndex, 0),
+        book.chapters[nextChapterIndex].paragraphs.length - 1,
+      );
+    }
 
     if (isNarrating) {
-      speakFromParagraph(nextIndex);
+      speakFromLocation(nextChapterIndex, nextIndex);
       return;
     }
 
+    chapterIndexRef.current = nextChapterIndex;
     paragraphIndexRef.current = nextIndex;
     activeParagraphRef.current = nextIndex;
+    setChapterIndex(nextChapterIndex);
     setActiveParagraphIndex(nextIndex);
-    scrollToParagraph(nextIndex);
-  }
+    scrollToParagraph(book.chapters[nextChapterIndex].id, nextIndex);
+  }, [book.chapters, isNarrating, scrollToParagraph, speakFromLocation]);
 
   function saveBookmark() {
     window.localStorage.setItem(
@@ -257,6 +413,14 @@ export function BookReader({ book }: BookReaderProps) {
       window.localStorage.removeItem(progressKey);
     }
   }, [book.chapters, progressKey]);
+
+  useEffect(() => {
+    chapterIndexRef.current = chapterIndex;
+  }, [chapterIndex]);
+
+  useEffect(() => {
+    speechRateRef.current = speechRate;
+  }, [speechRate]);
 
   useEffect(() => {
     window.localStorage.setItem(
@@ -302,13 +466,94 @@ export function BookReader({ book }: BookReaderProps) {
   }, [goNext, goPrevious]);
 
   useEffect(() => {
+    const mediaSession = (navigator as NavigatorWithMediaSession).mediaSession;
+    if (!mediaSession) return;
+
+    const setActionHandler = (
+      action: MediaSessionAction,
+      handler: MediaSessionActionHandler | null,
+    ) => {
+      try {
+        mediaSession.setActionHandler(action, handler);
+      } catch {
+        // Some mobile browsers expose Media Session but not every action.
+      }
+    };
+
+    setActionHandler("play", () => {
+      if (!isNarrating) {
+        speakFromParagraph(activeParagraphRef.current ?? paragraphIndexRef.current);
+        return;
+      }
+
+      if ("speechSynthesis" in window) {
+        window.speechSynthesis.resume();
+        setIsNarrationPaused(false);
+        setMediaSessionState("playing");
+      }
+    });
+    setActionHandler("pause", () => {
+      if ("speechSynthesis" in window) {
+        window.speechSynthesis.pause();
+        setIsNarrationPaused(true);
+        setMediaSessionState("paused");
+      }
+    });
+    setActionHandler("stop", stopNarration);
+    setActionHandler("previoustrack", () => goToNarrationParagraph(-1));
+    setActionHandler("nexttrack", () => goToNarrationParagraph(1));
+
     return () => {
+      setActionHandler("play", null);
+      setActionHandler("pause", null);
+      setActionHandler("stop", null);
+      setActionHandler("previoustrack", null);
+      setActionHandler("nexttrack", null);
+    };
+  }, [
+    goToNarrationParagraph,
+    isNarrating,
+    setMediaSessionState,
+    speakFromParagraph,
+    stopNarration,
+  ]);
+
+  useEffect(() => {
+    updateMediaSessionMetadata(chapterIndex);
+    if (isNarrating) {
+      setMediaSessionState(isNarrationPaused ? "paused" : "playing");
+      return;
+    }
+
+    setMediaSessionState("none");
+  }, [
+    chapterIndex,
+    isNarrating,
+    isNarrationPaused,
+    setMediaSessionState,
+    updateMediaSessionMetadata,
+  ]);
+
+  useEffect(() => {
+    const onVisibilityChange = () => {
+      if (document.visibilityState === "visible" && isNarrating && !isNarrationPaused) {
+        requestNarrationWakeLock();
+      }
+    };
+
+    document.addEventListener("visibilitychange", onVisibilityChange);
+    return () => document.removeEventListener("visibilitychange", onVisibilityChange);
+  }, [isNarrating, isNarrationPaused, requestNarrationWakeLock]);
+
+  useEffect(() => {
+    return () => {
+      releaseNarrationWakeLock();
       if ("speechSynthesis" in window) {
         manuallyStoppedRef.current = true;
         window.speechSynthesis.cancel();
       }
     };
-  }, []);
+  }, [releaseNarrationWakeLock]);
 
   async function installApp() {
     if (!installPrompt) return;
