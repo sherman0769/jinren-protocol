@@ -49,6 +49,7 @@ export function BookReader({ book }: BookReaderProps) {
   const paragraphIndexRef = useRef(0);
   const manuallyStoppedRef = useRef(false);
   const activeParagraphRef = useRef<number | null>(null);
+  const speechRunRef = useRef(0);
 
   const chapter = book.chapters[chapterIndex];
   const stats = useMemo(() => getBookStats(book), [book]);
@@ -70,7 +71,11 @@ export function BookReader({ book }: BookReaderProps) {
   const stopNarration = useCallback(() => {
     if (!("speechSynthesis" in window)) return;
     manuallyStoppedRef.current = true;
+    speechRunRef.current += 1;
+    window.speechSynthesis.resume();
     window.speechSynthesis.cancel();
+    window.setTimeout(() => window.speechSynthesis.cancel(), 0);
+    window.setTimeout(() => window.speechSynthesis.cancel(), 120);
     setIsNarrating(false);
     setIsNarrationPaused(false);
     setActiveParagraphIndex(null);
@@ -88,6 +93,9 @@ export function BookReader({ book }: BookReaderProps) {
 
     const clampedIndex = Math.min(Math.max(startIndex, 0), paragraphs.length - 1);
     manuallyStoppedRef.current = false;
+    const speechRun = speechRunRef.current + 1;
+    speechRunRef.current = speechRun;
+    window.speechSynthesis.resume();
     window.speechSynthesis.cancel();
     setSpeechError(null);
     setIsNarrating(true);
@@ -118,11 +126,13 @@ export function BookReader({ book }: BookReaderProps) {
       if (voice) utterance.voice = voice;
 
       utterance.onend = () => {
-        if (!manuallyStoppedRef.current) speakAt(index + 1);
+        if (!manuallyStoppedRef.current && speechRunRef.current === speechRun) {
+          speakAt(index + 1);
+        }
       };
 
       utterance.onerror = () => {
-        if (manuallyStoppedRef.current) return;
+        if (manuallyStoppedRef.current || speechRunRef.current !== speechRun) return;
         setSpeechError("朗讀中斷，請再試一次");
         setIsNarrating(false);
         setIsNarrationPaused(false);
@@ -432,8 +442,12 @@ export function BookReader({ book }: BookReaderProps) {
             <button
               aria-label="停止朗讀"
               className="narration-stop-button"
-              disabled={!speechSupported || !isNarrating}
+              disabled={!speechSupported}
               onClick={stopNarration}
+              onPointerDown={(event) => {
+                event.preventDefault();
+                stopNarration();
+              }}
               title="停止"
               type="button"
             >
