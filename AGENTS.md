@@ -57,6 +57,11 @@ Do not ask for confirmation before publishing a clearly new manuscript in `books
 
 When the user requests interface polish, mobile improvements, cover updates, social sharing images, download/install icons, or other reusable visual rules, record the resulting rule in this file before considering the task complete.
 
+Branding rules:
+
+- The app's public heading, browser title, installed app name, and social sharing title should use `詩塾書院`.
+- Mobile / PWA app icons should use the Chinese character `詩` as the core visual mark.
+
 Visual quality rules:
 
 - Book covers and major share images must be treated as high-quality designed assets, not simple placeholders.

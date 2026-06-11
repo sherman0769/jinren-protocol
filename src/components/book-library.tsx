@@ -56,9 +56,9 @@ export function BookLibrary({ books }: BookLibraryProps) {
     <main className="library-shell">
       <header className="library-header">
         <div>
-          <span className="eyebrow">Digital Book Reader</span>
-          <h1>Li`s Meet 私人書庫</h1>
-          <p>整理 AI 時代的知識理解方法：把書、課程、工作流與長任務思考放在同一座私人書架中，方便持續閱讀、對照與沉澱。</p>
+          <span className="eyebrow">Shishu Academy</span>
+          <h1>詩塾書院</h1>
+          <p>整理 AI 時代的知識理解方法：把書、課程、工作流與長任務思考放在同一座書院中，方便持續閱讀、對照與沉澱。</p>
         </div>
         <div className="library-stats" aria-label="書庫統計">
           <span>

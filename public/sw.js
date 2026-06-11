@@ -1,8 +1,8 @@
-const CACHE_NAME = "li-meet-private-library-v3";
+const CACHE_NAME = "shishu-academy-v1";
 const CORE_ASSETS = [
   "/",
   "/manifest.webmanifest",
-  "/share/li-meet-private-library-og.png",
+  "/share/shishu-academy-og.png",
   "/books/exponential-ai-life/cover.png",
   "/books/claude-latest-guide/cover.png",
   "/books/ai-philosophy-20-lectures/cover.png",

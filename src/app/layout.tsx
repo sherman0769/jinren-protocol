@@ -15,15 +15,15 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://jinren-protocol.vercel.app"),
   title: {
-    default: "Li`s Meet 私人書庫",
-    template: "%s｜Li`s Meet 私人書庫",
+    default: "詩塾書院",
+    template: "%s｜詩塾書院",
   },
-  description: "整理 AI 時代知識理解方法的私人書庫，支援長文閱讀、書籤保存與繼續閱讀。",
-  applicationName: "Li`s Meet 私人書庫",
+  description: "詩塾書院整理 AI 時代的知識理解方法，支援長文閱讀、書籤保存與繼續閱讀。",
+  applicationName: "詩塾書院",
   appleWebApp: {
     capable: true,
     statusBarStyle: "black-translucent",
-    title: "Li`s Meet 私人書庫",
+    title: "詩塾書院",
   },
   manifest: "/manifest.webmanifest",
   icons: {
@@ -35,24 +35,24 @@ export const metadata: Metadata = {
     shortcut: ["/favicon-48.png"],
   },
   openGraph: {
-    title: "Li`s Meet 私人書庫",
-    description: "整理 AI 時代知識理解方法的私人書庫，支援長文閱讀、書籤保存與繼續閱讀。",
+    title: "詩塾書院",
+    description: "詩塾書院整理 AI 時代的知識理解方法，支援長文閱讀、書籤保存與繼續閱讀。",
     type: "website",
     locale: "zh_TW",
     images: [
       {
-        url: "/share/li-meet-private-library-og.png",
+        url: "/share/shishu-academy-og.png",
         width: 1200,
         height: 630,
-        alt: "Li`s Meet 私人書庫分享預覽圖",
+        alt: "詩塾書院分享預覽圖",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Li`s Meet 私人書庫",
-    description: "整理 AI 時代知識理解方法的私人書庫，支援長文閱讀、書籤保存與繼續閱讀。",
-    images: ["/share/li-meet-private-library-og.png"],
+    title: "詩塾書院",
+    description: "詩塾書院整理 AI 時代的知識理解方法，支援長文閱讀、書籤保存與繼續閱讀。",
+    images: ["/share/shishu-academy-og.png"],
   },
 };
 

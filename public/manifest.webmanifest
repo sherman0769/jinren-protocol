@@ -1,7 +1,7 @@
 {
-  "name": "Li`s Meet 私人書庫",
-  "short_name": "Li`s Meet",
-  "description": "整理 AI 時代知識理解方法的私人書庫，支援長文閱讀、書籤保存與繼續閱讀。",
+  "name": "詩塾書院",
+  "short_name": "詩塾",
+  "description": "詩塾書院整理 AI 時代的知識理解方法，支援長文閱讀、書籤保存與繼續閱讀。",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
@@ -25,10 +25,10 @@
   ],
   "shortcuts": [
     {
-      "name": "開啟私人書庫",
+      "name": "開啟詩塾書院",
       "short_name": "閱讀",
       "url": "/",
-      "description": "開啟 Li`s Meet 私人書庫"
+      "description": "開啟詩塾書院"
     }
   ]
 }
