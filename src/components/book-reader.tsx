@@ -8,12 +8,18 @@ import {
   Home,
   List,
   Minus,
+  Pause,
+  Play,
   Plus,
+  SkipBack,
+  SkipForward,
+  Square,
+  Volume2,
 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import type { CSSProperties } from "react";
-import { useCallback, useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { getBookStats, type Book } from "@/lib/books";
 
 type BookReaderProps = {
@@ -26,41 +32,177 @@ type BeforeInstallPromptEvent = Event & {
 };
 
 const progressKeyPrefix = "book-reader-progress";
+const narrationRates = [0.75, 1, 1.25, 1.5, 2];
 
 export function BookReader({ book }: BookReaderProps) {
   const [chapterIndex, setChapterIndex] = useState(0);
   const [fontScale, setFontScale] = useState(1);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [speechRate, setSpeechRate] = useState(1);
+  const [speechSupported, setSpeechSupported] = useState(false);
+  const [isNarrating, setIsNarrating] = useState(false);
+  const [isNarrationPaused, setIsNarrationPaused] = useState(false);
+  const [activeParagraphIndex, setActiveParagraphIndex] = useState<number | null>(null);
+  const [speechError, setSpeechError] = useState<string | null>(null);
   const [installPrompt, setInstallPrompt] =
     useState<BeforeInstallPromptEvent | null>(null);
+  const paragraphIndexRef = useRef(0);
+  const manuallyStoppedRef = useRef(false);
+  const activeParagraphRef = useRef<number | null>(null);
 
   const chapter = book.chapters[chapterIndex];
   const stats = useMemo(() => getBookStats(book), [book]);
   const progressKey = `${progressKeyPrefix}:${book.slug}`;
   const progress = Math.round(((chapterIndex + 1) / book.chapters.length) * 100);
 
+  const scrollToParagraph = useCallback((index: number) => {
+    window.requestAnimationFrame(() => {
+      document
+        .getElementById(`chapter-${chapter.id}-paragraph-${index}`)
+        ?.scrollIntoView({ behavior: "smooth", block: "center" });
+    });
+  }, [chapter.id]);
+
+  const stopNarration = useCallback(() => {
+    if (!("speechSynthesis" in window)) return;
+    manuallyStoppedRef.current = true;
+    window.speechSynthesis.cancel();
+    setIsNarrating(false);
+    setIsNarrationPaused(false);
+    setActiveParagraphIndex(null);
+    activeParagraphRef.current = null;
+  }, []);
+
+  const speakFromParagraph = useCallback((startIndex: number, nextRate = speechRate) => {
+    if (!("speechSynthesis" in window)) {
+      setSpeechError("此瀏覽器不支援朗讀");
+      return;
+    }
+
+    const paragraphs = book.chapters[chapterIndex]?.paragraphs ?? [];
+    if (paragraphs.length === 0) return;
+
+    const clampedIndex = Math.min(Math.max(startIndex, 0), paragraphs.length - 1);
+    manuallyStoppedRef.current = false;
+    window.speechSynthesis.cancel();
+    setSpeechError(null);
+    setIsNarrating(true);
+    setIsNarrationPaused(false);
+
+    const speakAt = (index: number) => {
+      if (index >= paragraphs.length) {
+        setIsNarrating(false);
+        setIsNarrationPaused(false);
+        setActiveParagraphIndex(null);
+        activeParagraphRef.current = null;
+        return;
+      }
+
+      paragraphIndexRef.current = index;
+      activeParagraphRef.current = index;
+      setActiveParagraphIndex(index);
+      scrollToParagraph(index);
+
+      const utterance = new SpeechSynthesisUtterance(paragraphs[index]);
+      utterance.lang = "zh-TW";
+      utterance.rate = nextRate;
+      utterance.pitch = 1;
+
+      const voice = window.speechSynthesis
+        .getVoices()
+        .find((item) => item.lang.toLowerCase().startsWith("zh"));
+      if (voice) utterance.voice = voice;
+
+      utterance.onend = () => {
+        if (!manuallyStoppedRef.current) speakAt(index + 1);
+      };
+
+      utterance.onerror = () => {
+        if (manuallyStoppedRef.current) return;
+        setSpeechError("朗讀中斷，請再試一次");
+        setIsNarrating(false);
+        setIsNarrationPaused(false);
+      };
+
+      window.speechSynthesis.speak(utterance);
+    };
+
+    speakAt(clampedIndex);
+  }, [book.chapters, chapterIndex, scrollToParagraph, speechRate]);
+
   const selectChapter = useCallback((nextIndex: number) => {
+    stopNarration();
     setChapterIndex(nextIndex);
     setIsMenuOpen(false);
     window.requestAnimationFrame(() => window.scrollTo({ top: 0, behavior: "smooth" }));
-  }, []);
+  }, [stopNarration]);
 
   const goNext = useCallback(() => {
+    stopNarration();
     setChapterIndex((current) => Math.min(current + 1, book.chapters.length - 1));
     window.requestAnimationFrame(() => window.scrollTo({ top: 0, behavior: "smooth" }));
-  }, [book.chapters.length]);
+  }, [book.chapters.length, stopNarration]);
 
   const goPrevious = useCallback(() => {
+    stopNarration();
     setChapterIndex((current) => Math.max(current - 1, 0));
     window.requestAnimationFrame(() => window.scrollTo({ top: 0, behavior: "smooth" }));
-  }, []);
+  }, [stopNarration]);
+
+  function toggleNarration() {
+    if (!isNarrating) {
+      speakFromParagraph(activeParagraphRef.current ?? 0);
+      return;
+    }
+
+    if (!("speechSynthesis" in window)) return;
+
+    if (isNarrationPaused) {
+      window.speechSynthesis.resume();
+      setIsNarrationPaused(false);
+      return;
+    }
+
+    window.speechSynthesis.pause();
+    setIsNarrationPaused(true);
+  }
+
+  function changeRate(nextRate: number) {
+    setSpeechRate(nextRate);
+    if (isNarrating) {
+      window.requestAnimationFrame(() => {
+        speakFromParagraph(paragraphIndexRef.current, nextRate);
+      });
+    }
+  }
+
+  function goToNarrationParagraph(offset: number) {
+    const nextIndex = Math.min(
+      Math.max((activeParagraphRef.current ?? paragraphIndexRef.current) + offset, 0),
+      chapter.paragraphs.length - 1,
+    );
+
+    if (isNarrating) {
+      speakFromParagraph(nextIndex);
+      return;
+    }
+
+    paragraphIndexRef.current = nextIndex;
+    activeParagraphRef.current = nextIndex;
+    setActiveParagraphIndex(nextIndex);
+    scrollToParagraph(nextIndex);
+  }
 
   useEffect(() => {
     const saved = window.localStorage.getItem(progressKey);
     if (!saved) return;
 
     try {
-      const parsed = JSON.parse(saved) as { chapterIndex: number; fontScale?: number };
+      const parsed = JSON.parse(saved) as {
+        chapterIndex: number;
+        fontScale?: number;
+        speechRate?: number;
+      };
       if (
         Number.isInteger(parsed.chapterIndex) &&
         book.chapters[parsed.chapterIndex]
@@ -72,6 +214,12 @@ export function BookReader({ book }: BookReaderProps) {
           setFontScale(Math.min(1.18, Math.max(0.92, parsed.fontScale ?? 1)));
         });
       }
+      if (typeof parsed.speechRate === "number") {
+        const savedSpeechRate = parsed.speechRate;
+        window.requestAnimationFrame(() => {
+          setSpeechRate(narrationRates.includes(savedSpeechRate) ? savedSpeechRate : 1);
+        });
+      }
     } catch {
       window.localStorage.removeItem(progressKey);
     }
@@ -80,9 +228,15 @@ export function BookReader({ book }: BookReaderProps) {
   useEffect(() => {
     window.localStorage.setItem(
       progressKey,
-      JSON.stringify({ chapterIndex, fontScale }),
+      JSON.stringify({ chapterIndex, fontScale, speechRate }),
     );
-  }, [chapterIndex, fontScale, progressKey]);
+  }, [chapterIndex, fontScale, progressKey, speechRate]);
+
+  useEffect(() => {
+    window.requestAnimationFrame(() => {
+      setSpeechSupported("speechSynthesis" in window && "SpeechSynthesisUtterance" in window);
+    });
+  }, []);
 
   useEffect(() => {
     const registerWorker = async () => {
@@ -113,6 +267,15 @@ export function BookReader({ book }: BookReaderProps) {
     window.addEventListener("keydown", onKeyDown);
     return () => window.removeEventListener("keydown", onKeyDown);
   }, [goNext, goPrevious]);
+
+  useEffect(() => {
+    return () => {
+      if ("speechSynthesis" in window) {
+        manuallyStoppedRef.current = true;
+        window.speechSynthesis.cancel();
+      }
+    };
+  }, []);
 
   async function installApp() {
     if (!installPrompt) return;
@@ -187,13 +350,106 @@ export function BookReader({ book }: BookReaderProps) {
           </div>
         </section>
 
+        <section className="narration-panel" aria-label="書本朗讀">
+          <div className="narration-primary">
+            <Volume2 aria-hidden="true" size={20} />
+            <div>
+              <span>朗讀</span>
+              <strong>
+                {activeParagraphIndex === null
+                  ? "尚未開始"
+                  : `第 ${activeParagraphIndex + 1} / ${chapter.paragraphs.length} 段`}
+              </strong>
+            </div>
+          </div>
+          <div className="narration-controls">
+            <button
+              aria-label="上一段"
+              disabled={!speechSupported}
+              onClick={() => goToNarrationParagraph(-1)}
+              title="上一段"
+              type="button"
+            >
+              <SkipBack aria-hidden="true" size={18} />
+            </button>
+            <button
+              aria-label={isNarrating && !isNarrationPaused ? "暫停朗讀" : "開始朗讀"}
+              disabled={!speechSupported}
+              onClick={toggleNarration}
+              title={isNarrating && !isNarrationPaused ? "暫停" : "播放"}
+              type="button"
+            >
+              {isNarrating && !isNarrationPaused ? (
+                <Pause aria-hidden="true" size={18} />
+              ) : (
+                <Play aria-hidden="true" size={18} />
+              )}
+            </button>
+            <button
+              aria-label="停止朗讀"
+              disabled={!speechSupported || !isNarrating}
+              onClick={stopNarration}
+              title="停止"
+              type="button"
+            >
+              <Square aria-hidden="true" size={17} />
+            </button>
+            <button
+              aria-label="下一段"
+              disabled={!speechSupported}
+              onClick={() => goToNarrationParagraph(1)}
+              title="下一段"
+              type="button"
+            >
+              <SkipForward aria-hidden="true" size={18} />
+            </button>
+            <label className="rate-select">
+              <span>速度</span>
+              <select
+                aria-label="朗讀速度"
+                disabled={!speechSupported}
+                onChange={(event) => changeRate(Number(event.target.value))}
+                value={speechRate}
+              >
+                {narrationRates.map((rate) => (
+                  <option key={rate} value={rate}>
+                    {rate}x
+                  </option>
+                ))}
+              </select>
+            </label>
+          </div>
+          {(!speechSupported || speechError) && (
+            <p className="narration-status">
+              {speechError ?? "此瀏覽器不支援朗讀"}
+            </p>
+          )}
+        </section>
+
         <section className="book-prose">
           {chapter.paragraphs.map((paragraph, index) => {
             const isSubhead = paragraph.length <= 34 && index > 0;
+            const paragraphId = `chapter-${chapter.id}-paragraph-${index}`;
+            const paragraphClassName =
+              activeParagraphIndex === index ? "readable-block is-speaking" : "readable-block";
             return isSubhead ? (
-              <h3 key={`${chapter.id}-${index}`}>{paragraph}</h3>
+              <h3
+                className={paragraphClassName}
+                data-paragraph-index={index}
+                id={paragraphId}
+                key={`${chapter.id}-${index}`}
+              >
+                {paragraph}
+              </h3>
             ) : (
-              <p key={`${chapter.id}-${index}`}>{paragraph}</p>
+              <p
+                className={paragraphClassName}
+                data-paragraph-index={index}
+                id={paragraphId}
+                key={`${chapter.id}-${index}`}
+              >
+                {paragraph}
+              </p>
             );
           })}
         </section>
