@@ -49,10 +49,25 @@ type NavigatorWithMediaSession = Navigator & {
   mediaSession?: MediaSession;
 };
 
+type SavedReaderProgress = {
+  version?: number;
+  chapterIndex?: number;
+  paragraphIndex?: number;
+  paragraphId?: string;
+  scrollOffset?: number;
+  fontScale?: number;
+  speechRate?: number;
+  updatedAt?: number;
+};
+
 const progressKeyPrefix = "book-reader-progress";
 const narrationRates = [0.75, 1, 1.25, 1.5, 2];
 const subheadingPattern =
   /^(開場|前言|序言|導讀|結語|結論|總結|小結|後記|終章|附錄|延伸補充|核心命題|核心概念|案例|練習|實作|問答|重點整理)$|^第\s*[一二三四五六七八九十百千\d]+\s*[講章节章課部]\b|^[一二三四五六七八九十]+、.+|^\d+(\.\d+)+\s+.+|^\d+[、.]\s*.+/;
+
+function getParagraphId(chapterId: string, index: number) {
+  return `chapter-${chapterId}-paragraph-${index}`;
+}
 
 function isSubheading(paragraph: string, index: number) {
   const text = paragraph.trim();
@@ -80,6 +95,20 @@ export function BookReader({ book }: BookReaderProps) {
   const speechRunRef = useRef(0);
   const wakeLockRef = useRef<WakeLockSentinelLike | null>(null);
   const wakeLockReleaseHandlerRef = useRef<(() => void) | null>(null);
+  const readingPositionRef = useRef({
+    chapterIndex: 0,
+    paragraphIndex: 0,
+    paragraphId: "",
+    scrollOffset: 0,
+  });
+  const progressLoadedRef = useRef(false);
+  const restoreTargetRef = useRef<{
+    chapterIndex: number;
+    paragraphIndex: number;
+    paragraphId: string;
+    scrollOffset: number;
+  } | null>(null);
+  const progressSaveTimerRef = useRef<number | null>(null);
 
   const chapter = book.chapters[chapterIndex];
   const stats = useMemo(() => getBookStats(book), [book]);
@@ -93,10 +122,111 @@ export function BookReader({ book }: BookReaderProps) {
   const scrollToParagraph = useCallback((chapterId: string, index: number) => {
     window.requestAnimationFrame(() => {
       document
-        .getElementById(`chapter-${chapterId}-paragraph-${index}`)
+        .getElementById(getParagraphId(chapterId, index))
         ?.scrollIntoView({ behavior: "smooth", block: "center" });
     });
   }, []);
+
+  const updateReadingPosition = useCallback((
+    nextChapterIndex: number,
+    nextParagraphIndex: number,
+    element?: HTMLElement | null,
+  ) => {
+    const nextChapter = book.chapters[nextChapterIndex];
+    if (!nextChapter) return;
+
+    const paragraphIndex = Math.min(
+      Math.max(nextParagraphIndex, 0),
+      Math.max(nextChapter.paragraphs.length - 1, 0),
+    );
+    const paragraphId = getParagraphId(nextChapter.id, paragraphIndex);
+    const targetElement = element ?? document.getElementById(paragraphId);
+    const targetTop = targetElement
+      ? targetElement.getBoundingClientRect().top + window.scrollY
+      : window.scrollY;
+
+    readingPositionRef.current = {
+      chapterIndex: nextChapterIndex,
+      paragraphIndex,
+      paragraphId,
+      scrollOffset: Math.max(0, Math.round(window.scrollY - targetTop)),
+    };
+  }, [book.chapters]);
+
+  const captureReadingPosition = useCallback(() => {
+    const blocks = Array.from(
+      document.querySelectorAll<HTMLElement>(".book-prose .readable-block[data-paragraph-index]"),
+    );
+    if (blocks.length === 0) {
+      updateReadingPosition(chapterIndexRef.current, 0);
+      return;
+    }
+
+    const anchorY = Math.min(window.innerHeight * 0.35, 260);
+    let selected = blocks[0];
+
+    for (const block of blocks) {
+      const rect = block.getBoundingClientRect();
+      if (rect.top <= anchorY) {
+        selected = block;
+      } else if (selected === blocks[0] && rect.top >= 0) {
+        selected = block;
+        break;
+      } else {
+        break;
+      }
+    }
+
+    const nextParagraphIndex = Number(selected.dataset.paragraphIndex);
+    if (Number.isInteger(nextParagraphIndex)) {
+      updateReadingPosition(chapterIndexRef.current, nextParagraphIndex, selected);
+    }
+  }, [updateReadingPosition]);
+
+  const persistProgress = useCallback((overrides: Partial<SavedReaderProgress> = {}) => {
+    if (!progressLoadedRef.current) return;
+
+    const currentPosition = readingPositionRef.current;
+    const nextChapterIndex = overrides.chapterIndex ?? currentPosition.chapterIndex ?? chapterIndexRef.current;
+    const nextChapter = book.chapters[nextChapterIndex] ?? book.chapters[0];
+    if (!nextChapter) return;
+
+    const fallbackParagraphIndex = currentPosition.chapterIndex === nextChapterIndex
+      ? currentPosition.paragraphIndex
+      : 0;
+    const paragraphIndex = Math.min(
+      Math.max(overrides.paragraphIndex ?? fallbackParagraphIndex ?? 0, 0),
+      Math.max(nextChapter.paragraphs.length - 1, 0),
+    );
+    const paragraphId = overrides.paragraphId ?? getParagraphId(nextChapter.id, paragraphIndex);
+    const scrollOffset = Math.max(0, Math.round(overrides.scrollOffset ?? currentPosition.scrollOffset ?? 0));
+
+    window.localStorage.setItem(
+      progressKey,
+      JSON.stringify({
+        version: 2,
+        chapterIndex: nextChapterIndex,
+        paragraphIndex,
+        paragraphId,
+        scrollOffset,
+        fontScale,
+        speechRate,
+        updatedAt: Date.now(),
+      }),
+    );
+  }, [book.chapters, fontScale, progressKey, speechRate]);
+
+  const scheduleProgressSave = useCallback(() => {
+    if (!progressLoadedRef.current) return;
+    if (progressSaveTimerRef.current !== null) {
+      window.clearTimeout(progressSaveTimerRef.current);
+    }
+
+    progressSaveTimerRef.current = window.setTimeout(() => {
+      progressSaveTimerRef.current = null;
+      persistProgress();
+    }, 240);
+  }, [persistProgress]);
 
   const requestNarrationWakeLock = useCallback(async () => {
     const wakeLock = (navigator as NavigatorWithWakeLock).wakeLock;
@@ -218,8 +348,15 @@ export function BookReader({ book }: BookReaderProps) {
         chapterIndexRef.current = followingChapterIndex;
         paragraphIndexRef.current = 0;
         activeParagraphRef.current = 0;
+        updateReadingPosition(followingChapterIndex, 0);
         setChapterIndex(followingChapterIndex);
         updateMediaSessionMetadata(followingChapterIndex);
+        persistProgress({
+          chapterIndex: followingChapterIndex,
+          paragraphIndex: 0,
+          paragraphId: getParagraphId(followingChapter.id, 0),
+          scrollOffset: 0,
+        });
         window.setTimeout(() => {
           if (!manuallyStoppedRef.current && speechRunRef.current === speechRun) {
             speakAt(followingChapterIndex, 0);
@@ -244,8 +381,15 @@ export function BookReader({ book }: BookReaderProps) {
       activeParagraphRef.current = index;
       setChapterIndex(nextChapterIndex);
       setActiveParagraphIndex(index);
+      updateReadingPosition(nextChapterIndex, index);
       updateMediaSessionMetadata(nextChapterIndex);
       scrollToParagraph(nextChapter.id, index);
+      persistProgress({
+        chapterIndex: nextChapterIndex,
+        paragraphIndex: index,
+        paragraphId: getParagraphId(nextChapter.id, index),
+        scrollOffset: 0,
+      });
 
       const utterance = new SpeechSynthesisUtterance(paragraph);
       utterance.lang = "zh-TW";
@@ -285,6 +429,8 @@ export function BookReader({ book }: BookReaderProps) {
     requestNarrationWakeLock,
     scrollToParagraph,
     setMediaSessionState,
+    persistProgress,
+    updateReadingPosition,
     updateMediaSessionMetadata,
   ]);
 
@@ -294,22 +440,63 @@ export function BookReader({ book }: BookReaderProps) {
 
   const selectChapter = useCallback((nextIndex: number) => {
     stopNarration();
+    const nextChapter = book.chapters[nextIndex];
+    if (nextChapter) {
+      chapterIndexRef.current = nextIndex;
+      paragraphIndexRef.current = 0;
+      activeParagraphRef.current = 0;
+      updateReadingPosition(nextIndex, 0);
+      persistProgress({
+        chapterIndex: nextIndex,
+        paragraphIndex: 0,
+        paragraphId: getParagraphId(nextChapter.id, 0),
+        scrollOffset: 0,
+      });
+    }
     setChapterIndex(nextIndex);
     setIsMenuOpen(false);
     window.requestAnimationFrame(() => window.scrollTo({ top: 0, behavior: "smooth" }));
-  }, [stopNarration]);
+  }, [book.chapters, persistProgress, stopNarration, updateReadingPosition]);
 
   const goNext = useCallback(() => {
     stopNarration();
-    setChapterIndex((current) => Math.min(current + 1, book.chapters.length - 1));
+    const nextIndex = Math.min(chapterIndexRef.current + 1, book.chapters.length - 1);
+    const nextChapter = book.chapters[nextIndex];
+    if (nextChapter) {
+      chapterIndexRef.current = nextIndex;
+      paragraphIndexRef.current = 0;
+      activeParagraphRef.current = 0;
+      updateReadingPosition(nextIndex, 0);
+      persistProgress({
+        chapterIndex: nextIndex,
+        paragraphIndex: 0,
+        paragraphId: getParagraphId(nextChapter.id, 0),
+        scrollOffset: 0,
+      });
+    }
+    setChapterIndex(nextIndex);
     window.requestAnimationFrame(() => window.scrollTo({ top: 0, behavior: "smooth" }));
-  }, [book.chapters.length, stopNarration]);
+  }, [book.chapters, persistProgress, stopNarration, updateReadingPosition]);
 
   const goPrevious = useCallback(() => {
     stopNarration();
-    setChapterIndex((current) => Math.max(current - 1, 0));
+    const nextIndex = Math.max(chapterIndexRef.current - 1, 0);
+    const nextChapter = book.chapters[nextIndex];
+    if (nextChapter) {
+      chapterIndexRef.current = nextIndex;
+      paragraphIndexRef.current = 0;
+      activeParagraphRef.current = 0;
+      updateReadingPosition(nextIndex, 0);
+      persistProgress({
+        chapterIndex: nextIndex,
+        paragraphIndex: 0,
+        paragraphId: getParagraphId(nextChapter.id, 0),
+        scrollOffset: 0,
+      });
+    }
+    setChapterIndex(nextIndex);
     window.requestAnimationFrame(() => window.scrollTo({ top: 0, behavior: "smooth" }));
-  }, [stopNarration]);
+  }, [book.chapters, persistProgress, stopNarration, updateReadingPosition]);
 
   function toggleNarration() {
     if (!isNarrating) {
@@ -371,48 +558,146 @@ export function BookReader({ book }: BookReaderProps) {
     setChapterIndex(nextChapterIndex);
     setActiveParagraphIndex(nextIndex);
     scrollToParagraph(book.chapters[nextChapterIndex].id, nextIndex);
-  }, [book.chapters, isNarrating, scrollToParagraph, speakFromLocation]);
+    updateReadingPosition(nextChapterIndex, nextIndex);
+    persistProgress({
+      chapterIndex: nextChapterIndex,
+      paragraphIndex: nextIndex,
+      paragraphId: getParagraphId(book.chapters[nextChapterIndex].id, nextIndex),
+      scrollOffset: 0,
+    });
+  }, [
+    book.chapters,
+    isNarrating,
+    persistProgress,
+    scrollToParagraph,
+    speakFromLocation,
+    updateReadingPosition,
+  ]);
 
   function saveBookmark() {
-    window.localStorage.setItem(
-      progressKey,
-      JSON.stringify({ chapterIndex, fontScale, speechRate, updatedAt: Date.now() }),
-    );
-    setBookmarkNotice(`已保存：第 ${chapter.number} 章`);
+    captureReadingPosition();
+    persistProgress();
+    const savedParagraphNumber = readingPositionRef.current.paragraphIndex + 1;
+    setBookmarkNotice(`已保存：第 ${chapter.number} 章，第 ${savedParagraphNumber} 段`);
     window.setTimeout(() => setBookmarkNotice(null), 2200);
   }
 
   useEffect(() => {
     const saved = window.localStorage.getItem(progressKey);
-    if (!saved) return;
+    let loadTimer: number | null = null;
+    let restoreFrame: number | null = null;
+
+    const enableProgressSaving = () => {
+      loadTimer = window.setTimeout(() => {
+        progressLoadedRef.current = true;
+      }, 0);
+    };
+
+    if (!saved) {
+      const firstChapter = book.chapters[0];
+      readingPositionRef.current = {
+        chapterIndex: 0,
+        paragraphIndex: 0,
+        paragraphId: firstChapter ? getParagraphId(firstChapter.id, 0) : "",
+        scrollOffset: 0,
+      };
+      enableProgressSaving();
+      return () => {
+        if (loadTimer !== null) window.clearTimeout(loadTimer);
+        if (restoreFrame !== null) window.cancelAnimationFrame(restoreFrame);
+      };
+    }
 
     try {
-      const parsed = JSON.parse(saved) as {
-        chapterIndex: number;
-        fontScale?: number;
-        speechRate?: number;
+      const parsed = JSON.parse(saved) as SavedReaderProgress;
+      const savedChapterIndex =
+        Number.isInteger(parsed.chapterIndex) && book.chapters[parsed.chapterIndex ?? -1]
+          ? parsed.chapterIndex ?? 0
+          : 0;
+      const savedChapter = book.chapters[savedChapterIndex];
+      const savedParagraphIndex =
+        Number.isInteger(parsed.paragraphIndex) &&
+        savedChapter?.paragraphs[parsed.paragraphIndex ?? -1]
+          ? parsed.paragraphIndex ?? 0
+          : 0;
+      const paragraphId = savedChapter
+        ? getParagraphId(savedChapter.id, savedParagraphIndex)
+        : "";
+      const scrollOffset =
+        typeof parsed.scrollOffset === "number" && Number.isFinite(parsed.scrollOffset)
+          ? Math.max(0, Math.round(parsed.scrollOffset))
+          : 0;
+
+      chapterIndexRef.current = savedChapterIndex;
+      paragraphIndexRef.current = savedParagraphIndex;
+      readingPositionRef.current = {
+        chapterIndex: savedChapterIndex,
+        paragraphIndex: savedParagraphIndex,
+        paragraphId,
+        scrollOffset,
       };
-      if (
-        Number.isInteger(parsed.chapterIndex) &&
-        book.chapters[parsed.chapterIndex]
-      ) {
-        window.requestAnimationFrame(() => setChapterIndex(parsed.chapterIndex));
-      }
-      if (typeof parsed.fontScale === "number") {
-        window.requestAnimationFrame(() => {
+      restoreTargetRef.current = {
+        chapterIndex: savedChapterIndex,
+        paragraphIndex: savedParagraphIndex,
+        paragraphId,
+        scrollOffset,
+      };
+      restoreFrame = window.requestAnimationFrame(() => {
+        setChapterIndex(savedChapterIndex);
+
+        if (typeof parsed.fontScale === "number") {
           setFontScale(Math.min(1.18, Math.max(0.92, parsed.fontScale ?? 1)));
-        });
-      }
-      if (typeof parsed.speechRate === "number") {
-        const savedSpeechRate = parsed.speechRate;
-        window.requestAnimationFrame(() => {
+        }
+        if (typeof parsed.speechRate === "number") {
+          const savedSpeechRate = parsed.speechRate;
           setSpeechRate(narrationRates.includes(savedSpeechRate) ? savedSpeechRate : 1);
-        });
-      }
+        }
+      });
     } catch {
       window.localStorage.removeItem(progressKey);
     }
+
+    enableProgressSaving();
+    return () => {
+      if (loadTimer !== null) window.clearTimeout(loadTimer);
+      if (restoreFrame !== null) window.cancelAnimationFrame(restoreFrame);
+    };
   }, [book.chapters, progressKey]);
+
+  useEffect(() => {
+    const restoreTarget = restoreTargetRef.current;
+    if (!restoreTarget || restoreTarget.chapterIndex !== chapterIndex) return;
+
+    let attempts = 0;
+    let frame = 0;
+
+    const restoreScroll = () => {
+      const target = restoreTargetRef.current;
+      if (!target) return;
+
+      const element =
+        document.getElementById(target.paragraphId) ??
+        document.getElementById(getParagraphId(book.chapters[chapterIndex]?.id ?? "", target.paragraphIndex));
+
+      if (element) {
+        const top = element.getBoundingClientRect().top + window.scrollY + target.scrollOffset;
+        window.scrollTo({ top: Math.max(0, top), behavior: "auto" });
+        updateReadingPosition(target.chapterIndex, target.paragraphIndex, element);
+        restoreTargetRef.current = null;
+        return;
+      }
+
+      attempts += 1;
+      if (attempts < 8) {
+        frame = window.requestAnimationFrame(restoreScroll);
+      } else {
+        restoreTargetRef.current = null;
+      }
+    };
+
+    frame = window.requestAnimationFrame(restoreScroll);
+    return () => window.cancelAnimationFrame(frame);
+  }, [book.chapters, chapterIndex, updateReadingPosition]);
 
   useEffect(() => {
     chapterIndexRef.current = chapterIndex;
@@ -423,16 +708,22 @@ export function BookReader({ book }: BookReaderProps) {
   }, [speechRate]);
 
   useEffect(() => {
-    window.localStorage.setItem(
-      progressKey,
-      JSON.stringify({ chapterIndex, fontScale, speechRate, updatedAt: Date.now() }),
-    );
-  }, [chapterIndex, fontScale, progressKey, speechRate]);
+    persistProgress();
+  }, [chapterIndex, fontScale, persistProgress, speechRate]);
 
   useEffect(() => {
     window.requestAnimationFrame(() => {
       setSpeechSupported("speechSynthesis" in window && "SpeechSynthesisUtterance" in window);
     });
+  }, []);
+
+  useEffect(() => {
+    const previousScrollRestoration = window.history.scrollRestoration;
+    window.history.scrollRestoration = "manual";
+
+    return () => {
+      window.history.scrollRestoration = previousScrollRestoration;
+    };
   }, []);
 
   useEffect(() => {
@@ -464,6 +755,44 @@ export function BookReader({ book }: BookReaderProps) {
     window.addEventListener("keydown", onKeyDown);
     return () => window.removeEventListener("keydown", onKeyDown);
   }, [goNext, goPrevious]);
+
+  useEffect(() => {
+    const captureAndSave = () => {
+      captureReadingPosition();
+      persistProgress();
+    };
+
+    const onScroll = () => {
+      if (restoreTargetRef.current) return;
+      captureReadingPosition();
+      scheduleProgressSave();
+    };
+
+    const onVisibilityChange = () => {
+      if (document.visibilityState === "hidden") {
+        captureAndSave();
+      }
+    };
+
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("pagehide", captureAndSave);
+    window.addEventListener("beforeunload", captureAndSave);
+    document.addEventListener("visibilitychange", onVisibilityChange);
+
+    const frame = window.requestAnimationFrame(captureReadingPosition);
+
+    return () => {
+      window.cancelAnimationFrame(frame);
+      window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("pagehide", captureAndSave);
+      window.removeEventListener("beforeunload", captureAndSave);
+      document.removeEventListener("visibilitychange", onVisibilityChange);
+      if (progressSaveTimerRef.current !== null) {
+        window.clearTimeout(progressSaveTimerRef.current);
+        progressSaveTimerRef.current = null;
+      }
+    };
+  }, [captureReadingPosition, persistProgress, scheduleProgressSave]);
 
   useEffect(() => {
     const mediaSession = (navigator as NavigatorWithMediaSession).mediaSession;
@@ -769,7 +1098,7 @@ export function BookReader({ book }: BookReaderProps) {
         <section className="book-prose">
           {chapter.paragraphs.map((paragraph, index) => {
             const isSubhead = isSubheading(paragraph, index);
-            const paragraphId = `chapter-${chapter.id}-paragraph-${index}`;
+            const paragraphId = getParagraphId(chapter.id, index);
             const paragraphClassName =
               activeParagraphIndex === index ? "readable-block is-speaking" : "readable-block";
             return isSubhead ? (

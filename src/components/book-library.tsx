@@ -12,6 +12,7 @@ type BookLibraryProps = {
 
 type SavedProgress = {
   chapterIndex?: number;
+  paragraphIndex?: number;
   updatedAt?: number;
 };
 
@@ -87,6 +88,12 @@ export function BookLibrary({ books }: BookLibraryProps) {
               : null;
           const hasBookmark = savedChapterIndex !== null;
           const savedChapter = hasBookmark ? book.chapters[savedChapterIndex] : null;
+          const savedParagraph =
+            savedChapter &&
+            typeof progress?.paragraphIndex === "number" &&
+            savedChapter.paragraphs[progress.paragraphIndex]
+              ? progress.paragraphIndex + 1
+              : null;
 
           return (
             <article className="book-card" key={book.id}>
@@ -126,7 +133,8 @@ export function BookLibrary({ books }: BookLibraryProps) {
                 <p className="book-description">{book.description}</p>
                 {savedChapter && (
                   <p className="continue-note">
-                    書籤：第 {savedChapter.number} 章｜{savedChapter.title}
+                    書籤：第 {savedChapter.number} 章
+                    {savedParagraph ? `，第 ${savedParagraph} 段` : ""}｜{savedChapter.title}
                   </p>
                 )}
                 <div className="tag-row">

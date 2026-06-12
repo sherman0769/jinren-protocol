@@ -80,6 +80,11 @@ Narration rules:
 - Reader narration should continue across chapter boundaries by default once the user starts playback, stopping only at the end of the book or when the user manually stops it.
 - For browser-native `speechSynthesis`, background / lock-screen support is best-effort only: use Media Session metadata/actions and Screen Wake Lock when available, but do not claim guaranteed lock-screen playback unless narration is backed by real audio files or an audio streaming TTS pipeline.
 
+Reading progress rules:
+
+- Each book must keep an independent reading progress record keyed by its stable slug.
+- Continue-reading should restore the reader to the last meaningful position inside the book, including chapter, paragraph, and paragraph-relative offset when available, not only the start of the chapter.
+
 Completion rules:
 
 - For any task that changes app code, public assets, metadata, or project workflow rules, run the appropriate validation, commit the relevant files, push the branch, and deploy to production.
