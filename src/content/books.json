@@ -988,7 +988,7 @@
       "rating": "All",
       "cover": "/books/claude-latest-guide/cover.png",
       "ogImage": "/books/claude-latest-guide/cover.png",
-      "sourceUrl": "books/Claude的知識遷移.md",
+      "sourceUrl": "published-books/Claude的知識遷移.md",
       "chapters": [
         {
           "id": "chapter-01",
@@ -4023,7 +4023,7 @@
       "rating": "All",
       "cover": "/books/ai-philosophy-20-lectures/cover.png",
       "ogImage": "/books/ai-philosophy-20-lectures/cover.png",
-      "sourceUrl": "books/AI哲學 20講.md",
+      "sourceUrl": "published-books/AI哲學 20講.md",
       "chapters": [
         {
           "id": "chapter-01",
@@ -5175,7 +5175,7 @@
       "rating": "All",
       "cover": "/books/cognitive-revolution-ai-core-capabilities/cover.png",
       "ogImage": "/books/cognitive-revolution-ai-core-capabilities/cover.png",
-      "sourceUrl": "books/認知革命：AI時代的八大底層能力.md",
+      "sourceUrl": "published-books/認知革命：AI時代的八大底層能力.md",
       "chapters": [
         {
           "id": "chapter-01",
@@ -6057,7 +6057,7 @@
       "rating": "All",
       "cover": "/books/agent-runtime-complete-guide/cover.png",
       "ogImage": "/books/agent-runtime-complete-guide/cover.png",
-      "sourceUrl": "books/Agent Runtime全攻略.md",
+      "sourceUrl": "published-books/Agent Runtime全攻略.md",
       "chapters": [
         {
           "id": "chapter-01",
@@ -8340,7 +8340,7 @@
       "rating": "All",
       "cover": "/books/ai-first-principles/cover.png",
       "ogImage": "/books/ai-first-principles/cover.png",
-      "sourceUrl": "books/從AI第一性原理開始.md",
+      "sourceUrl": "published-books/從AI第一性原理開始.md",
       "chapters": [
         {
           "id": "chapter-01",
@@ -10190,7 +10190,7 @@
       "rating": "All",
       "cover": "/books/semantic-civilization-ai-compression-expansion/cover.png",
       "ogImage": "/books/semantic-civilization-ai-compression-expansion/cover.png",
-      "sourceUrl": "books/語譯文明：AI時代的認知壓縮與展開.md",
+      "sourceUrl": "published-books/語譯文明：AI時代的認知壓縮與展開.md",
       "chapters": [
         {
           "id": "chapter-01",
@@ -11188,7 +11188,7 @@
       "rating": "All",
       "cover": "/books/image2-visual-generation-ai/cover.png",
       "ogImage": "/books/image2-visual-generation-ai/cover.png",
-      "sourceUrl": "books/Image2視覺生成AI .md",
+      "sourceUrl": "published-books/Image2視覺生成AI .md",
       "chapters": [
         {
           "id": "chapter-01",
@@ -11947,7 +11947,7 @@
       "rating": "All",
       "cover": "/books/ai-engineering-operating-system/cover.png",
       "ogImage": "/books/ai-engineering-operating-system/cover.png",
-      "sourceUrl": "books/工程操作系統github.md",
+      "sourceUrl": "published-books/工程操作系統github.md",
       "chapters": [
         {
           "id": "chapter-01",
@@ -13151,7 +13151,7 @@
       "rating": "All",
       "cover": "/books/standing-above-the-loop-human-on-loop/cover.png",
       "ogImage": "/books/standing-above-the-loop-human-on-loop/cover.png",
-      "sourceUrl": "books/《站在循環之上》：Human on Loop 時代的人機協作筆記.md",
+      "sourceUrl": "published-books/《站在循環之上》：Human on Loop 時代的人機協作筆記.md",
       "chapters": [
         {
           "id": "chapter-01",

@@ -8,6 +8,8 @@ This version has breaking changes — APIs, conventions, and file structure may 
 
 The user will place future manuscripts in the root `books/` folder. When asked to check, import, publish, or "上架" books, first inspect `books/` and compare its files with the existing entries in `src/content/books.json`. Treat any supported manuscript that is not already represented in `books.json` as a new book to publish.
 
+The root `books/` folder is an intake folder for unprocessed sources only. After a manuscript has been imported and published, move its original source file to the root `published-books/` folder and keep `books/` available for future incoming manuscripts. Do not re-import files from `published-books/`; use that folder as the archive of completed source manuscripts.
+
 Supported source formats, in preferred order:
 
 - Markdown: `.md`
@@ -31,7 +33,7 @@ Default metadata rules for new manuscripts:
 - Use `published` as the default status once the book has been fully parsed into chapters.
 - Use `All` as the default rating.
 - Use a stable lowercase kebab-case slug derived from the title; avoid changing an existing slug.
-- Set `sourceUrl` to a local source reference such as `books/<filename>` unless there is a better canonical URL.
+- Set `sourceUrl` to a local source reference. New pending sources start as `books/<filename>`; after import, move the source into `published-books/<filename>` and update `sourceUrl` to that completed source location unless there is a better canonical URL.
 
 Chapter parsing rules:
 
@@ -47,14 +49,15 @@ Chapter parsing rules:
 
 Operational workflow:
 
-1. Inspect `books/`, identify new manuscripts, and state which files will be imported.
+1. Inspect `books/`, identify new manuscripts, and state which files will be imported. Treat `published-books/` as completed-source archive, not as an import queue.
 2. Parse the manuscript into the `Book` / `Chapter` schema used by `src/lib/books.ts`.
 3. Add or update only the necessary assets under `public/books/<slug>/`.
 4. Update `src/content/books.json` while preserving existing book entries.
-5. Run validation after changes: at minimum `npm run lint`; run `npm run build` when the import changes app behavior or page generation.
-6. Commit and push the completed book update to the repository. A new book is not considered finished until the changes have been pushed.
-7. Deploy the pushed version to production. A new book is not considered fully complete until the production deployment succeeds.
-8. Report the new book title, slug, chapter count, validation result, pushed commit, and production deployment URL.
+5. Move the completed source manuscript from `books/` to `published-books/` and update `sourceUrl` to the archived source path.
+6. Run validation after changes: at minimum `npm run lint`; run `npm run build` when the import changes app behavior or page generation.
+7. Commit and push the completed book update to the repository. A new book is not considered finished until the changes have been pushed.
+8. Deploy the pushed version to production. A new book is not considered fully complete until the production deployment succeeds.
+9. Report the new book title, slug, chapter count, validation result, pushed commit, and production deployment URL.
 
 Do not ask for confirmation before publishing a clearly new manuscript in `books/` unless required metadata is genuinely ambiguous or the file cannot be parsed safely.
 
