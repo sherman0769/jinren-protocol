@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "eslint",
     "import:book": "node scripts/import-docx-book.mjs",
-    "normalize:books": "node scripts/normalize-books.mjs"
+    "normalize:books": "node scripts/normalize-books.mjs",
+    "export:book-txt": "node scripts/export-book-txt.mjs"
   },
   "dependencies": {
     "lucide-react": "^1.17.0",

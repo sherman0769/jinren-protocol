@@ -28,6 +28,15 @@ Use the same publishing model as the first book:
 - Each chapter needs `id`, `number`, `title`, `summary`, `minutes`, and `paragraphs`.
 - Store cover assets under `public/books/<slug>/cover.png`, and point both `cover` and `ogImage` to `/books/<slug>/cover.png`.
 
+Plain-text export model:
+
+- For each newly published book, also create a root `book-txt/` export.
+- Create one subfolder per book under `book-txt/`, using the book's display title as the folder name, not the slug.
+- Export each chapter as a UTF-8 `.txt` file inside that folder, with filenames prefixed by a two-digit chapter number, for example `01_Chapter Title.txt`.
+- TXT exports must be clean reader-facing plain text derived from the final `books.json` chapter data: chapter title first, then paragraphs separated by blank lines.
+- Sanitize only filesystem-invalid filename characters such as `\ / : * ? " < > |`; preserve Chinese names and readable punctuation whenever the filesystem allows it.
+- Keep TXT exports in version control with the book update so the repository contains both the website data and portable plain-text chapter files.
+
 Default metadata rules for new manuscripts:
 
 - Infer `title` from the manuscript title or filename.
@@ -58,11 +67,12 @@ Operational workflow:
 4. If the user asks to treat a package as a new book even when it resembles an existing title, assign a distinct title and stable slug rather than overwriting the existing book.
 5. Add or update only the necessary assets under `public/books/<slug>/`.
 6. Update `src/content/books.json` while preserving existing book entries.
-7. Move the completed source package or manuscript from `books/` to `published-books/` and update `sourceUrl` to the archived source path.
-8. Run validation after changes: at minimum `npm run lint`; run `npm run build` when the import changes app behavior or page generation.
-9. Commit and push the completed book update to the repository. A new book is not considered finished until the changes have been pushed.
-10. Deploy the pushed version to production. A new book is not considered fully complete until the production deployment succeeds.
-11. Report the new book title, slug, chapter count, validation result, pushed commit, and production deployment URL.
+7. Export the final chapters to `book-txt/<book title>/` as numbered `.txt` files.
+8. Move the completed source package or manuscript from `books/` to `published-books/` and update `sourceUrl` to the archived source path.
+9. Run validation after changes: at minimum `npm run lint`; run `npm run build` when the import changes app behavior or page generation.
+10. Commit and push the completed book update to the repository. A new book is not considered finished until the changes have been pushed.
+11. Deploy the pushed version to production. A new book is not considered fully complete until the production deployment succeeds.
+12. Report the new book title, slug, chapter count, TXT export folder, validation result, pushed commit, and production deployment URL.
 
 Do not ask for confirmation before publishing a clearly new manuscript in `books/` unless required metadata is genuinely ambiguous or the file cannot be parsed safely.
 
