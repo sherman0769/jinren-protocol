@@ -29,7 +29,6 @@ function chapterFilename(chapter) {
 
 function chapterText(book, chapter) {
   const lines = [
-    book.title,
     chapter.title,
     ...chapter.paragraphs.map((paragraph) => String(paragraph).trim()).filter(Boolean),
   ];
