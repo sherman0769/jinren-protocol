@@ -40,11 +40,12 @@ Plain-text export model:
 NotebookLM chapter audio workflow:
 
 - When using `book-txt/<book title>/` chapter files as NotebookLM sources for podcast/audio study, treat each numbered `.txt` chapter as one source and one expected audio artifact.
-- Prefer one NotebookLM notebook per chapter for clean source isolation. If multiple sources are in one notebook, generate only after verifying that the selected source checkbox matches the target chapter and the UI shows the intended source count, normally `1 個來源`.
+- Use exactly one NotebookLM notebook per book. Upload all chapter TXT sources into that book notebook; do not create one notebook per chapter.
+- Before generating each chapter audio, clear source selections by clicking `全選` twice, verify the Studio area shows `0 個來源`, then select only the target chapter and verify the UI shows `1 個來源`.
 - Use NotebookLM `深入探索` Audio Overview for study-quality chapter audio; do not switch to short/summary formats unless the user explicitly prioritizes speed over content depth.
 - Before generation, use the `自訂語音摘要` prompt and put a first-line marker such as `章節標誌：01_Chapter Title`, so the prompt/source view beside the generated audio can be used as a second verification mark.
 - After generation, rename the NotebookLM audio card to the chapter filename stem, for example `01_Chapter Title`, and verify `查看提示詞和來源` contains the matching marker/source. Downloading the audio file is optional and should not be done unless requested.
-- For faster batch work, background generation may run in separate notebooks/tabs, but keep a ledger mapping chapter number, source path, NotebookLM URL, selected source count, generation status, and final audio card title. Do not infer chapter identity from completion order.
+- For faster batch work, queue multiple chapter audio generations in the same notebook after each one has been individually selected and marked. Keep a ledger mapping chapter number, source path, NotebookLM URL, selected source count, generation status, prompt marker, and final audio card title. Do not infer chapter identity from completion order.
 
 Default metadata rules for new manuscripts:
 
