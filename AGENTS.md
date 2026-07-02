@@ -6,7 +6,14 @@ This version has breaking changes — APIs, conventions, and file structure may 
 
 ## Book Intake / New Book Publishing
 
-The user will place future manuscripts in the root `books/` folder. When asked to check, import, publish, or "上架" books, first inspect `books/` and compare its files with the existing entries in `src/content/books.json`. Treat any supported manuscript that is not already represented in `books.json` as a new book to publish.
+The user will place future manuscripts in the root `books/` folder, or provide a Google Drive link to a manuscript/package that should be downloaded into `books/` first. When asked to check, import, publish, or "上架" books, first inspect `books/` and compare its files with the existing entries in `src/content/books.json`. Treat any supported manuscript that is not already represented in `books.json` as a new book to publish.
+
+Google Drive intake model:
+
+- When the user provides a Google Drive link as the source for a new book, use the Google Drive connector when available to access and download the linked file or folder contents. If connector access is not available or the link is not shared correctly, ask the user to adjust sharing or provide access before proceeding.
+- Download only the intended manuscript/package files into the root `books/` intake folder. Preserve the original filename when possible, and do not download directly into `published-books/`, `book-txt/`, or app content folders.
+- After download, verify the local file exists under `books/`, has a supported extension, has nonzero size, and is not already represented in `src/content/books.json` or archived under `published-books/`.
+- If the Drive link points to a folder or multiple files, identify the complete book package or intended manuscript files before importing. Prefer one complete ZIP package per book when present.
 
 The preferred source format is now one complete ZIP package per book. A book ZIP may contain a README, manifest, chapter folders, chapter ZIP files, Markdown chapter sources, Word chapter sources, and supporting production notes. Extract the ZIP into `tmp/`, inspect the README/manifest first, then parse the reader-facing chapter source files in chapter order. Prefer `chapter_XX_main.md` or equivalent polished manuscript files; use `.docx` only when Markdown is missing or incomplete. Ignore supporting files such as speech notes, slide outlines, quote banks, loop canvases, and internal README files unless the user explicitly asks to publish them.
 
@@ -40,12 +47,15 @@ Plain-text export model:
 NotebookLM chapter audio workflow:
 
 - When using `book-txt/<book title>/` chapter files as NotebookLM sources for podcast/audio study, treat each numbered `.txt` chapter as one source and one expected audio artifact.
+- Before opening NotebookLM, run a TXT chapter preflight: verify the chapter count, two-digit ordering, no duplicate chapter numbers, no missing chapter numbers, no empty files, and that every filename stem is the intended final audio title.
+- Create or update `book-txt/<book title>/notebooklm-audio-ledger.json` during audio work. Track notebook URL, chapter number, source filename, prompt marker, selected source count, generation state, prompt/source verification state, final audio card title, and completion timestamp.
 - Use exactly one NotebookLM notebook per book. Upload all chapter TXT sources into that book notebook; do not create one notebook per chapter.
 - Before generating each chapter audio, clear source selections by clicking `全選` twice, verify the Studio area shows `0 個來源`, then select only the target chapter and verify the UI shows `1 個來源`.
 - Use NotebookLM `深入探索` Audio Overview for study-quality chapter audio; do not switch to short/summary formats unless the user explicitly prioritizes speed over content depth.
 - Before generation, use the `自訂語音摘要` prompt and put a first-line marker such as `章節標誌：01_Chapter Title`, so the prompt/source view beside the generated audio can be used as a second verification mark.
 - After generation, rename the NotebookLM audio card to the chapter filename stem, for example `01_Chapter Title`, and verify `查看提示詞和來源` contains the matching marker/source. Downloading the audio file is optional and should not be done unless requested.
-- For faster batch work, queue multiple chapter audio generations in the same notebook after each one has been individually selected and marked. Keep a ledger mapping chapter number, source path, NotebookLM URL, selected source count, generation status, prompt marker, and final audio card title. Do not infer chapter identity from completion order.
+- For faster batch work, queue multiple chapter audio generations in the same notebook after each one has been individually selected and marked. Do not infer chapter identity from completion order.
+- Final NotebookLM validation must confirm completed audio count equals chapter count, no `正在生成語音摘要` remains, every `NN_Chapter Title` audio card title exists, every completed card has a matching prompt marker/source check in the ledger, and NotebookLM source count equals TXT chapter count.
 
 Default metadata rules for new manuscripts:
 
@@ -71,7 +81,7 @@ Chapter parsing rules:
 
 Operational workflow:
 
-1. Inspect `books/`, identify new manuscripts or complete book ZIP packages, and state which files will be imported. Treat `published-books/` as completed-source archive, not as an import queue.
+1. If the user provides a Google Drive source link, download the intended manuscript/package into `books/` first and verify the local file. Then inspect `books/`, identify new manuscripts or complete book ZIP packages, and state which files will be imported. Treat `published-books/` as completed-source archive, not as an import queue.
 2. For ZIP packages, extract to `tmp/`, read the README/manifest, unpack nested chapter ZIPs when present, and identify the reader-facing chapter source files.
 3. Parse the manuscript into the `Book` / `Chapter` schema used by `src/lib/books.ts`. If a ZIP package represents a clearly new title, append it as a new book; if it is a full replacement package for an existing title, update the existing book instead of adding a duplicate.
 4. If the user asks to treat a package as a new book even when it resembles an existing title, assign a distinct title and stable slug rather than overwriting the existing book.
