@@ -46,6 +46,7 @@ Plain-text export model:
 
 NotebookLM chapter audio workflow:
 
+- Project-level "目標" instructions for book publishing include this NotebookLM chapter audio loop by default. When the user asks for a shortest "目標" command, a book publishing goal, or "上架" work, treat NotebookLM audio generation and ledger validation as part of the expected deliverable unless the user explicitly excludes NotebookLM or asks for website-only publishing.
 - When using `book-txt/<book title>/` chapter files as NotebookLM sources for podcast/audio study, treat each numbered `.txt` chapter as one source and one expected audio artifact.
 - Before opening NotebookLM, run a TXT chapter preflight: verify the chapter count, two-digit ordering, no duplicate chapter numbers, no missing chapter numbers, no empty files, and that every filename stem is the intended final audio title.
 - Create or update `book-txt/<book title>/notebooklm-audio-ledger.json` during audio work. Track notebook URL, chapter number, source filename, prompt marker, selected source count, generation state, prompt/source verification state, final audio card title, and completion timestamp.
@@ -88,11 +89,12 @@ Operational workflow:
 5. Add or update only the necessary assets under `public/books/<slug>/`.
 6. Update `src/content/books.json` while preserving existing book entries.
 7. Export the final chapters to `book-txt/<book title>/` as numbered `.txt` files.
-8. Move the completed source package or manuscript from `books/` to `published-books/` and update `sourceUrl` to the archived source path.
-9. Run validation after changes: at minimum `npm run lint`; run `npm run build` when the import changes app behavior or page generation.
-10. Commit and push the completed book update to the repository. A new book is not considered finished until the changes have been pushed.
-11. Deploy the pushed version to production. A new book is not considered fully complete until the production deployment succeeds.
-12. Report the new book title, slug, chapter count, TXT export folder, validation result, pushed commit, and production deployment URL.
+8. Run the NotebookLM chapter audio workflow from the TXT exports by default, including ledger creation/update and final NotebookLM validation, unless the user explicitly excludes NotebookLM or asks for website-only publishing.
+9. Move the completed source package or manuscript from `books/` to `published-books/` and update `sourceUrl` to the archived source path.
+10. Run validation after changes: at minimum `npm run lint`; run `npm run build` when the import changes app behavior or page generation.
+11. Commit and push the completed book update to the repository. A new book is not considered finished until the changes have been pushed.
+12. Deploy the pushed version to production. A new book is not considered fully complete until the production deployment succeeds.
+13. Report the new book title, slug, chapter count, TXT export folder, NotebookLM ledger path and validation result, app validation result, pushed commit, and production deployment URL.
 
 Do not ask for confirmation before publishing a clearly new manuscript in `books/` unless required metadata is genuinely ambiguous or the file cannot be parsed safely.
 
