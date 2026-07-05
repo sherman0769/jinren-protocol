@@ -1,0 +1,286 @@
+{
+  "bookTitle": "Token階級",
+  "notebookTitle": "Token階級｜章節音頻",
+  "notebookUrl": "https://notebooklm.google.com/notebook/5fb66d8e-6ef3-4611-ad14-6e5d468442fa",
+  "sourceCountExpected": 12,
+  "audioCountExpected": 12,
+  "preflight": {
+    "checkedAt": "2026-07-05T00:33:15.910Z",
+    "chapterCount": 12,
+    "contiguousTwoDigitOrdering": true,
+    "noDuplicateChapterNumbers": true,
+    "noMissingChapterNumbers": true,
+    "noEmptyFiles": true,
+    "filenamesAreFinalAudioTitles": true
+  },
+  "entries": [
+    {
+      "chapterNumber": 1,
+      "sourcePath": "book-txt/Token階級/01_從數位落差到Token落差.txt",
+      "sourceFilename": "01_從數位落差到Token落差.txt",
+      "promptMarker": "章節標誌：01_從數位落差到Token落差",
+      "expectedAudioTitle": "01_從數位落差到Token落差",
+      "selectedSourceCount": 1,
+      "generationState": "completed",
+      "promptSourceVerificationState": "complete",
+      "finalAudioCardTitle": "01_從數位落差到Token落差",
+      "completionTimestamp": "2026-07-05T00:58:30.142Z",
+      "queuedAt": "2026-07-05T00:38:55.600Z",
+      "uiSourceCountText": "1 個來源",
+      "duration": "23:42",
+      "promptSourceVerification": {
+        "promptMarkerMatched": true,
+        "sourceFilenameMatched": true,
+        "observedPromptMarker": "章節標誌：01_從數位落差到Token落差",
+        "observedSourceFilename": "01_從數位落差到Token落差.txt"
+      }
+    },
+    {
+      "chapterNumber": 2,
+      "sourcePath": "book-txt/Token階級/02_模型權限：誰能叫出更強的大腦.txt",
+      "sourceFilename": "02_模型權限：誰能叫出更強的大腦.txt",
+      "promptMarker": "章節標誌：02_模型權限：誰能叫出更強的大腦",
+      "expectedAudioTitle": "02_模型權限：誰能叫出更強的大腦",
+      "selectedSourceCount": 1,
+      "generationState": "completed",
+      "promptSourceVerificationState": "complete",
+      "finalAudioCardTitle": "02_模型權限：誰能叫出更強的大腦",
+      "completionTimestamp": "2026-07-05T00:58:13.072Z",
+      "queuedAt": "2026-07-05T00:39:56.932Z",
+      "uiSourceCountText": "1 個來源",
+      "promptSubmitted": "章節標誌：02_模型權限：誰能叫出更強的大腦\n\n請生成第02章的深入探索語音摘要。本集標題請使用：02_模型權限：誰能叫出更強的大腦。只根據目前選取的第02章來源，不要引用其他章節。請用中文繁體，兩位主持人自然對談，保留本章核心觀念、案例、行動練習與章末重點，適合之後反覆聆聽學習。",
+      "duration": "24:50",
+      "promptSourceVerification": {
+        "promptMarkerMatched": true,
+        "sourceFilenameMatched": true,
+        "observedPromptMarker": "章節標誌：02_模型權限：誰能叫出更強的大腦",
+        "observedSourceFilename": "02_模型權限：誰能叫出更強的大腦.txt"
+      }
+    },
+    {
+      "chapterNumber": 3,
+      "sourcePath": "book-txt/Token階級/03_Token配額：新的認知貨幣.txt",
+      "sourceFilename": "03_Token配額：新的認知貨幣.txt",
+      "promptMarker": "章節標誌：03_Token配額：新的認知貨幣",
+      "expectedAudioTitle": "03_Token配額：新的認知貨幣",
+      "selectedSourceCount": 1,
+      "generationState": "completed",
+      "promptSourceVerificationState": "complete",
+      "finalAudioCardTitle": "03_Token配額：新的認知貨幣",
+      "completionTimestamp": "2026-07-05T00:58:21.580Z",
+      "queuedAt": "2026-07-05T00:41:02.218Z",
+      "uiSourceCountText": "1 個來源",
+      "promptSubmitted": "章節標誌：03_Token配額：新的認知貨幣\n\n請生成第03章的深入探索語音摘要。本集標題請使用：03_Token配額：新的認知貨幣。只根據目前選取的第03章來源，不要引用其他章節。請用中文繁體，兩位主持人自然對談，保留本章核心觀念、案例、行動練習與章末重點，適合之後反覆聆聽學習。",
+      "duration": "13:49",
+      "promptSourceVerification": {
+        "promptMarkerMatched": true,
+        "sourceFilenameMatched": true,
+        "observedPromptMarker": "章節標誌：03_Token配額：新的認知貨幣",
+        "observedSourceFilename": "03_Token配額：新的認知貨幣.txt"
+      }
+    },
+    {
+      "chapterNumber": 4,
+      "sourcePath": "book-txt/Token階級/04_長上下文：誰能帶著更多記憶工作.txt",
+      "sourceFilename": "04_長上下文：誰能帶著更多記憶工作.txt",
+      "promptMarker": "章節標誌：04_長上下文：誰能帶著更多記憶工作",
+      "expectedAudioTitle": "04_長上下文：誰能帶著更多記憶工作",
+      "selectedSourceCount": 1,
+      "generationState": "completed",
+      "promptSourceVerificationState": "complete",
+      "finalAudioCardTitle": "04_長上下文：誰能帶著更多記憶工作",
+      "completionTimestamp": "2026-07-05T01:02:27.374Z",
+      "queuedAt": "2026-07-05T00:41:09.568Z",
+      "uiSourceCountText": "1 個來源",
+      "promptSubmitted": "章節標誌：04_長上下文：誰能帶著更多記憶工作\n\n請生成第04章的深入探索語音摘要。本集標題請使用：04_長上下文：誰能帶著更多記憶工作。只根據目前選取的第04章來源，不要引用其他章節。請用中文繁體，兩位主持人自然對談，保留本章核心觀念、案例、行動練習與章末重點，適合之後反覆聆聽學習。",
+      "duration": "18:52",
+      "promptSourceVerification": {
+        "promptMarkerMatched": true,
+        "sourceFilenameMatched": true,
+        "observedPromptMarker": "章節標誌：04_長上下文：誰能帶著更多記憶工作",
+        "observedSourceFilename": "04_長上下文：誰能帶著更多記憶工作.txt"
+      }
+    },
+    {
+      "chapterNumber": 5,
+      "sourcePath": "book-txt/Token階級/05_API權限：從聊天者到系統設計者.txt",
+      "sourceFilename": "05_API權限：從聊天者到系統設計者.txt",
+      "promptMarker": "章節標誌：05_API權限：從聊天者到系統設計者",
+      "expectedAudioTitle": "05_API權限：從聊天者到系統設計者",
+      "selectedSourceCount": 1,
+      "generationState": "completed",
+      "promptSourceVerificationState": "complete",
+      "finalAudioCardTitle": "05_API權限：從聊天者到系統設計者",
+      "completionTimestamp": "2026-07-05T00:58:04.546Z",
+      "queuedAt": "2026-07-05T00:41:16.795Z",
+      "uiSourceCountText": "1 個來源",
+      "promptSubmitted": "章節標誌：05_API權限：從聊天者到系統設計者\n\n請生成第05章的深入探索語音摘要。本集標題請使用：05_API權限：從聊天者到系統設計者。只根據目前選取的第05章來源，不要引用其他章節。請用中文繁體，兩位主持人自然對談，保留本章核心觀念、案例、行動練習與章末重點，適合之後反覆聆聽學習。",
+      "duration": "22:09",
+      "promptSourceVerification": {
+        "promptMarkerMatched": true,
+        "sourceFilenameMatched": true,
+        "observedPromptMarker": "章節標誌：05_API權限：從聊天者到系統設計者",
+        "observedSourceFilename": "05_API權限：從聊天者到系統設計者.txt"
+      }
+    },
+    {
+      "chapterNumber": 6,
+      "sourcePath": "book-txt/Token階級/06_Agent權限：讓AI替自己持續工作.txt",
+      "sourceFilename": "06_Agent權限：讓AI替自己持續工作.txt",
+      "promptMarker": "章節標誌：06_Agent權限：讓AI替自己持續工作",
+      "expectedAudioTitle": "06_Agent權限：讓AI替自己持續工作",
+      "selectedSourceCount": 1,
+      "generationState": "completed",
+      "promptSourceVerificationState": "complete",
+      "finalAudioCardTitle": "06_Agent權限：讓AI替自己持續工作",
+      "completionTimestamp": "2026-07-05T00:56:18.173Z",
+      "queuedAt": "2026-07-05T00:41:23.986Z",
+      "uiSourceCountText": "1 個來源",
+      "promptSubmitted": "章節標誌：06_Agent權限：讓AI替自己持續工作\n\n請生成第06章的深入探索語音摘要。本集標題請使用：06_Agent權限：讓AI替自己持續工作。只根據目前選取的第06章來源，不要引用其他章節。請用中文繁體，兩位主持人自然對談，保留本章核心觀念、案例、行動練習與章末重點，適合之後反覆聆聽學習。",
+      "duration": "20:20",
+      "promptSourceVerification": {
+        "promptMarkerMatched": true,
+        "sourceFilenameMatched": true,
+        "observedPromptMarker": "章節標誌：06_Agent權限：讓AI替自己持續工作",
+        "observedSourceFilename": "06_Agent權限：讓AI替自己持續工作.txt"
+      }
+    },
+    {
+      "chapterNumber": 7,
+      "sourcePath": "book-txt/Token階級/07_提問經濟學：不要浪費Token.txt",
+      "sourceFilename": "07_提問經濟學：不要浪費Token.txt",
+      "promptMarker": "章節標誌：07_提問經濟學：不要浪費Token",
+      "expectedAudioTitle": "07_提問經濟學：不要浪費Token",
+      "selectedSourceCount": 1,
+      "generationState": "completed",
+      "promptSourceVerificationState": "complete",
+      "finalAudioCardTitle": "07_提問經濟學：不要浪費Token",
+      "completionTimestamp": "2026-07-05T00:57:55.958Z",
+      "queuedAt": "2026-07-05T00:41:31.231Z",
+      "uiSourceCountText": "1 個來源",
+      "promptSubmitted": "章節標誌：07_提問經濟學：不要浪費Token\n\n請生成第07章的深入探索語音摘要。本集標題請使用：07_提問經濟學：不要浪費Token。只根據目前選取的第07章來源，不要引用其他章節。請用中文繁體，兩位主持人自然對談，保留本章核心觀念、案例、行動練習與章末重點，適合之後反覆聆聽學習。",
+      "duration": "21:41",
+      "promptSourceVerification": {
+        "promptMarkerMatched": true,
+        "sourceFilenameMatched": true,
+        "observedPromptMarker": "章節標誌：07_提問經濟學：不要浪費Token",
+        "observedSourceFilename": "07_提問經濟學：不要浪費Token.txt"
+      }
+    },
+    {
+      "chapterNumber": 8,
+      "sourcePath": "book-txt/Token階級/08_從Prompt到Workflow：真正差距不是一句提示詞.txt",
+      "sourceFilename": "08_從Prompt到Workflow：真正差距不是一句提示詞.txt",
+      "promptMarker": "章節標誌：08_從Prompt到Workflow：真正差距不是一句提示詞",
+      "expectedAudioTitle": "08_從Prompt到Workflow：真正差距不是一句提示詞",
+      "selectedSourceCount": 1,
+      "generationState": "completed",
+      "promptSourceVerificationState": "complete",
+      "finalAudioCardTitle": "08_從Prompt到Workflow：真正差距不是一句提示詞",
+      "completionTimestamp": "2026-07-05T00:51:14.449Z",
+      "queuedAt": "2026-07-05T00:41:38.480Z",
+      "uiSourceCountText": "1 個來源",
+      "promptSubmitted": "章節標誌：08_從Prompt到Workflow：真正差距不是一句提示詞\n\n請生成第08章的深入探索語音摘要。本集標題請使用：08_從Prompt到Workflow：真正差距不是一句提示詞。只根據目前選取的第08章來源，不要引用其他章節。請用中文繁體，兩位主持人自然對談，保留本章核心觀念、案例、行動練習與章末重點，適合之後反覆聆聽學習。",
+      "duration": "24:09",
+      "promptSourceVerification": {
+        "promptMarkerMatched": true,
+        "sourceFilenameMatched": true,
+        "observedPromptMarker": "章節標誌：08_從Prompt到Workflow：真正差距不是一句提示詞",
+        "observedSourceFilename": "08_從Prompt到Workflow：真正差距不是一句提示詞.txt"
+      }
+    },
+    {
+      "chapterNumber": 9,
+      "sourcePath": "book-txt/Token階級/09_個人知識庫：讓AI讀懂你.txt",
+      "sourceFilename": "09_個人知識庫：讓AI讀懂你.txt",
+      "promptMarker": "章節標誌：09_個人知識庫：讓AI讀懂你",
+      "expectedAudioTitle": "09_個人知識庫：讓AI讀懂你",
+      "selectedSourceCount": 1,
+      "generationState": "completed",
+      "promptSourceVerificationState": "complete",
+      "finalAudioCardTitle": "09_個人知識庫：讓AI讀懂你",
+      "completionTimestamp": "2026-07-05T00:57:30.390Z",
+      "queuedAt": "2026-07-05T00:41:45.726Z",
+      "uiSourceCountText": "1 個來源",
+      "promptSubmitted": "章節標誌：09_個人知識庫：讓AI讀懂你\n\n請生成第09章的深入探索語音摘要。本集標題請使用：09_個人知識庫：讓AI讀懂你。只根據目前選取的第09章來源，不要引用其他章節。請用中文繁體，兩位主持人自然對談，保留本章核心觀念、案例、行動練習與章末重點，適合之後反覆聆聽學習。",
+      "duration": "24:17",
+      "promptSourceVerification": {
+        "promptMarkerMatched": true,
+        "sourceFilenameMatched": true,
+        "observedPromptMarker": "章節標誌：09_個人知識庫：讓AI讀懂你",
+        "observedSourceFilename": "09_個人知識庫：讓AI讀懂你.txt"
+      }
+    },
+    {
+      "chapterNumber": 10,
+      "sourcePath": "book-txt/Token階級/10_教育的新責任：AI權限意識.txt",
+      "sourceFilename": "10_教育的新責任：AI權限意識.txt",
+      "promptMarker": "章節標誌：10_教育的新責任：AI權限意識",
+      "expectedAudioTitle": "10_教育的新責任：AI權限意識",
+      "selectedSourceCount": 1,
+      "generationState": "completed",
+      "promptSourceVerificationState": "complete",
+      "finalAudioCardTitle": "10_教育的新責任：AI權限意識",
+      "completionTimestamp": "2026-07-05T00:57:47.459Z",
+      "queuedAt": "2026-07-05T00:41:52.988Z",
+      "uiSourceCountText": "1 個來源",
+      "promptSubmitted": "章節標誌：10_教育的新責任：AI權限意識\n\n請生成第10章的深入探索語音摘要。本集標題請使用：10_教育的新責任：AI權限意識。只根據目前選取的第10章來源，不要引用其他章節。請用中文繁體，兩位主持人自然對談，保留本章核心觀念、案例、行動練習與章末重點，適合之後反覆聆聽學習。",
+      "duration": "21:42",
+      "promptSourceVerification": {
+        "promptMarkerMatched": true,
+        "sourceFilenameMatched": true,
+        "observedPromptMarker": "章節標誌：10_教育的新責任：AI權限意識",
+        "observedSourceFilename": "10_教育的新責任：AI權限意識.txt"
+      }
+    },
+    {
+      "chapterNumber": 11,
+      "sourcePath": "book-txt/Token階級/11_企業的新分層：AI配備與組織競爭力.txt",
+      "sourceFilename": "11_企業的新分層：AI配備與組織競爭力.txt",
+      "promptMarker": "章節標誌：11_企業的新分層：AI配備與組織競爭力",
+      "expectedAudioTitle": "11_企業的新分層：AI配備與組織競爭力",
+      "selectedSourceCount": 1,
+      "generationState": "completed",
+      "promptSourceVerificationState": "complete",
+      "finalAudioCardTitle": "11_企業的新分層：AI配備與組織競爭力",
+      "completionTimestamp": "2026-07-05T00:51:23.119Z",
+      "queuedAt": "2026-07-05T00:42:00.302Z",
+      "uiSourceCountText": "1 個來源",
+      "promptSubmitted": "章節標誌：11_企業的新分層：AI配備與組織競爭力\n\n請生成第11章的深入探索語音摘要。本集標題請使用：11_企業的新分層：AI配備與組織競爭力。只根據目前選取的第11章來源，不要引用其他章節。請用中文繁體，兩位主持人自然對談，保留本章核心觀念、案例、行動練習與章末重點，適合之後反覆聆聽學習。",
+      "duration": "23:23",
+      "promptSourceVerification": {
+        "promptMarkerMatched": true,
+        "sourceFilenameMatched": true,
+        "observedPromptMarker": "章節標誌：11_企業的新分層：AI配備與組織競爭力",
+        "observedSourceFilename": "11_企業的新分層：AI配備與組織競爭力.txt"
+      }
+    },
+    {
+      "chapterNumber": 12,
+      "sourcePath": "book-txt/Token階級/12_站在Token之上：普通人的突圍路徑.txt",
+      "sourceFilename": "12_站在Token之上：普通人的突圍路徑.txt",
+      "promptMarker": "章節標誌：12_站在Token之上：普通人的突圍路徑",
+      "expectedAudioTitle": "12_站在Token之上：普通人的突圍路徑",
+      "selectedSourceCount": 1,
+      "generationState": "completed",
+      "promptSourceVerificationState": "complete",
+      "finalAudioCardTitle": "12_站在Token之上：普通人的突圍路徑",
+      "completionTimestamp": "2026-07-05T00:57:38.929Z",
+      "queuedAt": "2026-07-05T00:42:07.530Z",
+      "uiSourceCountText": "1 個來源",
+      "promptSubmitted": "章節標誌：12_站在Token之上：普通人的突圍路徑\n\n請生成第12章的深入探索語音摘要。本集標題請使用：12_站在Token之上：普通人的突圍路徑。只根據目前選取的第12章來源，不要引用其他章節。請用中文繁體，兩位主持人自然對談，保留本章核心觀念、案例、行動練習與章末重點，適合之後反覆聆聽學習。",
+      "duration": "20:20",
+      "promptSourceVerification": {
+        "promptMarkerMatched": true,
+        "sourceFilenameMatched": true,
+        "observedPromptMarker": "章節標誌：12_站在Token之上：普通人的突圍路徑",
+        "observedSourceFilename": "12_站在Token之上：普通人的突圍路徑.txt"
+      }
+    }
+  ],
+  "sourceUpload": {
+    "uploadedAt": "2026-07-05T00:36:49.170Z",
+    "sourceCountVisible": 12,
+    "sourceCountMatchesTxt": true
+  }
+}
