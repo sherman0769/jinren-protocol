@@ -31,6 +31,10 @@ function usage() {
     "",
     "Options:",
     "  --id <book-id>      Defaults to --slug.",
+    "  --title <title>     Override inferred book title.",
+    "  --subtitle <text>   Override inferred subtitle.",
+    "  --description <text> Override inferred description.",
+    "  --genre <csv>       Override default comma-separated genre list.",
     "  --dry-run          Validate and print the generated book without writing books.json.",
   ].join("\n");
 }
@@ -47,17 +51,32 @@ function findPackageRoot(inputPath) {
     throw new Error(`Package directory not found: ${resolved}`);
   }
 
-  if (fs.existsSync(path.join(resolved, "full_book.md"))) return resolved;
+  if (fs.existsSync(path.join(resolved, "full_book.md"))) {
+    return { root: resolved, format: "overview-expanded" };
+  }
+
+  if (fs.existsSync(path.join(resolved, "00_full_manuscript.md"))) {
+    return { root: resolved, format: "full-manuscript-package" };
+  }
 
   const children = fs
     .readdirSync(resolved, { withFileTypes: true })
     .filter((entry) => entry.isDirectory())
     .map((entry) => path.join(resolved, entry.name));
 
-  const packageRoot = children.find((candidate) => fs.existsSync(path.join(candidate, "full_book.md")));
-  if (packageRoot) return packageRoot;
+  const overviewPackageRoot = children.find((candidate) => fs.existsSync(path.join(candidate, "full_book.md")));
+  if (overviewPackageRoot) {
+    return { root: overviewPackageRoot, format: "overview-expanded" };
+  }
 
-  throw new Error(`Could not find full_book.md under ${resolved}`);
+  const manuscriptPackageRoot = children.find((candidate) =>
+    fs.existsSync(path.join(candidate, "00_full_manuscript.md")),
+  );
+  if (manuscriptPackageRoot) {
+    return { root: manuscriptPackageRoot, format: "full-manuscript-package" };
+  }
+
+  throw new Error(`Could not find supported book package under ${resolved}`);
 }
 
 function normalizeWhitespace(value) {
@@ -118,7 +137,34 @@ function parseOverview(packageRoot) {
   };
 }
 
-function collectChapterFiles(packageRoot) {
+function parseFullManuscriptOverview(packageRoot) {
+  const manuscriptPath = path.join(packageRoot, "00_full_manuscript.md");
+  assertFile(manuscriptPath, "00_full_manuscript.md");
+  const manuscript = fs.readFileSync(manuscriptPath, "utf8").replace(/\r/g, "");
+  const lines = manuscript.split("\n");
+
+  const title =
+    lines
+      .map((line) => line.trim())
+      .find((line) => /^#\s+/.test(line))
+      ?.replace(/^#\s+/, "")
+      .trim() ?? "";
+
+  const subtitle =
+    lines
+      .map((line) => line.trim())
+      .find((line) => /^\*\*.+\*\*$/.test(line))
+      ?.replace(/^\*\*|\*\*$/g, "")
+      .trim() ?? "";
+
+  return {
+    title,
+    subtitle,
+    description: "一本面向 AI Agent 時代的驗證、記憶、工作流與治理設計筆記。",
+  };
+}
+
+function collectOverviewChapterFiles(packageRoot) {
   const expandedRoot = path.join(packageRoot, "expanded");
   if (!fs.existsSync(expandedRoot)) {
     throw new Error(`expanded folder not found: ${expandedRoot}`);
@@ -136,6 +182,7 @@ function collectChapterFiles(packageRoot) {
       chapterFiles.push({
         number: Number.parseInt(match[1], 10),
         path: path.join(chapterDir, file.name),
+        preserveHeadingTitle: false,
       });
     }
   }
@@ -147,6 +194,36 @@ function collectChapterFiles(packageRoot) {
   }
 
   return chapterFiles;
+}
+
+function collectFullManuscriptChapterFiles(packageRoot) {
+  const chapterFiles = [];
+
+  for (const entry of fs.readdirSync(packageRoot, { withFileTypes: true })) {
+    if (!entry.isDirectory()) continue;
+    const chapterDir = path.join(packageRoot, entry.name);
+    for (const file of fs.readdirSync(chapterDir, { withFileTypes: true })) {
+      if (!file.isFile()) continue;
+      const match = file.name.match(/^chapter_(\d{2})_main\.md$/i);
+      if (!match) continue;
+      chapterFiles.push({
+        sourceNumber: Number.parseInt(match[1], 10),
+        path: path.join(chapterDir, file.name),
+        preserveHeadingTitle: true,
+      });
+    }
+  }
+
+  chapterFiles.sort((left, right) => left.sourceNumber - right.sourceNumber);
+
+  if (chapterFiles.length === 0) {
+    throw new Error(`No chapter_XX_main.md files found under ${packageRoot}`);
+  }
+
+  return chapterFiles.map((file, index) => ({
+    ...file,
+    number: index + 1,
+  }));
 }
 
 function isSkippableLine(line) {
@@ -204,10 +281,13 @@ function pushBlock(paragraphs, block) {
 function parseChapter(fileInfo) {
   const raw = fs.readFileSync(fileInfo.path, "utf8").replace(/\r/g, "");
   const lines = raw.split("\n");
-  const heading = lines.find((line) => /^#\s*第\s*\d+\s*章[｜|:：-]/.test(line.trim()));
+  const heading = lines.find((line) => /^#\s+/.test(line.trim()));
 
-  const title = heading
-    ? cleanMarkdownLine(heading).replace(/^第\s*\d+\s*章\s*[｜|:：-]\s*/, "")
+  const headingTitle = heading ? cleanMarkdownLine(heading) : "";
+  const title = headingTitle
+    ? fileInfo.preserveHeadingTitle
+      ? headingTitle
+      : headingTitle.replace(/^第\s*\d+\s*章\s*[｜|:：-]\s*/, "")
     : `第 ${fileInfo.number} 章`;
 
   const paragraphs = [];
@@ -320,21 +400,34 @@ if (!args.package || !args.source || !args.slug) {
   process.exit(1);
 }
 
-const packageRoot = findPackageRoot(args.package);
-const overview = parseOverview(packageRoot);
-const chapters = collectChapterFiles(packageRoot).map(parseChapter);
+const packageInfo = findPackageRoot(args.package);
+const packageRoot = packageInfo.root;
+const overview =
+  packageInfo.format === "full-manuscript-package"
+    ? parseFullManuscriptOverview(packageRoot)
+    : parseOverview(packageRoot);
+const chapters =
+  packageInfo.format === "full-manuscript-package"
+    ? collectFullManuscriptChapterFiles(packageRoot).map(parseChapter)
+    : collectOverviewChapterFiles(packageRoot).map(parseChapter);
 const slug = args.slug;
 const id = args.id || slug;
+const genre = args.genre
+  ? args.genre
+      .split(",")
+      .map((item) => item.trim())
+      .filter(Boolean)
+  : ["AI 架構", "多智慧體協作", "AI 工作流", "技術方法論"];
 
 const book = {
   id,
   slug,
-  title: overview.title,
-  subtitle: overview.subtitle,
+  title: args.title || overview.title,
+  subtitle: args.subtitle || overview.subtitle,
   author: "李詩民",
-  description: overview.description,
+  description: args.description || overview.description,
   status: "published",
-  genre: ["AI 架構", "多智慧體協作", "AI 工作流", "技術方法論"],
+  genre,
   rating: "All",
   cover: `/books/${slug}/cover.png`,
   ogImage: `/books/${slug}/cover.png`,
