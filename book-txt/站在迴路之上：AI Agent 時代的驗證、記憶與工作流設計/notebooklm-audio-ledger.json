@@ -1,7 +1,7 @@
 {
   "bookTitle": "站在迴路之上：AI Agent 時代的驗證、記憶與工作流設計",
   "notebookTitle": "站在迴路之上：AI Agent 時代的驗證、記憶與工作流設計｜章節音頻",
-  "notebookUrl": null,
+  "notebookUrl": "https://notebooklm.google.com/notebook/ff647c5e-cd04-44a6-8d36-c964ef4d6c00",
   "sourceFolder": "book-txt/站在迴路之上：AI Agent 時代的驗證、記憶與工作流設計",
   "preflight": {
     "status": "passed",
@@ -16,8 +16,8 @@
     }
   },
   "externalUpload": {
-    "status": "awaiting_explicit_confirmation",
-    "reason": "NotebookLM upload/generation sends chapter text to an external Google service."
+    "status": "confirmed_by_user",
+    "confirmedAt": "2026-07-08T11:12:55.544Z"
   },
   "chapters": [
     {
@@ -26,11 +26,15 @@
       "sourceFilename": "01_序章｜為什麼 ChatGPT 已經不是重點了？.txt",
       "promptMarker": "章節標誌：01_序章｜為什麼 ChatGPT 已經不是重點了？",
       "expectedAudioTitle": "01_序章｜為什麼 ChatGPT 已經不是重點了？",
-      "selectedSourceCount": null,
-      "generationStatus": "awaiting_explicit_notebooklm_confirmation",
-      "promptSourceVerificationStatus": "not_started",
-      "finalAudioCardTitle": null,
-      "completedAt": null
+      "selectedSourceCount": 1,
+      "generationStatus": "completed",
+      "promptSourceVerificationStatus": "complete",
+      "finalAudioCardTitle": "01_序章｜為什麼 ChatGPT 已經不是重點了？",
+      "completedAt": "2026-07-08T11:38:48.456Z",
+      "queuedAt": "2026-07-08T11:16:50.154Z",
+      "audioDuration": "27:14",
+      "promptMarkerVerified": true,
+      "sourceVerified": true
     },
     {
       "chapterNumber": 2,
@@ -38,11 +42,15 @@
       "sourceFilename": "02_第一章｜AI Agent 的新問題：不是能不能做，而是能不能證明它做對了.txt",
       "promptMarker": "章節標誌：02_第一章｜AI Agent 的新問題：不是能不能做，而是能不能證明它做對了",
       "expectedAudioTitle": "02_第一章｜AI Agent 的新問題：不是能不能做，而是能不能證明它做對了",
-      "selectedSourceCount": null,
-      "generationStatus": "awaiting_explicit_notebooklm_confirmation",
-      "promptSourceVerificationStatus": "not_started",
-      "finalAudioCardTitle": null,
-      "completedAt": null
+      "selectedSourceCount": 1,
+      "generationStatus": "completed",
+      "promptSourceVerificationStatus": "complete",
+      "finalAudioCardTitle": "02_第一章｜AI Agent 的新問題：不是能不能做，而是能不能證明它做對了",
+      "completedAt": "2026-07-08T11:38:48.456Z",
+      "queuedAt": "2026-07-08T11:19:42.224Z",
+      "audioDuration": "20:42",
+      "promptMarkerVerified": true,
+      "sourceVerified": true
     },
     {
       "chapterNumber": 3,
@@ -50,11 +58,15 @@
       "sourceFilename": "03_第二章｜真實世界不是 Demo：為什麼 Agent 一上線就變笨？.txt",
       "promptMarker": "章節標誌：03_第二章｜真實世界不是 Demo：為什麼 Agent 一上線就變笨？",
       "expectedAudioTitle": "03_第二章｜真實世界不是 Demo：為什麼 Agent 一上線就變笨？",
-      "selectedSourceCount": null,
-      "generationStatus": "awaiting_explicit_notebooklm_confirmation",
-      "promptSourceVerificationStatus": "not_started",
-      "finalAudioCardTitle": null,
-      "completedAt": null
+      "selectedSourceCount": 1,
+      "generationStatus": "completed",
+      "promptSourceVerificationStatus": "complete",
+      "finalAudioCardTitle": "03_第二章｜真實世界不是 Demo：為什麼 Agent 一上線就變笨？",
+      "completedAt": "2026-07-08T11:38:48.456Z",
+      "queuedAt": "2026-07-08T11:19:42.224Z",
+      "audioDuration": "21:03",
+      "promptMarkerVerified": true,
+      "sourceVerified": true
     },
     {
       "chapterNumber": 4,
@@ -62,11 +74,15 @@
       "sourceFilename": "04_第三章｜Deep Research 的風險：AI 查資料，也可能被資料牽著走.txt",
       "promptMarker": "章節標誌：04_第三章｜Deep Research 的風險：AI 查資料，也可能被資料牽著走",
       "expectedAudioTitle": "04_第三章｜Deep Research 的風險：AI 查資料，也可能被資料牽著走",
-      "selectedSourceCount": null,
-      "generationStatus": "awaiting_explicit_notebooklm_confirmation",
-      "promptSourceVerificationStatus": "not_started",
-      "finalAudioCardTitle": null,
-      "completedAt": null
+      "selectedSourceCount": 1,
+      "generationStatus": "completed",
+      "promptSourceVerificationStatus": "complete",
+      "finalAudioCardTitle": "04_第三章｜Deep Research 的風險：AI 查資料，也可能被資料牽著走",
+      "completedAt": "2026-07-08T11:38:48.456Z",
+      "queuedAt": "2026-07-08T11:19:42.224Z",
+      "audioDuration": "25:25",
+      "promptMarkerVerified": true,
+      "sourceVerified": true
     },
     {
       "chapterNumber": 5,
@@ -74,11 +90,15 @@
       "sourceFilename": "05_第四章｜AI 的記憶不是聊天紀錄，而是一種系統設計.txt",
       "promptMarker": "章節標誌：05_第四章｜AI 的記憶不是聊天紀錄，而是一種系統設計",
       "expectedAudioTitle": "05_第四章｜AI 的記憶不是聊天紀錄，而是一種系統設計",
-      "selectedSourceCount": null,
-      "generationStatus": "awaiting_explicit_notebooklm_confirmation",
-      "promptSourceVerificationStatus": "not_started",
-      "finalAudioCardTitle": null,
-      "completedAt": null
+      "selectedSourceCount": 1,
+      "generationStatus": "completed",
+      "promptSourceVerificationStatus": "complete",
+      "finalAudioCardTitle": "05_第四章｜AI 的記憶不是聊天紀錄，而是一種系統設計",
+      "completedAt": "2026-07-08T11:38:48.456Z",
+      "queuedAt": "2026-07-08T11:19:42.224Z",
+      "audioDuration": "21:23",
+      "promptMarkerVerified": true,
+      "sourceVerified": true
     },
     {
       "chapterNumber": 6,
@@ -86,11 +106,15 @@
       "sourceFilename": "06_第五章｜圖像生成的下一步：不是提示詞，而是搜尋接地.txt",
       "promptMarker": "章節標誌：06_第五章｜圖像生成的下一步：不是提示詞，而是搜尋接地",
       "expectedAudioTitle": "06_第五章｜圖像生成的下一步：不是提示詞，而是搜尋接地",
-      "selectedSourceCount": null,
-      "generationStatus": "awaiting_explicit_notebooklm_confirmation",
-      "promptSourceVerificationStatus": "not_started",
-      "finalAudioCardTitle": null,
-      "completedAt": null
+      "selectedSourceCount": 1,
+      "generationStatus": "completed",
+      "promptSourceVerificationStatus": "complete",
+      "finalAudioCardTitle": "06_第五章｜圖像生成的下一步：不是提示詞，而是搜尋接地",
+      "completedAt": "2026-07-08T11:38:48.456Z",
+      "queuedAt": "2026-07-08T11:19:42.224Z",
+      "audioDuration": "24:16",
+      "promptMarkerVerified": true,
+      "sourceVerified": true
     },
     {
       "chapterNumber": 7,
@@ -98,11 +122,15 @@
       "sourceFilename": "07_第六章｜影音生成開始進入「時間」與「視角」的時代.txt",
       "promptMarker": "章節標誌：07_第六章｜影音生成開始進入「時間」與「視角」的時代",
       "expectedAudioTitle": "07_第六章｜影音生成開始進入「時間」與「視角」的時代",
-      "selectedSourceCount": null,
-      "generationStatus": "awaiting_explicit_notebooklm_confirmation",
-      "promptSourceVerificationStatus": "not_started",
-      "finalAudioCardTitle": null,
-      "completedAt": null
+      "selectedSourceCount": 1,
+      "generationStatus": "completed",
+      "promptSourceVerificationStatus": "complete",
+      "finalAudioCardTitle": "07_第六章｜影音生成開始進入「時間」與「視角」的時代",
+      "completedAt": "2026-07-08T11:38:48.456Z",
+      "queuedAt": "2026-07-08T11:19:42.224Z",
+      "audioDuration": "22:02",
+      "promptMarkerVerified": true,
+      "sourceVerified": true
     },
     {
       "chapterNumber": 8,
@@ -110,11 +138,15 @@
       "sourceFilename": "08_第七章｜Coding Agent 從寫程式，走向資安、盤點與技術債整理.txt",
       "promptMarker": "章節標誌：08_第七章｜Coding Agent 從寫程式，走向資安、盤點與技術債整理",
       "expectedAudioTitle": "08_第七章｜Coding Agent 從寫程式，走向資安、盤點與技術債整理",
-      "selectedSourceCount": null,
-      "generationStatus": "awaiting_explicit_notebooklm_confirmation",
-      "promptSourceVerificationStatus": "not_started",
-      "finalAudioCardTitle": null,
-      "completedAt": null
+      "selectedSourceCount": 1,
+      "generationStatus": "completed",
+      "promptSourceVerificationStatus": "complete",
+      "finalAudioCardTitle": "08_第七章｜Coding Agent 從寫程式，走向資安、盤點與技術債整理",
+      "completedAt": "2026-07-08T11:38:48.456Z",
+      "queuedAt": "2026-07-08T11:19:42.224Z",
+      "audioDuration": "20:17",
+      "promptMarkerVerified": true,
+      "sourceVerified": true
     },
     {
       "chapterNumber": 9,
@@ -122,11 +154,15 @@
       "sourceFilename": "09_第八章｜多 Agent 協作：未來企業不是一個超級 AI，而是一組專門 AI.txt",
       "promptMarker": "章節標誌：09_第八章｜多 Agent 協作：未來企業不是一個超級 AI，而是一組專門 AI",
       "expectedAudioTitle": "09_第八章｜多 Agent 協作：未來企業不是一個超級 AI，而是一組專門 AI",
-      "selectedSourceCount": null,
-      "generationStatus": "awaiting_explicit_notebooklm_confirmation",
-      "promptSourceVerificationStatus": "not_started",
-      "finalAudioCardTitle": null,
-      "completedAt": null
+      "selectedSourceCount": 1,
+      "generationStatus": "completed",
+      "promptSourceVerificationStatus": "complete",
+      "finalAudioCardTitle": "09_第八章｜多 Agent 協作：未來企業不是一個超級 AI，而是一組專門 AI",
+      "completedAt": "2026-07-08T11:38:48.456Z",
+      "queuedAt": "2026-07-08T11:19:42.224Z",
+      "audioDuration": "25:40",
+      "promptMarkerVerified": true,
+      "sourceVerified": true
     },
     {
       "chapterNumber": 10,
@@ -134,11 +170,15 @@
       "sourceFilename": "10_第九章｜AI for Science：研究不只是摘要，而是可稽核的工作台.txt",
       "promptMarker": "章節標誌：10_第九章｜AI for Science：研究不只是摘要，而是可稽核的工作台",
       "expectedAudioTitle": "10_第九章｜AI for Science：研究不只是摘要，而是可稽核的工作台",
-      "selectedSourceCount": null,
-      "generationStatus": "awaiting_explicit_notebooklm_confirmation",
-      "promptSourceVerificationStatus": "not_started",
-      "finalAudioCardTitle": null,
-      "completedAt": null
+      "selectedSourceCount": 1,
+      "generationStatus": "completed",
+      "promptSourceVerificationStatus": "complete",
+      "finalAudioCardTitle": "10_第九章｜AI for Science：研究不只是摘要，而是可稽核的工作台",
+      "completedAt": "2026-07-08T11:38:48.456Z",
+      "queuedAt": "2026-07-08T11:19:42.224Z",
+      "audioDuration": "19:55",
+      "promptMarkerVerified": true,
+      "sourceVerified": true
     },
     {
       "chapterNumber": 11,
@@ -146,11 +186,38 @@
       "sourceFilename": "11_第十章｜教學的改變：從提示詞教學，走向流程設計教學.txt",
       "promptMarker": "章節標誌：11_第十章｜教學的改變：從提示詞教學，走向流程設計教學",
       "expectedAudioTitle": "11_第十章｜教學的改變：從提示詞教學，走向流程設計教學",
-      "selectedSourceCount": null,
-      "generationStatus": "awaiting_explicit_notebooklm_confirmation",
-      "promptSourceVerificationStatus": "not_started",
-      "finalAudioCardTitle": null,
-      "completedAt": null
+      "selectedSourceCount": 1,
+      "generationStatus": "completed",
+      "promptSourceVerificationStatus": "complete",
+      "finalAudioCardTitle": "11_第十章｜教學的改變：從提示詞教學，走向流程設計教學",
+      "completedAt": "2026-07-08T11:38:48.456Z",
+      "queuedAt": "2026-07-08T11:19:42.224Z",
+      "audioDuration": "20:43",
+      "promptMarkerVerified": true,
+      "sourceVerified": true
     }
-  ]
+  ],
+  "upload": {
+    "status": "completed",
+    "sourceCount": 11,
+    "completedAt": "2026-07-08T11:14:27.872Z"
+  },
+  "audioGeneration": {
+    "status": "completed",
+    "startedAt": "2026-07-08T11:16:50.155Z",
+    "queuedCount": 11,
+    "completedCount": 11,
+    "completedAt": "2026-07-08T11:38:48.456Z"
+  },
+  "finalValidation": {
+    "status": "passed",
+    "validatedAt": "2026-07-08T11:38:48.456Z",
+    "sourceCount": 11,
+    "completedAudioCardCount": 11,
+    "generatingRemaining": false,
+    "allAudioTitlesMatchFilenameStems": true,
+    "allSelectedSourceCountsAreOne": true,
+    "allPromptSourceChecksComplete": true,
+    "downloadedAudioFiles": false
+  }
 }
