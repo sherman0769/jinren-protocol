@@ -128,6 +128,7 @@ Narration rules:
 
 - Reader narration should continue across chapter boundaries by default once the user starts playback, stopping only at the end of the book or when the user manually stops it.
 - NotebookLM chapter audio should be presented as a separate chapter Podcast experience, not as a silent replacement for the reader's original browser-native narration. When both exist, keep the original narration controls available and show a distinct NotebookLM Podcast panel or equivalent chapter-level link/play/download entry.
+- NotebookLM Podcast is the primary listening experience when chapter audio exists. Its controls should be visually prioritized over browser-native narration, support at least `2x` playback speed, and default to continuous playback into the next chapter until the book ends or the user disables auto-advance/stops playback.
 - After adding or changing Podcast UI, run a mobile viewport browser check or Playwright screenshot and verify Podcast controls, chapter controls, and narration controls do not overlap. If a fixed mobile control bar covers Podcast content, prefer an in-flow mobile layout for the affected controls.
 - For browser-native `speechSynthesis`, background / lock-screen support is best-effort only: use Media Session metadata/actions and Screen Wake Lock when available, but do not claim guaranteed lock-screen playback unless narration is backed by real audio files or an audio streaming TTS pipeline.
 

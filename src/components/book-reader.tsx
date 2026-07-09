@@ -58,6 +58,8 @@ type SavedReaderProgress = {
   scrollOffset?: number;
   fontScale?: number;
   speechRate?: number;
+  podcastRate?: number;
+  autoAdvancePodcast?: boolean;
   updatedAt?: number;
 };
 
@@ -68,6 +70,7 @@ type AudioProgress = {
 
 const progressKeyPrefix = "book-reader-progress";
 const narrationRates = [0.75, 1, 1.25, 1.5, 2];
+const podcastRates = [1, 1.25, 1.5, 1.75, 2, 2.5];
 const subheadingPattern =
   /^(開場|前言|序言|導讀|結語|結論|總結|小結|後記|終章|附錄|延伸補充|核心命題|核心概念|案例|練習|實作|問答|重點整理)$|^第\s*[一二三四五六七八九十百千\d]+\s*[講章节章課部]\b|^[一二三四五六七八九十]+、.+|^\d+(\.\d+)+\s+.+|^\d+[、.]\s*.+/;
 
@@ -93,6 +96,8 @@ export function BookReader({ book }: BookReaderProps) {
   const [fontScale, setFontScale] = useState(1);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [speechRate, setSpeechRate] = useState(1);
+  const [podcastRate, setPodcastRate] = useState(1);
+  const [autoAdvancePodcast, setAutoAdvancePodcast] = useState(true);
   const [speechSupported, setSpeechSupported] = useState(false);
   const [isNarrating, setIsNarrating] = useState(false);
   const [isNarrationPaused, setIsNarrationPaused] = useState(false);
@@ -114,6 +119,8 @@ export function BookReader({ book }: BookReaderProps) {
   const activeAudioChapterRef = useRef<number | null>(null);
   const chapterIndexRef = useRef(0);
   const speechRateRef = useRef(1);
+  const podcastRateRef = useRef(1);
+  const autoAdvancePodcastRef = useRef(true);
   const speechRunRef = useRef(0);
   const wakeLockRef = useRef<WakeLockSentinelLike | null>(null);
   const wakeLockReleaseHandlerRef = useRef<(() => void) | null>(null);
@@ -162,6 +169,7 @@ export function BookReader({ book }: BookReaderProps) {
       : hasChapterAudio
         ? podcastTitle
         : "本章尚未匯入 NotebookLM Podcast";
+  const podcastAutoAdvanceLabel = autoAdvancePodcast ? "自動下一章" : "本章播放";
   const podcastPlayLabel =
     isCurrentPodcastActive && isNarrating && !isNarrationPaused
       ? "暫停 Podcast"
@@ -176,6 +184,14 @@ export function BookReader({ book }: BookReaderProps) {
       document
         .getElementById(getParagraphId(chapterId, index))
         ?.scrollIntoView({ behavior: "smooth", block: "center" });
+    });
+  }, []);
+
+  const scrollToPodcastPanel = useCallback(() => {
+    window.requestAnimationFrame(() => {
+      document
+        .querySelector<HTMLElement>(".podcast-panel")
+        ?.scrollIntoView({ behavior: "smooth", block: "start" });
     });
   }, []);
 
@@ -263,10 +279,12 @@ export function BookReader({ book }: BookReaderProps) {
         scrollOffset,
         fontScale,
         speechRate,
+        podcastRate,
+        autoAdvancePodcast,
         updatedAt: Date.now(),
       }),
     );
-  }, [book.chapters, fontScale, progressKey, speechRate]);
+  }, [autoAdvancePodcast, book.chapters, fontScale, podcastRate, progressKey, speechRate]);
 
   const scheduleProgressSave = useCallback(() => {
     if (!progressLoadedRef.current) return;
@@ -386,7 +404,7 @@ export function BookReader({ book }: BookReaderProps) {
 
     audio.pause();
     audio.src = audioSrc;
-    audio.playbackRate = speechRateRef.current;
+    audio.playbackRate = podcastRateRef.current;
 
     chapterIndexRef.current = nextChapterIndex;
     paragraphIndexRef.current = 0;
@@ -404,7 +422,7 @@ export function BookReader({ book }: BookReaderProps) {
     updateMediaSessionMetadata(nextChapterIndex);
     setMediaSessionState("playing");
     requestNarrationWakeLock();
-    scrollToParagraph(nextChapter.id, 0);
+    scrollToPodcastPanel();
     persistProgress({
       chapterIndex: nextChapterIndex,
       paragraphIndex: 0,
@@ -426,7 +444,7 @@ export function BookReader({ book }: BookReaderProps) {
     persistProgress,
     releaseNarrationWakeLock,
     requestNarrationWakeLock,
-    scrollToParagraph,
+    scrollToPodcastPanel,
     setMediaSessionState,
     updateReadingPosition,
     updateMediaSessionMetadata,
@@ -712,6 +730,23 @@ export function BookReader({ book }: BookReaderProps) {
     }
   }
 
+  function changePodcastRate(nextRate: number) {
+    setPodcastRate(nextRate);
+    podcastRateRef.current = nextRate;
+    const audio = audioElementRef.current;
+    if (activeAudioChapterRef.current !== null && audio) {
+      audio.playbackRate = nextRate;
+    }
+  }
+
+  function toggleAutoAdvancePodcast() {
+    setAutoAdvancePodcast((value) => {
+      const nextValue = !value;
+      autoAdvancePodcastRef.current = nextValue;
+      return nextValue;
+    });
+  }
+
   const goToNarrationParagraph = useCallback((offset: number) => {
     let nextChapterIndex = chapterIndexRef.current;
     let nextIndex = (activeParagraphRef.current ?? paragraphIndexRef.current) + offset;
@@ -886,6 +921,16 @@ export function BookReader({ book }: BookReaderProps) {
           const savedSpeechRate = parsed.speechRate;
           setSpeechRate(narrationRates.includes(savedSpeechRate) ? savedSpeechRate : 1);
         }
+        if (typeof parsed.podcastRate === "number") {
+          const savedPodcastRate = parsed.podcastRate;
+          const nextPodcastRate = podcastRates.includes(savedPodcastRate) ? savedPodcastRate : 1;
+          podcastRateRef.current = nextPodcastRate;
+          setPodcastRate(nextPodcastRate);
+        }
+        if (typeof parsed.autoAdvancePodcast === "boolean") {
+          autoAdvancePodcastRef.current = parsed.autoAdvancePodcast;
+          setAutoAdvancePodcast(parsed.autoAdvancePodcast);
+        }
       });
     } catch {
       window.localStorage.removeItem(progressKey);
@@ -942,6 +987,18 @@ export function BookReader({ book }: BookReaderProps) {
   }, [speechRate]);
 
   useEffect(() => {
+    podcastRateRef.current = podcastRate;
+    const audio = audioElementRef.current;
+    if (activeAudioChapterRef.current !== null && audio) {
+      audio.playbackRate = podcastRate;
+    }
+  }, [podcastRate]);
+
+  useEffect(() => {
+    autoAdvancePodcastRef.current = autoAdvancePodcast;
+  }, [autoAdvancePodcast]);
+
+  useEffect(() => {
     activeAudioChapterRef.current = activeAudioChapterIndex;
   }, [activeAudioChapterIndex]);
 
@@ -985,12 +1042,18 @@ export function BookReader({ book }: BookReaderProps) {
       const nextChapterIndex = currentIndex + 1;
       const nextChapter = book.chapters[nextChapterIndex];
 
-      if (nextChapter?.audio?.src) {
+      if (autoAdvancePodcastRef.current && nextChapter?.audio?.src) {
         playChapterAudio(nextChapterIndex);
         return;
       }
 
-      finishAudioPlayback(nextChapter ? "下一章尚未有音檔，已停止連續播放" : undefined);
+      finishAudioPlayback(
+        nextChapter
+          ? autoAdvancePodcastRef.current
+            ? "下一章尚未有音檔，已停止連續播放"
+            : "已播完本章"
+          : undefined,
+      );
     };
 
     const onError = () => {
@@ -1020,7 +1083,7 @@ export function BookReader({ book }: BookReaderProps) {
 
   useEffect(() => {
     persistProgress();
-  }, [chapterIndex, fontScale, persistProgress, speechRate]);
+  }, [autoAdvancePodcast, chapterIndex, fontScale, persistProgress, podcastRate, speechRate]);
 
   useEffect(() => {
     window.requestAnimationFrame(() => {
@@ -1305,23 +1368,9 @@ export function BookReader({ book }: BookReaderProps) {
           </p>
         )}
 
-        <section className="chapter-intro" aria-labelledby="chapter-title">
-          <span>CH {String(chapter.number).padStart(2, "0")}</span>
-          <h2 id="chapter-title">{chapter.title}</h2>
-          <p>{chapter.summary}</p>
-          <div className="chapter-meta">
-            <span>{chapter.minutes} min</span>
-            <span>{chapter.paragraphs.length} paragraphs</span>
-            {stats.audioChapters > 0 && (
-              <span>NotebookLM Podcast {stats.audioChapters}/{book.chapters.length}</span>
-            )}
-            <span>{progress}% complete</span>
-          </div>
-        </section>
-
         <section className="podcast-panel" aria-label="NotebookLM Podcast">
           <div className="podcast-primary">
-            <Headphones aria-hidden="true" size={20} />
+            <Headphones aria-hidden="true" size={22} />
             <div>
               <span>NotebookLM Podcast</span>
               <strong>{podcastDetail}</strong>
@@ -1330,6 +1379,8 @@ export function BookReader({ book }: BookReaderProps) {
           <div className="podcast-meta">
             <span>{stats.audioChapters}/{book.chapters.length} 章已匯入</span>
             <span>{hasChapterAudio ? "本章可播放" : "本章尚未下載"}</span>
+            <span>{podcastRate}x</span>
+            <span>{podcastAutoAdvanceLabel}</span>
           </div>
           <div aria-hidden="true" className="podcast-progress-track">
             <span style={{ width: `${podcastProgress}%` }} />
@@ -1376,6 +1427,29 @@ export function BookReader({ book }: BookReaderProps) {
             >
               <SkipForward aria-hidden="true" size={18} />
             </button>
+            <label className="rate-select podcast-rate-select">
+              <span>速度</span>
+              <select
+                aria-label="Podcast 播放速度"
+                disabled={!hasChapterAudio}
+                onChange={(event) => changePodcastRate(Number(event.target.value))}
+                value={podcastRate}
+              >
+                {podcastRates.map((rate) => (
+                  <option key={rate} value={rate}>
+                    {rate}x
+                  </option>
+                ))}
+              </select>
+            </label>
+            <label className="podcast-toggle">
+              <input
+                checked={autoAdvancePodcast}
+                onChange={toggleAutoAdvancePodcast}
+                type="checkbox"
+              />
+              <span>自動下一章</span>
+            </label>
             {chapterAudio?.src && (
               <a className="podcast-download-link" download href={chapterAudio.src}>
                 <Download aria-hidden="true" size={16} />
@@ -1384,6 +1458,20 @@ export function BookReader({ book }: BookReaderProps) {
             )}
           </div>
           {audioError && <p className="podcast-status">{audioError}</p>}
+        </section>
+
+        <section className="chapter-intro" aria-labelledby="chapter-title">
+          <span>CH {String(chapter.number).padStart(2, "0")}</span>
+          <h2 id="chapter-title">{chapter.title}</h2>
+          <p>{chapter.summary}</p>
+          <div className="chapter-meta">
+            <span>{chapter.minutes} min</span>
+            <span>{chapter.paragraphs.length} paragraphs</span>
+            {stats.audioChapters > 0 && (
+              <span>NotebookLM Podcast {stats.audioChapters}/{book.chapters.length}</span>
+            )}
+            <span>{progress}% complete</span>
+          </div>
         </section>
 
         <nav className="reader-control-bar" aria-label="閱讀控制">
