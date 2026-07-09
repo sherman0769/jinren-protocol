@@ -127,6 +127,12 @@ export function BookLibrary({ books }: BookLibraryProps) {
                     <Clock aria-hidden="true" size={14} />
                     {stats.minutes} 分鐘
                   </span>
+                  {stats.audioChapters > 0 && (
+                    <span>
+                      <Play aria-hidden="true" size={14} />
+                      {stats.audioChapters} 音頻
+                    </span>
+                  )}
                 </div>
                 <h2>{book.title}</h2>
                 <p>{book.author}</p>

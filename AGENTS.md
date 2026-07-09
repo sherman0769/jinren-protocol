@@ -32,7 +32,7 @@ Use the same publishing model as the first book:
 - The app's canonical book data lives in `src/content/books.json`.
 - Preserve all existing books; append new books instead of replacing the array.
 - Each book needs `id`, `slug`, `title`, `subtitle`, `author`, `description`, `status`, `genre`, `rating`, `cover`, `ogImage`, `sourceUrl`, and `chapters`.
-- Each chapter needs `id`, `number`, `title`, `summary`, `minutes`, and `paragraphs`.
+- Each chapter needs `id`, `number`, `title`, `summary`, `minutes`, and `paragraphs`. After real chapter audio exists, add an `audio` object with at least `src`; include `title`, `provider`, or `durationSeconds` when available.
 - Store cover assets under `public/books/<slug>/cover.png`, and point both `cover` and `ogImage` to `/books/<slug>/cover.png`.
 
 Plain-text export model:
@@ -54,9 +54,11 @@ NotebookLM chapter audio workflow:
 - Before generating each chapter audio, clear source selections by clicking `全選` twice, verify the Studio area shows `0 個來源`, then select only the target chapter and verify the UI shows `1 個來源`.
 - Use NotebookLM `深入探索` Audio Overview for study-quality chapter audio; do not switch to short/summary formats unless the user explicitly prioritizes speed over content depth.
 - Before generation, use the `自訂語音摘要` prompt and put a first-line marker such as `章節標誌：01_Chapter Title`, so the prompt/source view beside the generated audio can be used as a second verification mark.
-- After generation, rename the NotebookLM audio card to the chapter filename stem, for example `01_Chapter Title`, and verify `查看提示詞和來源` contains the matching marker/source. Downloading the audio file is optional and should not be done unless requested.
+- After generation, rename the NotebookLM audio card to the chapter filename stem, for example `01_Chapter Title`, and verify `查看提示詞和來源` contains the matching marker/source.
+- Unless the user explicitly excludes ebook audio, download every completed chapter audio file and store it under `public/books/<slug>/audio/` with a two-digit chapter-number prefix matching the TXT/audio title, for example `01_Chapter Title.mp3`.
+- After audio files are stored, run `npm run link:book-audio -- <slug>` to write chapter `audio.src` entries into `src/content/books.json`; use `node scripts/link-book-audio.mjs --slug <slug> --dry-run` for named-flag dry runs. Do not use `--allow-partial` for a finished book unless the user explicitly accepts a partial audio release.
 - For faster batch work, queue multiple chapter audio generations in the same notebook after each one has been individually selected and marked. Do not infer chapter identity from completion order.
-- Final NotebookLM validation must confirm completed audio count equals chapter count, no `正在生成語音摘要` remains, every `NN_Chapter Title` audio card title exists, every completed card has a matching prompt marker/source check in the ledger, and NotebookLM source count equals TXT chapter count.
+- Final NotebookLM validation must confirm completed audio count equals chapter count, no `正在生成語音摘要` remains, every `NN_Chapter Title` audio card title exists, every completed card has a matching prompt marker/source check in the ledger, downloaded audio count equals chapter count, `books.json` has one `audio.src` per chapter, and NotebookLM source count equals TXT chapter count.
 
 Default metadata rules for new manuscripts:
 
@@ -90,11 +92,12 @@ Operational workflow:
 6. Update `src/content/books.json` while preserving existing book entries.
 7. Export the final chapters to `book-txt/<book title>/` as numbered `.txt` files.
 8. Run the NotebookLM chapter audio workflow from the TXT exports by default, including ledger creation/update and final NotebookLM validation, unless the user explicitly excludes NotebookLM or asks for website-only publishing.
-9. Move the completed source package or manuscript from `books/` to `published-books/` and update `sourceUrl` to the archived source path.
-10. Run validation after changes: at minimum `npm run lint`; run `npm run build` when the import changes app behavior or page generation.
-11. Commit and push the completed book update to the repository. A new book is not considered finished until the changes have been pushed.
-12. Deploy the pushed version to production. A new book is not considered fully complete until the production deployment succeeds.
-13. Report the new book title, slug, chapter count, TXT export folder, NotebookLM ledger path and validation result, app validation result, pushed commit, and production deployment URL.
+9. Download the validated chapter audio files into `public/books/<slug>/audio/`, run `npm run link:book-audio -- <slug>`, and verify chapter audio count equals chapter count in both `books.json` and the reader UI.
+10. Move the completed source package or manuscript from `books/` to `published-books/` and update `sourceUrl` to the archived source path.
+11. Run validation after changes: at minimum `npm run lint`; run `npm run build` when the import changes app behavior or page generation.
+12. Commit and push the completed book update to the repository. A new book is not considered finished until the changes have been pushed.
+13. Deploy the pushed version to production. A new book is not considered fully complete until the production deployment succeeds.
+14. Report the new book title, slug, chapter count, TXT export folder, NotebookLM ledger path and validation result, audio asset folder and `books.json` audio-link validation result, app validation result, pushed commit, and production deployment URL.
 
 Do not ask for confirmation before publishing a clearly new manuscript in `books/` unless required metadata is genuinely ambiguous or the file cannot be parsed safely.
 
@@ -118,6 +121,7 @@ Visual quality rules:
 Narration rules:
 
 - Reader narration should continue across chapter boundaries by default once the user starts playback, stopping only at the end of the book or when the user manually stops it.
+- When a chapter has a real `audio.src`, the reader should prefer that audio file over browser-native `speechSynthesis`, advance through chapter audio in book order, and keep `speechSynthesis` only as fallback for chapters without real audio.
 - For browser-native `speechSynthesis`, background / lock-screen support is best-effort only: use Media Session metadata/actions and Screen Wake Lock when available, but do not claim guaranteed lock-screen playback unless narration is backed by real audio files or an audio streaming TTS pipeline.
 
 Reading progress rules:

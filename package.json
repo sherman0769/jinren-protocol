@@ -9,7 +9,8 @@
     "lint": "eslint",
     "import:book": "node scripts/import-docx-book.mjs",
     "normalize:books": "node scripts/normalize-books.mjs",
-    "export:book-txt": "node scripts/export-book-txt.mjs"
+    "export:book-txt": "node scripts/export-book-txt.mjs",
+    "link:book-audio": "node scripts/link-book-audio.mjs"
   },
   "dependencies": {
     "lucide-react": "^1.17.0",

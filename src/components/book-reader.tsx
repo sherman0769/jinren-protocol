@@ -60,6 +60,11 @@ type SavedReaderProgress = {
   updatedAt?: number;
 };
 
+type AudioProgress = {
+  currentTime: number;
+  duration: number;
+};
+
 const progressKeyPrefix = "book-reader-progress";
 const narrationRates = [0.75, 1, 1.25, 1.5, 2];
 const subheadingPattern =
@@ -74,6 +79,14 @@ function isSubheading(paragraph: string, index: number) {
   return text.length <= 80 && (index > 0 || /^(開場|前言|序言|導讀)$/.test(text)) && subheadingPattern.test(text);
 }
 
+function formatAudioTime(seconds: number) {
+  if (!Number.isFinite(seconds) || seconds <= 0) return "0:00";
+  const wholeSeconds = Math.floor(seconds);
+  const minutes = Math.floor(wholeSeconds / 60);
+  const remainder = String(wholeSeconds % 60).padStart(2, "0");
+  return `${minutes}:${remainder}`;
+}
+
 export function BookReader({ book }: BookReaderProps) {
   const [chapterIndex, setChapterIndex] = useState(0);
   const [fontScale, setFontScale] = useState(1);
@@ -83,13 +96,21 @@ export function BookReader({ book }: BookReaderProps) {
   const [isNarrating, setIsNarrating] = useState(false);
   const [isNarrationPaused, setIsNarrationPaused] = useState(false);
   const [activeParagraphIndex, setActiveParagraphIndex] = useState<number | null>(null);
+  const [activeAudioChapterIndex, setActiveAudioChapterIndex] = useState<number | null>(null);
+  const [audioProgress, setAudioProgress] = useState<AudioProgress>({
+    currentTime: 0,
+    duration: 0,
+  });
   const [speechError, setSpeechError] = useState<string | null>(null);
+  const [audioError, setAudioError] = useState<string | null>(null);
   const [bookmarkNotice, setBookmarkNotice] = useState<string | null>(null);
   const [installPrompt, setInstallPrompt] =
     useState<BeforeInstallPromptEvent | null>(null);
+  const audioElementRef = useRef<HTMLAudioElement | null>(null);
   const paragraphIndexRef = useRef(0);
   const manuallyStoppedRef = useRef(false);
   const activeParagraphRef = useRef<number | null>(null);
+  const activeAudioChapterRef = useRef<number | null>(null);
   const chapterIndexRef = useRef(0);
   const speechRateRef = useRef(1);
   const speechRunRef = useRef(0);
@@ -114,10 +135,28 @@ export function BookReader({ book }: BookReaderProps) {
   const stats = useMemo(() => getBookStats(book), [book]);
   const progressKey = `${progressKeyPrefix}:${book.slug}`;
   const progress = Math.round(((chapterIndex + 1) / book.chapters.length) * 100);
+  const chapterAudio = chapter.audio?.src ? chapter.audio : null;
+  const hasChapterAudio = Boolean(chapterAudio);
+  const isAudioActive = activeAudioChapterIndex !== null;
+  const audioProgressPercent =
+    audioProgress.duration > 0
+      ? Math.min(100, Math.round((audioProgress.currentTime / audioProgress.duration) * 100))
+      : 0;
   const narrationProgress =
-    activeParagraphIndex === null
+    hasChapterAudio || isAudioActive
+      ? audioProgressPercent
+      : activeParagraphIndex === null
       ? 0
       : Math.round(((activeParagraphIndex + 1) / chapter.paragraphs.length) * 100);
+  const playbackSupported = hasChapterAudio || speechSupported;
+  const playbackModeLabel = hasChapterAudio ? "音頻" : "朗讀";
+  const playbackDetail = hasChapterAudio
+    ? audioProgress.duration > 0
+      ? `${formatAudioTime(audioProgress.currentTime)} / ${formatAudioTime(audioProgress.duration)}`
+      : `第 ${chapter.number} 章音檔`
+    : activeParagraphIndex === null
+      ? "尚未開始"
+      : `第 ${activeParagraphIndex + 1} / ${chapter.paragraphs.length} 段`;
 
   const scrollToParagraph = useCallback((chapterId: string, index: number) => {
     window.requestAnimationFrame(() => {
@@ -281,20 +320,104 @@ export function BookReader({ book }: BookReaderProps) {
   }, [book.author, book.chapters, book.cover, book.title]);
 
   const stopNarration = useCallback(() => {
-    if (!("speechSynthesis" in window)) return;
     manuallyStoppedRef.current = true;
     speechRunRef.current += 1;
     releaseNarrationWakeLock();
-    window.speechSynthesis.resume();
-    window.speechSynthesis.cancel();
-    window.setTimeout(() => window.speechSynthesis.cancel(), 0);
-    window.setTimeout(() => window.speechSynthesis.cancel(), 120);
+
+    const audio = audioElementRef.current;
+    if (audio) {
+      audio.pause();
+      audio.removeAttribute("src");
+      audio.load();
+    }
+
+    if ("speechSynthesis" in window) {
+      window.speechSynthesis.resume();
+      window.speechSynthesis.cancel();
+      window.setTimeout(() => window.speechSynthesis.cancel(), 0);
+      window.setTimeout(() => window.speechSynthesis.cancel(), 120);
+    }
+
     setIsNarrating(false);
     setIsNarrationPaused(false);
     setActiveParagraphIndex(null);
+    setActiveAudioChapterIndex(null);
+    setAudioProgress({ currentTime: 0, duration: 0 });
+    setAudioError(null);
     activeParagraphRef.current = null;
+    activeAudioChapterRef.current = null;
     setMediaSessionState("none");
   }, [releaseNarrationWakeLock, setMediaSessionState]);
+
+  const playChapterAudio = useCallback((nextChapterIndex: number) => {
+    const nextChapter = book.chapters[nextChapterIndex];
+    const audioSrc = nextChapter?.audio?.src;
+    const audio = audioElementRef.current;
+
+    if (!nextChapter || !audioSrc) {
+      setAudioError("此章尚未有音檔");
+      return;
+    }
+
+    if (!audio) {
+      setAudioError("音訊播放器尚未準備好");
+      return;
+    }
+
+    manuallyStoppedRef.current = false;
+    speechRunRef.current += 1;
+    if ("speechSynthesis" in window) {
+      window.speechSynthesis.resume();
+      window.speechSynthesis.cancel();
+    }
+
+    audio.pause();
+    audio.src = audioSrc;
+    audio.playbackRate = speechRateRef.current;
+
+    chapterIndexRef.current = nextChapterIndex;
+    paragraphIndexRef.current = 0;
+    activeParagraphRef.current = null;
+    activeAudioChapterRef.current = nextChapterIndex;
+    updateReadingPosition(nextChapterIndex, 0);
+    setChapterIndex(nextChapterIndex);
+    setActiveParagraphIndex(null);
+    setActiveAudioChapterIndex(nextChapterIndex);
+    setAudioProgress({ currentTime: 0, duration: 0 });
+    setAudioError(null);
+    setSpeechError(null);
+    setIsNarrating(true);
+    setIsNarrationPaused(false);
+    updateMediaSessionMetadata(nextChapterIndex);
+    setMediaSessionState("playing");
+    requestNarrationWakeLock();
+    scrollToParagraph(nextChapter.id, 0);
+    persistProgress({
+      chapterIndex: nextChapterIndex,
+      paragraphIndex: 0,
+      paragraphId: getParagraphId(nextChapter.id, 0),
+      scrollOffset: 0,
+    });
+
+    audio.play().catch(() => {
+      releaseNarrationWakeLock();
+      setAudioError("音檔無法播放，請確認檔案已放在 public 資料夾並可被瀏覽器讀取");
+      setIsNarrating(false);
+      setIsNarrationPaused(false);
+      setActiveAudioChapterIndex(null);
+      activeAudioChapterRef.current = null;
+      setMediaSessionState("none");
+    });
+  }, [
+    book.chapters,
+    persistProgress,
+    releaseNarrationWakeLock,
+    requestNarrationWakeLock,
+    scrollToParagraph,
+    setMediaSessionState,
+    updateReadingPosition,
+    updateMediaSessionMetadata,
+  ]);
 
   const speakFromLocation = useCallback((startChapterIndex: number, startIndex: number, nextRate = speechRateRef.current) => {
     if (!("speechSynthesis" in window)) {
@@ -311,6 +434,16 @@ export function BookReader({ book }: BookReaderProps) {
     const speechRun = speechRunRef.current + 1;
     speechRunRef.current = speechRun;
     speechRateRef.current = nextRate;
+    const audio = audioElementRef.current;
+    if (audio) {
+      audio.pause();
+      audio.removeAttribute("src");
+      audio.load();
+    }
+    activeAudioChapterRef.current = null;
+    setActiveAudioChapterIndex(null);
+    setAudioProgress({ currentTime: 0, duration: 0 });
+    setAudioError(null);
     requestNarrationWakeLock();
     window.speechSynthesis.resume();
     window.speechSynthesis.cancel();
@@ -499,6 +632,34 @@ export function BookReader({ book }: BookReaderProps) {
   }, [book.chapters, persistProgress, stopNarration, updateReadingPosition]);
 
   function toggleNarration() {
+    if (hasChapterAudio) {
+      const audio = audioElementRef.current;
+      if (!isNarrating || activeAudioChapterIndex !== chapterIndex) {
+        playChapterAudio(chapterIndex);
+        return;
+      }
+
+      if (!audio) return;
+
+      if (isNarrationPaused || audio.paused) {
+        audio.play().then(() => {
+          requestNarrationWakeLock();
+          setIsNarrationPaused(false);
+          setMediaSessionState("playing");
+        }).catch(() => {
+          setAudioError("音檔無法繼續播放");
+          setIsNarrationPaused(true);
+          setMediaSessionState("paused");
+        });
+        return;
+      }
+
+      audio.pause();
+      setIsNarrationPaused(true);
+      setMediaSessionState("paused");
+      return;
+    }
+
     if (!isNarrating) {
       speakFromParagraph(activeParagraphRef.current ?? 0);
       return;
@@ -520,6 +681,12 @@ export function BookReader({ book }: BookReaderProps) {
 
   function changeRate(nextRate: number) {
     setSpeechRate(nextRate);
+    if (activeAudioChapterIndex !== null) {
+      const audio = audioElementRef.current;
+      if (audio) audio.playbackRate = nextRate;
+      return;
+    }
+
     if (isNarrating) {
       window.requestAnimationFrame(() => {
         speakFromParagraph(paragraphIndexRef.current, nextRate);
@@ -573,6 +740,56 @@ export function BookReader({ book }: BookReaderProps) {
     speakFromLocation,
     updateReadingPosition,
   ]);
+
+  const goToAudioChapter = useCallback((offset: number) => {
+    const currentIndex = activeAudioChapterRef.current ?? chapterIndexRef.current;
+    const nextChapterIndex = Math.min(
+      Math.max(currentIndex + offset, 0),
+      book.chapters.length - 1,
+    );
+    const nextChapter = book.chapters[nextChapterIndex];
+
+    if (!nextChapter?.audio?.src) {
+      setAudioError("這一章尚未有音檔");
+      return;
+    }
+
+    if (isNarrating || activeAudioChapterRef.current !== null) {
+      playChapterAudio(nextChapterIndex);
+      return;
+    }
+
+    chapterIndexRef.current = nextChapterIndex;
+    paragraphIndexRef.current = 0;
+    activeParagraphRef.current = null;
+    updateReadingPosition(nextChapterIndex, 0);
+    setChapterIndex(nextChapterIndex);
+    setActiveParagraphIndex(null);
+    setAudioError(null);
+    persistProgress({
+      chapterIndex: nextChapterIndex,
+      paragraphIndex: 0,
+      paragraphId: getParagraphId(nextChapter.id, 0),
+      scrollOffset: 0,
+    });
+    window.requestAnimationFrame(() => window.scrollTo({ top: 0, behavior: "smooth" }));
+  }, [
+    book.chapters,
+    isNarrating,
+    persistProgress,
+    playChapterAudio,
+    updateReadingPosition,
+  ]);
+
+  const goToNarrationStep = useCallback((offset: number) => {
+    const currentChapter = book.chapters[chapterIndexRef.current];
+    if (activeAudioChapterRef.current !== null || currentChapter?.audio?.src) {
+      goToAudioChapter(offset);
+      return;
+    }
+
+    goToNarrationParagraph(offset);
+  }, [book.chapters, goToAudioChapter, goToNarrationParagraph]);
 
   function saveBookmark() {
     captureReadingPosition();
@@ -708,6 +925,83 @@ export function BookReader({ book }: BookReaderProps) {
   }, [speechRate]);
 
   useEffect(() => {
+    activeAudioChapterRef.current = activeAudioChapterIndex;
+  }, [activeAudioChapterIndex]);
+
+  useEffect(() => {
+    const audio = new Audio();
+    audio.preload = "metadata";
+    audioElementRef.current = audio;
+
+    return () => {
+      audio.pause();
+      audio.removeAttribute("src");
+      audioElementRef.current = null;
+    };
+  }, []);
+
+  useEffect(() => {
+    const audio = audioElementRef.current;
+    if (!audio) return;
+
+    const updateAudioProgress = () => {
+      setAudioProgress({
+        currentTime: audio.currentTime,
+        duration: Number.isFinite(audio.duration) ? audio.duration : 0,
+      });
+    };
+
+    const finishAudioPlayback = (message?: string) => {
+      releaseNarrationWakeLock();
+      setIsNarrating(false);
+      setIsNarrationPaused(false);
+      setActiveAudioChapterIndex(null);
+      activeAudioChapterRef.current = null;
+      setMediaSessionState("none");
+      if (message) setAudioError(message);
+    };
+
+    const onEnded = () => {
+      if (manuallyStoppedRef.current) return;
+
+      const currentIndex = activeAudioChapterRef.current ?? chapterIndexRef.current;
+      const nextChapterIndex = currentIndex + 1;
+      const nextChapter = book.chapters[nextChapterIndex];
+
+      if (nextChapter?.audio?.src) {
+        playChapterAudio(nextChapterIndex);
+        return;
+      }
+
+      finishAudioPlayback(nextChapter ? "下一章尚未有音檔，已停止連續播放" : undefined);
+    };
+
+    const onError = () => {
+      if (manuallyStoppedRef.current || activeAudioChapterRef.current === null) return;
+      finishAudioPlayback("音檔載入失敗，請確認 books.json 的 audio.src 與 public 檔案一致");
+    };
+
+    audio.addEventListener("loadedmetadata", updateAudioProgress);
+    audio.addEventListener("timeupdate", updateAudioProgress);
+    audio.addEventListener("durationchange", updateAudioProgress);
+    audio.addEventListener("ended", onEnded);
+    audio.addEventListener("error", onError);
+
+    return () => {
+      audio.removeEventListener("loadedmetadata", updateAudioProgress);
+      audio.removeEventListener("timeupdate", updateAudioProgress);
+      audio.removeEventListener("durationchange", updateAudioProgress);
+      audio.removeEventListener("ended", onEnded);
+      audio.removeEventListener("error", onError);
+    };
+  }, [
+    book.chapters,
+    playChapterAudio,
+    releaseNarrationWakeLock,
+    setMediaSessionState,
+  ]);
+
+  useEffect(() => {
     persistProgress();
   }, [chapterIndex, fontScale, persistProgress, speechRate]);
 
@@ -810,6 +1104,23 @@ export function BookReader({ book }: BookReaderProps) {
     };
 
     setActionHandler("play", () => {
+      const currentChapter = book.chapters[chapterIndexRef.current];
+      if (currentChapter?.audio?.src) {
+        if (activeAudioChapterRef.current === null) {
+          playChapterAudio(chapterIndexRef.current);
+          return;
+        }
+
+        audioElementRef.current?.play().then(() => {
+          requestNarrationWakeLock();
+          setIsNarrationPaused(false);
+          setMediaSessionState("playing");
+        }).catch(() => {
+          setAudioError("音檔無法繼續播放");
+        });
+        return;
+      }
+
       if (!isNarrating) {
         speakFromParagraph(activeParagraphRef.current ?? paragraphIndexRef.current);
         return;
@@ -822,6 +1133,13 @@ export function BookReader({ book }: BookReaderProps) {
       }
     });
     setActionHandler("pause", () => {
+      if (activeAudioChapterRef.current !== null) {
+        audioElementRef.current?.pause();
+        setIsNarrationPaused(true);
+        setMediaSessionState("paused");
+        return;
+      }
+
       if ("speechSynthesis" in window) {
         window.speechSynthesis.pause();
         setIsNarrationPaused(true);
@@ -829,8 +1147,8 @@ export function BookReader({ book }: BookReaderProps) {
       }
     });
     setActionHandler("stop", stopNarration);
-    setActionHandler("previoustrack", () => goToNarrationParagraph(-1));
-    setActionHandler("nexttrack", () => goToNarrationParagraph(1));
+    setActionHandler("previoustrack", () => goToNarrationStep(-1));
+    setActionHandler("nexttrack", () => goToNarrationStep(1));
 
     return () => {
       setActionHandler("play", null);
@@ -840,8 +1158,11 @@ export function BookReader({ book }: BookReaderProps) {
       setActionHandler("nexttrack", null);
     };
   }, [
-    goToNarrationParagraph,
+    book.chapters,
+    goToNarrationStep,
     isNarrating,
+    playChapterAudio,
+    requestNarrationWakeLock,
     setMediaSessionState,
     speakFromParagraph,
     stopNarration,
@@ -877,6 +1198,11 @@ export function BookReader({ book }: BookReaderProps) {
   useEffect(() => {
     return () => {
       releaseNarrationWakeLock();
+      const audio = audioElementRef.current;
+      if (audio) {
+        audio.pause();
+        audio.removeAttribute("src");
+      }
       if ("speechSynthesis" in window) {
         manuallyStoppedRef.current = true;
         window.speechSynthesis.cancel();
@@ -975,6 +1301,7 @@ export function BookReader({ book }: BookReaderProps) {
           <div className="chapter-meta">
             <span>{chapter.minutes} min</span>
             <span>{chapter.paragraphs.length} paragraphs</span>
+            {stats.audioChapters > 0 && <span>{stats.audioChapters} audio</span>}
             <span>{progress}% complete</span>
           </div>
         </section>
@@ -1012,12 +1339,8 @@ export function BookReader({ book }: BookReaderProps) {
           <div className="narration-primary">
             <Volume2 aria-hidden="true" size={20} />
             <div>
-              <span>朗讀</span>
-              <strong>
-                {activeParagraphIndex === null
-                  ? "尚未開始"
-                  : `第 ${activeParagraphIndex + 1} / ${chapter.paragraphs.length} 段`}
-              </strong>
+              <span>{playbackModeLabel}</span>
+              <strong>{playbackDetail}</strong>
             </div>
           </div>
           <div aria-hidden="true" className="narration-progress-track">
@@ -1025,19 +1348,19 @@ export function BookReader({ book }: BookReaderProps) {
           </div>
           <div className="narration-controls">
             <button
-              aria-label="上一段"
+              aria-label={hasChapterAudio ? "上一章音檔" : "上一段"}
               className="narration-step-button"
-              disabled={!speechSupported}
-              onClick={() => goToNarrationParagraph(-1)}
-              title="上一段"
+              disabled={!playbackSupported}
+              onClick={() => goToNarrationStep(-1)}
+              title={hasChapterAudio ? "上一章音檔" : "上一段"}
               type="button"
             >
               <SkipBack aria-hidden="true" size={18} />
             </button>
             <button
-              aria-label={isNarrating && !isNarrationPaused ? "暫停朗讀" : "開始朗讀"}
+              aria-label={isNarrating && !isNarrationPaused ? `暫停${playbackModeLabel}` : `開始${playbackModeLabel}`}
               className="narration-play-button"
-              disabled={!speechSupported}
+              disabled={!playbackSupported}
               onClick={toggleNarration}
               title={isNarrating && !isNarrationPaused ? "暫停" : "播放"}
               type="button"
@@ -1049,9 +1372,9 @@ export function BookReader({ book }: BookReaderProps) {
               )}
             </button>
             <button
-              aria-label="停止朗讀"
+              aria-label={`停止${playbackModeLabel}`}
               className="narration-stop-button"
-              disabled={!speechSupported}
+              disabled={!playbackSupported && !isNarrating}
               onClick={stopNarration}
               onPointerDown={(event) => {
                 event.preventDefault();
@@ -1063,11 +1386,11 @@ export function BookReader({ book }: BookReaderProps) {
               <Square aria-hidden="true" size={17} />
             </button>
             <button
-              aria-label="下一段"
+              aria-label={hasChapterAudio ? "下一章音檔" : "下一段"}
               className="narration-step-button"
-              disabled={!speechSupported}
-              onClick={() => goToNarrationParagraph(1)}
-              title="下一段"
+              disabled={!playbackSupported}
+              onClick={() => goToNarrationStep(1)}
+              title={hasChapterAudio ? "下一章音檔" : "下一段"}
               type="button"
             >
               <SkipForward aria-hidden="true" size={18} />
@@ -1076,7 +1399,7 @@ export function BookReader({ book }: BookReaderProps) {
               <span>速度</span>
               <select
                 aria-label="朗讀速度"
-                disabled={!speechSupported}
+                disabled={!playbackSupported}
                 onChange={(event) => changeRate(Number(event.target.value))}
                 value={speechRate}
               >
@@ -1088,9 +1411,9 @@ export function BookReader({ book }: BookReaderProps) {
               </select>
             </label>
           </div>
-          {(!speechSupported || speechError) && (
+          {(audioError || (!hasChapterAudio && (!speechSupported || speechError))) && (
             <p className="narration-status">
-              {speechError ?? "此瀏覽器不支援朗讀"}
+              {audioError ?? speechError ?? "此瀏覽器不支援朗讀"}
             </p>
           )}
         </section>
@@ -1146,7 +1469,10 @@ export function BookReader({ book }: BookReaderProps) {
           </section>
           <section>
             <h3>總量</h3>
-            <p>{stats.chapters} 章 / {stats.paragraphs} 段 / 約 {stats.minutes} 分鐘</p>
+            <p>
+              {stats.chapters} 章 / {stats.paragraphs} 段 / 約 {stats.minutes} 分鐘
+              {stats.audioChapters > 0 ? ` / 音檔 ${stats.audioChapters} 章` : ""}
+            </p>
           </section>
           <section>
             <h3>分類</h3>

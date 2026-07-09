@@ -6,6 +6,12 @@ export type Chapter = {
   title: string;
   summary: string;
   minutes: number;
+  audio?: {
+    src: string;
+    title?: string;
+    provider?: "notebooklm" | "manual" | "tts";
+    durationSeconds?: number;
+  };
   paragraphs: string[];
 };
 
@@ -43,11 +49,16 @@ export function getBookStats(book: Book) {
     0,
   );
   const minutes = book.chapters.reduce((total, chapter) => total + chapter.minutes, 0);
+  const audioChapters = book.chapters.reduce(
+    (total, chapter) => total + (chapter.audio?.src ? 1 : 0),
+    0,
+  );
 
   return {
     chapters: book.chapters.length,
     paragraphs,
     characters,
     minutes,
+    audioChapters,
   };
 }
