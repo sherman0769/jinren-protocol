@@ -1,7 +1,7 @@
 {
   "bookTitle": "站在迴路之上：AI Agent 時代的驗證、記憶與工作流設計",
-  "notebookTitle": "站在迴路之上：AI Agent 時代的驗證、記憶與工作流設計｜章節音頻｜10萬字出版擴充版",
-  "notebookUrl": null,
+  "notebookTitle": "站在迴路之上：AI Agent 時代的驗證、記憶與工作流設計｜章節音頻",
+  "notebookUrl": "https://notebooklm.google.com/notebook/ff647c5e-cd04-44a6-8d36-c964ef4d6c00",
   "sourceFolder": "book-txt/站在迴路之上：AI Agent 時代的驗證、記憶與工作流設計",
   "versionNote": "10萬字出版擴充版；舊版 NotebookLM 音訊與 ledger 不再對應新版 TXT，需重新上傳來源並重製音訊。",
   "preflight": {
@@ -19,19 +19,31 @@
     "duplicateNumbers": []
   },
   "upload": {
-    "status": "pending_regeneration",
-    "sourceCount": 11
+    "status": "completed",
+    "sourceCount": 11,
+    "completedAt": "2026-07-09T08:05:59.736Z"
   },
   "audioGeneration": {
-    "status": "pending_regeneration",
-    "queuedCount": 0,
-    "completedCount": 0
+    "status": "completed",
+    "startedAt": "2026-07-09T08:04:36.391Z",
+    "queuedCount": 11,
+    "completedCount": 11,
+    "generatingRemaining": 0,
+    "completedAt": "2026-07-09T08:41:38.941Z"
   },
   "finalValidation": {
-    "status": "pending_regeneration",
+    "status": "passed",
+    "validatedAt": "2026-07-09T08:41:38.941Z",
     "sourceCount": 11,
-    "completedAudioCardCount": 0,
-    "downloadedAudioFiles": false
+    "completedAudioCardCount": 11,
+    "generatingRemaining": 0,
+    "allAudioCardTitlesMatchFilenameStems": true,
+    "allPromptMarkersAndSourcesVerified": true,
+    "downloadedAudioFiles": true,
+    "booksJsonAudioLinked": true,
+    "downloadedAudioCount": 11,
+    "booksJsonLinkedCount": 11,
+    "missingChapterNumbers": []
   },
   "chapters": [
     {
@@ -40,14 +52,26 @@
       "sourceFilename": "01_序章｜為什麼 ChatGPT 已經不是重點了？.txt",
       "promptMarker": "章節標誌：01_序章｜為什麼 ChatGPT 已經不是重點了？",
       "expectedAudioTitle": "01_序章｜為什麼 ChatGPT 已經不是重點了？",
-      "selectedSourceCount": null,
-      "generationStatus": "pending_regeneration",
-      "promptSourceVerificationStatus": "pending",
-      "finalAudioCardTitle": null,
-      "promptMarkerVerified": false,
-      "sourceVerified": false,
+      "selectedSourceCount": 1,
+      "generationStatus": "completed",
+      "promptSourceVerificationStatus": "passed",
+      "finalAudioCardTitle": "01_序章｜為什麼 ChatGPT 已經不是重點了？",
+      "promptMarkerVerified": true,
+      "sourceVerified": true,
       "byteLength": 34830,
-      "characterCount": 13432
+      "characterCount": 13432,
+      "queuedAt": "2026-07-09T08:04:36.391Z",
+      "completedAt": "2026-07-09T08:41:38.941Z",
+      "audioFile": {
+        "filename": "01_序章｜為什麼 ChatGPT 已經不是重點了？.m4a",
+        "relativePath": "public/books/standing-above-the-loop-agent-workflow-design/audio/01_序章｜為什麼 ChatGPT 已經不是重點了？.m4a",
+        "sizeBytes": 38399025,
+        "durationSeconds": 1193.088,
+        "codec": "aac",
+        "container": "mov,mp4,m4a,3gp,3g2,mj2",
+        "appAudioSrc": "/books/standing-above-the-loop-agent-workflow-design/audio/01_%E5%BA%8F%E7%AB%A0%EF%BD%9C%E7%82%BA%E4%BB%80%E9%BA%BC%20ChatGPT%20%E5%B7%B2%E7%B6%93%E4%B8%8D%E6%98%AF%E9%87%8D%E9%BB%9E%E4%BA%86%EF%BC%9F.m4a",
+        "linkedInBooksJson": true
+      }
     },
     {
       "chapterNumber": 2,
@@ -55,14 +79,26 @@
       "sourceFilename": "02_第一章｜AI Agent 的新問題：不是能不能做，而是能不能證明它做對了.txt",
       "promptMarker": "章節標誌：02_第一章｜AI Agent 的新問題：不是能不能做，而是能不能證明它做對了",
       "expectedAudioTitle": "02_第一章｜AI Agent 的新問題：不是能不能做，而是能不能證明它做對了",
-      "selectedSourceCount": null,
-      "generationStatus": "pending_regeneration",
-      "promptSourceVerificationStatus": "pending",
-      "finalAudioCardTitle": null,
-      "promptMarkerVerified": false,
-      "sourceVerified": false,
+      "selectedSourceCount": 1,
+      "generationStatus": "completed",
+      "promptSourceVerificationStatus": "passed",
+      "finalAudioCardTitle": "02_第一章｜AI Agent 的新問題：不是能不能做，而是能不能證明它做對了",
+      "promptMarkerVerified": true,
+      "sourceVerified": true,
       "byteLength": 34394,
-      "characterCount": 12892
+      "characterCount": 12892,
+      "queuedAt": "2026-07-09T08:04:43.429Z",
+      "completedAt": "2026-07-09T08:41:38.941Z",
+      "audioFile": {
+        "filename": "02_第一章｜AI Agent 的新問題：不是能不能做，而是能不能證明它做對了.m4a",
+        "relativePath": "public/books/standing-above-the-loop-agent-workflow-design/audio/02_第一章｜AI Agent 的新問題：不是能不能做，而是能不能證明它做對了.m4a",
+        "sizeBytes": 45268987,
+        "durationSeconds": 1406.549,
+        "codec": "aac",
+        "container": "mov,mp4,m4a,3gp,3g2,mj2",
+        "appAudioSrc": "/books/standing-above-the-loop-agent-workflow-design/audio/02_%E7%AC%AC%E4%B8%80%E7%AB%A0%EF%BD%9CAI%20Agent%20%E7%9A%84%E6%96%B0%E5%95%8F%E9%A1%8C%EF%BC%9A%E4%B8%8D%E6%98%AF%E8%83%BD%E4%B8%8D%E8%83%BD%E5%81%9A%EF%BC%8C%E8%80%8C%E6%98%AF%E8%83%BD%E4%B8%8D%E8%83%BD%E8%AD%89%E6%98%8E%E5%AE%83%E5%81%9A%E5%B0%8D%E4%BA%86.m4a",
+        "linkedInBooksJson": true
+      }
     },
     {
       "chapterNumber": 3,
@@ -70,14 +106,26 @@
       "sourceFilename": "03_第二章｜真實世界不是 Demo：為什麼 Agent 一上線就變笨？.txt",
       "promptMarker": "章節標誌：03_第二章｜真實世界不是 Demo：為什麼 Agent 一上線就變笨？",
       "expectedAudioTitle": "03_第二章｜真實世界不是 Demo：為什麼 Agent 一上線就變笨？",
-      "selectedSourceCount": null,
-      "generationStatus": "pending_regeneration",
-      "promptSourceVerificationStatus": "pending",
-      "finalAudioCardTitle": null,
-      "promptMarkerVerified": false,
-      "sourceVerified": false,
+      "selectedSourceCount": 1,
+      "generationStatus": "completed",
+      "promptSourceVerificationStatus": "passed",
+      "finalAudioCardTitle": "03_第二章｜真實世界不是 Demo：為什麼 Agent 一上線就變笨？",
+      "promptMarkerVerified": true,
+      "sourceVerified": true,
       "byteLength": 34404,
-      "characterCount": 13106
+      "characterCount": 13106,
+      "queuedAt": "2026-07-09T08:04:50.492Z",
+      "completedAt": "2026-07-09T08:41:38.941Z",
+      "audioFile": {
+        "filename": "03_第二章｜真實世界不是 Demo：為什麼 Agent 一上線就變笨？.m4a",
+        "relativePath": "public/books/standing-above-the-loop-agent-workflow-design/audio/03_第二章｜真實世界不是 Demo：為什麼 Agent 一上線就變笨？.m4a",
+        "sizeBytes": 40037114,
+        "durationSeconds": 1243.986,
+        "codec": "aac",
+        "container": "mov,mp4,m4a,3gp,3g2,mj2",
+        "appAudioSrc": "/books/standing-above-the-loop-agent-workflow-design/audio/03_%E7%AC%AC%E4%BA%8C%E7%AB%A0%EF%BD%9C%E7%9C%9F%E5%AF%A6%E4%B8%96%E7%95%8C%E4%B8%8D%E6%98%AF%20Demo%EF%BC%9A%E7%82%BA%E4%BB%80%E9%BA%BC%20Agent%20%E4%B8%80%E4%B8%8A%E7%B7%9A%E5%B0%B1%E8%AE%8A%E7%AC%A8%EF%BC%9F.m4a",
+        "linkedInBooksJson": true
+      }
     },
     {
       "chapterNumber": 4,
@@ -85,14 +133,26 @@
       "sourceFilename": "04_第三章｜Deep Research 的風險：AI 查資料，也可能被資料牽著走.txt",
       "promptMarker": "章節標誌：04_第三章｜Deep Research 的風險：AI 查資料，也可能被資料牽著走",
       "expectedAudioTitle": "04_第三章｜Deep Research 的風險：AI 查資料，也可能被資料牽著走",
-      "selectedSourceCount": null,
-      "generationStatus": "pending_regeneration",
-      "promptSourceVerificationStatus": "pending",
-      "finalAudioCardTitle": null,
-      "promptMarkerVerified": false,
-      "sourceVerified": false,
+      "selectedSourceCount": 1,
+      "generationStatus": "completed",
+      "promptSourceVerificationStatus": "passed",
+      "finalAudioCardTitle": "04_第三章｜Deep Research 的風險：AI 查資料，也可能被資料牽著走",
+      "promptMarkerVerified": true,
+      "sourceVerified": true,
       "byteLength": 33914,
-      "characterCount": 12982
+      "characterCount": 12982,
+      "queuedAt": "2026-07-09T08:04:57.539Z",
+      "completedAt": "2026-07-09T08:41:38.941Z",
+      "audioFile": {
+        "filename": "04_第三章｜Deep Research 的風險：AI 查資料，也可能被資料牽著走.m4a",
+        "relativePath": "public/books/standing-above-the-loop-agent-workflow-design/audio/04_第三章｜Deep Research 的風險：AI 查資料，也可能被資料牽著走.m4a",
+        "sizeBytes": 40561020,
+        "durationSeconds": 1260.263,
+        "codec": "aac",
+        "container": "mov,mp4,m4a,3gp,3g2,mj2",
+        "appAudioSrc": "/books/standing-above-the-loop-agent-workflow-design/audio/04_%E7%AC%AC%E4%B8%89%E7%AB%A0%EF%BD%9CDeep%20Research%20%E7%9A%84%E9%A2%A8%E9%9A%AA%EF%BC%9AAI%20%E6%9F%A5%E8%B3%87%E6%96%99%EF%BC%8C%E4%B9%9F%E5%8F%AF%E8%83%BD%E8%A2%AB%E8%B3%87%E6%96%99%E7%89%BD%E8%91%97%E8%B5%B0.m4a",
+        "linkedInBooksJson": true
+      }
     },
     {
       "chapterNumber": 5,
@@ -100,14 +160,26 @@
       "sourceFilename": "05_第四章｜AI 的記憶不是聊天紀錄，而是一種系統設計.txt",
       "promptMarker": "章節標誌：05_第四章｜AI 的記憶不是聊天紀錄，而是一種系統設計",
       "expectedAudioTitle": "05_第四章｜AI 的記憶不是聊天紀錄，而是一種系統設計",
-      "selectedSourceCount": null,
-      "generationStatus": "pending_regeneration",
-      "promptSourceVerificationStatus": "pending",
-      "finalAudioCardTitle": null,
-      "promptMarkerVerified": false,
-      "sourceVerified": false,
+      "selectedSourceCount": 1,
+      "generationStatus": "completed",
+      "promptSourceVerificationStatus": "passed",
+      "finalAudioCardTitle": "05_第四章｜AI 的記憶不是聊天紀錄，而是一種系統設計",
+      "promptMarkerVerified": true,
+      "sourceVerified": true,
       "byteLength": 34160,
-      "characterCount": 12738
+      "characterCount": 12738,
+      "queuedAt": "2026-07-09T08:05:04.557Z",
+      "completedAt": "2026-07-09T08:41:38.941Z",
+      "audioFile": {
+        "filename": "05_第四章｜AI 的記憶不是聊天紀錄，而是一種系統設計.m4a",
+        "relativePath": "public/books/standing-above-the-loop-agent-workflow-design/audio/05_第四章｜AI 的記憶不是聊天紀錄，而是一種系統設計.m4a",
+        "sizeBytes": 44375296,
+        "durationSeconds": 1378.778,
+        "codec": "aac",
+        "container": "mov,mp4,m4a,3gp,3g2,mj2",
+        "appAudioSrc": "/books/standing-above-the-loop-agent-workflow-design/audio/05_%E7%AC%AC%E5%9B%9B%E7%AB%A0%EF%BD%9CAI%20%E7%9A%84%E8%A8%98%E6%86%B6%E4%B8%8D%E6%98%AF%E8%81%8A%E5%A4%A9%E7%B4%80%E9%8C%84%EF%BC%8C%E8%80%8C%E6%98%AF%E4%B8%80%E7%A8%AE%E7%B3%BB%E7%B5%B1%E8%A8%AD%E8%A8%88.m4a",
+        "linkedInBooksJson": true
+      }
     },
     {
       "chapterNumber": 6,
@@ -115,14 +187,26 @@
       "sourceFilename": "06_第五章｜圖像生成的下一步：不是提示詞，而是搜尋接地.txt",
       "promptMarker": "章節標誌：06_第五章｜圖像生成的下一步：不是提示詞，而是搜尋接地",
       "expectedAudioTitle": "06_第五章｜圖像生成的下一步：不是提示詞，而是搜尋接地",
-      "selectedSourceCount": null,
-      "generationStatus": "pending_regeneration",
-      "promptSourceVerificationStatus": "pending",
-      "finalAudioCardTitle": null,
-      "promptMarkerVerified": false,
-      "sourceVerified": false,
+      "selectedSourceCount": 1,
+      "generationStatus": "completed",
+      "promptSourceVerificationStatus": "passed",
+      "finalAudioCardTitle": "06_第五章｜圖像生成的下一步：不是提示詞，而是搜尋接地",
+      "promptMarkerVerified": true,
+      "sourceVerified": true,
       "byteLength": 33780,
-      "characterCount": 12774
+      "characterCount": 12774,
+      "queuedAt": "2026-07-09T08:05:11.589Z",
+      "completedAt": "2026-07-09T08:41:38.941Z",
+      "audioFile": {
+        "filename": "06_第五章｜圖像生成的下一步：不是提示詞，而是搜尋接地.m4a",
+        "relativePath": "public/books/standing-above-the-loop-agent-workflow-design/audio/06_第五章｜圖像生成的下一步：不是提示詞，而是搜尋接地.m4a",
+        "sizeBytes": 26779894,
+        "durationSeconds": 832.064,
+        "codec": "aac",
+        "container": "mov,mp4,m4a,3gp,3g2,mj2",
+        "appAudioSrc": "/books/standing-above-the-loop-agent-workflow-design/audio/06_%E7%AC%AC%E4%BA%94%E7%AB%A0%EF%BD%9C%E5%9C%96%E5%83%8F%E7%94%9F%E6%88%90%E7%9A%84%E4%B8%8B%E4%B8%80%E6%AD%A5%EF%BC%9A%E4%B8%8D%E6%98%AF%E6%8F%90%E7%A4%BA%E8%A9%9E%EF%BC%8C%E8%80%8C%E6%98%AF%E6%90%9C%E5%B0%8B%E6%8E%A5%E5%9C%B0.m4a",
+        "linkedInBooksJson": true
+      }
     },
     {
       "chapterNumber": 7,
@@ -130,14 +214,26 @@
       "sourceFilename": "07_第六章｜影音生成開始進入「時間」與「視角」的時代.txt",
       "promptMarker": "章節標誌：07_第六章｜影音生成開始進入「時間」與「視角」的時代",
       "expectedAudioTitle": "07_第六章｜影音生成開始進入「時間」與「視角」的時代",
-      "selectedSourceCount": null,
-      "generationStatus": "pending_regeneration",
-      "promptSourceVerificationStatus": "pending",
-      "finalAudioCardTitle": null,
-      "promptMarkerVerified": false,
-      "sourceVerified": false,
+      "selectedSourceCount": 1,
+      "generationStatus": "completed",
+      "promptSourceVerificationStatus": "passed",
+      "finalAudioCardTitle": "07_第六章｜影音生成開始進入「時間」與「視角」的時代",
+      "promptMarkerVerified": true,
+      "sourceVerified": true,
       "byteLength": 34072,
-      "characterCount": 12772
+      "characterCount": 12772,
+      "queuedAt": "2026-07-09T08:05:18.633Z",
+      "completedAt": "2026-07-09T08:41:38.941Z",
+      "audioFile": {
+        "filename": "07_第六章｜影音生成開始進入「時間」與「視角」的時代.m4a",
+        "relativePath": "public/books/standing-above-the-loop-agent-workflow-design/audio/07_第六章｜影音生成開始進入「時間」與「視角」的時代.m4a",
+        "sizeBytes": 49542924,
+        "durationSeconds": 1539.344,
+        "codec": "aac",
+        "container": "mov,mp4,m4a,3gp,3g2,mj2",
+        "appAudioSrc": "/books/standing-above-the-loop-agent-workflow-design/audio/07_%E7%AC%AC%E5%85%AD%E7%AB%A0%EF%BD%9C%E5%BD%B1%E9%9F%B3%E7%94%9F%E6%88%90%E9%96%8B%E5%A7%8B%E9%80%B2%E5%85%A5%E3%80%8C%E6%99%82%E9%96%93%E3%80%8D%E8%88%87%E3%80%8C%E8%A6%96%E8%A7%92%E3%80%8D%E7%9A%84%E6%99%82%E4%BB%A3.m4a",
+        "linkedInBooksJson": true
+      }
     },
     {
       "chapterNumber": 8,
@@ -145,14 +241,26 @@
       "sourceFilename": "08_第七章｜Coding Agent 從寫程式，走向資安、盤點與技術債整理.txt",
       "promptMarker": "章節標誌：08_第七章｜Coding Agent 從寫程式，走向資安、盤點與技術債整理",
       "expectedAudioTitle": "08_第七章｜Coding Agent 從寫程式，走向資安、盤點與技術債整理",
-      "selectedSourceCount": null,
-      "generationStatus": "pending_regeneration",
-      "promptSourceVerificationStatus": "pending",
-      "finalAudioCardTitle": null,
-      "promptMarkerVerified": false,
-      "sourceVerified": false,
+      "selectedSourceCount": 1,
+      "generationStatus": "completed",
+      "promptSourceVerificationStatus": "passed",
+      "finalAudioCardTitle": "08_第七章｜Coding Agent 從寫程式，走向資安、盤點與技術債整理",
+      "promptMarkerVerified": true,
+      "sourceVerified": true,
       "byteLength": 34232,
-      "characterCount": 13152
+      "characterCount": 13152,
+      "queuedAt": "2026-07-09T08:05:25.677Z",
+      "completedAt": "2026-07-09T08:41:38.941Z",
+      "audioFile": {
+        "filename": "08_第七章｜Coding Agent 從寫程式，走向資安、盤點與技術債整理.m4a",
+        "relativePath": "public/books/standing-above-the-loop-agent-workflow-design/audio/08_第七章｜Coding Agent 從寫程式，走向資安、盤點與技術債整理.m4a",
+        "sizeBytes": 41674455,
+        "durationSeconds": 1294.861,
+        "codec": "aac",
+        "container": "mov,mp4,m4a,3gp,3g2,mj2",
+        "appAudioSrc": "/books/standing-above-the-loop-agent-workflow-design/audio/08_%E7%AC%AC%E4%B8%83%E7%AB%A0%EF%BD%9CCoding%20Agent%20%E5%BE%9E%E5%AF%AB%E7%A8%8B%E5%BC%8F%EF%BC%8C%E8%B5%B0%E5%90%91%E8%B3%87%E5%AE%89%E3%80%81%E7%9B%A4%E9%BB%9E%E8%88%87%E6%8A%80%E8%A1%93%E5%82%B5%E6%95%B4%E7%90%86.m4a",
+        "linkedInBooksJson": true
+      }
     },
     {
       "chapterNumber": 9,
@@ -160,14 +268,26 @@
       "sourceFilename": "09_第八章｜多 Agent 協作：未來企業不是一個超級 AI，而是一組專門 AI.txt",
       "promptMarker": "章節標誌：09_第八章｜多 Agent 協作：未來企業不是一個超級 AI，而是一組專門 AI",
       "expectedAudioTitle": "09_第八章｜多 Agent 協作：未來企業不是一個超級 AI，而是一組專門 AI",
-      "selectedSourceCount": null,
-      "generationStatus": "pending_regeneration",
-      "promptSourceVerificationStatus": "pending",
-      "finalAudioCardTitle": null,
-      "promptMarkerVerified": false,
-      "sourceVerified": false,
+      "selectedSourceCount": 1,
+      "generationStatus": "completed",
+      "promptSourceVerificationStatus": "passed",
+      "finalAudioCardTitle": "09_第八章｜多 Agent 協作：未來企業不是一個超級 AI，而是一組專門 AI",
+      "promptMarkerVerified": true,
+      "sourceVerified": true,
       "byteLength": 34419,
-      "characterCount": 13479
+      "characterCount": 13479,
+      "queuedAt": "2026-07-09T08:05:32.731Z",
+      "completedAt": "2026-07-09T08:41:38.941Z",
+      "audioFile": {
+        "filename": "09_第八章｜多 Agent 協作：未來企業不是一個超級 AI，而是一組專門 AI.m4a",
+        "relativePath": "public/books/standing-above-the-loop-agent-workflow-design/audio/09_第八章｜多 Agent 協作：未來企業不是一個超級 AI，而是一組專門 AI.m4a",
+        "sizeBytes": 34281335,
+        "durationSeconds": 1065.146,
+        "codec": "aac",
+        "container": "mov,mp4,m4a,3gp,3g2,mj2",
+        "appAudioSrc": "/books/standing-above-the-loop-agent-workflow-design/audio/09_%E7%AC%AC%E5%85%AB%E7%AB%A0%EF%BD%9C%E5%A4%9A%20Agent%20%E5%8D%94%E4%BD%9C%EF%BC%9A%E6%9C%AA%E4%BE%86%E4%BC%81%E6%A5%AD%E4%B8%8D%E6%98%AF%E4%B8%80%E5%80%8B%E8%B6%85%E7%B4%9A%20AI%EF%BC%8C%E8%80%8C%E6%98%AF%E4%B8%80%E7%B5%84%E5%B0%88%E9%96%80%20AI.m4a",
+        "linkedInBooksJson": true
+      }
     },
     {
       "chapterNumber": 10,
@@ -175,14 +295,26 @@
       "sourceFilename": "10_第九章｜AI for Science：研究不只是摘要，而是可稽核的工作台.txt",
       "promptMarker": "章節標誌：10_第九章｜AI for Science：研究不只是摘要，而是可稽核的工作台",
       "expectedAudioTitle": "10_第九章｜AI for Science：研究不只是摘要，而是可稽核的工作台",
-      "selectedSourceCount": null,
-      "generationStatus": "pending_regeneration",
-      "promptSourceVerificationStatus": "pending",
-      "finalAudioCardTitle": null,
-      "promptMarkerVerified": false,
-      "sourceVerified": false,
+      "selectedSourceCount": 1,
+      "generationStatus": "completed",
+      "promptSourceVerificationStatus": "passed",
+      "finalAudioCardTitle": "10_第九章｜AI for Science：研究不只是摘要，而是可稽核的工作台",
+      "promptMarkerVerified": true,
+      "sourceVerified": true,
       "byteLength": 34588,
-      "characterCount": 13218
+      "characterCount": 13218,
+      "queuedAt": "2026-07-09T08:05:39.715Z",
+      "completedAt": "2026-07-09T08:41:38.941Z",
+      "audioFile": {
+        "filename": "10_第九章｜AI for Science：研究不只是摘要，而是可稽核的工作台.m4a",
+        "relativePath": "public/books/standing-above-the-loop-agent-workflow-design/audio/10_第九章｜AI for Science：研究不只是摘要，而是可稽核的工作台.m4a",
+        "sizeBytes": 43669744,
+        "durationSeconds": 1356.858,
+        "codec": "aac",
+        "container": "mov,mp4,m4a,3gp,3g2,mj2",
+        "appAudioSrc": "/books/standing-above-the-loop-agent-workflow-design/audio/10_%E7%AC%AC%E4%B9%9D%E7%AB%A0%EF%BD%9CAI%20for%20Science%EF%BC%9A%E7%A0%94%E7%A9%B6%E4%B8%8D%E5%8F%AA%E6%98%AF%E6%91%98%E8%A6%81%EF%BC%8C%E8%80%8C%E6%98%AF%E5%8F%AF%E7%A8%BD%E6%A0%B8%E7%9A%84%E5%B7%A5%E4%BD%9C%E5%8F%B0.m4a",
+        "linkedInBooksJson": true
+      }
     },
     {
       "chapterNumber": 11,
@@ -190,14 +322,237 @@
       "sourceFilename": "11_第十章｜教學的改變：從提示詞教學，走向流程設計教學.txt",
       "promptMarker": "章節標誌：11_第十章｜教學的改變：從提示詞教學，走向流程設計教學",
       "expectedAudioTitle": "11_第十章｜教學的改變：從提示詞教學，走向流程設計教學",
-      "selectedSourceCount": null,
-      "generationStatus": "pending_regeneration",
-      "promptSourceVerificationStatus": "pending",
-      "finalAudioCardTitle": null,
-      "promptMarkerVerified": false,
-      "sourceVerified": false,
+      "selectedSourceCount": 1,
+      "generationStatus": "completed",
+      "promptSourceVerificationStatus": "passed",
+      "finalAudioCardTitle": "11_第十章｜教學的改變：從提示詞教學，走向流程設計教學",
+      "promptMarkerVerified": true,
+      "sourceVerified": true,
       "byteLength": 36587,
-      "characterCount": 14799
+      "characterCount": 14799,
+      "queuedAt": "2026-07-09T08:05:46.844Z",
+      "completedAt": "2026-07-09T08:41:38.941Z",
+      "audioFile": {
+        "filename": "11_第十章｜教學的改變：從提示詞教學，走向流程設計教學.m4a",
+        "relativePath": "public/books/standing-above-the-loop-agent-workflow-design/audio/11_第十章｜教學的改變：從提示詞教學，走向流程設計教學.m4a",
+        "sizeBytes": 38777890,
+        "durationSeconds": 1204.86,
+        "codec": "aac",
+        "container": "mov,mp4,m4a,3gp,3g2,mj2",
+        "appAudioSrc": "/books/standing-above-the-loop-agent-workflow-design/audio/11_%E7%AC%AC%E5%8D%81%E7%AB%A0%EF%BD%9C%E6%95%99%E5%AD%B8%E7%9A%84%E6%94%B9%E8%AE%8A%EF%BC%9A%E5%BE%9E%E6%8F%90%E7%A4%BA%E8%A9%9E%E6%95%99%E5%AD%B8%EF%BC%8C%E8%B5%B0%E5%90%91%E6%B5%81%E7%A8%8B%E8%A8%AD%E8%A8%88%E6%95%99%E5%AD%B8.m4a",
+        "linkedInBooksJson": true
+      }
+    }
+  ],
+  "downloadValidation": {
+    "status": "complete",
+    "validatedAt": "2026-07-09T08:41:38.941Z",
+    "assetFolder": "public/books/standing-above-the-loop-agent-workflow-design/audio",
+    "expectedChapterCount": 11,
+    "downloadedCount": 11,
+    "linkedCount": 11,
+    "missingChapterNumbers": [],
+    "chapters": [
+      {
+        "chapterNumber": 1,
+        "audioFilename": "01_序章｜為什麼 ChatGPT 已經不是重點了？.m4a",
+        "audioPath": "public/books/standing-above-the-loop-agent-workflow-design/audio/01_序章｜為什麼 ChatGPT 已經不是重點了？.m4a",
+        "appAudioSrc": "/books/standing-above-the-loop-agent-workflow-design/audio/01_%E5%BA%8F%E7%AB%A0%EF%BD%9C%E7%82%BA%E4%BB%80%E9%BA%BC%20ChatGPT%20%E5%B7%B2%E7%B6%93%E4%B8%8D%E6%98%AF%E9%87%8D%E9%BB%9E%E4%BA%86%EF%BC%9F.m4a",
+        "durationSeconds": 1193.088,
+        "codec": "aac",
+        "container": "mov,mp4,m4a,3gp,3g2,mj2",
+        "linkedInBooksJson": true
+      },
+      {
+        "chapterNumber": 2,
+        "audioFilename": "02_第一章｜AI Agent 的新問題：不是能不能做，而是能不能證明它做對了.m4a",
+        "audioPath": "public/books/standing-above-the-loop-agent-workflow-design/audio/02_第一章｜AI Agent 的新問題：不是能不能做，而是能不能證明它做對了.m4a",
+        "appAudioSrc": "/books/standing-above-the-loop-agent-workflow-design/audio/02_%E7%AC%AC%E4%B8%80%E7%AB%A0%EF%BD%9CAI%20Agent%20%E7%9A%84%E6%96%B0%E5%95%8F%E9%A1%8C%EF%BC%9A%E4%B8%8D%E6%98%AF%E8%83%BD%E4%B8%8D%E8%83%BD%E5%81%9A%EF%BC%8C%E8%80%8C%E6%98%AF%E8%83%BD%E4%B8%8D%E8%83%BD%E8%AD%89%E6%98%8E%E5%AE%83%E5%81%9A%E5%B0%8D%E4%BA%86.m4a",
+        "durationSeconds": 1406.549,
+        "codec": "aac",
+        "container": "mov,mp4,m4a,3gp,3g2,mj2",
+        "linkedInBooksJson": true
+      },
+      {
+        "chapterNumber": 3,
+        "audioFilename": "03_第二章｜真實世界不是 Demo：為什麼 Agent 一上線就變笨？.m4a",
+        "audioPath": "public/books/standing-above-the-loop-agent-workflow-design/audio/03_第二章｜真實世界不是 Demo：為什麼 Agent 一上線就變笨？.m4a",
+        "appAudioSrc": "/books/standing-above-the-loop-agent-workflow-design/audio/03_%E7%AC%AC%E4%BA%8C%E7%AB%A0%EF%BD%9C%E7%9C%9F%E5%AF%A6%E4%B8%96%E7%95%8C%E4%B8%8D%E6%98%AF%20Demo%EF%BC%9A%E7%82%BA%E4%BB%80%E9%BA%BC%20Agent%20%E4%B8%80%E4%B8%8A%E7%B7%9A%E5%B0%B1%E8%AE%8A%E7%AC%A8%EF%BC%9F.m4a",
+        "durationSeconds": 1243.986,
+        "codec": "aac",
+        "container": "mov,mp4,m4a,3gp,3g2,mj2",
+        "linkedInBooksJson": true
+      },
+      {
+        "chapterNumber": 4,
+        "audioFilename": "04_第三章｜Deep Research 的風險：AI 查資料，也可能被資料牽著走.m4a",
+        "audioPath": "public/books/standing-above-the-loop-agent-workflow-design/audio/04_第三章｜Deep Research 的風險：AI 查資料，也可能被資料牽著走.m4a",
+        "appAudioSrc": "/books/standing-above-the-loop-agent-workflow-design/audio/04_%E7%AC%AC%E4%B8%89%E7%AB%A0%EF%BD%9CDeep%20Research%20%E7%9A%84%E9%A2%A8%E9%9A%AA%EF%BC%9AAI%20%E6%9F%A5%E8%B3%87%E6%96%99%EF%BC%8C%E4%B9%9F%E5%8F%AF%E8%83%BD%E8%A2%AB%E8%B3%87%E6%96%99%E7%89%BD%E8%91%97%E8%B5%B0.m4a",
+        "durationSeconds": 1260.263,
+        "codec": "aac",
+        "container": "mov,mp4,m4a,3gp,3g2,mj2",
+        "linkedInBooksJson": true
+      },
+      {
+        "chapterNumber": 5,
+        "audioFilename": "05_第四章｜AI 的記憶不是聊天紀錄，而是一種系統設計.m4a",
+        "audioPath": "public/books/standing-above-the-loop-agent-workflow-design/audio/05_第四章｜AI 的記憶不是聊天紀錄，而是一種系統設計.m4a",
+        "appAudioSrc": "/books/standing-above-the-loop-agent-workflow-design/audio/05_%E7%AC%AC%E5%9B%9B%E7%AB%A0%EF%BD%9CAI%20%E7%9A%84%E8%A8%98%E6%86%B6%E4%B8%8D%E6%98%AF%E8%81%8A%E5%A4%A9%E7%B4%80%E9%8C%84%EF%BC%8C%E8%80%8C%E6%98%AF%E4%B8%80%E7%A8%AE%E7%B3%BB%E7%B5%B1%E8%A8%AD%E8%A8%88.m4a",
+        "durationSeconds": 1378.778,
+        "codec": "aac",
+        "container": "mov,mp4,m4a,3gp,3g2,mj2",
+        "linkedInBooksJson": true
+      },
+      {
+        "chapterNumber": 6,
+        "audioFilename": "06_第五章｜圖像生成的下一步：不是提示詞，而是搜尋接地.m4a",
+        "audioPath": "public/books/standing-above-the-loop-agent-workflow-design/audio/06_第五章｜圖像生成的下一步：不是提示詞，而是搜尋接地.m4a",
+        "appAudioSrc": "/books/standing-above-the-loop-agent-workflow-design/audio/06_%E7%AC%AC%E4%BA%94%E7%AB%A0%EF%BD%9C%E5%9C%96%E5%83%8F%E7%94%9F%E6%88%90%E7%9A%84%E4%B8%8B%E4%B8%80%E6%AD%A5%EF%BC%9A%E4%B8%8D%E6%98%AF%E6%8F%90%E7%A4%BA%E8%A9%9E%EF%BC%8C%E8%80%8C%E6%98%AF%E6%90%9C%E5%B0%8B%E6%8E%A5%E5%9C%B0.m4a",
+        "durationSeconds": 832.064,
+        "codec": "aac",
+        "container": "mov,mp4,m4a,3gp,3g2,mj2",
+        "linkedInBooksJson": true
+      },
+      {
+        "chapterNumber": 7,
+        "audioFilename": "07_第六章｜影音生成開始進入「時間」與「視角」的時代.m4a",
+        "audioPath": "public/books/standing-above-the-loop-agent-workflow-design/audio/07_第六章｜影音生成開始進入「時間」與「視角」的時代.m4a",
+        "appAudioSrc": "/books/standing-above-the-loop-agent-workflow-design/audio/07_%E7%AC%AC%E5%85%AD%E7%AB%A0%EF%BD%9C%E5%BD%B1%E9%9F%B3%E7%94%9F%E6%88%90%E9%96%8B%E5%A7%8B%E9%80%B2%E5%85%A5%E3%80%8C%E6%99%82%E9%96%93%E3%80%8D%E8%88%87%E3%80%8C%E8%A6%96%E8%A7%92%E3%80%8D%E7%9A%84%E6%99%82%E4%BB%A3.m4a",
+        "durationSeconds": 1539.344,
+        "codec": "aac",
+        "container": "mov,mp4,m4a,3gp,3g2,mj2",
+        "linkedInBooksJson": true
+      },
+      {
+        "chapterNumber": 8,
+        "audioFilename": "08_第七章｜Coding Agent 從寫程式，走向資安、盤點與技術債整理.m4a",
+        "audioPath": "public/books/standing-above-the-loop-agent-workflow-design/audio/08_第七章｜Coding Agent 從寫程式，走向資安、盤點與技術債整理.m4a",
+        "appAudioSrc": "/books/standing-above-the-loop-agent-workflow-design/audio/08_%E7%AC%AC%E4%B8%83%E7%AB%A0%EF%BD%9CCoding%20Agent%20%E5%BE%9E%E5%AF%AB%E7%A8%8B%E5%BC%8F%EF%BC%8C%E8%B5%B0%E5%90%91%E8%B3%87%E5%AE%89%E3%80%81%E7%9B%A4%E9%BB%9E%E8%88%87%E6%8A%80%E8%A1%93%E5%82%B5%E6%95%B4%E7%90%86.m4a",
+        "durationSeconds": 1294.861,
+        "codec": "aac",
+        "container": "mov,mp4,m4a,3gp,3g2,mj2",
+        "linkedInBooksJson": true
+      },
+      {
+        "chapterNumber": 9,
+        "audioFilename": "09_第八章｜多 Agent 協作：未來企業不是一個超級 AI，而是一組專門 AI.m4a",
+        "audioPath": "public/books/standing-above-the-loop-agent-workflow-design/audio/09_第八章｜多 Agent 協作：未來企業不是一個超級 AI，而是一組專門 AI.m4a",
+        "appAudioSrc": "/books/standing-above-the-loop-agent-workflow-design/audio/09_%E7%AC%AC%E5%85%AB%E7%AB%A0%EF%BD%9C%E5%A4%9A%20Agent%20%E5%8D%94%E4%BD%9C%EF%BC%9A%E6%9C%AA%E4%BE%86%E4%BC%81%E6%A5%AD%E4%B8%8D%E6%98%AF%E4%B8%80%E5%80%8B%E8%B6%85%E7%B4%9A%20AI%EF%BC%8C%E8%80%8C%E6%98%AF%E4%B8%80%E7%B5%84%E5%B0%88%E9%96%80%20AI.m4a",
+        "durationSeconds": 1065.146,
+        "codec": "aac",
+        "container": "mov,mp4,m4a,3gp,3g2,mj2",
+        "linkedInBooksJson": true
+      },
+      {
+        "chapterNumber": 10,
+        "audioFilename": "10_第九章｜AI for Science：研究不只是摘要，而是可稽核的工作台.m4a",
+        "audioPath": "public/books/standing-above-the-loop-agent-workflow-design/audio/10_第九章｜AI for Science：研究不只是摘要，而是可稽核的工作台.m4a",
+        "appAudioSrc": "/books/standing-above-the-loop-agent-workflow-design/audio/10_%E7%AC%AC%E4%B9%9D%E7%AB%A0%EF%BD%9CAI%20for%20Science%EF%BC%9A%E7%A0%94%E7%A9%B6%E4%B8%8D%E5%8F%AA%E6%98%AF%E6%91%98%E8%A6%81%EF%BC%8C%E8%80%8C%E6%98%AF%E5%8F%AF%E7%A8%BD%E6%A0%B8%E7%9A%84%E5%B7%A5%E4%BD%9C%E5%8F%B0.m4a",
+        "durationSeconds": 1356.858,
+        "codec": "aac",
+        "container": "mov,mp4,m4a,3gp,3g2,mj2",
+        "linkedInBooksJson": true
+      },
+      {
+        "chapterNumber": 11,
+        "audioFilename": "11_第十章｜教學的改變：從提示詞教學，走向流程設計教學.m4a",
+        "audioPath": "public/books/standing-above-the-loop-agent-workflow-design/audio/11_第十章｜教學的改變：從提示詞教學，走向流程設計教學.m4a",
+        "appAudioSrc": "/books/standing-above-the-loop-agent-workflow-design/audio/11_%E7%AC%AC%E5%8D%81%E7%AB%A0%EF%BD%9C%E6%95%99%E5%AD%B8%E7%9A%84%E6%94%B9%E8%AE%8A%EF%BC%9A%E5%BE%9E%E6%8F%90%E7%A4%BA%E8%A9%9E%E6%95%99%E5%AD%B8%EF%BC%8C%E8%B5%B0%E5%90%91%E6%B5%81%E7%A8%8B%E8%A8%AD%E8%A8%88%E6%95%99%E5%AD%B8.m4a",
+        "durationSeconds": 1204.86,
+        "codec": "aac",
+        "container": "mov,mp4,m4a,3gp,3g2,mj2",
+        "linkedInBooksJson": true
+      }
+    ]
+  },
+  "finalCardChecks": [
+    {
+      "cardTitle": "06_第五章｜圖像生成的下一步：不是提示詞，而是搜尋接地",
+      "sourceFilename": "06_第五章｜圖像生成的下一步：不是提示詞，而是搜尋接地.txt",
+      "promptMarkerStem": "06_第五章｜圖像生成的下一步：不是提示詞，而是搜尋接地",
+      "titleMatchesSource": true,
+      "markerMatchesSource": true,
+      "selectedSourceCount": 1
+    },
+    {
+      "cardTitle": "01_序章｜為什麼 ChatGPT 已經不是重點了？",
+      "sourceFilename": "01_序章｜為什麼 ChatGPT 已經不是重點了？.txt",
+      "promptMarkerStem": "01_序章｜為什麼 ChatGPT 已經不是重點了？",
+      "titleMatchesSource": true,
+      "markerMatchesSource": true,
+      "selectedSourceCount": 1
+    },
+    {
+      "cardTitle": "03_第二章｜真實世界不是 Demo：為什麼 Agent 一上線就變笨？",
+      "sourceFilename": "03_第二章｜真實世界不是 Demo：為什麼 Agent 一上線就變笨？.txt",
+      "promptMarkerStem": "03_第二章｜真實世界不是 Demo：為什麼 Agent 一上線就變笨？",
+      "titleMatchesSource": true,
+      "markerMatchesSource": true,
+      "selectedSourceCount": 1
+    },
+    {
+      "cardTitle": "09_第八章｜多 Agent 協作：未來企業不是一個超級 AI，而是一組專門 AI",
+      "sourceFilename": "09_第八章｜多 Agent 協作：未來企業不是一個超級 AI，而是一組專門 AI.txt",
+      "promptMarkerStem": "09_第八章｜多 Agent 協作：未來企業不是一個超級 AI，而是一組專門 AI",
+      "titleMatchesSource": true,
+      "markerMatchesSource": true,
+      "selectedSourceCount": 1
+    },
+    {
+      "cardTitle": "05_第四章｜AI 的記憶不是聊天紀錄，而是一種系統設計",
+      "sourceFilename": "05_第四章｜AI 的記憶不是聊天紀錄，而是一種系統設計.txt",
+      "promptMarkerStem": "05_第四章｜AI 的記憶不是聊天紀錄，而是一種系統設計",
+      "titleMatchesSource": true,
+      "markerMatchesSource": true,
+      "selectedSourceCount": 1
+    },
+    {
+      "cardTitle": "11_第十章｜教學的改變：從提示詞教學，走向流程設計教學",
+      "sourceFilename": "11_第十章｜教學的改變：從提示詞教學，走向流程設計教學.txt",
+      "promptMarkerStem": "11_第十章｜教學的改變：從提示詞教學，走向流程設計教學",
+      "titleMatchesSource": true,
+      "markerMatchesSource": true,
+      "selectedSourceCount": 1
+    },
+    {
+      "cardTitle": "08_第七章｜Coding Agent 從寫程式，走向資安、盤點與技術債整理",
+      "sourceFilename": "08_第七章｜Coding Agent 從寫程式，走向資安、盤點與技術債整理.txt",
+      "promptMarkerStem": "08_第七章｜Coding Agent 從寫程式，走向資安、盤點與技術債整理",
+      "titleMatchesSource": true,
+      "markerMatchesSource": true,
+      "selectedSourceCount": 1
+    },
+    {
+      "cardTitle": "04_第三章｜Deep Research 的風險：AI 查資料，也可能被資料牽著走",
+      "sourceFilename": "04_第三章｜Deep Research 的風險：AI 查資料，也可能被資料牽著走.txt",
+      "promptMarkerStem": "04_第三章｜Deep Research 的風險：AI 查資料，也可能被資料牽著走",
+      "titleMatchesSource": true,
+      "markerMatchesSource": true,
+      "selectedSourceCount": 1
+    },
+    {
+      "cardTitle": "02_第一章｜AI Agent 的新問題：不是能不能做，而是能不能證明它做對了",
+      "sourceFilename": "02_第一章｜AI Agent 的新問題：不是能不能做，而是能不能證明它做對了.txt",
+      "promptMarkerStem": "02_第一章｜AI Agent 的新問題：不是能不能做，而是能不能證明它做對了",
+      "titleMatchesSource": true,
+      "markerMatchesSource": true,
+      "selectedSourceCount": 1
+    },
+    {
+      "cardTitle": "07_第六章｜影音生成開始進入「時間」與「視角」的時代",
+      "sourceFilename": "07_第六章｜影音生成開始進入「時間」與「視角」的時代.txt",
+      "promptMarkerStem": "07_第六章｜影音生成開始進入「時間」與「視角」的時代",
+      "titleMatchesSource": true,
+      "markerMatchesSource": true,
+      "selectedSourceCount": 1
+    },
+    {
+      "cardTitle": "10_第九章｜AI for Science：研究不只是摘要，而是可稽核的工作台",
+      "sourceFilename": "10_第九章｜AI for Science：研究不只是摘要，而是可稽核的工作台.txt",
+      "promptMarkerStem": "10_第九章｜AI for Science：研究不只是摘要，而是可稽核的工作台",
+      "titleMatchesSource": true,
+      "markerMatchesSource": true,
+      "selectedSourceCount": 1
     }
   ]
 }

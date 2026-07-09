@@ -11,6 +11,7 @@ The user will place future manuscripts in the root `books/` folder, or provide a
 Google Drive intake model:
 
 - When the user provides a Google Drive link as the source for a new book, use the Google Drive connector when available to access and download the linked file or folder contents. If connector access is not available or the link is not shared correctly, ask the user to adjust sharing or provide access before proceeding.
+- Treat any Google Drive or other manuscript/package download link as a request to run the complete publishing loop by default: intake, parse, TXT export, NotebookLM chapter audio generation, audio download, `books.json` linking, validation, commit, push, and production deployment. Do not stop at website text publishing unless the user explicitly says to exclude NotebookLM, audio download, deployment, or asks for website-only publishing.
 - Download only the intended manuscript/package files into the root `books/` intake folder. Preserve the original filename when possible, and do not download directly into `published-books/`, `book-txt/`, or app content folders.
 - After download, verify the local file exists under `books/`, has a supported extension, has nonzero size, and is not already represented in `src/content/books.json` or archived under `published-books/`.
 - If the Drive link points to a folder or multiple files, identify the complete book package or intended manuscript files before importing. Prefer one complete ZIP package per book when present.
@@ -47,6 +48,7 @@ Plain-text export model:
 NotebookLM chapter audio workflow:
 
 - Project-level "目標" instructions for book publishing include this NotebookLM chapter audio loop by default. When the user asks for a shortest "目標" command, a book publishing goal, or "上架" work, treat NotebookLM audio generation and ledger validation as part of the expected deliverable unless the user explicitly excludes NotebookLM or asks for website-only publishing.
+- The completed loop must leave the reader able to listen to NotebookLM audio directly inside the ebook platform: every chapter should have a validated audio asset under `public/books/<slug>/audio/`, a matching chapter `audio.src` in `src/content/books.json`, and a visible NotebookLM Podcast play/download entry after deployment.
 - When using `book-txt/<book title>/` chapter files as NotebookLM sources for podcast/audio study, treat each numbered `.txt` chapter as one source and one expected audio artifact.
 - Before opening NotebookLM, run a TXT chapter preflight: verify the chapter count, two-digit ordering, no duplicate chapter numbers, no missing chapter numbers, no empty files, and that every filename stem is the intended final audio title.
 - Create or update `book-txt/<book title>/notebooklm-audio-ledger.json` during audio work. Track notebook URL, chapter number, source filename, prompt marker, selected source count, generation state, prompt/source verification state, final audio card title, and completion timestamp.
