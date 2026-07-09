@@ -35,6 +35,7 @@ function usage() {
     "  --subtitle <text>   Override inferred subtitle.",
     "  --description <text> Override inferred description.",
     "  --genre <csv>       Override default comma-separated genre list.",
+    "  --replace-existing Replace the matching existing book instead of appending a new one.",
     "  --dry-run          Validate and print the generated book without writing books.json.",
   ].join("\n");
 }
@@ -438,20 +439,29 @@ const book = {
 validateBook(book);
 
 const data = JSON.parse(fs.readFileSync(contentPath, "utf8"));
-const duplicate = data.books.find(
+const duplicateIndex = data.books.findIndex(
   (existing) =>
     existing.slug === book.slug ||
     existing.id === book.id ||
     existing.title === book.title ||
     existing.sourceUrl === book.sourceUrl,
 );
+const duplicate = duplicateIndex === -1 ? null : data.books[duplicateIndex];
 
-if (duplicate) {
+if (duplicate && !args["replace-existing"]) {
   throw new Error(`Refusing to import duplicate book: ${duplicate.title} (${duplicate.slug})`);
 }
 
+if (!duplicate && args["replace-existing"]) {
+  throw new Error(`Cannot replace existing book because no matching book was found for slug: ${book.slug}`);
+}
+
 if (!args["dry-run"]) {
-  data.books.push(book);
+  if (duplicate) {
+    data.books[duplicateIndex] = book;
+  } else {
+    data.books.push(book);
+  }
   fs.writeFileSync(contentPath, `${JSON.stringify(data, null, 2)}\n`, "utf8");
 }
 
@@ -459,6 +469,15 @@ console.log(
   JSON.stringify(
     {
       dryRun: Boolean(args["dry-run"]),
+      mode: duplicate ? "replace" : "append",
+      replaced: duplicate
+        ? {
+            title: duplicate.title,
+            slug: duplicate.slug,
+            sourceUrl: duplicate.sourceUrl,
+            chapters: duplicate.chapters.length,
+          }
+        : null,
       title: book.title,
       slug: book.slug,
       sourceUrl: book.sourceUrl,
