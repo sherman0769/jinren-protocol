@@ -121,7 +121,7 @@ Visual quality rules:
 Narration rules:
 
 - Reader narration should continue across chapter boundaries by default once the user starts playback, stopping only at the end of the book or when the user manually stops it.
-- When a chapter has a real `audio.src`, the reader should prefer that audio file over browser-native `speechSynthesis`, advance through chapter audio in book order, and keep `speechSynthesis` only as fallback for chapters without real audio.
+- NotebookLM chapter audio should be presented as a separate chapter Podcast experience, not as a silent replacement for the reader's original browser-native narration. When both exist, keep the original narration controls available and show a distinct NotebookLM Podcast panel or equivalent chapter-level link/play/download entry.
 - For browser-native `speechSynthesis`, background / lock-screen support is best-effort only: use Media Session metadata/actions and Screen Wake Lock when available, but do not claim guaranteed lock-screen playback unless narration is backed by real audio files or an audio streaming TTS pipeline.
 
 Reading progress rules:

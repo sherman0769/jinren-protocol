@@ -1,6 +1,6 @@
 "use client";
 
-import { BookOpen, Clock, Library, Play } from "lucide-react";
+import { BookOpen, Clock, Headphones, Library, Play } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
@@ -129,8 +129,8 @@ export function BookLibrary({ books }: BookLibraryProps) {
                   </span>
                   {stats.audioChapters > 0 && (
                     <span>
-                      <Play aria-hidden="true" size={14} />
-                      {stats.audioChapters} 音頻
+                      <Headphones aria-hidden="true" size={14} />
+                      Podcast {stats.audioChapters} 章
                     </span>
                   )}
                 </div>

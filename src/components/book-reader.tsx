@@ -6,6 +6,7 @@ import {
   ChevronLeft,
   ChevronRight,
   Download,
+  Headphones,
   Home,
   List,
   Minus,
@@ -137,26 +138,38 @@ export function BookReader({ book }: BookReaderProps) {
   const progress = Math.round(((chapterIndex + 1) / book.chapters.length) * 100);
   const chapterAudio = chapter.audio?.src ? chapter.audio : null;
   const hasChapterAudio = Boolean(chapterAudio);
-  const isAudioActive = activeAudioChapterIndex !== null;
+  const isPodcastActive = activeAudioChapterIndex !== null;
+  const isCurrentPodcastActive = activeAudioChapterIndex === chapterIndex;
+  const isSpeechNarrationActive = isNarrating && !isPodcastActive;
   const audioProgressPercent =
     audioProgress.duration > 0
       ? Math.min(100, Math.round((audioProgress.currentTime / audioProgress.duration) * 100))
       : 0;
   const narrationProgress =
-    hasChapterAudio || isAudioActive
-      ? audioProgressPercent
-      : activeParagraphIndex === null
+    activeParagraphIndex === null
       ? 0
       : Math.round(((activeParagraphIndex + 1) / chapter.paragraphs.length) * 100);
-  const playbackSupported = hasChapterAudio || speechSupported;
-  const playbackModeLabel = hasChapterAudio ? "音頻" : "朗讀";
-  const playbackDetail = hasChapterAudio
-    ? audioProgress.duration > 0
-      ? `${formatAudioTime(audioProgress.currentTime)} / ${formatAudioTime(audioProgress.duration)}`
-      : `第 ${chapter.number} 章音檔`
-    : activeParagraphIndex === null
+  const podcastProgress = isCurrentPodcastActive ? audioProgressPercent : 0;
+  const speechControlsDisabled = !speechSupported || isPodcastActive;
+  const playbackModeLabel = "朗讀";
+  const playbackDetail = activeParagraphIndex === null
       ? "尚未開始"
       : `第 ${activeParagraphIndex + 1} / ${chapter.paragraphs.length} 段`;
+  const podcastTitle = chapterAudio?.title ?? `第 ${chapter.number} 章 Podcast`;
+  const podcastDetail =
+    hasChapterAudio && isCurrentPodcastActive && audioProgress.duration > 0
+      ? `${formatAudioTime(audioProgress.currentTime)} / ${formatAudioTime(audioProgress.duration)}`
+      : hasChapterAudio
+        ? podcastTitle
+        : "本章尚未匯入 NotebookLM Podcast";
+  const podcastPlayLabel =
+    isCurrentPodcastActive && isNarrating && !isNarrationPaused
+      ? "暫停 Podcast"
+      : isCurrentPodcastActive && isNarrationPaused
+        ? "繼續 Podcast"
+        : "播放 Podcast";
+  const hasPreviousPodcast = Boolean(book.chapters[chapterIndex - 1]?.audio?.src);
+  const hasNextPodcast = Boolean(book.chapters[chapterIndex + 1]?.audio?.src);
 
   const scrollToParagraph = useCallback((chapterId: string, index: number) => {
     window.requestAnimationFrame(() => {
@@ -632,31 +645,7 @@ export function BookReader({ book }: BookReaderProps) {
   }, [book.chapters, persistProgress, stopNarration, updateReadingPosition]);
 
   function toggleNarration() {
-    if (hasChapterAudio) {
-      const audio = audioElementRef.current;
-      if (!isNarrating || activeAudioChapterIndex !== chapterIndex) {
-        playChapterAudio(chapterIndex);
-        return;
-      }
-
-      if (!audio) return;
-
-      if (isNarrationPaused || audio.paused) {
-        audio.play().then(() => {
-          requestNarrationWakeLock();
-          setIsNarrationPaused(false);
-          setMediaSessionState("playing");
-        }).catch(() => {
-          setAudioError("音檔無法繼續播放");
-          setIsNarrationPaused(true);
-          setMediaSessionState("paused");
-        });
-        return;
-      }
-
-      audio.pause();
-      setIsNarrationPaused(true);
-      setMediaSessionState("paused");
+    if (activeAudioChapterRef.current !== null) {
       return;
     }
 
@@ -675,6 +664,35 @@ export function BookReader({ book }: BookReaderProps) {
     }
 
     window.speechSynthesis.pause();
+    setIsNarrationPaused(true);
+    setMediaSessionState("paused");
+  }
+
+  function togglePodcast() {
+    if (!hasChapterAudio) return;
+
+    const audio = audioElementRef.current;
+    if (!isNarrating || activeAudioChapterIndex !== chapterIndex) {
+      playChapterAudio(chapterIndex);
+      return;
+    }
+
+    if (!audio) return;
+
+    if (isNarrationPaused || audio.paused) {
+      audio.play().then(() => {
+        requestNarrationWakeLock();
+        setIsNarrationPaused(false);
+        setMediaSessionState("playing");
+      }).catch(() => {
+        setAudioError("Podcast 無法繼續播放");
+        setIsNarrationPaused(true);
+        setMediaSessionState("paused");
+      });
+      return;
+    }
+
+    audio.pause();
     setIsNarrationPaused(true);
     setMediaSessionState("paused");
   }
@@ -782,14 +800,13 @@ export function BookReader({ book }: BookReaderProps) {
   ]);
 
   const goToNarrationStep = useCallback((offset: number) => {
-    const currentChapter = book.chapters[chapterIndexRef.current];
-    if (activeAudioChapterRef.current !== null || currentChapter?.audio?.src) {
+    if (activeAudioChapterRef.current !== null) {
       goToAudioChapter(offset);
       return;
     }
 
     goToNarrationParagraph(offset);
-  }, [book.chapters, goToAudioChapter, goToNarrationParagraph]);
+  }, [goToAudioChapter, goToNarrationParagraph]);
 
   function saveBookmark() {
     captureReadingPosition();
@@ -1104,19 +1121,13 @@ export function BookReader({ book }: BookReaderProps) {
     };
 
     setActionHandler("play", () => {
-      const currentChapter = book.chapters[chapterIndexRef.current];
-      if (currentChapter?.audio?.src) {
-        if (activeAudioChapterRef.current === null) {
-          playChapterAudio(chapterIndexRef.current);
-          return;
-        }
-
+      if (activeAudioChapterRef.current !== null) {
         audioElementRef.current?.play().then(() => {
           requestNarrationWakeLock();
           setIsNarrationPaused(false);
           setMediaSessionState("playing");
         }).catch(() => {
-          setAudioError("音檔無法繼續播放");
+          setAudioError("Podcast 無法繼續播放");
         });
         return;
       }
@@ -1301,9 +1312,78 @@ export function BookReader({ book }: BookReaderProps) {
           <div className="chapter-meta">
             <span>{chapter.minutes} min</span>
             <span>{chapter.paragraphs.length} paragraphs</span>
-            {stats.audioChapters > 0 && <span>{stats.audioChapters} audio</span>}
+            {stats.audioChapters > 0 && (
+              <span>NotebookLM Podcast {stats.audioChapters}/{book.chapters.length}</span>
+            )}
             <span>{progress}% complete</span>
           </div>
+        </section>
+
+        <section className="podcast-panel" aria-label="NotebookLM Podcast">
+          <div className="podcast-primary">
+            <Headphones aria-hidden="true" size={20} />
+            <div>
+              <span>NotebookLM Podcast</span>
+              <strong>{podcastDetail}</strong>
+            </div>
+          </div>
+          <div className="podcast-meta">
+            <span>{stats.audioChapters}/{book.chapters.length} 章已匯入</span>
+            <span>{hasChapterAudio ? "本章可播放" : "本章尚未下載"}</span>
+          </div>
+          <div aria-hidden="true" className="podcast-progress-track">
+            <span style={{ width: `${podcastProgress}%` }} />
+          </div>
+          <div className="podcast-controls">
+            <button
+              aria-label="上一章 Podcast"
+              disabled={!hasPreviousPodcast}
+              onClick={() => goToAudioChapter(-1)}
+              title="上一章 Podcast"
+              type="button"
+            >
+              <SkipBack aria-hidden="true" size={18} />
+            </button>
+            <button
+              aria-label={podcastPlayLabel}
+              className="podcast-play-button"
+              disabled={!hasChapterAudio}
+              onClick={togglePodcast}
+              title={podcastPlayLabel}
+              type="button"
+            >
+              {isCurrentPodcastActive && isNarrating && !isNarrationPaused ? (
+                <Pause aria-hidden="true" size={18} />
+              ) : (
+                <Play aria-hidden="true" size={18} />
+              )}
+            </button>
+            <button
+              aria-label="停止 Podcast"
+              disabled={!isPodcastActive}
+              onClick={stopNarration}
+              title="停止 Podcast"
+              type="button"
+            >
+              <Square aria-hidden="true" size={17} />
+            </button>
+            <button
+              aria-label="下一章 Podcast"
+              disabled={!hasNextPodcast}
+              onClick={() => goToAudioChapter(1)}
+              title="下一章 Podcast"
+              type="button"
+            >
+              <SkipForward aria-hidden="true" size={18} />
+            </button>
+            {chapterAudio?.src && (
+              <a className="podcast-download-link" download href={chapterAudio.src}>
+                <Download aria-hidden="true" size={16} />
+                下載音檔
+              </a>
+            )}
+          </div>
+          {audioError && <p className="podcast-status">{audioError}</p>}
         </section>
 
         <nav className="reader-control-bar" aria-label="閱讀控制">
@@ -1348,24 +1428,24 @@ export function BookReader({ book }: BookReaderProps) {
           </div>
           <div className="narration-controls">
             <button
-              aria-label={hasChapterAudio ? "上一章音檔" : "上一段"}
+              aria-label="上一段"
               className="narration-step-button"
-              disabled={!playbackSupported}
+              disabled={speechControlsDisabled}
               onClick={() => goToNarrationStep(-1)}
-              title={hasChapterAudio ? "上一章音檔" : "上一段"}
+              title="上一段"
               type="button"
             >
               <SkipBack aria-hidden="true" size={18} />
             </button>
             <button
-              aria-label={isNarrating && !isNarrationPaused ? `暫停${playbackModeLabel}` : `開始${playbackModeLabel}`}
+              aria-label={isSpeechNarrationActive && !isNarrationPaused ? `暫停${playbackModeLabel}` : `開始${playbackModeLabel}`}
               className="narration-play-button"
-              disabled={!playbackSupported}
+              disabled={speechControlsDisabled}
               onClick={toggleNarration}
-              title={isNarrating && !isNarrationPaused ? "暫停" : "播放"}
+              title={isSpeechNarrationActive && !isNarrationPaused ? "暫停" : "播放"}
               type="button"
             >
-              {isNarrating && !isNarrationPaused ? (
+              {isSpeechNarrationActive && !isNarrationPaused ? (
                 <Pause aria-hidden="true" size={18} />
               ) : (
                 <Play aria-hidden="true" size={18} />
@@ -1374,7 +1454,7 @@ export function BookReader({ book }: BookReaderProps) {
             <button
               aria-label={`停止${playbackModeLabel}`}
               className="narration-stop-button"
-              disabled={!playbackSupported && !isNarrating}
+              disabled={!isSpeechNarrationActive}
               onClick={stopNarration}
               onPointerDown={(event) => {
                 event.preventDefault();
@@ -1386,11 +1466,11 @@ export function BookReader({ book }: BookReaderProps) {
               <Square aria-hidden="true" size={17} />
             </button>
             <button
-              aria-label={hasChapterAudio ? "下一章音檔" : "下一段"}
+              aria-label="下一段"
               className="narration-step-button"
-              disabled={!playbackSupported}
+              disabled={speechControlsDisabled}
               onClick={() => goToNarrationStep(1)}
-              title={hasChapterAudio ? "下一章音檔" : "下一段"}
+              title="下一段"
               type="button"
             >
               <SkipForward aria-hidden="true" size={18} />
@@ -1399,7 +1479,7 @@ export function BookReader({ book }: BookReaderProps) {
               <span>速度</span>
               <select
                 aria-label="朗讀速度"
-                disabled={!playbackSupported}
+                disabled={speechControlsDisabled}
                 onChange={(event) => changeRate(Number(event.target.value))}
                 value={speechRate}
               >
@@ -1411,9 +1491,9 @@ export function BookReader({ book }: BookReaderProps) {
               </select>
             </label>
           </div>
-          {(audioError || (!hasChapterAudio && (!speechSupported || speechError))) && (
+          {(!speechSupported || speechError || isPodcastActive) && (
             <p className="narration-status">
-              {audioError ?? speechError ?? "此瀏覽器不支援朗讀"}
+              {isPodcastActive ? "Podcast 播放中；停止 Podcast 後可使用原本朗讀。" : speechError ?? "此瀏覽器不支援朗讀"}
             </p>
           )}
         </section>
@@ -1471,7 +1551,7 @@ export function BookReader({ book }: BookReaderProps) {
             <h3>總量</h3>
             <p>
               {stats.chapters} 章 / {stats.paragraphs} 段 / 約 {stats.minutes} 分鐘
-              {stats.audioChapters > 0 ? ` / 音檔 ${stats.audioChapters} 章` : ""}
+              {stats.audioChapters > 0 ? ` / Podcast ${stats.audioChapters} 章` : ""}
             </p>
           </section>
           <section>
