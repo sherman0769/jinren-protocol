@@ -56,9 +56,12 @@ NotebookLM chapter audio workflow:
 - Before generation, use the `自訂語音摘要` prompt and put a first-line marker such as `章節標誌：01_Chapter Title`, so the prompt/source view beside the generated audio can be used as a second verification mark.
 - After generation, rename the NotebookLM audio card to the chapter filename stem, for example `01_Chapter Title`, and verify `查看提示詞和來源` contains the matching marker/source.
 - Unless the user explicitly excludes ebook audio, download every completed chapter audio file and store it under `public/books/<slug>/audio/` with a two-digit chapter-number prefix matching the TXT/audio title, for example `01_Chapter Title.mp3`.
+- When testing a new ebook audio loop or when the user asks to "試一下新增環節", do a one-chapter smoke test before batch download: download one completed NotebookLM audio card, identify the actual container/codec with `ffprobe`, save it under `public/books/<slug>/audio/` with the final chapter title stem, run `node scripts/link-book-audio.mjs --slug <slug> --allow-partial --dry-run`, then run the actual partial link only after the dry-run maps the intended chapter.
+- NotebookLM downloads may initially appear as browser `.tmp` files even when they are playable MP4/M4A audio. Verify with `ffprobe`; if the stream is AAC in an MP4/DASH container, store it as `.m4a`.
 - After audio files are stored, run `npm run link:book-audio -- <slug>` to write chapter `audio.src` entries into `src/content/books.json`; use `node scripts/link-book-audio.mjs --slug <slug> --dry-run` for named-flag dry runs. Do not use `--allow-partial` for a finished book unless the user explicitly accepts a partial audio release.
+- During audio download/link work, extend `notebooklm-audio-ledger.json` with a `downloadValidation` section that records status (`partial` or `complete`), asset folder, expected chapter count, downloaded/linked count, missing chapter numbers, audio filename/path, app `audio.src`, duration, codec/container, and whether the chapter is linked in `books.json`.
 - For faster batch work, queue multiple chapter audio generations in the same notebook after each one has been individually selected and marked. Do not infer chapter identity from completion order.
-- Final NotebookLM validation must confirm completed audio count equals chapter count, no `正在生成語音摘要` remains, every `NN_Chapter Title` audio card title exists, every completed card has a matching prompt marker/source check in the ledger, downloaded audio count equals chapter count, `books.json` has one `audio.src` per chapter, and NotebookLM source count equals TXT chapter count.
+- Final NotebookLM validation must confirm completed audio count equals chapter count, no `正在生成語音摘要` remains, every `NN_Chapter Title` audio card title exists, every completed card has a matching prompt marker/source check in the ledger, downloaded audio count equals chapter count, `books.json` has one `audio.src` per chapter, the reader UI exposes a separate NotebookLM Podcast play/download entry, production audio URLs return HTTP 200 with a valid audio content type, and NotebookLM source count equals TXT chapter count.
 
 Default metadata rules for new manuscripts:
 
@@ -122,6 +125,7 @@ Narration rules:
 
 - Reader narration should continue across chapter boundaries by default once the user starts playback, stopping only at the end of the book or when the user manually stops it.
 - NotebookLM chapter audio should be presented as a separate chapter Podcast experience, not as a silent replacement for the reader's original browser-native narration. When both exist, keep the original narration controls available and show a distinct NotebookLM Podcast panel or equivalent chapter-level link/play/download entry.
+- After adding or changing Podcast UI, run a mobile viewport browser check or Playwright screenshot and verify Podcast controls, chapter controls, and narration controls do not overlap. If a fixed mobile control bar covers Podcast content, prefer an in-flow mobile layout for the affected controls.
 - For browser-native `speechSynthesis`, background / lock-screen support is best-effort only: use Media Session metadata/actions and Screen Wake Lock when available, but do not claim guaranteed lock-screen playback unless narration is backed by real audio files or an audio streaming TTS pipeline.
 
 Reading progress rules:
