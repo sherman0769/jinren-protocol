@@ -178,6 +178,28 @@ export function BookReader({ book }: BookReaderProps) {
         : "播放 Podcast";
   const hasPreviousPodcast = Boolean(book.chapters[chapterIndex - 1]?.audio?.src);
   const hasNextPodcast = Boolean(book.chapters[chapterIndex + 1]?.audio?.src);
+  const nextPodcastChapter = hasNextPodcast ? book.chapters[chapterIndex + 1] : null;
+  const podcastStateLabel =
+    isCurrentPodcastActive && isNarrating && !isNarrationPaused
+      ? "播放中"
+      : isCurrentPodcastActive && isNarrationPaused
+        ? "已暫停"
+        : hasChapterAudio
+          ? "可播放"
+          : "待匯入";
+  const podcastNextLabel = !hasChapterAudio
+    ? "本章尚無音檔"
+    : autoAdvancePodcast
+      ? nextPodcastChapter
+        ? `下一章：${nextPodcastChapter.title}`
+        : "本書最後一章"
+      : "單章播放";
+  const podcastDurationLabel =
+    audioProgress.duration > 0
+      ? formatAudioTime(audioProgress.duration)
+      : chapterAudio?.durationSeconds
+        ? formatAudioTime(chapterAudio.durationSeconds)
+        : "待載入";
 
   const scrollToParagraph = useCallback((chapterId: string, index: number) => {
     window.requestAnimationFrame(() => {
@@ -1368,13 +1390,21 @@ export function BookReader({ book }: BookReaderProps) {
           </p>
         )}
 
-        <section className="podcast-panel" aria-label="NotebookLM Podcast">
+        <section
+          className={`podcast-panel ${isCurrentPodcastActive ? "podcast-panel--active" : ""}`}
+          aria-label="NotebookLM Podcast"
+        >
           <div className="podcast-primary">
             <Headphones aria-hidden="true" size={22} />
             <div>
               <span>NotebookLM Podcast</span>
-              <strong>{podcastDetail}</strong>
+              <strong>{podcastTitle}</strong>
+              <small>{podcastDetail}</small>
             </div>
+          </div>
+          <div className="podcast-live-status" aria-label="Podcast 狀態">
+            <span>{podcastStateLabel}</span>
+            <strong>{podcastProgress}%</strong>
           </div>
           <div className="podcast-meta">
             <span>{stats.audioChapters}/{book.chapters.length} 章已匯入</span>
@@ -1384,6 +1414,18 @@ export function BookReader({ book }: BookReaderProps) {
           </div>
           <div aria-hidden="true" className="podcast-progress-track">
             <span style={{ width: `${podcastProgress}%` }} />
+          </div>
+          <div className="podcast-episode-strip">
+            <span>
+              速度 <strong>{podcastRate}x</strong>
+            </span>
+            <span>
+              時長 <strong>{podcastDurationLabel}</strong>
+            </span>
+            <span>
+              連播 <strong>{autoAdvancePodcast ? "開" : "關"}</strong>
+            </span>
+            <span className="podcast-next-chip">{podcastNextLabel}</span>
           </div>
           <div className="podcast-controls">
             <button

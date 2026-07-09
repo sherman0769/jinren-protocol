@@ -121,6 +121,7 @@ Visual quality rules:
 - Book covers and major share images must be treated as high-quality designed assets, not simple placeholders.
 - For new book covers, use AI image generation in the conversation first, then save and reuse the selected image under the appropriate `public/books/<slug>/` asset folder.
 - Social sharing images should use a dedicated landscape asset when possible. Prefer `1200x630` for Open Graph / Twitter large-card images, and keep metadata dimensions aligned with the actual file.
+- Once the book count grows beyond a small single-screen catalog, the home/library page should use a bookshelf model instead of one long one-page grid: include shelf navigation, horizontal shelf rows, a compact repeatable book item, and dedicated shelves for continuing, Podcast-ready books, curated categories, and the full archive.
 - Mobile icon-only controls should remain compact and accessible, with `aria-label` and `title`, but may use layered styling, glow, texture, or secondary glyphs when the user asks for a more artistic look.
 - After visual changes, verify the relevant mobile viewport with a browser check or Playwright screenshot when the app can run locally.
 
@@ -129,6 +130,7 @@ Narration rules:
 - Reader narration should continue across chapter boundaries by default once the user starts playback, stopping only at the end of the book or when the user manually stops it.
 - NotebookLM chapter audio should be presented as a separate chapter Podcast experience, not as a silent replacement for the reader's original browser-native narration. When both exist, keep the original narration controls available and show a distinct NotebookLM Podcast panel or equivalent chapter-level link/play/download entry.
 - NotebookLM Podcast is the primary listening experience when chapter audio exists. Its controls should be visually prioritized over browser-native narration, support at least `2x` playback speed, and default to continuous playback into the next chapter until the book ends or the user disables auto-advance/stops playback.
+- Podcast UI must expose the listening context directly in the player surface: current episode/title, play state, progress, duration when known, current speed, auto-next state, next chapter context, and a download entry when an audio asset exists.
 - After adding or changing Podcast UI, run a mobile viewport browser check or Playwright screenshot and verify Podcast controls, chapter controls, and narration controls do not overlap. If a fixed mobile control bar covers Podcast content, prefer an in-flow mobile layout for the affected controls.
 - For browser-native `speechSynthesis`, background / lock-screen support is best-effort only: use Media Session metadata/actions and Screen Wake Lock when available, but do not claim guaranteed lock-screen playback unless narration is backed by real audio files or an audio streaming TTS pipeline.
 
