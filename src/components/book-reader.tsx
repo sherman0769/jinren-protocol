@@ -60,12 +60,19 @@ type SavedReaderProgress = {
   speechRate?: number;
   podcastRate?: number;
   autoAdvancePodcast?: boolean;
+  podcastChapterIndex?: number;
+  podcastCurrentTime?: number;
+  podcastDuration?: number;
   updatedAt?: number;
 };
 
 type AudioProgress = {
   currentTime: number;
   duration: number;
+};
+
+type SavedPodcastPosition = AudioProgress & {
+  chapterIndex: number | null;
 };
 
 const progressKeyPrefix = "book-reader-progress";
@@ -107,6 +114,11 @@ export function BookReader({ book }: BookReaderProps) {
     currentTime: 0,
     duration: 0,
   });
+  const [savedPodcastPosition, setSavedPodcastPosition] = useState<SavedPodcastPosition>({
+    chapterIndex: null,
+    currentTime: 0,
+    duration: 0,
+  });
   const [speechError, setSpeechError] = useState<string | null>(null);
   const [audioError, setAudioError] = useState<string | null>(null);
   const [bookmarkNotice, setBookmarkNotice] = useState<string | null>(null);
@@ -121,6 +133,13 @@ export function BookReader({ book }: BookReaderProps) {
   const speechRateRef = useRef(1);
   const podcastRateRef = useRef(1);
   const autoAdvancePodcastRef = useRef(true);
+  const podcastPositionRef = useRef<SavedPodcastPosition>({
+    chapterIndex: null,
+    currentTime: 0,
+    duration: 0,
+  });
+  const audioPlaybackRequestRef = useRef(0);
+  const lastPodcastPersistAtRef = useRef(0);
   const speechRunRef = useRef(0);
   const wakeLockRef = useRef<WakeLockSentinelLike | null>(null);
   const wakeLockReleaseHandlerRef = useRef<(() => void) | null>(null);
@@ -156,7 +175,33 @@ export function BookReader({ book }: BookReaderProps) {
     activeParagraphIndex === null
       ? 0
       : Math.round(((activeParagraphIndex + 1) / chapter.paragraphs.length) * 100);
-  const podcastProgress = isCurrentPodcastActive ? audioProgressPercent : 0;
+  const savedPodcastIsCurrent = savedPodcastPosition.chapterIndex === chapterIndex;
+  const podcastSeekDuration = isCurrentPodcastActive && audioProgress.duration > 0
+    ? audioProgress.duration
+    : savedPodcastIsCurrent && savedPodcastPosition.duration > 0
+      ? savedPodcastPosition.duration
+      : chapterAudio?.durationSeconds ?? 0;
+  const podcastSeekTime = isCurrentPodcastActive
+    ? audioProgress.currentTime
+    : savedPodcastIsCurrent
+      ? savedPodcastPosition.currentTime
+      : 0;
+  const podcastProgress = podcastSeekDuration > 0
+    ? Math.min(100, Math.round((podcastSeekTime / podcastSeekDuration) * 100))
+    : isCurrentPodcastActive
+      ? audioProgressPercent
+      : 0;
+  const savedPodcastChapter = savedPodcastPosition.chapterIndex === null
+    ? null
+    : book.chapters[savedPodcastPosition.chapterIndex] ?? null;
+  const hasResumablePodcast = Boolean(
+    savedPodcastChapter?.audio?.src &&
+    savedPodcastPosition.currentTime >= 1 &&
+    (
+      savedPodcastPosition.duration <= 0 ||
+      savedPodcastPosition.currentTime < savedPodcastPosition.duration - 2
+    ),
+  );
   const speechControlsDisabled = !speechSupported || isPodcastActive;
   const playbackModeLabel = "朗讀";
   const playbackDetail = activeParagraphIndex === null
@@ -164,8 +209,8 @@ export function BookReader({ book }: BookReaderProps) {
       : `第 ${activeParagraphIndex + 1} / ${chapter.paragraphs.length} 段`;
   const podcastTitle = chapterAudio?.title ?? `第 ${chapter.number} 章 Podcast`;
   const podcastDetail =
-    hasChapterAudio && isCurrentPodcastActive && audioProgress.duration > 0
-      ? `${formatAudioTime(audioProgress.currentTime)} / ${formatAudioTime(audioProgress.duration)}`
+    hasChapterAudio && podcastSeekDuration > 0
+      ? `${formatAudioTime(podcastSeekTime)} / ${formatAudioTime(podcastSeekDuration)}`
       : hasChapterAudio
         ? podcastTitle
         : "本章尚未匯入 NotebookLM Podcast";
@@ -175,7 +220,9 @@ export function BookReader({ book }: BookReaderProps) {
       ? "暫停 Podcast"
       : isCurrentPodcastActive && isNarrationPaused
         ? "繼續 Podcast"
-        : "播放 Podcast";
+        : savedPodcastIsCurrent && hasResumablePodcast
+          ? "從上次位置繼續 Podcast"
+          : "播放 Podcast";
   const hasPreviousPodcast = Boolean(book.chapters[chapterIndex - 1]?.audio?.src);
   const hasNextPodcast = Boolean(book.chapters[chapterIndex + 1]?.audio?.src);
   const nextPodcastChapter = hasNextPodcast ? book.chapters[chapterIndex + 1] : null;
@@ -184,6 +231,8 @@ export function BookReader({ book }: BookReaderProps) {
       ? "播放中"
       : isCurrentPodcastActive && isNarrationPaused
         ? "已暫停"
+        : savedPodcastIsCurrent && hasResumablePodcast
+          ? "可續播"
         : hasChapterAudio
           ? "可播放"
           : "待匯入";
@@ -195,8 +244,8 @@ export function BookReader({ book }: BookReaderProps) {
         : "本書最後一章"
       : "單章播放";
   const podcastDurationLabel =
-    audioProgress.duration > 0
-      ? formatAudioTime(audioProgress.duration)
+    podcastSeekDuration > 0
+      ? formatAudioTime(podcastSeekDuration)
       : chapterAudio?.durationSeconds
         ? formatAudioTime(chapterAudio.durationSeconds)
         : "待載入";
@@ -273,6 +322,41 @@ export function BookReader({ book }: BookReaderProps) {
     }
   }, [updateReadingPosition]);
 
+  const updatePodcastPosition = useCallback((
+    nextChapterIndex: number,
+    nextCurrentTime: number,
+    nextDuration: number,
+  ) => {
+    const duration = Number.isFinite(nextDuration) && nextDuration > 0 ? nextDuration : 0;
+    const currentTime = Math.max(
+      0,
+      Math.min(
+        Number.isFinite(nextCurrentTime) ? nextCurrentTime : 0,
+        duration > 0 ? duration : Number.MAX_SAFE_INTEGER,
+      ),
+    );
+    const nextPosition: SavedPodcastPosition = {
+      chapterIndex: nextChapterIndex,
+      currentTime,
+      duration,
+    };
+
+    podcastPositionRef.current = nextPosition;
+    setSavedPodcastPosition(nextPosition);
+    return nextPosition;
+  }, []);
+
+  const capturePodcastPosition = useCallback(() => {
+    const audio = audioElementRef.current;
+    const activeChapterIndex = activeAudioChapterRef.current;
+    if (!audio || activeChapterIndex === null) return podcastPositionRef.current;
+
+    const duration = Number.isFinite(audio.duration)
+      ? audio.duration
+      : podcastPositionRef.current.duration;
+    return updatePodcastPosition(activeChapterIndex, audio.currentTime, duration);
+  }, [updatePodcastPosition]);
+
   const persistProgress = useCallback((overrides: Partial<SavedReaderProgress> = {}) => {
     if (!progressLoadedRef.current) return;
 
@@ -290,11 +374,12 @@ export function BookReader({ book }: BookReaderProps) {
     );
     const paragraphId = overrides.paragraphId ?? getParagraphId(nextChapter.id, paragraphIndex);
     const scrollOffset = Math.max(0, Math.round(overrides.scrollOffset ?? currentPosition.scrollOffset ?? 0));
+    const podcastPosition = podcastPositionRef.current;
 
     window.localStorage.setItem(
       progressKey,
       JSON.stringify({
-        version: 2,
+        version: 3,
         chapterIndex: nextChapterIndex,
         paragraphIndex,
         paragraphId,
@@ -303,6 +388,9 @@ export function BookReader({ book }: BookReaderProps) {
         speechRate,
         podcastRate,
         autoAdvancePodcast,
+        podcastChapterIndex: podcastPosition.chapterIndex,
+        podcastCurrentTime: podcastPosition.currentTime,
+        podcastDuration: podcastPosition.duration,
         updatedAt: Date.now(),
       }),
     );
@@ -375,9 +463,14 @@ export function BookReader({ book }: BookReaderProps) {
   const stopNarration = useCallback(() => {
     manuallyStoppedRef.current = true;
     speechRunRef.current += 1;
+    audioPlaybackRequestRef.current += 1;
     releaseNarrationWakeLock();
 
     const audio = audioElementRef.current;
+    if (activeAudioChapterRef.current !== null) {
+      capturePodcastPosition();
+      persistProgress();
+    }
     if (audio) {
       audio.pause();
       audio.removeAttribute("src");
@@ -400,9 +493,9 @@ export function BookReader({ book }: BookReaderProps) {
     activeParagraphRef.current = null;
     activeAudioChapterRef.current = null;
     setMediaSessionState("none");
-  }, [releaseNarrationWakeLock, setMediaSessionState]);
+  }, [capturePodcastPosition, persistProgress, releaseNarrationWakeLock, setMediaSessionState]);
 
-  const playChapterAudio = useCallback((nextChapterIndex: number) => {
+  const playChapterAudio = useCallback((nextChapterIndex: number, requestedTime?: number) => {
     const nextChapter = book.chapters[nextChapterIndex];
     const audioSrc = nextChapter?.audio?.src;
     const audio = audioElementRef.current;
@@ -417,6 +510,24 @@ export function BookReader({ book }: BookReaderProps) {
       return;
     }
 
+    const previousPosition = podcastPositionRef.current;
+    const canResumePrevious =
+      previousPosition.chapterIndex === nextChapterIndex &&
+      previousPosition.currentTime >= 1 &&
+      (
+        previousPosition.duration <= 0 ||
+        previousPosition.currentTime < previousPosition.duration - 2
+      );
+    const startTime = typeof requestedTime === "number" && Number.isFinite(requestedTime)
+      ? Math.max(0, requestedTime)
+      : canResumePrevious
+        ? previousPosition.currentTime
+        : 0;
+    const knownDuration = previousPosition.chapterIndex === nextChapterIndex && previousPosition.duration > 0
+      ? previousPosition.duration
+      : nextChapter.audio?.durationSeconds ?? 0;
+    const requestId = audioPlaybackRequestRef.current + 1;
+    audioPlaybackRequestRef.current = requestId;
     manuallyStoppedRef.current = false;
     speechRunRef.current += 1;
     if ("speechSynthesis" in window) {
@@ -427,6 +538,7 @@ export function BookReader({ book }: BookReaderProps) {
     audio.pause();
     audio.src = audioSrc;
     audio.playbackRate = podcastRateRef.current;
+    audio.load();
 
     chapterIndexRef.current = nextChapterIndex;
     paragraphIndexRef.current = 0;
@@ -436,7 +548,8 @@ export function BookReader({ book }: BookReaderProps) {
     setChapterIndex(nextChapterIndex);
     setActiveParagraphIndex(null);
     setActiveAudioChapterIndex(nextChapterIndex);
-    setAudioProgress({ currentTime: 0, duration: 0 });
+    updatePodcastPosition(nextChapterIndex, startTime, knownDuration);
+    setAudioProgress({ currentTime: startTime, duration: knownDuration });
     setAudioError(null);
     setSpeechError(null);
     setIsNarrating(true);
@@ -452,15 +565,33 @@ export function BookReader({ book }: BookReaderProps) {
       scrollOffset: 0,
     });
 
-    audio.play().catch(() => {
-      releaseNarrationWakeLock();
-      setAudioError("音檔無法播放，請確認檔案已放在 public 資料夾並可被瀏覽器讀取");
-      setIsNarrating(false);
-      setIsNarrationPaused(false);
-      setActiveAudioChapterIndex(null);
-      activeAudioChapterRef.current = null;
-      setMediaSessionState("none");
-    });
+    const startPlayback = () => {
+      if (audioPlaybackRequestRef.current !== requestId) return;
+
+      const duration = Number.isFinite(audio.duration) ? audio.duration : knownDuration;
+      const maxSeekTime = duration > 0 ? Math.max(0, duration - 0.25) : startTime;
+      const seekTime = Math.min(startTime, maxSeekTime);
+      if (seekTime > 0) audio.currentTime = seekTime;
+      updatePodcastPosition(nextChapterIndex, seekTime, duration);
+      setAudioProgress({ currentTime: seekTime, duration });
+      persistProgress();
+
+      audio.play().catch(() => {
+        releaseNarrationWakeLock();
+        setAudioError("音檔無法播放，請確認檔案已放在 public 資料夾並可被瀏覽器讀取");
+        setIsNarrating(false);
+        setIsNarrationPaused(false);
+        setActiveAudioChapterIndex(null);
+        activeAudioChapterRef.current = null;
+        setMediaSessionState("none");
+      });
+    };
+
+    if (audio.readyState >= HTMLMediaElement.HAVE_METADATA) {
+      startPlayback();
+    } else {
+      audio.addEventListener("loadedmetadata", startPlayback, { once: true });
+    }
   }, [
     book.chapters,
     persistProgress,
@@ -468,6 +599,7 @@ export function BookReader({ book }: BookReaderProps) {
     requestNarrationWakeLock,
     scrollToPodcastPanel,
     setMediaSessionState,
+    updatePodcastPosition,
     updateReadingPosition,
     updateMediaSessionMetadata,
   ]);
@@ -486,6 +618,7 @@ export function BookReader({ book }: BookReaderProps) {
     manuallyStoppedRef.current = false;
     const speechRun = speechRunRef.current + 1;
     speechRunRef.current = speechRun;
+    audioPlaybackRequestRef.current += 1;
     speechRateRef.current = nextRate;
     const audio = audioElementRef.current;
     if (audio) {
@@ -733,8 +866,45 @@ export function BookReader({ book }: BookReaderProps) {
     }
 
     audio.pause();
+    capturePodcastPosition();
+    persistProgress();
     setIsNarrationPaused(true);
     setMediaSessionState("paused");
+  }
+
+  const seekPodcast = useCallback((nextTime: number) => {
+    const targetChapterIndex = activeAudioChapterRef.current ?? chapterIndexRef.current;
+    const targetChapter = book.chapters[targetChapterIndex];
+    if (!targetChapter?.audio?.src) return;
+
+    const audio = audioElementRef.current;
+    const savedPosition = podcastPositionRef.current;
+    const activeDuration =
+      activeAudioChapterRef.current === targetChapterIndex && audio && Number.isFinite(audio.duration)
+        ? audio.duration
+        : 0;
+    const duration = activeDuration > 0
+      ? activeDuration
+      : savedPosition.chapterIndex === targetChapterIndex && savedPosition.duration > 0
+        ? savedPosition.duration
+        : targetChapter.audio.durationSeconds ?? 0;
+    if (duration <= 0) return;
+
+    const clampedTime = Math.min(Math.max(nextTime, 0), Math.max(0, duration - 0.25));
+    if (activeAudioChapterRef.current === targetChapterIndex && audio) {
+      audio.currentTime = clampedTime;
+      setAudioProgress({ currentTime: clampedTime, duration });
+    }
+    updatePodcastPosition(targetChapterIndex, clampedTime, duration);
+    lastPodcastPersistAtRef.current = Date.now();
+    persistProgress();
+    setAudioError(null);
+  }, [book.chapters, persistProgress, updatePodcastPosition]);
+
+  function resumeSavedPodcast() {
+    const savedPosition = podcastPositionRef.current;
+    if (savedPosition.chapterIndex === null || !hasResumablePodcast) return;
+    playChapterAudio(savedPosition.chapterIndex, savedPosition.currentTime);
   }
 
   function changeRate(nextRate: number) {
@@ -918,9 +1088,37 @@ export function BookReader({ book }: BookReaderProps) {
         typeof parsed.scrollOffset === "number" && Number.isFinite(parsed.scrollOffset)
           ? Math.max(0, Math.round(parsed.scrollOffset))
           : 0;
+      const savedPodcastChapterIndex =
+        Number.isInteger(parsed.podcastChapterIndex) &&
+        book.chapters[parsed.podcastChapterIndex ?? -1]?.audio?.src
+          ? parsed.podcastChapterIndex ?? null
+          : null;
+      const savedPodcastDuration =
+        typeof parsed.podcastDuration === "number" &&
+        Number.isFinite(parsed.podcastDuration) &&
+        parsed.podcastDuration > 0
+          ? parsed.podcastDuration
+          : savedPodcastChapterIndex === null
+            ? 0
+            : book.chapters[savedPodcastChapterIndex]?.audio?.durationSeconds ?? 0;
+      const savedPodcastCurrentTime =
+        savedPodcastChapterIndex !== null &&
+        typeof parsed.podcastCurrentTime === "number" &&
+        Number.isFinite(parsed.podcastCurrentTime)
+          ? Math.min(
+              Math.max(parsed.podcastCurrentTime, 0),
+              savedPodcastDuration > 0 ? savedPodcastDuration : Number.MAX_SAFE_INTEGER,
+            )
+          : 0;
+      const restoredPodcastPosition: SavedPodcastPosition = {
+        chapterIndex: savedPodcastChapterIndex,
+        currentTime: savedPodcastCurrentTime,
+        duration: savedPodcastDuration,
+      };
 
       chapterIndexRef.current = savedChapterIndex;
       paragraphIndexRef.current = savedParagraphIndex;
+      podcastPositionRef.current = restoredPodcastPosition;
       readingPositionRef.current = {
         chapterIndex: savedChapterIndex,
         paragraphIndex: savedParagraphIndex,
@@ -935,6 +1133,7 @@ export function BookReader({ book }: BookReaderProps) {
       };
       restoreFrame = window.requestAnimationFrame(() => {
         setChapterIndex(savedChapterIndex);
+        setSavedPodcastPosition(restoredPodcastPosition);
 
         if (typeof parsed.fontScale === "number") {
           setFontScale(Math.min(1.18, Math.max(0.92, parsed.fontScale ?? 1)));
@@ -1041,10 +1240,35 @@ export function BookReader({ book }: BookReaderProps) {
     if (!audio) return;
 
     const updateAudioProgress = () => {
-      setAudioProgress({
+      const duration = Number.isFinite(audio.duration) ? audio.duration : 0;
+      const nextProgress = {
         currentTime: audio.currentTime,
-        duration: Number.isFinite(audio.duration) ? audio.duration : 0,
-      });
+        duration,
+      };
+      setAudioProgress(nextProgress);
+
+      const activeChapterIndex = activeAudioChapterRef.current;
+      if (activeChapterIndex !== null) {
+        updatePodcastPosition(activeChapterIndex, nextProgress.currentTime, duration);
+        const now = Date.now();
+        if (now - lastPodcastPersistAtRef.current >= 1000) {
+          lastPodcastPersistAtRef.current = now;
+          persistProgress();
+        }
+      }
+
+      const mediaSession = (navigator as NavigatorWithMediaSession).mediaSession;
+      if (mediaSession?.setPositionState && duration > 0) {
+        try {
+          mediaSession.setPositionState({
+            duration,
+            playbackRate: audio.playbackRate,
+            position: Math.min(audio.currentTime, duration),
+          });
+        } catch {
+          // Position state is optional and may reject transient metadata values.
+        }
+      }
     };
 
     const finishAudioPlayback = (message?: string) => {
@@ -1063,6 +1287,10 @@ export function BookReader({ book }: BookReaderProps) {
       const currentIndex = activeAudioChapterRef.current ?? chapterIndexRef.current;
       const nextChapterIndex = currentIndex + 1;
       const nextChapter = book.chapters[nextChapterIndex];
+      const duration = Number.isFinite(audio.duration) ? audio.duration : 0;
+
+      updatePodcastPosition(currentIndex, 0, duration);
+      persistProgress();
 
       if (autoAdvancePodcastRef.current && nextChapter?.audio?.src) {
         playChapterAudio(nextChapterIndex);
@@ -1083,9 +1311,16 @@ export function BookReader({ book }: BookReaderProps) {
       finishAudioPlayback("音檔載入失敗，請確認 books.json 的 audio.src 與 public 檔案一致");
     };
 
+    const onPause = () => {
+      if (activeAudioChapterRef.current === null) return;
+      capturePodcastPosition();
+      persistProgress();
+    };
+
     audio.addEventListener("loadedmetadata", updateAudioProgress);
     audio.addEventListener("timeupdate", updateAudioProgress);
     audio.addEventListener("durationchange", updateAudioProgress);
+    audio.addEventListener("pause", onPause);
     audio.addEventListener("ended", onEnded);
     audio.addEventListener("error", onError);
 
@@ -1093,14 +1328,18 @@ export function BookReader({ book }: BookReaderProps) {
       audio.removeEventListener("loadedmetadata", updateAudioProgress);
       audio.removeEventListener("timeupdate", updateAudioProgress);
       audio.removeEventListener("durationchange", updateAudioProgress);
+      audio.removeEventListener("pause", onPause);
       audio.removeEventListener("ended", onEnded);
       audio.removeEventListener("error", onError);
     };
   }, [
     book.chapters,
+    capturePodcastPosition,
+    persistProgress,
     playChapterAudio,
     releaseNarrationWakeLock,
     setMediaSessionState,
+    updatePodcastPosition,
   ]);
 
   useEffect(() => {
@@ -1144,6 +1383,10 @@ export function BookReader({ book }: BookReaderProps) {
 
   useEffect(() => {
     const onKeyDown = (event: KeyboardEvent) => {
+      const target = event.target;
+      if (target instanceof HTMLElement && target.closest("button, a, input, select, textarea")) {
+        return;
+      }
       if (event.key === "ArrowRight" || event.key === "ArrowDown") goNext();
       if (event.key === "ArrowLeft" || event.key === "ArrowUp") goPrevious();
     };
@@ -1155,6 +1398,7 @@ export function BookReader({ book }: BookReaderProps) {
   useEffect(() => {
     const captureAndSave = () => {
       captureReadingPosition();
+      capturePodcastPosition();
       persistProgress();
     };
 
@@ -1188,7 +1432,7 @@ export function BookReader({ book }: BookReaderProps) {
         progressSaveTimerRef.current = null;
       }
     };
-  }, [captureReadingPosition, persistProgress, scheduleProgressSave]);
+  }, [capturePodcastPosition, captureReadingPosition, persistProgress, scheduleProgressSave]);
 
   useEffect(() => {
     const mediaSession = (navigator as NavigatorWithMediaSession).mediaSession;
@@ -1231,6 +1475,8 @@ export function BookReader({ book }: BookReaderProps) {
     setActionHandler("pause", () => {
       if (activeAudioChapterRef.current !== null) {
         audioElementRef.current?.pause();
+        capturePodcastPosition();
+        persistProgress();
         setIsNarrationPaused(true);
         setMediaSessionState("paused");
         return;
@@ -1245,6 +1491,20 @@ export function BookReader({ book }: BookReaderProps) {
     setActionHandler("stop", stopNarration);
     setActionHandler("previoustrack", () => goToNarrationStep(-1));
     setActionHandler("nexttrack", () => goToNarrationStep(1));
+    setActionHandler("seekbackward", (details) => {
+      const audio = audioElementRef.current;
+      if (activeAudioChapterRef.current === null || !audio) return;
+      seekPodcast(audio.currentTime - (details.seekOffset ?? 10));
+    });
+    setActionHandler("seekforward", (details) => {
+      const audio = audioElementRef.current;
+      if (activeAudioChapterRef.current === null || !audio) return;
+      seekPodcast(audio.currentTime + (details.seekOffset ?? 10));
+    });
+    setActionHandler("seekto", (details) => {
+      if (activeAudioChapterRef.current === null || details.seekTime === undefined) return;
+      seekPodcast(details.seekTime);
+    });
 
     return () => {
       setActionHandler("play", null);
@@ -1252,13 +1512,19 @@ export function BookReader({ book }: BookReaderProps) {
       setActionHandler("stop", null);
       setActionHandler("previoustrack", null);
       setActionHandler("nexttrack", null);
+      setActionHandler("seekbackward", null);
+      setActionHandler("seekforward", null);
+      setActionHandler("seekto", null);
     };
   }, [
     book.chapters,
+    capturePodcastPosition,
     goToNarrationStep,
     isNarrating,
+    persistProgress,
     playChapterAudio,
     requestNarrationWakeLock,
+    seekPodcast,
     setMediaSessionState,
     speakFromParagraph,
     stopNarration,
@@ -1412,9 +1678,38 @@ export function BookReader({ book }: BookReaderProps) {
             <span>{podcastRate}x</span>
             <span>{podcastAutoAdvanceLabel}</span>
           </div>
-          <div aria-hidden="true" className="podcast-progress-track">
-            <span style={{ width: `${podcastProgress}%` }} />
+          <div className="podcast-seek-control">
+            <input
+              aria-label={`Podcast 播放進度：${formatAudioTime(podcastSeekTime)} / ${formatAudioTime(podcastSeekDuration)}`}
+              aria-valuetext={`${formatAudioTime(podcastSeekTime)} / ${formatAudioTime(podcastSeekDuration)}`}
+              className="podcast-progress-slider"
+              disabled={!hasChapterAudio || podcastSeekDuration <= 0}
+              max={podcastSeekDuration > 0 ? podcastSeekDuration : 1}
+              min={0}
+              onChange={(event) => seekPodcast(Number(event.target.value))}
+              step={1}
+              style={{ "--podcast-progress": `${podcastProgress}%` } as CSSProperties}
+              type="range"
+              value={Math.min(podcastSeekTime, podcastSeekDuration > 0 ? podcastSeekDuration : 1)}
+            />
+            <div aria-hidden="true" className="podcast-seek-labels">
+              <span>{formatAudioTime(podcastSeekTime)}</span>
+              <span>拖曳調整進度</span>
+              <span>{formatAudioTime(podcastSeekDuration)}</span>
+            </div>
           </div>
+          {hasResumablePodcast && !isPodcastActive && savedPodcastChapter && (
+            <button
+              className="podcast-resume-button"
+              onClick={resumeSavedPodcast}
+              type="button"
+            >
+              <Play aria-hidden="true" size={16} />
+              <span>
+                繼續上次 Podcast · 第 {savedPodcastChapter.number} 章 · {formatAudioTime(savedPodcastPosition.currentTime)}
+              </span>
+            </button>
+          )}
           <div className="podcast-episode-strip">
             <span>
               速度 <strong>{podcastRate}x</strong>
