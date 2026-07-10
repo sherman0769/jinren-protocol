@@ -60,6 +60,13 @@ function findPackageRoot(inputPath) {
     return { root: resolved, format: "full-manuscript-package" };
   }
 
+  if (
+    fs.existsSync(path.join(resolved, "metadata.json")) &&
+    fs.existsSync(path.join(resolved, "chapters"))
+  ) {
+    return { root: resolved, format: "metadata-chapters-package" };
+  }
+
   const children = fs
     .readdirSync(resolved, { withFileTypes: true })
     .filter((entry) => entry.isDirectory())
@@ -77,7 +84,29 @@ function findPackageRoot(inputPath) {
     return { root: manuscriptPackageRoot, format: "full-manuscript-package" };
   }
 
+  const metadataPackageRoot = children.find(
+    (candidate) =>
+      fs.existsSync(path.join(candidate, "metadata.json")) &&
+      fs.existsSync(path.join(candidate, "chapters")),
+  );
+  if (metadataPackageRoot) {
+    return { root: metadataPackageRoot, format: "metadata-chapters-package" };
+  }
+
   throw new Error(`Could not find supported book package under ${resolved}`);
+}
+
+function parseMetadataPackageOverview(packageRoot) {
+  const metadataPath = path.join(packageRoot, "metadata.json");
+  assertFile(metadataPath, "metadata.json");
+  const metadata = JSON.parse(fs.readFileSync(metadataPath, "utf8"));
+
+  return {
+    title: normalizeWhitespace(metadata.title),
+    subtitle: normalizeWhitespace(metadata.subtitle),
+    author: normalizeWhitespace(metadata.author),
+    description: normalizeWhitespace(metadata.description),
+  };
 }
 
 function normalizeWhitespace(value) {
@@ -225,6 +254,34 @@ function collectFullManuscriptChapterFiles(packageRoot) {
     ...file,
     number: index + 1,
   }));
+}
+
+function collectMetadataPackageChapterFiles(packageRoot) {
+  const chaptersRoot = path.join(packageRoot, "chapters");
+  const chapterFiles = [];
+
+  for (const entry of fs.readdirSync(chaptersRoot, { withFileTypes: true })) {
+    if (!entry.isDirectory()) continue;
+    const chapterDir = path.join(chaptersRoot, entry.name);
+    for (const file of fs.readdirSync(chapterDir, { withFileTypes: true })) {
+      if (!file.isFile()) continue;
+      const match = file.name.match(/^chapter_(\d{2})_main\.md$/i);
+      if (!match) continue;
+      chapterFiles.push({
+        number: Number.parseInt(match[1], 10),
+        path: path.join(chapterDir, file.name),
+        preserveHeadingTitle: false,
+      });
+    }
+  }
+
+  chapterFiles.sort((left, right) => left.number - right.number);
+
+  if (chapterFiles.length === 0) {
+    throw new Error(`No chapter_XX_main.md files found under ${chaptersRoot}`);
+  }
+
+  return chapterFiles;
 }
 
 function isSkippableLine(line) {
@@ -406,10 +463,14 @@ const packageRoot = packageInfo.root;
 const overview =
   packageInfo.format === "full-manuscript-package"
     ? parseFullManuscriptOverview(packageRoot)
+    : packageInfo.format === "metadata-chapters-package"
+      ? parseMetadataPackageOverview(packageRoot)
     : parseOverview(packageRoot);
 const chapters =
   packageInfo.format === "full-manuscript-package"
     ? collectFullManuscriptChapterFiles(packageRoot).map(parseChapter)
+    : packageInfo.format === "metadata-chapters-package"
+      ? collectMetadataPackageChapterFiles(packageRoot).map(parseChapter)
     : collectOverviewChapterFiles(packageRoot).map(parseChapter);
 const slug = args.slug;
 const id = args.id || slug;
@@ -425,7 +486,7 @@ const book = {
   slug,
   title: args.title || overview.title,
   subtitle: args.subtitle || overview.subtitle,
-  author: "李詩民",
+  author: overview.author || "李詩民",
   description: args.description || overview.description,
   status: "published",
   genre,

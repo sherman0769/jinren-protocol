@@ -1,0 +1,543 @@
+GPT-5.6 API：給 AI 架構師與開發者的實戰指南
+
+章首開場：選一個模型，只是架構的第一個欄位
+
+在 ChatGPT 裡使用 GPT-5.6，使用者主要決定任務、資料與推理層級；到了 API，團隊必須自己承擔更多設計責任：模型選擇、Context、工具、狀態、權限、重試、成本、觀察、評估與使用者體驗。
+
+很多 API 專案的第一版只做一件事：把使用者文字送進模型，再把文字回傳。這可以驗證模型能力，卻還不是一個可靠產品。
+
+真正的 AI 架構必須回答：
+
+- 哪一類任務用 Sol、Terra 或 Luna？
+
+- 何時使用 reasoning effort，何時使用 pro mode？
+
+- 哪些資料放入 Prompt，哪些透過檢索取得？
+
+- 哪些工具可直接執行，哪些動作需要核准？
+
+- 長任務如何保存狀態與推理脈絡？
+
+- 如何衡量答案品質、延遲與每個通過成果的成本？
+
+- 模型升級後，怎麼知道系統真的變好？
+
+OpenAI 建議 GPT-5.6 的推理、工具與多輪工作使用 Responses API；gpt-5.6 別名目前路由到 gpt-5.6-sol，另外可明確選擇 Terra 與 Luna。[OAI-05][OAI-06]
+
+API 的價值不是把聊天搬進產品，而是把模型放進一個可治理的工作系統。
+
+一、AI Runtime Stack：一個生產級工作流有哪些層？
+
+我把 GPT-5.6 應用整理成 AI Runtime Stack，由下而上有九層。
+
+1. Model Layer——模型層
+
+Sol、Terra、Luna，以及推理 effort、standard／pro mode。
+
+2. Context Layer——情境層
+
+系統政策、當次任務、使用者資料、檢索結果、歷史狀態與多模態輸入。
+
+3. Tool Layer——工具層
+
+函式、搜尋、檔案、電腦操作、MCP、資料庫與內部服務。
+
+4. State Layer——狀態層
+
+對話、工作階段、中間成果、previous response、任務狀態與可回復點。
+
+5. Orchestration Layer——編排層
+
+路由、分支、重試、平行、子 Agent、核准與例外處理。
+
+6. Artifact Layer——工件層
+
+結構化資料、文件、程式、圖表、網站與可下載檔案。
+
+7. Guardrail Layer——護欄層
+
+資料權限、輸入輸出檢查、工具限制、政策與人類核准。
+
+8. Observability Layer——可觀察層
+
+日誌、Trace、Token、延遲、工具呼叫、錯誤、成本與安全事件。
+
+9. Evaluation Layer——評估層
+
+任務成功、事實正確、格式、證據、使用者結果與回歸測試。
+
+模型只是第一層。產品可靠性來自九層共同工作。
+
+二、模型規格：容量很大，不代表應該全部塞滿
+
+截至 2026 年 7 月 9 日，OpenAI 官方模型頁列出的 GPT-5.6 Sol、Terra、Luna 共同規格包括：
+
+| 模型 | 官方定位 | Context Window | 最大輸出 | 知識截止 ||---|---|---:|---:|---|| GPT-5.6 Sol | 複雜專業工作與旗艦能力 | 1.05M tokens | 128K tokens | 2026-02-16 || GPT-5.6 Terra | 能力與成本平衡 | 1.05M tokens | 128K tokens | 2026-02-16 || GPT-5.6 Luna | 成本敏感、高流量工作 | 1.05M tokens | 128K tokens | 2026-02-16 |
+
+三者支援文字與圖片輸入、文字輸出，以及函式、Web Search、File Search、Computer Use 等工具類型；實際可用性與限制仍應以當時 API 文件為準。[OAI-06]
+
+大 Context Window 很有價值，但它不是「把所有資料一次塞進去」的理由。Context 越大，可能帶來：
+
+- 更高輸入成本。
+
+- 更長延遲。
+
+- 關鍵訊息被稀釋。
+
+- 舊資料與新資料衝突。
+
+- 權限範圍不必要擴大。
+
+- 除錯變得困難。
+
+應該追求的是 Context Sufficiency，情境充分性，不是 Context Maximum。
+
+一個有效 Context 只包含完成當前 Outcome 必要的政策、事實、狀態與工具回傳；能透過檢索或工具按需取得的資料，不必永久放在起始 Prompt。
+
+三、Responses API：把一次回答提升為工作狀態
+
+Responses API 的價值，不只是新的請求格式，而是提供推理、工具、多輪狀態與多種輸出項目的共同表面。[OAI-05]
+
+一個最小 Python 範例可以是：
+
+```pythonfrom openai import OpenAI
+
+client = OpenAI()
+
+response = client.responses.create(model="gpt-5.6-terra",reasoning={"effort": "medium"},input=[{"role": "user","content": ("分析這份課程回饋摘要。輸出三項可執行改進，""每項附證據、影響與下一步。不要猜測缺失資料。"),}],)
+
+print(response.output_text)```
+
+生產環境還要補上：
+
+- 輸入驗證。
+
+- 逾時與重試。
+
+- 使用者與安全識別。
+
+- 結構化輸出。
+
+- 工具權限。
+
+- Token 與成本紀錄。
+
+- 例外與拒絕處理。
+
+- Trace ID。
+
+- 評估與回饋。
+
+API 能呼叫成功，只代表連線完成；工作流能在失敗、變動與高流量下仍維持成果，才算架構完成。
+
+四、Model Router：不要在程式碼每個角落寫死模型名稱
+
+模型路由應集中管理。可以先用三個軸決定：
+
+- Ambiguity：任務是否模糊、需不需要深入理解？
+
+- Impact：錯誤的影響多大？
+
+- Volume：執行量與成本敏感度多高？
+
+一個簡化政策可能是：
+
+```textLuna：分類、抽取、清理、格式轉換、明確規則的高量任務。Terra：一般 Agent 工作、摘要、分析、工具協調與多數生產流程。Sol：複雜架構、深度研究、困難除錯、高影響審查與最終整合。```
+
+但不要把任務名稱永久綁定模型。模型更新後，Terra 可能能以更低成本完成原本必須使用 Sol 的工作。因此，Router 應讀取設定，並能透過 Evals 調整。
+
+Routing Policy 的必要欄位
+
+- 任務類型。
+
+- 主要模型與後備模型。
+
+- reasoning effort。
+
+- standard 或 pro。
+
+- 最大輸入與輸出。
+
+- 工具集合。
+
+- 逾時。
+
+- 成本上限。
+
+- 升級條件。
+
+- 降級條件。
+
+模型路由不是只選「最強或最便宜」，而是管理整體服務品質。
+
+五、Reasoning Effort 與 Pro Mode 是兩個不同旋鈕
+
+GPT-5.6 API 支援 none、low、medium、high、xhigh、max 等 reasoning effort。官方建議用 medium 作為平衡起點，對延遲敏感工作測試 low，只在評估證明有品質提升時使用更高層級，max 留給最困難、品質優先的工作。[OAI-05]
+
+Pro mode 則透過 reasoning.mode: "pro" 啟用，不是另一個模型 slug。它和 effort 獨立；若沒有指定 effort，standard 與 pro 都預設為 medium。Pro 會做更多模型工作，通常增加延遲與計費 Token，適合邊際品質改善具有高價值的困難任務。[OAI-05][OAI-08]
+
+```pythonresponse = client.responses.create(model="gpt-5.6-sol",reasoning={"effort": "high","mode": "pro",},input="審查這份資料庫遷移計畫，找出可能造成資料遺失或長時間中斷的風險。",)```
+
+一個實用的升級階梯
+
+1. Luna／none 或 low：固定分類與批次處理。
+
+2. Terra／low 或 medium：一般工作流。
+
+3. Sol／medium：複雜但常見的專業工作。
+
+4. Sol／high 或 xhigh：高難度、需多步驗證。
+
+5. Sol／max：少量、最困難、品質優先。
+
+6. 選定模型＋pro：評估證明可帶來重要可靠性提升。
+
+不要把最高設定當成品質保險。更高推理可能增加探索、延遲與成本，也可能對簡單任務沒有收益。
+
+六、API 價格：看每百萬 Token，也要看每個通過成果
+
+截至本書版本日，Standard、短 Context 的官方價格如下，單位為每一百萬 Token 美元：[OAI-07]
+
+| 模型 | 輸入 | Cached Input | Cache Write | 輸出 ||---|---:|---:|---:|---:|| Sol | $5.00 | $0.50 | $6.25 | $30.00 || Terra | $2.50 | $0.25 | $3.125 | $15.00 || Luna | $1.00 | $0.10 | $1.25 | $6.00 |
+
+官方價格表另區分長 Context、Batch、Flex、Priority、區域處理與工具費用；價格可能變動，建置前應重新確認。[OAI-07]
+
+最基本的 Token 成本公式是：
+
+```text成本 = 未快取輸入 × 輸入單價+ 快取讀取 × Cached Input 單價+ 快取寫入 × Cache Write 單價+ 輸出與計費推理 Token × 輸出單價+ 工具與其他平台費用```
+
+但真正應監控的是：
+
+Cost per Accepted Outcome，每個通過驗收成果的成本。
+
+若 Luna 一次只花 0.2 元，但有 30% 結果要重做；Terra 一次花 0.5 元，通過率卻高很多，Terra 可能更便宜。模型成本不能離開重試、人工修正與失敗影響來看。
+
+七、Prompt Caching：把穩定前綴變成資產
+
+許多工作流會重複傳送相同內容：系統政策、工具定義、品牌規範、長文件與固定範例。Prompt Caching 可以降低重複讀取成本與延遲。
+
+GPT-5.6 支援隱式快取，也能明確標示可重用前綴。官方說明 cache write 以未快取輸入價格的 1.25 倍計費，cache read 則有大幅折扣，因此需要有足夠重用次數才划算。[OAI-05][OAI-07]
+
+Cache-friendly Prompt 結構
+
+1. 最前面放穩定政策與工具定義。
+
+2. 中間放可重用參考資料。
+
+3. 最後放每次變動的使用者任務與即時資料。
+
+4. 避免在穩定前綴中插入時間戳或隨機值。
+
+5. 追蹤 cache write 與 cached tokens，而不是假設快取一定命中。
+
+Cache Debt
+
+若系統頻繁改動巨大前綴、每次都寫入但很少重用，就會形成 Cache Debt：以為在最佳化，實際增加成本。
+
+快取策略應透過真實流量量測，不是只看 API 有沒有提供功能。
+
+八、Persisted Reasoning：保存的是工作脈絡，不是要求公開思考過程
+
+GPT-5.6 可以在多輪工作中重用可用的 reasoning items，以提升連續任務品質與快取效率。官方提供 reasoning.context 控制，如 auto、all_turns 或 current_turn，並可搭配 previous_response_id 延續。[OAI-05]
+
+適合 all_turns 的情境
+
+- 長期目標、假設與優先順序保持穩定。
+
+- 多輪除錯同一專案。
+
+- 逐步完成同一份研究或工件。
+
+- 需要延續先前選擇與排除理由。
+
+適合 current_turn 的情境
+
+- 使用者已更改目標。
+
+- 前一輪推理建立在錯誤資料上。
+
+- 新任務只需要最後結論，不需要舊脈絡。
+
+- 為隱私、成本或清晰度刻意切斷狀態。
+
+Persisted Reasoning 不是把所有歷史永遠保存。狀態要有生命週期：建立、使用、壓縮、失效與刪除。
+
+九、Programmatic Tool Calling：讓程式處理中間資料，模型處理判斷
+
+GPT-5.6 的 Programmatic Tool Calling（PTC）讓模型在受管 Runtime 中撰寫 JavaScript，呼叫允許的工具、傳遞結果並處理中間輸出。[OAI-05]
+
+它特別適合：
+
+- 過濾大量工具結果。
+
+- Join 多個資料來源。
+
+- 排序、去重與聚合。
+
+- 對結構化資料做驗證。
+
+- 中間資料很大，最終只需要小型摘要。
+
+例如要查詢一百筆活動，篩出桃園、週末、尚有名額且適合初學者的項目。若每筆結果都回到模型再判斷，Context 很大；PTC 可以在程式裡先篩選，再把少量候選交給模型做語意選擇。
+
+但官方也提醒，不是多次工具呼叫就一定要 PTC。若每次結果會改變下一步判斷、需要核准、必須保留原生引用或只有一兩次小型呼叫，直接 tool calling 更合適。[OAI-05]
+
+我把分工原則整理成一句話：
+
+可預測的資料處理交給程式，需要新判斷的轉折交給模型。
+
+十、工具契約：模型可靠性有一半來自工具設計
+
+一個工具的名稱若叫 manage_everything，參數是一大段自由文字，回傳又是沒有結構的訊息，模型再強也很難穩定使用。
+
+好的工具契約包含：
+
+- 動詞清楚，例如 search_courses、create_draft_report。
+
+- 讀取與寫入分開。
+
+- 參數型別、必填、範圍與 enum 明確。
+
+- 回傳有穩定 Schema。
+
+- 錯誤區分可重試、不可重試與需核准。
+
+- 支援冪等鍵，避免重複寫入。
+
+- 敏感動作要求確認 Token 或 Approval ID。
+
+- 回傳足夠證據，但不洩露祕密。
+
+Tool Result Envelope
+
+可以統一回傳：
+
+```json{"ok": true,"data": {},"evidence": [],"warnings": [],"retryable": false,"next_actions": []}```
+
+共同 Envelope 讓 Orchestrator 更容易處理成功、警告與失敗。
+
+十一、Structured Outputs：不要讓下一個程式猜一段散文
+
+若模型輸出還要交給程式、資料庫或另一個 Agent，應優先使用結構化輸出與 JSON Schema，而不是用正規表示式從自然語言裡猜欄位。
+
+一個風險審查結果可以定義：
+
+- risk_id
+
+- title
+
+- severity
+
+- evidence
+
+- impact
+
+- likelihood
+
+- mitigation
+
+- needs_human_review
+
+結構化輸出不是為了限制模型表達，而是建立系統介面。面向人類的最終報告仍可由下一步轉成白話。
+
+十二、長 Context 的正確設計：分層、檢索、壓縮、版本化
+
+面對十萬、五十萬甚至更多 Token 的資料，架構不應只有「放得下」。可以用四層方法。
+
+Layer 1：Canonical Sources
+
+保留原始、權威、版本化來源，不直接任意改寫。
+
+Layer 2：Index & Retrieval
+
+依任務搜尋相關片段，保留來源與位置。
+
+Layer 3：Task Context Pack
+
+將當次必要材料整理成小型 Context Pack，包含目的、關鍵事實、限制、衝突與缺口。
+
+Layer 4：Working Memory
+
+只保留本輪中間決策、工具結果與尚未解決事項。
+
+任務結束後，把值得長期保留的結果寫回知識庫或 Loop Ledger，不把整段對話當成永久記憶。
+
+十三、Observability：沒有 Trace，就只能對著最終答案猜
+
+AI 工作流出錯時，可能來自：
+
+- 路由到錯模型。
+
+- Context 檢索錯誤。
+
+- Prompt 版本不一致。
+
+- 工具回傳錯誤。
+
+- Agent 重試過多。
+
+- 解析失敗。
+
+- 模型拒絕或安全檢查介入。
+
+- 外部服務逾時。
+
+- 驗收規則本身有缺陷。
+
+至少要記錄：
+
+- Request／Trace ID。
+
+- 使用者與任務類型的隱私保護識別。
+
+- 模型、effort、mode 與版本。
+
+- Prompt／policy 版本。
+
+- Token、cache、延遲與成本。
+
+- 工具名稱、參數摘要、狀態與耗時。
+
+- 子 Agent 圖與結果。
+
+- 結構化錯誤。
+
+- 評估分數與人工覆核。
+
+觀察資料也要遵守隱私最小化，不能為了除錯就無限制保存原始敏感輸入。
+
+十四、Evals：升級模型不是改一個字串
+
+OpenAI 的遷移指南明確建議把模型升級視為調校與評估，而不是只換 slug；應在代表性任務上比較成功率、完整性、證據、Token、延遲與成本。[OAI-05]
+
+一套基本 Eval Set 可以包含：
+
+- 正常案例。
+
+- 邊界案例。
+
+- 缺資料案例。
+
+- 來源衝突案例。
+
+- 工具失敗案例。
+
+- 需要拒絕或核准案例。
+
+- 不同語言與格式。
+
+- 過去真實失敗案例。
+
+評估不只打「好或不好」，要與 Outcome Contract 連結：是否完成指定工件、是否保留必要證據、是否遵守權限、是否能在錯誤時停止。
+
+Champion / Challenger
+
+讓目前生產設定作 Champion，新模型或新提示作 Challenger。先離線比較，再小流量影子測試或分流；只有在主要指標與風險都達標時替換。
+
+十五、一個可落地的 GPT-5.6 工作流骨架
+
+以下是架構順序，不代表所有專案都需要全部元件。
+
+```text1. 驗證請求與使用者權限2. 分類任務與風險3. 建立最小 Context Pack4. 依 Routing Policy 選模型、effort、mode5. 只提供必要工具6. 執行模型與工具循環7. 對外部寫入進行核准8. 產生結構化結果與工件9. 執行規則、模型與程式驗收10. 失敗時重試、降級或升級給人11. 記錄 Trace、成本與評估12. 將可重用成果寫回 Loop Ledger```
+
+這十二步的核心不是複雜，而是讓每一個責任有位置。
+
+十六、實際情境：企業內訓內容生產 Runtime
+
+假設企業每月要根據最新政策與內部案例更新 AI 課程。
+
+Router
+
+- Luna：文件分類、欄位抽取、格式清理。
+
+- Terra：課程摘要、練習生成與一般工件編排。
+
+- Sol：衝突分析、核心教案、風險審查與最終整合。
+
+Context
+
+- 官方政策與最新文件。
+
+- 企業內部規範。
+
+- 上月教材與學員回饋。
+
+- 本月受眾、時數與目標。
+
+Tools
+
+- 文件搜尋。
+
+- 內部知識庫。
+
+- 投影片與文件產生器。
+
+- 渲染與檢查腳本。
+
+Guardrails
+
+- 個資去識別。
+
+- 未公開政策不得進入外部模型或公開工件。
+
+- 正式發布前由內容 Owner 核准。
+
+Evals
+
+- 最新性。
+
+- 政策一致性。
+
+- 學習目標覆蓋。
+
+- 投影片可讀性。
+
+- 練習可執行性。
+
+- 每次通過成果成本。
+
+這就是把一次「請 AI 更新簡報」提升為可運行系統。
+
+十七、內化筆記：架構師不是替模型搭最多元件，而是減少不必要的不確定性
+
+AI 架構很容易陷入元件崇拜：更多 Agent、更多工具、更長 Context、更高 effort、更複雜的記憶。元件看起來先進，卻可能增加失敗面。
+
+好的架構不是展示你知道多少名詞，而是讓工作在可接受成本與風險下穩定完成。能用一個 Agent 解決，就不要先建十個；能用規則判斷，就不要每次請模型猜；能透過檢索取得，就不要把整個資料庫塞進 Prompt；能用驗收發現問題，就不要靠祈禱。
+
+AI 架構師真正設計的，不是模型呼叫，而是不確定性如何被看見、限制、驗證與改善。
+
+十八、章末金句
+
+1. 選一個模型，只是 AI 架構的第一個欄位。
+
+2. API 的價值不是把聊天搬進產品，而是把模型放進可治理的工作系統。
+
+3. 大 Context 的目標不是塞滿，而是保持情境充分。
+
+4. reasoning effort 與 pro mode 是兩個不同旋鈕。
+
+5. 最高設定不是品質保險；評估才是。
+
+6. 不要只看每百萬 Token，要看每個通過成果的成本。
+
+7. 可預測的資料處理交給程式，需要新判斷的轉折交給模型。
+
+8. 模型可靠性有一半來自工具契約。
+
+9. Structured Outputs 是 Agent 與系統之間的介面。
+
+10. 沒有 Trace，就只能對著最終答案猜發生了什麼。
+
+11. 升級模型不是換一個 slug，而是重新跑一次品質、成本與風險實驗。
+
+12. AI 架構師設計的，是不確定性如何被看見、限制、驗證與改善。
+
+官方資料校準
+
+- GPT-5.6 Sol、Terra、Luna 的模型 ID、1.05M Context、128K 最大輸出、2026-02-16 知識截止與官方定位，取自 OpenAI Models 文件。[OAI-06]
+
+- gpt-5.6 alias、Responses API、reasoning effort、pro mode、Prompt Caching、Persisted Reasoning、Programmatic Tool Calling 與遷移建議，取自 GPT-5.6 Model Guidance 與 Reasoning 文件。[OAI-05][OAI-08]
+
+- 本章價格以 2026-07-09 官方 Standard 短 Context 表為準；長 Context、Batch、Flex、Priority、區域處理與工具另有費率，未來可能變動。[OAI-07]
+
+- AI Runtime Stack、Context Sufficiency、Cost per Accepted Outcome、Cache Debt、Tool Result Envelope 與十二步工作流骨架為本書方法論。
