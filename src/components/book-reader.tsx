@@ -27,6 +27,7 @@ import { getBookStats, type Book } from "@/lib/books";
 
 type BookReaderProps = {
   book: Book;
+  showPodcast?: boolean;
 };
 
 type BeforeInstallPromptEvent = Event & {
@@ -98,7 +99,7 @@ function formatAudioTime(seconds: number) {
   return `${minutes}:${remainder}`;
 }
 
-export function BookReader({ book }: BookReaderProps) {
+export function BookReader({ book, showPodcast = true }: BookReaderProps) {
   const [chapterIndex, setChapterIndex] = useState(0);
   const [fontScale, setFontScale] = useState(1);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -1618,6 +1619,14 @@ export function BookReader({ book }: BookReaderProps) {
             <Link aria-label="返回書庫" className="icon-button" href="/" title="書庫">
               <Home aria-hidden="true" size={20} />
             </Link>
+            <Link
+              aria-label="返回 Podcast"
+              className="icon-button"
+              href={`/books/${book.slug}`}
+              title="Podcast"
+            >
+              <Headphones aria-hidden="true" size={20} />
+            </Link>
             <button
               aria-label="開啟章節"
               className="icon-button"
@@ -1656,7 +1665,7 @@ export function BookReader({ book }: BookReaderProps) {
           </p>
         )}
 
-        <section
+        {showPodcast && <section
           className={`podcast-panel ${isCurrentPodcastActive ? "podcast-panel--active" : ""}`}
           aria-label="NotebookLM Podcast"
         >
@@ -1795,7 +1804,7 @@ export function BookReader({ book }: BookReaderProps) {
             )}
           </div>
           {audioError && <p className="podcast-status">{audioError}</p>}
-        </section>
+        </section>}
 
         <section className="chapter-intro" aria-labelledby="chapter-title">
           <span>CH {String(chapter.number).padStart(2, "0")}</span>

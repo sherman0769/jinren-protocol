@@ -127,6 +127,8 @@ Visual quality rules:
 
 Narration rules:
 
+- The public information architecture is Podcast-first: home-page book links open `/books/<slug>` as the primary single-screen Podcast experience, while the full text reader lives at `/books/<slug>/read` and is reached through a clear secondary `閱讀電子書` action.
+- Podcast pages should fit their core controls within one viewport without whole-page scrolling on supported desktop and mobile sizes. Use compact episode selection, responsive density, and height-aware layouts instead of a long episode list; never hide the route back to the library or the electronic-book entry.
 - Reader narration should continue across chapter boundaries by default once the user starts playback, stopping only at the end of the book or when the user manually stops it.
 - NotebookLM chapter audio should be presented as a separate chapter Podcast experience, not as a silent replacement for the reader's original browser-native narration. When both exist, keep the original narration controls available and show a distinct NotebookLM Podcast panel or equivalent chapter-level link/play/download entry.
 - NotebookLM Podcast is the primary listening experience when chapter audio exists. Its controls should be visually prioritized over browser-native narration, support at least `2x` playback speed, and default to continuous playback into the next chapter until the book ends or the user disables auto-advance/stops playback.

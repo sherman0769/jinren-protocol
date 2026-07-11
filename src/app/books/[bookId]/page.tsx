@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { BookReader } from "@/components/book-reader";
+import { BookPodcast } from "@/components/book-podcast";
 import { books, getBookBySlug } from "@/lib/books";
 
 type BookPageProps = {
@@ -18,7 +18,7 @@ export async function generateMetadata({ params }: BookPageProps): Promise<Metad
   if (!book) return {};
 
   return {
-    title: `${book.title}｜書籍閱讀器`,
+    title: `${book.title}｜Podcast`,
     description: book.description,
     openGraph: {
       title: `${book.title}｜${book.subtitle}`,
@@ -47,5 +47,5 @@ export default async function BookPage({ params }: BookPageProps) {
 
   if (!book) notFound();
 
-  return <BookReader book={book} />;
+  return <BookPodcast book={book} />;
 }

@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     default: "詩塾書院",
     template: "%s｜詩塾書院",
   },
-  description: "詩塾書院整理 AI 時代的知識理解方法，支援長文閱讀、書籤保存與繼續閱讀。",
+  description: "詩塾書院以逐章 Podcast 為主要入口，需要深入時可切換完整電子書閱讀。",
   applicationName: "詩塾書院",
   appleWebApp: {
     capable: true,
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "詩塾書院",
-    description: "詩塾書院整理 AI 時代的知識理解方法，支援長文閱讀、書籤保存與繼續閱讀。",
+    description: "詩塾書院以逐章 Podcast 為主要入口，需要深入時可切換完整電子書閱讀。",
     type: "website",
     locale: "zh_TW",
     images: [
@@ -51,7 +51,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "詩塾書院",
-    description: "詩塾書院整理 AI 時代的知識理解方法，支援長文閱讀、書籤保存與繼續閱讀。",
+    description: "詩塾書院以逐章 Podcast 為主要入口，需要深入時可切換完整電子書閱讀。",
     images: ["/share/shishu-academy-og.png"],
   },
 };

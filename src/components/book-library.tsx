@@ -13,6 +13,9 @@ type BookLibraryProps = {
 type SavedProgress = {
   chapterIndex?: number;
   paragraphIndex?: number;
+  podcastChapterIndex?: number;
+  podcastCurrentTime?: number;
+  podcastDuration?: number;
   updatedAt?: number;
 };
 
@@ -25,7 +28,10 @@ type BookLibraryItem = {
   savedChapterIndex: number | null;
   savedChapter: Book["chapters"][number] | null;
   savedParagraph: number | null;
-  hasBookmark: boolean;
+  savedPodcastChapter: Book["chapters"][number] | null;
+  savedPodcastTime: number;
+  hasListeningProgress: boolean;
+  hasContinue: boolean;
 };
 
 type ShelfSection = {
@@ -78,6 +84,12 @@ function matchesShelf(book: Book, keywords: string[]) {
   return keywords.some((keyword) => haystack.includes(keyword));
 }
 
+function formatListenTime(seconds: number) {
+  if (!Number.isFinite(seconds) || seconds <= 0) return "0:00";
+  const wholeSeconds = Math.floor(seconds);
+  return `${Math.floor(wholeSeconds / 60)}:${String(wholeSeconds % 60).padStart(2, "0")}`;
+}
+
 function BookShelfCard({
   detail,
   priority,
@@ -85,14 +97,24 @@ function BookShelfCard({
   detail: BookLibraryItem;
   priority: boolean;
 }) {
-  const { book, hasBookmark, savedChapter, savedParagraph, stats } = detail;
+  const {
+    book,
+    hasContinue,
+    hasListeningProgress,
+    savedChapter,
+    savedParagraph,
+    savedPodcastChapter,
+    savedPodcastTime,
+    stats,
+  } = detail;
+  const hasPodcast = stats.audioChapters > 0;
 
   return (
-    <article className={`book-spine-card ${hasBookmark ? "book-spine-card--continue" : ""}`}>
+    <article className={`book-spine-card ${hasContinue ? "book-spine-card--continue" : ""}`}>
       <Link
         className="book-spine-cover"
         href={`/books/${book.slug}`}
-        aria-label={`閱讀${book.title}`}
+        aria-label={`${hasPodcast ? "收聽" : "查看"}${book.title}`}
       >
         <Image
           src={book.cover}
@@ -122,23 +144,27 @@ function BookShelfCard({
         </div>
         <h3>{book.title}</h3>
         <p>{book.author}</p>
-        {savedChapter && (
+        {hasListeningProgress && savedPodcastChapter ? (
           <p className="book-spine-bookmark">
-            第 {savedChapter.number} 章
+            Podcast 第 {savedPodcastChapter.number} 集｜{formatListenTime(savedPodcastTime)}
+          </p>
+        ) : savedChapter ? (
+          <p className="book-spine-bookmark">
+            電子書第 {savedChapter.number} 章
             {savedParagraph ? `，第 ${savedParagraph} 段` : ""}｜{savedChapter.title}
           </p>
-        )}
+        ) : null}
         <div className="book-spine-tags">
           {book.genre.slice(0, 2).map((tag) => (
             <span key={tag}>{tag}</span>
           ))}
         </div>
         <Link
-          className={`read-link ${hasBookmark ? "read-link--continue" : ""}`}
+          className={`read-link ${hasContinue ? "read-link--continue" : ""}`}
           href={`/books/${book.slug}`}
         >
           <Play aria-hidden="true" size={16} />
-          {hasBookmark ? "繼續" : "閱讀"}
+          {hasListeningProgress ? "繼續收聽" : hasPodcast ? "開始收聽" : "查看作品"}
         </Link>
       </div>
     </article>
@@ -164,6 +190,20 @@ export function BookLibrary({ books }: BookLibraryProps) {
           savedChapter.paragraphs[progress.paragraphIndex]
             ? progress.paragraphIndex + 1
             : null;
+        const savedPodcastChapterIndex =
+          typeof progress?.podcastChapterIndex === "number" &&
+          book.chapters[progress.podcastChapterIndex]?.audio?.src
+            ? progress.podcastChapterIndex
+            : null;
+        const savedPodcastChapter = savedPodcastChapterIndex !== null
+          ? book.chapters[savedPodcastChapterIndex]
+          : null;
+        const savedPodcastTime =
+          typeof progress?.podcastCurrentTime === "number" && progress.podcastCurrentTime > 0
+            ? progress.podcastCurrentTime
+            : 0;
+        const hasListeningProgress = Boolean(savedPodcastChapter && savedPodcastTime > 0);
+        const hasBookmark = savedChapterIndex !== null;
 
         return {
           book,
@@ -172,7 +212,10 @@ export function BookLibrary({ books }: BookLibraryProps) {
           savedChapterIndex,
           savedChapter,
           savedParagraph,
-          hasBookmark: savedChapterIndex !== null,
+          savedPodcastChapter,
+          savedPodcastTime,
+          hasListeningProgress,
+          hasContinue: hasListeningProgress || hasBookmark,
         };
       }),
     [books, savedProgress],
@@ -191,10 +234,10 @@ export function BookLibrary({ books }: BookLibraryProps) {
     [bookDetails],
   );
 
-  const continueBooks = useMemo(
+  const continueListeningBooks = useMemo(
     () =>
       bookDetails
-        .filter((detail) => detail.hasBookmark)
+        .filter((detail) => detail.hasListeningProgress)
         .sort((first, second) => (second.progress?.updatedAt ?? 0) - (first.progress?.updatedAt ?? 0)),
     [bookDetails],
   );
@@ -215,13 +258,13 @@ export function BookLibrary({ books }: BookLibraryProps) {
       .filter((section) => section.books.length > 0);
 
     return [
-      ...(continueBooks.length > 0
+      ...(continueListeningBooks.length > 0
         ? [
             {
               id: "continue",
-              title: "繼續閱讀",
-              description: "依照你的上次閱讀位置排列，直接回到章節與段落。",
-              books: continueBooks,
+              title: "繼續收聽",
+              description: "依照最近的 Podcast 進度排列，直接從上次秒數繼續。",
+              books: continueListeningBooks,
             },
           ]
         : []),
@@ -243,9 +286,9 @@ export function BookLibrary({ books }: BookLibraryProps) {
         books: bookDetails,
       },
     ];
-  }, [bookDetails, continueBooks, podcastBooks]);
+  }, [bookDetails, continueListeningBooks, podcastBooks]);
 
-  const focusBook = continueBooks[0] ?? podcastBooks[0] ?? bookDetails[0];
+  const focusBook = continueListeningBooks[0] ?? podcastBooks[0] ?? bookDetails[0];
 
   const shelfNavItems = shelfSections.map((section) => ({
     id: section.id,
@@ -269,7 +312,7 @@ export function BookLibrary({ books }: BookLibraryProps) {
 
       try {
         const parsed = JSON.parse(saved) as SavedProgress;
-        if (Number.isInteger(parsed.chapterIndex)) {
+        if (Number.isInteger(parsed.chapterIndex) || Number.isInteger(parsed.podcastChapterIndex)) {
           current[book.slug] = parsed;
         }
       } catch {
@@ -290,7 +333,7 @@ export function BookLibrary({ books }: BookLibraryProps) {
         <div>
           <span className="eyebrow">Shishu Academy</span>
           <h1>詩塾書院</h1>
-          <p>整理 AI 時代的知識理解方法：把書、課程、工作流與長任務思考放在同一座書院中，方便持續閱讀、對照與沉澱。</p>
+          <p>先聽懂，再深入閱讀。從每本書的逐章 Podcast 開始，需要文字時再切換到完整電子書。</p>
         </div>
         <div className="library-stats" aria-label="書庫統計">
           <span>
@@ -354,12 +397,12 @@ export function BookLibrary({ books }: BookLibraryProps) {
         {focusBook && (
           <aside className="library-focus" aria-label="焦點書籍">
             <span className="focus-label">
-              {focusBook.hasBookmark ? "Continue" : focusBook.stats.audioChapters > 0 ? "Podcast" : "Featured"}
+              {focusBook.hasListeningProgress ? "Continue listening" : focusBook.stats.audioChapters > 0 ? "Podcast" : "Featured"}
             </span>
             <Link
               className="focus-cover-link"
               href={`/books/${focusBook.book.slug}`}
-              aria-label={`閱讀${focusBook.book.title}`}
+              aria-label={`${focusBook.stats.audioChapters > 0 ? "收聽" : "查看"}${focusBook.book.title}`}
             >
               <Image
                 src={focusBook.book.cover}
@@ -373,12 +416,16 @@ export function BookLibrary({ books }: BookLibraryProps) {
             <div className="focus-copy">
               <h2>{focusBook.book.title}</h2>
               <p>{focusBook.book.description}</p>
-              {focusBook.savedChapter && (
+              {focusBook.hasListeningProgress && focusBook.savedPodcastChapter ? (
                 <p className="focus-bookmark">
-                  書籤：第 {focusBook.savedChapter.number} 章
+                  續播：第 {focusBook.savedPodcastChapter.number} 集｜{formatListenTime(focusBook.savedPodcastTime)}
+                </p>
+              ) : focusBook.savedChapter ? (
+                <p className="focus-bookmark">
+                  電子書：第 {focusBook.savedChapter.number} 章
                   {focusBook.savedParagraph ? `，第 ${focusBook.savedParagraph} 段` : ""}｜{focusBook.savedChapter.title}
                 </p>
-              )}
+              ) : null}
               <div className="focus-stat-grid">
                 <span>{focusBook.stats.chapters} 章</span>
                 <span>{focusBook.stats.minutes} 分鐘</span>
@@ -386,11 +433,15 @@ export function BookLibrary({ books }: BookLibraryProps) {
                 <span>覆蓋 {podcastCoverage}%</span>
               </div>
               <Link
-                className={`read-link ${focusBook.hasBookmark ? "read-link--continue" : ""}`}
+                className={`read-link ${focusBook.hasContinue ? "read-link--continue" : ""}`}
                 href={`/books/${focusBook.book.slug}`}
               >
                 <Play aria-hidden="true" size={17} />
-                {focusBook.hasBookmark ? "繼續閱讀" : "打開作品"}
+                {focusBook.hasListeningProgress
+                  ? "繼續收聽"
+                  : focusBook.stats.audioChapters > 0
+                    ? "開始收聽"
+                    : "查看作品"}
               </Link>
             </div>
             {latestBooks.length > 0 && (
