@@ -45,6 +45,12 @@ type MediaSessionNavigator = Navigator & {
 const progressKeyPrefix = "book-reader-progress";
 const podcastRates = [1, 1.25, 1.5, 1.75, 2, 2.5];
 
+function applyPodcastRate(audio: HTMLAudioElement, rate: number) {
+  // Browsers may restore defaultPlaybackRate when a new episode source loads.
+  audio.defaultPlaybackRate = rate;
+  audio.playbackRate = rate;
+}
+
 function formatTime(seconds: number) {
   if (!Number.isFinite(seconds) || seconds <= 0) return "0:00";
   const wholeSeconds = Math.floor(seconds);
@@ -175,7 +181,7 @@ export function BookPodcast({ book }: BookPodcastProps) {
 
     setError(null);
     setIsLoading(true);
-    audio.playbackRate = rateRef.current;
+    applyPodcastRate(audio, rateRef.current);
     try {
       await audio.play();
       isPlayingRef.current = true;
@@ -384,7 +390,7 @@ export function BookPodcast({ book }: BookPodcastProps) {
       nextDuration > 0 ? Math.max(0, nextDuration - 0.25) : resumeAtRef.current,
     );
 
-    audio.playbackRate = rateRef.current;
+    applyPodcastRate(audio, rateRef.current);
     if (resumeTime > 0) audio.currentTime = resumeTime;
     currentTimeRef.current = resumeTime;
     durationRef.current = nextDuration;
@@ -436,7 +442,7 @@ export function BookPodcast({ book }: BookPodcastProps) {
   function changeRate(nextRate: number) {
     rateRef.current = nextRate;
     setRate(nextRate);
-    if (audioRef.current) audioRef.current.playbackRate = nextRate;
+    if (audioRef.current) applyPodcastRate(audioRef.current, nextRate);
     persistProgress();
     updateMediaPosition(currentTimeRef.current, durationRef.current);
   }

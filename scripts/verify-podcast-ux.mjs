@@ -109,7 +109,28 @@ async function verifyInteraction(browser) {
 
   await page.getByRole("button", { name: "繼續 Podcast" }).click();
   await page.waitForFunction(() => document.querySelector(".podcast-state")?.textContent?.includes("播放中"));
-  await page.getByLabel("Podcast 播放速度").selectOption("2");
+  const expectedRate = 2.5;
+  await page.getByLabel("Podcast 播放速度").selectOption(String(expectedRate));
+
+  const autoNext = page.getByRole("switch", { name: "自動下一集" });
+  assert(await autoNext.getAttribute("aria-checked") === "true", "Auto-next was not enabled by default");
+  await page.locator(".podcast-audio-engine").evaluate((audio) => {
+    audio.currentTime = Math.max(0, audio.duration - 0.35);
+  });
+  await page.waitForFunction(() => document.querySelector("#podcast-episode-title")?.textContent?.includes("Sol"));
+  await page.waitForFunction(() => document.querySelector(".podcast-state")?.textContent?.includes("播放中"));
+  const advancedAudioRate = await page.locator(".podcast-audio-engine").evaluate((audio) => ({
+    playbackRate: audio.playbackRate,
+    defaultPlaybackRate: audio.defaultPlaybackRate,
+  }));
+  assert(
+    advancedAudioRate.playbackRate === expectedRate && advancedAudioRate.defaultPlaybackRate === expectedRate,
+    `Auto-next changed playback speed: ${JSON.stringify(advancedAudioRate)}`,
+  );
+  assert(
+    await page.getByLabel("Podcast 播放速度").inputValue() === String(expectedRate),
+    "Playback speed control changed after auto-next",
+  );
   await page.getByRole("button", { name: "暫停 Podcast" }).click();
 
   const restoredSlider = page.locator('input[aria-label^="Podcast 播放進度"]');
@@ -123,15 +144,12 @@ async function verifyInteraction(browser) {
     `Keyboard seeking failed: ${beforeKeyboardSeek} -> ${afterKeyboardSeek}`,
   );
 
-  const autoNext = page.getByRole("switch", { name: "自動下一集" });
   await autoNext.click();
   assert(await autoNext.getAttribute("aria-checked") === "false", "Auto-next toggle failed");
 
-  await page.getByLabel("選擇 Podcast 單集").selectOption("1");
-  await page.waitForFunction(() => document.querySelector("#podcast-episode-title")?.textContent?.includes("Sol"));
   const stored = await page.evaluate((key) => JSON.parse(localStorage.getItem(key) || "null"), progressKey);
-  assert(stored.podcastChapterIndex === 1, "Episode selection was not persisted");
-  assert(stored.podcastRate === 2, "Playback rate was not persisted");
+  assert(stored.podcastChapterIndex === 1, "Auto-advanced episode was not persisted");
+  assert(stored.podcastRate === expectedRate, "Playback rate was not persisted after auto-next");
 
   await page.getByRole("link", { name: "閱讀電子書" }).click();
   await page.waitForURL(`**/books/${slug}/read`);
@@ -147,7 +165,8 @@ async function verifyInteraction(browser) {
   await context.close();
   return {
     resumeSeconds: 90,
-    rate: 2,
+    rate: expectedRate,
+    autoAdvanceRatePreserved: true,
     episodeIndex: stored.podcastChapterIndex,
     ebookRoute: `/books/${slug}/read`,
     emptyState: true,
