@@ -5,7 +5,19 @@
   "notebookUrl": "https://notebooklm.google.com/notebook/c5928934-7aa3-4227-8417-67a3c795acb0",
   "expectedChapterCount": 18,
   "createdAt": "2026-07-12T10:57:05.058Z",
-  "updatedAt": "2026-07-12T12:15:21.908Z",
+  "updatedAt": "2026-07-12T14:09:51.4928990Z",
+  "integrityValidation": {
+    "status": "complete",
+    "checkedAt": "2026-07-12T14:09:51.4928990Z",
+    "method": "ffprobe-last-packet-and-ffmpeg-full-decode",
+    "checkedChapterCount": 18,
+    "failedChapterNumbers": [],
+    "repairedChapterNumbers": [
+      2,
+      8,
+      9
+    ]
+  },
   "entries": [
     {
       "chapterNumber": 1,

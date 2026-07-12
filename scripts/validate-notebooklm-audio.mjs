@@ -1,4 +1,4 @@
-import { execFileSync } from "node:child_process";
+import { execFileSync, spawnSync } from "node:child_process";
 import { existsSync, readFileSync, readdirSync, statSync } from "node:fs";
 import path from "node:path";
 
@@ -149,6 +149,7 @@ for (const chapter of book.chapters) {
     chapterResults.push(result);
     continue;
   }
+  const audioFileSize = statSync(audioPath).size;
 
   const probe = JSON.parse(
     execFileSync(
@@ -171,11 +172,56 @@ for (const chapter of book.chapters) {
   const actualDuration = Number(probe.format.duration);
   const cardDuration = toSeconds(entry?.duration);
   const durationDelta = Math.abs(actualDuration - cardDuration);
+  const packetProbe = spawnSync(
+    "ffprobe",
+    [
+      "-v",
+      "error",
+      "-select_streams",
+      "a:0",
+      "-show_packets",
+      "-show_entries",
+      "packet=pts_time",
+      "-of",
+      "csv=p=0",
+      path.resolve(audioPath),
+    ],
+    { encoding: "utf8", maxBuffer: 20 * 1024 * 1024 },
+  );
+  const packetTimes = String(packetProbe.stdout ?? "")
+    .trim()
+    .split(/\r?\n/u)
+    .map(Number)
+    .filter(Number.isFinite);
+  const lastPacketDuration = packetTimes.at(-1) ?? 0;
+  const decode = spawnSync(
+    "ffmpeg",
+    [
+      "-hide_banner",
+      "-v",
+      "error",
+      "-xerror",
+      "-i",
+      path.resolve(audioPath),
+      "-map",
+      "0:a:0",
+      "-f",
+      "null",
+      "-",
+    ],
+    { stdio: "ignore" },
+  );
 
   if (!audioStream) errors.push(`Chapter ${chapter.number} has no audio stream`);
   if (!Number.isFinite(cardDuration) || durationDelta > 2) {
     errors.push(`Chapter ${chapter.number} duration mismatch: card=${entry?.duration}, file=${actualDuration}`);
   }
+  if (packetProbe.status !== 0 || Math.abs(lastPacketDuration - cardDuration) > 2) {
+    errors.push(
+      `Chapter ${chapter.number} playable packet duration mismatch: card=${entry?.duration}, lastPacket=${lastPacketDuration}`,
+    );
+  }
+  if (decode.status !== 0) errors.push(`Chapter ${chapter.number} failed full ffmpeg decode`);
   if (!download?.linkedInBooksJson) errors.push(`Chapter ${chapter.number} is not ledger-linked`);
   if (download?.audioSrc !== chapter.audio.src) errors.push(`Chapter ${chapter.number} ledger audio.src mismatch`);
   if (download && Math.abs(Number(download.durationSeconds) - actualDuration) > 0.1) {
@@ -185,16 +231,24 @@ for (const chapter of book.chapters) {
   if (baseUrl) {
     const response = await fetch(`${baseUrl}${chapter.audio.src}`, { method: "HEAD" });
     const contentType = response.headers.get("content-type") ?? "";
+    const contentLength = Number(response.headers.get("content-length"));
     if (!response.ok || !contentType.startsWith("audio/")) {
       errors.push(`Chapter ${chapter.number} production audio failed: ${response.status} ${contentType}`);
     }
-    result.production = { status: response.status, contentType };
+    if (!Number.isFinite(contentLength) || contentLength !== audioFileSize) {
+      errors.push(
+        `Chapter ${chapter.number} production size mismatch: local=${audioFileSize}, production=${contentLength}`,
+      );
+    }
+    result.production = { status: response.status, contentType, contentLength };
   }
 
   result.codec = audioStream?.codec_name;
   result.container = probe.format.format_name;
   result.durationSeconds = actualDuration;
   result.durationDeltaSeconds = durationDelta;
+  result.lastPacketDurationSeconds = lastPacketDuration;
+  result.fullDecode = decode.status === 0;
   chapterResults.push(result);
 }
 
@@ -207,6 +261,13 @@ if (ledger.downloadValidation?.linkedCount !== book.chapters.length) {
 }
 if ((ledger.downloadValidation?.missingChapterNumbers ?? []).length > 0) {
   errors.push("Ledger still reports missing chapter numbers");
+}
+if (
+  ledger.integrityValidation?.status !== "complete" ||
+  ledger.integrityValidation?.checkedChapterCount !== book.chapters.length ||
+  (ledger.integrityValidation?.failedChapterNumbers ?? []).length > 0
+) {
+  errors.push("Ledger full-decode integrity validation is missing or incomplete");
 }
 
 const report = {
