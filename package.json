@@ -11,6 +11,7 @@
     "normalize:books": "node scripts/normalize-books.mjs",
     "export:book-txt": "node scripts/export-book-txt.mjs",
     "link:book-audio": "node scripts/link-book-audio.mjs",
+    "validate:notebooklm-audio": "node scripts/validate-notebooklm-audio.mjs",
     "verify:podcast-ux": "node scripts/verify-podcast-ux.mjs"
   },
   "dependencies": {
