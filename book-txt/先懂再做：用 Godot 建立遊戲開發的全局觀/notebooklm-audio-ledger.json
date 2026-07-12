@@ -614,5 +614,13 @@
         "linkedInBooksJson": true
       }
     ]
+  },
+  "integrityValidation": {
+    "status": "complete",
+    "checkedChapterCount": 15,
+    "failedChapterNumbers": [],
+    "validatedAt": "2026-07-12T14:22:34.6848471Z",
+    "method": "ffmpeg full decode plus final playable packet timestamp comparison",
+    "durationToleranceSeconds": 2
   }
 }
