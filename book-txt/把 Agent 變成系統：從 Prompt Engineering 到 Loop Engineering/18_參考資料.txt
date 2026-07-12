@@ -1,0 +1,25 @@
+參考資料
+
+完整來源限制與支持章節請見 03_research/research_registry.md。
+
+• R01 Quinto, E., Rozzi, C. A., & Zanitti, F. (2026). Workflow as Knowledge: Semantic Persistence for LLM-Mediated Workflows. arXiv:2607.08740. https://arxiv.org/abs/2607.08740
+
+• R02 Wu, Y., Zhang, L., Zhou, Y., Wang, M., Peng, B., Li, S., Fan, X., & Zhao, Z. (2026). Remember When It Matters: Proactive Memory Agent for Long-Horizon Agents. arXiv:2607.08716. https://arxiv.org/abs/2607.08716
+
+• R03 Ahn, J., & Kim, M. (2026). From Prompts to Contracts: Harness Engineering for Auditable Enterprise LLM Agents. arXiv:2607.08028. https://arxiv.org/abs/2607.08028
+
+• R04 Malik, A. (2026). Progressive Crystallization: Turning Agent Exploration into Deterministic, Lower-Cost Workflows in Production. arXiv:2607.07052. https://arxiv.org/abs/2607.07052
+
+• R05 Khatib, L., Mathews, N. S., Nagappan, M., Nie, P., & Zimmermann, T. (2026). What Makes a Good Bug Report for an AI Agent? arXiv:2607.07593. https://arxiv.org/abs/2607.07593
+
+• R06 Chen, X., Guo, Z., Zhang, R., Jiang, D., & Li, H. (2026). OpenCoF: Learning to Reason Through Video Generation. arXiv:2607.08763. https://arxiv.org/abs/2607.08763
+
+• R07 Zhao, K., Petrovich, M., Zhang, H., Wang, T., Tang, S., & Rempe, D. (2026). ARDY: Autoregressive Diffusion with Hybrid Representation for Interactive Human Motion Generation. arXiv:2607.08741; ACM TOG / SIGGRAPH 2026. https://arxiv.org/abs/2607.08741
+
+• R08 Schaaff, K., Stierstorfer, Q., & Hekkel, V. (2026). Using AI-based Learning Assistants in Higher Education: A Large-Scale Descriptive Analysis. arXiv:2607.08748. https://arxiv.org/abs/2607.08748
+
+• R09 Jiang, Q., Shi, Z., Yang, J., Song, Z., & Fang, M. (2026). OmniFood-Bench: Evaluating VLMs for Nutrient Reasoning and Personalized Health Advice. arXiv:2607.08423. https://arxiv.org/abs/2607.08423
+
+• R10 Johnston, D., Holtz, D., Richmond, A. M., Ong, C., Tambe, P., & Chatterji, A. (2026). The Shift to Agentic AI: Evidence from Codex. arXiv:2606.26959. https://arxiv.org/abs/2606.26959
+
+• OpenAI. (2026). How agents are transforming work. https://openai.com/index/how-agents-are-transforming-work/
