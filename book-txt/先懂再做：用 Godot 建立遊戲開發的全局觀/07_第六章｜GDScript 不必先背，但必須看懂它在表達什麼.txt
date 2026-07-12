@@ -1,0 +1,305 @@
+第六章｜GDScript 不必先背，但必須看懂它在表達什麼
+
+當 Codex 產生一份兩百行的 GDScript，你應該從第一行開始逐字讀，還是先找出它在這個場景裡扮演什麼角色？
+
+若你把程式碼當成外語文章，會很容易陷入每個符號都想查懂的焦慮。可是對 AI 協作開發而言，更高效的閱讀方式是先辨認結構：這個腳本附著在哪個節點？它保存哪些資料？公開哪些行為？在什麼生命週期被引擎呼叫？它會發出或接收哪些事件？最後才檢查每段語法。
+
+這一章不是要把你訓練成 GDScript 語法百科，而是建立最低必要的「程式碼閱讀能力」。你要能看懂一份腳本的責任、資料流、事件流與時間位置，並能要求 Codex 解釋或修正可疑部分。
+
+GDScript 是 Godot 的行為表達語言
+
+GDScript 是 Godot 官方主要支援的腳本語言之一。它是高階、物件導向、命令式、支援逐步型別的語言，與 Godot 的節點、場景、訊號、資源與 Inspector 深度整合。
+
+Godot 也正式支援 C#，並可透過 GDExtension 使用 C 或 C++ 等原生語言。不同語言有不同工具鏈、平台限制與團隊成本。本書採 GDScript，不是因為其他語言不能做遊戲，而是它能最直接呈現 Godot 的核心模型，讓初學者把注意力放在節點與 Runtime，而不是先處理額外環境。
+
+語言選擇仍要看專案條件。既有 C# 團隊可能偏好.NET 版；高效能或原生整合可能需要 GDExtension；某些平台的語言支援也有差異。對「先建立全局觀」這本書而言，GDScript 是共同基準，而不是信仰。
+
+腳本附著在節點上，先問它替誰說話
+
+Godot 腳本通常會 extends 某個類別。最上方若寫：
+
+```gdscriptextends CharacterBody2D```
+
+意思不是這份檔案「變成」一個角色圖片，而是它定義了一個繼承 CharacterBody2D 能力的腳本類別。當腳本附著在 Player 根節點，腳本中的 position、velocity、move_and_slide() 等能力來自這個基礎類別與其繼承鏈。
+
+閱讀腳本的第一個問題因此是：它 extends 什麼？第二個問題是：它實際掛在哪個節點？
+
+若一份腳本 extends Node，卻大量操作 2D 位置，你要檢查它是否透過其他節點引用完成，或根節點類型選錯。若腳本 extends Resource，就表示它主要是資料類型，不應假設自己存在於 SceneTree。若 extends Control，它的座標與版面規則就不同於 Node2D。
+
+extends 決定這份腳本站在哪一個能力地基上。
+
+類別、物件、實例：用場景脈絡理解
+
+「類別」可以理解為一種角色的定義，「實例」則是依定義建立出的具體個體。腳本描述某種行為與資料；當場景被實例化，每個節點實例都會有自己的腳本狀態。
+
+假設 Player 腳本有：
+
+```gdscriptvar current_health: int = 3```
+
+關卡中若真的有兩個 Player 實例，它們通常各自有一份 current_health。其中一個受傷，不應自然讓另一個一起扣血。相反地，若它們引用同一份共享 Resource，Resource 的修改就可能被共同看見。
+
+閱讀程式時，要分辨：這是類別層級的共同定義、實例各自的成員變數，還是外部共享資料。很多 AI 產生的 Bug，正是把「每個實例自己的狀態」誤放到全域或共享位置。
+
+變數不是只有值，也代表資料的責任
+
+變數用來保存資料，但你要看的不只是型別與初始值，還要看生命週期與可見範圍。
+
+```gdscript@export var move_speed: float = 220.0var current_health: int@onready var sprite: AnimatedSprite2D = $AnimatedSprite2D```
+
+這三行扮演不同角色。
+
+move_speed 以 @export 暴露到 Inspector，表示它是設計時可調整的參數。型別是 float，預設值 220.0。
+
+current_health 是 Runtime 狀態，會在遊戲啟動或重設時取得值，再隨受傷與回復改變。
+
+sprite 以 @onready 在節點接近 ready 階段時取得子節點引用。它不是角色資料，而是對內部能力的連結。
+
+閱讀成員變數時，可以替每一行加一個心理標籤：設定、狀態、快取引用、常數、臨時計算，或外部依賴。若一份腳本有四十個成員變數卻無法分類，通常表示責任太多或命名不足。
+
+型別是給人與工具的共同合約
+
+GDScript 支援逐步型別。你可以寫出沒有明確型別的變數，也可以指定 int、float、String、Vector2、自訂類別等。
+
+```gdscriptvar score: int = 0var move_direction: Vector2 = Vector2.ZERO```
+
+型別的價值不只是執行效率。它能讓編輯器、Codex 與讀者知道某個欄位應該存什麼，提前發現把字串傳給數值函式之類的錯誤，也使方法合約更清楚。
+
+```gdscriptfunc take_damage(amount: int) -> void:current_health -= amount```
+
+這表示 take_damage 接受一個整數，沒有回傳值。它仍未說明 amount 是否允許負數、受傷時是否應有無敵判斷，但至少建立基本合約。
+
+型別也不是越多越好到不顧可讀性。原型探索可能容許較少標註；正式邊界、公開方法、Resource 欄位與容易混淆的資料則更值得明確。對 Codex 而言，型別能降低它誤用 API 的空間。
+
+函式：一段有名稱的行為
+
+函式把行為包成可呼叫單元。閱讀函式時，先看四件事：名稱、輸入、輸出、副作用。
+
+```gdscriptfunc add_score(amount: int) -> int:score += amountreturn score```
+
+名稱是 add_score；輸入是 amount；輸出是更新後的 score；副作用是它修改了成員變數。
+
+副作用不是壞事，遊戲本來就需要改變狀態。問題在於副作用是否清楚。若 calculate_bonus() 同時切換場景、播放音效並寫入存檔，函式名稱無法反映真正責任。
+
+好的函式通常能用一句話描述。若一句話必須包含很多個「而且」，就值得拆分或重新命名。要求 Codex 回報函式的「讀取狀態、修改狀態、外部呼叫、可能失敗」比只叫它加註解更有用。
+
+條件判斷：規則被寫成分支
+
+遊戲規則常以 if 表達。
+
+```gdscriptif current_health <= 0:die()```
+
+這行把「生命歸零就死亡」翻成程式。真正要檢查的是條件完整性與執行次數。
+
+- 若 current_health 變成負數，是否仍成立？
+
+- die() 是否可能被呼叫多次？
+
+- 死亡後還能不能再次受傷？
+
+- die() 是直接移除節點，還是先播放動畫？
+
+- 誰會收到死亡事件？
+
+AI 很容易產生只符合快樂路徑的條件。你要從邊界值、重複觸發與狀態轉換看它是否完整。
+
+複雜條件也應被命名。相較於一長串 if health > 0 and not paused and...，建立 can_move() 或清楚的狀態判斷，能讓規則更像人話，也更容易測試。
+
+迴圈：對一組對象重複行為
+
+for 與 while 能重複執行。遊戲中可能用來遍歷敵人、生成物件、處理清單或計算資料。
+
+```gdscriptfor pickup in get_tree().get_nodes_in_group("pickups"):pickup.set_active(false)```
+
+這段概念是：「取得所有屬於 pickups 群組的節點，逐一停用。」
+
+閱讀迴圈時，要問三件事：集合有多大？迴圈內做的工作多重？它多久執行一次？
+
+遍歷二十個物件、只在暫停時執行一次，通常沒有問題；每一幀遍歷上萬個節點並做複雜搜尋，就可能成為效能風險。不要看到迴圈就害怕，也不要因 Codex 能快速寫出巢狀迴圈就忽略頻率。
+
+while 還要檢查停止條件。AI 若產生一個條件永遠不會改變的 while，可能讓主執行緒卡住。遊戲 Runtime 對阻塞特別敏感，因為主迴路停止，畫面與輸入也會一起停止。
+
+生命週期方法：不是你呼叫，而是引擎在適當時機呼叫
+
+Godot 有一組「虛擬回呼方法」。你定義它們，SceneTree 在適當階段呼叫。
+
+- _enter_tree()：節點進入 SceneTree 時。
+
+- _ready()：節點與其子樹已準備好時。
+
+- _process(delta)：每個 idle frame 的更新。
+
+- _physics_process(delta)：固定物理節奏的更新。
+
+- _input(event) 或其他輸入回呼：接收輸入事件。
+
+- _exit_tree()：節點離開 SceneTree 時。
+
+Codex 初學式程式常把所有初始化都放進 _ready()，甚至把不該每幀執行的建立工作放進 _process()。閱讀時要問：這段工作需要執行幾次？它依賴子節點是否 ready？它需要跟物理同步嗎？離開場景時是否要清理連線或外部資源？
+
+生命週期方法不是普通命名慣例。少一個底線、簽名錯誤、方法名拼錯，都可能讓引擎不再自動呼叫。要求 Codex 使用 Godot 4.7 的正式方法與型別，能降低版本混用。
+
+@export 與 Inspector：把調整權交給設計層
+
+@export 讓屬性出現在 Inspector。這是腳本與編輯器之間的重要橋梁。你可以在不同場景實例中調整速度、傷害、Resource 引用，而不必每次改程式碼。
+
+但暴露太多也會造成混亂。每個內部計算都 export，Inspector 會變成沒有分類的控制面板；外部可隨意改變本應保持一致的狀態，也可能破壞不變條件。
+
+判斷一個欄位是否應 export，可以問：這是設計者需要調整的參數嗎？不同實例是否合理地有不同值？錯誤值能否被範圍限制或驗證？
+
+@export_range、Resource 型別與清楚命名能讓 Inspector 更像受控介面，而不是把內部全部公開。
+
+@onready 與節點引用：方便不等於沒有耦合
+
+@onready var sprite = $AnimatedSprite2D 很方便，但它依賴場景中存在特定名稱與路徑。只要子節點改名或重組，引用就可能失效。
+
+對場景內部穩定、短距離的子節點引用，這通常合理；跨越多層或跨場景依賴則要更小心。你可以使用明確型別、唯一節點名稱、匯出節點引用、根節點公開方法或訊號等方式降低脆弱性。
+
+不要把 $ 簡寫當成壞東西。真正問題是依賴是否被封裝在擁有該子節點的場景內，以及重構時是否可追蹤。
+
+Signal、await 與非同步流程要看「何時繼續」
+
+GDScript 可以發出訊號，也能使用 await 等待訊號或其他可等待結果。
+
+```gdscriptanimation_player.play("hurt")await animation_player.animation_finishedqueue_free()```
+
+概念是：播放受傷或死亡動畫，等動畫完成，再排程移除節點。
+
+這類程式碼最需要檢查生命週期。等待期間，節點是否可能已被其他程式移除？動畫是否可能被中斷而永遠等不到預期訊號？函式是否會被重複呼叫，產生多條等待流程？遊戲暫停是否影響動畫？
+
+AI 常把 await 當成直線腳本的方便語法，卻忽略等待期間世界仍會變化。讀到 await 時，一定要問：「在繼續之前，什麼可能已經改變？」
+
+錯誤處理不只是 try-catch
+
+GDScript 的錯誤處理方式與某些語言不同。很多問題透過 null 檢查、回傳值、Error 列舉、assert、push_warning、push_error 與引擎 Debugger 發現。
+
+例如載入存檔時，檔案可能不存在、JSON 解析可能失敗、資料版本可能不同。不要假設 FileAccess.open() 一定成功，也不要在失敗時悄悄使用空值，讓錯誤延遲到更難追的位置。
+
+Codex 應在邊界處明確處理失敗：檔案、網路、外部資源、使用者輸入與節點引用。對內部不應發生的條件，可以使用 assertion 幫助開發；正式產品則要提供可恢復行為與清楚日誌。
+
+閱讀一份腳本的七步順序
+
+拿到陌生腳本，不必從第一行陷進每個細節。依序做：
+
+1. 看檔名與所在場景：它替哪個角色工作？
+
+2. 看 extends 與 class_name：它建立在什麼能力上，是否提供全域可識別類型？
+
+3. 看 signals 與公開介面：外界如何知道它發生了什麼？
+
+4. 看 export、常數與成員變數：設定、狀態、引用是否分得清楚？
+
+5. 看生命週期方法：初始化與每幀工作放在哪裡？
+
+6. 看公開函式與狀態變更入口：誰能改生命、分數或狀態？
+
+7. 看外部依賴與副作用：它抓取哪些節點、讀寫哪些檔案、切換哪些場景？
+
+完成這七步後，再進入具體條件、演算法與 API。這種閱讀方式也適合要求 Codex 產生「腳本摘要」，但你要指定它依七步回報，而不是只給一段空泛說明。
+
+能量收集者的最小 Player 腳本
+
+以下片段只用來看關係：
+
+```gdscriptextends CharacterBody2D
+
+signal health_changed(current: int, maximum: int)signal died
+
+@export var move_speed: float = 220.0@export var max_health: int = 3
+
+var current_health: int
+
+func _ready() -> void:current_health = max_healthhealth_changed.emit(current_health, max_health)
+
+func _physics_process(_delta: float) -> void:var direction:= Input.get_vector("move_left", "move_right", "move_up", "move_down")velocity = direction * move_speedmove_and_slide()
+
+func take_damage(amount: int) -> void:if amount <= 0 or current_health <= 0:returncurrent_health = max(current_health - amount, 0)health_changed.emit(current_health, max_health)if current_health == 0:died.emit()```
+
+先不要逐行背。用七步看它：腳本替 Player 工作；extends CharacterBody2D；對外發出生命變化與死亡；速度與最大生命可由 Inspector 調整；current_health 是 Runtime 狀態；ready 初始化；physics process 處理輸入與移動；take_damage 是生命變更入口。
+
+接著才找風險：沒有無敵時間；死亡只發訊號，誰處理尚未定義；沒有停用移動；最大生命是否應移到 Resource 也要看專案規模。這就是「讀懂」和「逐字翻譯」的差異。
+
+可以直接交給 Codex 的四個任務
+
+任務一：產生七步腳本摘要
+
+只讀取 player.gd，依序回報：所在場景與責任、extends／class_name、signals、export 與成員資料分類、生命週期方法、狀態變更入口、外部依賴與副作用。每項引用實際方法或欄位，不要只寫一般建議。
+
+任務二：檢查生命週期錯置
+
+搜尋 _ready()、_process()、_physics_process()、_input() 與 _exit_tree()。找出每幀重複初始化、物理更新放錯迴路、需要清理卻未清理、方法拼字或簽名可疑等問題。先列證據與風險，不修改。
+
+任務三：逐步加型別
+
+針對公開方法、Resource 欄位、節點引用與容易混淆的集合提出逐步型別化方案。不要一次改完整專案；先選一份腳本，說明每個新增型別能提前發現哪類錯誤。
+
+任務四：要求解釋而不是重寫
+
+對我指定的函式，逐段說明輸入、讀取狀態、修改狀態、外部呼叫、回傳值與失敗情境。若有不確定的 Godot 4.7 API，請指出並建議查官方類別頁，不要自行換成另一版本寫法。
+
+Codex 可能做錯什麼
+
+第一，產生能執行卻責任過大的腳本。一份 Player 腳本同時控制 UI、存檔、音樂與場景切換。你要看副作用，而不是只看語法正確。
+
+第二，混入其他版本 API 或 C#／GDScript 寫法。鎖定版本與語言，要求它列出使用的關鍵類別與方法。
+
+第三，濫用動態型別與字典，讓欄位拼錯直到 Runtime 才發現。公開邊界與重要資料應有較清楚型別。
+
+第四，把所有方法加上大量註解，卻沒有改善命名與責任。註解不能替代結構。
+
+第五，看到一個函式太長就機械拆成許多只有一行的函式。拆分應依概念與變更理由，而不是行數迷信。
+
+第六，使用 await 後忽略節點可能已被釋放或狀態已改變。非同步流程要有取消、重入或有效性檢查。
+
+如何把這一章教給別人
+
+先不要讓學員寫程式，拿一份短 Player 腳本做「找角色」練習。用不同顏色標出：設定、狀態、引用、生命週期、公開行為與事件。學員會發現程式碼不是一堵牆，而是幾種責任混合排列。
+
+第二個練習是把一段規則中文翻成函式合約，不要求完整語法。例如：「受傷函式接受正整數；生命已歸零或傷害不合理時不處理；生命不得小於零；變更後發出訊號；歸零只觸發一次死亡。」這會讓學員先理解程式要保證什麼。
+
+最後再讓 Codex 產生程式，學員使用七步順序審查。課程重點從「誰打字比較快」轉成「誰能指出資料、生命週期與副作用」。
+
+口語概念地圖
+
+一份腳本先站在 extends 提供的地基上。它用成員變數保存設定、狀態與引用，用函式描述行為，用條件與迴圈表達規則，用生命週期方法接上 SceneTree 的時間，用 signal 告訴外界事件，再透過型別、命名與邊界讓人與工具理解合約。
+
+閱讀時，從外往內：先看腳本為誰工作，再看它對外說什麼，最後才進入內部怎麼算。這樣即使 Codex 產生很多程式碼，你也不會一開始就迷失在符號裡。
+
+聽完後的自我檢查
+
+1. extends 告訴你一份腳本站在哪一種能力基礎上？
+
+2. export 設定、Runtime 狀態與 onready 節點引用有什麼不同？
+
+3. 生命週期方法和一般函式最大的差異是什麼？
+
+4. 為什麼型別的價值不只在效能？
+
+5. 你能否用七步順序，在不逐行翻譯的情況下說明一份腳本？
+
+章末金句
+
+- 不必先背完語法，卻必須看得出程式碼在系統裡扮演什麼角色。
+
+- extends 是腳本的能力地基，場景位置則是它的工作現場。
+
+- 變數不只是值，它還帶著生命週期、所有權與修改權。
+
+- 型別是寫給引擎、工具與未來讀者共同遵守的合約。
+
+- 函式的重點不只在輸入與輸出，也在它悄悄改變了什麼。
+
+- 生命週期方法把程式接上遊戲時間；放錯位置，正確語法也會產生錯誤行為。
+
+- 讀程式先從責任與副作用開始，再進入符號與細節。
+
+- 要求 Codex 解釋一段程式，比要求它替每行加註解更有價值。
+
+本章官方資料索引
+
+- GDScript basics：https://docs.godotengine.org/en/stable/tutorials/scripting/gdscript/gdscript_basics.html
+
+- Scripting languages：https://docs.godotengine.org/en/stable/getting_started/step_by_step/scripting_languages.html
+
+- GDScript exported properties：https://docs.godotengine.org/en/stable/tutorials/scripting/gdscript/gdscript_exports.html
+
+- Node：https://docs.godotengine.org/en/stable/classes/class_node.html

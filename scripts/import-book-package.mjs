@@ -52,6 +52,13 @@ function findPackageRoot(inputPath) {
     throw new Error(`Package directory not found: ${resolved}`);
   }
 
+  if (
+    fs.existsSync(path.join(resolved, "01_master", "full_book.md")) &&
+    fs.existsSync(path.join(resolved, "02_chapters"))
+  ) {
+    return { root: resolved, format: "publication-bundle" };
+  }
+
   if (fs.existsSync(path.join(resolved, "full_book.md"))) {
     return { root: resolved, format: "overview-expanded" };
   }
@@ -194,6 +201,37 @@ function parseFullManuscriptOverview(packageRoot) {
   };
 }
 
+function parsePublicationBundleOverview(packageRoot) {
+  const manuscriptPath = path.join(packageRoot, "01_master", "full_book.md");
+  assertFile(manuscriptPath, "01_master/full_book.md");
+  const manuscript = fs.readFileSync(manuscriptPath, "utf8").replace(/\r/g, "");
+  const lines = manuscript.split("\n").map((line) => line.trim());
+
+  const title =
+    lines
+      .find((line) => /^#\s+/.test(line))
+      ?.replace(/^#\s+/, "")
+      .trim() ?? "";
+  const subtitle =
+    lines
+      .find((line) => /^##\s+/.test(line))
+      ?.replace(/^##\s+/, "")
+      .trim() ?? "";
+
+  const briefPath = path.join(packageRoot, "00_project", "project_brief.md");
+  const brief = fs.existsSync(briefPath) ? fs.readFileSync(briefPath, "utf8") : "";
+  const goal = firstParagraph(readHeadingBody(brief, "專案目標"));
+
+  return {
+    title,
+    subtitle,
+    author: "李詩民",
+    description:
+      goal ||
+      "一本先建立 Godot 全局心智模型，再學會用 Codex 規格化開發、驗證與迭代的概念型實戰書。",
+  };
+}
+
 function collectOverviewChapterFiles(packageRoot) {
   const expandedRoot = path.join(packageRoot, "expanded");
   if (!fs.existsSync(expandedRoot)) {
@@ -248,6 +286,37 @@ function collectFullManuscriptChapterFiles(packageRoot) {
 
   if (chapterFiles.length === 0) {
     throw new Error(`No chapter_XX_main.md files found under ${packageRoot}`);
+  }
+
+  return chapterFiles.map((file, index) => ({
+    ...file,
+    number: index + 1,
+  }));
+}
+
+function collectPublicationBundleChapterFiles(packageRoot) {
+  const chaptersRoot = path.join(packageRoot, "02_chapters");
+  const chapterFiles = [];
+
+  for (const entry of fs.readdirSync(chaptersRoot, { withFileTypes: true })) {
+    if (!entry.isDirectory()) continue;
+    const chapterDir = path.join(chaptersRoot, entry.name);
+    for (const file of fs.readdirSync(chapterDir, { withFileTypes: true })) {
+      if (!file.isFile()) continue;
+      const match = file.name.match(/^chapter_(\d{2})_main\.md$/i);
+      if (!match) continue;
+      chapterFiles.push({
+        sourceNumber: Number.parseInt(match[1], 10),
+        path: path.join(chapterDir, file.name),
+        preserveHeadingTitle: true,
+      });
+    }
+  }
+
+  chapterFiles.sort((left, right) => left.sourceNumber - right.sourceNumber);
+
+  if (chapterFiles.length === 0) {
+    throw new Error(`No chapter_XX_main.md files found under ${chaptersRoot}`);
   }
 
   return chapterFiles.map((file, index) => ({
@@ -465,13 +534,17 @@ const overview =
     ? parseFullManuscriptOverview(packageRoot)
     : packageInfo.format === "metadata-chapters-package"
       ? parseMetadataPackageOverview(packageRoot)
-    : parseOverview(packageRoot);
+      : packageInfo.format === "publication-bundle"
+        ? parsePublicationBundleOverview(packageRoot)
+        : parseOverview(packageRoot);
 const chapters =
   packageInfo.format === "full-manuscript-package"
     ? collectFullManuscriptChapterFiles(packageRoot).map(parseChapter)
     : packageInfo.format === "metadata-chapters-package"
       ? collectMetadataPackageChapterFiles(packageRoot).map(parseChapter)
-    : collectOverviewChapterFiles(packageRoot).map(parseChapter);
+      : packageInfo.format === "publication-bundle"
+        ? collectPublicationBundleChapterFiles(packageRoot).map(parseChapter)
+        : collectOverviewChapterFiles(packageRoot).map(parseChapter);
 const slug = args.slug;
 const id = args.id || slug;
 const genre = args.genre

@@ -1,0 +1,299 @@
+第八章｜每一幀發生什麼：生命週期、時間、物理與動畫
+
+角色明明有速度，為什麼不會移動？碰撞形狀明明存在，為什麼玩家穿過牆壁？死亡動畫明明播放了，為什麼角色在播完之前就消失？
+
+這些看似不同的問題，很多都跟同一件事有關：一段行為被放在什麼時間位置、由哪個系統處理，以及它與其他系統的先後順序。
+
+遊戲不是只有結構，還有節奏。節點進入場景樹、完成準備、接收輸入、更新物理、播放動畫、等待計時器、離開場景樹，都是 Runtime 的時間事件。當你能在腦中追蹤這些事件，很多 Bug 就不再只是「沒有反應」，而是「這段工作根本還沒準備好」「它每幀重複做了」「它在物理更新外改位置」「節點已離開卻還有人等待它」。
+
+節點從出生到離開的基本順序
+
+節點被加入 SceneTree 時，會先進入樹，再在整個必要子樹準備完成後收到 ready。官方 Node 文件指出，父節點的 _enter_tree() 先於子節點；而 _ready() 的順序則從子節點往父節點回來。
+
+可以把它想成搭建舞台。
+
+第一步，先把舞台主架與角色放進劇場，這是 enter tree。父結構要先存在，子結構才有位置。
+
+第二步，確認燈光、道具與演員都已就位，這是 ready。子節點先完成準備，父節點最後才開始統籌。
+
+第三步，演出開始，節點依 process、physics process、input、signals 等方式運作。
+
+第四步，場景切換或節點被移除，節點收到 exit tree，外部引用與等待流程也要面對它可能不再有效。
+
+這個順序解釋了為什麼在 _init() 或太早的階段取得子節點可能失敗，而 @onready 或 _ready() 通常能安全使用已存在的子節點。也解釋了為什麼父節點在 _ready() 中可以假設子場景多半已完成自己的 ready 初始化。
+
+_enter_tree() 與 _ready() 不只是「都拿來初始化」
+
+_enter_tree() 適合處理與進入樹本身有關、需要早於子節點 ready 的工作。例如註冊某些樹狀關係、取得已存在的上層服務，或執行必須先於子節點完成的設定。
+
+_ready() 更適合需要子節點已準備好的初始化：取得 $Sprite、連接內部訊號、依 Resource 設定畫面、發出初始狀態。
+
+若 Codex 把所有東西都放進 _enter_tree()，可能在子節點尚未 ready 時呼叫其方法。若把會隨節點重新進入樹而重複連接的工作放進錯誤位置，也可能產生多重連線。
+
+還要注意 _ready() 對同一個節點實例通常只自動呼叫一次。節點移出又重新加入樹時，不應想當然地依賴它重新初始化。需要重新啟用的行為，應設計明確方法或理解 request_ready() 等相關機制，而不是把 ready 當成每次顯示都會執行的事件。
+
+_process()：跟著畫面幀前進的更新
+
+_process(delta) 在節點啟用處理時，每個 idle frame 被呼叫。它的頻率會隨實際幀率變動，delta 代表距離上一次呼叫經過的秒數。
+
+適合放在這裡的工作，通常與每幀視覺或非物理更新有關。例如：讓一個純視覺提示平滑淡出、更新不依物理碰撞的游標跟隨、計算某些畫面效果。
+
+但「每幀」是一個高成本位置。任何放進 _process() 的程式，在六十 FPS 下每秒執行約六十次，在更高幀率可能更多。以下工作通常不應每幀重複：
+
+- 重新載入 Resource。
+
+- 每幀連接 Signal。
+
+- 每幀建立不需要的新物件。
+
+- 每幀搜尋整棵場景樹。
+
+- 每幀寫檔或輸出大量日誌。
+
+- 每幀更新只有事件發生時才會改變的 Label。
+
+當 Codex 把功能放進 _process()，要問：「這件事真的需要在沒有任何狀態變化時仍不斷重做嗎？」
+
+_physics_process()：與固定物理節奏同步
+
+_physics_process(delta) 以固定物理更新節奏被呼叫，適合角色移動、碰撞與物理相關規則。固定節奏有助於物理計算的一致性，實際頻率可以由專案設定調整，因此不要把它硬記成永遠六十次。
+
+CharacterBody2D 常用於由程式控制的角色。你設定 velocity，再呼叫 move_and_slide() 等方法，讓引擎依碰撞處理實際移動。典型結構是：
+
+```gdscriptfunc _physics_process(_delta: float) -> void:var direction:= Input.get_vector("move_left", "move_right", "move_up", "move_down")velocity = direction * move_speedmove_and_slide()```
+
+這裡的 move_speed 代表每秒速度，CharacterBody2D 的 velocity 以每秒單位表達，因此不要再機械地把 velocity 乘 delta 後傳給 move_and_slide()。不同 API 對時間的處理不同，理解單位比背「所有移動都乘 delta」更重要。
+
+這是一個很典型的 AI 風險：Codex 記得一般公式 position += speed * delta，卻把它套進已有時間語意的 Godot 角色 API，造成速度過慢或行為異常。驗收時要問每個量的單位，以及方法是否已處理時間步長。
+
+Delta 是時間差，不是萬用修正符
+
+Delta 的概念是「這次更新距離上次經過多久」。對自己直接積分的位置、旋轉、透明度、倒數值，乘 delta 常能把每幀變化轉成每秒變化。
+
+例如：
+
+```gdscriptremaining_time -= deltarotation += turn_speed * delta```
+
+但不是每個 API 都應額外乘 delta。引擎的某些方法已把 velocity 解讀為每秒單位，Timer 自己管理倒數，Tween 與 AnimationPlayer 也有自己的時間系統。若不理解 API 合約，只看到時間就乘 delta，反而會重複計算。
+
+因此，讀到一段持續變化程式時，依序問：
+
+1. 這個值的單位是什麼？
+
+2. 它表示每秒、每幀，還是完成百分比？
+
+3. 呼叫的方法是否已處理 delta？
+
+4. 在幀率變動時，總結果是否應保持一致？
+
+物理 Body：誰控制誰
+
+Godot 2D 物理中有不同角色。
+
+CharacterBody2D 適合由程式控制、需要與世界碰撞的角色，例如玩家或具明確導航行為的敵人。你決定速度與移動意圖，引擎協助處理碰撞滑動。
+
+RigidBody2D 由物理模擬主導，適合受力、重力、碰撞反應的物件。你通常施加力、衝量或設定物理屬性，而不是每幀直接覆寫位置。
+
+StaticBody2D 通常代表不移動的碰撞環境，例如牆與地面。
+
+AnimatableBody2D 適合由動畫或程式移動、同時需要正確影響其他物理物件的移動平台等情境。
+
+Area2D 不以實體阻擋為主要目的，而是偵測進入、離開與重疊，適合收集物、傷害區、觸發區與感知範圍。
+
+選錯角色會讓程式不斷對抗引擎。用 RigidBody2D 卻每幀硬設 position，物理模擬與腳本控制互相拉扯；用 Area2D 期待它像牆一樣阻擋；用 StaticBody2D 做持續移動角色，都可能產生不自然結果。
+
+CollisionShape 是物理邊界，不是畫面輪廓
+
+Sprite 顯示角色長什麼樣，CollisionShape 描述物理系統認為它佔據哪個區域。兩者可以不同。角色圖片有透明邊緣，碰撞形狀通常用簡單矩形、圓形或膠囊近似，而不是逐像素完全貼合。
+
+簡單形狀通常更穩定、效能也更容易控制。碰撞過度精細可能讓玩家卡在小突起，或讓每次換動畫都要調整形狀。遊戲手感常比視覺上完全貼合更重要。
+
+若節點有 CollisionShape2D 但沒有有效 Shape Resource，編輯器通常會警告，Runtime 也不會得到預期碰撞。Codex 只建立 CollisionShape2D 節點卻未指定 RectangleShape2D 等資源，是常見遺漏。
+
+還要分清楚多個碰撞用途：Player 的實體碰撞形狀可以處理牆壁；Hurtbox Area2D 處理受傷範圍；若有攻擊，再用 Hitbox 表達攻擊範圍。不同目的分開，碰撞層與訊號會更清楚。
+
+Collision Layer 與 Mask：我是誰，我要看誰
+
+物理碰撞常用 Layer 與 Mask 控制互動。
+
+Layer 可以理解為「我屬於哪些類別」。Mask 可以理解為「我關心哪些類別」。若 Player 在 player layer，Pickup 的 mask 勾選 player，就能偵測玩家；若 Pickup 不需要偵測 Enemy，就不必包含 enemy layer。
+
+這是一個雙向設定，容易產生「形狀都在，卻沒有事件」的問題。除錯時不要只看節點是否重疊，還要檢查：
+
+- 兩邊是否有有效碰撞形狀？
+
+- layer 與 mask 是否匹配？
+
+- monitoring／monitorable 等屬性是否符合需求？
+
+- 連接的是 body_entered 還是 area_entered？
+
+- 進入者實際是 Body 還是 Area？
+
+Codex 應將 layer 名稱與數字集中記錄，避免在不同場景隨意使用匿名位元。專案小時可在 Project Settings 命名物理層，讓 Inspector 與程式更容易理解。
+
+動畫不是只有畫面，它也有時間與狀態
+
+Godot 的動畫工具可以改變節點屬性、播放序列圖、混合角色動作或觸發方法。AnimationPlayer 保存動畫軌；AnimatedSprite2D 依 SpriteFrames 播放逐幀動畫；AnimationTree 可建立更複雜的混合與狀態控制。
+
+架構上要先決定：遊戲邏輯驅動動畫，還是動畫驅動部分遊戲事件？
+
+一般移動可以由速度與狀態決定播放 idle 或 run。受傷時，生命系統切換 Hurt 狀態，再要求動畫播放。某些攻擊命中時機可能由動畫方法軌或事件通知，但這會讓動畫資產成為規則的一部分，需要更嚴格驗證。
+
+若程式只呼叫 play("run")，卻每一幀重啟同一動畫，動畫可能永遠停在第一幀。若死亡時立刻 queue_free()，動畫還沒播放就消失。若等待 animation_finished，但動畫設定為循環，就可能永遠不完成。
+
+因此，動畫除錯要同時檢查名稱、循環、切換條件、是否被重複播放、播放速度、暫停模式與完成事件。
+
+Timer、Tween 與 AnimationPlayer：三種時間工具
+
+Timer 適合「等待一段時間後發生事件」或週期性倒數。例如玩家受傷後一秒解除無敵、每兩秒生成敵人、關卡剩餘時間歸零。
+
+Tween 適合把數值從 A 平滑變到 B，例如 UI 淡入、能量物件縮小消失、相機輕微晃動。它是程式建立的插值流程，適合簡單動態回饋。
+
+AnimationPlayer 適合編輯與保存多軌時間序列，能同時改位置、顏色、音量與其他屬性，也能由設計者在編輯器調整。
+
+三者都與時間有關，卻不是互相取代。選擇時問：我要等待事件、做簡單插值，還是保存可視化編輯的多軌動畫？
+
+不要用每幀手寫倒數取代所有 Timer，也不要為一個簡單淡出建立複雜動畫樹。工具應服務行為的可讀性與控制需求。
+
+生命週期與非同步的交叉風險
+
+假設 Enemy 死亡時播放動畫，等待完成後移除：
+
+```gdscriptfunc die() -> void:animation_player.play("die")await animation_player.animation_finishedqueue_free()```
+
+這段仍需要保護。die() 可能被呼叫兩次，產生兩條等待；場景切換可能先移除 Enemy；動畫可能被另一狀態打斷；遊戲暫停可能讓動畫不前進。
+
+比較完整的設計會先切換 Dead 狀態、防止重入、停用碰撞與行為、播放正確非循環動畫，再等待或連接一次性完成事件。若節點在等待期間失效，外部流程也不應保留不安全引用。
+
+Codex 很容易產生「順序看起來合理」的直線程式，但 Runtime 不是靜止背景。等待期間其他事件仍會發生。任何含 await、Timer 或延遲回呼的程式，都要把生命週期放進驗收。
+
+為什麼有些 Bug 只在特定幀率出現
+
+常見原因包括：
+
+- 每幀固定改變數值，沒有依時間調整。
+
+- 在 _process() 處理物理碰撞，取樣節奏不一致。
+
+- 在同一幀中多次處理同一事件。
+
+- 動畫或 Timer 的更新模式受到暫停與時間尺度影響。
+
+- 快速物體跨過薄碰撞區，產生 tunneling。
+
+- 依賴某段程式「應該先跑」，但實際順序未被保證。
+
+驗收不能只在開發機器的默認幀率下進行。可以限制幀率、模擬低效能、切換視窗焦點、暫停與恢復，觀察時間相關行為是否穩定。
+
+對小型專案，不必建立複雜自動效能實驗，但至少可以設計「三十、六十、一百二十 FPS 下移動十秒距離大致一致」之類的情境。這不是追求像素完全相同，而是發現明顯幀率相依。
+
+能量收集者的一幀
+
+在某個物理更新：Player 讀取 Input Map，計算方向與 velocity，呼叫 move_and_slide。物理系統判斷它與牆、Enemy 或 Area 的關係。若 Player 進入 Pickup Area，Godot 發出 body_entered；Pickup 驗證對象，切換 collected 狀態並發出 collected 訊號。
+
+同一時段，GameState 更新分數，HUD 收到 score_changed，可能啟動一個 Tween 讓數字放大再縮回。Pickup 停用碰撞，播放收集動畫或音效；動畫完成後移除自身。
+
+若 Player 同時碰到 Enemy，受傷流程檢查是否無敵；若可以受傷，扣生命、啟動 InvulnerabilityTimer、播放 Hurt 動畫並閃爍。Timer 到時再清除無敵狀態。
+
+這一串不是一個函式完成，而是物理、訊號、狀態、Timer、Tween 與動畫共同協作。理解每個系統在何時接手，就能知道除錯應看哪一條線。
+
+可以直接交給 Codex 的五個任務
+
+任務一：建立生命週期時間線
+
+只讀取 Player 場景與腳本，依 _enter_tree、_ready、輸入、_physics_process、Signal、Timer、動畫、_exit_tree 建立時間線。指出任何在子節點 ready 前使用引用、重複連線或離開樹後仍可能回呼的風險。
+
+任務二：檢查時間單位
+
+搜尋所有位置、速度、旋轉、透明度、倒數與冷卻的更新。對每一處標示單位、更新頻率、是否需要 delta、API 是否已自行處理時間。不要機械地替所有行乘 delta。
+
+任務三：物理角色審查
+
+列出每個 CharacterBody2D、RigidBody2D、StaticBody2D、AnimatableBody2D、Area2D 的用途。指出是否有以錯誤方式直接改 transform、缺少碰撞形狀、layer／mask 不匹配或 body／area 訊號用錯。
+
+任務四：死亡流程防重入
+
+為 Enemy 死亡設計狀態流程：只允許進入一次、停止移動、停用傷害與碰撞、播放非循環動畫、完成後清理。列出場景切換、暫停與動畫中斷時的驗收，不先實作。
+
+任務五：幀率驗收
+
+建立一份人工測試清單，比較 30、60、120 FPS 限制下，角色十秒移動、無敵時間、生成間隔與 UI Tween。允許合理誤差，重點是找出明顯每幀依賴。
+
+Codex 可能做錯什麼
+
+第一，把 CharacterBody2D 的 velocity 再乘 delta，沒有理解 API 單位。
+
+第二，在 _process() 與 _physics_process() 同時改位置，造成抖動或碰撞不一致。
+
+第三，只新增 CollisionShape2D 節點，卻沒有 Shape Resource，或 layer／mask 沒有匹配。
+
+第四，每幀重新播放同一動畫，讓動畫永遠無法前進。
+
+第五，死亡時立刻移除節點，後面的動畫、音效或訊號沒有機會完成。
+
+第六，等待動畫完成卻沒有處理循環、打斷、暫停與節點提前離開。
+
+第七，在每幀中輸出大量日誌，結果效能與真正訊息都被淹沒。
+
+如何把這一章教給別人
+
+第一個教學活動是「節點的一生」。讓學員把 enter tree、child ready、parent ready、process、exit tree 卡片排順序，再用實際日誌印出順序驗證。
+
+第二個活動是時間單位實驗。準備一段每幀加五與每秒速度乘 delta 的移動，切換幀率比較。接著再示範 CharacterBody2D velocity，說明為什麼不能把一般公式無條件套到每個 API。
+
+第三個活動是碰撞診斷。故意製作四種錯誤：沒有 Shape、layer 不合、area 訊號接錯、碰撞節點停用。請學員用固定清單排查，而不是反覆隨機改程式。
+
+最後用一段死亡動畫等待流程，讓學員主動提出重入、暫停與場景切換問題。這能把「時間」從動畫效果提升成系統責任。
+
+口語概念地圖
+
+節點先進入 SceneTree，子節點完成準備後，父節點才在 ready 階段統籌。遊戲運作時，idle process 跟著顯示幀前進，physics process 跟著固定物理節奏前進。輸入改變速度，物理系統處理碰撞；事件發出訊號，Timer 計算等待，Tween 與 AnimationPlayer在時間軸上改變呈現。節點離開時，所有尚未完成的等待與外部引用都必須重新檢查。
+
+時間不是背景。它是連接腳本、物理、動畫與狀態的共同軸線。
+
+聽完後的自我檢查
+
+1. 父子節點的 _enter_tree() 與 _ready() 順序有何不同？
+
+2. _process() 與 _physics_process() 分別適合哪類工作？
+
+3. 為什麼「所有移動都乘 delta」是一個過度簡化？
+
+4. CharacterBody2D、RigidBody2D、StaticBody2D 與 Area2D 各自扮演什麼角色？
+
+5. layer 與 mask 可以如何用「我是誰、我看誰」理解？
+
+6. 使用 await 等待動畫時，還要考慮哪些 Runtime 變化？
+
+章末金句
+
+- 很多 Bug 不是邏輯完全錯，而是正確行為出現在錯誤時間。
+
+- Ready 代表子樹已準備好，不代表每次重新顯示都會自動重設。
+
+- 每幀執行是一種成本，也是一種責任。
+
+- Delta 是時間差，不是看到移動就必須加上的魔法符號。
+
+- 物理物件的類型，決定你是在控制它，還是讓物理世界控制它。
+
+- 碰撞形狀描述物理邊界，不必逐像素複製畫面輪廓。
+
+- 動畫也有狀態、完成條件與中斷風險，不只是視覺裝飾。
+
+- 等待期間世界仍在變化，非同步流程必須尊重節點生命週期。
+
+本章官方資料索引
+
+- Node：https://docs.godotengine.org/en/stable/classes/class_node.html
+
+- Idle and Physics Processing：https://docs.godotengine.org/en/stable/tutorials/scripting/idle_and_physics_processing.html
+
+- CharacterBody2D：https://docs.godotengine.org/en/stable/classes/class_characterbody2d.html
+
+- RigidBody2D：https://docs.godotengine.org/en/stable/classes/class_rigidbody2d.html
+
+- Collision layers and masks：https://docs.godotengine.org/en/stable/tutorials/physics/physics_introduction.html
+
+- AnimationTree：https://docs.godotengine.org/en/stable/tutorials/animation/animation_tree.html

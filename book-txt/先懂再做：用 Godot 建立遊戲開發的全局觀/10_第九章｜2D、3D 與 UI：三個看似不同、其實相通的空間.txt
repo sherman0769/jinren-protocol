@@ -1,0 +1,265 @@
+第九章｜2D、3D 與 UI：三個看似不同、其實相通的空間
+
+角色在 2D 世界裡移動，攝影機在 3D 世界裡觀察，UI 卻像貼在螢幕上。這三者都談位置、大小與層級，為什麼 Godot 要用不同節點系統？從 2D 學到的東西，究竟有多少能遷移到 3D 與 UI？
+
+答案是：核心結構可以遷移，空間規則不能混用。
+
+Node2D、Node3D 與 Control 都是 Node 的後代，都能存在於場景、掛載腳本、發出訊號、引用 Resource、參與 SceneTree；但它們處理的是不同空間。2D 使用平面座標，3D 多一個深度維度與更完整的旋轉，UI 則要面對版面、錨點、容器與不同視窗尺寸。
+
+理解這一章的方式，不是把三套 API 各背一次，而是先抓共同問題：物件在哪裡？相對誰？由誰觀察？如何縮放？空間變化如何影響子節點？接著再辨認每個空間自己的規則。
+
+共同核心：每個空間都在處理 Transform
+
+Transform 可以翻成變換，概念上包含位置、旋轉與縮放。2D 的 Node2D 有 position、rotation、scale；3D 的 Node3D 有 position、rotation、scale，背後使用三維 Transform3D；Control 也有位置與尺寸相關屬性，但同時受到錨點與容器版面控制。
+
+這些屬性回答的是「一個物件如何從自己的局部空間，被放進父節點的空間」。父節點再被放進更上層，一路組合後形成 global transform。
+
+這就是 local 與 global 的差異：
+
+- Local：相對父節點的位置與變換。
+
+- Global：經過父鏈組合後，在整個 2D 或 3D 世界中的位置與變換。
+
+假設 Player 位於世界座標 (500, 300)，它的 Sprite 子節點 local position 是 (0, -8)。Sprite 的 global position 會接近 (500, 292)。若 Player 移動，Sprite 跟著移動；若只調 Sprite local position，Player 的物理根位置不變。
+
+這是組合的直接結果。你不是每幀手動讓每個子節點跟著父節點，而是透過 Transform 階層自動繼承。
+
+2D：平面世界不等於簡單世界
+
+2D 使用 X 與 Y 軸。一般螢幕座標中，X 往右增加，Y 往下增加，這和數學課常見的 Y 往上不同。方向、角度、攝影機、層級與視窗縮放都建立在這個座標模型上。
+
+2D 常見節點包括 Node2D、Sprite2D、AnimatedSprite2D、CharacterBody2D、Area2D、Camera2D、TileMapLayer、PointLight2D 與 CanvasLayer 等。它們仍然依節點責任組合，不是一個「2D 模式」把所有工作自動完成。
+
+2D 的深度通常不是實際 Z 空間，而是透過場景樹順序、z_index、CanvasLayer 等機制控制繪製順序。角色看起來在背景前面，可能只是繪製層次較高，不代表它真的像 3D 一樣距離攝影機較近。
+
+這個差異在轉向 3D 時很重要。2D 中改 z_index 常只影響畫面順序；3D 中物件真的存在不同深度，還涉及透視、遮擋、光照與攝影機裁切。
+
+3D：多一個維度，也多出方向與尺度的複雜性
+
+3D 使用 X、Y、Z 三個軸。物件可以繞多個軸旋轉，攝影機有視野、近遠裁切與投影方式，光源、材質、陰影、網格與骨架共同形成畫面。
+
+Node3D 是三維空間的基礎。MeshInstance3D 顯示網格，CharacterBody3D 控制角色，Area3D 偵測區域，Camera3D 提供觀察視角，DirectionalLight3D、OmniLight3D 等提供光照。
+
+從 2D 遷移到 3D，場景與節點思維仍成立：Player3D 仍可由碰撞、外觀、攝影機、音效與狀態元件組合；訊號、Resource、GDScript、Input Map 與 SceneTree 也仍存在。
+
+真正新增的是空間推理。角色的「前方」不再等同畫面右邊，而取決於自己的朝向與 basis；攝影機看到的方向與世界座標不同；模型的單位尺度、軸向與匯入設定會影響物理與動畫；旋轉還可能遇到 Euler angle、四元數與萬向節鎖等更進階問題。
+
+初學時不用一次掌握所有 3D 數學，但要形成一個原則：在世界方向、角色局部方向與攝影機方向之間轉換時，必須明確說出目前使用哪個座標空間。
+
+UI：不是 2D 物件的另一種貼圖
+
+Godot UI 主要使用 Control 節點。它也存在於 2D 畫布，但設計目標不是自由擺放世界物件，而是建立能隨視窗、內容與語言變動的介面。
+
+一個 Label、Button、Panel、TextureRect 都是 Control。Control 有 anchors、offsets、size flags、minimum size 等版面屬性，並能由 Container 自動安排。
+
+若你像擺 Sprite2D 一樣，對每個 UI 元素寫死 position 與 size，在自己的螢幕上可能正確；換解析度、改字型、增加翻譯文字或變更視窗比例後，版面就可能重疊與超出。
+
+UI 的核心問題不是「放在哪個像素」，而是「相對父容器與視窗，應佔什麼位置、如何伸縮、內容變大時怎麼調整」。
+
+因此，Control 與 Node2D 雖都在平面上，卻有不同布局哲學。World 中的角色依遊戲座標移動；HUD 中的生命條依螢幕邊界與容器排列，不應跟著世界攝影機漂走。
+
+Anchor、Offset 與 Container：用關係取代固定座標
+
+Anchor 以父 Control 的比例位置作參考。左上是零，右下是一。若一個按鈕錨定右下角，視窗變大時，它仍可保持與右下角的關係。
+
+Offset 則是在錨點基礎上加上像素距離。Anchor 決定相對位置，Offset 決定具體邊界差。
+
+Container 進一步接管子 Control 的版面。例如 HBoxContainer 水平排列，VBoxContainer 垂直排列，MarginContainer 提供邊距，GridContainer 排成格子。當子元素文字變長或視窗變化，Container 會依規則重新計算。
+
+使用 Container 時，手動拖動子節點位置常會被重新排版，看起來像 Godot「不聽話」。實際上是父容器擁有版面責任。這和場景所有權思維一致：先問誰有權改這個屬性。
+
+Codex 產生 UI 時，常把每個 Control 的位置寫死。你的規格要明確要求使用 anchors 與適當 containers，並在多個解析度與長文字下驗收。
+
+Camera：世界與玩家畫面之間的轉譯者
+
+沒有攝影機概念，世界座標與螢幕畫面很容易混淆。Camera2D 決定 2D 世界哪一部分映射到視窗；Camera3D 決定從哪個位置、朝哪個方向、以何種投影觀察 3D 世界。
+
+玩家位置在世界中移動，攝影機可能跟隨、平滑、限制在關卡範圍或產生晃動。UI 通常不應作為 Player 的普通 Node2D 子節點，否則可能跟著世界移動。HUD 常放在 CanvasLayer 或獨立 UI 結構，使其固定在螢幕座標。
+
+同一個「點擊位置」也可能存在不同座標：滑鼠的 viewport position、Canvas 變換後的世界位置、某個節點的 local position。若你要在滑鼠位置生成世界物件，必須把螢幕座標轉成世界座標，而不是直接拿來當 Node2D position。
+
+3D 更明顯：滑鼠在 2D 螢幕上，物件在 3D 世界中，需要從 Camera3D 發出射線，與世界表面相交，才能得到點擊位置。
+
+Sprite、Texture、Mesh、Material：顯示物件的不同層次
+
+在 2D 中，Texture2D 是圖像資料，Sprite2D 是把這份 Texture 顯示在場景中的節點。修改 Texture Resource 和修改 Sprite2D 的 position，是兩個不同層次。
+
+在 3D 中，Mesh 描述幾何形狀，Material 描述表面如何被渲染，MeshInstance3D 把 Mesh 放進場景。模型匯入後可能包含 Mesh、Material、Skeleton、Animation 等多種資源與節點。
+
+把資料與顯示節點分清楚，可以避免一個常見錯誤：想改單一實例顏色，卻直接修改共用 Material，導致所有模型一起變色。這和前一章的共享 Resource 完全相通。
+
+UI 也有同樣關係：TextureRect 是 Control，Texture 是 Resource；Label 是節點，Font 是 Resource；Theme 可以集中定義多個 Control 的樣式。
+
+所以 2D、3D 與 UI 的共同骨架仍是：Resource 保存可重用資料，Node 把資料放進 Runtime 空間，Scene 封裝結構。
+
+Render Method：不是畫質高低的單一開關
+
+Godot 專案會選擇適合目標硬體與功能的渲染方法。穩定文件與 4.x 系列常見 Forward+、Mobile 與 Compatibility 等選項，背後可能使用 Vulkan、Direct3D 12、Metal 或 OpenGL 等驅動路徑，實際支援依作業系統與硬體而異。
+
+不要把它簡化成「Forward+ 最好、Compatibility 最差」。選擇要考慮目標平台、硬體範圍、所需功能、效能與驅動相容性。小型 2D Web 遊戲與高階桌面 3D 的需求不同。
+
+4.7 加入或改善了多項渲染與顯示能力，但本書的穩定知識仍是選擇流程：先定目標平台與最低硬體，再確認必要功能，最後用真實場景量測。Codex 若只依「最新功能」替你切換渲染方法，可能讓舊硬體或 Web 支援出現問題。
+
+渲染方法屬版本與平台相關資料。建立專案時要記錄選擇理由，再版或升級時重新驗證，不把今天的預設當成永久真理。
+
+多解析度：畫面縮放與 UI 版面是兩個問題
+
+不同裝置可能有不同解析度、長寬比與像素密度。遊戲世界如何縮放、攝影機顯示多少範圍，以及 UI 如何佈局，是彼此相關但不同的決策。
+
+2D 像素風遊戲可能希望維持整數縮放與固定視野；一般 2D 遊戲可能使用 stretch mode 讓畫面適應；3D 遊戲可能固定垂直視野或水平視野；UI 則要靠 anchors、containers 與最小尺寸維持可用性。
+
+若只把整個畫面等比例拉伸，文字可能過小、按鈕不易點擊、超寬螢幕出現多餘世界區域。若只設計單一解析度，手機瀏海、安全區域與旋轉又可能遮住重要 UI。
+
+Codex 可以幫你建立測試矩陣，但不能只以一張截圖宣告完成。至少要驗收：目標長寬比、最小與最大視窗、UI 長文字、不同字型、視窗縮放與全螢幕切換。
+
+2D 技能如何遷移到 3D
+
+可以直接遷移的能力包括：
+
+- 以場景封裝可重用角色。
+
+- 用節點組合外觀、碰撞、音效與狀態。
+
+- 用 Resource 保存角色資料。
+
+- 用 Signal 傳遞事件。
+
+- 用 Input Map 表達玩家意圖。
+
+- 以 _physics_process() 更新物理角色。
+
+- 用狀態控制動畫與行為。
+
+- 用 Remote 場景樹、日誌與 Profiler 除錯。
+
+需要重新學習的部分包括：
+
+- 三維向量、方向與旋轉。
+
+- 3D 攝影機與射線。
+
+- 光照、材質、陰影與後處理。
+
+- 模型、骨架與 3D 動畫匯入。
+
+- 3D 物理尺度與導航。
+
+- 更高的素材與效能成本。
+
+因此，先用 2D 建立 Godot 心智模型，不是因為 3D 不重要，而是讓你先把結構、事件與 Runtime 學會，再把新增認知集中在空間與渲染。
+
+UI 與世界的溝通邊界
+
+HUD 需要顯示分數與生命，但不應深入控制世界。比較清楚的關係是：GameState 發出 score_changed；HUD 更新 Label。Player 發出 health_changed；HUD 更新生命圖示。PauseMenu 發出 resume_requested；Main 或 GameFlow 決定是否解除暫停。
+
+UI 的按鈕可以提出意圖，不直接改所有系統。這和 Input Map 一樣：把使用者操作轉成領域事件，再由有責任的對象執行。
+
+同時，UI 也有自己的狀態，例如按鈕 disabled、焦點、目前選取頁籤、動畫與本地化文字。不要把 UI 當成完全沒有邏輯的貼圖；它只是不能成為遊戲規則的另一份真相。
+
+能量收集者的三個空間
+
+World 使用 Node2D。Player、Enemy、Pickup 與關卡都存在世界座標。Camera2D 跟隨 Player，但受關卡邊界限制。
+
+HUD 使用 CanvasLayer 與 Control。上方顯示分數，左上顯示生命，中央可顯示暫停或失敗面板。HUD 不跟著 Camera2D 移動，並使用 MarginContainer、HBoxContainer 等保持多解析度版面。
+
+若未來做 3D 版本，Player 改用 CharacterBody3D、外觀改用 Mesh 與動畫骨架、Camera3D 從後方跟隨；Pickup 改用 Area3D。但分數資料、收集訊號、遊戲狀態與 Codex 規格方法仍可沿用。
+
+這正是知識遷移：不是把 2D API 硬套到 3D，而是保留結構原則，替換空間能力。
+
+可以直接交給 Codex 的五個任務
+
+任務一：標示座標空間
+
+只讀取所有涉及 position、global_position、transform、滑鼠座標與 Camera 的程式。對每個值標示它位於 local、world、viewport 或 UI 空間，指出任何直接混用而未轉換的風險。
+
+任務二：建立響應式 HUD
+
+以 Godot 4.7 Stable 的 Control 系統設計 HUD 場景。使用 CanvasLayer、MarginContainer、HBox／VBox 等適當容器，讓分數、生命與暫停面板適應 16:9、16:10、4:3 與狹長視窗。先提出場景樹與 anchors／size flags 策略，不要寫死每個像素位置。
+
+任務三：檢查共用視覺資源
+
+搜尋 Runtime 中對 Texture、Material、Theme、Font 與 Shader 參數的修改。判斷哪些是共享 Resource，設計兩個實例同時存在的測試，確認單一物件改變不會意外影響全部。
+
+任務四：2D 到 3D 遷移盤點
+
+不實作 3D。把目前 Player、Pickup、Enemy、Camera、HUD 分成「核心結構可沿用」「類別需替換」「新增 3D 知識」三類，說明理由與最大風險。
+
+任務五：渲染方法決策紀錄
+
+根據目標平台 Windows 與 Web、小型 2D 遊戲、需支援較舊整合顯示硬體，列出 Forward+、Mobile、Compatibility 的決策問題。不要只給單一推薦；先列必要功能、硬體範圍、Web 相容性與需要實測的場景。
+
+Codex 可能做錯什麼
+
+第一，把 local position 當 global position，物件在不同父節點下出現錯位。
+
+第二，把滑鼠 viewport 座標直接當世界座標，攝影機移動後生成位置錯誤。
+
+第三，對 Container 子節點手動設定位置，執行後又被版面系統覆蓋。
+
+第四，把 HUD 放進世界節點，隨 Camera 移動或縮放。
+
+第五，直接修改共享 Material 或 Theme，只測單一實例。
+
+第六，把 2D 的 z_index 直覺等同 3D 深度，忽略攝影機、遮擋與實際空間。
+
+第七，只依桌面開發機選擇渲染方法，沒有在目標 Web 或低階硬體測試。
+
+如何把這一章教給別人
+
+第一個示範是 local 與 global。把一個 Sprite 放在 Player 子節點，分別移動父與子，讓學員預測 global position。接著把 Sprite 改到另一個父節點，觀察同一 local position 為何對應不同世界位置。
+
+第二個示範是 UI 容器。先用固定座標做一個分數與生命面板，改變視窗與文字長度，讓版面失敗；再使用 anchors 與 containers 重做，讓學員看到「關係式版面」的價值。
+
+第三個示範是把 2D Player 場景樹與 3D Player 場景樹並排。請學員圈出可以保留的概念：根角色、碰撞、外觀、相機、音效、訊號與狀態。這能避免把 3D 想成完全重學一套引擎。
+
+口語概念地圖
+
+Node 是共同根。往一條分支走，Node2D 進入平面世界；往另一條分支走，Node3D 進入三維世界；Control 則進入螢幕與容器版面。三者都由 SceneTree 管理，也都能引用 Resource、掛載腳本與發出 Signal。
+
+每個物件先有 local transform，相對父節點；父鏈組合後形成 global transform。Camera 把世界轉成玩家看見的畫面，UI 再以自己的版面規則覆蓋在畫面之上。共同結構可以遷移，座標、旋轉、渲染與版面規則則必須分清楚。
+
+聽完後的自我檢查
+
+1. Node2D、Node3D 與 Control 共享哪些 Godot 核心能力？
+
+2. local 與 global transform 的差異是什麼？
+
+3. 為什麼 Control 不應只用固定座標當作 Sprite2D 排列？
+
+4. Camera 在世界與螢幕之間扮演什麼角色？
+
+5. 哪些 2D 知識可以遷移到 3D，哪些需要重新學習？
+
+6. 選渲染方法時，為什麼不能只問哪一個畫質最高？
+
+章末金句
+
+- 2D、3D 與 UI 共享節點與場景骨架，卻遵守不同空間規則。
+
+- Local 說的是相對父節點，Global 說的是整條父鏈作用後的位置。
+
+- 世界物件追隨攝影機，HUD 應追隨螢幕與版面關係。
+
+- Anchor 決定相對位置，Container 決定內容如何共同排列。
+
+- Texture、Mesh、Material 與 Font 是資料；Sprite、MeshInstance 與 Control 才把它們放進 Runtime。
+
+- 從 2D 到 3D，不是把 API 全部重背，而是保留結構、補上空間。
+
+- 渲染方法是平台與功能的取捨，不是一個抽象畫質排行榜。
+
+- 多解析度不是把畫面拉大縮小，而是重新確認世界與 UI 的關係。
+
+本章官方資料索引
+
+- Multiple resolutions：https://docs.godotengine.org/en/stable/tutorials/rendering/multiple_resolutions.html
+
+- Control：https://docs.godotengine.org/en/stable/classes/class_control.html
+
+- Using Containers：https://docs.godotengine.org/en/stable/tutorials/ui/gui_containers.html
+
+- Using 2D transforms：https://docs.godotengine.org/en/stable/tutorials/2d/2d_transforms.html
+
+- Introduction to 3D：https://docs.godotengine.org/en/stable/tutorials/3d/introduction_to_3d.html
+
+- Renderers：https://docs.godotengine.org/en/stable/tutorials/rendering/renderers.html

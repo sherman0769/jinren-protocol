@@ -154,3 +154,4 @@ Completion rules:
 - For any task that changes app code, public assets, metadata, or project workflow rules, run the appropriate validation, commit the relevant files, push the branch, and deploy to production.
 - A task is not considered complete until the pushed commit and production deployment have succeeded.
 - When a user adds a new repeatable preference or workflow requirement, update `AGENTS.md` as part of the same task.
+- The user has granted standing authorization for this repository to commit validated task-relevant changes, push them, and deploy directly to production without pausing for separate commit, push, or deployment confirmations. Continue to preserve unrelated workspace changes and keep destructive, payment, credential, account, and external-submission actions behind their existing confirmation requirements.
