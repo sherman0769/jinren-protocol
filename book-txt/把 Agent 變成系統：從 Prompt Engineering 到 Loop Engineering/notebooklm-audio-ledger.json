@@ -5,7 +5,7 @@
   "notebookUrl": "https://notebooklm.google.com/notebook/c5928934-7aa3-4227-8417-67a3c795acb0",
   "expectedChapterCount": 18,
   "createdAt": "2026-07-12T10:57:05.058Z",
-  "updatedAt": "2026-07-12T14:09:51.4928990Z",
+  "updatedAt": "2026-07-12T14:40:03.7667712Z",
   "integrityValidation": {
     "status": "complete",
     "checkedAt": "2026-07-12T14:09:51.4928990Z",
@@ -17,6 +17,15 @@
       8,
       9
     ]
+  },
+  "productionValidation": {
+    "status": "complete",
+    "checkedAt": "2026-07-12T14:40:03.7667712Z",
+    "baseUrl": "https://jinren-protocol.vercel.app",
+    "method": "http-size-match-and-remote-seek-decode",
+    "checkedChapterCount": 18,
+    "remoteSeekPassedCount": 18,
+    "failedChapterNumbers": []
   },
   "entries": [
     {

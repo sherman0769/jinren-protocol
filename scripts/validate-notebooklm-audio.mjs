@@ -12,10 +12,11 @@ const readArg = (name) => {
 const positionalArgs = args.filter((arg) => !arg.startsWith("--"));
 const slug = readArg("--slug") ?? positionalArgs[0];
 const baseUrl = (readArg("--base-url") ?? positionalArgs[1])?.replace(/\/$/, "");
+const remoteSeek = args.includes("--remote-seek") || positionalArgs.includes("remote-seek");
 
 if (!slug) {
   throw new Error(
-    "Usage: npm run validate:notebooklm-audio -- <slug> [base-url]",
+    "Usage: npm run validate:notebooklm-audio -- <slug> [base-url] [remote-seek]",
   );
 }
 
@@ -240,7 +241,41 @@ for (const chapter of book.chapters) {
         `Chapter ${chapter.number} production size mismatch: local=${audioFileSize}, production=${contentLength}`,
       );
     }
-    result.production = { status: response.status, contentType, contentLength };
+    const seekSeconds = Math.max(1, Math.min(120, Math.floor(cardDuration / 2)));
+    let remoteSeekStatus;
+    if (remoteSeek) {
+      const remoteDecode = spawnSync(
+        "ffmpeg",
+        [
+          "-hide_banner",
+          "-v",
+          "error",
+          "-xerror",
+          "-ss",
+          String(seekSeconds),
+          "-i",
+          `${baseUrl}${chapter.audio.src}`,
+          "-t",
+          "5",
+          "-map",
+          "0:a:0",
+          "-f",
+          "null",
+          "-",
+        ],
+        { stdio: "ignore", timeout: 30_000 },
+      );
+      remoteSeekStatus = remoteDecode.status === 0 ? "passed" : "failed";
+      if (remoteDecode.status !== 0) {
+        errors.push(`Chapter ${chapter.number} production seek failed at ${seekSeconds}s`);
+      }
+    }
+    result.production = {
+      status: response.status,
+      contentType,
+      contentLength,
+      remoteSeek: remoteSeek ? { seconds: seekSeconds, status: remoteSeekStatus } : "not-requested",
+    };
   }
 
   result.codec = audioStream?.codec_name;
@@ -279,6 +314,7 @@ const report = {
   audioCount: audioFiles.length,
   queueAudit: queueAudits.length === book.chapters.length ? "complete" : "legacy-unavailable",
   productionChecked: Boolean(baseUrl),
+  productionRemoteSeekChecked: Boolean(baseUrl && remoteSeek),
   warnings,
   errors,
   chapters: chapterResults,
