@@ -12,6 +12,9 @@
     "export:book-txt": "node scripts/export-book-txt.mjs",
     "link:book-audio": "node scripts/link-book-audio.mjs",
     "plan:audio-blob": "node scripts/plan-audio-blob-migration.mjs --output tmp/audio-blob-migration-plan.json",
+    "transcode:book-audio": "node scripts/transcode-book-audio.mjs",
+    "stage:book-audio": "node scripts/transcode-book-audio.mjs --stage",
+    "apply:book-audio": "node scripts/transcode-book-audio.mjs --apply",
     "validate:notebooklm-audio": "node scripts/validate-notebooklm-audio.mjs",
     "verify:podcast-ux": "node scripts/verify-podcast-ux.mjs"
   },
