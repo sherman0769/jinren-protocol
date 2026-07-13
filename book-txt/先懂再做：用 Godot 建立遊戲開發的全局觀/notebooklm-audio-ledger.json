@@ -448,7 +448,7 @@
         "blobPathname": "books/godot-understand-before-building/audio/01_序章｜我不想先成為工程師，我只想先看懂遊戲怎麼運作.m4a",
         "blobEtag": "\"a63cf48df144b87af1a3116ec82991e2-2\"",
         "blobHeadVerified": true,
-        "blobRemoteSeekVerified": false
+        "blobRemoteSeekVerified": true
       },
       {
         "chapterNumber": 2,
@@ -480,7 +480,7 @@
         "blobPathname": "books/godot-understand-before-building/audio/02_第一章｜Godot 到底是什麼：先看懂遊戲引擎的位置.m4a",
         "blobEtag": "\"f58a053b2971c01b00bb1b52a94cb95d-2\"",
         "blobHeadVerified": true,
-        "blobRemoteSeekVerified": false
+        "blobRemoteSeekVerified": true
       },
       {
         "chapterNumber": 3,
@@ -512,7 +512,7 @@
         "blobPathname": "books/godot-understand-before-building/audio/03_第二章｜遊戲不是畫面，而是一套持續運轉的規則.m4a",
         "blobEtag": "\"6b36df5709107499fe33b26a9a48194b-2\"",
         "blobHeadVerified": true,
-        "blobRemoteSeekVerified": false
+        "blobRemoteSeekVerified": true
       },
       {
         "chapterNumber": 4,
@@ -544,7 +544,7 @@
         "blobPathname": "books/godot-understand-before-building/audio/04_第三章｜打開 Godot 之後：專案、編輯器與檔案正在做什麼.m4a",
         "blobEtag": "\"fc99511577652e7e505aedd867152440-2\"",
         "blobHeadVerified": true,
-        "blobRemoteSeekVerified": false
+        "blobRemoteSeekVerified": true
       },
       {
         "chapterNumber": 5,
@@ -576,7 +576,7 @@
         "blobPathname": "books/godot-understand-before-building/audio/05_第四章｜場景、節點與樹：Godot 最重要的語法.m4a",
         "blobEtag": "\"288e7e66a19a2c0beec0318ab1f2d37b-2\"",
         "blobHeadVerified": true,
-        "blobRemoteSeekVerified": false
+        "blobRemoteSeekVerified": true
       },
       {
         "chapterNumber": 6,
@@ -608,7 +608,7 @@
         "blobPathname": "books/godot-understand-before-building/audio/06_第五章｜資源、素材與資料：哪些東西應該被保存與重複使用.m4a",
         "blobEtag": "\"ac8f826210b86943c209336ff008423a-2\"",
         "blobHeadVerified": true,
-        "blobRemoteSeekVerified": false
+        "blobRemoteSeekVerified": true
       },
       {
         "chapterNumber": 7,
@@ -640,7 +640,7 @@
         "blobPathname": "books/godot-understand-before-building/audio/07_第六章｜GDScript 不必先背，但必須看懂它在表達什麼.m4a",
         "blobEtag": "\"caf8e7e1133c4d4e5daa3ece6d2d513f-3\"",
         "blobHeadVerified": true,
-        "blobRemoteSeekVerified": false
+        "blobRemoteSeekVerified": true
       },
       {
         "chapterNumber": 8,
@@ -672,7 +672,7 @@
         "blobPathname": "books/godot-understand-before-building/audio/08_第七章｜輸入、訊號、事件與狀態：遊戲物件如何互相溝通.m4a",
         "blobEtag": "\"499185037d5ec2879da1be3f16893623-2\"",
         "blobHeadVerified": true,
-        "blobRemoteSeekVerified": false
+        "blobRemoteSeekVerified": true
       },
       {
         "chapterNumber": 9,
@@ -704,7 +704,7 @@
         "blobPathname": "books/godot-understand-before-building/audio/09_第八章｜每一幀發生什麼：生命週期、時間、物理與動畫.m4a",
         "blobEtag": "\"eb98212fd1eb4cfe8fb42e9053997d3e-2\"",
         "blobHeadVerified": true,
-        "blobRemoteSeekVerified": false
+        "blobRemoteSeekVerified": true
       },
       {
         "chapterNumber": 10,
@@ -736,7 +736,7 @@
         "blobPathname": "books/godot-understand-before-building/audio/10_第九章｜2D、3D 與 UI：三個看似不同、其實相通的空間.m4a",
         "blobEtag": "\"425b8e2852593e597e70aa2e7775f4e9-2\"",
         "blobHeadVerified": true,
-        "blobRemoteSeekVerified": false
+        "blobRemoteSeekVerified": true
       },
       {
         "chapterNumber": 11,
@@ -768,7 +768,7 @@
         "blobPathname": "books/godot-understand-before-building/audio/11_第十章｜從能跑到能維護：Godot 專案的架構思維.m4a",
         "blobEtag": "\"355b62434c74ec173ab279d8b83f25c0-2\"",
         "blobHeadVerified": true,
-        "blobRemoteSeekVerified": false
+        "blobRemoteSeekVerified": true
       },
       {
         "chapterNumber": 12,
@@ -800,7 +800,7 @@
         "blobPathname": "books/godot-understand-before-building/audio/12_第十一章｜如何指揮 Codex 開發 Godot，而不是讓它自由發揮.m4a",
         "blobEtag": "\"0ba0d991488b3f8c4e9349b0316e5ed2-2\"",
         "blobHeadVerified": true,
-        "blobRemoteSeekVerified": false
+        "blobRemoteSeekVerified": true
       },
       {
         "chapterNumber": 13,
@@ -832,7 +832,7 @@
         "blobPathname": "books/godot-understand-before-building/audio/13_第十二章｜完成、匯出與教學：把一次開發變成可複製的方法.m4a",
         "blobEtag": "\"e62f6abf45de8b10a9c47332f59b2a01-2\"",
         "blobHeadVerified": true,
-        "blobRemoteSeekVerified": false
+        "blobRemoteSeekVerified": true
       },
       {
         "chapterNumber": 14,
@@ -864,7 +864,7 @@
         "blobPathname": "books/godot-understand-before-building/audio/14_結語｜真正要學會的不是 Godot，而是如何理解一個系統.m4a",
         "blobEtag": "\"e12845b5c842c3bdb6c266fc1f21ece6-2\"",
         "blobHeadVerified": true,
-        "blobRemoteSeekVerified": false
+        "blobRemoteSeekVerified": true
       },
       {
         "chapterNumber": 15,
@@ -896,7 +896,7 @@
         "blobPathname": "books/godot-understand-before-building/audio/15_附錄｜把概念變成可查、可下指令、可教學的工作工具.m4a",
         "blobEtag": "\"2bf51edb6e399c14d7e9970db71458ab-2\"",
         "blobHeadVerified": true,
-        "blobRemoteSeekVerified": false
+        "blobRemoteSeekVerified": true
       }
     ]
   },
@@ -925,13 +925,13 @@
     "productionBaseUrl": "https://jinren-protocol.vercel.app"
   },
   "blobMigrationValidation": {
-    "status": "uploaded-and-applied",
+    "status": "production-verified",
     "provider": "vercel-blob",
     "access": "public",
     "region": "hnd1",
     "checkedAudioCount": 15,
     "failedChapterNumbers": [],
     "exactContentLengthChecked": true,
-    "remoteSeekChecked": false
+    "remoteSeekChecked": true
   }
 }

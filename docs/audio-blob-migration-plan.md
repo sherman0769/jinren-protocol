@@ -1,11 +1,11 @@
 # Audio storage migration plan
 
-## Current state
+## Completed state
 
-- Production audio is stored under `public/books/<slug>/audio/` and served by the Next.js deployment.
-- The repository currently tracks every published audio asset in Git.
-- The linked Vercel project currently has no Blob store and no `BLOB_READ_WRITE_TOKEN` environment variable.
-- Creating a Blob store is therefore an external resource-provisioning step and is intentionally outside the dry-run.
+- The public Blob Store is `jinren-protocol-audio` (`hnd1`) and is linked to the Vercel project for production, preview, and development.
+- Canonical chapter `audio.src` values use deterministic public Blob URLs without random filename suffixes.
+- Local audio is used only as a validation and rollback stage. After Blob production validation succeeds, tracked files under `public/books/<slug>/audio/` are removed in a separate commit.
+- `BLOB_READ_WRITE_TOKEN` is injected by Vercel and may be pulled into ignored `.env.local`; it must never be committed or printed.
 
 ## Safety model
 
@@ -37,9 +37,9 @@ node scripts/plan-audio-blob-migration.mjs --skip-hash
 
 A no-hash result is not eligible for execution. The actual migration must use a manifest whose `status` is `passed`, whose `hashAlgorithm` is `sha256`, and whose invariants are all `true`.
 
-## Required confirmation before upload
+## Provisioning note
 
-The linked Vercel project needs a new Blob store. Before provisioning it, confirm the active Vercel plan, storage/transfer pricing, retention requirements, and whether public Blob URLs are acceptable. Store creation and upload can incur external usage and are not performed by the dry-run.
+The user approved creation of a public Blob Store and the associated storage/transfer usage before provisioning. Future stores or changes to access level still require a separate scope and cost review.
 
 ## Expected repository impact
 

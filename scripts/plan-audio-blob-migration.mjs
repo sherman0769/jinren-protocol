@@ -159,10 +159,29 @@ const selectedBooks = books.filter(
   (book) =>
     (!requestedSlug || book.slug === requestedSlug) &&
     Array.isArray(book.chapters) &&
-    book.chapters.some((chapter) => chapter.audio?.src),
+    book.chapters.some((chapter) => chapter.audio?.src?.startsWith("/")),
 );
 if (selectedBooks.length === 0) {
-  throw new Error(requestedSlug ? `Book has no audio references: ${requestedSlug}` : "No audio references found");
+  const remoteAudioCount = books.reduce(
+    (total, book) =>
+      total +
+      (book.chapters ?? []).filter((chapter) => /^https:\/\//iu.test(chapter.audio?.src ?? "")).length,
+    0,
+  );
+  console.log(
+    JSON.stringify(
+      {
+        status: "passed",
+        mode: "already-migrated",
+        localAudioCount: 0,
+        remoteAudioCount,
+        mutations: false,
+      },
+      null,
+      2,
+    ),
+  );
+  process.exit(0);
 }
 
 const tracked = trackedFiles();

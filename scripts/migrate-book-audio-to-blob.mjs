@@ -205,10 +205,21 @@ async function verifyExistingEntry(entry) {
   };
 }
 
-async function assertStoreIdentity(entries) {
+function canonicalBlobPathnames(document) {
+  return booksFromDocument(document).flatMap((book) =>
+    (book.chapters ?? [])
+      .filter((chapter) => /^https:\/\//iu.test(chapter.audio?.src ?? ""))
+      .map((chapter) => decodeURIComponent(new URL(chapter.audio.src).pathname.replace(/^\//u, ""))),
+  );
+}
+
+async function assertStoreIdentity(entries, document = JSON.parse(readFileSync(booksPath, "utf8"))) {
   const result = await list({ prefix: "books/", limit: 1000, mode: "expanded" });
   const actual = result.blobs.map((blob) => blob.pathname).sort();
-  const expected = entries.map((entry) => entry.blobPathname).sort();
+  const expected = [...new Set([
+    ...canonicalBlobPathnames(document),
+    ...entries.map((entry) => entry.blobPathname),
+  ])].sort();
   if (result.hasMore) throw new Error("Blob listing has more than 1000 results; identity is ambiguous");
   if (actual.length !== expected.length || actual.some((value, index) => value !== expected[index])) {
     throw new Error(`Blob Store identity mismatch: expected ${expected.length}, found ${actual.length}`);

@@ -299,7 +299,7 @@
         "blobPathname": "books/turn-agent-into-system/audio/01_序章｜為什麼我們不能只停留在 Prompt Engineering？.m4a",
         "blobEtag": "\"91290b096a23f7a421d8259d57f56c14-2\"",
         "blobHeadVerified": true,
-        "blobRemoteSeekVerified": false
+        "blobRemoteSeekVerified": true
       },
       {
         "chapterNumber": 2,
@@ -329,7 +329,7 @@
         "blobPathname": "books/turn-agent-into-system/audio/02_第一章｜工作流也是知識：AI 專案不能只留下成果.m4a",
         "blobEtag": "\"3408ae236e862d58a6568d148a97afcd-2\"",
         "blobHeadVerified": true,
-        "blobRemoteSeekVerified": false
+        "blobRemoteSeekVerified": true
       },
       {
         "chapterNumber": 3,
@@ -359,7 +359,7 @@
         "blobPathname": "books/turn-agent-into-system/audio/03_第二章｜記憶不是資料庫：真正重要的是何時提醒.m4a",
         "blobEtag": "\"273289f7676d88de2e6577786972720c-2\"",
         "blobHeadVerified": true,
-        "blobRemoteSeekVerified": false
+        "blobRemoteSeekVerified": true
       },
       {
         "chapterNumber": 4,
@@ -389,7 +389,7 @@
         "blobPathname": "books/turn-agent-into-system/audio/04_第三章｜從提示詞到契約：企業 Agent 不能只靠「請你遵守」.m4a",
         "blobEtag": "\"756ed9f779ab2be5cb08111deef9d327-2\"",
         "blobHeadVerified": true,
-        "blobRemoteSeekVerified": false
+        "blobRemoteSeekVerified": true
       },
       {
         "chapterNumber": 5,
@@ -419,7 +419,7 @@
         "blobPathname": "books/turn-agent-into-system/audio/05_第四章｜讓 Agent 探索，讓系統接手：成功流程的漸進式固化.m4a",
         "blobEtag": "\"99cc7332d7427364d59464e883a52b12-2\"",
         "blobHeadVerified": true,
-        "blobRemoteSeekVerified": false
+        "blobRemoteSeekVerified": true
       },
       {
         "chapterNumber": 6,
@@ -449,7 +449,7 @@
         "blobPathname": "books/turn-agent-into-system/audio/06_第五章｜如何把問題交給 Coding Agent：好的交接，比好的提示詞更重要.m4a",
         "blobEtag": "\"bc8e4fb9963f471ccbb7791f4f911ed7-2\"",
         "blobHeadVerified": true,
-        "blobRemoteSeekVerified": false
+        "blobRemoteSeekVerified": true
       },
       {
         "chapterNumber": 7,
@@ -479,7 +479,7 @@
         "blobPathname": "books/turn-agent-into-system/audio/07_第六章｜影片也能推理：從 Chain-of-Thought 到 Chain-of-Frame.m4a",
         "blobEtag": "\"2239c5ae61af2163bb26be983344990a-2\"",
         "blobHeadVerified": true,
-        "blobRemoteSeekVerified": false
+        "blobRemoteSeekVerified": true
       },
       {
         "chapterNumber": 8,
@@ -509,7 +509,7 @@
         "blobPathname": "books/turn-agent-into-system/audio/08_第七章｜虛擬教練開始動起來：互動式人體動作生成與健身 AI.m4a",
         "blobEtag": "\"26761c018070d79c8bba906c727dad54-2\"",
         "blobHeadVerified": true,
-        "blobRemoteSeekVerified": false
+        "blobRemoteSeekVerified": true
       },
       {
         "chapterNumber": 9,
@@ -539,7 +539,7 @@
         "blobPathname": "books/turn-agent-into-system/audio/09_第八章｜AI 學習助理進入校園：使用率不是學習成效.m4a",
         "blobEtag": "\"d6fac500959923406c88d965de85fdf3-2\"",
         "blobHeadVerified": true,
-        "blobRemoteSeekVerified": false
+        "blobRemoteSeekVerified": true
       },
       {
         "chapterNumber": 10,
@@ -569,7 +569,7 @@
         "blobPathname": "books/turn-agent-into-system/audio/10_第九章｜看得懂不等於算得準：健身 AI 與健康建議的安全邊界.m4a",
         "blobEtag": "\"488488ce8c63f1e5b26280dd9a99db70-3\"",
         "blobHeadVerified": true,
-        "blobRemoteSeekVerified": false
+        "blobRemoteSeekVerified": true
       },
       {
         "chapterNumber": 11,
@@ -599,7 +599,7 @@
         "blobPathname": "books/turn-agent-into-system/audio/11_第十章｜從對話到委派：Codex 顯示 AI 工作單位正在變大.m4a",
         "blobEtag": "\"3539bd8efed70a88aee624276ee2dacf-2\"",
         "blobHeadVerified": true,
-        "blobRemoteSeekVerified": false
+        "blobRemoteSeekVerified": true
       },
       {
         "chapterNumber": 12,
@@ -629,7 +629,7 @@
         "blobPathname": "books/turn-agent-into-system/audio/12_終章｜Loop Engineering：人不是在迴路裡救火，而是在迴路上方設計系統.m4a",
         "blobEtag": "\"5ec15c99e35fcb75d0196e9f7278e6bd-2\"",
         "blobHeadVerified": true,
-        "blobRemoteSeekVerified": false
+        "blobRemoteSeekVerified": true
       },
       {
         "chapterNumber": 13,
@@ -659,7 +659,7 @@
         "blobPathname": "books/turn-agent-into-system/audio/13_附錄 A｜九層 Loop Engineering Canvas.m4a",
         "blobEtag": "\"66ea0fc521cb410b6139cbfc12a0a84d-2\"",
         "blobHeadVerified": true,
-        "blobRemoteSeekVerified": false
+        "blobRemoteSeekVerified": true
       },
       {
         "chapterNumber": 14,
@@ -689,7 +689,7 @@
         "blobPathname": "books/turn-agent-into-system/audio/14_附錄 B｜工作流護照模板.m4a",
         "blobEtag": "\"4e19ec4084e427e1703f098dffce1d21-2\"",
         "blobHeadVerified": true,
-        "blobRemoteSeekVerified": false
+        "blobRemoteSeekVerified": true
       },
       {
         "chapterNumber": 15,
@@ -719,7 +719,7 @@
         "blobPathname": "books/turn-agent-into-system/audio/15_附錄 C｜AI-readable Bug Report 模板.m4a",
         "blobEtag": "\"7095a2846319c0b5e01df3797d9481da-2\"",
         "blobHeadVerified": true,
-        "blobRemoteSeekVerified": false
+        "blobRemoteSeekVerified": true
       },
       {
         "chapterNumber": 16,
@@ -749,7 +749,7 @@
         "blobPathname": "books/turn-agent-into-system/audio/16_附錄 D｜論文轉成課程與 FB 貼文的編輯模板.m4a",
         "blobEtag": "\"e794e1a3101f42e8470c8c5adecddd83-2\"",
         "blobHeadVerified": true,
-        "blobRemoteSeekVerified": false
+        "blobRemoteSeekVerified": true
       },
       {
         "chapterNumber": 17,
@@ -779,7 +779,7 @@
         "blobPathname": "books/turn-agent-into-system/audio/17_附錄 E｜D／I／H／A 工作流標記法.m4a",
         "blobEtag": "\"3121607a43db23ee7c2cba083e703320-2\"",
         "blobHeadVerified": true,
-        "blobRemoteSeekVerified": false
+        "blobRemoteSeekVerified": true
       },
       {
         "chapterNumber": 18,
@@ -809,7 +809,7 @@
         "blobPathname": "books/turn-agent-into-system/audio/18_參考資料.m4a",
         "blobEtag": "\"98daef974f13db9af34390e6ae89d8e9-2\"",
         "blobHeadVerified": true,
-        "blobRemoteSeekVerified": false
+        "blobRemoteSeekVerified": true
       }
     ]
   },
@@ -830,13 +830,13 @@
     "productionBaseUrl": "https://jinren-protocol.vercel.app"
   },
   "blobMigrationValidation": {
-    "status": "uploaded-and-applied",
+    "status": "production-verified",
     "provider": "vercel-blob",
     "access": "public",
     "region": "hnd1",
     "checkedAudioCount": 18,
     "failedChapterNumbers": [],
     "exactContentLengthChecked": true,
-    "remoteSeekChecked": false
+    "remoteSeekChecked": true
   }
 }

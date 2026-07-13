@@ -208,7 +208,7 @@
         "blobPathname": "books/gpt-5-6-complete-guide/audio/01_GPT-5.6 不是模型更新，而是工作方式更新.m4a",
         "blobEtag": "\"a54ccc2c3b8b6e18b982124ecfcdbcc6-3\"",
         "blobHeadVerified": true,
-        "blobRemoteSeekVerified": false
+        "blobRemoteSeekVerified": true
       },
       {
         "chapterNumber": 2,
@@ -240,7 +240,7 @@
         "blobPathname": "books/gpt-5-6-complete-guide/audio/02_Sol、Terra、Luna：模型不再選最強，而是選最適合.m4a",
         "blobEtag": "\"f98355e6c1526985d0655165aa231a2e-3\"",
         "blobHeadVerified": true,
-        "blobRemoteSeekVerified": false
+        "blobRemoteSeekVerified": true
       },
       {
         "chapterNumber": 3,
@@ -272,7 +272,7 @@
         "blobPathname": "books/gpt-5-6-complete-guide/audio/03_Instant、Medium、High、Extra High、Pro 怎麼選？.m4a",
         "blobEtag": "\"42bded7423a37c99bae75950e56432c0-2\"",
         "blobHeadVerified": true,
-        "blobRemoteSeekVerified": false
+        "blobRemoteSeekVerified": true
       },
       {
         "chapterNumber": 4,
@@ -304,7 +304,7 @@
         "blobPathname": "books/gpt-5-6-complete-guide/audio/04_ChatGPT Work：ChatGPT 開始進入工作現場.m4a",
         "blobEtag": "\"792aacbd50f860c15158f52103a7c669-2\"",
         "blobHeadVerified": true,
-        "blobRemoteSeekVerified": false
+        "blobRemoteSeekVerified": true
       },
       {
         "chapterNumber": 5,
@@ -336,7 +336,7 @@
         "blobPathname": "books/gpt-5-6-complete-guide/audio/05_從 Prompt Engineering 到 Outcome Engineering.m4a",
         "blobEtag": "\"fd0e738daf7652ddbe00f526d744c0c4-2\"",
         "blobHeadVerified": true,
-        "blobRemoteSeekVerified": false
+        "blobRemoteSeekVerified": true
       },
       {
         "chapterNumber": 6,
@@ -368,7 +368,7 @@
         "blobPathname": "books/gpt-5-6-complete-guide/audio/06_GPT-5.6 的文件、簡報與試算表革命.m4a",
         "blobEtag": "\"0779041f5e6b0136af69a6ec3b669b14-2\"",
         "blobHeadVerified": true,
-        "blobRemoteSeekVerified": false
+        "blobRemoteSeekVerified": true
       },
       {
         "chapterNumber": 7,
@@ -400,7 +400,7 @@
         "blobPathname": "books/gpt-5-6-complete-guide/audio/07_Codex：從寫程式進化成數位工作者.m4a",
         "blobEtag": "\"55138d6bef8d8866953d52ac92545c5b-2\"",
         "blobHeadVerified": true,
-        "blobRemoteSeekVerified": false
+        "blobRemoteSeekVerified": true
       },
       {
         "chapterNumber": 8,
@@ -432,7 +432,7 @@
         "blobPathname": "books/gpt-5-6-complete-guide/audio/08_Sites：AI 做完之後，如何直接變成產品？.m4a",
         "blobEtag": "\"3db42c0cc89dcd45008a10b6bfdc853b-2\"",
         "blobHeadVerified": true,
-        "blobRemoteSeekVerified": false
+        "blobRemoteSeekVerified": true
       },
       {
         "chapterNumber": 9,
@@ -464,7 +464,7 @@
         "blobPathname": "books/gpt-5-6-complete-guide/audio/09_Ultra 與 Multi-Agent：一個 AI 不再負責所有事情.m4a",
         "blobEtag": "\"3c953ce4f156a0432a0b6684ad1259a2-2\"",
         "blobHeadVerified": true,
-        "blobRemoteSeekVerified": false
+        "blobRemoteSeekVerified": true
       },
       {
         "chapterNumber": 10,
@@ -496,7 +496,7 @@
         "blobPathname": "books/gpt-5-6-complete-guide/audio/10_GPT-5.6 API：給 AI 架構師與開發者的實戰指南.m4a",
         "blobEtag": "\"c698f901571f9612f9f4c1d26ef28ad2-2\"",
         "blobHeadVerified": true,
-        "blobRemoteSeekVerified": false
+        "blobRemoteSeekVerified": true
       },
       {
         "chapterNumber": 11,
@@ -528,7 +528,7 @@
         "blobPathname": "books/gpt-5-6-complete-guide/audio/11_安全、隱私與 GPT-5.6 的使用邊界.m4a",
         "blobEtag": "\"a91ad8cd2e83ad249a0a98cfd771cfa3-2\"",
         "blobHeadVerified": true,
-        "blobRemoteSeekVerified": false
+        "blobRemoteSeekVerified": true
       },
       {
         "chapterNumber": 12,
@@ -560,7 +560,7 @@
         "blobPathname": "books/gpt-5-6-complete-guide/audio/12_GPT-5.6 時代的 Human on Loop.m4a",
         "blobEtag": "\"4a7d47731fc4d2d0bbe3d2194bf993b5-2\"",
         "blobHeadVerified": true,
-        "blobRemoteSeekVerified": false
+        "blobRemoteSeekVerified": true
       }
     ]
   },
@@ -582,13 +582,13 @@
     "productionBaseUrl": "https://jinren-protocol.vercel.app"
   },
   "blobMigrationValidation": {
-    "status": "uploaded-and-applied",
+    "status": "production-verified",
     "provider": "vercel-blob",
     "access": "public",
     "region": "hnd1",
     "checkedAudioCount": 12,
     "failedChapterNumbers": [],
     "exactContentLengthChecked": true,
-    "remoteSeekChecked": false
+    "remoteSeekChecked": true
   }
 }

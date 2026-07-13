@@ -204,7 +204,7 @@
         "blobPathname": "books/standing-above-multi-agent-workbench/audio/01_從 IDE 到 Agentic Workbench：開發工具正在換一種形狀.m4a",
         "blobEtag": "\"a81de073fe4d5bf9c7f44d017d75f720-2\"",
         "blobHeadVerified": true,
-        "blobRemoteSeekVerified": false
+        "blobRemoteSeekVerified": true
       }
     ],
     "downloadedCount": 1,
@@ -227,13 +227,13 @@
     "productionBaseUrl": "https://jinren-protocol.vercel.app"
   },
   "blobMigrationValidation": {
-    "status": "uploaded-and-applied",
+    "status": "production-verified",
     "provider": "vercel-blob",
     "access": "public",
     "region": "hnd1",
     "checkedAudioCount": 1,
     "failedChapterNumbers": [],
     "exactContentLengthChecked": true,
-    "remoteSeekChecked": false
+    "remoteSeekChecked": true
   }
 }

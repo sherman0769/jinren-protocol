@@ -50,8 +50,15 @@ const toSeconds = (duration) => {
     : Number.NaN;
 };
 
+const remoteAudioChapters = book.chapters.filter((chapter) => /^https:\/\//iu.test(chapter.audio?.src ?? ""));
+const localAudioChapters = book.chapters.filter(
+  (chapter) => chapter.audio?.src && !/^https:\/\//iu.test(chapter.audio.src),
+);
+
 if (!existsSync(ledgerPath)) errors.push(`Missing ledger: ${ledgerPath}`);
-if (!existsSync(audioFolder)) errors.push(`Missing audio folder: ${audioFolder}`);
+if (localAudioChapters.length > 0 && !existsSync(audioFolder)) {
+  errors.push(`Missing audio folder: ${audioFolder}`);
+}
 
 const ledger = existsSync(ledgerPath)
   ? JSON.parse(readFileSync(ledgerPath, "utf8"))
@@ -75,8 +82,8 @@ if (txtFiles.length !== book.chapters.length) {
 if (ledger.entries?.length !== book.chapters.length) {
   errors.push(`Ledger entry count ${ledger.entries?.length ?? 0} != chapter count ${book.chapters.length}`);
 }
-if (audioFiles.length !== book.chapters.length) {
-  errors.push(`Audio file count ${audioFiles.length} != chapter count ${book.chapters.length}`);
+if (audioFiles.length !== localAudioChapters.length) {
+  errors.push(`Local audio file count ${audioFiles.length} != local reference count ${localAudioChapters.length}`);
 }
 
 const queueAudits = ledger.entries?.filter(
@@ -145,6 +152,93 @@ for (const chapter of book.chapters) {
   const audioPath = path.join(audioFolder, audioFilename);
   if (!audioFilename.startsWith(`${expectedTitle}.`)) {
     errors.push(`Chapter ${chapter.number} audio filename mismatch: ${audioFilename}`);
+  }
+  const isRemoteAudio = /^https:\/\//iu.test(chapter.audio.src);
+  if (isRemoteAudio) {
+    const audioFileSize = Number(download?.fileSizeBytes);
+    const actualDuration = Number(download?.durationSeconds);
+    const cardDuration = toSeconds(entry?.duration);
+    const durationDelta = Math.abs(actualDuration - cardDuration);
+    const lastPacketDuration = Number(download?.lastPacketDurationSeconds);
+    const fullDecode = download?.fullDecode === true;
+    if (!Number.isFinite(audioFileSize) || audioFileSize <= 0) {
+      errors.push(`Chapter ${chapter.number} ledger file size is missing`);
+    }
+    if (download?.codec !== "aac") errors.push(`Chapter ${chapter.number} ledger codec is not AAC`);
+    if (!Number.isFinite(cardDuration) || !Number.isFinite(actualDuration) || durationDelta > 2) {
+      errors.push(`Chapter ${chapter.number} duration mismatch: card=${entry?.duration}, ledger=${actualDuration}`);
+    }
+    if (!Number.isFinite(lastPacketDuration) || Math.abs(lastPacketDuration - cardDuration) > 2) {
+      errors.push(
+        `Chapter ${chapter.number} playable packet duration mismatch: card=${entry?.duration}, ledgerLastPacket=${lastPacketDuration}`,
+      );
+    }
+    if (!fullDecode) errors.push(`Chapter ${chapter.number} has no recorded full local decode`);
+    if (!download?.linkedInBooksJson) errors.push(`Chapter ${chapter.number} is not ledger-linked`);
+    if (download?.audioSrc !== chapter.audio.src) errors.push(`Chapter ${chapter.number} ledger audio.src mismatch`);
+    if (download?.storage !== "vercel-blob" || download?.blobUrl !== chapter.audio.src) {
+      errors.push(`Chapter ${chapter.number} Blob ledger identity mismatch`);
+    }
+
+    if (baseUrl) {
+      const productionAudioUrl = resolveAudioUrl(chapter.audio.src);
+      const response = await fetch(productionAudioUrl, { method: "HEAD" });
+      const contentType = response.headers.get("content-type") ?? "";
+      const contentLength = Number(response.headers.get("content-length"));
+      if (!response.ok || !contentType.startsWith("audio/")) {
+        errors.push(`Chapter ${chapter.number} production audio failed: ${response.status} ${contentType}`);
+      }
+      if (!Number.isFinite(contentLength) || contentLength !== audioFileSize) {
+        errors.push(
+          `Chapter ${chapter.number} production size mismatch: ledger=${audioFileSize}, production=${contentLength}`,
+        );
+      }
+      const seekSeconds = Math.max(1, Math.min(120, Math.floor(cardDuration / 2)));
+      let remoteSeekStatus;
+      if (remoteSeek) {
+        const remoteDecode = spawnSync(
+          "ffmpeg",
+          [
+            "-hide_banner",
+            "-v",
+            "error",
+            "-xerror",
+            "-ss",
+            String(seekSeconds),
+            "-i",
+            productionAudioUrl,
+            "-t",
+            "5",
+            "-map",
+            "0:a:0",
+            "-f",
+            "null",
+            "-",
+          ],
+          { stdio: "ignore", timeout: 30_000 },
+        );
+        remoteSeekStatus = remoteDecode.status === 0 ? "passed" : "failed";
+        if (remoteDecode.status !== 0) {
+          errors.push(`Chapter ${chapter.number} production seek failed at ${seekSeconds}s`);
+        }
+      }
+      result.production = {
+        status: response.status,
+        contentType,
+        contentLength,
+        remoteSeek: remoteSeek ? { seconds: seekSeconds, status: remoteSeekStatus } : "not-requested",
+      };
+    }
+
+    result.codec = download?.codec;
+    result.container = download?.container;
+    result.durationSeconds = actualDuration;
+    result.durationDeltaSeconds = durationDelta;
+    result.lastPacketDurationSeconds = lastPacketDuration;
+    result.fullDecode = fullDecode;
+    result.storage = "vercel-blob";
+    chapterResults.push(result);
+    continue;
   }
   if (!existsSync(audioPath) || statSync(audioPath).size === 0) {
     errors.push(`Chapter ${chapter.number} audio file is missing or empty`);
@@ -307,6 +401,16 @@ if (
 ) {
   errors.push("Ledger full-decode integrity validation is missing or incomplete");
 }
+if (
+  remoteAudioChapters.length > 0 &&
+  (
+    ledger.blobMigrationValidation?.status !== "production-verified" ||
+    ledger.blobMigrationValidation?.checkedAudioCount !== remoteAudioChapters.length ||
+    ledger.blobMigrationValidation?.remoteSeekChecked !== true
+  )
+) {
+  errors.push("Ledger Blob migration validation is missing or incomplete");
+}
 
 const report = {
   status: errors.length === 0 ? "passed" : "failed",
@@ -314,7 +418,9 @@ const report = {
   chapterCount: book.chapters.length,
   txtCount: txtFiles.length,
   ledgerEntryCount: ledger.entries?.length ?? 0,
-  audioCount: audioFiles.length,
+  audioCount: book.chapters.filter((chapter) => chapter.audio?.src).length,
+  localAudioCount: audioFiles.length,
+  remoteAudioCount: remoteAudioChapters.length,
   queueAudit: queueAudits.length === book.chapters.length ? "complete" : "legacy-unavailable",
   productionChecked: Boolean(baseUrl),
   productionRemoteSeekChecked: Boolean(baseUrl && remoteSeek),

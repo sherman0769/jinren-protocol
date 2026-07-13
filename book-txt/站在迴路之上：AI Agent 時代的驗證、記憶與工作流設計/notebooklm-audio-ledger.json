@@ -382,7 +382,7 @@
         "blobPathname": "books/standing-above-the-loop-agent-workflow-design/audio/01_序章｜為什麼 ChatGPT 已經不是重點了？.m4a",
         "blobEtag": "\"ce2404cbfde44339189d5b1a4bb20b98-2\"",
         "blobHeadVerified": true,
-        "blobRemoteSeekVerified": false
+        "blobRemoteSeekVerified": true
       },
       {
         "chapterNumber": 2,
@@ -413,7 +413,7 @@
         "blobPathname": "books/standing-above-the-loop-agent-workflow-design/audio/02_第一章｜AI Agent 的新問題：不是能不能做，而是能不能證明它做對了.m4a",
         "blobEtag": "\"7f08e8c011520c4477d9cf199cc1f727-2\"",
         "blobHeadVerified": true,
-        "blobRemoteSeekVerified": false
+        "blobRemoteSeekVerified": true
       },
       {
         "chapterNumber": 3,
@@ -444,7 +444,7 @@
         "blobPathname": "books/standing-above-the-loop-agent-workflow-design/audio/03_第二章｜真實世界不是 Demo：為什麼 Agent 一上線就變笨？.m4a",
         "blobEtag": "\"ba127d1deeff116066902f7e40d91a0a-2\"",
         "blobHeadVerified": true,
-        "blobRemoteSeekVerified": false
+        "blobRemoteSeekVerified": true
       },
       {
         "chapterNumber": 4,
@@ -475,7 +475,7 @@
         "blobPathname": "books/standing-above-the-loop-agent-workflow-design/audio/04_第三章｜Deep Research 的風險：AI 查資料，也可能被資料牽著走.m4a",
         "blobEtag": "\"0970e4d9223b1053f17875d80a49ac89-2\"",
         "blobHeadVerified": true,
-        "blobRemoteSeekVerified": false
+        "blobRemoteSeekVerified": true
       },
       {
         "chapterNumber": 5,
@@ -506,7 +506,7 @@
         "blobPathname": "books/standing-above-the-loop-agent-workflow-design/audio/05_第四章｜AI 的記憶不是聊天紀錄，而是一種系統設計.m4a",
         "blobEtag": "\"a145becd584d5bae9d5bd17159f66429-2\"",
         "blobHeadVerified": true,
-        "blobRemoteSeekVerified": false
+        "blobRemoteSeekVerified": true
       },
       {
         "chapterNumber": 6,
@@ -537,7 +537,7 @@
         "blobPathname": "books/standing-above-the-loop-agent-workflow-design/audio/06_第五章｜圖像生成的下一步：不是提示詞，而是搜尋接地.m4a",
         "blobEtag": "\"b10a624b6dd0505f8e2bb87364074657-2\"",
         "blobHeadVerified": true,
-        "blobRemoteSeekVerified": false
+        "blobRemoteSeekVerified": true
       },
       {
         "chapterNumber": 7,
@@ -568,7 +568,7 @@
         "blobPathname": "books/standing-above-the-loop-agent-workflow-design/audio/07_第六章｜影音生成開始進入「時間」與「視角」的時代.m4a",
         "blobEtag": "\"e8637ba20723ce34cf983448b7564b93-2\"",
         "blobHeadVerified": true,
-        "blobRemoteSeekVerified": false
+        "blobRemoteSeekVerified": true
       },
       {
         "chapterNumber": 8,
@@ -599,7 +599,7 @@
         "blobPathname": "books/standing-above-the-loop-agent-workflow-design/audio/08_第七章｜Coding Agent 從寫程式，走向資安、盤點與技術債整理.m4a",
         "blobEtag": "\"7fa43286bfa617e4bb4cff4a8cfd791c-2\"",
         "blobHeadVerified": true,
-        "blobRemoteSeekVerified": false
+        "blobRemoteSeekVerified": true
       },
       {
         "chapterNumber": 9,
@@ -630,7 +630,7 @@
         "blobPathname": "books/standing-above-the-loop-agent-workflow-design/audio/09_第八章｜多 Agent 協作：未來企業不是一個超級 AI，而是一組專門 AI.m4a",
         "blobEtag": "\"c473eb1dc96676949b3273c0e6f074e0-2\"",
         "blobHeadVerified": true,
-        "blobRemoteSeekVerified": false
+        "blobRemoteSeekVerified": true
       },
       {
         "chapterNumber": 10,
@@ -661,7 +661,7 @@
         "blobPathname": "books/standing-above-the-loop-agent-workflow-design/audio/10_第九章｜AI for Science：研究不只是摘要，而是可稽核的工作台.m4a",
         "blobEtag": "\"17a1d457a5087062519aad3d5cbbc323-2\"",
         "blobHeadVerified": true,
-        "blobRemoteSeekVerified": false
+        "blobRemoteSeekVerified": true
       },
       {
         "chapterNumber": 11,
@@ -692,7 +692,7 @@
         "blobPathname": "books/standing-above-the-loop-agent-workflow-design/audio/11_第十章｜教學的改變：從提示詞教學，走向流程設計教學.m4a",
         "blobEtag": "\"bfed076ba55f495bb002c83523782c60-2\"",
         "blobHeadVerified": true,
-        "blobRemoteSeekVerified": false
+        "blobRemoteSeekVerified": true
       }
     ]
   },
@@ -803,13 +803,13 @@
     "productionBaseUrl": "https://jinren-protocol.vercel.app"
   },
   "blobMigrationValidation": {
-    "status": "uploaded-and-applied",
+    "status": "production-verified",
     "provider": "vercel-blob",
     "access": "public",
     "region": "hnd1",
     "checkedAudioCount": 11,
     "failedChapterNumbers": [],
     "exactContentLengthChecked": true,
-    "remoteSeekChecked": false
+    "remoteSeekChecked": true
   }
 }
