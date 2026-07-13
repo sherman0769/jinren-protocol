@@ -1309,7 +1309,7 @@ export function BookReader({ book, showPodcast = true }: BookReaderProps) {
 
     const onError = () => {
       if (manuallyStoppedRef.current || activeAudioChapterRef.current === null) return;
-      finishAudioPlayback("音檔載入失敗，請確認 books.json 的 audio.src 與 public 檔案一致");
+      finishAudioPlayback("音檔載入失敗，請確認 books.json 的 audio.src 與音檔網址一致");
     };
 
     const onPause = () => {

@@ -182,7 +182,7 @@
         "chapterNumber": 1,
         "audioFilename": "01_GPT-5.6 不是模型更新，而是工作方式更新.m4a",
         "path": "public/books/gpt-5-6-complete-guide/audio/01_GPT-5.6 不是模型更新，而是工作方式更新.m4a",
-        "appAudioSrc": "/books/gpt-5-6-complete-guide/audio/01_GPT-5.6%20%E4%B8%8D%E6%98%AF%E6%A8%A1%E5%9E%8B%E6%9B%B4%E6%96%B0%EF%BC%8C%E8%80%8C%E6%98%AF%E5%B7%A5%E4%BD%9C%E6%96%B9%E5%BC%8F%E6%9B%B4%E6%96%B0.m4a",
+        "appAudioSrc": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/gpt-5-6-complete-guide/audio/01_GPT-5.6%20%E4%B8%8D%E6%98%AF%E6%A8%A1%E5%9E%8B%E6%9B%B4%E6%96%B0%EF%BC%8C%E8%80%8C%E6%98%AF%E5%B7%A5%E4%BD%9C%E6%96%B9%E5%BC%8F%E6%9B%B4%E6%96%B0.m4a",
         "durationSeconds": 1621.332993,
         "codec": "aac",
         "container": "mov,mp4,m4a,3gp,3g2,mj2",
@@ -190,7 +190,7 @@
         "channels": 1,
         "linkedInBooksJson": true,
         "audioPath": "public/books/gpt-5-6-complete-guide/audio/01_GPT-5.6 不是模型更新，而是工作方式更新.m4a",
-        "audioSrc": "/books/gpt-5-6-complete-guide/audio/01_GPT-5.6%20%E4%B8%8D%E6%98%AF%E6%A8%A1%E5%9E%8B%E6%9B%B4%E6%96%B0%EF%BC%8C%E8%80%8C%E6%98%AF%E5%B7%A5%E4%BD%9C%E6%96%B9%E5%BC%8F%E6%9B%B4%E6%96%B0.m4a",
+        "audioSrc": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/gpt-5-6-complete-guide/audio/01_GPT-5.6%20%E4%B8%8D%E6%98%AF%E6%A8%A1%E5%9E%8B%E6%9B%B4%E6%96%B0%EF%BC%8C%E8%80%8C%E6%98%AF%E5%B7%A5%E4%BD%9C%E6%96%B9%E5%BC%8F%E6%9B%B4%E6%96%B0.m4a",
         "lastPacketDurationSeconds": 1621.332993,
         "bitRate": 82415,
         "fileSizeBytes": 16983488,
@@ -202,13 +202,19 @@
           "channels": 2,
           "fileSizeBytes": 52181645,
           "sha256": "800a4f3736c785da3b484f3aa98919f00cad600e802ba6bfe87aab442be88e74"
-        }
+        },
+        "storage": "vercel-blob",
+        "blobUrl": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/gpt-5-6-complete-guide/audio/01_GPT-5.6%20%E4%B8%8D%E6%98%AF%E6%A8%A1%E5%9E%8B%E6%9B%B4%E6%96%B0%EF%BC%8C%E8%80%8C%E6%98%AF%E5%B7%A5%E4%BD%9C%E6%96%B9%E5%BC%8F%E6%9B%B4%E6%96%B0.m4a",
+        "blobPathname": "books/gpt-5-6-complete-guide/audio/01_GPT-5.6 不是模型更新，而是工作方式更新.m4a",
+        "blobEtag": "\"a54ccc2c3b8b6e18b982124ecfcdbcc6-3\"",
+        "blobHeadVerified": true,
+        "blobRemoteSeekVerified": false
       },
       {
         "chapterNumber": 2,
         "audioFilename": "02_Sol、Terra、Luna：模型不再選最強，而是選最適合.m4a",
         "path": "public/books/gpt-5-6-complete-guide/audio/02_Sol、Terra、Luna：模型不再選最強，而是選最適合.m4a",
-        "appAudioSrc": "/books/gpt-5-6-complete-guide/audio/02_Sol%E3%80%81Terra%E3%80%81Luna%EF%BC%9A%E6%A8%A1%E5%9E%8B%E4%B8%8D%E5%86%8D%E9%81%B8%E6%9C%80%E5%BC%B7%EF%BC%8C%E8%80%8C%E6%98%AF%E9%81%B8%E6%9C%80%E9%81%A9%E5%90%88.m4a",
+        "appAudioSrc": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/gpt-5-6-complete-guide/audio/02_Sol%E3%80%81Terra%E3%80%81Luna%EF%BC%9A%E6%A8%A1%E5%9E%8B%E4%B8%8D%E5%86%8D%E9%81%B8%E6%9C%80%E5%BC%B7%EF%BC%8C%E8%80%8C%E6%98%AF%E9%81%B8%E6%9C%80%E9%81%A9%E5%90%88.m4a",
         "durationSeconds": 1612.417007,
         "codec": "aac",
         "container": "mov,mp4,m4a,3gp,3g2,mj2",
@@ -216,7 +222,7 @@
         "channels": 1,
         "linkedInBooksJson": true,
         "audioPath": "public/books/gpt-5-6-complete-guide/audio/02_Sol、Terra、Luna：模型不再選最強，而是選最適合.m4a",
-        "audioSrc": "/books/gpt-5-6-complete-guide/audio/02_Sol%E3%80%81Terra%E3%80%81Luna%EF%BC%9A%E6%A8%A1%E5%9E%8B%E4%B8%8D%E5%86%8D%E9%81%B8%E6%9C%80%E5%BC%B7%EF%BC%8C%E8%80%8C%E6%98%AF%E9%81%B8%E6%9C%80%E9%81%A9%E5%90%88.m4a",
+        "audioSrc": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/gpt-5-6-complete-guide/audio/02_Sol%E3%80%81Terra%E3%80%81Luna%EF%BC%9A%E6%A8%A1%E5%9E%8B%E4%B8%8D%E5%86%8D%E9%81%B8%E6%9C%80%E5%BC%B7%EF%BC%8C%E8%80%8C%E6%98%AF%E9%81%B8%E6%9C%80%E9%81%A9%E5%90%88.m4a",
         "lastPacketDurationSeconds": 1612.417007,
         "bitRate": 82374,
         "fileSizeBytes": 16881889,
@@ -228,13 +234,19 @@
           "channels": 2,
           "fileSizeBytes": 51894666,
           "sha256": "f0498a185a9aa1046b0fabc2f7e8699b76d7445a82b7491b0f4210a8ffb1a4a1"
-        }
+        },
+        "storage": "vercel-blob",
+        "blobUrl": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/gpt-5-6-complete-guide/audio/02_Sol%E3%80%81Terra%E3%80%81Luna%EF%BC%9A%E6%A8%A1%E5%9E%8B%E4%B8%8D%E5%86%8D%E9%81%B8%E6%9C%80%E5%BC%B7%EF%BC%8C%E8%80%8C%E6%98%AF%E9%81%B8%E6%9C%80%E9%81%A9%E5%90%88.m4a",
+        "blobPathname": "books/gpt-5-6-complete-guide/audio/02_Sol、Terra、Luna：模型不再選最強，而是選最適合.m4a",
+        "blobEtag": "\"f98355e6c1526985d0655165aa231a2e-3\"",
+        "blobHeadVerified": true,
+        "blobRemoteSeekVerified": false
       },
       {
         "chapterNumber": 3,
         "audioFilename": "03_Instant、Medium、High、Extra High、Pro 怎麼選？.m4a",
         "path": "public/books/gpt-5-6-complete-guide/audio/03_Instant、Medium、High、Extra High、Pro 怎麼選？.m4a",
-        "appAudioSrc": "/books/gpt-5-6-complete-guide/audio/03_Instant%E3%80%81Medium%E3%80%81High%E3%80%81Extra%20High%E3%80%81Pro%20%E6%80%8E%E9%BA%BC%E9%81%B8%EF%BC%9F.m4a",
+        "appAudioSrc": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/gpt-5-6-complete-guide/audio/03_Instant%E3%80%81Medium%E3%80%81High%E3%80%81Extra%20High%E3%80%81Pro%20%E6%80%8E%E9%BA%BC%E9%81%B8%EF%BC%9F.m4a",
         "durationSeconds": 1340.65,
         "codec": "aac",
         "container": "mov,mp4,m4a,3gp,3g2,mj2",
@@ -242,7 +254,7 @@
         "channels": 1,
         "linkedInBooksJson": true,
         "audioPath": "public/books/gpt-5-6-complete-guide/audio/03_Instant、Medium、High、Extra High、Pro 怎麼選？.m4a",
-        "audioSrc": "/books/gpt-5-6-complete-guide/audio/03_Instant%E3%80%81Medium%E3%80%81High%E3%80%81Extra%20High%E3%80%81Pro%20%E6%80%8E%E9%BA%BC%E9%81%B8%EF%BC%9F.m4a",
+        "audioSrc": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/gpt-5-6-complete-guide/audio/03_Instant%E3%80%81Medium%E3%80%81High%E3%80%81Extra%20High%E3%80%81Pro%20%E6%80%8E%E9%BA%BC%E9%81%B8%EF%BC%9F.m4a",
         "lastPacketDurationSeconds": 1340.65,
         "bitRate": 82380,
         "fileSizeBytes": 14037626,
@@ -254,13 +266,19 @@
           "channels": 2,
           "fileSizeBytes": 43148195,
           "sha256": "4359feb16e74103bd9e0839ce19d4c4a3c3f7aa3f92a27d47acbdb40ceb8d538"
-        }
+        },
+        "storage": "vercel-blob",
+        "blobUrl": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/gpt-5-6-complete-guide/audio/03_Instant%E3%80%81Medium%E3%80%81High%E3%80%81Extra%20High%E3%80%81Pro%20%E6%80%8E%E9%BA%BC%E9%81%B8%EF%BC%9F.m4a",
+        "blobPathname": "books/gpt-5-6-complete-guide/audio/03_Instant、Medium、High、Extra High、Pro 怎麼選？.m4a",
+        "blobEtag": "\"42bded7423a37c99bae75950e56432c0-2\"",
+        "blobHeadVerified": true,
+        "blobRemoteSeekVerified": false
       },
       {
         "chapterNumber": 4,
         "audioFilename": "04_ChatGPT Work：ChatGPT 開始進入工作現場.m4a",
         "path": "public/books/gpt-5-6-complete-guide/audio/04_ChatGPT Work：ChatGPT 開始進入工作現場.m4a",
-        "appAudioSrc": "/books/gpt-5-6-complete-guide/audio/04_ChatGPT%20Work%EF%BC%9AChatGPT%20%E9%96%8B%E5%A7%8B%E9%80%B2%E5%85%A5%E5%B7%A5%E4%BD%9C%E7%8F%BE%E5%A0%B4.m4a",
+        "appAudioSrc": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/gpt-5-6-complete-guide/audio/04_ChatGPT%20Work%EF%BC%9AChatGPT%20%E9%96%8B%E5%A7%8B%E9%80%B2%E5%85%A5%E5%B7%A5%E4%BD%9C%E7%8F%BE%E5%A0%B4.m4a",
         "durationSeconds": 1219.047007,
         "codec": "aac",
         "container": "mov,mp4,m4a,3gp,3g2,mj2",
@@ -268,7 +286,7 @@
         "channels": 1,
         "linkedInBooksJson": true,
         "audioPath": "public/books/gpt-5-6-complete-guide/audio/04_ChatGPT Work：ChatGPT 開始進入工作現場.m4a",
-        "audioSrc": "/books/gpt-5-6-complete-guide/audio/04_ChatGPT%20Work%EF%BC%9AChatGPT%20%E9%96%8B%E5%A7%8B%E9%80%B2%E5%85%A5%E5%B7%A5%E4%BD%9C%E7%8F%BE%E5%A0%B4.m4a",
+        "audioSrc": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/gpt-5-6-complete-guide/audio/04_ChatGPT%20Work%EF%BC%9AChatGPT%20%E9%96%8B%E5%A7%8B%E9%80%B2%E5%85%A5%E5%B7%A5%E4%BD%9C%E7%8F%BE%E5%A0%B4.m4a",
         "lastPacketDurationSeconds": 1219.047007,
         "bitRate": 82238,
         "fileSizeBytes": 12742864,
@@ -280,13 +298,19 @@
           "channels": 2,
           "fileSizeBytes": 39234562,
           "sha256": "9d4eab9b5d64fb66af5b1d27b16d47398759a606e3e7504dfa28a6a06f403952"
-        }
+        },
+        "storage": "vercel-blob",
+        "blobUrl": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/gpt-5-6-complete-guide/audio/04_ChatGPT%20Work%EF%BC%9AChatGPT%20%E9%96%8B%E5%A7%8B%E9%80%B2%E5%85%A5%E5%B7%A5%E4%BD%9C%E7%8F%BE%E5%A0%B4.m4a",
+        "blobPathname": "books/gpt-5-6-complete-guide/audio/04_ChatGPT Work：ChatGPT 開始進入工作現場.m4a",
+        "blobEtag": "\"792aacbd50f860c15158f52103a7c669-2\"",
+        "blobHeadVerified": true,
+        "blobRemoteSeekVerified": false
       },
       {
         "chapterNumber": 5,
         "audioFilename": "05_從 Prompt Engineering 到 Outcome Engineering.m4a",
         "path": "public/books/gpt-5-6-complete-guide/audio/05_從 Prompt Engineering 到 Outcome Engineering.m4a",
-        "appAudioSrc": "/books/gpt-5-6-complete-guide/audio/05_%E5%BE%9E%20Prompt%20Engineering%20%E5%88%B0%20Outcome%20Engineering.m4a",
+        "appAudioSrc": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/gpt-5-6-complete-guide/audio/05_%E5%BE%9E%20Prompt%20Engineering%20%E5%88%B0%20Outcome%20Engineering.m4a",
         "durationSeconds": 1463.809002,
         "codec": "aac",
         "container": "mov,mp4,m4a,3gp,3g2,mj2",
@@ -294,7 +318,7 @@
         "channels": 1,
         "linkedInBooksJson": true,
         "audioPath": "public/books/gpt-5-6-complete-guide/audio/05_從 Prompt Engineering 到 Outcome Engineering.m4a",
-        "audioSrc": "/books/gpt-5-6-complete-guide/audio/05_%E5%BE%9E%20Prompt%20Engineering%20%E5%88%B0%20Outcome%20Engineering.m4a",
+        "audioSrc": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/gpt-5-6-complete-guide/audio/05_%E5%BE%9E%20Prompt%20Engineering%20%E5%88%B0%20Outcome%20Engineering.m4a",
         "lastPacketDurationSeconds": 1463.8090020000002,
         "bitRate": 82175,
         "fileSizeBytes": 15289671,
@@ -306,13 +330,19 @@
           "channels": 2,
           "fileSizeBytes": 47111880,
           "sha256": "4174ef154cce6793d469ecdb00dd4829cc37f261d516f4a3110ef28aa8b1635d"
-        }
+        },
+        "storage": "vercel-blob",
+        "blobUrl": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/gpt-5-6-complete-guide/audio/05_%E5%BE%9E%20Prompt%20Engineering%20%E5%88%B0%20Outcome%20Engineering.m4a",
+        "blobPathname": "books/gpt-5-6-complete-guide/audio/05_從 Prompt Engineering 到 Outcome Engineering.m4a",
+        "blobEtag": "\"fd0e738daf7652ddbe00f526d744c0c4-2\"",
+        "blobHeadVerified": true,
+        "blobRemoteSeekVerified": false
       },
       {
         "chapterNumber": 6,
         "audioFilename": "06_GPT-5.6 的文件、簡報與試算表革命.m4a",
         "path": "public/books/gpt-5-6-complete-guide/audio/06_GPT-5.6 的文件、簡報與試算表革命.m4a",
-        "appAudioSrc": "/books/gpt-5-6-complete-guide/audio/06_GPT-5.6%20%E7%9A%84%E6%96%87%E4%BB%B6%E3%80%81%E7%B0%A1%E5%A0%B1%E8%88%87%E8%A9%A6%E7%AE%97%E8%A1%A8%E9%9D%A9%E5%91%BD.m4a",
+        "appAudioSrc": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/gpt-5-6-complete-guide/audio/06_GPT-5.6%20%E7%9A%84%E6%96%87%E4%BB%B6%E3%80%81%E7%B0%A1%E5%A0%B1%E8%88%87%E8%A9%A6%E7%AE%97%E8%A1%A8%E9%9D%A9%E5%91%BD.m4a",
         "durationSeconds": 1268.018005,
         "codec": "aac",
         "container": "mov,mp4,m4a,3gp,3g2,mj2",
@@ -320,7 +350,7 @@
         "channels": 1,
         "linkedInBooksJson": true,
         "audioPath": "public/books/gpt-5-6-complete-guide/audio/06_GPT-5.6 的文件、簡報與試算表革命.m4a",
-        "audioSrc": "/books/gpt-5-6-complete-guide/audio/06_GPT-5.6%20%E7%9A%84%E6%96%87%E4%BB%B6%E3%80%81%E7%B0%A1%E5%A0%B1%E8%88%87%E8%A9%A6%E7%AE%97%E8%A1%A8%E9%9D%A9%E5%91%BD.m4a",
+        "audioSrc": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/gpt-5-6-complete-guide/audio/06_GPT-5.6%20%E7%9A%84%E6%96%87%E4%BB%B6%E3%80%81%E7%B0%A1%E5%A0%B1%E8%88%87%E8%A9%A6%E7%AE%97%E8%A1%A8%E9%9D%A9%E5%91%BD.m4a",
         "lastPacketDurationSeconds": 1268.018004,
         "bitRate": 82576,
         "fileSizeBytes": 13308262,
@@ -332,13 +362,19 @@
           "channels": 2,
           "fileSizeBytes": 40810531,
           "sha256": "c6d06be4e166b3908544b3d302790e8922bf97162ea3bd74be01243263f32e04"
-        }
+        },
+        "storage": "vercel-blob",
+        "blobUrl": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/gpt-5-6-complete-guide/audio/06_GPT-5.6%20%E7%9A%84%E6%96%87%E4%BB%B6%E3%80%81%E7%B0%A1%E5%A0%B1%E8%88%87%E8%A9%A6%E7%AE%97%E8%A1%A8%E9%9D%A9%E5%91%BD.m4a",
+        "blobPathname": "books/gpt-5-6-complete-guide/audio/06_GPT-5.6 的文件、簡報與試算表革命.m4a",
+        "blobEtag": "\"0779041f5e6b0136af69a6ec3b669b14-2\"",
+        "blobHeadVerified": true,
+        "blobRemoteSeekVerified": false
       },
       {
         "chapterNumber": 7,
         "audioFilename": "07_Codex：從寫程式進化成數位工作者.m4a",
         "path": "public/books/gpt-5-6-complete-guide/audio/07_Codex：從寫程式進化成數位工作者.m4a",
-        "appAudioSrc": "/books/gpt-5-6-complete-guide/audio/07_Codex%EF%BC%9A%E5%BE%9E%E5%AF%AB%E7%A8%8B%E5%BC%8F%E9%80%B2%E5%8C%96%E6%88%90%E6%95%B8%E4%BD%8D%E5%B7%A5%E4%BD%9C%E8%80%85.m4a",
+        "appAudioSrc": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/gpt-5-6-complete-guide/audio/07_Codex%EF%BC%9A%E5%BE%9E%E5%AF%AB%E7%A8%8B%E5%BC%8F%E9%80%B2%E5%8C%96%E6%88%90%E6%95%B8%E4%BD%8D%E5%B7%A5%E4%BD%9C%E8%80%85.m4a",
         "durationSeconds": 1534.258005,
         "codec": "aac",
         "container": "mov,mp4,m4a,3gp,3g2,mj2",
@@ -346,7 +382,7 @@
         "channels": 1,
         "linkedInBooksJson": true,
         "audioPath": "public/books/gpt-5-6-complete-guide/audio/07_Codex：從寫程式進化成數位工作者.m4a",
-        "audioSrc": "/books/gpt-5-6-complete-guide/audio/07_Codex%EF%BC%9A%E5%BE%9E%E5%AF%AB%E7%A8%8B%E5%BC%8F%E9%80%B2%E5%8C%96%E6%88%90%E6%95%B8%E4%BD%8D%E5%B7%A5%E4%BD%9C%E8%80%85.m4a",
+        "audioSrc": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/gpt-5-6-complete-guide/audio/07_Codex%EF%BC%9A%E5%BE%9E%E5%AF%AB%E7%A8%8B%E5%BC%8F%E9%80%B2%E5%8C%96%E6%88%90%E6%95%B8%E4%BD%8D%E5%B7%A5%E4%BD%9C%E8%80%85.m4a",
         "lastPacketDurationSeconds": 1534.258004,
         "bitRate": 82130,
         "fileSizeBytes": 16016746,
@@ -358,13 +394,19 @@
           "channels": 2,
           "fileSizeBytes": 49379207,
           "sha256": "46c4518a86b7c2c0968119d13239a0b676106daa2c2c80d04c572e41c5983a02"
-        }
+        },
+        "storage": "vercel-blob",
+        "blobUrl": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/gpt-5-6-complete-guide/audio/07_Codex%EF%BC%9A%E5%BE%9E%E5%AF%AB%E7%A8%8B%E5%BC%8F%E9%80%B2%E5%8C%96%E6%88%90%E6%95%B8%E4%BD%8D%E5%B7%A5%E4%BD%9C%E8%80%85.m4a",
+        "blobPathname": "books/gpt-5-6-complete-guide/audio/07_Codex：從寫程式進化成數位工作者.m4a",
+        "blobEtag": "\"55138d6bef8d8866953d52ac92545c5b-2\"",
+        "blobHeadVerified": true,
+        "blobRemoteSeekVerified": false
       },
       {
         "chapterNumber": 8,
         "audioFilename": "08_Sites：AI 做完之後，如何直接變成產品？.m4a",
         "path": "public/books/gpt-5-6-complete-guide/audio/08_Sites：AI 做完之後，如何直接變成產品？.m4a",
-        "appAudioSrc": "/books/gpt-5-6-complete-guide/audio/08_Sites%EF%BC%9AAI%20%E5%81%9A%E5%AE%8C%E4%B9%8B%E5%BE%8C%EF%BC%8C%E5%A6%82%E4%BD%95%E7%9B%B4%E6%8E%A5%E8%AE%8A%E6%88%90%E7%94%A2%E5%93%81%EF%BC%9F.m4a",
+        "appAudioSrc": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/gpt-5-6-complete-guide/audio/08_Sites%EF%BC%9AAI%20%E5%81%9A%E5%AE%8C%E4%B9%8B%E5%BE%8C%EF%BC%8C%E5%A6%82%E4%BD%95%E7%9B%B4%E6%8E%A5%E8%AE%8A%E6%88%90%E7%94%A2%E5%93%81%EF%BC%9F.m4a",
         "durationSeconds": 1313.669002,
         "codec": "aac",
         "container": "mov,mp4,m4a,3gp,3g2,mj2",
@@ -372,7 +414,7 @@
         "channels": 1,
         "linkedInBooksJson": true,
         "audioPath": "public/books/gpt-5-6-complete-guide/audio/08_Sites：AI 做完之後，如何直接變成產品？.m4a",
-        "audioSrc": "/books/gpt-5-6-complete-guide/audio/08_Sites%EF%BC%9AAI%20%E5%81%9A%E5%AE%8C%E4%B9%8B%E5%BE%8C%EF%BC%8C%E5%A6%82%E4%BD%95%E7%9B%B4%E6%8E%A5%E8%AE%8A%E6%88%90%E7%94%A2%E5%93%81%EF%BC%9F.m4a",
+        "audioSrc": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/gpt-5-6-complete-guide/audio/08_Sites%EF%BC%9AAI%20%E5%81%9A%E5%AE%8C%E4%B9%8B%E5%BE%8C%EF%BC%8C%E5%A6%82%E4%BD%95%E7%9B%B4%E6%8E%A5%E8%AE%8A%E6%88%90%E7%94%A2%E5%93%81%EF%BC%9F.m4a",
         "lastPacketDurationSeconds": 1313.669002,
         "bitRate": 82535,
         "fileSizeBytes": 13780626,
@@ -384,13 +426,19 @@
           "channels": 2,
           "fileSizeBytes": 42279788,
           "sha256": "c129c96ed651cbda5e956d8ecbbfb308cd679c4c3db41a0b48f30d5644954f4a"
-        }
+        },
+        "storage": "vercel-blob",
+        "blobUrl": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/gpt-5-6-complete-guide/audio/08_Sites%EF%BC%9AAI%20%E5%81%9A%E5%AE%8C%E4%B9%8B%E5%BE%8C%EF%BC%8C%E5%A6%82%E4%BD%95%E7%9B%B4%E6%8E%A5%E8%AE%8A%E6%88%90%E7%94%A2%E5%93%81%EF%BC%9F.m4a",
+        "blobPathname": "books/gpt-5-6-complete-guide/audio/08_Sites：AI 做完之後，如何直接變成產品？.m4a",
+        "blobEtag": "\"3db42c0cc89dcd45008a10b6bfdc853b-2\"",
+        "blobHeadVerified": true,
+        "blobRemoteSeekVerified": false
       },
       {
         "chapterNumber": 9,
         "audioFilename": "09_Ultra 與 Multi-Agent：一個 AI 不再負責所有事情.m4a",
         "path": "public/books/gpt-5-6-complete-guide/audio/09_Ultra 與 Multi-Agent：一個 AI 不再負責所有事情.m4a",
-        "appAudioSrc": "/books/gpt-5-6-complete-guide/audio/09_Ultra%20%E8%88%87%20Multi-Agent%EF%BC%9A%E4%B8%80%E5%80%8B%20AI%20%E4%B8%8D%E5%86%8D%E8%B2%A0%E8%B2%AC%E6%89%80%E6%9C%89%E4%BA%8B%E6%83%85.m4a",
+        "appAudioSrc": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/gpt-5-6-complete-guide/audio/09_Ultra%20%E8%88%87%20Multi-Agent%EF%BC%9A%E4%B8%80%E5%80%8B%20AI%20%E4%B8%8D%E5%86%8D%E8%B2%A0%E8%B2%AC%E6%89%80%E6%9C%89%E4%BA%8B%E6%83%85.m4a",
         "durationSeconds": 966.855011,
         "codec": "aac",
         "container": "mov,mp4,m4a,3gp,3g2,mj2",
@@ -398,7 +446,7 @@
         "channels": 1,
         "linkedInBooksJson": true,
         "audioPath": "public/books/gpt-5-6-complete-guide/audio/09_Ultra 與 Multi-Agent：一個 AI 不再負責所有事情.m4a",
-        "audioSrc": "/books/gpt-5-6-complete-guide/audio/09_Ultra%20%E8%88%87%20Multi-Agent%EF%BC%9A%E4%B8%80%E5%80%8B%20AI%20%E4%B8%8D%E5%86%8D%E8%B2%A0%E8%B2%AC%E6%89%80%E6%9C%89%E4%BA%8B%E6%83%85.m4a",
+        "audioSrc": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/gpt-5-6-complete-guide/audio/09_Ultra%20%E8%88%87%20Multi-Agent%EF%BC%9A%E4%B8%80%E5%80%8B%20AI%20%E4%B8%8D%E5%86%8D%E8%B2%A0%E8%B2%AC%E6%89%80%E6%9C%89%E4%BA%8B%E6%83%85.m4a",
         "lastPacketDurationSeconds": 966.8550120000001,
         "bitRate": 82491,
         "fileSizeBytes": 10137367,
@@ -410,13 +458,19 @@
           "channels": 2,
           "fileSizeBytes": 31117961,
           "sha256": "f8b358715079e57085e90b9e8b6e5166a3f2a2005b260c1c66929644374d3839"
-        }
+        },
+        "storage": "vercel-blob",
+        "blobUrl": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/gpt-5-6-complete-guide/audio/09_Ultra%20%E8%88%87%20Multi-Agent%EF%BC%9A%E4%B8%80%E5%80%8B%20AI%20%E4%B8%8D%E5%86%8D%E8%B2%A0%E8%B2%AC%E6%89%80%E6%9C%89%E4%BA%8B%E6%83%85.m4a",
+        "blobPathname": "books/gpt-5-6-complete-guide/audio/09_Ultra 與 Multi-Agent：一個 AI 不再負責所有事情.m4a",
+        "blobEtag": "\"3c953ce4f156a0432a0b6684ad1259a2-2\"",
+        "blobHeadVerified": true,
+        "blobRemoteSeekVerified": false
       },
       {
         "chapterNumber": 10,
         "audioFilename": "10_GPT-5.6 API：給 AI 架構師與開發者的實戰指南.m4a",
         "path": "public/books/gpt-5-6-complete-guide/audio/10_GPT-5.6 API：給 AI 架構師與開發者的實戰指南.m4a",
-        "appAudioSrc": "/books/gpt-5-6-complete-guide/audio/10_GPT-5.6%20API%EF%BC%9A%E7%B5%A6%20AI%20%E6%9E%B6%E6%A7%8B%E5%B8%AB%E8%88%87%E9%96%8B%E7%99%BC%E8%80%85%E7%9A%84%E5%AF%A6%E6%88%B0%E6%8C%87%E5%8D%97.m4a",
+        "appAudioSrc": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/gpt-5-6-complete-guide/audio/10_GPT-5.6%20API%EF%BC%9A%E7%B5%A6%20AI%20%E6%9E%B6%E6%A7%8B%E5%B8%AB%E8%88%87%E9%96%8B%E7%99%BC%E8%80%85%E7%9A%84%E5%AF%A6%E6%88%B0%E6%8C%87%E5%8D%97.m4a",
         "durationSeconds": 1207.786009,
         "codec": "aac",
         "container": "mov,mp4,m4a,3gp,3g2,mj2",
@@ -424,7 +478,7 @@
         "channels": 1,
         "linkedInBooksJson": true,
         "audioPath": "public/books/gpt-5-6-complete-guide/audio/10_GPT-5.6 API：給 AI 架構師與開發者的實戰指南.m4a",
-        "audioSrc": "/books/gpt-5-6-complete-guide/audio/10_GPT-5.6%20API%EF%BC%9A%E7%B5%A6%20AI%20%E6%9E%B6%E6%A7%8B%E5%B8%AB%E8%88%87%E9%96%8B%E7%99%BC%E8%80%85%E7%9A%84%E5%AF%A6%E6%88%B0%E6%8C%87%E5%8D%97.m4a",
+        "audioSrc": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/gpt-5-6-complete-guide/audio/10_GPT-5.6%20API%EF%BC%9A%E7%B5%A6%20AI%20%E6%9E%B6%E6%A7%8B%E5%B8%AB%E8%88%87%E9%96%8B%E7%99%BC%E8%80%85%E7%9A%84%E5%AF%A6%E6%88%B0%E6%8C%87%E5%8D%97.m4a",
         "lastPacketDurationSeconds": 1207.7860090000001,
         "bitRate": 82411,
         "fileSizeBytes": 12651256,
@@ -436,13 +490,19 @@
           "channels": 2,
           "fileSizeBytes": 38872017,
           "sha256": "d356d8711c2991b8008790ecfd2c86dc87368eff662906cfaada288e43f68ff4"
-        }
+        },
+        "storage": "vercel-blob",
+        "blobUrl": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/gpt-5-6-complete-guide/audio/10_GPT-5.6%20API%EF%BC%9A%E7%B5%A6%20AI%20%E6%9E%B6%E6%A7%8B%E5%B8%AB%E8%88%87%E9%96%8B%E7%99%BC%E8%80%85%E7%9A%84%E5%AF%A6%E6%88%B0%E6%8C%87%E5%8D%97.m4a",
+        "blobPathname": "books/gpt-5-6-complete-guide/audio/10_GPT-5.6 API：給 AI 架構師與開發者的實戰指南.m4a",
+        "blobEtag": "\"c698f901571f9612f9f4c1d26ef28ad2-2\"",
+        "blobHeadVerified": true,
+        "blobRemoteSeekVerified": false
       },
       {
         "chapterNumber": 11,
         "audioFilename": "11_安全、隱私與 GPT-5.6 的使用邊界.m4a",
         "path": "public/books/gpt-5-6-complete-guide/audio/11_安全、隱私與 GPT-5.6 的使用邊界.m4a",
-        "appAudioSrc": "/books/gpt-5-6-complete-guide/audio/11_%E5%AE%89%E5%85%A8%E3%80%81%E9%9A%B1%E7%A7%81%E8%88%87%20GPT-5.6%20%E7%9A%84%E4%BD%BF%E7%94%A8%E9%82%8A%E7%95%8C.m4a",
+        "appAudioSrc": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/gpt-5-6-complete-guide/audio/11_%E5%AE%89%E5%85%A8%E3%80%81%E9%9A%B1%E7%A7%81%E8%88%87%20GPT-5.6%20%E7%9A%84%E4%BD%BF%E7%94%A8%E9%82%8A%E7%95%8C.m4a",
         "durationSeconds": 1595.977007,
         "codec": "aac",
         "container": "mov,mp4,m4a,3gp,3g2,mj2",
@@ -450,7 +510,7 @@
         "channels": 1,
         "linkedInBooksJson": true,
         "audioPath": "public/books/gpt-5-6-complete-guide/audio/11_安全、隱私與 GPT-5.6 的使用邊界.m4a",
-        "audioSrc": "/books/gpt-5-6-complete-guide/audio/11_%E5%AE%89%E5%85%A8%E3%80%81%E9%9A%B1%E7%A7%81%E8%88%87%20GPT-5.6%20%E7%9A%84%E4%BD%BF%E7%94%A8%E9%82%8A%E7%95%8C.m4a",
+        "audioSrc": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/gpt-5-6-complete-guide/audio/11_%E5%AE%89%E5%85%A8%E3%80%81%E9%9A%B1%E7%A7%81%E8%88%87%20GPT-5.6%20%E7%9A%84%E4%BD%BF%E7%94%A8%E9%82%8A%E7%95%8C.m4a",
         "lastPacketDurationSeconds": 1595.977007,
         "bitRate": 82434,
         "fileSizeBytes": 16721651,
@@ -462,13 +522,19 @@
           "channels": 2,
           "fileSizeBytes": 51365531,
           "sha256": "f1b4310defac8297776772f50e74a755f078f41d389af3edfd96a93b492eae5c"
-        }
+        },
+        "storage": "vercel-blob",
+        "blobUrl": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/gpt-5-6-complete-guide/audio/11_%E5%AE%89%E5%85%A8%E3%80%81%E9%9A%B1%E7%A7%81%E8%88%87%20GPT-5.6%20%E7%9A%84%E4%BD%BF%E7%94%A8%E9%82%8A%E7%95%8C.m4a",
+        "blobPathname": "books/gpt-5-6-complete-guide/audio/11_安全、隱私與 GPT-5.6 的使用邊界.m4a",
+        "blobEtag": "\"a91ad8cd2e83ad249a0a98cfd771cfa3-2\"",
+        "blobHeadVerified": true,
+        "blobRemoteSeekVerified": false
       },
       {
         "chapterNumber": 12,
         "audioFilename": "12_GPT-5.6 時代的 Human on Loop.m4a",
         "path": "public/books/gpt-5-6-complete-guide/audio/12_GPT-5.6 時代的 Human on Loop.m4a",
-        "appAudioSrc": "/books/gpt-5-6-complete-guide/audio/12_GPT-5.6%20%E6%99%82%E4%BB%A3%E7%9A%84%20Human%20on%20Loop.m4a",
+        "appAudioSrc": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/gpt-5-6-complete-guide/audio/12_GPT-5.6%20%E6%99%82%E4%BB%A3%E7%9A%84%20Human%20on%20Loop.m4a",
         "durationSeconds": 1254.132993,
         "codec": "aac",
         "container": "mov,mp4,m4a,3gp,3g2,mj2",
@@ -476,7 +542,7 @@
         "channels": 1,
         "linkedInBooksJson": true,
         "audioPath": "public/books/gpt-5-6-complete-guide/audio/12_GPT-5.6 時代的 Human on Loop.m4a",
-        "audioSrc": "/books/gpt-5-6-complete-guide/audio/12_GPT-5.6%20%E6%99%82%E4%BB%A3%E7%9A%84%20Human%20on%20Loop.m4a",
+        "audioSrc": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/gpt-5-6-complete-guide/audio/12_GPT-5.6%20%E6%99%82%E4%BB%A3%E7%9A%84%20Human%20on%20Loop.m4a",
         "lastPacketDurationSeconds": 1254.132994,
         "bitRate": 82226,
         "fileSizeBytes": 13107651,
@@ -488,7 +554,13 @@
           "channels": 2,
           "fileSizeBytes": 40363686,
           "sha256": "672e703550e140fd4b5f70c5eb9cea8d00c5daffd174f595c90b12e9528caeed"
-        }
+        },
+        "storage": "vercel-blob",
+        "blobUrl": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/gpt-5-6-complete-guide/audio/12_GPT-5.6%20%E6%99%82%E4%BB%A3%E7%9A%84%20Human%20on%20Loop.m4a",
+        "blobPathname": "books/gpt-5-6-complete-guide/audio/12_GPT-5.6 時代的 Human on Loop.m4a",
+        "blobEtag": "\"4a7d47731fc4d2d0bbe3d2194bf993b5-2\"",
+        "blobHeadVerified": true,
+        "blobRemoteSeekVerified": false
       }
     ]
   },
@@ -508,5 +580,15 @@
     "productionRemoteSeekChecked": true,
     "productionCheckedAudioCount": 12,
     "productionBaseUrl": "https://jinren-protocol.vercel.app"
+  },
+  "blobMigrationValidation": {
+    "status": "uploaded-and-applied",
+    "provider": "vercel-blob",
+    "access": "public",
+    "region": "hnd1",
+    "checkedAudioCount": 12,
+    "failedChapterNumbers": [],
+    "exactContentLengthChecked": true,
+    "remoteSeekChecked": false
   }
 }

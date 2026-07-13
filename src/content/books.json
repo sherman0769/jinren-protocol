@@ -18577,10 +18577,11 @@
             "- 不要把 Agentic AI 理解成側邊欄，它是一種新的工作台。"
           ],
           "audio": {
-            "src": "/books/standing-above-multi-agent-workbench/audio/01_%E5%BE%9E%20IDE%20%E5%88%B0%20Agentic%20Workbench%EF%BC%9A%E9%96%8B%E7%99%BC%E5%B7%A5%E5%85%B7%E6%AD%A3%E5%9C%A8%E6%8F%9B%E4%B8%80%E7%A8%AE%E5%BD%A2%E7%8B%80.m4a",
+            "src": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/standing-above-multi-agent-workbench/audio/01_%E5%BE%9E%20IDE%20%E5%88%B0%20Agentic%20Workbench%EF%BC%9A%E9%96%8B%E7%99%BC%E5%B7%A5%E5%85%B7%E6%AD%A3%E5%9C%A8%E6%8F%9B%E4%B8%80%E7%A8%AE%E5%BD%A2%E7%8B%80.m4a",
             "title": "01_從 IDE 到 Agentic Workbench：開發工具正在換一種形狀",
             "provider": "notebooklm",
-            "durationSeconds": 1313.297007
+            "durationSeconds": 1313.297007,
+            "storage": "vercel-blob"
           }
         },
         {
@@ -20825,10 +20826,11 @@
             "這個動作會讓我不容易被新技術牽著走。因為只要我開始畫迴路，我就會回到人的位置：人不是追在 AI 後面補洞，也不是站在 AI 前面等奇蹟，而是站在迴路之上，決定什麼可以交給 AI，什麼必須保留人類判斷，什麼要被記錄，什麼要被禁止，什麼要在下一輪改善。"
           ],
           "audio": {
-            "src": "/books/standing-above-the-loop-agent-workflow-design/audio/01_%E5%BA%8F%E7%AB%A0%EF%BD%9C%E7%82%BA%E4%BB%80%E9%BA%BC%20ChatGPT%20%E5%B7%B2%E7%B6%93%E4%B8%8D%E6%98%AF%E9%87%8D%E9%BB%9E%E4%BA%86%EF%BC%9F.m4a",
+            "src": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/standing-above-the-loop-agent-workflow-design/audio/01_%E5%BA%8F%E7%AB%A0%EF%BD%9C%E7%82%BA%E4%BB%80%E9%BA%BC%20ChatGPT%20%E5%B7%B2%E7%B6%93%E4%B8%8D%E6%98%AF%E9%87%8D%E9%BB%9E%E4%BA%86%EF%BC%9F.m4a",
             "title": "01_序章｜為什麼 ChatGPT 已經不是重點了？",
             "provider": "notebooklm",
-            "durationSeconds": 1193.087007
+            "durationSeconds": 1193.087007,
+            "storage": "vercel-blob"
           }
         },
         {
@@ -21004,10 +21006,11 @@
             "這個動作會讓我不容易被新技術牽著走。因為只要我開始畫迴路，我就會回到人的位置：人不是追在 AI 後面補洞，也不是站在 AI 前面等奇蹟，而是站在迴路之上，決定什麼可以交給 AI，什麼必須保留人類判斷，什麼要被記錄，什麼要被禁止，什麼要在下一輪改善。"
           ],
           "audio": {
-            "src": "/books/standing-above-the-loop-agent-workflow-design/audio/02_%E7%AC%AC%E4%B8%80%E7%AB%A0%EF%BD%9CAI%20Agent%20%E7%9A%84%E6%96%B0%E5%95%8F%E9%A1%8C%EF%BC%9A%E4%B8%8D%E6%98%AF%E8%83%BD%E4%B8%8D%E8%83%BD%E5%81%9A%EF%BC%8C%E8%80%8C%E6%98%AF%E8%83%BD%E4%B8%8D%E8%83%BD%E8%AD%89%E6%98%8E%E5%AE%83%E5%81%9A%E5%B0%8D%E4%BA%86.m4a",
+            "src": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/standing-above-the-loop-agent-workflow-design/audio/02_%E7%AC%AC%E4%B8%80%E7%AB%A0%EF%BD%9CAI%20Agent%20%E7%9A%84%E6%96%B0%E5%95%8F%E9%A1%8C%EF%BC%9A%E4%B8%8D%E6%98%AF%E8%83%BD%E4%B8%8D%E8%83%BD%E5%81%9A%EF%BC%8C%E8%80%8C%E6%98%AF%E8%83%BD%E4%B8%8D%E8%83%BD%E8%AD%89%E6%98%8E%E5%AE%83%E5%81%9A%E5%B0%8D%E4%BA%86.m4a",
             "title": "02_第一章｜AI Agent 的新問題：不是能不能做，而是能不能證明它做對了",
             "provider": "notebooklm",
-            "durationSeconds": 1406.548005
+            "durationSeconds": 1406.548005,
+            "storage": "vercel-blob"
           }
         },
         {
@@ -21181,10 +21184,11 @@
             "這個動作會讓我不容易被新技術牽著走。因為只要我開始畫迴路，我就會回到人的位置：人不是追在 AI 後面補洞，也不是站在 AI 前面等奇蹟，而是站在迴路之上，決定什麼可以交給 AI，什麼必須保留人類判斷，什麼要被記錄，什麼要被禁止，什麼要在下一輪改善。"
           ],
           "audio": {
-            "src": "/books/standing-above-the-loop-agent-workflow-design/audio/03_%E7%AC%AC%E4%BA%8C%E7%AB%A0%EF%BD%9C%E7%9C%9F%E5%AF%A6%E4%B8%96%E7%95%8C%E4%B8%8D%E6%98%AF%20Demo%EF%BC%9A%E7%82%BA%E4%BB%80%E9%BA%BC%20Agent%20%E4%B8%80%E4%B8%8A%E7%B7%9A%E5%B0%B1%E8%AE%8A%E7%AC%A8%EF%BC%9F.m4a",
+            "src": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/standing-above-the-loop-agent-workflow-design/audio/03_%E7%AC%AC%E4%BA%8C%E7%AB%A0%EF%BD%9C%E7%9C%9F%E5%AF%A6%E4%B8%96%E7%95%8C%E4%B8%8D%E6%98%AF%20Demo%EF%BC%9A%E7%82%BA%E4%BB%80%E9%BA%BC%20Agent%20%E4%B8%80%E4%B8%8A%E7%B7%9A%E5%B0%B1%E8%AE%8A%E7%AC%A8%EF%BC%9F.m4a",
             "title": "03_第二章｜真實世界不是 Demo：為什麼 Agent 一上線就變笨？",
             "provider": "notebooklm",
-            "durationSeconds": 1243.986009
+            "durationSeconds": 1243.986009,
+            "storage": "vercel-blob"
           }
         },
         {
@@ -21358,10 +21362,11 @@
             "這個動作會讓我不容易被新技術牽著走。因為只要我開始畫迴路，我就會回到人的位置：人不是追在 AI 後面補洞，也不是站在 AI 前面等奇蹟，而是站在迴路之上，決定什麼可以交給 AI，什麼必須保留人類判斷，什麼要被記錄，什麼要被禁止，什麼要在下一輪改善。"
           ],
           "audio": {
-            "src": "/books/standing-above-the-loop-agent-workflow-design/audio/04_%E7%AC%AC%E4%B8%89%E7%AB%A0%EF%BD%9CDeep%20Research%20%E7%9A%84%E9%A2%A8%E9%9A%AA%EF%BC%9AAI%20%E6%9F%A5%E8%B3%87%E6%96%99%EF%BC%8C%E4%B9%9F%E5%8F%AF%E8%83%BD%E8%A2%AB%E8%B3%87%E6%96%99%E7%89%BD%E8%91%97%E8%B5%B0.m4a",
+            "src": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/standing-above-the-loop-agent-workflow-design/audio/04_%E7%AC%AC%E4%B8%89%E7%AB%A0%EF%BD%9CDeep%20Research%20%E7%9A%84%E9%A2%A8%E9%9A%AA%EF%BC%9AAI%20%E6%9F%A5%E8%B3%87%E6%96%99%EF%BC%8C%E4%B9%9F%E5%8F%AF%E8%83%BD%E8%A2%AB%E8%B3%87%E6%96%99%E7%89%BD%E8%91%97%E8%B5%B0.m4a",
             "title": "04_第三章｜Deep Research 的風險：AI 查資料，也可能被資料牽著走",
             "provider": "notebooklm",
-            "durationSeconds": 1260.262993
+            "durationSeconds": 1260.262993,
+            "storage": "vercel-blob"
           }
         },
         {
@@ -21538,10 +21543,11 @@
             "這個動作會讓我不容易被新技術牽著走。因為只要我開始畫迴路，我就會回到人的位置：人不是追在 AI 後面補洞，也不是站在 AI 前面等奇蹟，而是站在迴路之上，決定什麼可以交給 AI，什麼必須保留人類判斷，什麼要被記錄，什麼要被禁止，什麼要在下一輪改善。"
           ],
           "audio": {
-            "src": "/books/standing-above-the-loop-agent-workflow-design/audio/05_%E7%AC%AC%E5%9B%9B%E7%AB%A0%EF%BD%9CAI%20%E7%9A%84%E8%A8%98%E6%86%B6%E4%B8%8D%E6%98%AF%E8%81%8A%E5%A4%A9%E7%B4%80%E9%8C%84%EF%BC%8C%E8%80%8C%E6%98%AF%E4%B8%80%E7%A8%AE%E7%B3%BB%E7%B5%B1%E8%A8%AD%E8%A8%88.m4a",
+            "src": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/standing-above-the-loop-agent-workflow-design/audio/05_%E7%AC%AC%E5%9B%9B%E7%AB%A0%EF%BD%9CAI%20%E7%9A%84%E8%A8%98%E6%86%B6%E4%B8%8D%E6%98%AF%E8%81%8A%E5%A4%A9%E7%B4%80%E9%8C%84%EF%BC%8C%E8%80%8C%E6%98%AF%E4%B8%80%E7%A8%AE%E7%B3%BB%E7%B5%B1%E8%A8%AD%E8%A8%88.m4a",
             "title": "05_第四章｜AI 的記憶不是聊天紀錄，而是一種系統設計",
             "provider": "notebooklm",
-            "durationSeconds": 1378.777007
+            "durationSeconds": 1378.777007,
+            "storage": "vercel-blob"
           }
         },
         {
@@ -21715,10 +21721,11 @@
             "這個動作會讓我不容易被新技術牽著走。因為只要我開始畫迴路，我就會回到人的位置：人不是追在 AI 後面補洞，也不是站在 AI 前面等奇蹟，而是站在迴路之上，決定什麼可以交給 AI，什麼必須保留人類判斷，什麼要被記錄，什麼要被禁止，什麼要在下一輪改善。"
           ],
           "audio": {
-            "src": "/books/standing-above-the-loop-agent-workflow-design/audio/06_%E7%AC%AC%E4%BA%94%E7%AB%A0%EF%BD%9C%E5%9C%96%E5%83%8F%E7%94%9F%E6%88%90%E7%9A%84%E4%B8%8B%E4%B8%80%E6%AD%A5%EF%BC%9A%E4%B8%8D%E6%98%AF%E6%8F%90%E7%A4%BA%E8%A9%9E%EF%BC%8C%E8%80%8C%E6%98%AF%E6%90%9C%E5%B0%8B%E6%8E%A5%E5%9C%B0.m4a",
+            "src": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/standing-above-the-loop-agent-workflow-design/audio/06_%E7%AC%AC%E4%BA%94%E7%AB%A0%EF%BD%9C%E5%9C%96%E5%83%8F%E7%94%9F%E6%88%90%E7%9A%84%E4%B8%8B%E4%B8%80%E6%AD%A5%EF%BC%9A%E4%B8%8D%E6%98%AF%E6%8F%90%E7%A4%BA%E8%A9%9E%EF%BC%8C%E8%80%8C%E6%98%AF%E6%90%9C%E5%B0%8B%E6%8E%A5%E5%9C%B0.m4a",
             "title": "06_第五章｜圖像生成的下一步：不是提示詞，而是搜尋接地",
             "provider": "notebooklm",
-            "durationSeconds": 832.063991
+            "durationSeconds": 832.063991,
+            "storage": "vercel-blob"
           }
         },
         {
@@ -21895,10 +21902,11 @@
             "這個動作會讓我不容易被新技術牽著走。因為只要我開始畫迴路，我就會回到人的位置：人不是追在 AI 後面補洞，也不是站在 AI 前面等奇蹟，而是站在迴路之上，決定什麼可以交給 AI，什麼必須保留人類判斷，什麼要被記錄，什麼要被禁止，什麼要在下一輪改善。"
           ],
           "audio": {
-            "src": "/books/standing-above-the-loop-agent-workflow-design/audio/07_%E7%AC%AC%E5%85%AD%E7%AB%A0%EF%BD%9C%E5%BD%B1%E9%9F%B3%E7%94%9F%E6%88%90%E9%96%8B%E5%A7%8B%E9%80%B2%E5%85%A5%E3%80%8C%E6%99%82%E9%96%93%E3%80%8D%E8%88%87%E3%80%8C%E8%A6%96%E8%A7%92%E3%80%8D%E7%9A%84%E6%99%82%E4%BB%A3.m4a",
+            "src": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/standing-above-the-loop-agent-workflow-design/audio/07_%E7%AC%AC%E5%85%AD%E7%AB%A0%EF%BD%9C%E5%BD%B1%E9%9F%B3%E7%94%9F%E6%88%90%E9%96%8B%E5%A7%8B%E9%80%B2%E5%85%A5%E3%80%8C%E6%99%82%E9%96%93%E3%80%8D%E8%88%87%E3%80%8C%E8%A6%96%E8%A7%92%E3%80%8D%E7%9A%84%E6%99%82%E4%BB%A3.m4a",
             "title": "07_第六章｜影音生成開始進入「時間」與「視角」的時代",
             "provider": "notebooklm",
-            "durationSeconds": 1539.342993
+            "durationSeconds": 1539.342993,
+            "storage": "vercel-blob"
           }
         },
         {
@@ -22075,10 +22083,11 @@
             "這個動作會讓我不容易被新技術牽著走。因為只要我開始畫迴路，我就會回到人的位置：人不是追在 AI 後面補洞，也不是站在 AI 前面等奇蹟，而是站在迴路之上，決定什麼可以交給 AI，什麼必須保留人類判斷，什麼要被記錄，什麼要被禁止，什麼要在下一輪改善。"
           ],
           "audio": {
-            "src": "/books/standing-above-the-loop-agent-workflow-design/audio/08_%E7%AC%AC%E4%B8%83%E7%AB%A0%EF%BD%9CCoding%20Agent%20%E5%BE%9E%E5%AF%AB%E7%A8%8B%E5%BC%8F%EF%BC%8C%E8%B5%B0%E5%90%91%E8%B3%87%E5%AE%89%E3%80%81%E7%9B%A4%E9%BB%9E%E8%88%87%E6%8A%80%E8%A1%93%E5%82%B5%E6%95%B4%E7%90%86.m4a",
+            "src": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/standing-above-the-loop-agent-workflow-design/audio/08_%E7%AC%AC%E4%B8%83%E7%AB%A0%EF%BD%9CCoding%20Agent%20%E5%BE%9E%E5%AF%AB%E7%A8%8B%E5%BC%8F%EF%BC%8C%E8%B5%B0%E5%90%91%E8%B3%87%E5%AE%89%E3%80%81%E7%9B%A4%E9%BB%9E%E8%88%87%E6%8A%80%E8%A1%93%E5%82%B5%E6%95%B4%E7%90%86.m4a",
             "title": "08_第七章｜Coding Agent 從寫程式，走向資安、盤點與技術債整理",
             "provider": "notebooklm",
-            "durationSeconds": 1294.86
+            "durationSeconds": 1294.86,
+            "storage": "vercel-blob"
           }
         },
         {
@@ -22255,10 +22264,11 @@
             "這個動作會讓我不容易被新技術牽著走。因為只要我開始畫迴路，我就會回到人的位置：人不是追在 AI 後面補洞，也不是站在 AI 前面等奇蹟，而是站在迴路之上，決定什麼可以交給 AI，什麼必須保留人類判斷，什麼要被記錄，什麼要被禁止，什麼要在下一輪改善。"
           ],
           "audio": {
-            "src": "/books/standing-above-the-loop-agent-workflow-design/audio/09_%E7%AC%AC%E5%85%AB%E7%AB%A0%EF%BD%9C%E5%A4%9A%20Agent%20%E5%8D%94%E4%BD%9C%EF%BC%9A%E6%9C%AA%E4%BE%86%E4%BC%81%E6%A5%AD%E4%B8%8D%E6%98%AF%E4%B8%80%E5%80%8B%E8%B6%85%E7%B4%9A%20AI%EF%BC%8C%E8%80%8C%E6%98%AF%E4%B8%80%E7%B5%84%E5%B0%88%E9%96%80%20AI.m4a",
+            "src": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/standing-above-the-loop-agent-workflow-design/audio/09_%E7%AC%AC%E5%85%AB%E7%AB%A0%EF%BD%9C%E5%A4%9A%20Agent%20%E5%8D%94%E4%BD%9C%EF%BC%9A%E6%9C%AA%E4%BE%86%E4%BC%81%E6%A5%AD%E4%B8%8D%E6%98%AF%E4%B8%80%E5%80%8B%E8%B6%85%E7%B4%9A%20AI%EF%BC%8C%E8%80%8C%E6%98%AF%E4%B8%80%E7%B5%84%E5%B0%88%E9%96%80%20AI.m4a",
             "title": "09_第八章｜多 Agent 協作：未來企業不是一個超級 AI，而是一組專門 AI",
             "provider": "notebooklm",
-            "durationSeconds": 1065.145011
+            "durationSeconds": 1065.145011,
+            "storage": "vercel-blob"
           }
         },
         {
@@ -22435,10 +22445,11 @@
             "這個動作會讓我不容易被新技術牽著走。因為只要我開始畫迴路，我就會回到人的位置：人不是追在 AI 後面補洞，也不是站在 AI 前面等奇蹟，而是站在迴路之上，決定什麼可以交給 AI，什麼必須保留人類判斷，什麼要被記錄，什麼要被禁止，什麼要在下一輪改善。"
           ],
           "audio": {
-            "src": "/books/standing-above-the-loop-agent-workflow-design/audio/10_%E7%AC%AC%E4%B9%9D%E7%AB%A0%EF%BD%9CAI%20for%20Science%EF%BC%9A%E7%A0%94%E7%A9%B6%E4%B8%8D%E5%8F%AA%E6%98%AF%E6%91%98%E8%A6%81%EF%BC%8C%E8%80%8C%E6%98%AF%E5%8F%AF%E7%A8%BD%E6%A0%B8%E7%9A%84%E5%B7%A5%E4%BD%9C%E5%8F%B0.m4a",
+            "src": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/standing-above-the-loop-agent-workflow-design/audio/10_%E7%AC%AC%E4%B9%9D%E7%AB%A0%EF%BD%9CAI%20for%20Science%EF%BC%9A%E7%A0%94%E7%A9%B6%E4%B8%8D%E5%8F%AA%E6%98%AF%E6%91%98%E8%A6%81%EF%BC%8C%E8%80%8C%E6%98%AF%E5%8F%AF%E7%A8%BD%E6%A0%B8%E7%9A%84%E5%B7%A5%E4%BD%9C%E5%8F%B0.m4a",
             "title": "10_第九章｜AI for Science：研究不只是摘要，而是可稽核的工作台",
             "provider": "notebooklm",
-            "durationSeconds": 1356.858005
+            "durationSeconds": 1356.858005,
+            "storage": "vercel-blob"
           }
         },
         {
@@ -22615,10 +22626,11 @@
             "這個動作會讓我不容易被新技術牽著走。因為只要我開始畫迴路，我就會回到人的位置：人不是追在 AI 後面補洞，也不是站在 AI 前面等奇蹟，而是站在迴路之上，決定什麼可以交給 AI，什麼必須保留人類判斷，什麼要被記錄，什麼要被禁止，什麼要在下一輪改善。"
           ],
           "audio": {
-            "src": "/books/standing-above-the-loop-agent-workflow-design/audio/11_%E7%AC%AC%E5%8D%81%E7%AB%A0%EF%BD%9C%E6%95%99%E5%AD%B8%E7%9A%84%E6%94%B9%E8%AE%8A%EF%BC%9A%E5%BE%9E%E6%8F%90%E7%A4%BA%E8%A9%9E%E6%95%99%E5%AD%B8%EF%BC%8C%E8%B5%B0%E5%90%91%E6%B5%81%E7%A8%8B%E8%A8%AD%E8%A8%88%E6%95%99%E5%AD%B8.m4a",
+            "src": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/standing-above-the-loop-agent-workflow-design/audio/11_%E7%AC%AC%E5%8D%81%E7%AB%A0%EF%BD%9C%E6%95%99%E5%AD%B8%E7%9A%84%E6%94%B9%E8%AE%8A%EF%BC%9A%E5%BE%9E%E6%8F%90%E7%A4%BA%E8%A9%9E%E6%95%99%E5%AD%B8%EF%BC%8C%E8%B5%B0%E5%90%91%E6%B5%81%E7%A8%8B%E8%A8%AD%E8%A8%88%E6%95%99%E5%AD%B8.m4a",
             "title": "11_第十章｜教學的改變：從提示詞教學，走向流程設計教學",
             "provider": "notebooklm",
-            "durationSeconds": 1204.86
+            "durationSeconds": 1204.86,
+            "storage": "vercel-blob"
           }
         }
       ]
@@ -22774,10 +22786,11 @@
             "- 本章的 Outcome Distance、Outcome Contract、Answer-to-Outcome Shift 與 Copy-Paste Cliff 為本書方法論，不是 OpenAI 官方名詞。"
           ],
           "audio": {
-            "src": "/books/gpt-5-6-complete-guide/audio/01_GPT-5.6%20%E4%B8%8D%E6%98%AF%E6%A8%A1%E5%9E%8B%E6%9B%B4%E6%96%B0%EF%BC%8C%E8%80%8C%E6%98%AF%E5%B7%A5%E4%BD%9C%E6%96%B9%E5%BC%8F%E6%9B%B4%E6%96%B0.m4a",
+            "src": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/gpt-5-6-complete-guide/audio/01_GPT-5.6%20%E4%B8%8D%E6%98%AF%E6%A8%A1%E5%9E%8B%E6%9B%B4%E6%96%B0%EF%BC%8C%E8%80%8C%E6%98%AF%E5%B7%A5%E4%BD%9C%E6%96%B9%E5%BC%8F%E6%9B%B4%E6%96%B0.m4a",
             "title": "01_GPT-5.6 不是模型更新，而是工作方式更新",
             "provider": "notebooklm",
-            "durationSeconds": 1621.332993
+            "durationSeconds": 1621.332993,
+            "storage": "vercel-blob"
           }
         },
         {
@@ -22960,10 +22973,11 @@
             "- Model Routing Triangle、Capability Placement、Cost per Successful Outcome 與 S/M/L 分級為本書提出的實務框架。"
           ],
           "audio": {
-            "src": "/books/gpt-5-6-complete-guide/audio/02_Sol%E3%80%81Terra%E3%80%81Luna%EF%BC%9A%E6%A8%A1%E5%9E%8B%E4%B8%8D%E5%86%8D%E9%81%B8%E6%9C%80%E5%BC%B7%EF%BC%8C%E8%80%8C%E6%98%AF%E9%81%B8%E6%9C%80%E9%81%A9%E5%90%88.m4a",
+            "src": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/gpt-5-6-complete-guide/audio/02_Sol%E3%80%81Terra%E3%80%81Luna%EF%BC%9A%E6%A8%A1%E5%9E%8B%E4%B8%8D%E5%86%8D%E9%81%B8%E6%9C%80%E5%BC%B7%EF%BC%8C%E8%80%8C%E6%98%AF%E9%81%B8%E6%9C%80%E9%81%A9%E5%90%88.m4a",
             "title": "02_Sol、Terra、Luna：模型不再選最強，而是選最適合",
             "provider": "notebooklm",
-            "durationSeconds": 1612.417007
+            "durationSeconds": 1612.417007,
+            "storage": "vercel-blob"
           }
         },
         {
@@ -23127,10 +23141,11 @@
             "- Reasoning Escalation Ladder 與四變數評分法為本書教學框架。"
           ],
           "audio": {
-            "src": "/books/gpt-5-6-complete-guide/audio/03_Instant%E3%80%81Medium%E3%80%81High%E3%80%81Extra%20High%E3%80%81Pro%20%E6%80%8E%E9%BA%BC%E9%81%B8%EF%BC%9F.m4a",
+            "src": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/gpt-5-6-complete-guide/audio/03_Instant%E3%80%81Medium%E3%80%81High%E3%80%81Extra%20High%E3%80%81Pro%20%E6%80%8E%E9%BA%BC%E9%81%B8%EF%BC%9F.m4a",
             "title": "03_Instant、Medium、High、Extra High、Pro 怎麼選？",
             "provider": "notebooklm",
-            "durationSeconds": 1340.65
+            "durationSeconds": 1340.65,
+            "storage": "vercel-blob"
           }
         },
         {
@@ -23308,10 +23323,11 @@
             "- 本章的 Work Context Cube、Approval Gates 四級與 Work Memory Pack 為本書方法論。"
           ],
           "audio": {
-            "src": "/books/gpt-5-6-complete-guide/audio/04_ChatGPT%20Work%EF%BC%9AChatGPT%20%E9%96%8B%E5%A7%8B%E9%80%B2%E5%85%A5%E5%B7%A5%E4%BD%9C%E7%8F%BE%E5%A0%B4.m4a",
+            "src": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/gpt-5-6-complete-guide/audio/04_ChatGPT%20Work%EF%BC%9AChatGPT%20%E9%96%8B%E5%A7%8B%E9%80%B2%E5%85%A5%E5%B7%A5%E4%BD%9C%E7%8F%BE%E5%A0%B4.m4a",
             "title": "04_ChatGPT Work：ChatGPT 開始進入工作現場",
             "provider": "notebooklm",
-            "durationSeconds": 1219.047007
+            "durationSeconds": 1219.047007,
+            "storage": "vercel-blob"
           }
         },
         {
@@ -23502,10 +23518,11 @@
             "- Outcome Contract、Autonomy Envelope、Acceptance First、Outcome Debt 與三層 Prompt 為本書方法論。"
           ],
           "audio": {
-            "src": "/books/gpt-5-6-complete-guide/audio/05_%E5%BE%9E%20Prompt%20Engineering%20%E5%88%B0%20Outcome%20Engineering.m4a",
+            "src": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/gpt-5-6-complete-guide/audio/05_%E5%BE%9E%20Prompt%20Engineering%20%E5%88%B0%20Outcome%20Engineering.m4a",
             "title": "05_從 Prompt Engineering 到 Outcome Engineering",
             "provider": "notebooklm",
-            "durationSeconds": 1463.809002
+            "durationSeconds": 1463.809002,
+            "storage": "vercel-blob"
           }
         },
         {
@@ -23716,10 +23733,11 @@
             "- Artifact Engineering、Artifact Fidelity、Artifact Fidelity Loop、Deck DNA Extraction、Slide Contract、Spreadsheet Causal Map、Claim-to-Cell Traceability 與 Artifact Debt 為本書方法論。"
           ],
           "audio": {
-            "src": "/books/gpt-5-6-complete-guide/audio/06_GPT-5.6%20%E7%9A%84%E6%96%87%E4%BB%B6%E3%80%81%E7%B0%A1%E5%A0%B1%E8%88%87%E8%A9%A6%E7%AE%97%E8%A1%A8%E9%9D%A9%E5%91%BD.m4a",
+            "src": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/gpt-5-6-complete-guide/audio/06_GPT-5.6%20%E7%9A%84%E6%96%87%E4%BB%B6%E3%80%81%E7%B0%A1%E5%A0%B1%E8%88%87%E8%A9%A6%E7%AE%97%E8%A1%A8%E9%9D%A9%E5%91%BD.m4a",
             "title": "06_GPT-5.6 的文件、簡報與試算表革命",
             "provider": "notebooklm",
-            "durationSeconds": 1268.018005
+            "durationSeconds": 1268.018005,
+            "storage": "vercel-blob"
           }
         },
         {
@@ -23961,10 +23979,11 @@
             "- Repository as World、Codex Work Loop、Agent Contract、Least Tool Principle、Prototype Trap、Prototype-to-Production Bridge 與 Diff as Deliverable 為本書方法論。"
           ],
           "audio": {
-            "src": "/books/gpt-5-6-complete-guide/audio/07_Codex%EF%BC%9A%E5%BE%9E%E5%AF%AB%E7%A8%8B%E5%BC%8F%E9%80%B2%E5%8C%96%E6%88%90%E6%95%B8%E4%BD%8D%E5%B7%A5%E4%BD%9C%E8%80%85.m4a",
+            "src": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/gpt-5-6-complete-guide/audio/07_Codex%EF%BC%9A%E5%BE%9E%E5%AF%AB%E7%A8%8B%E5%BC%8F%E9%80%B2%E5%8C%96%E6%88%90%E6%95%B8%E4%BD%8D%E5%B7%A5%E4%BD%9C%E8%80%85.m4a",
             "title": "07_Codex：從寫程式進化成數位工作者",
             "provider": "notebooklm",
-            "durationSeconds": 1534.258005
+            "durationSeconds": 1534.258005,
+            "storage": "vercel-blob"
           }
         },
         {
@@ -24177,10 +24196,11 @@
             "- Publishability Gap、Site Outcome Brief、State-first Product Design、Reversible Delivery 與 Product Feedback Loop 為本書方法論。"
           ],
           "audio": {
-            "src": "/books/gpt-5-6-complete-guide/audio/08_Sites%EF%BC%9AAI%20%E5%81%9A%E5%AE%8C%E4%B9%8B%E5%BE%8C%EF%BC%8C%E5%A6%82%E4%BD%95%E7%9B%B4%E6%8E%A5%E8%AE%8A%E6%88%90%E7%94%A2%E5%93%81%EF%BC%9F.m4a",
+            "src": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/gpt-5-6-complete-guide/audio/08_Sites%EF%BC%9AAI%20%E5%81%9A%E5%AE%8C%E4%B9%8B%E5%BE%8C%EF%BC%8C%E5%A6%82%E4%BD%95%E7%9B%B4%E6%8E%A5%E8%AE%8A%E6%88%90%E7%94%A2%E5%93%81%EF%BC%9F.m4a",
             "title": "08_Sites：AI 做完之後，如何直接變成產品？",
             "provider": "notebooklm",
-            "durationSeconds": 1313.669002
+            "durationSeconds": 1313.669002,
+            "storage": "vercel-blob"
           }
         },
         {
@@ -24409,10 +24429,11 @@
             "- PARA 判斷法、Agent Work Package、Context Partitioning、Concurrency Budget、Loop Ledger 與四層 Multi-Agent Evals 為本書方法論。"
           ],
           "audio": {
-            "src": "/books/gpt-5-6-complete-guide/audio/09_Ultra%20%E8%88%87%20Multi-Agent%EF%BC%9A%E4%B8%80%E5%80%8B%20AI%20%E4%B8%8D%E5%86%8D%E8%B2%A0%E8%B2%AC%E6%89%80%E6%9C%89%E4%BA%8B%E6%83%85.m4a",
+            "src": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/gpt-5-6-complete-guide/audio/09_Ultra%20%E8%88%87%20Multi-Agent%EF%BC%9A%E4%B8%80%E5%80%8B%20AI%20%E4%B8%8D%E5%86%8D%E8%B2%A0%E8%B2%AC%E6%89%80%E6%9C%89%E4%BA%8B%E6%83%85.m4a",
             "title": "09_Ultra 與 Multi-Agent：一個 AI 不再負責所有事情",
             "provider": "notebooklm",
-            "durationSeconds": 966.855011
+            "durationSeconds": 966.855011,
+            "storage": "vercel-blob"
           }
         },
         {
@@ -24695,10 +24716,11 @@
             "- AI Runtime Stack、Context Sufficiency、Cost per Accepted Outcome、Cache Debt、Tool Result Envelope 與十二步工作流骨架為本書方法論。"
           ],
           "audio": {
-            "src": "/books/gpt-5-6-complete-guide/audio/10_GPT-5.6%20API%EF%BC%9A%E7%B5%A6%20AI%20%E6%9E%B6%E6%A7%8B%E5%B8%AB%E8%88%87%E9%96%8B%E7%99%BC%E8%80%85%E7%9A%84%E5%AF%A6%E6%88%B0%E6%8C%87%E5%8D%97.m4a",
+            "src": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/gpt-5-6-complete-guide/audio/10_GPT-5.6%20API%EF%BC%9A%E7%B5%A6%20AI%20%E6%9E%B6%E6%A7%8B%E5%B8%AB%E8%88%87%E9%96%8B%E7%99%BC%E8%80%85%E7%9A%84%E5%AF%A6%E6%88%B0%E6%8C%87%E5%8D%97.m4a",
             "title": "10_GPT-5.6 API：給 AI 架構師與開發者的實戰指南",
             "provider": "notebooklm",
-            "durationSeconds": 1207.786009
+            "durationSeconds": 1207.786009,
+            "storage": "vercel-blob"
           }
         },
         {
@@ -24933,10 +24955,11 @@
             "- Data Context Ladder、Action Risk Ladder、Guardrail Stack、Agent Permission Manifest 與 AI Incident Playbook 為本書方法論。"
           ],
           "audio": {
-            "src": "/books/gpt-5-6-complete-guide/audio/11_%E5%AE%89%E5%85%A8%E3%80%81%E9%9A%B1%E7%A7%81%E8%88%87%20GPT-5.6%20%E7%9A%84%E4%BD%BF%E7%94%A8%E9%82%8A%E7%95%8C.m4a",
+            "src": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/gpt-5-6-complete-guide/audio/11_%E5%AE%89%E5%85%A8%E3%80%81%E9%9A%B1%E7%A7%81%E8%88%87%20GPT-5.6%20%E7%9A%84%E4%BD%BF%E7%94%A8%E9%82%8A%E7%95%8C.m4a",
             "title": "11_安全、隱私與 GPT-5.6 的使用邊界",
             "provider": "notebooklm",
-            "durationSeconds": 1595.977007
+            "durationSeconds": 1595.977007,
+            "storage": "vercel-blob"
           }
         },
         {
@@ -25220,10 +25243,11 @@
             "- Human on Loop、HOL Control Plane、Loop Literacy、Exception Budget、Loop Debt、Loop Moat 與個人 AI Runtime 為本書方法論。"
           ],
           "audio": {
-            "src": "/books/gpt-5-6-complete-guide/audio/12_GPT-5.6%20%E6%99%82%E4%BB%A3%E7%9A%84%20Human%20on%20Loop.m4a",
+            "src": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/gpt-5-6-complete-guide/audio/12_GPT-5.6%20%E6%99%82%E4%BB%A3%E7%9A%84%20Human%20on%20Loop.m4a",
             "title": "12_GPT-5.6 時代的 Human on Loop",
             "provider": "notebooklm",
-            "durationSeconds": 1254.132993
+            "durationSeconds": 1254.132993,
+            "storage": "vercel-blob"
           }
         }
       ]
@@ -25357,10 +25381,11 @@
             "R01、R02、R03、R04、R05、R06、R07、R08、R09、R10。完整資料見 03_research/research_registry.md。"
           ],
           "audio": {
-            "src": "/books/turn-agent-into-system/audio/01_%E5%BA%8F%E7%AB%A0%EF%BD%9C%E7%82%BA%E4%BB%80%E9%BA%BC%E6%88%91%E5%80%91%E4%B8%8D%E8%83%BD%E5%8F%AA%E5%81%9C%E7%95%99%E5%9C%A8%20Prompt%20Engineering%EF%BC%9F.m4a",
+            "src": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/turn-agent-into-system/audio/01_%E5%BA%8F%E7%AB%A0%EF%BD%9C%E7%82%BA%E4%BB%80%E9%BA%BC%E6%88%91%E5%80%91%E4%B8%8D%E8%83%BD%E5%8F%AA%E5%81%9C%E7%95%99%E5%9C%A8%20Prompt%20Engineering%EF%BC%9F.m4a",
             "title": "01_序章｜為什麼我們不能只停留在 Prompt Engineering？",
             "provider": "notebooklm",
-            "durationSeconds": 1561.773991
+            "durationSeconds": 1561.773991,
+            "storage": "vercel-blob"
           }
         },
         {
@@ -25521,10 +25546,11 @@
             "R01。完整資料與限制見 03_research/research_registry.md。"
           ],
           "audio": {
-            "src": "/books/turn-agent-into-system/audio/02_%E7%AC%AC%E4%B8%80%E7%AB%A0%EF%BD%9C%E5%B7%A5%E4%BD%9C%E6%B5%81%E4%B9%9F%E6%98%AF%E7%9F%A5%E8%AD%98%EF%BC%9AAI%20%E5%B0%88%E6%A1%88%E4%B8%8D%E8%83%BD%E5%8F%AA%E7%95%99%E4%B8%8B%E6%88%90%E6%9E%9C.m4a",
+            "src": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/turn-agent-into-system/audio/02_%E7%AC%AC%E4%B8%80%E7%AB%A0%EF%BD%9C%E5%B7%A5%E4%BD%9C%E6%B5%81%E4%B9%9F%E6%98%AF%E7%9F%A5%E8%AD%98%EF%BC%9AAI%20%E5%B0%88%E6%A1%88%E4%B8%8D%E8%83%BD%E5%8F%AA%E7%95%99%E4%B8%8B%E6%88%90%E6%9E%9C.m4a",
             "title": "02_第一章｜工作流也是知識：AI 專案不能只留下成果",
             "provider": "notebooklm",
-            "durationSeconds": 912.102993
+            "durationSeconds": 912.102993,
+            "storage": "vercel-blob"
           }
         },
         {
@@ -25673,10 +25699,11 @@
             "R02。完整資料與限制見 03_research/research_registry.md。"
           ],
           "audio": {
-            "src": "/books/turn-agent-into-system/audio/03_%E7%AC%AC%E4%BA%8C%E7%AB%A0%EF%BD%9C%E8%A8%98%E6%86%B6%E4%B8%8D%E6%98%AF%E8%B3%87%E6%96%99%E5%BA%AB%EF%BC%9A%E7%9C%9F%E6%AD%A3%E9%87%8D%E8%A6%81%E7%9A%84%E6%98%AF%E4%BD%95%E6%99%82%E6%8F%90%E9%86%92.m4a",
+            "src": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/turn-agent-into-system/audio/03_%E7%AC%AC%E4%BA%8C%E7%AB%A0%EF%BD%9C%E8%A8%98%E6%86%B6%E4%B8%8D%E6%98%AF%E8%B3%87%E6%96%99%E5%BA%AB%EF%BC%9A%E7%9C%9F%E6%AD%A3%E9%87%8D%E8%A6%81%E7%9A%84%E6%98%AF%E4%BD%95%E6%99%82%E6%8F%90%E9%86%92.m4a",
             "title": "03_第二章｜記憶不是資料庫：真正重要的是何時提醒",
             "provider": "notebooklm",
-            "durationSeconds": 1161.369002
+            "durationSeconds": 1161.369002,
+            "storage": "vercel-blob"
           }
         },
         {
@@ -25840,10 +25867,11 @@
             "R03。完整資料與限制見 03_research/research_registry.md。"
           ],
           "audio": {
-            "src": "/books/turn-agent-into-system/audio/04_%E7%AC%AC%E4%B8%89%E7%AB%A0%EF%BD%9C%E5%BE%9E%E6%8F%90%E7%A4%BA%E8%A9%9E%E5%88%B0%E5%A5%91%E7%B4%84%EF%BC%9A%E4%BC%81%E6%A5%AD%20Agent%20%E4%B8%8D%E8%83%BD%E5%8F%AA%E9%9D%A0%E3%80%8C%E8%AB%8B%E4%BD%A0%E9%81%B5%E5%AE%88%E3%80%8D.m4a",
+            "src": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/turn-agent-into-system/audio/04_%E7%AC%AC%E4%B8%89%E7%AB%A0%EF%BD%9C%E5%BE%9E%E6%8F%90%E7%A4%BA%E8%A9%9E%E5%88%B0%E5%A5%91%E7%B4%84%EF%BC%9A%E4%BC%81%E6%A5%AD%20Agent%20%E4%B8%8D%E8%83%BD%E5%8F%AA%E9%9D%A0%E3%80%8C%E8%AB%8B%E4%BD%A0%E9%81%B5%E5%AE%88%E3%80%8D.m4a",
             "title": "04_第三章｜從提示詞到契約：企業 Agent 不能只靠「請你遵守」",
             "provider": "notebooklm",
-            "durationSeconds": 1499.777007
+            "durationSeconds": 1499.777007,
+            "storage": "vercel-blob"
           }
         },
         {
@@ -26004,10 +26032,11 @@
             "R04。完整資料與限制見 03_research/research_registry.md。"
           ],
           "audio": {
-            "src": "/books/turn-agent-into-system/audio/05_%E7%AC%AC%E5%9B%9B%E7%AB%A0%EF%BD%9C%E8%AE%93%20Agent%20%E6%8E%A2%E7%B4%A2%EF%BC%8C%E8%AE%93%E7%B3%BB%E7%B5%B1%E6%8E%A5%E6%89%8B%EF%BC%9A%E6%88%90%E5%8A%9F%E6%B5%81%E7%A8%8B%E7%9A%84%E6%BC%B8%E9%80%B2%E5%BC%8F%E5%9B%BA%E5%8C%96.m4a",
+            "src": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/turn-agent-into-system/audio/05_%E7%AC%AC%E5%9B%9B%E7%AB%A0%EF%BD%9C%E8%AE%93%20Agent%20%E6%8E%A2%E7%B4%A2%EF%BC%8C%E8%AE%93%E7%B3%BB%E7%B5%B1%E6%8E%A5%E6%89%8B%EF%BC%9A%E6%88%90%E5%8A%9F%E6%B5%81%E7%A8%8B%E7%9A%84%E6%BC%B8%E9%80%B2%E5%BC%8F%E5%9B%BA%E5%8C%96.m4a",
             "title": "05_第四章｜讓 Agent 探索，讓系統接手：成功流程的漸進式固化",
             "provider": "notebooklm",
-            "durationSeconds": 1270.828005
+            "durationSeconds": 1270.828005,
+            "storage": "vercel-blob"
           }
         },
         {
@@ -26188,10 +26217,11 @@
             "R05。完整資料與限制見 03_research/research_registry.md。"
           ],
           "audio": {
-            "src": "/books/turn-agent-into-system/audio/06_%E7%AC%AC%E4%BA%94%E7%AB%A0%EF%BD%9C%E5%A6%82%E4%BD%95%E6%8A%8A%E5%95%8F%E9%A1%8C%E4%BA%A4%E7%B5%A6%20Coding%20Agent%EF%BC%9A%E5%A5%BD%E7%9A%84%E4%BA%A4%E6%8E%A5%EF%BC%8C%E6%AF%94%E5%A5%BD%E7%9A%84%E6%8F%90%E7%A4%BA%E8%A9%9E%E6%9B%B4%E9%87%8D%E8%A6%81.m4a",
+            "src": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/turn-agent-into-system/audio/06_%E7%AC%AC%E4%BA%94%E7%AB%A0%EF%BD%9C%E5%A6%82%E4%BD%95%E6%8A%8A%E5%95%8F%E9%A1%8C%E4%BA%A4%E7%B5%A6%20Coding%20Agent%EF%BC%9A%E5%A5%BD%E7%9A%84%E4%BA%A4%E6%8E%A5%EF%BC%8C%E6%AF%94%E5%A5%BD%E7%9A%84%E6%8F%90%E7%A4%BA%E8%A9%9E%E6%9B%B4%E9%87%8D%E8%A6%81.m4a",
             "title": "06_第五章｜如何把問題交給 Coding Agent：好的交接，比好的提示詞更重要",
             "provider": "notebooklm",
-            "durationSeconds": 983.945011
+            "durationSeconds": 983.945011,
+            "storage": "vercel-blob"
           }
         },
         {
@@ -26319,10 +26349,11 @@
             "R06。完整資料與限制見 03_research/research_registry.md。"
           ],
           "audio": {
-            "src": "/books/turn-agent-into-system/audio/07_%E7%AC%AC%E5%85%AD%E7%AB%A0%EF%BD%9C%E5%BD%B1%E7%89%87%E4%B9%9F%E8%83%BD%E6%8E%A8%E7%90%86%EF%BC%9A%E5%BE%9E%20Chain-of-Thought%20%E5%88%B0%20Chain-of-Frame.m4a",
+            "src": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/turn-agent-into-system/audio/07_%E7%AC%AC%E5%85%AD%E7%AB%A0%EF%BD%9C%E5%BD%B1%E7%89%87%E4%B9%9F%E8%83%BD%E6%8E%A8%E7%90%86%EF%BC%9A%E5%BE%9E%20Chain-of-Thought%20%E5%88%B0%20Chain-of-Frame.m4a",
             "title": "07_第六章｜影片也能推理：從 Chain-of-Thought 到 Chain-of-Frame",
             "provider": "notebooklm",
-            "durationSeconds": 1245.657007
+            "durationSeconds": 1245.657007,
+            "storage": "vercel-blob"
           }
         },
         {
@@ -26467,10 +26498,11 @@
             "R07。完整資料與限制見 03_research/research_registry.md。"
           ],
           "audio": {
-            "src": "/books/turn-agent-into-system/audio/08_%E7%AC%AC%E4%B8%83%E7%AB%A0%EF%BD%9C%E8%99%9B%E6%93%AC%E6%95%99%E7%B7%B4%E9%96%8B%E5%A7%8B%E5%8B%95%E8%B5%B7%E4%BE%86%EF%BC%9A%E4%BA%92%E5%8B%95%E5%BC%8F%E4%BA%BA%E9%AB%94%E5%8B%95%E4%BD%9C%E7%94%9F%E6%88%90%E8%88%87%E5%81%A5%E8%BA%AB%20AI.m4a",
+            "src": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/turn-agent-into-system/audio/08_%E7%AC%AC%E4%B8%83%E7%AB%A0%EF%BD%9C%E8%99%9B%E6%93%AC%E6%95%99%E7%B7%B4%E9%96%8B%E5%A7%8B%E5%8B%95%E8%B5%B7%E4%BE%86%EF%BC%9A%E4%BA%92%E5%8B%95%E5%BC%8F%E4%BA%BA%E9%AB%94%E5%8B%95%E4%BD%9C%E7%94%9F%E6%88%90%E8%88%87%E5%81%A5%E8%BA%AB%20AI.m4a",
             "title": "08_第七章｜虛擬教練開始動起來：互動式人體動作生成與健身 AI",
             "provider": "notebooklm",
-            "durationSeconds": 1078.659002
+            "durationSeconds": 1078.659002,
+            "storage": "vercel-blob"
           }
         },
         {
@@ -26623,10 +26655,11 @@
             "R08。完整資料與限制見 03_research/research_registry.md。"
           ],
           "audio": {
-            "src": "/books/turn-agent-into-system/audio/09_%E7%AC%AC%E5%85%AB%E7%AB%A0%EF%BD%9CAI%20%E5%AD%B8%E7%BF%92%E5%8A%A9%E7%90%86%E9%80%B2%E5%85%A5%E6%A0%A1%E5%9C%92%EF%BC%9A%E4%BD%BF%E7%94%A8%E7%8E%87%E4%B8%8D%E6%98%AF%E5%AD%B8%E7%BF%92%E6%88%90%E6%95%88.m4a",
+            "src": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/turn-agent-into-system/audio/09_%E7%AC%AC%E5%85%AB%E7%AB%A0%EF%BD%9CAI%20%E5%AD%B8%E7%BF%92%E5%8A%A9%E7%90%86%E9%80%B2%E5%85%A5%E6%A0%A1%E5%9C%92%EF%BC%9A%E4%BD%BF%E7%94%A8%E7%8E%87%E4%B8%8D%E6%98%AF%E5%AD%B8%E7%BF%92%E6%88%90%E6%95%88.m4a",
             "title": "09_第八章｜AI 學習助理進入校園：使用率不是學習成效",
             "provider": "notebooklm",
-            "durationSeconds": 1420.248005
+            "durationSeconds": 1420.248005,
+            "storage": "vercel-blob"
           }
         },
         {
@@ -26812,10 +26845,11 @@
             "8. AI 看見的是畫面，系統必須看見風險。"
           ],
           "audio": {
-            "src": "/books/turn-agent-into-system/audio/10_%E7%AC%AC%E4%B9%9D%E7%AB%A0%EF%BD%9C%E7%9C%8B%E5%BE%97%E6%87%82%E4%B8%8D%E7%AD%89%E6%96%BC%E7%AE%97%E5%BE%97%E6%BA%96%EF%BC%9A%E5%81%A5%E8%BA%AB%20AI%20%E8%88%87%E5%81%A5%E5%BA%B7%E5%BB%BA%E8%AD%B0%E7%9A%84%E5%AE%89%E5%85%A8%E9%82%8A%E7%95%8C.m4a",
+            "src": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/turn-agent-into-system/audio/10_%E7%AC%AC%E4%B9%9D%E7%AB%A0%EF%BD%9C%E7%9C%8B%E5%BE%97%E6%87%82%E4%B8%8D%E7%AD%89%E6%96%BC%E7%AE%97%E5%BE%97%E6%BA%96%EF%BC%9A%E5%81%A5%E8%BA%AB%20AI%20%E8%88%87%E5%81%A5%E5%BA%B7%E5%BB%BA%E8%AD%B0%E7%9A%84%E5%AE%89%E5%85%A8%E9%82%8A%E7%95%8C.m4a",
             "title": "10_第九章｜看得懂不等於算得準：健身 AI 與健康建議的安全邊界",
             "provider": "notebooklm",
-            "durationSeconds": 1702.463991
+            "durationSeconds": 1702.463991,
+            "storage": "vercel-blob"
           }
         },
         {
@@ -27026,10 +27060,11 @@
             "8. 從對話到委派，改變的不只是介面，而是工作的基本單位。"
           ],
           "audio": {
-            "src": "/books/turn-agent-into-system/audio/11_%E7%AC%AC%E5%8D%81%E7%AB%A0%EF%BD%9C%E5%BE%9E%E5%B0%8D%E8%A9%B1%E5%88%B0%E5%A7%94%E6%B4%BE%EF%BC%9ACodex%20%E9%A1%AF%E7%A4%BA%20AI%20%E5%B7%A5%E4%BD%9C%E5%96%AE%E4%BD%8D%E6%AD%A3%E5%9C%A8%E8%AE%8A%E5%A4%A7.m4a",
+            "src": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/turn-agent-into-system/audio/11_%E7%AC%AC%E5%8D%81%E7%AB%A0%EF%BD%9C%E5%BE%9E%E5%B0%8D%E8%A9%B1%E5%88%B0%E5%A7%94%E6%B4%BE%EF%BC%9ACodex%20%E9%A1%AF%E7%A4%BA%20AI%20%E5%B7%A5%E4%BD%9C%E5%96%AE%E4%BD%8D%E6%AD%A3%E5%9C%A8%E8%AE%8A%E5%A4%A7.m4a",
             "title": "11_第十章｜從對話到委派：Codex 顯示 AI 工作單位正在變大",
             "provider": "notebooklm",
-            "durationSeconds": 1410.426009
+            "durationSeconds": 1410.426009,
+            "storage": "vercel-blob"
           }
         },
         {
@@ -27264,10 +27299,11 @@
             "10. 從 Prompt Engineering 到 Loop Engineering，是從會使用 AI，走向會對 AI 的工作負責。"
           ],
           "audio": {
-            "src": "/books/turn-agent-into-system/audio/12_%E7%B5%82%E7%AB%A0%EF%BD%9CLoop%20Engineering%EF%BC%9A%E4%BA%BA%E4%B8%8D%E6%98%AF%E5%9C%A8%E8%BF%B4%E8%B7%AF%E8%A3%A1%E6%95%91%E7%81%AB%EF%BC%8C%E8%80%8C%E6%98%AF%E5%9C%A8%E8%BF%B4%E8%B7%AF%E4%B8%8A%E6%96%B9%E8%A8%AD%E8%A8%88%E7%B3%BB%E7%B5%B1.m4a",
+            "src": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/turn-agent-into-system/audio/12_%E7%B5%82%E7%AB%A0%EF%BD%9CLoop%20Engineering%EF%BC%9A%E4%BA%BA%E4%B8%8D%E6%98%AF%E5%9C%A8%E8%BF%B4%E8%B7%AF%E8%A3%A1%E6%95%91%E7%81%AB%EF%BC%8C%E8%80%8C%E6%98%AF%E5%9C%A8%E8%BF%B4%E8%B7%AF%E4%B8%8A%E6%96%B9%E8%A8%AD%E8%A8%88%E7%B3%BB%E7%B5%B1.m4a",
             "title": "12_終章｜Loop Engineering：人不是在迴路裡救火，而是在迴路上方設計系統",
             "provider": "notebooklm",
-            "durationSeconds": 934.021995
+            "durationSeconds": 934.021995,
+            "storage": "vercel-blob"
           }
         },
         {
@@ -27418,10 +27454,11 @@
             "• 人批准時看不到來源、版本與風險"
           ],
           "audio": {
-            "src": "/books/turn-agent-into-system/audio/13_%E9%99%84%E9%8C%84%20A%EF%BD%9C%E4%B9%9D%E5%B1%A4%20Loop%20Engineering%20Canvas.m4a",
+            "src": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/turn-agent-into-system/audio/13_%E9%99%84%E9%8C%84%20A%EF%BD%9C%E4%B9%9D%E5%B1%A4%20Loop%20Engineering%20Canvas.m4a",
             "title": "13_附錄 A｜九層 Loop Engineering Canvas",
             "provider": "notebooklm",
-            "durationSeconds": 1219.813991
+            "durationSeconds": 1219.813991,
+            "storage": "vercel-blob"
           }
         },
         {
@@ -27493,10 +27530,11 @@
             "• 稽核責任人："
           ],
           "audio": {
-            "src": "/books/turn-agent-into-system/audio/14_%E9%99%84%E9%8C%84%20B%EF%BD%9C%E5%B7%A5%E4%BD%9C%E6%B5%81%E8%AD%B7%E7%85%A7%E6%A8%A1%E6%9D%BF.m4a",
+            "src": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/turn-agent-into-system/audio/14_%E9%99%84%E9%8C%84%20B%EF%BD%9C%E5%B7%A5%E4%BD%9C%E6%B5%81%E8%AD%B7%E7%85%A7%E6%A8%A1%E6%9D%BF.m4a",
             "title": "14_附錄 B｜工作流護照模板",
             "provider": "notebooklm",
-            "durationSeconds": 1200.866009
+            "durationSeconds": 1200.866009,
+            "storage": "vercel-blob"
           }
         },
         {
@@ -27554,10 +27592,11 @@
             "• 已知限制"
           ],
           "audio": {
-            "src": "/books/turn-agent-into-system/audio/15_%E9%99%84%E9%8C%84%20C%EF%BD%9CAI-readable%20Bug%20Report%20%E6%A8%A1%E6%9D%BF.m4a",
+            "src": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/turn-agent-into-system/audio/15_%E9%99%84%E9%8C%84%20C%EF%BD%9CAI-readable%20Bug%20Report%20%E6%A8%A1%E6%9D%BF.m4a",
             "title": "15_附錄 C｜AI-readable Bug Report 模板",
             "provider": "notebooklm",
-            "durationSeconds": 949.811995
+            "durationSeconds": 949.811995,
+            "storage": "vercel-blob"
           }
         },
         {
@@ -27619,10 +27658,11 @@
             "• [ ] 高風險內容沒有超出專業範圍"
           ],
           "audio": {
-            "src": "/books/turn-agent-into-system/audio/16_%E9%99%84%E9%8C%84%20D%EF%BD%9C%E8%AB%96%E6%96%87%E8%BD%89%E6%88%90%E8%AA%B2%E7%A8%8B%E8%88%87%20FB%20%E8%B2%BC%E6%96%87%E7%9A%84%E7%B7%A8%E8%BC%AF%E6%A8%A1%E6%9D%BF.m4a",
+            "src": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/turn-agent-into-system/audio/16_%E9%99%84%E9%8C%84%20D%EF%BD%9C%E8%AB%96%E6%96%87%E8%BD%89%E6%88%90%E8%AA%B2%E7%A8%8B%E8%88%87%20FB%20%E8%B2%BC%E6%96%87%E7%9A%84%E7%B7%A8%E8%BC%AF%E6%A8%A1%E6%9D%BF.m4a",
             "title": "16_附錄 D｜論文轉成課程與 FB 貼文的編輯模板",
             "provider": "notebooklm",
-            "durationSeconds": 851.986009
+            "durationSeconds": 851.986009,
+            "storage": "vercel-blob"
           }
         },
         {
@@ -27686,10 +27726,11 @@
             "6. A：寫入正式課表並通知學員。"
           ],
           "audio": {
-            "src": "/books/turn-agent-into-system/audio/17_%E9%99%84%E9%8C%84%20E%EF%BD%9CD%EF%BC%8FI%EF%BC%8FH%EF%BC%8FA%20%E5%B7%A5%E4%BD%9C%E6%B5%81%E6%A8%99%E8%A8%98%E6%B3%95.m4a",
+            "src": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/turn-agent-into-system/audio/17_%E9%99%84%E9%8C%84%20E%EF%BD%9CD%EF%BC%8FI%EF%BC%8FH%EF%BC%8FA%20%E5%B7%A5%E4%BD%9C%E6%B5%81%E6%A8%99%E8%A8%98%E6%B3%95.m4a",
             "title": "17_附錄 E｜D／I／H／A 工作流標記法",
             "provider": "notebooklm",
-            "durationSeconds": 1560.983991
+            "durationSeconds": 1560.983991,
+            "storage": "vercel-blob"
           }
         },
         {
@@ -27713,10 +27754,11 @@
             "• OpenAI. (2026). How agents are transforming work. https://openai.com/index/how-agents-are-transforming-work/"
           ],
           "audio": {
-            "src": "/books/turn-agent-into-system/audio/18_%E5%8F%83%E8%80%83%E8%B3%87%E6%96%99.m4a",
+            "src": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/turn-agent-into-system/audio/18_%E5%8F%83%E8%80%83%E8%B3%87%E6%96%99.m4a",
             "title": "18_參考資料",
             "provider": "notebooklm",
-            "durationSeconds": 1241.13
+            "durationSeconds": 1241.13,
+            "storage": "vercel-blob"
           }
         }
       ]
@@ -27809,10 +27851,11 @@
             "- Godot 官方首頁：https://godotengine.org/"
           ],
           "audio": {
-            "src": "/books/godot-understand-before-building/audio/01_%E5%BA%8F%E7%AB%A0%EF%BD%9C%E6%88%91%E4%B8%8D%E6%83%B3%E5%85%88%E6%88%90%E7%82%BA%E5%B7%A5%E7%A8%8B%E5%B8%AB%EF%BC%8C%E6%88%91%E5%8F%AA%E6%83%B3%E5%85%88%E7%9C%8B%E6%87%82%E9%81%8A%E6%88%B2%E6%80%8E%E9%BA%BC%E9%81%8B%E4%BD%9C.m4a",
+            "src": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/godot-understand-before-building/audio/01_%E5%BA%8F%E7%AB%A0%EF%BD%9C%E6%88%91%E4%B8%8D%E6%83%B3%E5%85%88%E6%88%90%E7%82%BA%E5%B7%A5%E7%A8%8B%E5%B8%AB%EF%BC%8C%E6%88%91%E5%8F%AA%E6%83%B3%E5%85%88%E7%9C%8B%E6%87%82%E9%81%8A%E6%88%B2%E6%80%8E%E9%BA%BC%E9%81%8B%E4%BD%9C.m4a",
             "title": "01_序章｜我不想先成為工程師，我只想先看懂遊戲怎麼運作",
             "provider": "notebooklm",
-            "durationSeconds": 1253.691995
+            "durationSeconds": 1253.691995,
+            "storage": "vercel-blob"
           }
         },
         {
@@ -27924,10 +27967,11 @@
             "- Godot Docs 4.7 branch：https://docs.godotengine.org/"
           ],
           "audio": {
-            "src": "/books/godot-understand-before-building/audio/02_%E7%AC%AC%E4%B8%80%E7%AB%A0%EF%BD%9CGodot%20%E5%88%B0%E5%BA%95%E6%98%AF%E4%BB%80%E9%BA%BC%EF%BC%9A%E5%85%88%E7%9C%8B%E6%87%82%E9%81%8A%E6%88%B2%E5%BC%95%E6%93%8E%E7%9A%84%E4%BD%8D%E7%BD%AE.m4a",
+            "src": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/godot-understand-before-building/audio/02_%E7%AC%AC%E4%B8%80%E7%AB%A0%EF%BD%9CGodot%20%E5%88%B0%E5%BA%95%E6%98%AF%E4%BB%80%E9%BA%BC%EF%BC%9A%E5%85%88%E7%9C%8B%E6%87%82%E9%81%8A%E6%88%B2%E5%BC%95%E6%93%8E%E7%9A%84%E4%BD%8D%E7%BD%AE.m4a",
             "title": "02_第一章｜Godot 到底是什麼：先看懂遊戲引擎的位置",
             "provider": "notebooklm",
-            "durationSeconds": 1508.460998
+            "durationSeconds": 1508.460998,
+            "storage": "vercel-blob"
           }
         },
         {
@@ -28047,10 +28091,11 @@
             "- Input examples：https://docs.godotengine.org/en/stable/tutorials/inputs/input_examples.html"
           ],
           "audio": {
-            "src": "/books/godot-understand-before-building/audio/03_%E7%AC%AC%E4%BA%8C%E7%AB%A0%EF%BD%9C%E9%81%8A%E6%88%B2%E4%B8%8D%E6%98%AF%E7%95%AB%E9%9D%A2%EF%BC%8C%E8%80%8C%E6%98%AF%E4%B8%80%E5%A5%97%E6%8C%81%E7%BA%8C%E9%81%8B%E8%BD%89%E7%9A%84%E8%A6%8F%E5%89%87.m4a",
+            "src": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/godot-understand-before-building/audio/03_%E7%AC%AC%E4%BA%8C%E7%AB%A0%EF%BD%9C%E9%81%8A%E6%88%B2%E4%B8%8D%E6%98%AF%E7%95%AB%E9%9D%A2%EF%BC%8C%E8%80%8C%E6%98%AF%E4%B8%80%E5%A5%97%E6%8C%81%E7%BA%8C%E9%81%8B%E8%BD%89%E7%9A%84%E8%A6%8F%E5%89%87.m4a",
             "title": "03_第二章｜遊戲不是畫面，而是一套持續運轉的規則",
             "provider": "notebooklm",
-            "durationSeconds": 1226.269002
+            "durationSeconds": 1226.269002,
+            "storage": "vercel-blob"
           }
         },
         {
@@ -28189,10 +28234,11 @@
             "- Version control systems：https://docs.godotengine.org/en/stable/tutorials/best_practices/version_control_systems.html"
           ],
           "audio": {
-            "src": "/books/godot-understand-before-building/audio/04_%E7%AC%AC%E4%B8%89%E7%AB%A0%EF%BD%9C%E6%89%93%E9%96%8B%20Godot%20%E4%B9%8B%E5%BE%8C%EF%BC%9A%E5%B0%88%E6%A1%88%E3%80%81%E7%B7%A8%E8%BC%AF%E5%99%A8%E8%88%87%E6%AA%94%E6%A1%88%E6%AD%A3%E5%9C%A8%E5%81%9A%E4%BB%80%E9%BA%BC.m4a",
+            "src": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/godot-understand-before-building/audio/04_%E7%AC%AC%E4%B8%89%E7%AB%A0%EF%BD%9C%E6%89%93%E9%96%8B%20Godot%20%E4%B9%8B%E5%BE%8C%EF%BC%9A%E5%B0%88%E6%A1%88%E3%80%81%E7%B7%A8%E8%BC%AF%E5%99%A8%E8%88%87%E6%AA%94%E6%A1%88%E6%AD%A3%E5%9C%A8%E5%81%9A%E4%BB%80%E9%BA%BC.m4a",
             "title": "04_第三章｜打開 Godot 之後：專案、編輯器與檔案正在做什麼",
             "provider": "notebooklm",
-            "durationSeconds": 1514.381995
+            "durationSeconds": 1514.381995,
+            "storage": "vercel-blob"
           }
         },
         {
@@ -28350,10 +28396,11 @@
             "- Nodes and scene instances：https://docs.godotengine.org/en/stable/tutorials/scripting/nodes_and_scene_instances.html"
           ],
           "audio": {
-            "src": "/books/godot-understand-before-building/audio/05_%E7%AC%AC%E5%9B%9B%E7%AB%A0%EF%BD%9C%E5%A0%B4%E6%99%AF%E3%80%81%E7%AF%80%E9%BB%9E%E8%88%87%E6%A8%B9%EF%BC%9AGodot%20%E6%9C%80%E9%87%8D%E8%A6%81%E7%9A%84%E8%AA%9E%E6%B3%95.m4a",
+            "src": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/godot-understand-before-building/audio/05_%E7%AC%AC%E5%9B%9B%E7%AB%A0%EF%BD%9C%E5%A0%B4%E6%99%AF%E3%80%81%E7%AF%80%E9%BB%9E%E8%88%87%E6%A8%B9%EF%BC%9AGodot%20%E6%9C%80%E9%87%8D%E8%A6%81%E7%9A%84%E8%AA%9E%E6%B3%95.m4a",
             "title": "05_第四章｜場景、節點與樹：Godot 最重要的語法",
             "provider": "notebooklm",
-            "durationSeconds": 1470.705011
+            "durationSeconds": 1470.705011,
+            "storage": "vercel-blob"
           }
         },
         {
@@ -28500,10 +28547,11 @@
             "- Godot License：https://godotengine.org/license/"
           ],
           "audio": {
-            "src": "/books/godot-understand-before-building/audio/06_%E7%AC%AC%E4%BA%94%E7%AB%A0%EF%BD%9C%E8%B3%87%E6%BA%90%E3%80%81%E7%B4%A0%E6%9D%90%E8%88%87%E8%B3%87%E6%96%99%EF%BC%9A%E5%93%AA%E4%BA%9B%E6%9D%B1%E8%A5%BF%E6%87%89%E8%A9%B2%E8%A2%AB%E4%BF%9D%E5%AD%98%E8%88%87%E9%87%8D%E8%A4%87%E4%BD%BF%E7%94%A8.m4a",
+            "src": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/godot-understand-before-building/audio/06_%E7%AC%AC%E4%BA%94%E7%AB%A0%EF%BD%9C%E8%B3%87%E6%BA%90%E3%80%81%E7%B4%A0%E6%9D%90%E8%88%87%E8%B3%87%E6%96%99%EF%BC%9A%E5%93%AA%E4%BA%9B%E6%9D%B1%E8%A5%BF%E6%87%89%E8%A9%B2%E8%A2%AB%E4%BF%9D%E5%AD%98%E8%88%87%E9%87%8D%E8%A4%87%E4%BD%BF%E7%94%A8.m4a",
             "title": "06_第五章｜資源、素材與資料：哪些東西應該被保存與重複使用",
             "provider": "notebooklm",
-            "durationSeconds": 1134.55
+            "durationSeconds": 1134.55,
+            "storage": "vercel-blob"
           }
         },
         {
@@ -28667,10 +28715,11 @@
             "- Node：https://docs.godotengine.org/en/stable/classes/class_node.html"
           ],
           "audio": {
-            "src": "/books/godot-understand-before-building/audio/07_%E7%AC%AC%E5%85%AD%E7%AB%A0%EF%BD%9CGDScript%20%E4%B8%8D%E5%BF%85%E5%85%88%E8%83%8C%EF%BC%8C%E4%BD%86%E5%BF%85%E9%A0%88%E7%9C%8B%E6%87%82%E5%AE%83%E5%9C%A8%E8%A1%A8%E9%81%94%E4%BB%80%E9%BA%BC.m4a",
+            "src": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/godot-understand-before-building/audio/07_%E7%AC%AC%E5%85%AD%E7%AB%A0%EF%BD%9CGDScript%20%E4%B8%8D%E5%BF%85%E5%85%88%E8%83%8C%EF%BC%8C%E4%BD%86%E5%BF%85%E9%A0%88%E7%9C%8B%E6%87%82%E5%AE%83%E5%9C%A8%E8%A1%A8%E9%81%94%E4%BB%80%E9%BA%BC.m4a",
             "title": "07_第六章｜GDScript 不必先背，但必須看懂它在表達什麼",
             "provider": "notebooklm",
-            "durationSeconds": 1697.216009
+            "durationSeconds": 1697.216009,
+            "storage": "vercel-blob"
           }
         },
         {
@@ -28824,10 +28873,11 @@
             "- Pausing games and process mode：https://docs.godotengine.org/en/stable/tutorials/scripting/pausing_games.html"
           ],
           "audio": {
-            "src": "/books/godot-understand-before-building/audio/08_%E7%AC%AC%E4%B8%83%E7%AB%A0%EF%BD%9C%E8%BC%B8%E5%85%A5%E3%80%81%E8%A8%8A%E8%99%9F%E3%80%81%E4%BA%8B%E4%BB%B6%E8%88%87%E7%8B%80%E6%85%8B%EF%BC%9A%E9%81%8A%E6%88%B2%E7%89%A9%E4%BB%B6%E5%A6%82%E4%BD%95%E4%BA%92%E7%9B%B8%E6%BA%9D%E9%80%9A.m4a",
+            "src": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/godot-understand-before-building/audio/08_%E7%AC%AC%E4%B8%83%E7%AB%A0%EF%BD%9C%E8%BC%B8%E5%85%A5%E3%80%81%E8%A8%8A%E8%99%9F%E3%80%81%E4%BA%8B%E4%BB%B6%E8%88%87%E7%8B%80%E6%85%8B%EF%BC%9A%E9%81%8A%E6%88%B2%E7%89%A9%E4%BB%B6%E5%A6%82%E4%BD%95%E4%BA%92%E7%9B%B8%E6%BA%9D%E9%80%9A.m4a",
             "title": "08_第七章｜輸入、訊號、事件與狀態：遊戲物件如何互相溝通",
             "provider": "notebooklm",
-            "durationSeconds": 1487.771995
+            "durationSeconds": 1487.771995,
+            "storage": "vercel-blob"
           }
         },
         {
@@ -28988,10 +29038,11 @@
             "- AnimationTree：https://docs.godotengine.org/en/stable/tutorials/animation/animation_tree.html"
           ],
           "audio": {
-            "src": "/books/godot-understand-before-building/audio/09_%E7%AC%AC%E5%85%AB%E7%AB%A0%EF%BD%9C%E6%AF%8F%E4%B8%80%E5%B9%80%E7%99%BC%E7%94%9F%E4%BB%80%E9%BA%BC%EF%BC%9A%E7%94%9F%E5%91%BD%E9%80%B1%E6%9C%9F%E3%80%81%E6%99%82%E9%96%93%E3%80%81%E7%89%A9%E7%90%86%E8%88%87%E5%8B%95%E7%95%AB.m4a",
+            "src": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/godot-understand-before-building/audio/09_%E7%AC%AC%E5%85%AB%E7%AB%A0%EF%BD%9C%E6%AF%8F%E4%B8%80%E5%B9%80%E7%99%BC%E7%94%9F%E4%BB%80%E9%BA%BC%EF%BC%9A%E7%94%9F%E5%91%BD%E9%80%B1%E6%9C%9F%E3%80%81%E6%99%82%E9%96%93%E3%80%81%E7%89%A9%E7%90%86%E8%88%87%E5%8B%95%E7%95%AB.m4a",
             "title": "09_第八章｜每一幀發生什麼：生命週期、時間、物理與動畫",
             "provider": "notebooklm",
-            "durationSeconds": 1311.462993
+            "durationSeconds": 1311.462993,
+            "storage": "vercel-blob"
           }
         },
         {
@@ -29135,10 +29186,11 @@
             "- Renderers：https://docs.godotengine.org/en/stable/tutorials/rendering/renderers.html"
           ],
           "audio": {
-            "src": "/books/godot-understand-before-building/audio/10_%E7%AC%AC%E4%B9%9D%E7%AB%A0%EF%BD%9C2D%E3%80%813D%20%E8%88%87%20UI%EF%BC%9A%E4%B8%89%E5%80%8B%E7%9C%8B%E4%BC%BC%E4%B8%8D%E5%90%8C%E3%80%81%E5%85%B6%E5%AF%A6%E7%9B%B8%E9%80%9A%E7%9A%84%E7%A9%BA%E9%96%93.m4a",
+            "src": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/godot-understand-before-building/audio/10_%E7%AC%AC%E4%B9%9D%E7%AB%A0%EF%BD%9C2D%E3%80%813D%20%E8%88%87%20UI%EF%BC%9A%E4%B8%89%E5%80%8B%E7%9C%8B%E4%BC%BC%E4%B8%8D%E5%90%8C%E3%80%81%E5%85%B6%E5%AF%A6%E7%9B%B8%E9%80%9A%E7%9A%84%E7%A9%BA%E9%96%93.m4a",
             "title": "10_第九章｜2D、3D 與 UI：三個看似不同、其實相通的空間",
             "provider": "notebooklm",
-            "durationSeconds": 1369.095011
+            "durationSeconds": 1369.095011,
+            "storage": "vercel-blob"
           }
         },
         {
@@ -29316,10 +29368,11 @@
             "- Version control systems：https://docs.godotengine.org/en/stable/tutorials/best_practices/version_control_systems.html"
           ],
           "audio": {
-            "src": "/books/godot-understand-before-building/audio/11_%E7%AC%AC%E5%8D%81%E7%AB%A0%EF%BD%9C%E5%BE%9E%E8%83%BD%E8%B7%91%E5%88%B0%E8%83%BD%E7%B6%AD%E8%AD%B7%EF%BC%9AGodot%20%E5%B0%88%E6%A1%88%E7%9A%84%E6%9E%B6%E6%A7%8B%E6%80%9D%E7%B6%AD.m4a",
+            "src": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/godot-understand-before-building/audio/11_%E7%AC%AC%E5%8D%81%E7%AB%A0%EF%BD%9C%E5%BE%9E%E8%83%BD%E8%B7%91%E5%88%B0%E8%83%BD%E7%B6%AD%E8%AD%B7%EF%BC%9AGodot%20%E5%B0%88%E6%A1%88%E7%9A%84%E6%9E%B6%E6%A7%8B%E6%80%9D%E7%B6%AD.m4a",
             "title": "11_第十章｜從能跑到能維護：Godot 專案的架構思維",
             "provider": "notebooklm",
-            "durationSeconds": 1448.135011
+            "durationSeconds": 1448.135011,
+            "storage": "vercel-blob"
           }
         },
         {
@@ -29548,10 +29601,11 @@
             "- Godot version control systems：https://docs.godotengine.org/en/stable/tutorials/best_practices/version_control_systems.html"
           ],
           "audio": {
-            "src": "/books/godot-understand-before-building/audio/12_%E7%AC%AC%E5%8D%81%E4%B8%80%E7%AB%A0%EF%BD%9C%E5%A6%82%E4%BD%95%E6%8C%87%E6%8F%AE%20Codex%20%E9%96%8B%E7%99%BC%20Godot%EF%BC%8C%E8%80%8C%E4%B8%8D%E6%98%AF%E8%AE%93%E5%AE%83%E8%87%AA%E7%94%B1%E7%99%BC%E6%8F%AE.m4a",
+            "src": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/godot-understand-before-building/audio/12_%E7%AC%AC%E5%8D%81%E4%B8%80%E7%AB%A0%EF%BD%9C%E5%A6%82%E4%BD%95%E6%8C%87%E6%8F%AE%20Codex%20%E9%96%8B%E7%99%BC%20Godot%EF%BC%8C%E8%80%8C%E4%B8%8D%E6%98%AF%E8%AE%93%E5%AE%83%E8%87%AA%E7%94%B1%E7%99%BC%E6%8F%AE.m4a",
             "title": "12_第十一章｜如何指揮 Codex 開發 Godot，而不是讓它自由發揮",
             "provider": "notebooklm",
-            "durationSeconds": 1124.449002
+            "durationSeconds": 1124.449002,
+            "storage": "vercel-blob"
           }
         },
         {
@@ -29783,10 +29837,11 @@
             "- Godot License：https://godotengine.org/license/"
           ],
           "audio": {
-            "src": "/books/godot-understand-before-building/audio/13_%E7%AC%AC%E5%8D%81%E4%BA%8C%E7%AB%A0%EF%BD%9C%E5%AE%8C%E6%88%90%E3%80%81%E5%8C%AF%E5%87%BA%E8%88%87%E6%95%99%E5%AD%B8%EF%BC%9A%E6%8A%8A%E4%B8%80%E6%AC%A1%E9%96%8B%E7%99%BC%E8%AE%8A%E6%88%90%E5%8F%AF%E8%A4%87%E8%A3%BD%E7%9A%84%E6%96%B9%E6%B3%95.m4a",
+            "src": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/godot-understand-before-building/audio/13_%E7%AC%AC%E5%8D%81%E4%BA%8C%E7%AB%A0%EF%BD%9C%E5%AE%8C%E6%88%90%E3%80%81%E5%8C%AF%E5%87%BA%E8%88%87%E6%95%99%E5%AD%B8%EF%BC%9A%E6%8A%8A%E4%B8%80%E6%AC%A1%E9%96%8B%E7%99%BC%E8%AE%8A%E6%88%90%E5%8F%AF%E8%A4%87%E8%A3%BD%E7%9A%84%E6%96%B9%E6%B3%95.m4a",
             "title": "13_第十二章｜完成、匯出與教學：把一次開發變成可複製的方法",
             "provider": "notebooklm",
-            "durationSeconds": 1435.295011
+            "durationSeconds": 1435.295011,
+            "storage": "vercel-blob"
           }
         },
         {
@@ -29868,10 +29923,11 @@
             "- 最後要學會的不是某個版本的按鈕，而是面對任何系統時重新建立全局觀。"
           ],
           "audio": {
-            "src": "/books/godot-understand-before-building/audio/14_%E7%B5%90%E8%AA%9E%EF%BD%9C%E7%9C%9F%E6%AD%A3%E8%A6%81%E5%AD%B8%E6%9C%83%E7%9A%84%E4%B8%8D%E6%98%AF%20Godot%EF%BC%8C%E8%80%8C%E6%98%AF%E5%A6%82%E4%BD%95%E7%90%86%E8%A7%A3%E4%B8%80%E5%80%8B%E7%B3%BB%E7%B5%B1.m4a",
+            "src": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/godot-understand-before-building/audio/14_%E7%B5%90%E8%AA%9E%EF%BD%9C%E7%9C%9F%E6%AD%A3%E8%A6%81%E5%AD%B8%E6%9C%83%E7%9A%84%E4%B8%8D%E6%98%AF%20Godot%EF%BC%8C%E8%80%8C%E6%98%AF%E5%A6%82%E4%BD%95%E7%90%86%E8%A7%A3%E4%B8%80%E5%80%8B%E7%B3%BB%E7%B5%B1.m4a",
             "title": "14_結語｜真正要學會的不是 Godot，而是如何理解一個系統",
             "provider": "notebooklm",
-            "durationSeconds": 952.738005
+            "durationSeconds": 952.738005,
+            "storage": "vercel-blob"
           }
         },
         {
@@ -30678,10 +30734,11 @@
             "真正成熟的學習工具，不是替你記住所有答案，而是在答案改變時，仍然知道該問什麼。"
           ],
           "audio": {
-            "src": "/books/godot-understand-before-building/audio/15_%E9%99%84%E9%8C%84%EF%BD%9C%E6%8A%8A%E6%A6%82%E5%BF%B5%E8%AE%8A%E6%88%90%E5%8F%AF%E6%9F%A5%E3%80%81%E5%8F%AF%E4%B8%8B%E6%8C%87%E4%BB%A4%E3%80%81%E5%8F%AF%E6%95%99%E5%AD%B8%E7%9A%84%E5%B7%A5%E4%BD%9C%E5%B7%A5%E5%85%B7.m4a",
+            "src": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/godot-understand-before-building/audio/15_%E9%99%84%E9%8C%84%EF%BD%9C%E6%8A%8A%E6%A6%82%E5%BF%B5%E8%AE%8A%E6%88%90%E5%8F%AF%E6%9F%A5%E3%80%81%E5%8F%AF%E4%B8%8B%E6%8C%87%E4%BB%A4%E3%80%81%E5%8F%AF%E6%95%99%E5%AD%B8%E7%9A%84%E5%B7%A5%E4%BD%9C%E5%B7%A5%E5%85%B7.m4a",
             "title": "15_附錄｜把概念變成可查、可下指令、可教學的工作工具",
             "provider": "notebooklm",
-            "durationSeconds": 1355.418005
+            "durationSeconds": 1355.418005,
+            "storage": "vercel-blob"
           }
         }
       ]

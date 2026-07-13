@@ -97,6 +97,7 @@ function inventory(document) {
   for (const book of booksFromDocument(document)) {
     for (const chapter of book.chapters ?? []) {
       if (!chapter.audio?.src) continue;
+      if (/^https:\/\//iu.test(chapter.audio.src)) continue;
       const sourcePath = resolveSource(chapter.audio.src, book.slug);
       if (!existsSync(sourcePath) || !statSync(sourcePath).isFile() || statSync(sourcePath).size === 0) {
         throw new Error(`Missing or empty audio: ${sourcePath}`);
@@ -554,6 +555,10 @@ const selectedModes = [Boolean(args.stage), Boolean(args.apply), Boolean(stringA
 if (selectedModes.length > 1) throw new Error("Choose only one of --stage, --apply, or --remote-base-url");
 const document = JSON.parse(readFileSync(booksPath, "utf8"));
 const entries = inventory(document);
+
+if (entries.length === 0 && (args.stage || args.apply)) {
+  throw new Error("No local audio references are eligible for transcoding");
+}
 
 if (args.stage) {
   await stage(entries);

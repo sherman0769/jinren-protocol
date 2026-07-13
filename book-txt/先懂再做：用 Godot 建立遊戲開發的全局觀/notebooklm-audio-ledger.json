@@ -422,7 +422,7 @@
         "chapterNumber": 1,
         "audioFilename": "01_序章｜我不想先成為工程師，我只想先看懂遊戲怎麼運作.m4a",
         "audioPath": "public/books/godot-understand-before-building/audio/01_序章｜我不想先成為工程師，我只想先看懂遊戲怎麼運作.m4a",
-        "audioSrc": "/books/godot-understand-before-building/audio/01_%E5%BA%8F%E7%AB%A0%EF%BD%9C%E6%88%91%E4%B8%8D%E6%83%B3%E5%85%88%E6%88%90%E7%82%BA%E5%B7%A5%E7%A8%8B%E5%B8%AB%EF%BC%8C%E6%88%91%E5%8F%AA%E6%83%B3%E5%85%88%E7%9C%8B%E6%87%82%E9%81%8A%E6%88%B2%E6%80%8E%E9%BA%BC%E9%81%8B%E4%BD%9C.m4a",
+        "audioSrc": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/godot-understand-before-building/audio/01_%E5%BA%8F%E7%AB%A0%EF%BD%9C%E6%88%91%E4%B8%8D%E6%83%B3%E5%85%88%E6%88%90%E7%82%BA%E5%B7%A5%E7%A8%8B%E5%B8%AB%EF%BC%8C%E6%88%91%E5%8F%AA%E6%83%B3%E5%85%88%E7%9C%8B%E6%87%82%E9%81%8A%E6%88%B2%E6%80%8E%E9%BA%BC%E9%81%8B%E4%BD%9C.m4a",
         "durationSeconds": 1253.691995,
         "displayedDurationSeconds": 1253,
         "durationDeltaSeconds": 0.6917909999999665,
@@ -442,13 +442,19 @@
           "channels": 2,
           "fileSizeBytes": 40349492,
           "sha256": "1dae2d1dfc470dd9f5d776f3d2d6c5467b1aeff43c43052727710a3fa853aad3"
-        }
+        },
+        "storage": "vercel-blob",
+        "blobUrl": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/godot-understand-before-building/audio/01_%E5%BA%8F%E7%AB%A0%EF%BD%9C%E6%88%91%E4%B8%8D%E6%83%B3%E5%85%88%E6%88%90%E7%82%BA%E5%B7%A5%E7%A8%8B%E5%B8%AB%EF%BC%8C%E6%88%91%E5%8F%AA%E6%83%B3%E5%85%88%E7%9C%8B%E6%87%82%E9%81%8A%E6%88%B2%E6%80%8E%E9%BA%BC%E9%81%8B%E4%BD%9C.m4a",
+        "blobPathname": "books/godot-understand-before-building/audio/01_序章｜我不想先成為工程師，我只想先看懂遊戲怎麼運作.m4a",
+        "blobEtag": "\"a63cf48df144b87af1a3116ec82991e2-2\"",
+        "blobHeadVerified": true,
+        "blobRemoteSeekVerified": false
       },
       {
         "chapterNumber": 2,
         "audioFilename": "02_第一章｜Godot 到底是什麼：先看懂遊戲引擎的位置.m4a",
         "audioPath": "public/books/godot-understand-before-building/audio/02_第一章｜Godot 到底是什麼：先看懂遊戲引擎的位置.m4a",
-        "audioSrc": "/books/godot-understand-before-building/audio/02_%E7%AC%AC%E4%B8%80%E7%AB%A0%EF%BD%9CGodot%20%E5%88%B0%E5%BA%95%E6%98%AF%E4%BB%80%E9%BA%BC%EF%BC%9A%E5%85%88%E7%9C%8B%E6%87%82%E9%81%8A%E6%88%B2%E5%BC%95%E6%93%8E%E7%9A%84%E4%BD%8D%E7%BD%AE.m4a",
+        "audioSrc": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/godot-understand-before-building/audio/02_%E7%AC%AC%E4%B8%80%E7%AB%A0%EF%BD%9CGodot%20%E5%88%B0%E5%BA%95%E6%98%AF%E4%BB%80%E9%BA%BC%EF%BC%9A%E5%85%88%E7%9C%8B%E6%87%82%E9%81%8A%E6%88%B2%E5%BC%95%E6%93%8E%E7%9A%84%E4%BD%8D%E7%BD%AE.m4a",
         "durationSeconds": 1508.460998,
         "displayedDurationSeconds": 1508,
         "durationDeltaSeconds": 0.4611339999999018,
@@ -468,13 +474,19 @@
           "channels": 2,
           "fileSizeBytes": 48549015,
           "sha256": "984b27eb6652e0c4d75d89170558c3d8a9f027194603a4480157512a33076dc7"
-        }
+        },
+        "storage": "vercel-blob",
+        "blobUrl": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/godot-understand-before-building/audio/02_%E7%AC%AC%E4%B8%80%E7%AB%A0%EF%BD%9CGodot%20%E5%88%B0%E5%BA%95%E6%98%AF%E4%BB%80%E9%BA%BC%EF%BC%9A%E5%85%88%E7%9C%8B%E6%87%82%E9%81%8A%E6%88%B2%E5%BC%95%E6%93%8E%E7%9A%84%E4%BD%8D%E7%BD%AE.m4a",
+        "blobPathname": "books/godot-understand-before-building/audio/02_第一章｜Godot 到底是什麼：先看懂遊戲引擎的位置.m4a",
+        "blobEtag": "\"f58a053b2971c01b00bb1b52a94cb95d-2\"",
+        "blobHeadVerified": true,
+        "blobRemoteSeekVerified": false
       },
       {
         "chapterNumber": 3,
         "audioFilename": "03_第二章｜遊戲不是畫面，而是一套持續運轉的規則.m4a",
         "audioPath": "public/books/godot-understand-before-building/audio/03_第二章｜遊戲不是畫面，而是一套持續運轉的規則.m4a",
-        "audioSrc": "/books/godot-understand-before-building/audio/03_%E7%AC%AC%E4%BA%8C%E7%AB%A0%EF%BD%9C%E9%81%8A%E6%88%B2%E4%B8%8D%E6%98%AF%E7%95%AB%E9%9D%A2%EF%BC%8C%E8%80%8C%E6%98%AF%E4%B8%80%E5%A5%97%E6%8C%81%E7%BA%8C%E9%81%8B%E8%BD%89%E7%9A%84%E8%A6%8F%E5%89%87.m4a",
+        "audioSrc": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/godot-understand-before-building/audio/03_%E7%AC%AC%E4%BA%8C%E7%AB%A0%EF%BD%9C%E9%81%8A%E6%88%B2%E4%B8%8D%E6%98%AF%E7%95%AB%E9%9D%A2%EF%BC%8C%E8%80%8C%E6%98%AF%E4%B8%80%E5%A5%97%E6%8C%81%E7%BA%8C%E9%81%8B%E8%BD%89%E7%9A%84%E8%A6%8F%E5%89%87.m4a",
         "durationSeconds": 1226.269002,
         "displayedDurationSeconds": 1226,
         "durationDeltaSeconds": 0.269025000000056,
@@ -494,13 +506,19 @@
           "channels": 2,
           "fileSizeBytes": 39466891,
           "sha256": "0989119356db8a8d80b163638f9c9329b3d99110ed99226b486ee190438e320d"
-        }
+        },
+        "storage": "vercel-blob",
+        "blobUrl": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/godot-understand-before-building/audio/03_%E7%AC%AC%E4%BA%8C%E7%AB%A0%EF%BD%9C%E9%81%8A%E6%88%B2%E4%B8%8D%E6%98%AF%E7%95%AB%E9%9D%A2%EF%BC%8C%E8%80%8C%E6%98%AF%E4%B8%80%E5%A5%97%E6%8C%81%E7%BA%8C%E9%81%8B%E8%BD%89%E7%9A%84%E8%A6%8F%E5%89%87.m4a",
+        "blobPathname": "books/godot-understand-before-building/audio/03_第二章｜遊戲不是畫面，而是一套持續運轉的規則.m4a",
+        "blobEtag": "\"6b36df5709107499fe33b26a9a48194b-2\"",
+        "blobHeadVerified": true,
+        "blobRemoteSeekVerified": false
       },
       {
         "chapterNumber": 4,
         "audioFilename": "04_第三章｜打開 Godot 之後：專案、編輯器與檔案正在做什麼.m4a",
         "audioPath": "public/books/godot-understand-before-building/audio/04_第三章｜打開 Godot 之後：專案、編輯器與檔案正在做什麼.m4a",
-        "audioSrc": "/books/godot-understand-before-building/audio/04_%E7%AC%AC%E4%B8%89%E7%AB%A0%EF%BD%9C%E6%89%93%E9%96%8B%20Godot%20%E4%B9%8B%E5%BE%8C%EF%BC%9A%E5%B0%88%E6%A1%88%E3%80%81%E7%B7%A8%E8%BC%AF%E5%99%A8%E8%88%87%E6%AA%94%E6%A1%88%E6%AD%A3%E5%9C%A8%E5%81%9A%E4%BB%80%E9%BA%BC.m4a",
+        "audioSrc": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/godot-understand-before-building/audio/04_%E7%AC%AC%E4%B8%89%E7%AB%A0%EF%BD%9C%E6%89%93%E9%96%8B%20Godot%20%E4%B9%8B%E5%BE%8C%EF%BC%9A%E5%B0%88%E6%A1%88%E3%80%81%E7%B7%A8%E8%BC%AF%E5%99%A8%E8%88%87%E6%AA%94%E6%A1%88%E6%AD%A3%E5%9C%A8%E5%81%9A%E4%BB%80%E9%BA%BC.m4a",
         "durationSeconds": 1514.381995,
         "displayedDurationSeconds": 1514,
         "durationDeltaSeconds": 0.3822219999999561,
@@ -520,13 +538,19 @@
           "channels": 2,
           "fileSizeBytes": 48739510,
           "sha256": "21ad0970f2cbec397d4508e483b47bc92c7aa1f56dbae66f56b6e7454836083c"
-        }
+        },
+        "storage": "vercel-blob",
+        "blobUrl": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/godot-understand-before-building/audio/04_%E7%AC%AC%E4%B8%89%E7%AB%A0%EF%BD%9C%E6%89%93%E9%96%8B%20Godot%20%E4%B9%8B%E5%BE%8C%EF%BC%9A%E5%B0%88%E6%A1%88%E3%80%81%E7%B7%A8%E8%BC%AF%E5%99%A8%E8%88%87%E6%AA%94%E6%A1%88%E6%AD%A3%E5%9C%A8%E5%81%9A%E4%BB%80%E9%BA%BC.m4a",
+        "blobPathname": "books/godot-understand-before-building/audio/04_第三章｜打開 Godot 之後：專案、編輯器與檔案正在做什麼.m4a",
+        "blobEtag": "\"fc99511577652e7e505aedd867152440-2\"",
+        "blobHeadVerified": true,
+        "blobRemoteSeekVerified": false
       },
       {
         "chapterNumber": 5,
         "audioFilename": "05_第四章｜場景、節點與樹：Godot 最重要的語法.m4a",
         "audioPath": "public/books/godot-understand-before-building/audio/05_第四章｜場景、節點與樹：Godot 最重要的語法.m4a",
-        "audioSrc": "/books/godot-understand-before-building/audio/05_%E7%AC%AC%E5%9B%9B%E7%AB%A0%EF%BD%9C%E5%A0%B4%E6%99%AF%E3%80%81%E7%AF%80%E9%BB%9E%E8%88%87%E6%A8%B9%EF%BC%9AGodot%20%E6%9C%80%E9%87%8D%E8%A6%81%E7%9A%84%E8%AA%9E%E6%B3%95.m4a",
+        "audioSrc": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/godot-understand-before-building/audio/05_%E7%AC%AC%E5%9B%9B%E7%AB%A0%EF%BD%9C%E5%A0%B4%E6%99%AF%E3%80%81%E7%AF%80%E9%BB%9E%E8%88%87%E6%A8%B9%EF%BC%9AGodot%20%E6%9C%80%E9%87%8D%E8%A6%81%E7%9A%84%E8%AA%9E%E6%B3%95.m4a",
         "durationSeconds": 1470.705011,
         "displayedDurationSeconds": 1470,
         "durationDeltaSeconds": 0.7054880000000594,
@@ -546,13 +570,19 @@
           "channels": 2,
           "fileSizeBytes": 47333866,
           "sha256": "3a55f76d8894fc31cb26368c727faf9141385eba2325025cdd21910cd39e67db"
-        }
+        },
+        "storage": "vercel-blob",
+        "blobUrl": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/godot-understand-before-building/audio/05_%E7%AC%AC%E5%9B%9B%E7%AB%A0%EF%BD%9C%E5%A0%B4%E6%99%AF%E3%80%81%E7%AF%80%E9%BB%9E%E8%88%87%E6%A8%B9%EF%BC%9AGodot%20%E6%9C%80%E9%87%8D%E8%A6%81%E7%9A%84%E8%AA%9E%E6%B3%95.m4a",
+        "blobPathname": "books/godot-understand-before-building/audio/05_第四章｜場景、節點與樹：Godot 最重要的語法.m4a",
+        "blobEtag": "\"288e7e66a19a2c0beec0318ab1f2d37b-2\"",
+        "blobHeadVerified": true,
+        "blobRemoteSeekVerified": false
       },
       {
         "chapterNumber": 6,
         "audioFilename": "06_第五章｜資源、素材與資料：哪些東西應該被保存與重複使用.m4a",
         "audioPath": "public/books/godot-understand-before-building/audio/06_第五章｜資源、素材與資料：哪些東西應該被保存與重複使用.m4a",
-        "audioSrc": "/books/godot-understand-before-building/audio/06_%E7%AC%AC%E4%BA%94%E7%AB%A0%EF%BD%9C%E8%B3%87%E6%BA%90%E3%80%81%E7%B4%A0%E6%9D%90%E8%88%87%E8%B3%87%E6%96%99%EF%BC%9A%E5%93%AA%E4%BA%9B%E6%9D%B1%E8%A5%BF%E6%87%89%E8%A9%B2%E8%A2%AB%E4%BF%9D%E5%AD%98%E8%88%87%E9%87%8D%E8%A4%87%E4%BD%BF%E7%94%A8.m4a",
+        "audioSrc": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/godot-understand-before-building/audio/06_%E7%AC%AC%E4%BA%94%E7%AB%A0%EF%BD%9C%E8%B3%87%E6%BA%90%E3%80%81%E7%B4%A0%E6%9D%90%E8%88%87%E8%B3%87%E6%96%99%EF%BC%9A%E5%93%AA%E4%BA%9B%E6%9D%B1%E8%A5%BF%E6%87%89%E8%A9%B2%E8%A2%AB%E4%BF%9D%E5%AD%98%E8%88%87%E9%87%8D%E8%A4%87%E4%BD%BF%E7%94%A8.m4a",
         "durationSeconds": 1134.55,
         "displayedDurationSeconds": 1134,
         "durationDeltaSeconds": 0.5502039999998942,
@@ -572,13 +602,19 @@
           "channels": 2,
           "fileSizeBytes": 36515045,
           "sha256": "ef3433f75c9958c955a32b95c6185bafbf473cce2f5346de63447fc652b21ff9"
-        }
+        },
+        "storage": "vercel-blob",
+        "blobUrl": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/godot-understand-before-building/audio/06_%E7%AC%AC%E4%BA%94%E7%AB%A0%EF%BD%9C%E8%B3%87%E6%BA%90%E3%80%81%E7%B4%A0%E6%9D%90%E8%88%87%E8%B3%87%E6%96%99%EF%BC%9A%E5%93%AA%E4%BA%9B%E6%9D%B1%E8%A5%BF%E6%87%89%E8%A9%B2%E8%A2%AB%E4%BF%9D%E5%AD%98%E8%88%87%E9%87%8D%E8%A4%87%E4%BD%BF%E7%94%A8.m4a",
+        "blobPathname": "books/godot-understand-before-building/audio/06_第五章｜資源、素材與資料：哪些東西應該被保存與重複使用.m4a",
+        "blobEtag": "\"ac8f826210b86943c209336ff008423a-2\"",
+        "blobHeadVerified": true,
+        "blobRemoteSeekVerified": false
       },
       {
         "chapterNumber": 7,
         "audioFilename": "07_第六章｜GDScript 不必先背，但必須看懂它在表達什麼.m4a",
         "audioPath": "public/books/godot-understand-before-building/audio/07_第六章｜GDScript 不必先背，但必須看懂它在表達什麼.m4a",
-        "audioSrc": "/books/godot-understand-before-building/audio/07_%E7%AC%AC%E5%85%AD%E7%AB%A0%EF%BD%9CGDScript%20%E4%B8%8D%E5%BF%85%E5%85%88%E8%83%8C%EF%BC%8C%E4%BD%86%E5%BF%85%E9%A0%88%E7%9C%8B%E6%87%82%E5%AE%83%E5%9C%A8%E8%A1%A8%E9%81%94%E4%BB%80%E9%BA%BC.m4a",
+        "audioSrc": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/godot-understand-before-building/audio/07_%E7%AC%AC%E5%85%AD%E7%AB%A0%EF%BD%9CGDScript%20%E4%B8%8D%E5%BF%85%E5%85%88%E8%83%8C%EF%BC%8C%E4%BD%86%E5%BF%85%E9%A0%88%E7%9C%8B%E6%87%82%E5%AE%83%E5%9C%A8%E8%A1%A8%E9%81%94%E4%BB%80%E9%BA%BC.m4a",
         "durationSeconds": 1697.216009,
         "displayedDurationSeconds": 1697,
         "durationDeltaSeconds": 0.21614500000009684,
@@ -598,13 +634,19 @@
           "channels": 2,
           "fileSizeBytes": 54623779,
           "sha256": "b26974557f49594de487b0e1d6f5a3d6adb3a1093ee34faf4a1455b5b7848195"
-        }
+        },
+        "storage": "vercel-blob",
+        "blobUrl": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/godot-understand-before-building/audio/07_%E7%AC%AC%E5%85%AD%E7%AB%A0%EF%BD%9CGDScript%20%E4%B8%8D%E5%BF%85%E5%85%88%E8%83%8C%EF%BC%8C%E4%BD%86%E5%BF%85%E9%A0%88%E7%9C%8B%E6%87%82%E5%AE%83%E5%9C%A8%E8%A1%A8%E9%81%94%E4%BB%80%E9%BA%BC.m4a",
+        "blobPathname": "books/godot-understand-before-building/audio/07_第六章｜GDScript 不必先背，但必須看懂它在表達什麼.m4a",
+        "blobEtag": "\"caf8e7e1133c4d4e5daa3ece6d2d513f-3\"",
+        "blobHeadVerified": true,
+        "blobRemoteSeekVerified": false
       },
       {
         "chapterNumber": 8,
         "audioFilename": "08_第七章｜輸入、訊號、事件與狀態：遊戲物件如何互相溝通.m4a",
         "audioPath": "public/books/godot-understand-before-building/audio/08_第七章｜輸入、訊號、事件與狀態：遊戲物件如何互相溝通.m4a",
-        "audioSrc": "/books/godot-understand-before-building/audio/08_%E7%AC%AC%E4%B8%83%E7%AB%A0%EF%BD%9C%E8%BC%B8%E5%85%A5%E3%80%81%E8%A8%8A%E8%99%9F%E3%80%81%E4%BA%8B%E4%BB%B6%E8%88%87%E7%8B%80%E6%85%8B%EF%BC%9A%E9%81%8A%E6%88%B2%E7%89%A9%E4%BB%B6%E5%A6%82%E4%BD%95%E4%BA%92%E7%9B%B8%E6%BA%9D%E9%80%9A.m4a",
+        "audioSrc": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/godot-understand-before-building/audio/08_%E7%AC%AC%E4%B8%83%E7%AB%A0%EF%BD%9C%E8%BC%B8%E5%85%A5%E3%80%81%E8%A8%8A%E8%99%9F%E3%80%81%E4%BA%8B%E4%BB%B6%E8%88%87%E7%8B%80%E6%85%8B%EF%BC%9A%E9%81%8A%E6%88%B2%E7%89%A9%E4%BB%B6%E5%A6%82%E4%BD%95%E4%BA%92%E7%9B%B8%E6%BA%9D%E9%80%9A.m4a",
         "durationSeconds": 1487.771995,
         "displayedDurationSeconds": 1487,
         "durationDeltaSeconds": 0.7721540000000005,
@@ -624,13 +666,19 @@
           "channels": 2,
           "fileSizeBytes": 47883163,
           "sha256": "5a2e5fb7de240020ea5fe4b23ae18ed8b46ba4e054026212d8a0d340fe634ceb"
-        }
+        },
+        "storage": "vercel-blob",
+        "blobUrl": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/godot-understand-before-building/audio/08_%E7%AC%AC%E4%B8%83%E7%AB%A0%EF%BD%9C%E8%BC%B8%E5%85%A5%E3%80%81%E8%A8%8A%E8%99%9F%E3%80%81%E4%BA%8B%E4%BB%B6%E8%88%87%E7%8B%80%E6%85%8B%EF%BC%9A%E9%81%8A%E6%88%B2%E7%89%A9%E4%BB%B6%E5%A6%82%E4%BD%95%E4%BA%92%E7%9B%B8%E6%BA%9D%E9%80%9A.m4a",
+        "blobPathname": "books/godot-understand-before-building/audio/08_第七章｜輸入、訊號、事件與狀態：遊戲物件如何互相溝通.m4a",
+        "blobEtag": "\"499185037d5ec2879da1be3f16893623-2\"",
+        "blobHeadVerified": true,
+        "blobRemoteSeekVerified": false
       },
       {
         "chapterNumber": 9,
         "audioFilename": "09_第八章｜每一幀發生什麼：生命週期、時間、物理與動畫.m4a",
         "audioPath": "public/books/godot-understand-before-building/audio/09_第八章｜每一幀發生什麼：生命週期、時間、物理與動畫.m4a",
-        "audioSrc": "/books/godot-understand-before-building/audio/09_%E7%AC%AC%E5%85%AB%E7%AB%A0%EF%BD%9C%E6%AF%8F%E4%B8%80%E5%B9%80%E7%99%BC%E7%94%9F%E4%BB%80%E9%BA%BC%EF%BC%9A%E7%94%9F%E5%91%BD%E9%80%B1%E6%9C%9F%E3%80%81%E6%99%82%E9%96%93%E3%80%81%E7%89%A9%E7%90%86%E8%88%87%E5%8B%95%E7%95%AB.m4a",
+        "audioSrc": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/godot-understand-before-building/audio/09_%E7%AC%AC%E5%85%AB%E7%AB%A0%EF%BD%9C%E6%AF%8F%E4%B8%80%E5%B9%80%E7%99%BC%E7%94%9F%E4%BB%80%E9%BA%BC%EF%BC%9A%E7%94%9F%E5%91%BD%E9%80%B1%E6%9C%9F%E3%80%81%E6%99%82%E9%96%93%E3%80%81%E7%89%A9%E7%90%86%E8%88%87%E5%8B%95%E7%95%AB.m4a",
         "durationSeconds": 1311.462993,
         "displayedDurationSeconds": 1311,
         "durationDeltaSeconds": 0.46303899999998066,
@@ -650,13 +698,19 @@
           "channels": 2,
           "fileSizeBytes": 42208820,
           "sha256": "7625dbd142201ff7746fd81653bd74505a256a92d0ccc540e9ecea281cfeb111"
-        }
+        },
+        "storage": "vercel-blob",
+        "blobUrl": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/godot-understand-before-building/audio/09_%E7%AC%AC%E5%85%AB%E7%AB%A0%EF%BD%9C%E6%AF%8F%E4%B8%80%E5%B9%80%E7%99%BC%E7%94%9F%E4%BB%80%E9%BA%BC%EF%BC%9A%E7%94%9F%E5%91%BD%E9%80%B1%E6%9C%9F%E3%80%81%E6%99%82%E9%96%93%E3%80%81%E7%89%A9%E7%90%86%E8%88%87%E5%8B%95%E7%95%AB.m4a",
+        "blobPathname": "books/godot-understand-before-building/audio/09_第八章｜每一幀發生什麼：生命週期、時間、物理與動畫.m4a",
+        "blobEtag": "\"eb98212fd1eb4cfe8fb42e9053997d3e-2\"",
+        "blobHeadVerified": true,
+        "blobRemoteSeekVerified": false
       },
       {
         "chapterNumber": 10,
         "audioFilename": "10_第九章｜2D、3D 與 UI：三個看似不同、其實相通的空間.m4a",
         "audioPath": "public/books/godot-understand-before-building/audio/10_第九章｜2D、3D 與 UI：三個看似不同、其實相通的空間.m4a",
-        "audioSrc": "/books/godot-understand-before-building/audio/10_%E7%AC%AC%E4%B9%9D%E7%AB%A0%EF%BD%9C2D%E3%80%813D%20%E8%88%87%20UI%EF%BC%9A%E4%B8%89%E5%80%8B%E7%9C%8B%E4%BC%BC%E4%B8%8D%E5%90%8C%E3%80%81%E5%85%B6%E5%AF%A6%E7%9B%B8%E9%80%9A%E7%9A%84%E7%A9%BA%E9%96%93.m4a",
+        "audioSrc": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/godot-understand-before-building/audio/10_%E7%AC%AC%E4%B9%9D%E7%AB%A0%EF%BD%9C2D%E3%80%813D%20%E8%88%87%20UI%EF%BC%9A%E4%B8%89%E5%80%8B%E7%9C%8B%E4%BC%BC%E4%B8%8D%E5%90%8C%E3%80%81%E5%85%B6%E5%AF%A6%E7%9B%B8%E9%80%9A%E7%9A%84%E7%A9%BA%E9%96%93.m4a",
         "durationSeconds": 1369.095011,
         "displayedDurationSeconds": 1369,
         "durationDeltaSeconds": 0.09496600000011313,
@@ -676,13 +730,19 @@
           "channels": 2,
           "fileSizeBytes": 44063665,
           "sha256": "275f74449202ac7542ee81c74e2f320f6fdfc6826669aeb42a1d920660393b30"
-        }
+        },
+        "storage": "vercel-blob",
+        "blobUrl": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/godot-understand-before-building/audio/10_%E7%AC%AC%E4%B9%9D%E7%AB%A0%EF%BD%9C2D%E3%80%813D%20%E8%88%87%20UI%EF%BC%9A%E4%B8%89%E5%80%8B%E7%9C%8B%E4%BC%BC%E4%B8%8D%E5%90%8C%E3%80%81%E5%85%B6%E5%AF%A6%E7%9B%B8%E9%80%9A%E7%9A%84%E7%A9%BA%E9%96%93.m4a",
+        "blobPathname": "books/godot-understand-before-building/audio/10_第九章｜2D、3D 與 UI：三個看似不同、其實相通的空間.m4a",
+        "blobEtag": "\"425b8e2852593e597e70aa2e7775f4e9-2\"",
+        "blobHeadVerified": true,
+        "blobRemoteSeekVerified": false
       },
       {
         "chapterNumber": 11,
         "audioFilename": "11_第十章｜從能跑到能維護：Godot 專案的架構思維.m4a",
         "audioPath": "public/books/godot-understand-before-building/audio/11_第十章｜從能跑到能維護：Godot 專案的架構思維.m4a",
-        "audioSrc": "/books/godot-understand-before-building/audio/11_%E7%AC%AC%E5%8D%81%E7%AB%A0%EF%BD%9C%E5%BE%9E%E8%83%BD%E8%B7%91%E5%88%B0%E8%83%BD%E7%B6%AD%E8%AD%B7%EF%BC%9AGodot%20%E5%B0%88%E6%A1%88%E7%9A%84%E6%9E%B6%E6%A7%8B%E6%80%9D%E7%B6%AD.m4a",
+        "audioSrc": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/godot-understand-before-building/audio/11_%E7%AC%AC%E5%8D%81%E7%AB%A0%EF%BD%9C%E5%BE%9E%E8%83%BD%E8%B7%91%E5%88%B0%E8%83%BD%E7%B6%AD%E8%AD%B7%EF%BC%9AGodot%20%E5%B0%88%E6%A1%88%E7%9A%84%E6%9E%B6%E6%A7%8B%E6%80%9D%E7%B6%AD.m4a",
         "durationSeconds": 1448.135011,
         "displayedDurationSeconds": 1448,
         "durationDeltaSeconds": 0.13569200000006276,
@@ -702,13 +762,19 @@
           "channels": 2,
           "fileSizeBytes": 46607513,
           "sha256": "da2f69c00e0f6c1d4e5960c54841b51e9a1451b341d860e16385d3c37749fb50"
-        }
+        },
+        "storage": "vercel-blob",
+        "blobUrl": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/godot-understand-before-building/audio/11_%E7%AC%AC%E5%8D%81%E7%AB%A0%EF%BD%9C%E5%BE%9E%E8%83%BD%E8%B7%91%E5%88%B0%E8%83%BD%E7%B6%AD%E8%AD%B7%EF%BC%9AGodot%20%E5%B0%88%E6%A1%88%E7%9A%84%E6%9E%B6%E6%A7%8B%E6%80%9D%E7%B6%AD.m4a",
+        "blobPathname": "books/godot-understand-before-building/audio/11_第十章｜從能跑到能維護：Godot 專案的架構思維.m4a",
+        "blobEtag": "\"355b62434c74ec173ab279d8b83f25c0-2\"",
+        "blobHeadVerified": true,
+        "blobRemoteSeekVerified": false
       },
       {
         "chapterNumber": 12,
         "audioFilename": "12_第十一章｜如何指揮 Codex 開發 Godot，而不是讓它自由發揮.m4a",
         "audioPath": "public/books/godot-understand-before-building/audio/12_第十一章｜如何指揮 Codex 開發 Godot，而不是讓它自由發揮.m4a",
-        "audioSrc": "/books/godot-understand-before-building/audio/12_%E7%AC%AC%E5%8D%81%E4%B8%80%E7%AB%A0%EF%BD%9C%E5%A6%82%E4%BD%95%E6%8C%87%E6%8F%AE%20Codex%20%E9%96%8B%E7%99%BC%20Godot%EF%BC%8C%E8%80%8C%E4%B8%8D%E6%98%AF%E8%AE%93%E5%AE%83%E8%87%AA%E7%94%B1%E7%99%BC%E6%8F%AE.m4a",
+        "audioSrc": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/godot-understand-before-building/audio/12_%E7%AC%AC%E5%8D%81%E4%B8%80%E7%AB%A0%EF%BD%9C%E5%A6%82%E4%BD%95%E6%8C%87%E6%8F%AE%20Codex%20%E9%96%8B%E7%99%BC%20Godot%EF%BC%8C%E8%80%8C%E4%B8%8D%E6%98%AF%E8%AE%93%E5%AE%83%E8%87%AA%E7%94%B1%E7%99%BC%E6%8F%AE.m4a",
         "durationSeconds": 1124.449002,
         "displayedDurationSeconds": 1124,
         "durationDeltaSeconds": 0.4495240000001104,
@@ -728,13 +794,19 @@
           "channels": 2,
           "fileSizeBytes": 36189967,
           "sha256": "3327d95feb79692de180468e94d11b3946df3a4adbeebcbb4f33d936e53e0ad8"
-        }
+        },
+        "storage": "vercel-blob",
+        "blobUrl": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/godot-understand-before-building/audio/12_%E7%AC%AC%E5%8D%81%E4%B8%80%E7%AB%A0%EF%BD%9C%E5%A6%82%E4%BD%95%E6%8C%87%E6%8F%AE%20Codex%20%E9%96%8B%E7%99%BC%20Godot%EF%BC%8C%E8%80%8C%E4%B8%8D%E6%98%AF%E8%AE%93%E5%AE%83%E8%87%AA%E7%94%B1%E7%99%BC%E6%8F%AE.m4a",
+        "blobPathname": "books/godot-understand-before-building/audio/12_第十一章｜如何指揮 Codex 開發 Godot，而不是讓它自由發揮.m4a",
+        "blobEtag": "\"0ba0d991488b3f8c4e9349b0316e5ed2-2\"",
+        "blobHeadVerified": true,
+        "blobRemoteSeekVerified": false
       },
       {
         "chapterNumber": 13,
         "audioFilename": "13_第十二章｜完成、匯出與教學：把一次開發變成可複製的方法.m4a",
         "audioPath": "public/books/godot-understand-before-building/audio/13_第十二章｜完成、匯出與教學：把一次開發變成可複製的方法.m4a",
-        "audioSrc": "/books/godot-understand-before-building/audio/13_%E7%AC%AC%E5%8D%81%E4%BA%8C%E7%AB%A0%EF%BD%9C%E5%AE%8C%E6%88%90%E3%80%81%E5%8C%AF%E5%87%BA%E8%88%87%E6%95%99%E5%AD%B8%EF%BC%9A%E6%8A%8A%E4%B8%80%E6%AC%A1%E9%96%8B%E7%99%BC%E8%AE%8A%E6%88%90%E5%8F%AF%E8%A4%87%E8%A3%BD%E7%9A%84%E6%96%B9%E6%B3%95.m4a",
+        "audioSrc": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/godot-understand-before-building/audio/13_%E7%AC%AC%E5%8D%81%E4%BA%8C%E7%AB%A0%EF%BD%9C%E5%AE%8C%E6%88%90%E3%80%81%E5%8C%AF%E5%87%BA%E8%88%87%E6%95%99%E5%AD%B8%EF%BC%9A%E6%8A%8A%E4%B8%80%E6%AC%A1%E9%96%8B%E7%99%BC%E8%AE%8A%E6%88%90%E5%8F%AF%E8%A4%87%E8%A3%BD%E7%9A%84%E6%96%B9%E6%B3%95.m4a",
         "durationSeconds": 1435.295011,
         "displayedDurationSeconds": 1435,
         "durationDeltaSeconds": 0.29505700000004254,
@@ -754,13 +826,19 @@
           "channels": 2,
           "fileSizeBytes": 46194168,
           "sha256": "606101112f055546c9655194aa746e5a58eb081004df2d1eadb11ccb93715d28"
-        }
+        },
+        "storage": "vercel-blob",
+        "blobUrl": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/godot-understand-before-building/audio/13_%E7%AC%AC%E5%8D%81%E4%BA%8C%E7%AB%A0%EF%BD%9C%E5%AE%8C%E6%88%90%E3%80%81%E5%8C%AF%E5%87%BA%E8%88%87%E6%95%99%E5%AD%B8%EF%BC%9A%E6%8A%8A%E4%B8%80%E6%AC%A1%E9%96%8B%E7%99%BC%E8%AE%8A%E6%88%90%E5%8F%AF%E8%A4%87%E8%A3%BD%E7%9A%84%E6%96%B9%E6%B3%95.m4a",
+        "blobPathname": "books/godot-understand-before-building/audio/13_第十二章｜完成、匯出與教學：把一次開發變成可複製的方法.m4a",
+        "blobEtag": "\"e62f6abf45de8b10a9c47332f59b2a01-2\"",
+        "blobHeadVerified": true,
+        "blobRemoteSeekVerified": false
       },
       {
         "chapterNumber": 14,
         "audioFilename": "14_結語｜真正要學會的不是 Godot，而是如何理解一個系統.m4a",
         "audioPath": "public/books/godot-understand-before-building/audio/14_結語｜真正要學會的不是 Godot，而是如何理解一個系統.m4a",
-        "audioSrc": "/books/godot-understand-before-building/audio/14_%E7%B5%90%E8%AA%9E%EF%BD%9C%E7%9C%9F%E6%AD%A3%E8%A6%81%E5%AD%B8%E6%9C%83%E7%9A%84%E4%B8%8D%E6%98%AF%20Godot%EF%BC%8C%E8%80%8C%E6%98%AF%E5%A6%82%E4%BD%95%E7%90%86%E8%A7%A3%E4%B8%80%E5%80%8B%E7%B3%BB%E7%B5%B1.m4a",
+        "audioSrc": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/godot-understand-before-building/audio/14_%E7%B5%90%E8%AA%9E%EF%BD%9C%E7%9C%9F%E6%AD%A3%E8%A6%81%E5%AD%B8%E6%9C%83%E7%9A%84%E4%B8%8D%E6%98%AF%20Godot%EF%BC%8C%E8%80%8C%E6%98%AF%E5%A6%82%E4%BD%95%E7%90%86%E8%A7%A3%E4%B8%80%E5%80%8B%E7%B3%BB%E7%B5%B1.m4a",
         "durationSeconds": 952.738005,
         "displayedDurationSeconds": 952,
         "durationDeltaSeconds": 0.7379590000000462,
@@ -780,13 +858,19 @@
           "channels": 2,
           "fileSizeBytes": 30663645,
           "sha256": "cc2d0b014bef4d307348c458b00d3a9c94f8f7151a7e988f71d34b7a5b7bd8bb"
-        }
+        },
+        "storage": "vercel-blob",
+        "blobUrl": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/godot-understand-before-building/audio/14_%E7%B5%90%E8%AA%9E%EF%BD%9C%E7%9C%9F%E6%AD%A3%E8%A6%81%E5%AD%B8%E6%9C%83%E7%9A%84%E4%B8%8D%E6%98%AF%20Godot%EF%BC%8C%E8%80%8C%E6%98%AF%E5%A6%82%E4%BD%95%E7%90%86%E8%A7%A3%E4%B8%80%E5%80%8B%E7%B3%BB%E7%B5%B1.m4a",
+        "blobPathname": "books/godot-understand-before-building/audio/14_結語｜真正要學會的不是 Godot，而是如何理解一個系統.m4a",
+        "blobEtag": "\"e12845b5c842c3bdb6c266fc1f21ece6-2\"",
+        "blobHeadVerified": true,
+        "blobRemoteSeekVerified": false
       },
       {
         "chapterNumber": 15,
         "audioFilename": "15_附錄｜把概念變成可查、可下指令、可教學的工作工具.m4a",
         "audioPath": "public/books/godot-understand-before-building/audio/15_附錄｜把概念變成可查、可下指令、可教學的工作工具.m4a",
-        "audioSrc": "/books/godot-understand-before-building/audio/15_%E9%99%84%E9%8C%84%EF%BD%9C%E6%8A%8A%E6%A6%82%E5%BF%B5%E8%AE%8A%E6%88%90%E5%8F%AF%E6%9F%A5%E3%80%81%E5%8F%AF%E4%B8%8B%E6%8C%87%E4%BB%A4%E3%80%81%E5%8F%AF%E6%95%99%E5%AD%B8%E7%9A%84%E5%B7%A5%E4%BD%9C%E5%B7%A5%E5%85%B7.m4a",
+        "audioSrc": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/godot-understand-before-building/audio/15_%E9%99%84%E9%8C%84%EF%BD%9C%E6%8A%8A%E6%A6%82%E5%BF%B5%E8%AE%8A%E6%88%90%E5%8F%AF%E6%9F%A5%E3%80%81%E5%8F%AF%E4%B8%8B%E6%8C%87%E4%BB%A4%E3%80%81%E5%8F%AF%E6%95%99%E5%AD%B8%E7%9A%84%E5%B7%A5%E4%BD%9C%E5%B7%A5%E5%85%B7.m4a",
         "durationSeconds": 1355.418005,
         "displayedDurationSeconds": 1355,
         "durationDeltaSeconds": 0.4184130000001005,
@@ -806,7 +890,13 @@
           "channels": 2,
           "fileSizeBytes": 43623428,
           "sha256": "8e52863b3444d5005d3c8fc106ba8cdd66c903736ea0f8fd52ec291223cb625f"
-        }
+        },
+        "storage": "vercel-blob",
+        "blobUrl": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/godot-understand-before-building/audio/15_%E9%99%84%E9%8C%84%EF%BD%9C%E6%8A%8A%E6%A6%82%E5%BF%B5%E8%AE%8A%E6%88%90%E5%8F%AF%E6%9F%A5%E3%80%81%E5%8F%AF%E4%B8%8B%E6%8C%87%E4%BB%A4%E3%80%81%E5%8F%AF%E6%95%99%E5%AD%B8%E7%9A%84%E5%B7%A5%E4%BD%9C%E5%B7%A5%E5%85%B7.m4a",
+        "blobPathname": "books/godot-understand-before-building/audio/15_附錄｜把概念變成可查、可下指令、可教學的工作工具.m4a",
+        "blobEtag": "\"2bf51edb6e399c14d7e9970db71458ab-2\"",
+        "blobHeadVerified": true,
+        "blobRemoteSeekVerified": false
       }
     ]
   },
@@ -833,5 +923,15 @@
     "productionRemoteSeekChecked": true,
     "productionCheckedAudioCount": 15,
     "productionBaseUrl": "https://jinren-protocol.vercel.app"
+  },
+  "blobMigrationValidation": {
+    "status": "uploaded-and-applied",
+    "provider": "vercel-blob",
+    "access": "public",
+    "region": "hnd1",
+    "checkedAudioCount": 15,
+    "failedChapterNumbers": [],
+    "exactContentLengthChecked": true,
+    "remoteSeekChecked": false
   }
 }

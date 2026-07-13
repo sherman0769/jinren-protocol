@@ -11,6 +11,7 @@ export type Chapter = {
     title?: string;
     provider?: "notebooklm" | "manual" | "tts";
     durationSeconds?: number;
+    storage?: "local" | "vercel-blob";
   };
   paragraphs: string[];
 };

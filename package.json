@@ -15,10 +15,16 @@
     "transcode:book-audio": "node scripts/transcode-book-audio.mjs",
     "stage:book-audio": "node scripts/transcode-book-audio.mjs --stage",
     "apply:book-audio": "node scripts/transcode-book-audio.mjs --apply",
+    "blob:plan:book-audio": "node scripts/migrate-book-audio-to-blob.mjs --plan",
+    "blob:smoke:book-audio": "node --env-file-if-exists=.env.local scripts/migrate-book-audio-to-blob.mjs --smoke",
+    "blob:upload:book-audio": "node --env-file-if-exists=.env.local scripts/migrate-book-audio-to-blob.mjs --upload",
+    "blob:apply:book-audio": "node --env-file-if-exists=.env.local scripts/migrate-book-audio-to-blob.mjs --apply",
+    "blob:verify:book-audio": "node --env-file-if-exists=.env.local scripts/migrate-book-audio-to-blob.mjs --verify-production",
     "validate:notebooklm-audio": "node scripts/validate-notebooklm-audio.mjs",
     "verify:podcast-ux": "node scripts/verify-podcast-ux.mjs"
   },
   "dependencies": {
+    "@vercel/blob": "^2.6.1",
     "lucide-react": "^1.17.0",
     "mammoth": "^1.12.0",
     "next": "16.2.9",

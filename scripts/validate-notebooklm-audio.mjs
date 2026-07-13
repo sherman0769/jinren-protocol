@@ -13,6 +13,8 @@ const positionalArgs = args.filter((arg) => !arg.startsWith("--"));
 const slug = readArg("--slug") ?? positionalArgs[0];
 const baseUrl = (readArg("--base-url") ?? positionalArgs[1])?.replace(/\/$/, "");
 const remoteSeek = args.includes("--remote-seek") || positionalArgs.includes("remote-seek");
+const resolveAudioUrl = (audioSrc) =>
+  /^https:\/\//iu.test(audioSrc) ? audioSrc : `${baseUrl}${audioSrc}`;
 
 if (!slug) {
   throw new Error(
@@ -230,7 +232,8 @@ for (const chapter of book.chapters) {
   }
 
   if (baseUrl) {
-    const response = await fetch(`${baseUrl}${chapter.audio.src}`, { method: "HEAD" });
+    const productionAudioUrl = resolveAudioUrl(chapter.audio.src);
+    const response = await fetch(productionAudioUrl, { method: "HEAD" });
     const contentType = response.headers.get("content-type") ?? "";
     const contentLength = Number(response.headers.get("content-length"));
     if (!response.ok || !contentType.startsWith("audio/")) {
@@ -254,7 +257,7 @@ for (const chapter of book.chapters) {
           "-ss",
           String(seekSeconds),
           "-i",
-          `${baseUrl}${chapter.audio.src}`,
+          productionAudioUrl,
           "-t",
           "5",
           "-map",
