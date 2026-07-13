@@ -319,7 +319,10 @@ function buildManifest(entries, status) {
 function readManifest() {
   if (!existsSync(manifestPath)) throw new Error(`Missing staged manifest: ${manifestPath}`);
   const manifest = JSON.parse(readFileSync(manifestPath, "utf8"));
-  if (manifest.status !== "passed" || manifest.entries?.length === 0) {
+  if (
+    !["passed", "applied-and-locally-validated"].includes(manifest.status) ||
+    manifest.entries?.length === 0
+  ) {
     throw new Error("The staged manifest has not passed validation");
   }
   if (

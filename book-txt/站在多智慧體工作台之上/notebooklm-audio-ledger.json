@@ -216,6 +216,8 @@
     "lastPacketDurationChecked": true,
     "fullLocalDecodeChecked": true,
     "uniqueFingerprintsChecked": true,
-    "productionRemoteSeekChecked": false
+    "productionRemoteSeekChecked": true,
+    "productionCheckedAudioCount": 1,
+    "productionBaseUrl": "https://jinren-protocol.vercel.app"
   }
 }
