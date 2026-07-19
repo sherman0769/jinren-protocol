@@ -1,0 +1,59 @@
+研究來源與版本說明
+
+- 寫作基準日：2026-07-19
+
+- 來源原則：以 OpenAI 官方網站、Help Center 與 ChatGPT Learn／Codex 官方文件為主。
+
+- 使用規則：正文只使用能支持核心論點的必要事實；易變動的方案、額度、推出狀態與介面集中於附錄。
+
+來源登錄
+
+ID｜官方來源｜日期狀態｜支持章節｜支持觀點｜限制／更新風險
+
+R01｜ChatGPT is now a partner for your most ambitious work｜發布：2026-07-09；查閱：2026-07-19｜序章、2、8、9、10｜Work 能跨應用程式與檔案推進多步驟工作、交付文件／試算表／簡報／網站等成果，並讓人查看進度、重新導向與核准重要行動。｜官方發布文帶有產品行銷語氣；個別客戶成效不作一般化證據。
+
+R02｜ChatGPT Work and Codex｜更新：約 2026-07-17；查閱：2026-07-19｜2、8、9、11｜Chat 適合快速問答與腦力激盪；Work 適合較長、多步驟、成品導向工作；Codex 適合軟體開發。雲端與桌面 Work 的資料位置與能力不同。｜分批推出；方案與平台可用性須定期重查。
+
+R03｜Creating and editing documents, spreadsheets, and presentations with ChatGPT Work｜更新：約 2026-07-15；查閱：2026-07-19｜1、7、9｜Work 可依指令、來源材料、參考檔或範本建立／編輯文件、試算表、簡報、報告與分析；使用者應明定輸出位置、格式與不可變條件並自行複核。｜Google 與 Microsoft 的支援依平台、方案、檔案類型而異；不可籠統寫成全面相容。
+
+R04｜Using cloud browser in ChatGPT｜更新：約 2026-07-15；查閱：2026-07-19｜6、8、9｜Cloud Browser 可操作支援的公開網站，必要時暫停詢問或要求確認；推出初期主要是未登入的公開頁面。｜不可輸入登入憑證、使用密碼管理器或完成付款；CAPTCHA／網站阻擋可能中止。
+
+R05｜File storage and Library in ChatGPT｜更新：約 2026-07-15；查閱：2026-07-19｜5、9、12、附錄｜上傳與生成檔案可儲存在 Library，與聊天附件限制分開；檔案保存、刪除與方案容量有明確規則。｜儲存額度與推出範圍會變動；Library 不等於永久、無條件的專屬硬碟。
+
+R06｜Scheduled Tasks in ChatGPT｜更新：約 2026-07-17；查閱：2026-07-19｜10、12、附錄｜支援一次性、重複與監測變化的排程任務；可在不同裝置管理；有頻率、活動數與檔案存取限制。｜同一官方頁對部分方案活動數出現不一致敘述；書中不以單一數字作永久承諾，建議在帳號內核對。
+
+R07｜Skills in ChatGPT｜更新：約 2026-07-17；查閱：2026-07-19｜10、12｜Skill 是可重複、可分享的工作指引，可包含指令、例子與程式；系統可在適合時自動使用。｜個人 Skill 的方案、桌面／雲端同步與管理權限仍在演進。
+
+R08｜Plugins in ChatGPT and Codex｜更新：約 2026-07-15；查閱：2026-07-19｜6、9、10｜2026-07-09 起 App Directory 移轉為 Plugin Directory；Plugin 可封裝 Skills、Apps 與 App templates；Apps 負責外部資料與動作。｜可用性受方案、角色、地區、工作區設定與底層 App 權限影響。
+
+R09｜Using Credits for Flexible Usage in ChatGPT｜更新：約 2026-07-15；查閱：2026-07-19｜附錄｜Plus／Pro 的代理型功能可共享某些使用額度／credits；實際可用路徑依功能與帳號而異。｜計價與使用量高度易變，正文不寫具體消耗預測。
+
+R10｜Sites｜查閱：2026-07-19；狀態：公開測試｜7、9、11、12、附錄｜Sites 可建立、託管、改版與分享網站、Web App 或遊戲；可支援部分持久資料、檔案、登入、權限與分析能力。｜所有部署網址都是 production；框架、區域、資料居留、敏感資料與方案限制需另行確認。不能把快速原型直接等同正式企業系統。
+
+R11｜Browser｜查閱：2026-07-19｜6、8、9、11｜網頁與桌面皆有 Browser；桌面內建瀏覽器可登入獨立 profile，Work／Codex 可在取得許可後操作；Cloud Browser 與桌面 Browser 邊界不同。｜網頁內容屬不受信任上下文；敏感動作需複核。Built-in browser 與使用者原本瀏覽器工作階段分離。
+
+R12｜Custom instructions with AGENTS.md｜查閱：2026-07-19｜11、12｜Codex 開始工作前會讀取 AGENTS.md；可依全域、專案與子目錄分層，較近的規則覆蓋較遠規則。｜指令鏈有容量與探索規則；AGENTS.md 應精簡、準確，不能當成所有規格的垃圾桶。
+
+R13｜Codex best practices｜查閱：2026-07-19｜3、7、11｜複雜任務應先規劃；AGENTS.md 適合放可重複規則；應要求測試、檢查與證據，而非只要求修改。｜官方最佳實務是技術指引，不代表 Work 是唯一的前置準備方法；本書框架仍屬作者觀點。
+
+R14｜Codex customization｜查閱：2026-07-19｜10、11、12｜AGENTS.md、Memories、Skills、MCP、Subagents 是互補層；專案規則、可重複流程與外部工具應分別放在合適位置。｜功能名稱與可用面仍可能快速調整。
+
+R15｜Using Codex with your ChatGPT plan｜更新：約 2026-07-18；查閱：2026-07-19｜2、11、附錄｜Codex 是協助撰寫、審查與交付程式碼的 coding agent；Work 是另一個面向研究與交付成果的體驗。｜方案包含與用量限制會變動；不把價格與額度寫進穩定正文。
+
+R16｜Business data privacy, security, and compliance｜查閱：2026-07-19｜6、9、12｜Business、Enterprise、Edu 等組織資料預設不作模型訓練，並提供加密與治理承諾。｜個人方案與組織方案規則不同；仍需依組織政策、資料分類與法規決定可否上傳。
+
+R17｜Data Controls FAQ｜查閱：2026-07-19｜6、9、附錄｜個人使用者可關閉「Improve the model for everyone」；Temporary Chat 與一般聊天的保留與訓練規則不同。｜關閉訓練不等於所有資料治理問題都消失；Memory、連接器與第三方系統仍需分別管理。
+
+R18｜Managing data, sharing, and privacy in ChatGPT Business｜更新：約 2026-07-16；查閱：2026-07-19｜6、9、12｜Business 工作區的聊天與 Codex 歷史預設不會自動讓其他成員看到；共享、分析與管理有明確邊界。｜工作區管理設定會影響可見性與能力；不應把個人帳號經驗直接套用到企業。
+
+研究結論摘要
+
+1. 可以確認：Work 是 OpenAI 正式推出的代理型工作體驗，核心是較長、多步驟、成品導向的任務，而非單純聊天或固定硬體。
+
+2. 可以確認：官方明確區分 Chat、Work 與 Codex 的主要用途；本書把三者整理成「三層 AI 工作棧」，屬作者觀察框架。
+
+3. 可以確認：雲端 Work、桌面 Work、Cloud Browser、Desktop Browser、Library、Sites、Plugins、Skills 與 Scheduled Tasks 的能力和資料位置不完全相同。
+
+4. 不能確認：每位使用者固定獨享「9 核、15 GB」虛擬機；任何系統觀察都不能直接推導成長期硬體保證。
+
+5. 寫作策略：正文聚焦工作設計、交接、驗收與治理；版本敏感資訊集中附錄，並標示 2026-07-19 查證基準。

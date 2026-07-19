@@ -1,0 +1,185 @@
+附錄五｜Codex Handoff Package 範本
+
+建議資料夾
+
+codex_handoff/
+
+├── 00_overview/
+
+│ ├── project_brief.md
+
+│ ├── decision_status.md
+
+│ └── glossary.md
+
+├── 01_product/
+
+│ ├── problem_definition.md
+
+│ ├── user_roles.md
+
+│ ├── feature_scope.md
+
+│ ├── user_flows.md
+
+│ └── content_requirements.md
+
+├── 02_data/
+
+│ ├── data_model.md
+
+│ ├── sample_data/
+
+│ ├── privacy_rules.md
+
+│ └── migration_notes.md
+
+├── 03_engineering/
+
+│ ├── architecture.md
+
+│ ├── technical_constraints.md
+
+│ ├── environment.md
+
+│ ├── interfaces.md
+
+│ └── AGENTS.md
+
+├── 04_quality/
+
+│ ├── acceptance_criteria.md
+
+│ ├── test_scenarios.md
+
+│ ├── review_checklist.md
+
+│ └── definition_of_done.md
+
+├── 05_execution/
+
+│ ├── implementation_plan.md
+
+│ ├── codex_execution_prompt.md
+
+│ ├── approval_gates.md
+
+│ └── reporting_format.md
+
+└── README.md
+
+小專案可合併檔案，但六類內容不宜遺漏：概覽、產品、資料、工程、品質、執行。
+
+decision_status.md 範本
+
+Decision Status
+
+| 決策 | 狀態 | 目前結論 | 來源／原因 | 下一步／負責人 |
+
+|---|---|---|---|---|
+
+| | 已鎖定／可由代理決定／待驗證／待人決策 | | | |
+
+feature_scope.md 範本
+
+Feature Scope
+
+Must Have
+
+- 本次必須完成並驗收。
+
+Later
+
+- 已知但延後，不得偷偷納入本次。
+
+Out of Scope
+
+- 明確不做；若發現需求，先回報而非實作。
+
+AGENTS.md 範本
+
+AGENTS.md
+
+Purpose
+
+- 本 Repository 的用途與本次任務。
+
+Source of truth
+
+- 產品範圍：docs/handoff/01_product/feature_scope.md
+
+- 資料模型：docs/handoff/02_data/data_model.md
+
+- 驗收條件：docs/handoff/04_quality/acceptance_criteria.md
+
+Working agreements
+
+- 套件管理器與安裝命令：
+
+- 開發、測試與建置命令：
+
+- 程式風格與目錄慣例：
+
+- 不可修改區域：
+
+- 新增依賴核准規則：
+
+- 資料遷移與 production 規則：
+
+Required verification
+
+- lint：
+
+- typecheck：
+
+- unit／integration／E2E：
+
+- build：
+
+Reporting
+
+每個里程碑回報：
+
+1. 修改檔案與目的。
+
+2. 測試命令與結果。
+
+3. 已知限制與未解問題。
+
+4. 是否需要人類核准。
+
+Codex 會依官方規則探索全域、專案與子目錄的 AGENTS.md；較靠近工作目錄的規則可覆蓋較遠規則。檔案應精簡、準確，任務專屬長規格放在其他 Markdown，再由 AGENTS.md 指向。[R12][R13]
+
+codex_execution_prompt.md 範本
+
+請先閱讀根目錄 AGENTS.md 與 docs/handoff/README.md，再檢查目前 Repository。
+
+第一階段不要修改程式，先回報：
+
+1. 你理解的目標與使用者。
+
+2. 第一版範圍與明確非範圍。
+
+3. 主要資料、權限與技術限制。
+
+4. 驗收條件與需要執行的測試。
+
+5. 文件與現況的衝突或缺口。
+
+6. 建議的可驗證里程碑。
+
+若涉及 production、資料遷移、新增 production dependency、刪除／覆寫重要資料、未決產品決策或安全規則，先停止並要求核准。
+
+計畫確認後逐里程碑實作。每個里程碑提供 diff 摘要、測試證據、已知限制與下一步。不要把未完成或未驗證內容描述成完成。
+
+交接包驗收
+
+- [ ] 新接手者能在合理時間理解專案。
+
+- [ ] 衝突時知道哪份資料優先。
+
+- [ ] 未決事項不會被默默寫進程式碼。
+
+- [ ] 每個重要功能都有測試或可觀察驗收。
+
+- [ ] Codex 完成後能用差異、測試與限制證明結果。
