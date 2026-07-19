@@ -455,7 +455,7 @@
         "blobPathname": "books/before-handing-to-codex/audio/01_閱讀與版本說明.m4a",
         "blobEtag": "\"7b96f5518244cd7bc2a5326e67b7d78b-2\"",
         "blobHeadVerified": true,
-        "blobRemoteSeekVerified": false
+        "blobRemoteSeekVerified": true
       },
       {
         "chapterNumber": 2,
@@ -485,7 +485,7 @@
         "blobPathname": "books/before-handing-to-codex/audio/02_序章｜ChatGPT 終於不只回答問題了.m4a",
         "blobEtag": "\"1fcaab18827d3bdbdc8d3fd8b1013057-2\"",
         "blobHeadVerified": true,
-        "blobRemoteSeekVerified": false
+        "blobRemoteSeekVerified": true
       },
       {
         "chapterNumber": 3,
@@ -515,7 +515,7 @@
         "blobPathname": "books/before-handing-to-codex/audio/03_第一章｜從回答問題，到完成一件工作.m4a",
         "blobEtag": "\"f5a5ab6553fe94d28d54902ed68eb2a1-2\"",
         "blobHeadVerified": true,
-        "blobRemoteSeekVerified": false
+        "blobRemoteSeekVerified": true
       },
       {
         "chapterNumber": 4,
@@ -545,7 +545,7 @@
         "blobPathname": "books/before-handing-to-codex/audio/04_第二章｜Chat、Work 與 Codex，不是強弱，而是分工.m4a",
         "blobEtag": "\"f587daa65278208ea1adcff8edaeb24e-2\"",
         "blobHeadVerified": true,
-        "blobRemoteSeekVerified": false
+        "blobRemoteSeekVerified": true
       },
       {
         "chapterNumber": 5,
@@ -575,7 +575,7 @@
         "blobPathname": "books/before-handing-to-codex/audio/05_第三章｜很多 Codex 專案，在寫程式之前就失敗了.m4a",
         "blobEtag": "\"fb3f5a15bc21ff3c90c738ba78682151-2\"",
         "blobHeadVerified": true,
-        "blobRemoteSeekVerified": false
+        "blobRemoteSeekVerified": true
       },
       {
         "chapterNumber": 6,
@@ -605,7 +605,7 @@
         "blobPathname": "books/before-handing-to-codex/audio/06_第四章｜先定義問題，不要急著要求成果.m4a",
         "blobEtag": "\"a70c38c83086ce349cb6b1f7b738c9f4-3\"",
         "blobHeadVerified": true,
-        "blobRemoteSeekVerified": false
+        "blobRemoteSeekVerified": true
       },
       {
         "chapterNumber": 7,
@@ -635,7 +635,7 @@
         "blobPathname": "books/before-handing-to-codex/audio/07_第五章｜上下文不是愈多愈好.m4a",
         "blobEtag": "\"fe250e2f4c51a531ccb06553e9c01303-2\"",
         "blobHeadVerified": true,
-        "blobRemoteSeekVerified": false
+        "blobRemoteSeekVerified": true
       },
       {
         "chapterNumber": 8,
@@ -665,7 +665,7 @@
         "blobPathname": "books/before-handing-to-codex/audio/08_第六章｜限制、權限與禁止事項.m4a",
         "blobEtag": "\"4fbb5303f8b2657136861e9e97beab2a-3\"",
         "blobHeadVerified": true,
-        "blobRemoteSeekVerified": false
+        "blobRemoteSeekVerified": true
       },
       {
         "chapterNumber": 9,
@@ -695,7 +695,7 @@
         "blobPathname": "books/before-handing-to-codex/audio/09_第七章｜交付成果與驗收條件.m4a",
         "blobEtag": "\"89713692eed370c0457b3ceecb83a3f3-2\"",
         "blobHeadVerified": true,
-        "blobRemoteSeekVerified": false
+        "blobRemoteSeekVerified": true
       },
       {
         "chapterNumber": 10,
@@ -725,7 +725,7 @@
         "blobPathname": "books/before-handing-to-codex/audio/10_第八章｜Work 如何拆解、推進與回報任務.m4a",
         "blobEtag": "\"b6197ad257f7ff30a515e5f726806c19-2\"",
         "blobHeadVerified": true,
-        "blobRemoteSeekVerified": false
+        "blobRemoteSeekVerified": true
       },
       {
         "chapterNumber": 11,
@@ -755,7 +755,7 @@
         "blobPathname": "books/before-handing-to-codex/audio/11_第九章｜文件、檔案、應用程式與瀏覽器組成工作環境.m4a",
         "blobEtag": "\"ce21e8970ad1d0a906c8fff00ed38b62-2\"",
         "blobHeadVerified": true,
-        "blobRemoteSeekVerified": false
+        "blobRemoteSeekVerified": true
       },
       {
         "chapterNumber": 12,
@@ -785,7 +785,7 @@
         "blobPathname": "books/before-handing-to-codex/audio/12_第十章｜從一次成功，變成可重複的工作流.m4a",
         "blobEtag": "\"61e0c45ca613b97022c8fa0a17032d26-2\"",
         "blobHeadVerified": true,
-        "blobRemoteSeekVerified": false
+        "blobRemoteSeekVerified": true
       },
       {
         "chapterNumber": 13,
@@ -815,7 +815,7 @@
         "blobPathname": "books/before-handing-to-codex/audio/13_第十一章｜一份 Codex 真正看得懂的交接包.m4a",
         "blobEtag": "\"654eebd5b94cc2fc03dd719e225c9f60-2\"",
         "blobHeadVerified": true,
-        "blobRemoteSeekVerified": false
+        "blobRemoteSeekVerified": true
       },
       {
         "chapterNumber": 14,
@@ -845,7 +845,7 @@
         "blobPathname": "books/before-handing-to-codex/audio/14_第十二章｜建立李詩民的 AI 工作作業系統.m4a",
         "blobEtag": "\"ed532de667d1dbb457d9ea18d9ad29e6-2\"",
         "blobHeadVerified": true,
-        "blobRemoteSeekVerified": false
+        "blobRemoteSeekVerified": true
       },
       {
         "chapterNumber": 15,
@@ -875,7 +875,7 @@
         "blobPathname": "books/before-handing-to-codex/audio/15_結語｜未來重要的不是會不會下指令，而是能不能設計工作.m4a",
         "blobEtag": "\"588f0b8f0dc3b26dd0896db894a1469d-2\"",
         "blobHeadVerified": true,
-        "blobRemoteSeekVerified": false
+        "blobRemoteSeekVerified": true
       },
       {
         "chapterNumber": 16,
@@ -905,7 +905,7 @@
         "blobPathname": "books/before-handing-to-codex/audio/16_附錄一｜ChatGPT Work 功能與環境矩陣.m4a",
         "blobEtag": "\"1ccfeb21ac9b075dab9efbf8ecfa6bb7-2\"",
         "blobHeadVerified": true,
-        "blobRemoteSeekVerified": false
+        "blobRemoteSeekVerified": true
       },
       {
         "chapterNumber": 17,
@@ -935,7 +935,7 @@
         "blobPathname": "books/before-handing-to-codex/audio/17_附錄二｜Chat、Work、Codex 選擇表.m4a",
         "blobEtag": "\"5bfa3155bdbb8900d9d526b471c9370f-2\"",
         "blobHeadVerified": true,
-        "blobRemoteSeekVerified": false
+        "blobRemoteSeekVerified": true
       },
       {
         "chapterNumber": 18,
@@ -965,7 +965,7 @@
         "blobPathname": "books/before-handing-to-codex/audio/18_附錄三｜Work 任務簡報範本.m4a",
         "blobEtag": "\"38a160dfdca8581e299af755c2abe7b1-2\"",
         "blobHeadVerified": true,
-        "blobRemoteSeekVerified": false
+        "blobRemoteSeekVerified": true
       },
       {
         "chapterNumber": 19,
@@ -995,7 +995,7 @@
         "blobPathname": "books/before-handing-to-codex/audio/19_附錄四｜五項 AI 交接條件檢查表.m4a",
         "blobEtag": "\"0725cc21e2f77d71166ccc1ef6aee52d-2\"",
         "blobHeadVerified": true,
-        "blobRemoteSeekVerified": false
+        "blobRemoteSeekVerified": true
       },
       {
         "chapterNumber": 20,
@@ -1025,7 +1025,7 @@
         "blobPathname": "books/before-handing-to-codex/audio/20_附錄五｜Codex Handoff Package 範本.m4a",
         "blobEtag": "\"7ad7458ca4ad0c96abe00c1e3b7e6729-2\"",
         "blobHeadVerified": true,
-        "blobRemoteSeekVerified": false
+        "blobRemoteSeekVerified": true
       },
       {
         "chapterNumber": 21,
@@ -1055,7 +1055,7 @@
         "blobPathname": "books/before-handing-to-codex/audio/21_附錄六｜版本風險與更新紀錄.m4a",
         "blobEtag": "\"4c138208da2e92aaa27782e994b0f04f-2\"",
         "blobHeadVerified": true,
-        "blobRemoteSeekVerified": false
+        "blobRemoteSeekVerified": true
       },
       {
         "chapterNumber": 22,
@@ -1085,7 +1085,7 @@
         "blobPathname": "books/before-handing-to-codex/audio/22_研究來源與版本說明.m4a",
         "blobEtag": "\"15f6567ef7aa312642f08ea465ff811f-2\"",
         "blobHeadVerified": true,
-        "blobRemoteSeekVerified": false
+        "blobRemoteSeekVerified": true
       }
     ]
   },
@@ -1114,14 +1114,14 @@
     "productionRemoteSeekChecked": false
   },
   "blobMigrationValidation": {
-    "status": "uploaded-and-applied",
+    "status": "production-verified",
     "provider": "vercel-blob",
     "access": "public",
     "region": "hnd1",
     "checkedAudioCount": 22,
     "failedChapterNumbers": [],
     "exactContentLengthChecked": true,
-    "remoteSeekChecked": false
+    "remoteSeekChecked": true
   },
   "integrityValidation": {
     "status": "complete",
