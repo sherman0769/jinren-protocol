@@ -282,5 +282,119 @@
     "uploadedAt": "2026-07-05T00:36:49.170Z",
     "sourceCountVisible": 12,
     "sourceCountMatchesTxt": true
+  },
+  "downloadTriggerAudit": {
+    "controllerVersion": "1.0.0",
+    "preferredTrigger": "mouse",
+    "transactionCount": 1,
+    "updatedAt": "2026-07-24T05:31:52.136Z",
+    "transactions": [
+      {
+        "transactionId": "8b64ab04-76ef-46fc-9861-2146f4701e11",
+        "chapterNumber": 1,
+        "expectedTitle": "01_從數位落差到Token落差",
+        "expectedDuration": "23:42",
+        "startedAt": "2026-07-24T05:31:48.999Z",
+        "preferredTriggerAtStart": "mouse",
+        "events": [
+          {
+            "event": "download-snapshot",
+            "at": "2026-07-24T05:31:49.002Z",
+            "existingFileCount": 3750
+          },
+          {
+            "event": "mouse-click-requested",
+            "at": "2026-07-24T05:31:49.752Z"
+          },
+          {
+            "event": "new-path-detected",
+            "at": "2026-07-24T05:31:52.126Z",
+            "triggerMethod": "mouse",
+            "newFilename": "6e0113cb-d44a-4d12-9901-f90cef93b98a.tmp"
+          }
+        ],
+        "outcome": "new-path-detected",
+        "triggerMethod": "mouse",
+        "newFilename": "6e0113cb-d44a-4d12-9901-f90cef93b98a.tmp",
+        "completedAt": "2026-07-24T05:31:52.126Z"
+      }
+    ]
+  },
+  "updatedAt": "2026-07-24T05:32:29.073Z",
+  "downloadValidation": {
+    "status": "partial",
+    "assetFolder": "public/books/token-class/audio",
+    "expectedChapterCount": 12,
+    "downloadedCount": 1,
+    "linkedCount": 1,
+    "missingChapterNumbers": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "chapters": [
+      {
+        "chapterNumber": 1,
+        "audioFilename": "01_從數位落差到Token落差.m4a",
+        "audioPath": "public/books/token-class/audio/01_從數位落差到Token落差.m4a",
+        "audioSrc": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/token-class/audio/01_%E5%BE%9E%E6%95%B8%E4%BD%8D%E8%90%BD%E5%B7%AE%E5%88%B0Token%E8%90%BD%E5%B7%AE.m4a",
+        "durationSeconds": 1422.291995,
+        "lastPacketDurationSeconds": 1422.291995,
+        "codec": "aac",
+        "container": "mov,mp4,m4a,3gp,3g2,mj2",
+        "bitRate": 82477,
+        "sampleRate": 44100,
+        "channels": 1,
+        "fileSizeBytes": 14909646,
+        "sha256": "3e0fcd5c465479c904b3b7ee011a5ff1e1c59035f289234096686bade29b0284",
+        "fullDecode": true,
+        "linkedInBooksJson": true,
+        "transcodedFrom": {
+          "codec": "aac",
+          "bitRate": 256000,
+          "channels": 2,
+          "fileSizeBytes": 45775711,
+          "sha256": "0b38957e8b2427fe4a3199c024e725b2a787f2ccc0575e60ed8e33f76a5794b2"
+        },
+        "storage": "vercel-blob",
+        "blobUrl": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/token-class/audio/01_%E5%BE%9E%E6%95%B8%E4%BD%8D%E8%90%BD%E5%B7%AE%E5%88%B0Token%E8%90%BD%E5%B7%AE.m4a",
+        "blobPathname": "books/token-class/audio/01_從數位落差到Token落差.m4a",
+        "blobEtag": "\"cbad3b377437f1973bc45ccf4c7e10ba-2\"",
+        "blobHeadVerified": true,
+        "blobRemoteSeekVerified": false
+      }
+    ]
+  },
+  "transcodeValidation": {
+    "status": "complete",
+    "codec": "aac",
+    "container": "m4a",
+    "targetBitRate": 80000,
+    "channels": 1,
+    "checkedAudioCount": 1,
+    "failedChapterNumbers": [],
+    "metadataIdentityChecked": true,
+    "lastPacketDurationChecked": true,
+    "fullLocalDecodeChecked": true,
+    "uniqueFingerprintsChecked": true,
+    "productionRemoteSeekChecked": false
+  },
+  "blobMigrationValidation": {
+    "status": "uploaded-and-applied",
+    "provider": "vercel-blob",
+    "access": "public",
+    "region": "hnd1",
+    "checkedAudioCount": 1,
+    "failedChapterNumbers": [],
+    "exactContentLengthChecked": true,
+    "remoteSeekChecked": false
   }
 }
