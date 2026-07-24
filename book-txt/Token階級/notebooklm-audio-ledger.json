@@ -369,7 +369,7 @@
         "blobPathname": "books/token-class/audio/01_從數位落差到Token落差.m4a",
         "blobEtag": "\"cbad3b377437f1973bc45ccf4c7e10ba-2\"",
         "blobHeadVerified": true,
-        "blobRemoteSeekVerified": false
+        "blobRemoteSeekVerified": true
       }
     ]
   },
@@ -388,13 +388,13 @@
     "productionRemoteSeekChecked": false
   },
   "blobMigrationValidation": {
-    "status": "uploaded-and-applied",
+    "status": "production-verified",
     "provider": "vercel-blob",
     "access": "public",
     "region": "hnd1",
     "checkedAudioCount": 1,
     "failedChapterNumbers": [],
     "exactContentLengthChecked": true,
-    "remoteSeekChecked": false
+    "remoteSeekChecked": true
   }
 }
