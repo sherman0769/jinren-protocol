@@ -20,6 +20,8 @@
     "blob:upload:book-audio": "node --env-file-if-exists=.env.local scripts/migrate-book-audio-to-blob.mjs --upload",
     "blob:apply:book-audio": "node --env-file-if-exists=.env.local scripts/migrate-book-audio-to-blob.mjs --apply",
     "blob:verify:book-audio": "node --env-file-if-exists=.env.local scripts/migrate-book-audio-to-blob.mjs --verify-production",
+    "resume:notebooklm-audio": "node scripts/resume-notebooklm-audio.mjs",
+    "test:resume:notebooklm-audio": "node scripts/test-resume-notebooklm-audio.mjs",
     "validate:notebooklm-audio": "node scripts/validate-notebooklm-audio.mjs",
     "verify:podcast-ux": "node scripts/verify-podcast-ux.mjs"
   },
