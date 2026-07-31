@@ -253,7 +253,7 @@
         "blobPathname": "books/evidence-backed-agent/audio/01_序章｜AI 最危險的時候，是它開始行動之後.m4a",
         "blobEtag": "\"7d5f41b19e386258b7997c2251d3a949-2\"",
         "blobHeadVerified": true,
-        "blobRemoteSeekVerified": false
+        "blobRemoteSeekVerified": true
       },
       {
         "chapterNumber": 2,
@@ -286,7 +286,7 @@
         "blobPathname": "books/evidence-backed-agent/audio/02_第一章｜更聰明的模型，為什麼不一定更可信？.m4a",
         "blobEtag": "\"526d9fe7d906906c93d32558175aac7b-2\"",
         "blobHeadVerified": true,
-        "blobRemoteSeekVerified": false
+        "blobRemoteSeekVerified": true
       },
       {
         "chapterNumber": 3,
@@ -319,7 +319,7 @@
         "blobPathname": "books/evidence-backed-agent/audio/03_第二章｜錯誤資料為什麼看起來完全正確？.m4a",
         "blobEtag": "\"e8886360ddf16efa9bccce5837912b28-2\"",
         "blobHeadVerified": true,
-        "blobRemoteSeekVerified": false
+        "blobRemoteSeekVerified": true
       },
       {
         "chapterNumber": 4,
@@ -352,7 +352,7 @@
         "blobPathname": "books/evidence-backed-agent/audio/04_第三章｜第一道閘門：Agent 行動前的資料品質治理.m4a",
         "blobEtag": "\"248c0fa82e7f61cd2e696c86f5d0ef9f-2\"",
         "blobHeadVerified": true,
-        "blobRemoteSeekVerified": false
+        "blobRemoteSeekVerified": true
       },
       {
         "chapterNumber": 5,
@@ -385,7 +385,7 @@
         "blobPathname": "books/evidence-backed-agent/audio/05_第四章｜AI 寫得很快，人類卻來不及查證.m4a",
         "blobEtag": "\"7c6d6c44a3e9d168c19b8b4dd5588cb8-2\"",
         "blobHeadVerified": true,
-        "blobRemoteSeekVerified": false
+        "blobRemoteSeekVerified": true
       },
       {
         "chapterNumber": 6,
@@ -418,7 +418,7 @@
         "blobPathname": "books/evidence-backed-agent/audio/06_第五章｜第二道閘門：建立主張—證據帳本.m4a",
         "blobEtag": "\"0c3fc1d42b82cb968aa82b73c3084e6c-2\"",
         "blobHeadVerified": true,
-        "blobRemoteSeekVerified": false
+        "blobRemoteSeekVerified": true
       },
       {
         "chapterNumber": 7,
@@ -451,7 +451,7 @@
         "blobPathname": "books/evidence-backed-agent/audio/07_第六章｜把兩道閘門接成一個可信迴路.m4a",
         "blobEtag": "\"0594f33ad1c1341b2bd458c766d65a25-2\"",
         "blobHeadVerified": true,
-        "blobRemoteSeekVerified": false
+        "blobRemoteSeekVerified": true
       },
       {
         "chapterNumber": 8,
@@ -484,7 +484,7 @@
         "blobPathname": "books/evidence-backed-agent/audio/08_第七章｜Human on the Loop：人類不必檢查一切.m4a",
         "blobEtag": "\"a43581d34c11dca180e06c22592528e8-2\"",
         "blobHeadVerified": true,
-        "blobRemoteSeekVerified": false
+        "blobRemoteSeekVerified": true
       },
       {
         "chapterNumber": 9,
@@ -517,7 +517,7 @@
         "blobPathname": "books/evidence-backed-agent/audio/09_第八章｜從一個 Agent，走向企業證據基礎設施.m4a",
         "blobEtag": "\"c237073e87636d57974742d49642caa8-2\"",
         "blobHeadVerified": true,
-        "blobRemoteSeekVerified": false
+        "blobRemoteSeekVerified": true
       },
       {
         "chapterNumber": 10,
@@ -550,7 +550,7 @@
         "blobPathname": "books/evidence-backed-agent/audio/10_結語｜AI 的答案可以生成，責任不能生成.m4a",
         "blobEtag": "\"0b355fe6cd02d6361a8cd434ecb7fc26-2\"",
         "blobHeadVerified": true,
-        "blobRemoteSeekVerified": false
+        "blobRemoteSeekVerified": true
       }
     ]
   },
@@ -566,17 +566,17 @@
     "lastPacketDurationChecked": true,
     "fullLocalDecodeChecked": true,
     "uniqueFingerprintsChecked": true,
-    "productionRemoteSeekChecked": false
+    "productionRemoteSeekChecked": true
   },
   "blobMigrationValidation": {
-    "status": "uploaded-and-applied",
+    "status": "production-verified",
     "provider": "vercel-blob",
     "access": "public",
     "region": "hnd1",
     "checkedAudioCount": 10,
     "failedChapterNumbers": [],
     "exactContentLengthChecked": true,
-    "remoteSeekChecked": false
+    "remoteSeekChecked": true
   },
   "integrityValidation": {
     "status": "complete",
