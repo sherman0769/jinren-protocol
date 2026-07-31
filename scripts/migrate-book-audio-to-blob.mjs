@@ -109,13 +109,38 @@ function sha256(filePath) {
 
 function run(command, commandArgs) {
   return new Promise((resolve, reject) => {
-    const child = spawn(command, commandArgs, { stdio: "ignore" });
+    const child = spawn(command, commandArgs, { stdio: ["ignore", "ignore", "pipe"] });
+    let standardError = "";
+    child.stderr.setEncoding("utf8");
+    child.stderr.on("data", (chunk) => {
+      standardError += chunk;
+    });
     child.on("error", reject);
     child.on("exit", (code) => {
       if (code === 0) resolve();
-      else reject(new Error(`${command} exited with code ${code}`));
+      else {
+        const details = standardError.trim();
+        reject(new Error(`${command} exited with code ${code}${details ? `: ${details}` : ""}`));
+      }
     });
   });
+}
+
+const sleep = (milliseconds) =>
+  new Promise((resolve) => setTimeout(resolve, milliseconds));
+
+async function runWithBackoff(command, commandArgs, { attempts = 5 } = {}) {
+  let lastError;
+  for (let attempt = 1; attempt <= attempts; attempt += 1) {
+    try {
+      await run(command, commandArgs);
+      return;
+    } catch (error) {
+      lastError = error;
+      if (attempt < attempts) await sleep(1_000 * attempt);
+    }
+  }
+  throw lastError;
 }
 
 async function mapConcurrent(items, limit, worker) {
@@ -136,9 +161,42 @@ function expectedUrlPathname(blobPathname) {
   return `/${blobPathname.split("/").map(encodeURIComponent).join("/")}`;
 }
 
+function verifiedDurationSeconds(entry) {
+  const documentDuration = Number(
+    booksFromDocument(JSON.parse(readFileSync(booksPath, "utf8")))
+      .find((book) => book.slug === entry.slug)
+      ?.chapters.find((chapter) => chapter.number === entry.chapterNumber)
+      ?.audio?.durationSeconds,
+  );
+  if (Number.isFinite(documentDuration) && documentDuration > 0) return documentDuration;
+
+  const chapterLedgerPath = path.join(
+    root,
+    "book-txt",
+    entry.bookTitle,
+    "notebooklm-audio-ledger.json",
+  );
+  if (existsSync(chapterLedgerPath)) {
+    const ledger = JSON.parse(readFileSync(chapterLedgerPath, "utf8"));
+    const ledgerDuration = Number(
+      ledger.downloadValidation?.chapters?.find(
+        (chapter) => chapter.chapterNumber === entry.chapterNumber,
+      )?.durationSeconds,
+    );
+    if (Number.isFinite(ledgerDuration) && ledgerDuration > 0) return ledgerDuration;
+  }
+
+  throw new Error(`Missing verified duration for ${entry.slug}#${entry.chapterNumber}`);
+}
+
 async function verifyBlob(entry, blob, localSha256) {
   const sdkMetadata = await head(blob.url);
-  const response = await fetch(blob.url, { method: "HEAD", cache: "no-store" });
+  let response;
+  for (let attempt = 1; attempt <= 8; attempt += 1) {
+    response = await fetch(blob.url, { method: "HEAD", cache: "no-store" });
+    if (response.ok) break;
+    if (attempt < 8) await sleep(1_000 * attempt);
+  }
   const contentType = response.headers.get("content-type") ?? "";
   const contentLength = Number(response.headers.get("content-length"));
   const url = new URL(blob.url);
@@ -154,14 +212,9 @@ async function verifyBlob(entry, blob, localSha256) {
   if (errors.length > 0) {
     throw new Error(`${entry.blobPathname}: ${errors.join(", ")}`);
   }
-  const durationSeconds = Number(
-    booksFromDocument(JSON.parse(readFileSync(booksPath, "utf8")))
-      .find((book) => book.slug === entry.slug)
-      ?.chapters.find((chapter) => chapter.number === entry.chapterNumber)
-      ?.audio?.durationSeconds,
-  );
+  const durationSeconds = verifiedDurationSeconds(entry);
   const seekSeconds = Math.max(1, Math.min(120, Math.floor(durationSeconds / 2)));
-  await run("ffmpeg", [
+  await runWithBackoff("ffmpeg", [
     "-hide_banner", "-v", "error", "-xerror",
     "-ss", String(seekSeconds),
     "-i", blob.url,
@@ -244,10 +297,32 @@ async function smoke(entries) {
 async function uploadAll(entries) {
   const smokeReport = existsSync(smokePath) ? JSON.parse(readFileSync(smokePath, "utf8")) : null;
   const smokeEntry = smokeReport?.status === "passed" ? smokeReport.entry : null;
+  const existingResult = await list({ prefix: "books/", limit: 1000, mode: "expanded" });
+  if (existingResult.hasMore) {
+    throw new Error("Blob listing has more than 1000 results; resume identity is ambiguous");
+  }
+  const existingByPathname = new Map(
+    existingResult.blobs.map((blob) => [blob.pathname, blob]),
+  );
   const uploaded = await mapConcurrent(entries, concurrency, async (entry, index) => {
     console.log(`[${index + 1}/${entries.length}] Blob ${entry.slug}#${entry.chapterNumber}`);
     if (smokeEntry?.blobPathname === entry.blobPathname) {
       return verifyExistingEntry(smokeEntry);
+    }
+    const existing = existingByPathname.get(entry.blobPathname);
+    if (existing) {
+      if (existing.size !== entry.bytes) {
+        throw new Error(
+          `Existing Blob size mismatch for ${entry.blobPathname}: ${existing.size} != ${entry.bytes}`,
+        );
+      }
+      console.log(`Reuse Blob ${entry.slug}#${entry.chapterNumber}`);
+      const localSha256 = await sha256(entry.sourcePath);
+      return {
+        ...entry,
+        localSha256,
+        blob: await verifyBlob(entry, existing, localSha256),
+      };
     }
     return uploadEntry(entry);
   });

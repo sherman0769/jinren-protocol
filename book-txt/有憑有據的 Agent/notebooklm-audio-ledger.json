@@ -1,0 +1,885 @@
+{
+  "bookTitle": "有憑有據的 Agent",
+  "bookSlug": "evidence-backed-agent",
+  "notebookTitle": "有憑有據的 Agent｜章節音頻",
+  "notebookUrl": "https://notebook.google.com/notebook/4d542b59-08c8-41f7-9357-65baa9242ca3",
+  "expectedChapterCount": 10,
+  "createdAt": "2026-07-31T12:04:38.505Z",
+  "updatedAt": "2026-07-31T12:42:59.107Z",
+  "preflight": {
+    "status": "complete",
+    "txtChapterCount": 10,
+    "twoDigitOrdering": true,
+    "contiguousChapterNumbers": true,
+    "duplicateChapterNumbers": [],
+    "missingChapterNumbers": [],
+    "emptyFiles": [],
+    "filenameStemsApproved": true
+  },
+  "uploadValidation": {
+    "status": "complete",
+    "expectedSourceCount": 10,
+    "uploadedSourceCount": 10
+  },
+  "entries": [
+    {
+      "chapterNumber": 1,
+      "sourcePath": "book-txt/有憑有據的 Agent/01_序章｜AI 最危險的時候，是它開始行動之後.txt",
+      "sourceFilename": "01_序章｜AI 最危險的時候，是它開始行動之後.txt",
+      "promptMarker": "章節標誌：01_序章｜AI 最危險的時候，是它開始行動之後",
+      "expectedAudioTitle": "01_序章｜AI 最危險的時候，是它開始行動之後",
+      "selectedSourceCount": 1,
+      "generationState": "complete",
+      "promptSourceVerification": "complete",
+      "finalAudioCardTitle": "01_序章｜AI 最危險的時候，是它開始行動之後",
+      "submissionOrdinal": 1,
+      "preSubmitCardCount": 0,
+      "postSubmitCardCount": 1,
+      "queueAcceptanceState": "accepted",
+      "queueAcceptedAt": "2026-07-31T12:13:33.095Z",
+      "completedAt": "2026-07-31T12:35:04.910Z",
+      "duration": "20:31"
+    },
+    {
+      "chapterNumber": 2,
+      "sourcePath": "book-txt/有憑有據的 Agent/02_第一章｜更聰明的模型，為什麼不一定更可信？.txt",
+      "sourceFilename": "02_第一章｜更聰明的模型，為什麼不一定更可信？.txt",
+      "promptMarker": "章節標誌：02_第一章｜更聰明的模型，為什麼不一定更可信？",
+      "expectedAudioTitle": "02_第一章｜更聰明的模型，為什麼不一定更可信？",
+      "selectedSourceCount": 1,
+      "generationState": "complete",
+      "promptSourceVerification": "complete",
+      "finalAudioCardTitle": "02_第一章｜更聰明的模型，為什麼不一定更可信？",
+      "submissionOrdinal": 2,
+      "preSubmitCardCount": 1,
+      "postSubmitCardCount": 2,
+      "queueAcceptanceState": "accepted",
+      "queueAcceptedAt": "2026-07-31T12:14:28.188Z",
+      "queueAcceptanceObservation": "delayed-render-authoritative-reread",
+      "completedAt": "2026-07-31T12:35:04.910Z",
+      "duration": "24:00"
+    },
+    {
+      "chapterNumber": 3,
+      "sourcePath": "book-txt/有憑有據的 Agent/03_第二章｜錯誤資料為什麼看起來完全正確？.txt",
+      "sourceFilename": "03_第二章｜錯誤資料為什麼看起來完全正確？.txt",
+      "promptMarker": "章節標誌：03_第二章｜錯誤資料為什麼看起來完全正確？",
+      "expectedAudioTitle": "03_第二章｜錯誤資料為什麼看起來完全正確？",
+      "selectedSourceCount": 1,
+      "generationState": "complete",
+      "promptSourceVerification": "complete",
+      "finalAudioCardTitle": "03_第二章｜錯誤資料為什麼看起來完全正確？",
+      "submissionOrdinal": 3,
+      "preSubmitCardCount": 2,
+      "postSubmitCardCount": 3,
+      "queueAcceptanceState": "accepted",
+      "queueAcceptedAt": "2026-07-31T12:14:42.093Z",
+      "completedAt": "2026-07-31T12:35:04.910Z",
+      "duration": "23:16"
+    },
+    {
+      "chapterNumber": 4,
+      "sourcePath": "book-txt/有憑有據的 Agent/04_第三章｜第一道閘門：Agent 行動前的資料品質治理.txt",
+      "sourceFilename": "04_第三章｜第一道閘門：Agent 行動前的資料品質治理.txt",
+      "promptMarker": "章節標誌：04_第三章｜第一道閘門：Agent 行動前的資料品質治理",
+      "expectedAudioTitle": "04_第三章｜第一道閘門：Agent 行動前的資料品質治理",
+      "selectedSourceCount": 1,
+      "generationState": "complete",
+      "promptSourceVerification": "complete",
+      "finalAudioCardTitle": "04_第三章｜第一道閘門：Agent 行動前的資料品質治理",
+      "submissionOrdinal": 4,
+      "preSubmitCardCount": 3,
+      "postSubmitCardCount": 4,
+      "queueAcceptanceState": "accepted",
+      "queueAcceptedAt": "2026-07-31T12:14:47.186Z",
+      "completedAt": "2026-07-31T12:35:04.910Z",
+      "duration": "23:28"
+    },
+    {
+      "chapterNumber": 5,
+      "sourcePath": "book-txt/有憑有據的 Agent/05_第四章｜AI 寫得很快，人類卻來不及查證.txt",
+      "sourceFilename": "05_第四章｜AI 寫得很快，人類卻來不及查證.txt",
+      "promptMarker": "章節標誌：05_第四章｜AI 寫得很快，人類卻來不及查證",
+      "expectedAudioTitle": "05_第四章｜AI 寫得很快，人類卻來不及查證",
+      "selectedSourceCount": 1,
+      "generationState": "complete",
+      "promptSourceVerification": "complete",
+      "finalAudioCardTitle": "05_第四章｜AI 寫得很快，人類卻來不及查證",
+      "submissionOrdinal": 5,
+      "preSubmitCardCount": 4,
+      "postSubmitCardCount": 5,
+      "queueAcceptanceState": "accepted",
+      "queueAcceptedAt": "2026-07-31T12:15:26.336Z",
+      "completedAt": "2026-07-31T12:35:04.910Z",
+      "duration": "25:50"
+    },
+    {
+      "chapterNumber": 6,
+      "sourcePath": "book-txt/有憑有據的 Agent/06_第五章｜第二道閘門：建立主張—證據帳本.txt",
+      "sourceFilename": "06_第五章｜第二道閘門：建立主張—證據帳本.txt",
+      "promptMarker": "章節標誌：06_第五章｜第二道閘門：建立主張—證據帳本",
+      "expectedAudioTitle": "06_第五章｜第二道閘門：建立主張—證據帳本",
+      "selectedSourceCount": 1,
+      "generationState": "complete",
+      "promptSourceVerification": "complete",
+      "finalAudioCardTitle": "06_第五章｜第二道閘門：建立主張—證據帳本",
+      "submissionOrdinal": 6,
+      "preSubmitCardCount": 5,
+      "postSubmitCardCount": 6,
+      "queueAcceptanceState": "accepted",
+      "queueAcceptedAt": "2026-07-31T12:17:31.912Z",
+      "completedAt": "2026-07-31T12:35:04.910Z",
+      "duration": "13:38"
+    },
+    {
+      "chapterNumber": 7,
+      "sourcePath": "book-txt/有憑有據的 Agent/07_第六章｜把兩道閘門接成一個可信迴路.txt",
+      "sourceFilename": "07_第六章｜把兩道閘門接成一個可信迴路.txt",
+      "promptMarker": "章節標誌：07_第六章｜把兩道閘門接成一個可信迴路",
+      "expectedAudioTitle": "07_第六章｜把兩道閘門接成一個可信迴路",
+      "selectedSourceCount": 1,
+      "generationState": "complete",
+      "promptSourceVerification": "complete",
+      "finalAudioCardTitle": "07_第六章｜把兩道閘門接成一個可信迴路",
+      "submissionOrdinal": 7,
+      "preSubmitCardCount": 6,
+      "postSubmitCardCount": 7,
+      "queueAcceptanceState": "accepted",
+      "queueAcceptedAt": "2026-07-31T12:18:16.627Z",
+      "completedAt": "2026-07-31T12:35:04.910Z",
+      "duration": "24:36"
+    },
+    {
+      "chapterNumber": 8,
+      "sourcePath": "book-txt/有憑有據的 Agent/08_第七章｜Human on the Loop：人類不必檢查一切.txt",
+      "sourceFilename": "08_第七章｜Human on the Loop：人類不必檢查一切.txt",
+      "promptMarker": "章節標誌：08_第七章｜Human on the Loop：人類不必檢查一切",
+      "expectedAudioTitle": "08_第七章｜Human on the Loop：人類不必檢查一切",
+      "selectedSourceCount": 1,
+      "generationState": "complete",
+      "promptSourceVerification": "complete",
+      "finalAudioCardTitle": "08_第七章｜Human on the Loop：人類不必檢查一切",
+      "submissionOrdinal": 8,
+      "preSubmitCardCount": 7,
+      "postSubmitCardCount": 8,
+      "queueAcceptanceState": "accepted",
+      "queueAcceptedAt": "2026-07-31T12:18:26.374Z",
+      "completedAt": "2026-07-31T12:35:04.910Z",
+      "duration": "25:38"
+    },
+    {
+      "chapterNumber": 9,
+      "sourcePath": "book-txt/有憑有據的 Agent/09_第八章｜從一個 Agent，走向企業證據基礎設施.txt",
+      "sourceFilename": "09_第八章｜從一個 Agent，走向企業證據基礎設施.txt",
+      "promptMarker": "章節標誌：09_第八章｜從一個 Agent，走向企業證據基礎設施",
+      "expectedAudioTitle": "09_第八章｜從一個 Agent，走向企業證據基礎設施",
+      "selectedSourceCount": 1,
+      "generationState": "complete",
+      "promptSourceVerification": "complete",
+      "finalAudioCardTitle": "09_第八章｜從一個 Agent，走向企業證據基礎設施",
+      "submissionOrdinal": 9,
+      "preSubmitCardCount": 8,
+      "postSubmitCardCount": 9,
+      "queueAcceptanceState": "accepted",
+      "queueAcceptedAt": "2026-07-31T12:18:32.481Z",
+      "completedAt": "2026-07-31T12:36:30.000Z",
+      "duration": "20:54"
+    },
+    {
+      "chapterNumber": 10,
+      "sourcePath": "book-txt/有憑有據的 Agent/10_結語｜AI 的答案可以生成，責任不能生成.txt",
+      "sourceFilename": "10_結語｜AI 的答案可以生成，責任不能生成.txt",
+      "promptMarker": "章節標誌：10_結語｜AI 的答案可以生成，責任不能生成",
+      "expectedAudioTitle": "10_結語｜AI 的答案可以生成，責任不能生成",
+      "selectedSourceCount": 1,
+      "generationState": "complete",
+      "promptSourceVerification": "complete",
+      "finalAudioCardTitle": "10_結語｜AI 的答案可以生成，責任不能生成",
+      "submissionOrdinal": 10,
+      "preSubmitCardCount": 9,
+      "postSubmitCardCount": 10,
+      "queueAcceptanceState": "accepted",
+      "queueAcceptedAt": "2026-07-31T12:18:38.627Z",
+      "completedAt": "2026-07-31T12:35:04.910Z",
+      "duration": "14:24"
+    }
+  ],
+  "batchGeneration": {
+    "mode": "batch",
+    "submittedChapterCount": 10,
+    "acceptedQueueItems": 10,
+    "completedCards": 10,
+    "verifiedCardTitles": 10,
+    "duplicateChapterNumbers": [],
+    "duplicatePromptMarkers": [],
+    "lastAuditedAt": "2026-07-31T12:36:30.000Z"
+  },
+  "downloadValidation": {
+    "status": "complete",
+    "assetFolder": "public/books/evidence-backed-agent/audio",
+    "expectedChapterCount": 10,
+    "downloadedCount": 10,
+    "linkedCount": 10,
+    "missingChapterNumbers": [],
+    "chapters": [
+      {
+        "chapterNumber": 1,
+        "audioFilename": "01_序章｜AI 最危險的時候，是它開始行動之後.m4a",
+        "audioPath": "public/books/evidence-backed-agent/audio/01_序章｜AI 最危險的時候，是它開始行動之後.m4a",
+        "appAudioSrc": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/evidence-backed-agent/audio/01_%E5%BA%8F%E7%AB%A0%EF%BD%9CAI%20%E6%9C%80%E5%8D%B1%E9%9A%AA%E7%9A%84%E6%99%82%E5%80%99%EF%BC%8C%E6%98%AF%E5%AE%83%E9%96%8B%E5%A7%8B%E8%A1%8C%E5%8B%95%E4%B9%8B%E5%BE%8C.m4a",
+        "durationSeconds": 1231.980998,
+        "lastPacketDurationSeconds": 1231.980998,
+        "codec": "aac",
+        "container": "mov,mp4,m4a,3gp,3g2,mj2",
+        "channels": 1,
+        "bitRate": 82304,
+        "fileSizeBytes": 12888157,
+        "sha256": "cc9c1c587e7d0594a9556794d58e95f325c9542d9c2976534152938e7a168942",
+        "fullDecode": true,
+        "sourceCopyValidated": true,
+        "linkedInBooksJson": true,
+        "validatedAt": "2026-07-31T12:37:30.000Z",
+        "audioSrc": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/evidence-backed-agent/audio/01_%E5%BA%8F%E7%AB%A0%EF%BD%9CAI%20%E6%9C%80%E5%8D%B1%E9%9A%AA%E7%9A%84%E6%99%82%E5%80%99%EF%BC%8C%E6%98%AF%E5%AE%83%E9%96%8B%E5%A7%8B%E8%A1%8C%E5%8B%95%E4%B9%8B%E5%BE%8C.m4a",
+        "sampleRate": 44100,
+        "transcodedFrom": {
+          "codec": "aac",
+          "bitRate": 256000,
+          "channels": 2,
+          "fileSizeBytes": 39650779,
+          "sha256": "6addf26548e6af0d8236f354a4b05dc4191151746df510091bdc3e6825cc80b7"
+        },
+        "storage": "vercel-blob",
+        "blobUrl": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/evidence-backed-agent/audio/01_%E5%BA%8F%E7%AB%A0%EF%BD%9CAI%20%E6%9C%80%E5%8D%B1%E9%9A%AA%E7%9A%84%E6%99%82%E5%80%99%EF%BC%8C%E6%98%AF%E5%AE%83%E9%96%8B%E5%A7%8B%E8%A1%8C%E5%8B%95%E4%B9%8B%E5%BE%8C.m4a",
+        "blobPathname": "books/evidence-backed-agent/audio/01_序章｜AI 最危險的時候，是它開始行動之後.m4a",
+        "blobEtag": "\"7d5f41b19e386258b7997c2251d3a949-2\"",
+        "blobHeadVerified": true,
+        "blobRemoteSeekVerified": false
+      },
+      {
+        "chapterNumber": 2,
+        "audioFilename": "02_第一章｜更聰明的模型，為什麼不一定更可信？.m4a",
+        "audioPath": "public/books/evidence-backed-agent/audio/02_第一章｜更聰明的模型，為什麼不一定更可信？.m4a",
+        "appAudioSrc": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/evidence-backed-agent/audio/02_%E7%AC%AC%E4%B8%80%E7%AB%A0%EF%BD%9C%E6%9B%B4%E8%81%B0%E6%98%8E%E7%9A%84%E6%A8%A1%E5%9E%8B%EF%BC%8C%E7%82%BA%E4%BB%80%E9%BA%BC%E4%B8%8D%E4%B8%80%E5%AE%9A%E6%9B%B4%E5%8F%AF%E4%BF%A1%EF%BC%9F.m4a",
+        "durationSeconds": 1440.728005,
+        "lastPacketDurationSeconds": 1440.728004,
+        "codec": "aac",
+        "container": "mov,mp4,m4a,3gp,3g2,mj2",
+        "channels": 1,
+        "bitRate": 82221,
+        "fileSizeBytes": 15056854,
+        "sha256": "dd5c72fc7a11f753dc47b41293b9ac4770abb998f5dcdb8def1a7fc36fc1dd84",
+        "fullDecode": true,
+        "sourceCopyValidated": true,
+        "linkedInBooksJson": true,
+        "validatedAt": "2026-07-31T12:38:20.000Z",
+        "audioSrc": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/evidence-backed-agent/audio/02_%E7%AC%AC%E4%B8%80%E7%AB%A0%EF%BD%9C%E6%9B%B4%E8%81%B0%E6%98%8E%E7%9A%84%E6%A8%A1%E5%9E%8B%EF%BC%8C%E7%82%BA%E4%BB%80%E9%BA%BC%E4%B8%8D%E4%B8%80%E5%AE%9A%E6%9B%B4%E5%8F%AF%E4%BF%A1%EF%BC%9F.m4a",
+        "sampleRate": 44100,
+        "transcodedFrom": {
+          "codec": "aac",
+          "bitRate": 256000,
+          "channels": 2,
+          "fileSizeBytes": 46369091,
+          "sha256": "0c8c4ef2ee88aa137e418d153cba2aec1e40bedc1b5df84519c5e72f9bdae3ef"
+        },
+        "storage": "vercel-blob",
+        "blobUrl": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/evidence-backed-agent/audio/02_%E7%AC%AC%E4%B8%80%E7%AB%A0%EF%BD%9C%E6%9B%B4%E8%81%B0%E6%98%8E%E7%9A%84%E6%A8%A1%E5%9E%8B%EF%BC%8C%E7%82%BA%E4%BB%80%E9%BA%BC%E4%B8%8D%E4%B8%80%E5%AE%9A%E6%9B%B4%E5%8F%AF%E4%BF%A1%EF%BC%9F.m4a",
+        "blobPathname": "books/evidence-backed-agent/audio/02_第一章｜更聰明的模型，為什麼不一定更可信？.m4a",
+        "blobEtag": "\"526d9fe7d906906c93d32558175aac7b-2\"",
+        "blobHeadVerified": true,
+        "blobRemoteSeekVerified": false
+      },
+      {
+        "chapterNumber": 3,
+        "audioFilename": "03_第二章｜錯誤資料為什麼看起來完全正確？.m4a",
+        "audioPath": "public/books/evidence-backed-agent/audio/03_第二章｜錯誤資料為什麼看起來完全正確？.m4a",
+        "appAudioSrc": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/evidence-backed-agent/audio/03_%E7%AC%AC%E4%BA%8C%E7%AB%A0%EF%BD%9C%E9%8C%AF%E8%AA%A4%E8%B3%87%E6%96%99%E7%82%BA%E4%BB%80%E9%BA%BC%E7%9C%8B%E8%B5%B7%E4%BE%86%E5%AE%8C%E5%85%A8%E6%AD%A3%E7%A2%BA%EF%BC%9F.m4a",
+        "durationSeconds": 1396.425011,
+        "lastPacketDurationSeconds": 1396.425012,
+        "codec": "aac",
+        "container": "mov,mp4,m4a,3gp,3g2,mj2",
+        "channels": 1,
+        "bitRate": 82309,
+        "fileSizeBytes": 14609243,
+        "sha256": "7fd5717a77a623fa1d89f4e7eac20e0881a4c4131e6a2e52f64aa9ece952f4af",
+        "fullDecode": true,
+        "sourceCopyValidated": true,
+        "linkedInBooksJson": true,
+        "validatedAt": "2026-07-31T12:39:00.000Z",
+        "audioSrc": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/evidence-backed-agent/audio/03_%E7%AC%AC%E4%BA%8C%E7%AB%A0%EF%BD%9C%E9%8C%AF%E8%AA%A4%E8%B3%87%E6%96%99%E7%82%BA%E4%BB%80%E9%BA%BC%E7%9C%8B%E8%B5%B7%E4%BE%86%E5%AE%8C%E5%85%A8%E6%AD%A3%E7%A2%BA%EF%BC%9F.m4a",
+        "sampleRate": 44100,
+        "transcodedFrom": {
+          "codec": "aac",
+          "bitRate": 256000,
+          "channels": 2,
+          "fileSizeBytes": 44943162,
+          "sha256": "01403fa40a2b7e3c0b047670677a5020a36eacd80c647a47b4eca1a88aceb016"
+        },
+        "storage": "vercel-blob",
+        "blobUrl": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/evidence-backed-agent/audio/03_%E7%AC%AC%E4%BA%8C%E7%AB%A0%EF%BD%9C%E9%8C%AF%E8%AA%A4%E8%B3%87%E6%96%99%E7%82%BA%E4%BB%80%E9%BA%BC%E7%9C%8B%E8%B5%B7%E4%BE%86%E5%AE%8C%E5%85%A8%E6%AD%A3%E7%A2%BA%EF%BC%9F.m4a",
+        "blobPathname": "books/evidence-backed-agent/audio/03_第二章｜錯誤資料為什麼看起來完全正確？.m4a",
+        "blobEtag": "\"e8886360ddf16efa9bccce5837912b28-2\"",
+        "blobHeadVerified": true,
+        "blobRemoteSeekVerified": false
+      },
+      {
+        "chapterNumber": 4,
+        "audioFilename": "04_第三章｜第一道閘門：Agent 行動前的資料品質治理.m4a",
+        "audioPath": "public/books/evidence-backed-agent/audio/04_第三章｜第一道閘門：Agent 行動前的資料品質治理.m4a",
+        "appAudioSrc": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/evidence-backed-agent/audio/04_%E7%AC%AC%E4%B8%89%E7%AB%A0%EF%BD%9C%E7%AC%AC%E4%B8%80%E9%81%93%E9%96%98%E9%96%80%EF%BC%9AAgent%20%E8%A1%8C%E5%8B%95%E5%89%8D%E7%9A%84%E8%B3%87%E6%96%99%E5%93%81%E8%B3%AA%E6%B2%BB%E7%90%86.m4a",
+        "durationSeconds": 1408.103991,
+        "lastPacketDurationSeconds": 1408.103991,
+        "codec": "aac",
+        "container": "mov,mp4,m4a,3gp,3g2,mj2",
+        "channels": 1,
+        "bitRate": 82605,
+        "fileSizeBytes": 14783509,
+        "sha256": "18c8039c90dbb42a1adbb28039fee42453c37f15e6bd95b7b14bf80e4148c4a7",
+        "fullDecode": true,
+        "sourceCopyValidated": true,
+        "linkedInBooksJson": true,
+        "validatedAt": "2026-07-31T12:39:35.000Z",
+        "audioSrc": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/evidence-backed-agent/audio/04_%E7%AC%AC%E4%B8%89%E7%AB%A0%EF%BD%9C%E7%AC%AC%E4%B8%80%E9%81%93%E9%96%98%E9%96%80%EF%BC%9AAgent%20%E8%A1%8C%E5%8B%95%E5%89%8D%E7%9A%84%E8%B3%87%E6%96%99%E5%93%81%E8%B3%AA%E6%B2%BB%E7%90%86.m4a",
+        "sampleRate": 44100,
+        "transcodedFrom": {
+          "codec": "aac",
+          "bitRate": 256000,
+          "channels": 2,
+          "fileSizeBytes": 45319110,
+          "sha256": "18f2e5a3aed2133c2986d62a5fe23066711d7da07d92d767f034c5aea319d4ba"
+        },
+        "storage": "vercel-blob",
+        "blobUrl": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/evidence-backed-agent/audio/04_%E7%AC%AC%E4%B8%89%E7%AB%A0%EF%BD%9C%E7%AC%AC%E4%B8%80%E9%81%93%E9%96%98%E9%96%80%EF%BC%9AAgent%20%E8%A1%8C%E5%8B%95%E5%89%8D%E7%9A%84%E8%B3%87%E6%96%99%E5%93%81%E8%B3%AA%E6%B2%BB%E7%90%86.m4a",
+        "blobPathname": "books/evidence-backed-agent/audio/04_第三章｜第一道閘門：Agent 行動前的資料品質治理.m4a",
+        "blobEtag": "\"248c0fa82e7f61cd2e696c86f5d0ef9f-2\"",
+        "blobHeadVerified": true,
+        "blobRemoteSeekVerified": false
+      },
+      {
+        "chapterNumber": 5,
+        "audioFilename": "05_第四章｜AI 寫得很快，人類卻來不及查證.m4a",
+        "audioPath": "public/books/evidence-backed-agent/audio/05_第四章｜AI 寫得很快，人類卻來不及查證.m4a",
+        "appAudioSrc": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/evidence-backed-agent/audio/05_%E7%AC%AC%E5%9B%9B%E7%AB%A0%EF%BD%9CAI%20%E5%AF%AB%E5%BE%97%E5%BE%88%E5%BF%AB%EF%BC%8C%E4%BA%BA%E9%A1%9E%E5%8D%BB%E4%BE%86%E4%B8%8D%E5%8F%8A%E6%9F%A5%E8%AD%89.m4a",
+        "durationSeconds": 1550.581995,
+        "lastPacketDurationSeconds": 1550.581996,
+        "codec": "aac",
+        "container": "mov,mp4,m4a,3gp,3g2,mj2",
+        "channels": 1,
+        "bitRate": 82357,
+        "fileSizeBytes": 16231224,
+        "sha256": "80020228946ea34fb3837abaf69a0d860d1b721fbf39c1bf2c15db95210e526c",
+        "fullDecode": true,
+        "sourceCopyValidated": true,
+        "linkedInBooksJson": true,
+        "validatedAt": "2026-07-31T12:40:10.000Z",
+        "audioSrc": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/evidence-backed-agent/audio/05_%E7%AC%AC%E5%9B%9B%E7%AB%A0%EF%BD%9CAI%20%E5%AF%AB%E5%BE%97%E5%BE%88%E5%BF%AB%EF%BC%8C%E4%BA%BA%E9%A1%9E%E5%8D%BB%E4%BE%86%E4%B8%8D%E5%8F%8A%E6%9F%A5%E8%AD%89.m4a",
+        "sampleRate": 44100,
+        "transcodedFrom": {
+          "codec": "aac",
+          "bitRate": 256000,
+          "channels": 2,
+          "fileSizeBytes": 49904607,
+          "sha256": "6ca9ed187d90c257ce2db3a0f2836ac81cafeb9bb77cb2dca969e1ab29acb7f5"
+        },
+        "storage": "vercel-blob",
+        "blobUrl": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/evidence-backed-agent/audio/05_%E7%AC%AC%E5%9B%9B%E7%AB%A0%EF%BD%9CAI%20%E5%AF%AB%E5%BE%97%E5%BE%88%E5%BF%AB%EF%BC%8C%E4%BA%BA%E9%A1%9E%E5%8D%BB%E4%BE%86%E4%B8%8D%E5%8F%8A%E6%9F%A5%E8%AD%89.m4a",
+        "blobPathname": "books/evidence-backed-agent/audio/05_第四章｜AI 寫得很快，人類卻來不及查證.m4a",
+        "blobEtag": "\"7c6d6c44a3e9d168c19b8b4dd5588cb8-2\"",
+        "blobHeadVerified": true,
+        "blobRemoteSeekVerified": false
+      },
+      {
+        "chapterNumber": 6,
+        "audioFilename": "06_第五章｜第二道閘門：建立主張—證據帳本.m4a",
+        "audioPath": "public/books/evidence-backed-agent/audio/06_第五章｜第二道閘門：建立主張—證據帳本.m4a",
+        "appAudioSrc": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/evidence-backed-agent/audio/06_%E7%AC%AC%E4%BA%94%E7%AB%A0%EF%BD%9C%E7%AC%AC%E4%BA%8C%E9%81%93%E9%96%98%E9%96%80%EF%BC%9A%E5%BB%BA%E7%AB%8B%E4%B8%BB%E5%BC%B5%E2%80%94%E8%AD%89%E6%93%9A%E5%B8%B3%E6%9C%AC.m4a",
+        "durationSeconds": 818.061995,
+        "lastPacketDurationSeconds": 818.061995,
+        "codec": "aac",
+        "container": "mov,mp4,m4a,3gp,3g2,mj2",
+        "channels": 1,
+        "bitRate": 82469,
+        "fileSizeBytes": 8575234,
+        "sha256": "d51c755849d8ba7a6e5016baf0b9992ee015189900ffbdfe25a231aee0bbbb28",
+        "fullDecode": true,
+        "sourceCopyValidated": true,
+        "linkedInBooksJson": true,
+        "validatedAt": "2026-07-31T12:40:45.000Z",
+        "audioSrc": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/evidence-backed-agent/audio/06_%E7%AC%AC%E4%BA%94%E7%AB%A0%EF%BD%9C%E7%AC%AC%E4%BA%8C%E9%81%93%E9%96%98%E9%96%80%EF%BC%9A%E5%BB%BA%E7%AB%8B%E4%B8%BB%E5%BC%B5%E2%80%94%E8%AD%89%E6%93%9A%E5%B8%B3%E6%9C%AC.m4a",
+        "sampleRate": 44100,
+        "transcodedFrom": {
+          "codec": "aac",
+          "bitRate": 256000,
+          "channels": 2,
+          "fileSizeBytes": 26329198,
+          "sha256": "a875fd1d5c9b736a97081306f509f1b53f8e3e4c679f01a1c2bcfee23e9e1855"
+        },
+        "storage": "vercel-blob",
+        "blobUrl": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/evidence-backed-agent/audio/06_%E7%AC%AC%E4%BA%94%E7%AB%A0%EF%BD%9C%E7%AC%AC%E4%BA%8C%E9%81%93%E9%96%98%E9%96%80%EF%BC%9A%E5%BB%BA%E7%AB%8B%E4%B8%BB%E5%BC%B5%E2%80%94%E8%AD%89%E6%93%9A%E5%B8%B3%E6%9C%AC.m4a",
+        "blobPathname": "books/evidence-backed-agent/audio/06_第五章｜第二道閘門：建立主張—證據帳本.m4a",
+        "blobEtag": "\"0c3fc1d42b82cb968aa82b73c3084e6c-2\"",
+        "blobHeadVerified": true,
+        "blobRemoteSeekVerified": false
+      },
+      {
+        "chapterNumber": 7,
+        "audioFilename": "07_第六章｜把兩道閘門接成一個可信迴路.m4a",
+        "audioPath": "public/books/evidence-backed-agent/audio/07_第六章｜把兩道閘門接成一個可信迴路.m4a",
+        "appAudioSrc": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/evidence-backed-agent/audio/07_%E7%AC%AC%E5%85%AD%E7%AB%A0%EF%BD%9C%E6%8A%8A%E5%85%A9%E9%81%93%E9%96%98%E9%96%80%E6%8E%A5%E6%88%90%E4%B8%80%E5%80%8B%E5%8F%AF%E4%BF%A1%E8%BF%B4%E8%B7%AF.m4a",
+        "durationSeconds": 1476.091995,
+        "lastPacketDurationSeconds": 1476.091995,
+        "codec": "aac",
+        "container": "mov,mp4,m4a,3gp,3g2,mj2",
+        "channels": 1,
+        "bitRate": 82373,
+        "fileSizeBytes": 15454471,
+        "sha256": "2f53bf2301e3a2f5d1801b83f6a44cbdbb72b49f176bd1027488e70f6e4882e2",
+        "fullDecode": true,
+        "sourceCopyValidated": true,
+        "linkedInBooksJson": true,
+        "validatedAt": "2026-07-31T12:41:20.000Z",
+        "audioSrc": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/evidence-backed-agent/audio/07_%E7%AC%AC%E5%85%AD%E7%AB%A0%EF%BD%9C%E6%8A%8A%E5%85%A9%E9%81%93%E9%96%98%E9%96%80%E6%8E%A5%E6%88%90%E4%B8%80%E5%80%8B%E5%8F%AF%E4%BF%A1%E8%BF%B4%E8%B7%AF.m4a",
+        "sampleRate": 44100,
+        "transcodedFrom": {
+          "codec": "aac",
+          "bitRate": 256000,
+          "channels": 2,
+          "fileSizeBytes": 47507179,
+          "sha256": "ee3b4f8a0f15f9d6ad1d2b6f4d3758b9ac3c1296f8dd5ac934d834687efe0668"
+        },
+        "storage": "vercel-blob",
+        "blobUrl": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/evidence-backed-agent/audio/07_%E7%AC%AC%E5%85%AD%E7%AB%A0%EF%BD%9C%E6%8A%8A%E5%85%A9%E9%81%93%E9%96%98%E9%96%80%E6%8E%A5%E6%88%90%E4%B8%80%E5%80%8B%E5%8F%AF%E4%BF%A1%E8%BF%B4%E8%B7%AF.m4a",
+        "blobPathname": "books/evidence-backed-agent/audio/07_第六章｜把兩道閘門接成一個可信迴路.m4a",
+        "blobEtag": "\"0594f33ad1c1341b2bd458c766d65a25-2\"",
+        "blobHeadVerified": true,
+        "blobRemoteSeekVerified": false
+      },
+      {
+        "chapterNumber": 8,
+        "audioFilename": "08_第七章｜Human on the Loop：人類不必檢查一切.m4a",
+        "audioPath": "public/books/evidence-backed-agent/audio/08_第七章｜Human on the Loop：人類不必檢查一切.m4a",
+        "appAudioSrc": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/evidence-backed-agent/audio/08_%E7%AC%AC%E4%B8%83%E7%AB%A0%EF%BD%9CHuman%20on%20the%20Loop%EF%BC%9A%E4%BA%BA%E9%A1%9E%E4%B8%8D%E5%BF%85%E6%AA%A2%E6%9F%A5%E4%B8%80%E5%88%87.m4a",
+        "durationSeconds": 1538.066009,
+        "lastPacketDurationSeconds": 1538.066009,
+        "codec": "aac",
+        "container": "mov,mp4,m4a,3gp,3g2,mj2",
+        "channels": 1,
+        "bitRate": 82213,
+        "fileSizeBytes": 16072562,
+        "sha256": "4aeac7cad1dee20f82f654265f5edebb6d362fffd08f920fa0667be8e3da343f",
+        "fullDecode": true,
+        "sourceCopyValidated": true,
+        "linkedInBooksJson": true,
+        "validatedAt": "2026-07-31T12:41:55.000Z",
+        "audioSrc": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/evidence-backed-agent/audio/08_%E7%AC%AC%E4%B8%83%E7%AB%A0%EF%BD%9CHuman%20on%20the%20Loop%EF%BC%9A%E4%BA%BA%E9%A1%9E%E4%B8%8D%E5%BF%85%E6%AA%A2%E6%9F%A5%E4%B8%80%E5%88%87.m4a",
+        "sampleRate": 44100,
+        "transcodedFrom": {
+          "codec": "aac",
+          "bitRate": 256000,
+          "channels": 2,
+          "fileSizeBytes": 49501837,
+          "sha256": "8cc9a1dc140f54b23c3e83b45387ae6581b0fb6017193e310af76491182abf64"
+        },
+        "storage": "vercel-blob",
+        "blobUrl": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/evidence-backed-agent/audio/08_%E7%AC%AC%E4%B8%83%E7%AB%A0%EF%BD%9CHuman%20on%20the%20Loop%EF%BC%9A%E4%BA%BA%E9%A1%9E%E4%B8%8D%E5%BF%85%E6%AA%A2%E6%9F%A5%E4%B8%80%E5%88%87.m4a",
+        "blobPathname": "books/evidence-backed-agent/audio/08_第七章｜Human on the Loop：人類不必檢查一切.m4a",
+        "blobEtag": "\"a43581d34c11dca180e06c22592528e8-2\"",
+        "blobHeadVerified": true,
+        "blobRemoteSeekVerified": false
+      },
+      {
+        "chapterNumber": 9,
+        "audioFilename": "09_第八章｜從一個 Agent，走向企業證據基礎設施.m4a",
+        "audioPath": "public/books/evidence-backed-agent/audio/09_第八章｜從一個 Agent，走向企業證據基礎設施.m4a",
+        "appAudioSrc": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/evidence-backed-agent/audio/09_%E7%AC%AC%E5%85%AB%E7%AB%A0%EF%BD%9C%E5%BE%9E%E4%B8%80%E5%80%8B%20Agent%EF%BC%8C%E8%B5%B0%E5%90%91%E4%BC%81%E6%A5%AD%E8%AD%89%E6%93%9A%E5%9F%BA%E7%A4%8E%E8%A8%AD%E6%96%BD.m4a",
+        "durationSeconds": 1254.736009,
+        "lastPacketDurationSeconds": 1254.736009,
+        "codec": "aac",
+        "container": "mov,mp4,m4a,3gp,3g2,mj2",
+        "channels": 1,
+        "bitRate": 82134,
+        "fileSizeBytes": 13099483,
+        "sha256": "f2f48c799f73f731dff863da0b883cc4a90519e1c66fd405019bf57f6e7a74b0",
+        "fullDecode": true,
+        "sourceCopyValidated": true,
+        "linkedInBooksJson": true,
+        "validatedAt": "2026-07-31T12:42:30.000Z",
+        "audioSrc": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/evidence-backed-agent/audio/09_%E7%AC%AC%E5%85%AB%E7%AB%A0%EF%BD%9C%E5%BE%9E%E4%B8%80%E5%80%8B%20Agent%EF%BC%8C%E8%B5%B0%E5%90%91%E4%BC%81%E6%A5%AD%E8%AD%89%E6%93%9A%E5%9F%BA%E7%A4%8E%E8%A8%AD%E6%96%BD.m4a",
+        "sampleRate": 44100,
+        "transcodedFrom": {
+          "codec": "aac",
+          "bitRate": 256000,
+          "channels": 2,
+          "fileSizeBytes": 40383109,
+          "sha256": "5eb21afbb7c8ec800d1af45ab1dda2fb5840b3bf8b27b69c1e014d9301cd8698"
+        },
+        "storage": "vercel-blob",
+        "blobUrl": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/evidence-backed-agent/audio/09_%E7%AC%AC%E5%85%AB%E7%AB%A0%EF%BD%9C%E5%BE%9E%E4%B8%80%E5%80%8B%20Agent%EF%BC%8C%E8%B5%B0%E5%90%91%E4%BC%81%E6%A5%AD%E8%AD%89%E6%93%9A%E5%9F%BA%E7%A4%8E%E8%A8%AD%E6%96%BD.m4a",
+        "blobPathname": "books/evidence-backed-agent/audio/09_第八章｜從一個 Agent，走向企業證據基礎設施.m4a",
+        "blobEtag": "\"c237073e87636d57974742d49642caa8-2\"",
+        "blobHeadVerified": true,
+        "blobRemoteSeekVerified": false
+      },
+      {
+        "chapterNumber": 10,
+        "audioFilename": "10_結語｜AI 的答案可以生成，責任不能生成.m4a",
+        "audioPath": "public/books/evidence-backed-agent/audio/10_結語｜AI 的答案可以生成，責任不能生成.m4a",
+        "appAudioSrc": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/evidence-backed-agent/audio/10_%E7%B5%90%E8%AA%9E%EF%BD%9CAI%20%E7%9A%84%E7%AD%94%E6%A1%88%E5%8F%AF%E4%BB%A5%E7%94%9F%E6%88%90%EF%BC%8C%E8%B2%AC%E4%BB%BB%E4%B8%8D%E8%83%BD%E7%94%9F%E6%88%90.m4a",
+        "durationSeconds": 864.455011,
+        "lastPacketDurationSeconds": 864.455012,
+        "codec": "aac",
+        "container": "mov,mp4,m4a,3gp,3g2,mj2",
+        "channels": 1,
+        "bitRate": 82606,
+        "fileSizeBytes": 9076287,
+        "sha256": "69fcc3ea47e77a848439afb6c3675b1532a89e716898c6a4b0632c84aa9a007f",
+        "fullDecode": true,
+        "sourceCopyValidated": true,
+        "linkedInBooksJson": true,
+        "validatedAt": "2026-07-31T12:43:05.000Z",
+        "audioSrc": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/evidence-backed-agent/audio/10_%E7%B5%90%E8%AA%9E%EF%BD%9CAI%20%E7%9A%84%E7%AD%94%E6%A1%88%E5%8F%AF%E4%BB%A5%E7%94%9F%E6%88%90%EF%BC%8C%E8%B2%AC%E4%BB%BB%E4%B8%8D%E8%83%BD%E7%94%9F%E6%88%90.m4a",
+        "sampleRate": 44100,
+        "transcodedFrom": {
+          "codec": "aac",
+          "bitRate": 256000,
+          "channels": 2,
+          "fileSizeBytes": 27822361,
+          "sha256": "db93e9d4a522653593e2d3b0d08b4a1f646268f667f2b49a31036ec15d20f31a"
+        },
+        "storage": "vercel-blob",
+        "blobUrl": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/evidence-backed-agent/audio/10_%E7%B5%90%E8%AA%9E%EF%BD%9CAI%20%E7%9A%84%E7%AD%94%E6%A1%88%E5%8F%AF%E4%BB%A5%E7%94%9F%E6%88%90%EF%BC%8C%E8%B2%AC%E4%BB%BB%E4%B8%8D%E8%83%BD%E7%94%9F%E6%88%90.m4a",
+        "blobPathname": "books/evidence-backed-agent/audio/10_結語｜AI 的答案可以生成，責任不能生成.m4a",
+        "blobEtag": "\"0b355fe6cd02d6361a8cd434ecb7fc26-2\"",
+        "blobHeadVerified": true,
+        "blobRemoteSeekVerified": false
+      }
+    ]
+  },
+  "transcodeValidation": {
+    "status": "complete",
+    "codec": "aac",
+    "container": "m4a",
+    "targetBitRate": 80000,
+    "channels": 1,
+    "checkedAudioCount": 10,
+    "failedChapterNumbers": [],
+    "metadataIdentityChecked": true,
+    "lastPacketDurationChecked": true,
+    "fullLocalDecodeChecked": true,
+    "uniqueFingerprintsChecked": true,
+    "productionRemoteSeekChecked": false
+  },
+  "blobMigrationValidation": {
+    "status": "uploaded-and-applied",
+    "provider": "vercel-blob",
+    "access": "public",
+    "region": "hnd1",
+    "checkedAudioCount": 10,
+    "failedChapterNumbers": [],
+    "exactContentLengthChecked": true,
+    "remoteSeekChecked": false
+  },
+  "integrityValidation": {
+    "status": "complete",
+    "checkedChapterCount": 10,
+    "failedChapterNumbers": [],
+    "checkedAt": "2026-07-31T12:44:30.000Z"
+  },
+  "downloadTriggerAudit": {
+    "controllerVersion": "1.0.0",
+    "preferredTrigger": "mouse",
+    "transactionCount": 10,
+    "updatedAt": "2026-07-31T12:42:59.107Z",
+    "transactions": [
+      {
+        "transactionId": "e4436c2d-8f77-49d6-8564-af9ebfe918d7",
+        "chapterNumber": 1,
+        "expectedTitle": "01_序章｜AI 最危險的時候，是它開始行動之後",
+        "expectedDuration": "20:31",
+        "startedAt": "2026-07-31T12:36:46.863Z",
+        "preferredTriggerAtStart": "mouse",
+        "events": [
+          {
+            "event": "download-snapshot",
+            "at": "2026-07-31T12:36:46.865Z",
+            "existingFileCount": 3773
+          },
+          {
+            "event": "mouse-click-requested",
+            "at": "2026-07-31T12:36:47.711Z"
+          },
+          {
+            "event": "new-path-detected",
+            "at": "2026-07-31T12:36:50.081Z",
+            "triggerMethod": "mouse",
+            "newFilename": "98a6ab66-06f4-4aa4-a0a1-569f2c6612e8.tmp"
+          }
+        ],
+        "outcome": "new-path-detected",
+        "triggerMethod": "mouse",
+        "newFilename": "98a6ab66-06f4-4aa4-a0a1-569f2c6612e8.tmp",
+        "completedAt": "2026-07-31T12:36:50.081Z"
+      },
+      {
+        "transactionId": "875883b3-2d5e-4031-bbf3-b4cd11d0530b",
+        "chapterNumber": 2,
+        "expectedTitle": "02_第一章｜更聰明的模型，為什麼不一定更可信？",
+        "expectedDuration": "24:00",
+        "startedAt": "2026-07-31T12:37:54.662Z",
+        "preferredTriggerAtStart": "mouse",
+        "events": [
+          {
+            "event": "download-snapshot",
+            "at": "2026-07-31T12:37:54.664Z",
+            "existingFileCount": 3774
+          },
+          {
+            "event": "mouse-click-requested",
+            "at": "2026-07-31T12:37:57.982Z"
+          },
+          {
+            "event": "new-path-detected",
+            "at": "2026-07-31T12:38:01.421Z",
+            "triggerMethod": "mouse",
+            "newFilename": "e956036f-c90b-46ea-9d0b-255f14d27756.tmp"
+          }
+        ],
+        "outcome": "new-path-detected",
+        "triggerMethod": "mouse",
+        "newFilename": "e956036f-c90b-46ea-9d0b-255f14d27756.tmp",
+        "completedAt": "2026-07-31T12:38:01.421Z"
+      },
+      {
+        "transactionId": "8594107e-471a-4a1c-adef-ac0ec917a5c3",
+        "chapterNumber": 3,
+        "expectedTitle": "03_第二章｜錯誤資料為什麼看起來完全正確？",
+        "expectedDuration": "23:16",
+        "startedAt": "2026-07-31T12:38:41.598Z",
+        "preferredTriggerAtStart": "mouse",
+        "events": [
+          {
+            "event": "download-snapshot",
+            "at": "2026-07-31T12:38:41.600Z",
+            "existingFileCount": 3775
+          },
+          {
+            "event": "mouse-click-requested",
+            "at": "2026-07-31T12:38:44.905Z"
+          },
+          {
+            "event": "new-path-detected",
+            "at": "2026-07-31T12:38:47.304Z",
+            "triggerMethod": "mouse",
+            "newFilename": "b6177ccb-fb4a-4692-a758-48fad6c0d9e8.tmp"
+          }
+        ],
+        "outcome": "new-path-detected",
+        "triggerMethod": "mouse",
+        "newFilename": "b6177ccb-fb4a-4692-a758-48fad6c0d9e8.tmp",
+        "completedAt": "2026-07-31T12:38:47.304Z"
+      },
+      {
+        "transactionId": "76fdd694-6897-4faa-ae81-2dd5debaeed1",
+        "chapterNumber": 4,
+        "expectedTitle": "04_第三章｜第一道閘門：Agent 行動前的資料品質治理",
+        "expectedDuration": "23:28",
+        "startedAt": "2026-07-31T12:39:19.399Z",
+        "preferredTriggerAtStart": "mouse",
+        "events": [
+          {
+            "event": "download-snapshot",
+            "at": "2026-07-31T12:39:19.401Z",
+            "existingFileCount": 3775
+          },
+          {
+            "event": "mouse-click-requested",
+            "at": "2026-07-31T12:39:22.724Z"
+          },
+          {
+            "event": "new-path-detected",
+            "at": "2026-07-31T12:39:25.118Z",
+            "triggerMethod": "mouse",
+            "newFilename": "848b69ad-bd8b-4553-84d2-e993749384da.tmp"
+          }
+        ],
+        "outcome": "new-path-detected",
+        "triggerMethod": "mouse",
+        "newFilename": "848b69ad-bd8b-4553-84d2-e993749384da.tmp",
+        "completedAt": "2026-07-31T12:39:25.118Z"
+      },
+      {
+        "transactionId": "64a94ca1-740a-4625-a3de-41c8ec58363d",
+        "chapterNumber": 5,
+        "expectedTitle": "05_第四章｜AI 寫得很快，人類卻來不及查證",
+        "expectedDuration": "25:50",
+        "startedAt": "2026-07-31T12:39:55.536Z",
+        "preferredTriggerAtStart": "mouse",
+        "events": [
+          {
+            "event": "download-snapshot",
+            "at": "2026-07-31T12:39:55.538Z",
+            "existingFileCount": 3773
+          },
+          {
+            "event": "mouse-click-requested",
+            "at": "2026-07-31T12:39:56.384Z"
+          },
+          {
+            "event": "new-path-detected",
+            "at": "2026-07-31T12:39:58.255Z",
+            "triggerMethod": "mouse",
+            "newFilename": "47bc98c1-7202-484e-abd2-46a978325276.tmp"
+          }
+        ],
+        "outcome": "new-path-detected",
+        "triggerMethod": "mouse",
+        "newFilename": "47bc98c1-7202-484e-abd2-46a978325276.tmp",
+        "completedAt": "2026-07-31T12:39:58.255Z"
+      },
+      {
+        "transactionId": "59de33e0-6244-4d24-a26e-96dedc011939",
+        "chapterNumber": 6,
+        "expectedTitle": "06_第五章｜第二道閘門：建立主張—證據帳本",
+        "expectedDuration": "13:38",
+        "startedAt": "2026-07-31T12:40:30.265Z",
+        "preferredTriggerAtStart": "mouse",
+        "events": [
+          {
+            "event": "download-snapshot",
+            "at": "2026-07-31T12:40:30.267Z",
+            "existingFileCount": 3774
+          },
+          {
+            "event": "mouse-click-requested",
+            "at": "2026-07-31T12:40:33.558Z"
+          },
+          {
+            "event": "new-path-detected",
+            "at": "2026-07-31T12:40:35.958Z",
+            "triggerMethod": "mouse",
+            "newFilename": "202d3711-ecd5-4a07-aad0-1bcb7929a881.tmp"
+          }
+        ],
+        "outcome": "new-path-detected",
+        "triggerMethod": "mouse",
+        "newFilename": "202d3711-ecd5-4a07-aad0-1bcb7929a881.tmp",
+        "completedAt": "2026-07-31T12:40:35.958Z"
+      },
+      {
+        "transactionId": "00407347-c8cb-4a05-ad65-9790061d6d12",
+        "chapterNumber": 7,
+        "expectedTitle": "07_第六章｜把兩道閘門接成一個可信迴路",
+        "expectedDuration": "24:36",
+        "startedAt": "2026-07-31T12:41:06.019Z",
+        "preferredTriggerAtStart": "mouse",
+        "events": [
+          {
+            "event": "download-snapshot",
+            "at": "2026-07-31T12:41:06.021Z",
+            "existingFileCount": 3775
+          },
+          {
+            "event": "mouse-click-requested",
+            "at": "2026-07-31T12:41:09.315Z"
+          },
+          {
+            "event": "new-path-detected",
+            "at": "2026-07-31T12:41:11.435Z",
+            "triggerMethod": "mouse",
+            "newFilename": "d1f20fdc-04a4-451c-9e0f-101a839350d1.tmp"
+          }
+        ],
+        "outcome": "new-path-detected",
+        "triggerMethod": "mouse",
+        "newFilename": "d1f20fdc-04a4-451c-9e0f-101a839350d1.tmp",
+        "completedAt": "2026-07-31T12:41:11.435Z"
+      },
+      {
+        "transactionId": "883e08df-59c6-409f-8fce-b8ccb082a91b",
+        "chapterNumber": 8,
+        "expectedTitle": "08_第七章｜Human on the Loop：人類不必檢查一切",
+        "expectedDuration": "25:38",
+        "startedAt": "2026-07-31T12:41:40.785Z",
+        "preferredTriggerAtStart": "mouse",
+        "events": [
+          {
+            "event": "download-snapshot",
+            "at": "2026-07-31T12:41:40.787Z",
+            "existingFileCount": 3776
+          },
+          {
+            "event": "mouse-click-requested",
+            "at": "2026-07-31T12:41:44.067Z"
+          },
+          {
+            "event": "new-path-detected",
+            "at": "2026-07-31T12:41:46.206Z",
+            "triggerMethod": "mouse",
+            "newFilename": "bf795eed-eedb-46db-99fb-25c1bc7ff6d5.tmp"
+          }
+        ],
+        "outcome": "new-path-detected",
+        "triggerMethod": "mouse",
+        "newFilename": "bf795eed-eedb-46db-99fb-25c1bc7ff6d5.tmp",
+        "completedAt": "2026-07-31T12:41:46.206Z"
+      },
+      {
+        "transactionId": "9b99f4ab-20bc-4b27-824d-b8c85016b104",
+        "chapterNumber": 9,
+        "expectedTitle": "09_第八章｜從一個 Agent，走向企業證據基礎設施",
+        "expectedDuration": "20:54",
+        "startedAt": "2026-07-31T12:42:15.879Z",
+        "preferredTriggerAtStart": "mouse",
+        "events": [
+          {
+            "event": "download-snapshot",
+            "at": "2026-07-31T12:42:15.882Z",
+            "existingFileCount": 3777
+          },
+          {
+            "event": "mouse-click-requested",
+            "at": "2026-07-31T12:42:19.185Z"
+          },
+          {
+            "event": "new-path-detected",
+            "at": "2026-07-31T12:42:20.512Z",
+            "triggerMethod": "mouse",
+            "newFilename": "7418b210-594a-4f1f-819a-29523397462c.tmp"
+          }
+        ],
+        "outcome": "new-path-detected",
+        "triggerMethod": "mouse",
+        "newFilename": "7418b210-594a-4f1f-819a-29523397462c.tmp",
+        "completedAt": "2026-07-31T12:42:20.512Z"
+      },
+      {
+        "transactionId": "a858aef5-7ad2-456c-b596-9fc3c159be1e",
+        "chapterNumber": 10,
+        "expectedTitle": "10_結語｜AI 的答案可以生成，責任不能生成",
+        "expectedDuration": "14:24",
+        "startedAt": "2026-07-31T12:42:53.673Z",
+        "preferredTriggerAtStart": "mouse",
+        "events": [
+          {
+            "event": "download-snapshot",
+            "at": "2026-07-31T12:42:53.675Z",
+            "existingFileCount": 3778
+          },
+          {
+            "event": "mouse-click-requested",
+            "at": "2026-07-31T12:42:56.970Z"
+          },
+          {
+            "event": "new-path-detected",
+            "at": "2026-07-31T12:42:59.099Z",
+            "triggerMethod": "mouse",
+            "newFilename": "551a1072-a592-4123-8d64-952c52108080.tmp"
+          }
+        ],
+        "outcome": "new-path-detected",
+        "triggerMethod": "mouse",
+        "newFilename": "551a1072-a592-4123-8d64-952c52108080.tmp",
+        "completedAt": "2026-07-31T12:42:59.099Z"
+      }
+    ]
+  }
+}
