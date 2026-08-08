@@ -1,0 +1,1300 @@
+{
+  "bookTitle": "站在迴路之上",
+  "bookSlug": "standing-above-the-loop",
+  "notebookTitle": "站在迴路之上｜章節音頻",
+  "notebookUrl": "https://notebook.google.com/notebook/9cc531e9-cda1-4e79-b924-7bbe2759b5a9",
+  "expectedChapterCount": 12,
+  "createdAt": "2026-08-08T15:48:22.526Z",
+  "updatedAt": "2026-08-08T16:30:28.591Z",
+  "preflight": {
+    "status": "complete",
+    "txtChapterCount": 12,
+    "twoDigitOrdering": true,
+    "contiguousChapterNumbers": true,
+    "duplicateChapterNumbers": [],
+    "missingChapterNumbers": [],
+    "emptyFiles": [],
+    "filenameStemsApproved": true
+  },
+  "uploadValidation": {
+    "status": "complete",
+    "expectedSourceCount": 12,
+    "uploadedSourceCount": 12
+  },
+  "entries": [
+    {
+      "chapterNumber": 1,
+      "sourcePath": "book-txt/站在迴路之上/01_第 1 章｜AI 不再只回答：從 Chatbot 到 Agent.txt",
+      "sourceFilename": "01_第 1 章｜AI 不再只回答：從 Chatbot 到 Agent.txt",
+      "promptMarker": "章節標誌：01_第 1 章｜AI 不再只回答：從 Chatbot 到 Agent",
+      "expectedAudioTitle": "01_第 1 章｜AI 不再只回答：從 Chatbot 到 Agent",
+      "selectedSourceCount": 1,
+      "generationState": "complete",
+      "promptSourceVerification": "complete",
+      "finalAudioCardTitle": "01_第 1 章｜AI 不再只回答：從 Chatbot 到 Agent",
+      "submissionOrdinal": 1,
+      "preSubmitCardCount": 0,
+      "postSubmitCardCount": 1,
+      "queueAcceptanceState": "accepted",
+      "queueAcceptedAt": "2026-08-09T00:05:09.7904054+08:00",
+      "completedAt": "2026-08-09T00:19:48.7296862+08:00",
+      "duration": "20:14"
+    },
+    {
+      "chapterNumber": 2,
+      "sourcePath": "book-txt/站在迴路之上/02_第 2 章｜從 Task 到 Workflow，再到 Outcome.txt",
+      "sourceFilename": "02_第 2 章｜從 Task 到 Workflow，再到 Outcome.txt",
+      "promptMarker": "章節標誌：02_第 2 章｜從 Task 到 Workflow，再到 Outcome",
+      "expectedAudioTitle": "02_第 2 章｜從 Task 到 Workflow，再到 Outcome",
+      "selectedSourceCount": 1,
+      "generationState": "complete",
+      "promptSourceVerification": "complete",
+      "finalAudioCardTitle": "02_第 2 章｜從 Task 到 Workflow，再到 Outcome",
+      "submissionOrdinal": 2,
+      "preSubmitCardCount": 1,
+      "postSubmitCardCount": 2,
+      "queueAcceptanceState": "accepted",
+      "queueAcceptedAt": "2026-08-09T00:05:09.7904054+08:00",
+      "completedAt": "2026-08-09T00:19:48.7296862+08:00",
+      "duration": "29:52"
+    },
+    {
+      "chapterNumber": 3,
+      "sourcePath": "book-txt/站在迴路之上/03_第 3 章｜智能變便宜，工作為什麼沒有自動變好.txt",
+      "sourceFilename": "03_第 3 章｜智能變便宜，工作為什麼沒有自動變好.txt",
+      "promptMarker": "章節標誌：03_第 3 章｜智能變便宜，工作為什麼沒有自動變好",
+      "expectedAudioTitle": "03_第 3 章｜智能變便宜，工作為什麼沒有自動變好",
+      "selectedSourceCount": 1,
+      "generationState": "complete",
+      "promptSourceVerification": "complete",
+      "finalAudioCardTitle": "03_第 3 章｜智能變便宜，工作為什麼沒有自動變好",
+      "submissionOrdinal": 3,
+      "preSubmitCardCount": 2,
+      "postSubmitCardCount": 3,
+      "queueAcceptanceState": "accepted",
+      "queueAcceptedAt": "2026-08-09T00:05:09.7904054+08:00",
+      "completedAt": "2026-08-09T00:19:48.7296862+08:00",
+      "duration": "18:52"
+    },
+    {
+      "chapterNumber": 4,
+      "sourcePath": "book-txt/站在迴路之上/04_第 4 章｜Context Engineering：AI 所處的世界.txt",
+      "sourceFilename": "04_第 4 章｜Context Engineering：AI 所處的世界.txt",
+      "promptMarker": "章節標誌：04_第 4 章｜Context Engineering：AI 所處的世界",
+      "expectedAudioTitle": "04_第 4 章｜Context Engineering：AI 所處的世界",
+      "selectedSourceCount": 1,
+      "generationState": "complete",
+      "promptSourceVerification": "complete",
+      "finalAudioCardTitle": "04_第 4 章｜Context Engineering：AI 所處的世界",
+      "submissionOrdinal": 4,
+      "preSubmitCardCount": 3,
+      "postSubmitCardCount": 4,
+      "queueAcceptanceState": "accepted",
+      "queueAcceptedAt": "2026-08-09T00:05:09.7904054+08:00",
+      "completedAt": "2026-08-09T00:19:48.7296862+08:00",
+      "duration": "25:06"
+    },
+    {
+      "chapterNumber": 5,
+      "sourcePath": "book-txt/站在迴路之上/05_第 5 章｜Harness Engineering：模型之外的工作契約.txt",
+      "sourceFilename": "05_第 5 章｜Harness Engineering：模型之外的工作契約.txt",
+      "promptMarker": "章節標誌：05_第 5 章｜Harness Engineering：模型之外的工作契約",
+      "expectedAudioTitle": "05_第 5 章｜Harness Engineering：模型之外的工作契約",
+      "selectedSourceCount": 1,
+      "generationState": "complete",
+      "promptSourceVerification": "complete",
+      "finalAudioCardTitle": "05_第 5 章｜Harness Engineering：模型之外的工作契約",
+      "submissionOrdinal": 5,
+      "preSubmitCardCount": 4,
+      "postSubmitCardCount": 5,
+      "queueAcceptanceState": "accepted",
+      "queueAcceptedAt": "2026-08-09T00:05:09.7904054+08:00",
+      "completedAt": "2026-08-09T00:19:48.7296862+08:00",
+      "duration": "24:34"
+    },
+    {
+      "chapterNumber": 6,
+      "sourcePath": "book-txt/站在迴路之上/06_第 6 章｜Runtime：讓 AI 能持續工作的現場.txt",
+      "sourceFilename": "06_第 6 章｜Runtime：讓 AI 能持續工作的現場.txt",
+      "promptMarker": "章節標誌：06_第 6 章｜Runtime：讓 AI 能持續工作的現場",
+      "expectedAudioTitle": "06_第 6 章｜Runtime：讓 AI 能持續工作的現場",
+      "selectedSourceCount": 1,
+      "generationState": "complete",
+      "promptSourceVerification": "complete",
+      "finalAudioCardTitle": "06_第 6 章｜Runtime：讓 AI 能持續工作的現場",
+      "submissionOrdinal": 6,
+      "preSubmitCardCount": 5,
+      "postSubmitCardCount": 6,
+      "queueAcceptanceState": "accepted",
+      "queueAcceptedAt": "2026-08-09T00:05:09.7904054+08:00",
+      "completedAt": "2026-08-09T00:19:48.7296862+08:00",
+      "duration": "26:20"
+    },
+    {
+      "chapterNumber": 7,
+      "sourcePath": "book-txt/站在迴路之上/07_第 7 章｜Loop Engineering：從一次成功到持續改善.txt",
+      "sourceFilename": "07_第 7 章｜Loop Engineering：從一次成功到持續改善.txt",
+      "promptMarker": "章節標誌：07_第 7 章｜Loop Engineering：從一次成功到持續改善",
+      "expectedAudioTitle": "07_第 7 章｜Loop Engineering：從一次成功到持續改善",
+      "selectedSourceCount": 1,
+      "generationState": "complete",
+      "promptSourceVerification": "complete",
+      "finalAudioCardTitle": "07_第 7 章｜Loop Engineering：從一次成功到持續改善",
+      "submissionOrdinal": 7,
+      "preSubmitCardCount": 6,
+      "postSubmitCardCount": 7,
+      "queueAcceptanceState": "accepted",
+      "queueAcceptedAt": "2026-08-09T00:05:09.7904054+08:00",
+      "completedAt": "2026-08-09T00:19:48.7296862+08:00",
+      "duration": "23:19"
+    },
+    {
+      "chapterNumber": 8,
+      "sourcePath": "book-txt/站在迴路之上/08_第 8 章｜看得見才改得動：Tracing、Evals 與可觀測性.txt",
+      "sourceFilename": "08_第 8 章｜看得見才改得動：Tracing、Evals 與可觀測性.txt",
+      "promptMarker": "章節標誌：08_第 8 章｜看得見才改得動：Tracing、Evals 與可觀測性",
+      "expectedAudioTitle": "08_第 8 章｜看得見才改得動：Tracing、Evals 與可觀測性",
+      "selectedSourceCount": 1,
+      "generationState": "complete",
+      "promptSourceVerification": "complete",
+      "finalAudioCardTitle": "08_第 8 章｜看得見才改得動：Tracing、Evals 與可觀測性",
+      "submissionOrdinal": 8,
+      "preSubmitCardCount": 7,
+      "postSubmitCardCount": 8,
+      "queueAcceptanceState": "accepted",
+      "queueAcceptedAt": "2026-08-09T00:05:09.7904054+08:00",
+      "completedAt": "2026-08-09T00:19:48.7296862+08:00",
+      "duration": "18:28"
+    },
+    {
+      "chapterNumber": 9,
+      "sourcePath": "book-txt/站在迴路之上/09_第 9 章｜行動前先過閘門：Runtime Data-Quality Gating.txt",
+      "sourceFilename": "09_第 9 章｜行動前先過閘門：Runtime Data-Quality Gating.txt",
+      "promptMarker": "章節標誌：09_第 9 章｜行動前先過閘門：Runtime Data-Quality Gating",
+      "expectedAudioTitle": "09_第 9 章｜行動前先過閘門：Runtime Data-Quality Gating",
+      "selectedSourceCount": 1,
+      "generationState": "complete",
+      "promptSourceVerification": "complete",
+      "finalAudioCardTitle": "09_第 9 章｜行動前先過閘門：Runtime Data-Quality Gating",
+      "submissionOrdinal": 9,
+      "preSubmitCardCount": 8,
+      "postSubmitCardCount": 9,
+      "queueAcceptanceState": "accepted",
+      "queueAcceptedAt": "2026-08-09T00:05:09.7904054+08:00",
+      "completedAt": "2026-08-09T00:19:48.7296862+08:00",
+      "duration": "26:44"
+    },
+    {
+      "chapterNumber": 10,
+      "sourcePath": "book-txt/站在迴路之上/10_第 10 章｜主張釋出前要有帳：Evidence Ledger、Guardrails 與人工審查.txt",
+      "sourceFilename": "10_第 10 章｜主張釋出前要有帳：Evidence Ledger、Guardrails 與人工審查.txt",
+      "promptMarker": "章節標誌：10_第 10 章｜主張釋出前要有帳：Evidence Ledger、Guardrails 與人工審查",
+      "expectedAudioTitle": "10_第 10 章｜主張釋出前要有帳：Evidence Ledger、Guardrails 與人工審查",
+      "selectedSourceCount": 1,
+      "generationState": "complete",
+      "promptSourceVerification": "complete",
+      "finalAudioCardTitle": "10_第 10 章｜主張釋出前要有帳：Evidence Ledger、Guardrails 與人工審查",
+      "submissionOrdinal": 10,
+      "preSubmitCardCount": 9,
+      "postSubmitCardCount": 10,
+      "queueAcceptanceState": "accepted",
+      "queueAcceptedAt": "2026-08-09T00:05:09.7904054+08:00",
+      "completedAt": "2026-08-09T00:19:48.7296862+08:00",
+      "duration": "19:46"
+    },
+    {
+      "chapterNumber": 11,
+      "sourcePath": "book-txt/站在迴路之上/11_第 11 章｜AI 原生組織：從一號位工程、AI OS 到 DRI＋Agents.txt",
+      "sourceFilename": "11_第 11 章｜AI 原生組織：從一號位工程、AI OS 到 DRI＋Agents.txt",
+      "promptMarker": "章節標誌：11_第 11 章｜AI 原生組織：從一號位工程、AI OS 到 DRI＋Agents",
+      "expectedAudioTitle": "11_第 11 章｜AI 原生組織：從一號位工程、AI OS 到 DRI＋Agents",
+      "selectedSourceCount": 1,
+      "generationState": "complete",
+      "promptSourceVerification": "complete",
+      "finalAudioCardTitle": "11_第 11 章｜AI 原生組織：從一號位工程、AI OS 到 DRI＋Agents",
+      "submissionOrdinal": 11,
+      "preSubmitCardCount": 10,
+      "postSubmitCardCount": 11,
+      "queueAcceptanceState": "accepted",
+      "queueAcceptedAt": "2026-08-09T00:05:09.7904054+08:00",
+      "completedAt": "2026-08-09T00:19:48.7296862+08:00",
+      "duration": "28:33"
+    },
+    {
+      "chapterNumber": 12,
+      "sourcePath": "book-txt/站在迴路之上/12_第 12 章｜人站在迴路之上：Human Above the Loop.txt",
+      "sourceFilename": "12_第 12 章｜人站在迴路之上：Human Above the Loop.txt",
+      "promptMarker": "章節標誌：12_第 12 章｜人站在迴路之上：Human Above the Loop",
+      "expectedAudioTitle": "12_第 12 章｜人站在迴路之上：Human Above the Loop",
+      "selectedSourceCount": 1,
+      "generationState": "complete",
+      "promptSourceVerification": "complete",
+      "finalAudioCardTitle": "12_第 12 章｜人站在迴路之上：Human Above the Loop",
+      "submissionOrdinal": 12,
+      "preSubmitCardCount": 11,
+      "postSubmitCardCount": 12,
+      "queueAcceptanceState": "accepted",
+      "queueAcceptedAt": "2026-08-09T00:05:09.7904054+08:00",
+      "completedAt": "2026-08-09T00:19:48.7296862+08:00",
+      "duration": "23:13"
+    }
+  ],
+  "batchGeneration": {
+    "mode": "batch",
+    "submittedChapterCount": 12,
+    "acceptedQueueItems": 12,
+    "completedCards": 12,
+    "verifiedCardTitles": 12,
+    "duplicateChapterNumbers": [],
+    "duplicatePromptMarkers": [],
+    "lastAuditedAt": "2026-08-09T00:19:48.7296862+08:00"
+  },
+  "downloadValidation": {
+    "status": "complete",
+    "assetFolder": "public/books/standing-above-the-loop/audio",
+    "expectedChapterCount": 12,
+    "downloadedCount": 12,
+    "linkedCount": 12,
+    "missingChapterNumbers": [],
+    "chapters": [
+      {
+        "chapterNumber": 1,
+        "audioFilename": "01_第 1 章｜AI 不再只回答：從 Chatbot 到 Agent.m4a",
+        "audioPath": "public/books/standing-above-the-loop/audio/01_第 1 章｜AI 不再只回答：從 Chatbot 到 Agent.m4a",
+        "audioSrc": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/standing-above-the-loop/audio/01_%E7%AC%AC%201%20%E7%AB%A0%EF%BD%9CAI%20%E4%B8%8D%E5%86%8D%E5%8F%AA%E5%9B%9E%E7%AD%94%EF%BC%9A%E5%BE%9E%20Chatbot%20%E5%88%B0%20Agent.m4a",
+        "durationSeconds": 1214.100998,
+        "lastPacketDurationSeconds": 1214.1009980000001,
+        "codec": "aac",
+        "container": "mov,mp4,m4a,3gp,3g2,mj2",
+        "bitRate": 82346,
+        "sampleRate": 44100,
+        "channels": 1,
+        "fileSizeBytes": 12707546,
+        "sha256": "ee3df3360afec7833dd27d0cb9f89e5a5fc196593f2dc77a4ba26d126a5e516c",
+        "fullDecode": true,
+        "linkedInBooksJson": true,
+        "transcodedFrom": {
+          "codec": "aac",
+          "bitRate": 256000,
+          "channels": 2,
+          "fileSizeBytes": 39075327,
+          "sha256": "50b7ba7030441eba7d7afb154937c45b9d517f2f86ca4d45271320716fed2f29"
+        },
+        "storage": "vercel-blob",
+        "blobUrl": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/standing-above-the-loop/audio/01_%E7%AC%AC%201%20%E7%AB%A0%EF%BD%9CAI%20%E4%B8%8D%E5%86%8D%E5%8F%AA%E5%9B%9E%E7%AD%94%EF%BC%9A%E5%BE%9E%20Chatbot%20%E5%88%B0%20Agent.m4a",
+        "blobPathname": "books/standing-above-the-loop/audio/01_第 1 章｜AI 不再只回答：從 Chatbot 到 Agent.m4a",
+        "blobEtag": "\"ac170d60a79a47dc08d778f602c2f90b-2\"",
+        "blobHeadVerified": true,
+        "blobRemoteSeekVerified": false
+      },
+      {
+        "chapterNumber": 2,
+        "audioFilename": "02_第 2 章｜從 Task 到 Workflow，再到 Outcome.m4a",
+        "audioPath": "public/books/standing-above-the-loop/audio/02_第 2 章｜從 Task 到 Workflow，再到 Outcome.m4a",
+        "audioSrc": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/standing-above-the-loop/audio/02_%E7%AC%AC%202%20%E7%AB%A0%EF%BD%9C%E5%BE%9E%20Task%20%E5%88%B0%20Workflow%EF%BC%8C%E5%86%8D%E5%88%B0%20Outcome.m4a",
+        "durationSeconds": 1792.418005,
+        "lastPacketDurationSeconds": 1792.418004,
+        "codec": "aac",
+        "container": "mov,mp4,m4a,3gp,3g2,mj2",
+        "bitRate": 82033,
+        "sampleRate": 44100,
+        "channels": 1,
+        "fileSizeBytes": 18689971,
+        "sha256": "207a3465ef587aeabb63c8c05641453f8cc8f4aaca7f0391bcfadfcad9b5a7ea",
+        "fullDecode": true,
+        "linkedInBooksJson": true,
+        "transcodedFrom": {
+          "codec": "aac",
+          "bitRate": 256000,
+          "channels": 2,
+          "fileSizeBytes": 57687797,
+          "sha256": "c9ed9571ac758da6f34b295e67fcd55256684ef6921376105f570f4392fd9b90"
+        },
+        "storage": "vercel-blob",
+        "blobUrl": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/standing-above-the-loop/audio/02_%E7%AC%AC%202%20%E7%AB%A0%EF%BD%9C%E5%BE%9E%20Task%20%E5%88%B0%20Workflow%EF%BC%8C%E5%86%8D%E5%88%B0%20Outcome.m4a",
+        "blobPathname": "books/standing-above-the-loop/audio/02_第 2 章｜從 Task 到 Workflow，再到 Outcome.m4a",
+        "blobEtag": "\"5937e6d34860cb6880b8edcf186b9b3c-3\"",
+        "blobHeadVerified": true,
+        "blobRemoteSeekVerified": false
+      },
+      {
+        "chapterNumber": 3,
+        "audioFilename": "03_第 3 章｜智能變便宜，工作為什麼沒有自動變好.m4a",
+        "audioPath": "public/books/standing-above-the-loop/audio/03_第 3 章｜智能變便宜，工作為什麼沒有自動變好.m4a",
+        "audioSrc": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/standing-above-the-loop/audio/03_%E7%AC%AC%203%20%E7%AB%A0%EF%BD%9C%E6%99%BA%E8%83%BD%E8%AE%8A%E4%BE%BF%E5%AE%9C%EF%BC%8C%E5%B7%A5%E4%BD%9C%E7%82%BA%E4%BB%80%E9%BA%BC%E6%B2%92%E6%9C%89%E8%87%AA%E5%8B%95%E8%AE%8A%E5%A5%BD.m4a",
+        "durationSeconds": 1132.343991,
+        "lastPacketDurationSeconds": 1132.3439899999998,
+        "codec": "aac",
+        "container": "mov,mp4,m4a,3gp,3g2,mj2",
+        "bitRate": 82265,
+        "sampleRate": 44100,
+        "channels": 1,
+        "fileSizeBytes": 11840333,
+        "sha256": "94d9ace05fe23bd53d81f9d3cfcc8604d4ee6938c105b077bcc9b22ac34eae7c",
+        "fullDecode": true,
+        "linkedInBooksJson": true,
+        "transcodedFrom": {
+          "codec": "aac",
+          "bitRate": 256000,
+          "channels": 2,
+          "fileSizeBytes": 36444076,
+          "sha256": "7306bdaa4f483bca98c410043fd1e762590bce39d5439970ae5a7b86ce68b3b5"
+        },
+        "storage": "vercel-blob",
+        "blobUrl": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/standing-above-the-loop/audio/03_%E7%AC%AC%203%20%E7%AB%A0%EF%BD%9C%E6%99%BA%E8%83%BD%E8%AE%8A%E4%BE%BF%E5%AE%9C%EF%BC%8C%E5%B7%A5%E4%BD%9C%E7%82%BA%E4%BB%80%E9%BA%BC%E6%B2%92%E6%9C%89%E8%87%AA%E5%8B%95%E8%AE%8A%E5%A5%BD.m4a",
+        "blobPathname": "books/standing-above-the-loop/audio/03_第 3 章｜智能變便宜，工作為什麼沒有自動變好.m4a",
+        "blobEtag": "\"0187224cb8f076c39b4de629a57eb964-2\"",
+        "blobHeadVerified": true,
+        "blobRemoteSeekVerified": false
+      },
+      {
+        "chapterNumber": 4,
+        "audioFilename": "04_第 4 章｜Context Engineering：AI 所處的世界.m4a",
+        "audioPath": "public/books/standing-above-the-loop/audio/04_第 4 章｜Context Engineering：AI 所處的世界.m4a",
+        "audioSrc": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/standing-above-the-loop/audio/04_%E7%AC%AC%204%20%E7%AB%A0%EF%BD%9CContext%20Engineering%EF%BC%9AAI%20%E6%89%80%E8%99%95%E7%9A%84%E4%B8%96%E7%95%8C.m4a",
+        "durationSeconds": 1506.975011,
+        "lastPacketDurationSeconds": 1506.975012,
+        "codec": "aac",
+        "container": "mov,mp4,m4a,3gp,3g2,mj2",
+        "bitRate": 82357,
+        "sampleRate": 44100,
+        "channels": 1,
+        "fileSizeBytes": 15774681,
+        "sha256": "bd4b9b48006ac4aec133909a88137c5281595637ed446d124d8246b45fd0df43",
+        "fullDecode": true,
+        "linkedInBooksJson": true,
+        "transcodedFrom": {
+          "codec": "aac",
+          "bitRate": 256000,
+          "channels": 2,
+          "fileSizeBytes": 48501088,
+          "sha256": "22da2240da27443acd44b5b2b3437b88603d413b28ca11b0ddd0307336c8f6fc"
+        },
+        "storage": "vercel-blob",
+        "blobUrl": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/standing-above-the-loop/audio/04_%E7%AC%AC%204%20%E7%AB%A0%EF%BD%9CContext%20Engineering%EF%BC%9AAI%20%E6%89%80%E8%99%95%E7%9A%84%E4%B8%96%E7%95%8C.m4a",
+        "blobPathname": "books/standing-above-the-loop/audio/04_第 4 章｜Context Engineering：AI 所處的世界.m4a",
+        "blobEtag": "\"586f7db4d2b47e797cbf6070ca447ca5-2\"",
+        "blobHeadVerified": true,
+        "blobRemoteSeekVerified": false
+      },
+      {
+        "chapterNumber": 5,
+        "audioFilename": "05_第 5 章｜Harness Engineering：模型之外的工作契約.m4a",
+        "audioPath": "public/books/standing-above-the-loop/audio/05_第 5 章｜Harness Engineering：模型之外的工作契約.m4a",
+        "audioSrc": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/standing-above-the-loop/audio/05_%E7%AC%AC%205%20%E7%AB%A0%EF%BD%9CHarness%20Engineering%EF%BC%9A%E6%A8%A1%E5%9E%8B%E4%B9%8B%E5%A4%96%E7%9A%84%E5%B7%A5%E4%BD%9C%E5%A5%91%E7%B4%84.m4a",
+        "durationSeconds": 1474.815011,
+        "lastPacketDurationSeconds": 1474.815012,
+        "codec": "aac",
+        "container": "mov,mp4,m4a,3gp,3g2,mj2",
+        "bitRate": 82027,
+        "sampleRate": 44100,
+        "channels": 1,
+        "fileSizeBytes": 15377313,
+        "sha256": "a4a09964b2f8ee6db1fedfaff0da3923af3ce4b43bf7eb16bef3b489a9efe02d",
+        "fullDecode": true,
+        "linkedInBooksJson": true,
+        "transcodedFrom": {
+          "codec": "aac",
+          "bitRate": 256000,
+          "channels": 2,
+          "fileSizeBytes": 47466092,
+          "sha256": "04db08083250e349ebf481e2eb79bb180b079cddc9821883c81ab610ece93d4e"
+        },
+        "storage": "vercel-blob",
+        "blobUrl": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/standing-above-the-loop/audio/05_%E7%AC%AC%205%20%E7%AB%A0%EF%BD%9CHarness%20Engineering%EF%BC%9A%E6%A8%A1%E5%9E%8B%E4%B9%8B%E5%A4%96%E7%9A%84%E5%B7%A5%E4%BD%9C%E5%A5%91%E7%B4%84.m4a",
+        "blobPathname": "books/standing-above-the-loop/audio/05_第 5 章｜Harness Engineering：模型之外的工作契約.m4a",
+        "blobEtag": "\"9a4635e1cf74ca46ee46c30849f75103-2\"",
+        "blobHeadVerified": true,
+        "blobRemoteSeekVerified": false
+      },
+      {
+        "chapterNumber": 6,
+        "audioFilename": "06_第 6 章｜Runtime：讓 AI 能持續工作的現場.m4a",
+        "audioPath": "public/books/standing-above-the-loop/audio/06_第 6 章｜Runtime：讓 AI 能持續工作的現場.m4a",
+        "audioSrc": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/standing-above-the-loop/audio/06_%E7%AC%AC%206%20%E7%AB%A0%EF%BD%9CRuntime%EF%BC%9A%E8%AE%93%20AI%20%E8%83%BD%E6%8C%81%E7%BA%8C%E5%B7%A5%E4%BD%9C%E7%9A%84%E7%8F%BE%E5%A0%B4.m4a",
+        "durationSeconds": 1580.466009,
+        "lastPacketDurationSeconds": 1580.466009,
+        "codec": "aac",
+        "container": "mov,mp4,m4a,3gp,3g2,mj2",
+        "bitRate": 82409,
+        "sampleRate": 44100,
+        "channels": 1,
+        "fileSizeBytes": 16554202,
+        "sha256": "37a3db7a0252f195fc2eebc3c14aad15e14463149f13d52be87b6a723ae29de4",
+        "fullDecode": true,
+        "linkedInBooksJson": true,
+        "transcodedFrom": {
+          "codec": "aac",
+          "bitRate": 256000,
+          "channels": 2,
+          "fileSizeBytes": 50866393,
+          "sha256": "4bb17af3f9a11b9ca00aca93f71c3c0f14e0f46e409ab8f4c31eead5fe285663"
+        },
+        "storage": "vercel-blob",
+        "blobUrl": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/standing-above-the-loop/audio/06_%E7%AC%AC%206%20%E7%AB%A0%EF%BD%9CRuntime%EF%BC%9A%E8%AE%93%20AI%20%E8%83%BD%E6%8C%81%E7%BA%8C%E5%B7%A5%E4%BD%9C%E7%9A%84%E7%8F%BE%E5%A0%B4.m4a",
+        "blobPathname": "books/standing-above-the-loop/audio/06_第 6 章｜Runtime：讓 AI 能持續工作的現場.m4a",
+        "blobEtag": "\"5b97c4b57d33eaf65e22e120e7b53ebd-2\"",
+        "blobHeadVerified": true,
+        "blobRemoteSeekVerified": false
+      },
+      {
+        "chapterNumber": 7,
+        "audioFilename": "07_第 7 章｜Loop Engineering：從一次成功到持續改善.m4a",
+        "audioPath": "public/books/standing-above-the-loop/audio/07_第 7 章｜Loop Engineering：從一次成功到持續改善.m4a",
+        "audioSrc": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/standing-above-the-loop/audio/07_%E7%AC%AC%207%20%E7%AB%A0%EF%BD%9CLoop%20Engineering%EF%BC%9A%E5%BE%9E%E4%B8%80%E6%AC%A1%E6%88%90%E5%8A%9F%E5%88%B0%E6%8C%81%E7%BA%8C%E6%94%B9%E5%96%84.m4a",
+        "durationSeconds": 1399.048005,
+        "lastPacketDurationSeconds": 1399.048005,
+        "codec": "aac",
+        "container": "mov,mp4,m4a,3gp,3g2,mj2",
+        "bitRate": 82227,
+        "sampleRate": 44100,
+        "channels": 1,
+        "fileSizeBytes": 14622266,
+        "sha256": "04b0106b1c37bd623b9dbc4d00ef9e574755f6e0e0718962794d854ca57e09b7",
+        "fullDecode": true,
+        "linkedInBooksJson": true,
+        "transcodedFrom": {
+          "codec": "aac",
+          "bitRate": 256000,
+          "channels": 2,
+          "fileSizeBytes": 45027693,
+          "sha256": "05f60a1f6674aeed297668bd60d1564884e080b7f4e19c80ea3d379e2e1d8294"
+        },
+        "storage": "vercel-blob",
+        "blobUrl": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/standing-above-the-loop/audio/07_%E7%AC%AC%207%20%E7%AB%A0%EF%BD%9CLoop%20Engineering%EF%BC%9A%E5%BE%9E%E4%B8%80%E6%AC%A1%E6%88%90%E5%8A%9F%E5%88%B0%E6%8C%81%E7%BA%8C%E6%94%B9%E5%96%84.m4a",
+        "blobPathname": "books/standing-above-the-loop/audio/07_第 7 章｜Loop Engineering：從一次成功到持續改善.m4a",
+        "blobEtag": "\"9dd7e11aa4ac9800ff8b50b3302a5b43-2\"",
+        "blobHeadVerified": true,
+        "blobRemoteSeekVerified": false
+      },
+      {
+        "chapterNumber": 8,
+        "audioFilename": "08_第 8 章｜看得見才改得動：Tracing、Evals 與可觀測性.m4a",
+        "audioPath": "public/books/standing-above-the-loop/audio/08_第 8 章｜看得見才改得動：Tracing、Evals 與可觀測性.m4a",
+        "audioSrc": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/standing-above-the-loop/audio/08_%E7%AC%AC%208%20%E7%AB%A0%EF%BD%9C%E7%9C%8B%E5%BE%97%E8%A6%8B%E6%89%8D%E6%94%B9%E5%BE%97%E5%8B%95%EF%BC%9ATracing%E3%80%81Evals%20%E8%88%87%E5%8F%AF%E8%A7%80%E6%B8%AC%E6%80%A7.m4a",
+        "durationSeconds": 1108.101995,
+        "lastPacketDurationSeconds": 1108.1019959999999,
+        "codec": "aac",
+        "container": "mov,mp4,m4a,3gp,3g2,mj2",
+        "bitRate": 82325,
+        "sampleRate": 44100,
+        "channels": 1,
+        "fileSizeBytes": 11595162,
+        "sha256": "fbb20519c4d127c2617bab1c770339c39de4c8c946283a4119590708d16c375c",
+        "fullDecode": true,
+        "linkedInBooksJson": true,
+        "transcodedFrom": {
+          "codec": "aac",
+          "bitRate": 256000,
+          "channels": 2,
+          "fileSizeBytes": 35663820,
+          "sha256": "da55f3203694ed40bf999c754336b0ab1bd0092e3662a6f516f4c2725442cac9"
+        },
+        "storage": "vercel-blob",
+        "blobUrl": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/standing-above-the-loop/audio/08_%E7%AC%AC%208%20%E7%AB%A0%EF%BD%9C%E7%9C%8B%E5%BE%97%E8%A6%8B%E6%89%8D%E6%94%B9%E5%BE%97%E5%8B%95%EF%BC%9ATracing%E3%80%81Evals%20%E8%88%87%E5%8F%AF%E8%A7%80%E6%B8%AC%E6%80%A7.m4a",
+        "blobPathname": "books/standing-above-the-loop/audio/08_第 8 章｜看得見才改得動：Tracing、Evals 與可觀測性.m4a",
+        "blobEtag": "\"dfff533e0be13e6346c1bf212515918b-2\"",
+        "blobHeadVerified": true,
+        "blobRemoteSeekVerified": false
+      },
+      {
+        "chapterNumber": 9,
+        "audioFilename": "09_第 9 章｜行動前先過閘門：Runtime Data-Quality Gating.m4a",
+        "audioPath": "public/books/standing-above-the-loop/audio/09_第 9 章｜行動前先過閘門：Runtime Data-Quality Gating.m4a",
+        "audioSrc": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/standing-above-the-loop/audio/09_%E7%AC%AC%209%20%E7%AB%A0%EF%BD%9C%E8%A1%8C%E5%8B%95%E5%89%8D%E5%85%88%E9%81%8E%E9%96%98%E9%96%80%EF%BC%9ARuntime%20Data-Quality%20Gating.m4a",
+        "durationSeconds": 1604.615011,
+        "lastPacketDurationSeconds": 1604.615011,
+        "codec": "aac",
+        "container": "mov,mp4,m4a,3gp,3g2,mj2",
+        "bitRate": 82153,
+        "sampleRate": 44100,
+        "channels": 1,
+        "fileSizeBytes": 16755785,
+        "sha256": "a38a34c8f3ef8cca4356573af3d59494ffc79998adeff26005621802bc5134c4",
+        "fullDecode": true,
+        "linkedInBooksJson": true,
+        "transcodedFrom": {
+          "codec": "aac",
+          "bitRate": 256000,
+          "channels": 2,
+          "fileSizeBytes": 51643545,
+          "sha256": "f8622d49d3bd4f421d325c843cbedf47bd345191d9f77ab23ec2052806b359cc"
+        },
+        "storage": "vercel-blob",
+        "blobUrl": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/standing-above-the-loop/audio/09_%E7%AC%AC%209%20%E7%AB%A0%EF%BD%9C%E8%A1%8C%E5%8B%95%E5%89%8D%E5%85%88%E9%81%8E%E9%96%98%E9%96%80%EF%BC%9ARuntime%20Data-Quality%20Gating.m4a",
+        "blobPathname": "books/standing-above-the-loop/audio/09_第 9 章｜行動前先過閘門：Runtime Data-Quality Gating.m4a",
+        "blobEtag": "\"644cdba84922d0c11815610b72a369de-2\"",
+        "blobHeadVerified": true,
+        "blobRemoteSeekVerified": false
+      },
+      {
+        "chapterNumber": 10,
+        "audioFilename": "10_第 10 章｜主張釋出前要有帳：Evidence Ledger、Guardrails 與人工審查.m4a",
+        "audioPath": "public/books/standing-above-the-loop/audio/10_第 10 章｜主張釋出前要有帳：Evidence Ledger、Guardrails 與人工審查.m4a",
+        "audioSrc": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/standing-above-the-loop/audio/10_%E7%AC%AC%2010%20%E7%AB%A0%EF%BD%9C%E4%B8%BB%E5%BC%B5%E9%87%8B%E5%87%BA%E5%89%8D%E8%A6%81%E6%9C%89%E5%B8%B3%EF%BC%9AEvidence%20Ledger%E3%80%81Guardrails%20%E8%88%87%E4%BA%BA%E5%B7%A5%E5%AF%A9%E6%9F%A5.m4a",
+        "durationSeconds": 1186.051995,
+        "lastPacketDurationSeconds": 1186.051996,
+        "codec": "aac",
+        "container": "mov,mp4,m4a,3gp,3g2,mj2",
+        "bitRate": 82474,
+        "sampleRate": 44100,
+        "channels": 1,
+        "fileSizeBytes": 12432974,
+        "sha256": "bf4705da8cdcf0532a277842ace9f0be4782a410c5c3231ce7d74de255ffef64",
+        "fullDecode": true,
+        "linkedInBooksJson": true,
+        "transcodedFrom": {
+          "codec": "aac",
+          "bitRate": 256000,
+          "channels": 2,
+          "fileSizeBytes": 38172557,
+          "sha256": "5c6df30d8066d037b85c2cf130310f85365e8f2c1dd1bdee4648fbf4c595c857"
+        },
+        "storage": "vercel-blob",
+        "blobUrl": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/standing-above-the-loop/audio/10_%E7%AC%AC%2010%20%E7%AB%A0%EF%BD%9C%E4%B8%BB%E5%BC%B5%E9%87%8B%E5%87%BA%E5%89%8D%E8%A6%81%E6%9C%89%E5%B8%B3%EF%BC%9AEvidence%20Ledger%E3%80%81Guardrails%20%E8%88%87%E4%BA%BA%E5%B7%A5%E5%AF%A9%E6%9F%A5.m4a",
+        "blobPathname": "books/standing-above-the-loop/audio/10_第 10 章｜主張釋出前要有帳：Evidence Ledger、Guardrails 與人工審查.m4a",
+        "blobEtag": "\"590e74394369078d3ff7032b7580a454-2\"",
+        "blobHeadVerified": true,
+        "blobRemoteSeekVerified": false
+      },
+      {
+        "chapterNumber": 11,
+        "audioFilename": "11_第 11 章｜AI 原生組織：從一號位工程、AI OS 到 DRI＋Agents.m4a",
+        "audioPath": "public/books/standing-above-the-loop/audio/11_第 11 章｜AI 原生組織：從一號位工程、AI OS 到 DRI＋Agents.m4a",
+        "audioSrc": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/standing-above-the-loop/audio/11_%E7%AC%AC%2011%20%E7%AB%A0%EF%BD%9CAI%20%E5%8E%9F%E7%94%9F%E7%B5%84%E7%B9%94%EF%BC%9A%E5%BE%9E%E4%B8%80%E8%99%9F%E4%BD%8D%E5%B7%A5%E7%A8%8B%E3%80%81AI%20OS%20%E5%88%B0%20DRI%EF%BC%8BAgents.m4a",
+        "durationSeconds": 1713.145011,
+        "lastPacketDurationSeconds": 1713.145011,
+        "codec": "aac",
+        "container": "mov,mp4,m4a,3gp,3g2,mj2",
+        "bitRate": 82464,
+        "sampleRate": 44100,
+        "channels": 1,
+        "fileSizeBytes": 17955620,
+        "sha256": "6202488c0929c9b8b83b5ff3de3fcc53b0c3f1a1aae7979663ee5ca674f620c3",
+        "fullDecode": true,
+        "linkedInBooksJson": true,
+        "transcodedFrom": {
+          "codec": "aac",
+          "bitRate": 256000,
+          "channels": 2,
+          "fileSizeBytes": 55136480,
+          "sha256": "3318436b81b785a57468b2d152890ffddc3621ceb82f3d18f5563c7c3ee35f2e"
+        },
+        "storage": "vercel-blob",
+        "blobUrl": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/standing-above-the-loop/audio/11_%E7%AC%AC%2011%20%E7%AB%A0%EF%BD%9CAI%20%E5%8E%9F%E7%94%9F%E7%B5%84%E7%B9%94%EF%BC%9A%E5%BE%9E%E4%B8%80%E8%99%9F%E4%BD%8D%E5%B7%A5%E7%A8%8B%E3%80%81AI%20OS%20%E5%88%B0%20DRI%EF%BC%8BAgents.m4a",
+        "blobPathname": "books/standing-above-the-loop/audio/11_第 11 章｜AI 原生組織：從一號位工程、AI OS 到 DRI＋Agents.m4a",
+        "blobEtag": "\"aeabdf91289ea96dbbc77f0f3ef1254d-3\"",
+        "blobHeadVerified": true,
+        "blobRemoteSeekVerified": false
+      },
+      {
+        "chapterNumber": 12,
+        "audioFilename": "12_第 12 章｜人站在迴路之上：Human Above the Loop.m4a",
+        "audioPath": "public/books/standing-above-the-loop/audio/12_第 12 章｜人站在迴路之上：Human Above the Loop.m4a",
+        "audioSrc": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/standing-above-the-loop/audio/12_%E7%AC%AC%2012%20%E7%AB%A0%EF%BD%9C%E4%BA%BA%E7%AB%99%E5%9C%A8%E8%BF%B4%E8%B7%AF%E4%B9%8B%E4%B8%8A%EF%BC%9AHuman%20Above%20the%20Loop.m4a",
+        "durationSeconds": 1393.823991,
+        "lastPacketDurationSeconds": 1393.823991,
+        "codec": "aac",
+        "container": "mov,mp4,m4a,3gp,3g2,mj2",
+        "bitRate": 82340,
+        "sampleRate": 44100,
+        "channels": 1,
+        "fileSizeBytes": 14587322,
+        "sha256": "08d4d0b4f72a9d6ba8ee9fec8bbef07b46046de37bf16a4dfe5c96f459650564",
+        "fullDecode": true,
+        "linkedInBooksJson": true,
+        "transcodedFrom": {
+          "codec": "aac",
+          "bitRate": 256000,
+          "channels": 2,
+          "fileSizeBytes": 44859493,
+          "sha256": "8feee6e9c7b8a099d5965db72899869ba493949096733da0bed8f2ebdb65e4ce"
+        },
+        "storage": "vercel-blob",
+        "blobUrl": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/standing-above-the-loop/audio/12_%E7%AC%AC%2012%20%E7%AB%A0%EF%BD%9C%E4%BA%BA%E7%AB%99%E5%9C%A8%E8%BF%B4%E8%B7%AF%E4%B9%8B%E4%B8%8A%EF%BC%9AHuman%20Above%20the%20Loop.m4a",
+        "blobPathname": "books/standing-above-the-loop/audio/12_第 12 章｜人站在迴路之上：Human Above the Loop.m4a",
+        "blobEtag": "\"2f76008377b77655e0e823693c503241-2\"",
+        "blobHeadVerified": true,
+        "blobRemoteSeekVerified": false
+      }
+    ]
+  },
+  "transcodeValidation": {
+    "status": "complete",
+    "codec": "aac",
+    "container": "m4a",
+    "targetBitRate": 80000,
+    "channels": 1,
+    "checkedAudioCount": 12,
+    "failedChapterNumbers": [],
+    "metadataIdentityChecked": true,
+    "lastPacketDurationChecked": true,
+    "fullLocalDecodeChecked": true,
+    "uniqueFingerprintsChecked": true,
+    "productionRemoteSeekChecked": false
+  },
+  "blobMigrationValidation": {
+    "status": "uploaded-and-applied",
+    "provider": "vercel-blob",
+    "access": "public",
+    "region": "hnd1",
+    "checkedAudioCount": 12,
+    "failedChapterNumbers": [],
+    "exactContentLengthChecked": true,
+    "remoteSeekChecked": false
+  },
+  "integrityValidation": {
+    "status": "complete",
+    "checkedChapterCount": 12,
+    "failedChapterNumbers": [],
+    "checkedAt": "2026-08-09T00:32:47.1483838+08:00"
+  },
+  "downloadTriggerAudit": {
+    "controllerVersion": "1.0.0",
+    "preferredTrigger": "keyboard",
+    "transactionCount": 12,
+    "updatedAt": "2026-08-08T16:29:24.378Z",
+    "transactions": [
+      {
+        "transactionId": "ebfe66e1-8b0a-4726-ae81-0560350e21d6",
+        "chapterNumber": 1,
+        "expectedTitle": "01_第 1 章｜AI 不再只回答：從 Chatbot 到 Agent",
+        "expectedDuration": "20:14",
+        "startedAt": "2026-08-08T16:21:52.532Z",
+        "preferredTriggerAtStart": "mouse",
+        "events": [
+          {
+            "event": "download-snapshot",
+            "at": "2026-08-08T16:21:52.534Z",
+            "existingFileCount": 3823
+          },
+          {
+            "event": "mouse-click-requested",
+            "at": "2026-08-08T16:21:56.812Z"
+          },
+          {
+            "event": "new-path-detected",
+            "at": "2026-08-08T16:21:59.717Z",
+            "triggerMethod": "mouse",
+            "newFilename": "3af337f3-f61f-4c1f-bcea-40bd768d426f.tmp"
+          }
+        ],
+        "outcome": "new-path-detected",
+        "triggerMethod": "mouse",
+        "newFilename": "3af337f3-f61f-4c1f-bcea-40bd768d426f.tmp",
+        "completedAt": "2026-08-08T16:21:59.717Z"
+      },
+      {
+        "transactionId": "42f4d91e-279c-432f-9db1-6704afb5de47",
+        "chapterNumber": 2,
+        "expectedTitle": "02_第 2 章｜從 Task 到 Workflow，再到 Outcome",
+        "expectedDuration": "29:52",
+        "startedAt": "2026-08-08T16:22:25.547Z",
+        "preferredTriggerAtStart": "mouse",
+        "events": [
+          {
+            "event": "download-snapshot",
+            "at": "2026-08-08T16:22:25.549Z",
+            "existingFileCount": 3824
+          },
+          {
+            "event": "mouse-click-requested",
+            "at": "2026-08-08T16:22:28.830Z"
+          },
+          {
+            "event": "new-path-detected",
+            "at": "2026-08-08T16:22:30.935Z",
+            "triggerMethod": "mouse",
+            "newFilename": "e2202eb0-352d-4cfe-9900-ec111f98caf0.tmp"
+          }
+        ],
+        "outcome": "new-path-detected",
+        "triggerMethod": "mouse",
+        "newFilename": "e2202eb0-352d-4cfe-9900-ec111f98caf0.tmp",
+        "completedAt": "2026-08-08T16:22:30.935Z"
+      },
+      {
+        "transactionId": "71a453ad-d772-4f6d-aedf-d19efb9911d9",
+        "chapterNumber": 3,
+        "expectedTitle": "03_第 3 章｜智能變便宜，工作為什麼沒有自動變好",
+        "expectedDuration": "18:52",
+        "startedAt": "2026-08-08T16:22:45.872Z",
+        "preferredTriggerAtStart": "mouse",
+        "events": [
+          {
+            "event": "download-snapshot",
+            "at": "2026-08-08T16:22:45.874Z",
+            "existingFileCount": 3825
+          },
+          {
+            "event": "mouse-click-requested",
+            "at": "2026-08-08T16:22:51.238Z"
+          },
+          {
+            "event": "new-path-detected",
+            "at": "2026-08-08T16:22:53.353Z",
+            "triggerMethod": "mouse",
+            "newFilename": "576f8217-3432-4829-a998-095607c2ca10.tmp"
+          }
+        ],
+        "outcome": "new-path-detected",
+        "triggerMethod": "mouse",
+        "newFilename": "576f8217-3432-4829-a998-095607c2ca10.tmp",
+        "completedAt": "2026-08-08T16:22:53.353Z"
+      },
+      {
+        "transactionId": "7020d38e-aa6d-4378-b134-25594f6a3272",
+        "chapterNumber": 4,
+        "expectedTitle": "04_第 4 章｜Context Engineering：AI 所處的世界",
+        "expectedDuration": "25:06",
+        "startedAt": "2026-08-08T16:23:09.512Z",
+        "preferredTriggerAtStart": "mouse",
+        "events": [
+          {
+            "event": "download-snapshot",
+            "at": "2026-08-08T16:23:09.514Z",
+            "existingFileCount": 3826
+          },
+          {
+            "event": "mouse-click-requested",
+            "at": "2026-08-08T16:23:13.802Z"
+          },
+          {
+            "event": "new-path-detected",
+            "at": "2026-08-08T16:23:16.180Z",
+            "triggerMethod": "mouse",
+            "newFilename": "daa2cd0a-7937-4c24-baa0-6cc40bd7a293.tmp"
+          }
+        ],
+        "outcome": "new-path-detected",
+        "triggerMethod": "mouse",
+        "newFilename": "daa2cd0a-7937-4c24-baa0-6cc40bd7a293.tmp",
+        "completedAt": "2026-08-08T16:23:16.180Z"
+      },
+      {
+        "transactionId": "a9b773ef-696b-4a4d-9270-590d3cba2050",
+        "chapterNumber": 5,
+        "expectedTitle": "05_第 5 章｜Harness Engineering：模型之外的工作契約",
+        "expectedDuration": "24:34",
+        "startedAt": "2026-08-08T16:24:10.183Z",
+        "preferredTriggerAtStart": "mouse",
+        "events": [
+          {
+            "event": "download-snapshot",
+            "at": "2026-08-08T16:24:10.185Z",
+            "existingFileCount": 3827
+          },
+          {
+            "event": "mouse-click-requested",
+            "at": "2026-08-08T16:24:14.478Z"
+          },
+          {
+            "event": "new-path-detected",
+            "at": "2026-08-08T16:24:16.856Z",
+            "triggerMethod": "mouse",
+            "newFilename": "b0f9dc45-a079-4dfb-9865-762e959d20b8.tmp"
+          }
+        ],
+        "outcome": "new-path-detected",
+        "triggerMethod": "mouse",
+        "newFilename": "b0f9dc45-a079-4dfb-9865-762e959d20b8.tmp",
+        "completedAt": "2026-08-08T16:24:16.856Z"
+      },
+      {
+        "transactionId": "76f8c4d5-f9a7-4f45-b8a8-cf8e05636b93",
+        "chapterNumber": 6,
+        "expectedTitle": "06_第 6 章｜Runtime：讓 AI 能持續工作的現場",
+        "expectedDuration": "26:20",
+        "startedAt": "2026-08-08T16:24:37.571Z",
+        "preferredTriggerAtStart": "mouse",
+        "events": [
+          {
+            "event": "download-snapshot",
+            "at": "2026-08-08T16:24:37.573Z",
+            "existingFileCount": 3828
+          },
+          {
+            "event": "mouse-click-requested",
+            "at": "2026-08-08T16:24:39.930Z"
+          },
+          {
+            "event": "mouse-no-new-path",
+            "at": "2026-08-08T16:24:45.269Z",
+            "titleEditorActive": false,
+            "downloadMenuOpen": true
+          },
+          {
+            "event": "keyboard-enter-requested",
+            "at": "2026-08-08T16:24:47.231Z",
+            "attempt": 1
+          },
+          {
+            "event": "new-path-detected",
+            "at": "2026-08-08T16:24:49.602Z",
+            "triggerMethod": "keyboard-recovery",
+            "newFilename": "1b48914f-75a6-46ac-9778-19769b9328a7.tmp"
+          }
+        ],
+        "outcome": "new-path-detected",
+        "triggerMethod": "keyboard-recovery",
+        "newFilename": "1b48914f-75a6-46ac-9778-19769b9328a7.tmp",
+        "completedAt": "2026-08-08T16:24:49.602Z"
+      },
+      {
+        "transactionId": "8ff60c7b-f664-4e0a-81fa-a99b066472bd",
+        "chapterNumber": 7,
+        "expectedTitle": "07_第 7 章｜Loop Engineering：從一次成功到持續改善",
+        "expectedDuration": "23:19",
+        "startedAt": "2026-08-08T16:25:31.359Z",
+        "preferredTriggerAtStart": "keyboard",
+        "events": [
+          {
+            "event": "download-snapshot",
+            "at": "2026-08-08T16:25:31.361Z",
+            "existingFileCount": 3829
+          },
+          {
+            "event": "keyboard-enter-requested",
+            "at": "2026-08-08T16:25:33.067Z",
+            "attempt": 1
+          },
+          {
+            "event": "new-path-detected",
+            "at": "2026-08-08T16:25:35.695Z",
+            "triggerMethod": "keyboard-preferred",
+            "newFilename": "d486caa8-4af5-4940-a77e-d137fab3c68a.tmp"
+          }
+        ],
+        "outcome": "new-path-detected",
+        "triggerMethod": "keyboard-preferred",
+        "newFilename": "d486caa8-4af5-4940-a77e-d137fab3c68a.tmp",
+        "completedAt": "2026-08-08T16:25:35.695Z"
+      },
+      {
+        "transactionId": "2e15575c-e512-4477-aeea-c314a91fc8a2",
+        "chapterNumber": 8,
+        "expectedTitle": "08_第 8 章｜看得見才改得動：Tracing、Evals 與可觀測性",
+        "expectedDuration": "18:28",
+        "startedAt": "2026-08-08T16:26:42.093Z",
+        "preferredTriggerAtStart": "keyboard",
+        "events": [
+          {
+            "event": "download-snapshot",
+            "at": "2026-08-08T16:26:42.095Z",
+            "existingFileCount": 3830
+          },
+          {
+            "event": "keyboard-enter-requested",
+            "at": "2026-08-08T16:26:44.795Z",
+            "attempt": 1
+          },
+          {
+            "event": "new-path-detected",
+            "at": "2026-08-08T16:26:47.181Z",
+            "triggerMethod": "keyboard-preferred",
+            "newFilename": "4a48a9ac-0f04-489f-8c47-3fcc49337918.tmp"
+          }
+        ],
+        "outcome": "new-path-detected",
+        "triggerMethod": "keyboard-preferred",
+        "newFilename": "4a48a9ac-0f04-489f-8c47-3fcc49337918.tmp",
+        "completedAt": "2026-08-08T16:26:47.181Z"
+      },
+      {
+        "transactionId": "9b7d1fcb-3a9f-44f2-9699-1e0d3f2cec1b",
+        "chapterNumber": 9,
+        "expectedTitle": "09_第 9 章｜行動前先過閘門：Runtime Data-Quality Gating",
+        "expectedDuration": "26:44",
+        "startedAt": "2026-08-08T16:27:36.540Z",
+        "preferredTriggerAtStart": "keyboard",
+        "events": [
+          {
+            "event": "download-snapshot",
+            "at": "2026-08-08T16:27:36.542Z",
+            "existingFileCount": 3831
+          },
+          {
+            "event": "keyboard-enter-requested",
+            "at": "2026-08-08T16:27:39.135Z",
+            "attempt": 1
+          },
+          {
+            "event": "new-path-detected",
+            "at": "2026-08-08T16:27:41.242Z",
+            "triggerMethod": "keyboard-preferred",
+            "newFilename": "bc532d8c-df9d-483b-9576-400758697efe.tmp"
+          }
+        ],
+        "outcome": "new-path-detected",
+        "triggerMethod": "keyboard-preferred",
+        "newFilename": "bc532d8c-df9d-483b-9576-400758697efe.tmp",
+        "completedAt": "2026-08-08T16:27:41.242Z"
+      },
+      {
+        "transactionId": "0be0464f-62ec-4649-9596-1e56d6cca503",
+        "chapterNumber": 10,
+        "expectedTitle": "10_第 10 章｜主張釋出前要有帳：Evidence Ledger、Guardrails 與人工審查",
+        "expectedDuration": "19:46",
+        "startedAt": "2026-08-08T16:28:10.450Z",
+        "preferredTriggerAtStart": "keyboard",
+        "events": [
+          {
+            "event": "download-snapshot",
+            "at": "2026-08-08T16:28:10.452Z",
+            "existingFileCount": 3832
+          },
+          {
+            "event": "keyboard-enter-requested",
+            "at": "2026-08-08T16:28:13.132Z",
+            "attempt": 1
+          },
+          {
+            "event": "new-path-detected",
+            "at": "2026-08-08T16:28:15.240Z",
+            "triggerMethod": "keyboard-preferred",
+            "newFilename": "b905c7e9-7a8c-4974-a416-348c35c15cad.tmp"
+          }
+        ],
+        "outcome": "new-path-detected",
+        "triggerMethod": "keyboard-preferred",
+        "newFilename": "b905c7e9-7a8c-4974-a416-348c35c15cad.tmp",
+        "completedAt": "2026-08-08T16:28:15.240Z"
+      },
+      {
+        "transactionId": "1215b4f0-734d-46b5-b770-540a2afc2244",
+        "chapterNumber": 11,
+        "expectedTitle": "11_第 11 章｜AI 原生組織：從一號位工程、AI OS 到 DRI＋Agents",
+        "expectedDuration": "28:33",
+        "startedAt": "2026-08-08T16:28:27.305Z",
+        "preferredTriggerAtStart": "keyboard",
+        "events": [
+          {
+            "event": "download-snapshot",
+            "at": "2026-08-08T16:28:27.307Z",
+            "existingFileCount": 3833
+          },
+          {
+            "event": "keyboard-enter-requested",
+            "at": "2026-08-08T16:28:29.996Z",
+            "attempt": 1
+          },
+          {
+            "event": "new-path-detected",
+            "at": "2026-08-08T16:28:32.118Z",
+            "triggerMethod": "keyboard-preferred",
+            "newFilename": "2a3721b4-44f1-4edf-b204-88c174dfdf33.tmp"
+          }
+        ],
+        "outcome": "new-path-detected",
+        "triggerMethod": "keyboard-preferred",
+        "newFilename": "2a3721b4-44f1-4edf-b204-88c174dfdf33.tmp",
+        "completedAt": "2026-08-08T16:28:32.118Z"
+      },
+      {
+        "transactionId": "5ea8da0d-1225-4c8a-b7ed-f2924f725f44",
+        "chapterNumber": 12,
+        "expectedTitle": "12_第 12 章｜人站在迴路之上：Human Above the Loop",
+        "expectedDuration": "23:13",
+        "startedAt": "2026-08-08T16:29:20.291Z",
+        "preferredTriggerAtStart": "keyboard",
+        "events": [
+          {
+            "event": "download-snapshot",
+            "at": "2026-08-08T16:29:20.293Z",
+            "existingFileCount": 3834
+          },
+          {
+            "event": "keyboard-enter-requested",
+            "at": "2026-08-08T16:29:21.994Z",
+            "attempt": 1
+          },
+          {
+            "event": "new-path-detected",
+            "at": "2026-08-08T16:29:24.371Z",
+            "triggerMethod": "keyboard-preferred",
+            "newFilename": "9bb3d4c7-7fcc-4a49-8cb2-dd48b2b50d1b.tmp"
+          }
+        ],
+        "outcome": "new-path-detected",
+        "triggerMethod": "keyboard-preferred",
+        "newFilename": "9bb3d4c7-7fcc-4a49-8cb2-dd48b2b50d1b.tmp",
+        "completedAt": "2026-08-08T16:29:24.371Z"
+      }
+    ]
+  },
+  "downloadResumeAudit": {
+    "coordinatorVersion": "1.0.0",
+    "runCount": 1,
+    "updatedAt": "2026-08-08T16:30:28.591Z",
+    "runs": [
+      {
+        "runId": "e26b1f0a-b8ed-4542-b9c9-17a4b3e52e67",
+        "startedAt": "2026-08-08T16:22:25.540Z",
+        "outcome": "complete",
+        "initialCompletedChapterNumbers": [
+          1
+        ],
+        "initialRemainingChapterNumbers": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "events": [
+          {
+            "event": "resume-plan-created",
+            "at": "2026-08-08T16:22:25.540Z",
+            "firstIncompleteChapterNumber": 2
+          },
+          {
+            "event": "chapter-download-started",
+            "at": "2026-08-08T16:22:25.541Z",
+            "chapterNumber": 2,
+            "priorState": "pending"
+          },
+          {
+            "event": "chapter-download-path-detected",
+            "at": "2026-08-08T16:22:30.943Z",
+            "chapterNumber": 2,
+            "transactionId": "42f4d91e-279c-432f-9db1-6704afb5de47",
+            "triggerMethod": "mouse",
+            "newFilename": "e2202eb0-352d-4cfe-9900-ec111f98caf0.tmp"
+          },
+          {
+            "event": "chapter-validation-complete",
+            "at": "2026-08-08T16:22:45.862Z",
+            "chapterNumber": 2,
+            "completionState": "complete-local"
+          },
+          {
+            "event": "chapter-download-started",
+            "at": "2026-08-08T16:22:45.863Z",
+            "chapterNumber": 3,
+            "priorState": "pending"
+          },
+          {
+            "event": "chapter-download-path-detected",
+            "at": "2026-08-08T16:22:53.362Z",
+            "chapterNumber": 3,
+            "transactionId": "71a453ad-d772-4f6d-aedf-d19efb9911d9",
+            "triggerMethod": "mouse",
+            "newFilename": "576f8217-3432-4829-a998-095607c2ca10.tmp"
+          },
+          {
+            "event": "chapter-validation-complete",
+            "at": "2026-08-08T16:23:09.505Z",
+            "chapterNumber": 3,
+            "completionState": "complete-local"
+          },
+          {
+            "event": "chapter-download-started",
+            "at": "2026-08-08T16:23:09.506Z",
+            "chapterNumber": 4,
+            "priorState": "pending"
+          },
+          {
+            "event": "chapter-download-path-detected",
+            "at": "2026-08-08T16:23:16.187Z",
+            "chapterNumber": 4,
+            "transactionId": "7020d38e-aa6d-4378-b134-25594f6a3272",
+            "triggerMethod": "mouse",
+            "newFilename": "daa2cd0a-7937-4c24-baa0-6cc40bd7a293.tmp"
+          },
+          {
+            "event": "chapter-validation-complete",
+            "at": "2026-08-08T16:24:10.176Z",
+            "chapterNumber": 4,
+            "completionState": "complete-local"
+          },
+          {
+            "event": "chapter-download-started",
+            "at": "2026-08-08T16:24:10.177Z",
+            "chapterNumber": 5,
+            "priorState": "pending"
+          },
+          {
+            "event": "chapter-download-path-detected",
+            "at": "2026-08-08T16:24:16.864Z",
+            "chapterNumber": 5,
+            "transactionId": "a9b773ef-696b-4a4d-9270-590d3cba2050",
+            "triggerMethod": "mouse",
+            "newFilename": "b0f9dc45-a079-4dfb-9865-762e959d20b8.tmp"
+          },
+          {
+            "event": "chapter-validation-complete",
+            "at": "2026-08-08T16:24:37.564Z",
+            "chapterNumber": 5,
+            "completionState": "complete-local"
+          },
+          {
+            "event": "chapter-download-started",
+            "at": "2026-08-08T16:24:37.565Z",
+            "chapterNumber": 6,
+            "priorState": "pending"
+          },
+          {
+            "event": "chapter-download-path-detected",
+            "at": "2026-08-08T16:24:49.609Z",
+            "chapterNumber": 6,
+            "transactionId": "76f8c4d5-f9a7-4f45-b8a8-cf8e05636b93",
+            "triggerMethod": "keyboard-recovery",
+            "newFilename": "1b48914f-75a6-46ac-9778-19769b9328a7.tmp"
+          },
+          {
+            "event": "chapter-validation-complete",
+            "at": "2026-08-08T16:25:31.353Z",
+            "chapterNumber": 6,
+            "completionState": "complete-local"
+          },
+          {
+            "event": "chapter-download-started",
+            "at": "2026-08-08T16:25:31.354Z",
+            "chapterNumber": 7,
+            "priorState": "pending"
+          },
+          {
+            "event": "chapter-download-path-detected",
+            "at": "2026-08-08T16:25:35.705Z",
+            "chapterNumber": 7,
+            "transactionId": "8ff60c7b-f664-4e0a-81fa-a99b066472bd",
+            "triggerMethod": "keyboard-preferred",
+            "newFilename": "d486caa8-4af5-4940-a77e-d137fab3c68a.tmp"
+          },
+          {
+            "event": "chapter-validation-complete",
+            "at": "2026-08-08T16:26:42.080Z",
+            "chapterNumber": 7,
+            "completionState": "complete-local"
+          },
+          {
+            "event": "chapter-download-started",
+            "at": "2026-08-08T16:26:42.084Z",
+            "chapterNumber": 8,
+            "priorState": "pending"
+          },
+          {
+            "event": "chapter-download-path-detected",
+            "at": "2026-08-08T16:26:47.190Z",
+            "chapterNumber": 8,
+            "transactionId": "2e15575c-e512-4477-aeea-c314a91fc8a2",
+            "triggerMethod": "keyboard-preferred",
+            "newFilename": "4a48a9ac-0f04-489f-8c47-3fcc49337918.tmp"
+          },
+          {
+            "event": "chapter-validation-complete",
+            "at": "2026-08-08T16:27:36.531Z",
+            "chapterNumber": 8,
+            "completionState": "complete-local"
+          },
+          {
+            "event": "chapter-download-started",
+            "at": "2026-08-08T16:27:36.533Z",
+            "chapterNumber": 9,
+            "priorState": "pending"
+          },
+          {
+            "event": "chapter-download-path-detected",
+            "at": "2026-08-08T16:27:41.253Z",
+            "chapterNumber": 9,
+            "transactionId": "9b7d1fcb-3a9f-44f2-9699-1e0d3f2cec1b",
+            "triggerMethod": "keyboard-preferred",
+            "newFilename": "bc532d8c-df9d-483b-9576-400758697efe.tmp"
+          },
+          {
+            "event": "chapter-validation-complete",
+            "at": "2026-08-08T16:28:10.443Z",
+            "chapterNumber": 9,
+            "completionState": "complete-local"
+          },
+          {
+            "event": "chapter-download-started",
+            "at": "2026-08-08T16:28:10.444Z",
+            "chapterNumber": 10,
+            "priorState": "pending"
+          },
+          {
+            "event": "chapter-download-path-detected",
+            "at": "2026-08-08T16:28:15.247Z",
+            "chapterNumber": 10,
+            "transactionId": "0be0464f-62ec-4649-9596-1e56d6cca503",
+            "triggerMethod": "keyboard-preferred",
+            "newFilename": "b905c7e9-7a8c-4974-a416-348c35c15cad.tmp"
+          },
+          {
+            "event": "chapter-validation-complete",
+            "at": "2026-08-08T16:28:27.295Z",
+            "chapterNumber": 10,
+            "completionState": "complete-local"
+          },
+          {
+            "event": "chapter-download-started",
+            "at": "2026-08-08T16:28:27.296Z",
+            "chapterNumber": 11,
+            "priorState": "pending"
+          },
+          {
+            "event": "chapter-download-path-detected",
+            "at": "2026-08-08T16:28:32.130Z",
+            "chapterNumber": 11,
+            "transactionId": "1215b4f0-734d-46b5-b770-540a2afc2244",
+            "triggerMethod": "keyboard-preferred",
+            "newFilename": "2a3721b4-44f1-4edf-b204-88c174dfdf33.tmp"
+          },
+          {
+            "event": "chapter-validation-complete",
+            "at": "2026-08-08T16:29:20.284Z",
+            "chapterNumber": 11,
+            "completionState": "complete-local"
+          },
+          {
+            "event": "chapter-download-started",
+            "at": "2026-08-08T16:29:20.285Z",
+            "chapterNumber": 12,
+            "priorState": "pending"
+          },
+          {
+            "event": "chapter-download-path-detected",
+            "at": "2026-08-08T16:29:24.379Z",
+            "chapterNumber": 12,
+            "transactionId": "5ea8da0d-1225-4c8a-b7ed-f2924f725f44",
+            "triggerMethod": "keyboard-preferred",
+            "newFilename": "9bb3d4c7-7fcc-4a49-8cb2-dd48b2b50d1b.tmp"
+          },
+          {
+            "event": "chapter-validation-complete",
+            "at": "2026-08-08T16:30:28.583Z",
+            "chapterNumber": 12,
+            "completionState": "complete-local"
+          },
+          {
+            "event": "resume-complete",
+            "at": "2026-08-08T16:30:28.591Z",
+            "completedChapterCount": 12
+          }
+        ],
+        "completedAt": "2026-08-08T16:30:28.591Z",
+        "finalCompletedChapterNumbers": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ]
+      }
+    ]
+  }
+}
