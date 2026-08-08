@@ -151,6 +151,7 @@ Narration rules:
 - Podcast progress controls must be seekable rather than display-only. Provide an accessible touch/keyboard range control with elapsed and total time, and keep Media Session seek actions aligned with the same saved position when supported.
 - Podcast playback speed must remain unchanged across automatic and manual episode transitions. Apply the selected value to both `defaultPlaybackRate` and `playbackRate` whenever an audio source loads or playback starts, and keep an end-to-end auto-next regression check.
 - After adding or changing Podcast UI, run a mobile viewport browser check or Playwright screenshot and verify Podcast controls, chapter controls, and narration controls do not overlap. If a fixed mobile control bar covers Podcast content, prefer an in-flow mobile layout for the affected controls.
+- Run Podcast layout and interaction regression against the exact changed book with `npm run verify:podcast-ux -- <slug> <base-url> [empty-slug]`. The script must honor the supplied slug/base URL, derive the expected next episode from the current episode selector, and must not rely on a hard-coded book title or chapter substring.
 - For browser-native `speechSynthesis`, background / lock-screen support is best-effort only: use Media Session metadata/actions and Screen Wake Lock when available, but do not claim guaranteed lock-screen playback unless narration is backed by real audio files or an audio streaming TTS pipeline.
 
 Reading progress rules:

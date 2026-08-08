@@ -2,9 +2,53 @@ import path from "node:path";
 import process from "node:process";
 import { chromium } from "playwright";
 
-const baseUrl = process.env.PODCAST_BASE_URL ?? "http://127.0.0.1:3001";
-const slug = process.env.PODCAST_TEST_SLUG ?? "gpt-5-6-complete-guide";
-const emptySlug = process.env.PODCAST_EMPTY_SLUG ?? "exponential-ai-life";
+function parseArgs(argv) {
+  const parsed = { positional: [] };
+  for (let index = 0; index < argv.length; index += 1) {
+    const value = argv[index];
+    if (value === "--") continue;
+    if (!value.startsWith("--")) {
+      parsed.positional.push(value);
+      continue;
+    }
+    const [rawKey, inlineValue] = value.slice(2).split("=", 2);
+    const key = rawKey.replace(/-([a-z])/gu, (_, letter) => letter.toUpperCase());
+    if (inlineValue !== undefined) {
+      parsed[key] = inlineValue;
+      continue;
+    }
+    const next = argv[index + 1];
+    if (next && !next.startsWith("--")) {
+      parsed[key] = next;
+      index += 1;
+    } else {
+      parsed[key] = true;
+    }
+  }
+  return parsed;
+}
+
+const args = parseArgs(process.argv.slice(2));
+if (args.help) {
+  console.log(
+    "Usage: npm run verify:podcast-ux -- <slug> <base-url> [empty-slug]\n" +
+      "       node scripts/verify-podcast-ux.mjs --slug <slug> --base-url <url> " +
+      "[--empty-slug <slug>]",
+  );
+  process.exit(0);
+}
+
+const slug =
+  args.slug ?? args.positional[0] ?? process.env.PODCAST_TEST_SLUG ??
+  "gpt-5-6-complete-guide";
+const baseUrl = String(
+  args.baseUrl ?? args.positional[1] ?? process.env.PODCAST_BASE_URL ??
+  "http://127.0.0.1:3001",
+).replace(/\/+$/gu, "");
+const emptySlug =
+  args.emptySlug ?? args.positional[2] ?? process.env.PODCAST_EMPTY_SLUG ??
+  "exponential-ai-life";
+new URL(baseUrl);
 const progressKey = `book-reader-progress:${slug}`;
 const viewports = [
   { name: "desktop", width: 1440, height: 900 },
@@ -96,8 +140,22 @@ async function verifyInteraction(browser) {
   await page.goto(`${baseUrl}/books/${slug}`, { waitUntil: "domcontentloaded" });
   const slider = page.locator('input[aria-label^="Podcast 播放進度"]');
   await slider.waitFor({ state: "visible" });
-  await page.waitForTimeout(250);
+  await page.waitForFunction(
+    () => Number(document.querySelector('input[aria-label^="Podcast 播放進度"]')?.max) > 90,
+  );
   assert(await page.getByRole("link", { name: "閱讀電子書" }).isVisible(), "Ebook action is missing");
+
+  const episodeSelect = page.getByLabel("選擇 Podcast 單集");
+  const episodeContext = await episodeSelect.evaluate((select) => {
+    const nextIndex = select.selectedIndex + 1;
+    const nextOption = select.options[nextIndex];
+    return {
+      currentIndex: select.selectedIndex,
+      nextIndex,
+      nextTitle: nextOption?.textContent?.replace(/^\s*\d+\s*·\s*/u, "").trim() ?? null,
+    };
+  });
+  assert(episodeContext.nextTitle, "Podcast test book needs at least two episodes");
 
   await slider.fill("90");
   await page.waitForFunction((key) => {
@@ -115,9 +173,15 @@ async function verifyInteraction(browser) {
   const autoNext = page.getByRole("switch", { name: "自動下一集" });
   assert(await autoNext.getAttribute("aria-checked") === "true", "Auto-next was not enabled by default");
   await page.locator(".podcast-audio-engine").evaluate((audio) => {
+    if (!Number.isFinite(audio.duration) || audio.duration <= 1) {
+      throw new Error(`Podcast duration is not ready: ${audio.duration}`);
+    }
     audio.currentTime = Math.max(0, audio.duration - 0.35);
   });
-  await page.waitForFunction(() => document.querySelector("#podcast-episode-title")?.textContent?.includes("Sol"));
+  await page.waitForFunction(
+    (nextTitle) => document.querySelector("#podcast-episode-title")?.textContent?.includes(nextTitle),
+    episodeContext.nextTitle,
+  );
   await page.waitForFunction(() => document.querySelector(".podcast-state")?.textContent?.includes("播放中"));
   const advancedAudioRate = await page.locator(".podcast-audio-engine").evaluate((audio) => ({
     playbackRate: audio.playbackRate,
@@ -148,7 +212,10 @@ async function verifyInteraction(browser) {
   assert(await autoNext.getAttribute("aria-checked") === "false", "Auto-next toggle failed");
 
   const stored = await page.evaluate((key) => JSON.parse(localStorage.getItem(key) || "null"), progressKey);
-  assert(stored.podcastChapterIndex === 1, "Auto-advanced episode was not persisted");
+  assert(
+    stored.podcastChapterIndex === episodeContext.nextIndex,
+    `Auto-advanced episode was not persisted: ${stored.podcastChapterIndex}/${episodeContext.nextIndex}`,
+  );
   assert(stored.podcastRate === expectedRate, "Playback rate was not persisted after auto-next");
 
   await page.getByRole("link", { name: "閱讀電子書" }).click();
@@ -168,6 +235,7 @@ async function verifyInteraction(browser) {
     rate: expectedRate,
     autoAdvanceRatePreserved: true,
     episodeIndex: stored.podcastChapterIndex,
+    nextEpisodeTitle: episodeContext.nextTitle,
     ebookRoute: `/books/${slug}/read`,
     emptyState: true,
   };
@@ -178,7 +246,9 @@ try {
   const layouts = [];
   for (const viewport of viewports) layouts.push(await inspectLayout(browser, viewport));
   const interaction = await verifyInteraction(browser);
-  console.log(JSON.stringify({ status: "passed", baseUrl, layouts, interaction }, null, 2));
+  console.log(
+    JSON.stringify({ status: "passed", baseUrl, slug, emptySlug, layouts, interaction }, null, 2),
+  );
 } finally {
   await browser.close();
 }
