@@ -285,7 +285,7 @@
         "blobPathname": "books/standing-above-the-loop/audio/01_第 1 章｜AI 不再只回答：從 Chatbot 到 Agent.m4a",
         "blobEtag": "\"ac170d60a79a47dc08d778f602c2f90b-2\"",
         "blobHeadVerified": true,
-        "blobRemoteSeekVerified": false
+        "blobRemoteSeekVerified": true
       },
       {
         "chapterNumber": 2,
@@ -315,7 +315,7 @@
         "blobPathname": "books/standing-above-the-loop/audio/02_第 2 章｜從 Task 到 Workflow，再到 Outcome.m4a",
         "blobEtag": "\"5937e6d34860cb6880b8edcf186b9b3c-3\"",
         "blobHeadVerified": true,
-        "blobRemoteSeekVerified": false
+        "blobRemoteSeekVerified": true
       },
       {
         "chapterNumber": 3,
@@ -345,7 +345,7 @@
         "blobPathname": "books/standing-above-the-loop/audio/03_第 3 章｜智能變便宜，工作為什麼沒有自動變好.m4a",
         "blobEtag": "\"0187224cb8f076c39b4de629a57eb964-2\"",
         "blobHeadVerified": true,
-        "blobRemoteSeekVerified": false
+        "blobRemoteSeekVerified": true
       },
       {
         "chapterNumber": 4,
@@ -375,7 +375,7 @@
         "blobPathname": "books/standing-above-the-loop/audio/04_第 4 章｜Context Engineering：AI 所處的世界.m4a",
         "blobEtag": "\"586f7db4d2b47e797cbf6070ca447ca5-2\"",
         "blobHeadVerified": true,
-        "blobRemoteSeekVerified": false
+        "blobRemoteSeekVerified": true
       },
       {
         "chapterNumber": 5,
@@ -405,7 +405,7 @@
         "blobPathname": "books/standing-above-the-loop/audio/05_第 5 章｜Harness Engineering：模型之外的工作契約.m4a",
         "blobEtag": "\"9a4635e1cf74ca46ee46c30849f75103-2\"",
         "blobHeadVerified": true,
-        "blobRemoteSeekVerified": false
+        "blobRemoteSeekVerified": true
       },
       {
         "chapterNumber": 6,
@@ -435,7 +435,7 @@
         "blobPathname": "books/standing-above-the-loop/audio/06_第 6 章｜Runtime：讓 AI 能持續工作的現場.m4a",
         "blobEtag": "\"5b97c4b57d33eaf65e22e120e7b53ebd-2\"",
         "blobHeadVerified": true,
-        "blobRemoteSeekVerified": false
+        "blobRemoteSeekVerified": true
       },
       {
         "chapterNumber": 7,
@@ -465,7 +465,7 @@
         "blobPathname": "books/standing-above-the-loop/audio/07_第 7 章｜Loop Engineering：從一次成功到持續改善.m4a",
         "blobEtag": "\"9dd7e11aa4ac9800ff8b50b3302a5b43-2\"",
         "blobHeadVerified": true,
-        "blobRemoteSeekVerified": false
+        "blobRemoteSeekVerified": true
       },
       {
         "chapterNumber": 8,
@@ -495,7 +495,7 @@
         "blobPathname": "books/standing-above-the-loop/audio/08_第 8 章｜看得見才改得動：Tracing、Evals 與可觀測性.m4a",
         "blobEtag": "\"dfff533e0be13e6346c1bf212515918b-2\"",
         "blobHeadVerified": true,
-        "blobRemoteSeekVerified": false
+        "blobRemoteSeekVerified": true
       },
       {
         "chapterNumber": 9,
@@ -525,7 +525,7 @@
         "blobPathname": "books/standing-above-the-loop/audio/09_第 9 章｜行動前先過閘門：Runtime Data-Quality Gating.m4a",
         "blobEtag": "\"644cdba84922d0c11815610b72a369de-2\"",
         "blobHeadVerified": true,
-        "blobRemoteSeekVerified": false
+        "blobRemoteSeekVerified": true
       },
       {
         "chapterNumber": 10,
@@ -555,7 +555,7 @@
         "blobPathname": "books/standing-above-the-loop/audio/10_第 10 章｜主張釋出前要有帳：Evidence Ledger、Guardrails 與人工審查.m4a",
         "blobEtag": "\"590e74394369078d3ff7032b7580a454-2\"",
         "blobHeadVerified": true,
-        "blobRemoteSeekVerified": false
+        "blobRemoteSeekVerified": true
       },
       {
         "chapterNumber": 11,
@@ -585,7 +585,7 @@
         "blobPathname": "books/standing-above-the-loop/audio/11_第 11 章｜AI 原生組織：從一號位工程、AI OS 到 DRI＋Agents.m4a",
         "blobEtag": "\"aeabdf91289ea96dbbc77f0f3ef1254d-3\"",
         "blobHeadVerified": true,
-        "blobRemoteSeekVerified": false
+        "blobRemoteSeekVerified": true
       },
       {
         "chapterNumber": 12,
@@ -615,7 +615,7 @@
         "blobPathname": "books/standing-above-the-loop/audio/12_第 12 章｜人站在迴路之上：Human Above the Loop.m4a",
         "blobEtag": "\"2f76008377b77655e0e823693c503241-2\"",
         "blobHeadVerified": true,
-        "blobRemoteSeekVerified": false
+        "blobRemoteSeekVerified": true
       }
     ]
   },
@@ -631,17 +631,17 @@
     "lastPacketDurationChecked": true,
     "fullLocalDecodeChecked": true,
     "uniqueFingerprintsChecked": true,
-    "productionRemoteSeekChecked": false
+    "productionRemoteSeekChecked": true
   },
   "blobMigrationValidation": {
-    "status": "uploaded-and-applied",
+    "status": "production-verified",
     "provider": "vercel-blob",
     "access": "public",
     "region": "hnd1",
     "checkedAudioCount": 12,
     "failedChapterNumbers": [],
     "exactContentLengthChecked": true,
-    "remoteSeekChecked": false
+    "remoteSeekChecked": true
   },
   "integrityValidation": {
     "status": "complete",
