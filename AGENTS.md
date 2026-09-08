@@ -45,6 +45,15 @@ Plain-text export model:
 - Sanitize only filesystem-invalid filename characters such as `\ / : * ? " < > |`; preserve Chinese names and readable punctuation whenever the filesystem allows it.
 - Keep TXT exports in version control with the book update so the repository contains both the website data and portable plain-text chapter files.
 
+<!-- Book write protection accepted with the 2026-09-08 optimization task. -->
+Book import and TXT write protection:
+
+- Use `npm run import:book -- --manuscript <file.md|file.docx> --source <source-path> --slug <slug>` or `--package <inspected-extracted-directory>` as the common local import entrypoint. The common entrypoint and direct format importers default to read-only preview; add `--apply` only after reviewing the parsed book and change summary. This is a local execution gate, not a request for another user confirmation when publishing is already authorized.
+- Preserve all unrelated books and top-level catalog metadata. Repeated imports must reject duplicates; replacement additionally requires `--replace-existing` and the same id, slug, and title. Preserve existing audio only when chapter identity, order, title, and paragraphs are unchanged. If an audio-linked book's chapters change, stop the local replacement and resolve the source/audio update explicitly instead of silently removing or remapping audio.
+- `npm run export:book-txt -- <slug>` now previews changes; add `--apply` for the actual export. Maintain a per-book `.book-txt-manifest.json` with owned filenames and SHA-256. Never remove an entire book TXT folder. Preserve NotebookLM ledgers, manifests, and user files; adopt existing TXT only when byte-identical, and refuse overwriting manually changed files. Source changes under an existing ledger or linked audio require a separate source/audio revalidation step.
+- Both writers share a project lock and keep pre-write backups plus a transaction journal under `tmp/book-write-backups/`. A caught write failure must restore files already changed. A stale lock or failed rollback requires journal/backup inspection before resuming; never blindly remove the lock. Local tmp backups do not substitute for external backups.
+- Run `npm run test:book-write-safety` after modifying an importer, TXT exporter, or shared write module. The regression must cover preservation of other books/audio/ledgers, duplicate rejection, preview with zero writes, repeat export, interrupted-write recovery, and invocation from the project root and an external working directory. Use the script-relative project root by default and `--root` for isolated fixtures.
+
 NotebookLM chapter audio workflow:
 
 - Project-level "目標" instructions for book publishing include this NotebookLM chapter audio loop by default. When the user asks for a shortest "目標" command, a book publishing goal, or "上架" work, treat NotebookLM audio generation and ledger validation as part of the expected deliverable unless the user explicitly excludes NotebookLM or asks for website-only publishing.

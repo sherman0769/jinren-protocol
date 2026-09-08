@@ -1,8 +1,9 @@
 import fs from "node:fs";
 import path from "node:path";
+import { saveImportedBook, writeOptions } from "./lib/book-write-safety.mjs";
 
-const root = process.cwd();
-const contentPath = path.join(root, "src", "content", "books.json");
+const options = writeOptions(parseArgs(process.argv));
+const { root } = options;
 
 function parseArgs(argv) {
   const args = {};
@@ -36,7 +37,8 @@ function usage() {
     "  --description <text> Override inferred description.",
     "  --genre <csv>       Override default comma-separated genre list.",
     "  --replace-existing Replace the matching existing book instead of appending a new one.",
-    "  --dry-run          Validate and print the generated book without writing books.json.",
+    "  --apply            Write after validation; default is a read-only preview.",
+    "  --dry-run          Explicit read-only preview (cannot combine with --apply).",
   ].join("\n");
 }
 
@@ -572,46 +574,12 @@ const book = {
 
 validateBook(book);
 
-const data = JSON.parse(fs.readFileSync(contentPath, "utf8"));
-const duplicateIndex = data.books.findIndex(
-  (existing) =>
-    existing.slug === book.slug ||
-    existing.id === book.id ||
-    existing.title === book.title ||
-    existing.sourceUrl === book.sourceUrl,
-);
-const duplicate = duplicateIndex === -1 ? null : data.books[duplicateIndex];
-
-if (duplicate && !args["replace-existing"]) {
-  throw new Error(`Refusing to import duplicate book: ${duplicate.title} (${duplicate.slug})`);
-}
-
-if (!duplicate && args["replace-existing"]) {
-  throw new Error(`Cannot replace existing book because no matching book was found for slug: ${book.slug}`);
-}
-
-if (!args["dry-run"]) {
-  if (duplicate) {
-    data.books[duplicateIndex] = book;
-  } else {
-    data.books.push(book);
-  }
-  fs.writeFileSync(contentPath, `${JSON.stringify(data, null, 2)}\n`, "utf8");
-}
+const plan = saveImportedBook({ ...options, book });
 
 console.log(
   JSON.stringify(
     {
-      dryRun: Boolean(args["dry-run"]),
-      mode: duplicate ? "replace" : "append",
-      replaced: duplicate
-        ? {
-            title: duplicate.title,
-            slug: duplicate.slug,
-            sourceUrl: duplicate.sourceUrl,
-            chapters: duplicate.chapters.length,
-          }
-        : null,
+      ...plan,
       title: book.title,
       slug: book.slug,
       sourceUrl: book.sourceUrl,

@@ -1,10 +1,15 @@
-import fs from "node:fs";
 import path from "node:path";
 import mammoth from "mammoth";
+import { parseOptions, saveImportedBook, writeOptions } from "./lib/book-write-safety.mjs";
 
-const root = process.cwd();
-const inputPath = path.join(root, "tmp", "book.docx");
-const outputPath = path.join(root, "src", "content", "books.json");
+const args = parseOptions();
+const options = writeOptions(args);
+const { root } = options;
+if (![args.manuscript, args.slug, args.source].every((value) => typeof value === "string" && value.trim())) {
+  throw new Error("Usage: npm run import:book -- --manuscript <file.docx> --source <source-path> --slug <slug> [--title <title>] [--apply]");
+}
+const inputPath = path.resolve(root, args.manuscript);
+if (path.extname(inputPath).toLowerCase() !== ".docx") throw new Error("manuscript：必須為 .docx");
 
 const result = await mammoth.extractRawText({ path: inputPath });
 const raw = result.value
@@ -18,17 +23,17 @@ const lines = raw
   .map((line) => line.trim())
   .filter(Boolean);
 
-const title = "數量級躍升：AI 時代的多面人生與自由之路";
-const author = "李詩民";
-const sourceUrl =
-  "https://docs.google.com/document/d/1VsvZi2e6tKtULgfhOpTTG7nzyH5xshn_/edit?usp=drivesdk&ouid=117146208230528101111&rtpof=true&sd=true";
+const title = args.title || path.basename(inputPath, path.extname(inputPath));
+const author = args.author || "李詩民";
+const sourceUrl = args.source;
 
 const headingPatterns = [
   /^書名頁$/,
   /^推薦序$/,
   /^謹識$/,
   /^版權頁$/,
-  /^第[一二三四五六七八九十百0-9]+[章部篇]/,
+  /^第\s*[一二三四五六七八九十百0-9]+\s*[章部篇]/,
+  /^Chapter\s+\d+/i,
   /^終章[:：]/,
   /^寫在(?:前面|後面|結束)/,
   /^結束，也?是/,
@@ -46,8 +51,8 @@ const sections = [];
 let current = { title: "書名頁", paragraphs: [] };
 
 for (const line of lines) {
-  if (isHeading(line) && current.paragraphs.length > 0) {
-    sections.push(current);
+  if (isHeading(line)) {
+    if (current.paragraphs.length > 0) sections.push(current);
     current = { title: line, paragraphs: [] };
     continue;
   }
@@ -81,34 +86,32 @@ const cleanedSections = sections
   }));
 
 const book = {
-  id: "exponential-ai-life",
-  slug: "exponential-ai-life",
+  id: args.id || args.slug,
+  slug: args.slug,
   title,
-  subtitle: "AI 時代的多面人生與自由之路",
+  subtitle: args.subtitle || title,
   author,
-  description:
-    "一本面向 AI 時代個人成長、斜槓能力、時間自由與多面人生實踐的教練式書籍。",
+  description: args.description || cleanedSections[0]?.summary,
   status: "published",
-  genre: ["AI 應用", "個人成長", "多面人生", "自由工作"],
+  genre: args.genre ? args.genre.split(",").map((item) => item.trim()).filter(Boolean) : ["未分類"],
   rating: "All",
-  cover: "/books/exponential-ai-life/cover.png",
-  ogImage: "/books/exponential-ai-life/cover.png",
+  cover: `/books/${args.slug}/cover.png`,
+  ogImage: `/books/${args.slug}/cover.png`,
   sourceUrl,
   chapters: cleanedSections,
 };
 
-fs.mkdirSync(path.dirname(outputPath), { recursive: true });
-fs.writeFileSync(outputPath, `${JSON.stringify({ books: [book] }, null, 2)}\n`);
+const plan = saveImportedBook({ ...options, book });
 
 console.log(
   JSON.stringify(
     {
+      ...plan,
       title,
       author,
       chapters: cleanedSections.length,
       paragraphs: cleanedSections.reduce((total, section) => total + section.paragraphs.length, 0),
       characters: raw.length,
-      outputPath,
     },
     null,
     2,

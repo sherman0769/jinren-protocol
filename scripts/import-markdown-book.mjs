@@ -1,8 +1,9 @@
 import fs from "node:fs";
 import path from "node:path";
+import { saveImportedBook, writeOptions } from "./lib/book-write-safety.mjs";
 
-const root = process.cwd();
-const booksPath = path.join(root, "src", "content", "books.json");
+const options = writeOptions(parseArgs(process.argv));
+const { root } = options;
 
 function parseArgs(argv) {
   const args = {};
@@ -302,7 +303,7 @@ function validateBook(book) {
 const args = parseArgs(process.argv);
 if (!args.manuscript || !args.source || !args.slug) {
   throw new Error(
-    "Usage: node scripts/import-markdown-book.mjs --manuscript <file.md> --source <archived-source> --slug <slug> [--dry-run]",
+    "Usage: node scripts/import-markdown-book.mjs --manuscript <file.md> --source <archived-source> --slug <slug> [--apply]",
   );
 }
 
@@ -337,34 +338,12 @@ const book = {
 
 validateBook(book);
 
-const data = JSON.parse(fs.readFileSync(booksPath, "utf8"));
-const duplicateIndex = data.books.findIndex(
-  (existing) =>
-    existing.slug === book.slug ||
-    existing.id === book.id ||
-    existing.title === book.title ||
-    existing.sourceUrl === book.sourceUrl,
-);
-const duplicate = duplicateIndex === -1 ? null : data.books[duplicateIndex];
-
-if (duplicate && !args["replace-existing"]) {
-  throw new Error("Refusing to import duplicate book: " + duplicate.title + " (" + duplicate.slug + ")");
-}
-if (!duplicate && args["replace-existing"]) {
-  throw new Error("No existing book matches " + book.slug);
-}
-
-if (!args["dry-run"]) {
-  if (duplicate) data.books[duplicateIndex] = book;
-  else data.books.push(book);
-  fs.writeFileSync(booksPath, JSON.stringify(data, null, 2) + "\n", "utf8");
-}
+const plan = saveImportedBook({ ...options, book });
 
 console.log(
   JSON.stringify(
     {
-      dryRun: Boolean(args["dry-run"]),
-      mode: duplicate ? "replace" : "append",
+      ...plan,
       title: book.title,
       subtitle: book.subtitle,
       author: book.author,
