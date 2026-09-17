@@ -38919,7 +38919,14 @@
             "來源原文；DOI：10.1080/00461520701263368。查閱：2026-09-17。",
             "[R09] Paul A. Kirschner、John Sweller、Richard E. Clark。Why Minimal Guidance During Instruction Does Not Work: An Analysis of the Failure of Constructivist, Discovery, Problem-Based, Experiential, and Inquiry-Based Teaching。發布：2006。Educational Psychologist 41(2), 75–86；大學網站保存的論文全文。",
             "來源原文；DOI：10.1207/s15326985ep4102_1。查閱：2026-09-17。"
-          ]
+          ],
+          "audio": {
+            "src": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/learning-starts-with-questions/audio/01_%E7%AC%AC%E4%B8%80%E7%AB%A0%EF%BD%9C%E5%BE%9E%E4%BD%A0%E7%9C%9F%E6%AD%A3%E6%83%B3%E5%81%9A%E7%9A%84%E4%BA%8B%E9%96%8B%E5%A7%8B.m4a",
+            "title": "01_第一章｜從你真正想做的事開始",
+            "provider": "notebooklm",
+            "durationSeconds": 1397.887007,
+            "storage": "vercel-blob"
+          }
         },
         {
           "id": "chapter-02",
@@ -38972,7 +38979,14 @@
             "來源原文；DOI：10.48550/arXiv.2601.20245。查閱：2026-09-17。",
             "[R10] OpenAI。Introducing study mode。發布：2025-07-29。歷史發布文章；查閱日 2026-09-17。",
             "來源原文。查閱：2026-09-17。"
-          ]
+          ],
+          "audio": {
+            "src": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/learning-starts-with-questions/audio/02_%E7%AC%AC%E4%BA%8C%E7%AB%A0%EF%BD%9CAI%20%E9%99%8D%E4%BD%8E%E4%BA%86%E4%BB%80%E9%BA%BC%EF%BC%8C%E6%B2%92%E6%9C%89%E9%99%8D%E4%BD%8E%E4%BB%80%E9%BA%BC.m4a",
+            "title": "02_第二章｜AI 降低了什麼，沒有降低什麼",
+            "provider": "notebooklm",
+            "durationSeconds": 1270.689002,
+            "storage": "vercel-blob"
+          }
         },
         {
           "id": "chapter-03",
@@ -39023,7 +39037,14 @@
             "來源原文；DOI：10.1073/pnas.2422633122。查閱：2026-09-17。",
             "[R03] Judy Hanwen Shen、Alex Tamkin。How AI Impacts Skill Formation。發布：2026-01-28；v2 於 2026-02-01。arXiv v2；本次未驗證另有同儕審查期刊版本。HTML 頁內日期與 arXiv 版本時間不同，以摘要頁提交紀錄辨識版本。",
             "來源原文；DOI：10.48550/arXiv.2601.20245。查閱：2026-09-17。"
-          ]
+          ],
+          "audio": {
+            "src": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/learning-starts-with-questions/audio/03_%E7%AC%AC%E4%B8%89%E7%AB%A0%EF%BD%9C%E5%85%88%E5%88%86%E6%B8%85%E6%A5%9A%EF%BC%9A%E4%BD%A0%E8%A6%81%E4%BA%A4%E4%BB%98%EF%BC%8C%E9%82%84%E6%98%AF%E8%A6%81%E5%AD%B8%E6%9C%83.m4a",
+            "title": "03_第三章｜先分清楚：你要交付，還是要學會",
+            "provider": "notebooklm",
+            "durationSeconds": 922.063991,
+            "storage": "vercel-blob"
+          }
         },
         {
           "id": "chapter-04",
@@ -39076,7 +39097,14 @@
             "來源原文；DOI：10.3102/00346543211019105。查閱：2026-09-17。",
             "[R09] Paul A. Kirschner、John Sweller、Richard E. Clark。Why Minimal Guidance During Instruction Does Not Work: An Analysis of the Failure of Constructivist, Discovery, Problem-Based, Experiential, and Inquiry-Based Teaching。發布：2006。Educational Psychologist 41(2), 75–86；大學網站保存的論文全文。",
             "來源原文；DOI：10.1207/s15326985ep4102_1。查閱：2026-09-17。"
-          ]
+          ],
+          "audio": {
+            "src": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/learning-starts-with-questions/audio/04_%E7%AC%AC%E5%9B%9B%E7%AB%A0%EF%BD%9C%E6%8A%8A%E5%A4%A7%E9%A1%98%E6%9C%9B%E7%B8%AE%E6%88%90%E5%8F%AF%E4%BB%A5%E9%A9%97%E8%AD%89%E7%9A%84%E5%B0%8F%E4%BB%BB%E5%8B%99.m4a",
+            "title": "04_第四章｜把大願望縮成可以驗證的小任務",
+            "provider": "notebooklm",
+            "durationSeconds": 1639.259002,
+            "storage": "vercel-blob"
+          }
         },
         {
           "id": "chapter-05",
@@ -39128,7 +39156,14 @@
             "來源原文；DOI：10.1207/s15516709cog1803_3。查閱：2026-09-17。",
             "[R06] Louis Deslauriers、Logan S. McCarty、Kelly Miller、Kristina Callaghan、Greg Kestin。Measuring actual learning versus feeling of learning in response to being actively engaged in the classroom。發布：2019-09-04 線上出版；2019-09-24 期刊日期。PNAS 116(39), 19251–19257。",
             "來源原文；DOI：10.1073/pnas.1821936116。查閱：2026-09-17。"
-          ]
+          ],
+          "audio": {
+            "src": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/learning-starts-with-questions/audio/05_%E7%AC%AC%E4%BA%94%E7%AB%A0%EF%BD%9C%E8%AE%93%E5%9B%B0%E6%83%91%E8%AA%AA%E5%BE%97%E5%87%BA%E4%BE%86.m4a",
+            "title": "05_第五章｜讓困惑說得出來",
+            "provider": "notebooklm",
+            "durationSeconds": 1173.467007,
+            "storage": "vercel-blob"
+          }
         },
         {
           "id": "chapter-06",
@@ -39182,7 +39217,14 @@
             "來源原文；DOI：10.1080/00461520701263368。查閱：2026-09-17。",
             "[R09] Paul A. Kirschner、John Sweller、Richard E. Clark。Why Minimal Guidance During Instruction Does Not Work: An Analysis of the Failure of Constructivist, Discovery, Problem-Based, Experiential, and Inquiry-Based Teaching。發布：2006。Educational Psychologist 41(2), 75–86；大學網站保存的論文全文。",
             "來源原文；DOI：10.1207/s15326985ep4102_1。查閱：2026-09-17。"
-          ]
+          ],
+          "audio": {
+            "src": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/learning-starts-with-questions/audio/06_%E7%AC%AC%E5%85%AD%E7%AB%A0%EF%BD%9C%E5%90%91%E4%B8%8B%E6%89%8E%E6%A0%B9%EF%BC%8C%E4%B9%9F%E8%A6%81%E7%9F%A5%E9%81%93%E4%BD%95%E6%99%82%E5%9B%9E%E4%BE%86.m4a",
+            "title": "06_第六章｜向下扎根，也要知道何時回來",
+            "provider": "notebooklm",
+            "durationSeconds": 1222.460998,
+            "storage": "vercel-blob"
+          }
         },
         {
           "id": "chapter-07",
@@ -39235,7 +39277,14 @@
             "來源原文；DOI：10.1073/pnas.1821936116。查閱：2026-09-17。",
             "[R10] OpenAI。Introducing study mode。發布：2025-07-29。歷史發布文章；查閱日 2026-09-17。",
             "來源原文。查閱：2026-09-17。"
-          ]
+          ],
+          "audio": {
+            "src": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/learning-starts-with-questions/audio/07_%E7%AC%AC%E4%B8%83%E7%AB%A0%EF%BD%9C%E6%8A%8A%E7%AD%94%E6%A1%88%E8%AC%9B%E5%9B%9E%E4%BE%86%EF%BC%8C%E5%86%8D%E8%AE%93%E7%8F%BE%E5%AF%A6%E5%8F%8D%E9%A7%81%E4%BD%A0.m4a",
+            "title": "07_第七章｜把答案講回來，再讓現實反駁你",
+            "provider": "notebooklm",
+            "durationSeconds": 1147.622993,
+            "storage": "vercel-blob"
+          }
         },
         {
           "id": "chapter-08",
@@ -39291,7 +39340,14 @@
             "來源原文；DOI：10.1177/1529100612453266。查閱：2026-09-17。",
             "[R08] Cindy E. Hmelo-Silver、Ravit Golan Duncan、Clark A. Chinn。Scaffolding and Achievement in Problem-Based and Inquiry Learning: A Response to Kirschner, Sweller, and Clark (2006)。發布：2007。Educational Psychologist 42(2), 99–107；大學網站保存的論文全文。",
             "來源原文；DOI：10.1080/00461520701263368。查閱：2026-09-17。"
-          ]
+          ],
+          "audio": {
+            "src": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/learning-starts-with-questions/audio/08_%E7%AC%AC%E5%85%AB%E7%AB%A0%EF%BD%9C%E6%92%A4%E6%8E%89%E9%83%A8%E5%88%86%E6%94%AF%E6%8F%B4%EF%BC%8C%E6%AA%A2%E6%9F%A5%E8%83%BD%E5%8A%9B%E6%98%AF%E5%90%A6%E7%95%99%E4%B8%8B.m4a",
+            "title": "08_第八章｜撤掉部分支援，檢查能力是否留下",
+            "provider": "notebooklm",
+            "durationSeconds": 1503.142993,
+            "storage": "vercel-blob"
+          }
         },
         {
           "id": "chapter-09",
@@ -39341,7 +39397,14 @@
             "本章參考資料",
             "[R07] John Dunlosky、Katherine A. Rawson、Elizabeth J. Marsh、Mitchell J. Nathan、Daniel T. Willingham。Improving Students’ Learning With Effective Learning Techniques: Promising Directions From Cognitive and Educational Psychology。發布：2013-01-08。Psychological Science in the Public Interest 14(1), 4–58。",
             "來源原文；DOI：10.1177/1529100612453266。查閱：2026-09-17。"
-          ]
+          ],
+          "audio": {
+            "src": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/learning-starts-with-questions/audio/09_%E7%AC%AC%E4%B9%9D%E7%AB%A0%EF%BD%9C%E6%8F%9B%E4%B8%80%E5%80%8B%E5%95%8F%E9%A1%8C%EF%BC%8C%E7%9C%8B%E7%9C%8B%E7%90%86%E8%A7%A3%E8%83%BD%E8%B5%B0%E5%A4%9A%E9%81%A0.m4a",
+            "title": "09_第九章｜換一個問題，看看理解能走多遠",
+            "provider": "notebooklm",
+            "durationSeconds": 854.423991,
+            "storage": "vercel-blob"
+          }
         },
         {
           "id": "chapter-10",
@@ -39394,7 +39457,14 @@
             "本章參考資料",
             "[R07] John Dunlosky、Katherine A. Rawson、Elizabeth J. Marsh、Mitchell J. Nathan、Daniel T. Willingham。Improving Students’ Learning With Effective Learning Techniques: Promising Directions From Cognitive and Educational Psychology。發布：2013-01-08。Psychological Science in the Public Interest 14(1), 4–58。",
             "來源原文；DOI：10.1177/1529100612453266。查閱：2026-09-17。"
-          ]
+          ],
+          "audio": {
+            "src": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/learning-starts-with-questions/audio/10_%E7%AC%AC%E5%8D%81%E7%AB%A0%EF%BD%9C%E6%8A%8A%E4%B8%80%E6%AC%A1%E5%AD%B8%E6%9C%83%EF%BC%8C%E8%AE%8A%E6%88%90%E5%8F%AF%E4%BB%A5%E7%B4%AF%E7%A9%8D%E7%9A%84%E7%B3%BB%E7%B5%B1.m4a",
+            "title": "10_第十章｜把一次學會，變成可以累積的系統",
+            "provider": "notebooklm",
+            "durationSeconds": 1487.260998,
+            "storage": "vercel-blob"
+          }
         },
         {
           "id": "chapter-11",
@@ -39457,7 +39527,14 @@
             "來源原文；DOI：10.1207/s15326985ep4102_1。查閱：2026-09-17。",
             "[R10] OpenAI。Introducing study mode。發布：2025-07-29。歷史發布文章；查閱日 2026-09-17。",
             "來源原文。查閱：2026-09-17。"
-          ]
+          ],
+          "audio": {
+            "src": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/learning-starts-with-questions/audio/11_%E7%AC%AC%E5%8D%81%E4%B8%80%E7%AB%A0%EF%BD%9C%E8%80%81%E5%B8%AB%E7%9A%84%E5%B7%A5%E4%BD%9C%EF%BC%9A%E8%A8%AD%E8%A8%88%E4%B8%8D%E8%83%BD%E8%B7%B3%E9%81%8E%E7%9A%84%E6%80%9D%E8%80%83.m4a",
+            "title": "11_第十一章｜老師的工作：設計不能跳過的思考",
+            "provider": "notebooklm",
+            "durationSeconds": 1484.985011,
+            "storage": "vercel-blob"
+          }
         },
         {
           "id": "chapter-12",
@@ -39508,7 +39585,14 @@
             "品味要能說明理由，也要願意面對真實對象的回饋。",
             "AI 節省的時間，可以拿來深化，也可以拿來好好生活。",
             "學習方法應該擴大選擇，而不是替所有人規定同一種人生。"
-          ]
+          ],
+          "audio": {
+            "src": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/learning-starts-with-questions/audio/12_%E7%AC%AC%E5%8D%81%E4%BA%8C%E7%AB%A0%EF%BD%9C%E5%AD%B8%E7%BF%92%E7%9A%84%E4%B8%BB%E5%B0%8E%E6%AC%8A%EF%BC%8C%E6%9C%80%E5%BE%8C%E8%90%BD%E5%9C%A8%E8%AA%B0%E8%BA%AB%E4%B8%8A.m4a",
+            "title": "12_第十二章｜學習的主導權，最後落在誰身上",
+            "provider": "notebooklm",
+            "durationSeconds": 1377.825011,
+            "storage": "vercel-blob"
+          }
         }
       ]
     }
