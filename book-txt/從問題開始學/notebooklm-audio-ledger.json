@@ -1,0 +1,492 @@
+{
+  "bookTitle": "從問題開始學",
+  "bookSlug": "learning-starts-with-questions",
+  "notebookTitle": "從問題開始學｜章節音頻",
+  "notebookUrl": "https://notebook.google.com/notebook/46cfe6d7-3021-474c-b9c0-c278a5a7f40f",
+  "expectedChapterCount": 12,
+  "createdAt": "2026-09-17T13:53:20.4235525+08:00",
+  "updatedAt": "2026-09-17T06:36:00.681Z",
+  "preflight": {
+    "status": "passed",
+    "txtChapterCount": 12,
+    "twoDigitOrdering": true,
+    "contiguousChapterNumbers": true,
+    "duplicateChapterNumbers": [],
+    "missingChapterNumbers": [],
+    "emptyFiles": [],
+    "filenameStemsApproved": true
+  },
+  "uploadValidation": {
+    "status": "complete",
+    "expectedSourceCount": 12,
+    "uploadedSourceCount": 12
+  },
+  "entries": [
+    {
+      "chapterNumber": 1,
+      "sourcePath": "book-txt/從問題開始學/01_第一章｜從你真正想做的事開始.txt",
+      "sourceFilename": "01_第一章｜從你真正想做的事開始.txt",
+      "promptMarker": "章節標誌：01_第一章｜從你真正想做的事開始",
+      "expectedAudioTitle": "01_第一章｜從你真正想做的事開始",
+      "selectedSourceCount": 1,
+      "generationState": "complete",
+      "promptSourceVerification": "complete",
+      "finalAudioCardTitle": "01_第一章｜從你真正想做的事開始",
+      "duration": "23:17",
+      "durationSeconds": 1397,
+      "completedAt": "2026-09-17T14:29:58.0713956+08:00",
+      "submissionOrdinal": 1,
+      "preSubmitCardCount": 0,
+      "postSubmitCardCount": 1,
+      "queueAcceptanceState": "accepted",
+      "queueAcceptedAt": "2026-09-17T14:07:26.9251894+08:00"
+    },
+    {
+      "chapterNumber": 2,
+      "sourcePath": "book-txt/從問題開始學/02_第二章｜AI 降低了什麼，沒有降低什麼.txt",
+      "sourceFilename": "02_第二章｜AI 降低了什麼，沒有降低什麼.txt",
+      "promptMarker": "章節標誌：02_第二章｜AI 降低了什麼，沒有降低什麼",
+      "expectedAudioTitle": "02_第二章｜AI 降低了什麼，沒有降低什麼",
+      "selectedSourceCount": 1,
+      "generationState": "complete",
+      "promptSourceVerification": "complete",
+      "finalAudioCardTitle": "02_第二章｜AI 降低了什麼，沒有降低什麼",
+      "duration": "21:10",
+      "durationSeconds": 1270,
+      "completedAt": "2026-09-17T14:29:58.0713956+08:00",
+      "submissionOrdinal": 2,
+      "preSubmitCardCount": 1,
+      "postSubmitCardCount": 2,
+      "queueAcceptanceState": "accepted",
+      "queueAcceptedAt": "2026-09-17T14:07:26.9251894+08:00",
+      "submissionRecovery": "closed-unexpected-mind-map-dialog-and-reacquired-exact-audio-button"
+    },
+    {
+      "chapterNumber": 3,
+      "sourcePath": "book-txt/從問題開始學/03_第三章｜先分清楚：你要交付，還是要學會.txt",
+      "sourceFilename": "03_第三章｜先分清楚：你要交付，還是要學會.txt",
+      "promptMarker": "章節標誌：03_第三章｜先分清楚：你要交付，還是要學會",
+      "expectedAudioTitle": "03_第三章｜先分清楚：你要交付，還是要學會",
+      "selectedSourceCount": 1,
+      "generationState": "complete",
+      "promptSourceVerification": "complete",
+      "finalAudioCardTitle": "03_第三章｜先分清楚：你要交付，還是要學會",
+      "duration": "15:22",
+      "durationSeconds": 922,
+      "completedAt": "2026-09-17T14:29:58.0713956+08:00",
+      "submissionOrdinal": 3,
+      "preSubmitCardCount": 2,
+      "postSubmitCardCount": 3,
+      "queueAcceptanceState": "accepted",
+      "queueAcceptedAt": "2026-09-17T14:07:26.9251894+08:00",
+      "submissionRecovery": "reacquired-exact-visible-audio-text-after-wrong-dialog"
+    },
+    {
+      "chapterNumber": 4,
+      "sourcePath": "book-txt/從問題開始學/04_第四章｜把大願望縮成可以驗證的小任務.txt",
+      "sourceFilename": "04_第四章｜把大願望縮成可以驗證的小任務.txt",
+      "promptMarker": "章節標誌：04_第四章｜把大願望縮成可以驗證的小任務",
+      "expectedAudioTitle": "04_第四章｜把大願望縮成可以驗證的小任務",
+      "selectedSourceCount": 1,
+      "generationState": "complete",
+      "promptSourceVerification": "complete",
+      "finalAudioCardTitle": "04_第四章｜把大願望縮成可以驗證的小任務",
+      "duration": "27:19",
+      "durationSeconds": 1639,
+      "completedAt": "2026-09-17T14:29:58.0713956+08:00",
+      "submissionOrdinal": 4,
+      "preSubmitCardCount": 3,
+      "postSubmitCardCount": 4,
+      "queueAcceptanceState": "accepted",
+      "queueAcceptedAt": "2026-09-17T14:07:26.9251894+08:00",
+      "submissionRecovery": "same-dialog-authoritative-node-retry-after-pre-mutation"
+    },
+    {
+      "chapterNumber": 5,
+      "sourcePath": "book-txt/從問題開始學/05_第五章｜讓困惑說得出來.txt",
+      "sourceFilename": "05_第五章｜讓困惑說得出來.txt",
+      "promptMarker": "章節標誌：05_第五章｜讓困惑說得出來",
+      "expectedAudioTitle": "05_第五章｜讓困惑說得出來",
+      "selectedSourceCount": 1,
+      "generationState": "complete",
+      "promptSourceVerification": "complete",
+      "finalAudioCardTitle": "05_第五章｜讓困惑說得出來",
+      "duration": "19:33",
+      "durationSeconds": 1173,
+      "completedAt": "2026-09-17T14:29:58.0713956+08:00",
+      "submissionOrdinal": 5,
+      "preSubmitCardCount": 4,
+      "postSubmitCardCount": 5,
+      "queueAcceptanceState": "accepted",
+      "queueAcceptedAt": "2026-09-17T14:07:26.9251894+08:00"
+    },
+    {
+      "chapterNumber": 6,
+      "sourcePath": "book-txt/從問題開始學/06_第六章｜向下扎根，也要知道何時回來.txt",
+      "sourceFilename": "06_第六章｜向下扎根，也要知道何時回來.txt",
+      "promptMarker": "章節標誌：06_第六章｜向下扎根，也要知道何時回來",
+      "expectedAudioTitle": "06_第六章｜向下扎根，也要知道何時回來",
+      "selectedSourceCount": 1,
+      "generationState": "complete",
+      "promptSourceVerification": "complete",
+      "finalAudioCardTitle": "06_第六章｜向下扎根，也要知道何時回來",
+      "duration": "20:22",
+      "durationSeconds": 1222,
+      "completedAt": "2026-09-17T14:29:58.0713956+08:00",
+      "submissionOrdinal": 6,
+      "preSubmitCardCount": 5,
+      "postSubmitCardCount": 6,
+      "queueAcceptanceState": "accepted",
+      "queueAcceptedAt": "2026-09-17T14:10:17.4064776+08:00"
+    },
+    {
+      "chapterNumber": 7,
+      "sourcePath": "book-txt/從問題開始學/07_第七章｜把答案講回來，再讓現實反駁你.txt",
+      "sourceFilename": "07_第七章｜把答案講回來，再讓現實反駁你.txt",
+      "promptMarker": "章節標誌：07_第七章｜把答案講回來，再讓現實反駁你",
+      "expectedAudioTitle": "07_第七章｜把答案講回來，再讓現實反駁你",
+      "selectedSourceCount": 1,
+      "generationState": "complete",
+      "promptSourceVerification": "complete",
+      "finalAudioCardTitle": "07_第七章｜把答案講回來，再讓現實反駁你",
+      "duration": "19:07",
+      "durationSeconds": 1147,
+      "completedAt": "2026-09-17T14:29:58.0713956+08:00",
+      "submissionOrdinal": 7,
+      "preSubmitCardCount": 6,
+      "postSubmitCardCount": 7,
+      "queueAcceptanceState": "accepted",
+      "queueAcceptedAt": "2026-09-17T14:10:17.4064776+08:00"
+    },
+    {
+      "chapterNumber": 8,
+      "sourcePath": "book-txt/從問題開始學/08_第八章｜撤掉部分支援，檢查能力是否留下.txt",
+      "sourceFilename": "08_第八章｜撤掉部分支援，檢查能力是否留下.txt",
+      "promptMarker": "章節標誌：08_第八章｜撤掉部分支援，檢查能力是否留下",
+      "expectedAudioTitle": "08_第八章｜撤掉部分支援，檢查能力是否留下",
+      "selectedSourceCount": 1,
+      "generationState": "complete",
+      "promptSourceVerification": "complete",
+      "finalAudioCardTitle": "08_第八章｜撤掉部分支援，檢查能力是否留下",
+      "duration": "25:03",
+      "durationSeconds": 1503,
+      "completedAt": "2026-09-17T14:29:58.0713956+08:00",
+      "submissionOrdinal": 8,
+      "preSubmitCardCount": 7,
+      "postSubmitCardCount": 8,
+      "queueAcceptanceState": "accepted",
+      "queueAcceptedAt": "2026-09-17T14:10:17.4064776+08:00"
+    },
+    {
+      "chapterNumber": 9,
+      "sourcePath": "book-txt/從問題開始學/09_第九章｜換一個問題，看看理解能走多遠.txt",
+      "sourceFilename": "09_第九章｜換一個問題，看看理解能走多遠.txt",
+      "promptMarker": "章節標誌：09_第九章｜換一個問題，看看理解能走多遠",
+      "expectedAudioTitle": "09_第九章｜換一個問題，看看理解能走多遠",
+      "selectedSourceCount": 1,
+      "generationState": "complete",
+      "promptSourceVerification": "complete",
+      "finalAudioCardTitle": "09_第九章｜換一個問題，看看理解能走多遠",
+      "duration": "14:14",
+      "durationSeconds": 854,
+      "completedAt": "2026-09-17T14:29:58.0713956+08:00",
+      "submissionOrdinal": 9,
+      "preSubmitCardCount": 8,
+      "postSubmitCardCount": 9,
+      "queueAcceptanceState": "accepted",
+      "queueAcceptedAt": "2026-09-17T14:10:17.4064776+08:00"
+    },
+    {
+      "chapterNumber": 10,
+      "sourcePath": "book-txt/從問題開始學/10_第十章｜把一次學會，變成可以累積的系統.txt",
+      "sourceFilename": "10_第十章｜把一次學會，變成可以累積的系統.txt",
+      "promptMarker": "章節標誌：10_第十章｜把一次學會，變成可以累積的系統",
+      "expectedAudioTitle": "10_第十章｜把一次學會，變成可以累積的系統",
+      "selectedSourceCount": 1,
+      "generationState": "complete",
+      "promptSourceVerification": "complete",
+      "finalAudioCardTitle": "10_第十章｜把一次學會，變成可以累積的系統",
+      "duration": "24:47",
+      "durationSeconds": 1487,
+      "completedAt": "2026-09-17T14:29:58.0713956+08:00",
+      "submissionOrdinal": 10,
+      "preSubmitCardCount": 9,
+      "postSubmitCardCount": 10,
+      "queueAcceptanceState": "accepted",
+      "queueAcceptedAt": "2026-09-17T14:10:17.4064776+08:00"
+    },
+    {
+      "chapterNumber": 11,
+      "sourcePath": "book-txt/從問題開始學/11_第十一章｜老師的工作：設計不能跳過的思考.txt",
+      "sourceFilename": "11_第十一章｜老師的工作：設計不能跳過的思考.txt",
+      "promptMarker": "章節標誌：11_第十一章｜老師的工作：設計不能跳過的思考",
+      "expectedAudioTitle": "11_第十一章｜老師的工作：設計不能跳過的思考",
+      "selectedSourceCount": 1,
+      "generationState": "complete",
+      "promptSourceVerification": "complete",
+      "finalAudioCardTitle": "11_第十一章｜老師的工作：設計不能跳過的思考",
+      "duration": "24:44",
+      "durationSeconds": 1484,
+      "completedAt": "2026-09-17T14:29:58.0713956+08:00",
+      "submissionOrdinal": 11,
+      "preSubmitCardCount": 10,
+      "postSubmitCardCount": 11,
+      "queueAcceptanceState": "accepted",
+      "queueAcceptedAt": "2026-09-17T14:11:32.8858733+08:00"
+    },
+    {
+      "chapterNumber": 12,
+      "sourcePath": "book-txt/從問題開始學/12_第十二章｜學習的主導權，最後落在誰身上.txt",
+      "sourceFilename": "12_第十二章｜學習的主導權，最後落在誰身上.txt",
+      "promptMarker": "章節標誌：12_第十二章｜學習的主導權，最後落在誰身上",
+      "expectedAudioTitle": "12_第十二章｜學習的主導權，最後落在誰身上",
+      "selectedSourceCount": 1,
+      "generationState": "complete",
+      "promptSourceVerification": "complete",
+      "finalAudioCardTitle": "12_第十二章｜學習的主導權，最後落在誰身上",
+      "duration": "22:57",
+      "durationSeconds": 1377,
+      "completedAt": "2026-09-17T14:29:58.0713956+08:00",
+      "submissionOrdinal": 12,
+      "preSubmitCardCount": 11,
+      "postSubmitCardCount": 12,
+      "queueAcceptanceState": "accepted",
+      "queueAcceptedAt": "2026-09-17T14:11:32.8858733+08:00"
+    }
+  ],
+  "batchGeneration": {
+    "mode": "batch",
+    "submittedChapterCount": 12,
+    "acceptedQueueItems": 12,
+    "completedCards": 12,
+    "verifiedCardTitles": [
+      "01_第一章｜從你真正想做的事開始",
+      "02_第二章｜AI 降低了什麼，沒有降低什麼",
+      "03_第三章｜先分清楚：你要交付，還是要學會",
+      "04_第四章｜把大願望縮成可以驗證的小任務",
+      "05_第五章｜讓困惑說得出來",
+      "06_第六章｜向下扎根，也要知道何時回來",
+      "07_第七章｜把答案講回來，再讓現實反駁你",
+      "08_第八章｜撤掉部分支援，檢查能力是否留下",
+      "09_第九章｜換一個問題，看看理解能走多遠",
+      "10_第十章｜把一次學會，變成可以累積的系統",
+      "11_第十一章｜老師的工作：設計不能跳過的思考",
+      "12_第十二章｜學習的主導權，最後落在誰身上"
+    ],
+    "duplicateChapterNumbers": [],
+    "duplicatePromptMarkers": [],
+    "lastAuditedAt": "2026-09-17T14:29:58.0713956+08:00"
+  },
+  "downloadValidation": {
+    "status": "blocked",
+    "assetFolder": "public/books/learning-starts-with-questions/audio",
+    "expectedChapterCount": 12,
+    "downloadedCount": 0,
+    "linkedCount": 0,
+    "missingChapterNumbers": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "chapters": [],
+    "blockingReason": "NotebookLM exact-card download action closed the menu but produced no browser download event and no Downloads pathname after three controller transactions, an event-first mouse attempt, an event-first keyboard attempt, and the official media-download action.",
+    "zeroSideEffectEvidence": {
+      "downloadsBaselineCount": 4663,
+      "newPathDetected": false,
+      "browserDownloadEventDetected": false,
+      "controllerFailedTransactions": 3,
+      "checkedAt": "2026-09-17T14:36:00.6810000+08:00"
+    },
+    "nextAction": "Use the visible exact chapter 01 card menu Download action in the preserved NotebookLM tab, then resume from chapter 01 with the project resume coordinator."
+  },
+  "transcodeValidation": {
+    "status": "pending",
+    "codec": "aac",
+    "container": "m4a",
+    "targetBitRate": 80000,
+    "channels": 1,
+    "checkedAudioCount": 0,
+    "failedChapterNumbers": [],
+    "metadataIdentityChecked": false,
+    "lastPacketDurationChecked": false,
+    "fullLocalDecodeChecked": false,
+    "uniqueFingerprintsChecked": false,
+    "productionRemoteSeekChecked": false
+  },
+  "blobMigrationValidation": {
+    "status": "pending",
+    "provider": "vercel-blob",
+    "access": "public",
+    "region": null,
+    "checkedAudioCount": 0,
+    "failedChapterNumbers": [],
+    "exactContentLengthChecked": false,
+    "remoteSeekChecked": false
+  },
+  "integrityValidation": {
+    "status": "pending",
+    "checkedChapterCount": 0,
+    "failedChapterNumbers": [],
+    "checkedAt": null
+  },
+  "downloadTriggerAudit": {
+    "controllerVersion": "1.0.0",
+    "preferredTrigger": "mouse",
+    "transactionCount": 3,
+    "updatedAt": "2026-09-17T06:36:00.681Z",
+    "transactions": [
+      {
+        "transactionId": "6eb554f1-66c5-4408-97cb-4b2d141c56fe",
+        "chapterNumber": 1,
+        "expectedTitle": "01_第一章｜從你真正想做的事開始",
+        "expectedDuration": "23:17",
+        "startedAt": "2026-09-17T06:33:27.819Z",
+        "preferredTriggerAtStart": "mouse",
+        "events": [
+          {
+            "event": "download-snapshot",
+            "at": "2026-09-17T06:33:27.822Z",
+            "existingFileCount": 4663
+          },
+          {
+            "event": "mouse-click-requested",
+            "at": "2026-09-17T06:33:30.932Z"
+          },
+          {
+            "event": "mouse-no-new-path",
+            "at": "2026-09-17T06:33:36.215Z",
+            "titleEditorActive": false,
+            "downloadMenuOpen": false
+          },
+          {
+            "event": "transaction-failed",
+            "at": "2026-09-17T06:33:39.318Z",
+            "code": "DOWNLOAD_TRIGGER_FAILED",
+            "message": "Error: Playwright selector deadline exceeded\nwaiting on click for selector internal:role=button[name=/01_第一章｜從你真正想做的事開始/] >> xpath=.. >> internal:role=button[name=\"更多\"s]\nLocator diagnostics: {\"kind\":\"no_matches\",\"action\":\"click\",\"locator\":\"internal:role=button[name=/01_第一章｜從你真正想做的事開始/] >> xpath=.. >> internal:role=button[name=\\\"更多\\\"s]\",\"matchCount\":0,\"matches\":[],\"visibleCount\":0,\"truncated\":false}"
+          }
+        ],
+        "outcome": "failed",
+        "error": {
+          "code": "DOWNLOAD_TRIGGER_FAILED",
+          "message": "Error: Playwright selector deadline exceeded\nwaiting on click for selector internal:role=button[name=/01_第一章｜從你真正想做的事開始/] >> xpath=.. >> internal:role=button[name=\"更多\"s]\nLocator diagnostics: {\"kind\":\"no_matches\",\"action\":\"click\",\"locator\":\"internal:role=button[name=/01_第一章｜從你真正想做的事開始/] >> xpath=.. >> internal:role=button[name=\\\"更多\\\"s]\",\"matchCount\":0,\"matches\":[],\"visibleCount\":0,\"truncated\":false}"
+        },
+        "completedAt": "2026-09-17T06:33:39.318Z"
+      },
+      {
+        "transactionId": "a4853e8a-8589-436d-9775-2742a09284e1",
+        "chapterNumber": 1,
+        "expectedTitle": "01_第一章｜從你真正想做的事開始",
+        "expectedDuration": "23:17",
+        "startedAt": "2026-09-17T06:34:01.854Z",
+        "preferredTriggerAtStart": "mouse",
+        "events": [
+          {
+            "event": "download-snapshot",
+            "at": "2026-09-17T06:34:01.857Z",
+            "existingFileCount": 4663
+          },
+          {
+            "event": "mouse-click-error",
+            "at": "2026-09-17T06:34:07.027Z",
+            "message": "Error: Timed out after 3000ms waiting for selector internal:text=\"下載\"s: Timed out after 3000ms waiting for CDP command Runtime.evaluate.\nwaiting on click for selector internal:text=\"下載\"s\nLocator diagnostics: {\"kind\":\"action_failed\",\"action\":\"click\",\"locator\":\"internal:text=\\\"下載\\\"s\",\"matchCount\":1,\"matches\":[{\"ariaLabel\":null,\"disabled\":false,\"role\":null,\"tag\":\"span\",\"text\":\"下載\",\"type\":null,\"visible\":true}],\"visibleCount\":1,\"truncated\":false}"
+          },
+          {
+            "event": "mouse-no-new-path",
+            "at": "2026-09-17T06:34:12.326Z",
+            "titleEditorActive": false,
+            "downloadMenuOpen": true
+          },
+          {
+            "event": "keyboard-enter-requested",
+            "at": "2026-09-17T06:34:15.407Z",
+            "attempt": 1
+          },
+          {
+            "event": "keyboard-no-new-path",
+            "at": "2026-09-17T06:34:30.699Z",
+            "attempt": 1,
+            "titleEditorActive": false,
+            "downloadMenuOpen": false
+          },
+          {
+            "event": "transaction-failed",
+            "at": "2026-09-17T06:34:30.711Z",
+            "code": "DOWNLOAD_TRIGGER_FAILED",
+            "message": "No new download pathname after the exact-card keyboard recovery attempts"
+          }
+        ],
+        "outcome": "failed",
+        "error": {
+          "code": "DOWNLOAD_TRIGGER_FAILED",
+          "message": "No new download pathname after the exact-card keyboard recovery attempts"
+        },
+        "completedAt": "2026-09-17T06:34:30.711Z"
+      },
+      {
+        "transactionId": "2c86db76-3103-4470-a436-c1b2086c432a",
+        "chapterNumber": 1,
+        "expectedTitle": "01_第一章｜從你真正想做的事開始",
+        "expectedDuration": "23:17",
+        "startedAt": "2026-09-17T06:35:25.596Z",
+        "preferredTriggerAtStart": "mouse",
+        "events": [
+          {
+            "event": "download-snapshot",
+            "at": "2026-09-17T06:35:25.599Z",
+            "existingFileCount": 4663
+          },
+          {
+            "event": "mouse-click-error",
+            "at": "2026-09-17T06:35:31.759Z",
+            "message": "Error: Timed out after 3000ms waiting for selector internal:role=menuitem[name=\"下載\"s]: Timed out after 3000ms waiting for CDP command Runtime.evaluate.\nwaiting on click for selector internal:role=menuitem[name=\"下載\"s]\nLocator diagnostics: {\"kind\":\"action_failed\",\"action\":\"click\",\"locator\":\"internal:role=menuitem[name=\\\"下載\\\"s]\",\"matchCount\":1,\"matches\":[{\"ariaLabel\":null,\"disabled\":false,\"role\":\"menuitem\",\"tag\":\"button\",\"text\":\"save_alt 下載\",\"type\":null,\"visible\":true}],\"visibleCount\":1,\"truncated\":false}"
+          },
+          {
+            "event": "mouse-no-new-path",
+            "at": "2026-09-17T06:35:39.937Z",
+            "titleEditorActive": false,
+            "downloadMenuOpen": true
+          },
+          {
+            "event": "keyboard-enter-requested",
+            "at": "2026-09-17T06:35:45.642Z",
+            "attempt": 1
+          },
+          {
+            "event": "keyboard-no-new-path",
+            "at": "2026-09-17T06:36:00.671Z",
+            "attempt": 1,
+            "titleEditorActive": false,
+            "downloadMenuOpen": false
+          },
+          {
+            "event": "transaction-failed",
+            "at": "2026-09-17T06:36:00.677Z",
+            "code": "DOWNLOAD_TRIGGER_FAILED",
+            "message": "No new download pathname after the exact-card keyboard recovery attempts"
+          }
+        ],
+        "outcome": "failed",
+        "error": {
+          "code": "DOWNLOAD_TRIGGER_FAILED",
+          "message": "No new download pathname after the exact-card keyboard recovery attempts"
+        },
+        "completedAt": "2026-09-17T06:36:00.677Z"
+      }
+    ]
+  },
+  "downloadResumeAudit": {
+    "coordinatorVersion": "notebooklm-download-resume-coordinator/v1",
+    "runCount": 0,
+    "updatedAt": null,
+    "runs": []
+  }
+}

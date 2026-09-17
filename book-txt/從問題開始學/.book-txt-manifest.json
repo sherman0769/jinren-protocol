@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 1,
+  "bookSlug": "learning-starts-with-questions",
+  "files": [
+    {
+      "filename": "01_第一章｜從你真正想做的事開始.txt",
+      "sha256": "35f8820023a7e1feff88868eedabfd922fe086ae9eb2daaa11d0651c9115c441"
+    },
+    {
+      "filename": "02_第二章｜AI 降低了什麼，沒有降低什麼.txt",
+      "sha256": "7060e9f4cea1eaf9dbe73c1e9b335734baee0d33f34004e00061c1e11226a2bf"
+    },
+    {
+      "filename": "03_第三章｜先分清楚：你要交付，還是要學會.txt",
+      "sha256": "0c6dab13bc30f24e6e89bfade51abc4ec0048184fa94f23f3b805ab085bcae89"
+    },
+    {
+      "filename": "04_第四章｜把大願望縮成可以驗證的小任務.txt",
+      "sha256": "e1be57b8a8fa4a483b643a17df6e0fc62ee3fce6868b7c91a452df4e77dd2c80"
+    },
+    {
+      "filename": "05_第五章｜讓困惑說得出來.txt",
+      "sha256": "674fc6d41075631b3f58ae742e312de94572a758ed5206bec8525ff7a1fc9557"
+    },
+    {
+      "filename": "06_第六章｜向下扎根，也要知道何時回來.txt",
+      "sha256": "92031ea1b6cf556ca354a738af10ccdb0ebdd0f8d3d6e9187402884003b42ba1"
+    },
+    {
+      "filename": "07_第七章｜把答案講回來，再讓現實反駁你.txt",
+      "sha256": "074d4290c55e7720b65d5d0ac5faa4ac9fbdf552b07b8d0bce398fe551f95422"
+    },
+    {
+      "filename": "08_第八章｜撤掉部分支援，檢查能力是否留下.txt",
+      "sha256": "a522ec909069b8433fb777a7d310b1d3bc668148ef0137aff07d788c294e3560"
+    },
+    {
+      "filename": "09_第九章｜換一個問題，看看理解能走多遠.txt",
+      "sha256": "2cbedaa7db6f34b9edd1ce894e4937541314deeb63d46a795b6d1ef836511e56"
+    },
+    {
+      "filename": "10_第十章｜把一次學會，變成可以累積的系統.txt",
+      "sha256": "748529a7bb46716b67fcad120a99b0db86106da805156e84fbf7533e3c858f7f"
+    },
+    {
+      "filename": "11_第十一章｜老師的工作：設計不能跳過的思考.txt",
+      "sha256": "273349415c4987a12120cfae17390c77d22f7a7d7561d866ea7e3dabbc5250c3"
+    },
+    {
+      "filename": "12_第十二章｜學習的主導權，最後落在誰身上.txt",
+      "sha256": "511f3823443feaa892a39ce53365d2a20cd119c356b357d77aa83275abae3e8f"
+    }
+  ]
+}
