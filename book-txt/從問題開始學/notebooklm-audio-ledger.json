@@ -313,7 +313,7 @@
         "blobPathname": "books/learning-starts-with-questions/audio/01_第一章｜從你真正想做的事開始.m4a",
         "blobEtag": "\"ac9cef8cfdc82e7159b99d8cdef531e9-2\"",
         "blobHeadVerified": true,
-        "blobRemoteSeekVerified": false
+        "blobRemoteSeekVerified": true
       },
       {
         "chapterNumber": 2,
@@ -343,7 +343,7 @@
         "blobPathname": "books/learning-starts-with-questions/audio/02_第二章｜AI 降低了什麼，沒有降低什麼.m4a",
         "blobEtag": "\"780bb4550a394da04d4875dc7547a3f8-2\"",
         "blobHeadVerified": true,
-        "blobRemoteSeekVerified": false
+        "blobRemoteSeekVerified": true
       },
       {
         "chapterNumber": 3,
@@ -373,7 +373,7 @@
         "blobPathname": "books/learning-starts-with-questions/audio/03_第三章｜先分清楚：你要交付，還是要學會.m4a",
         "blobEtag": "\"3c0a7a2c6e9fb34619ce241bf99f62cf-2\"",
         "blobHeadVerified": true,
-        "blobRemoteSeekVerified": false
+        "blobRemoteSeekVerified": true
       },
       {
         "chapterNumber": 4,
@@ -403,7 +403,7 @@
         "blobPathname": "books/learning-starts-with-questions/audio/04_第四章｜把大願望縮成可以驗證的小任務.m4a",
         "blobEtag": "\"389aa8435eb2007627d8a4206e2a1d53-3\"",
         "blobHeadVerified": true,
-        "blobRemoteSeekVerified": false
+        "blobRemoteSeekVerified": true
       },
       {
         "chapterNumber": 5,
@@ -433,7 +433,7 @@
         "blobPathname": "books/learning-starts-with-questions/audio/05_第五章｜讓困惑說得出來.m4a",
         "blobEtag": "\"9d9804cbf6a8d1c0548e85f187055359-2\"",
         "blobHeadVerified": true,
-        "blobRemoteSeekVerified": false
+        "blobRemoteSeekVerified": true
       },
       {
         "chapterNumber": 6,
@@ -463,7 +463,7 @@
         "blobPathname": "books/learning-starts-with-questions/audio/06_第六章｜向下扎根，也要知道何時回來.m4a",
         "blobEtag": "\"1ae5ed656dea9852803b7c7e8ba5d014-2\"",
         "blobHeadVerified": true,
-        "blobRemoteSeekVerified": false
+        "blobRemoteSeekVerified": true
       },
       {
         "chapterNumber": 7,
@@ -493,7 +493,7 @@
         "blobPathname": "books/learning-starts-with-questions/audio/07_第七章｜把答案講回來，再讓現實反駁你.m4a",
         "blobEtag": "\"5fdf38c40aa61f224ed0a7d9c4f5ca6e-2\"",
         "blobHeadVerified": true,
-        "blobRemoteSeekVerified": false
+        "blobRemoteSeekVerified": true
       },
       {
         "chapterNumber": 8,
@@ -523,7 +523,7 @@
         "blobPathname": "books/learning-starts-with-questions/audio/08_第八章｜撤掉部分支援，檢查能力是否留下.m4a",
         "blobEtag": "\"e54c17a6f14c4b70e7449af337fcd972-2\"",
         "blobHeadVerified": true,
-        "blobRemoteSeekVerified": false
+        "blobRemoteSeekVerified": true
       },
       {
         "chapterNumber": 9,
@@ -553,7 +553,7 @@
         "blobPathname": "books/learning-starts-with-questions/audio/09_第九章｜換一個問題，看看理解能走多遠.m4a",
         "blobEtag": "\"c9531ba2314a6b3520749a1c25c4534e-2\"",
         "blobHeadVerified": true,
-        "blobRemoteSeekVerified": false
+        "blobRemoteSeekVerified": true
       },
       {
         "chapterNumber": 10,
@@ -583,7 +583,7 @@
         "blobPathname": "books/learning-starts-with-questions/audio/10_第十章｜把一次學會，變成可以累積的系統.m4a",
         "blobEtag": "\"b1a9dab9063d18c5ae581090d79b4d13-2\"",
         "blobHeadVerified": true,
-        "blobRemoteSeekVerified": false
+        "blobRemoteSeekVerified": true
       },
       {
         "chapterNumber": 11,
@@ -613,7 +613,7 @@
         "blobPathname": "books/learning-starts-with-questions/audio/11_第十一章｜老師的工作：設計不能跳過的思考.m4a",
         "blobEtag": "\"38b79eb755eee1dc5e47202c6879a55f-2\"",
         "blobHeadVerified": true,
-        "blobRemoteSeekVerified": false
+        "blobRemoteSeekVerified": true
       },
       {
         "chapterNumber": 12,
@@ -643,7 +643,7 @@
         "blobPathname": "books/learning-starts-with-questions/audio/12_第十二章｜學習的主導權，最後落在誰身上.m4a",
         "blobEtag": "\"d255ae1e5b56fe62358822bca1b0d7a0-2\"",
         "blobHeadVerified": true,
-        "blobRemoteSeekVerified": false
+        "blobRemoteSeekVerified": true
       }
     ],
     "completedAt": "2026-09-17T18:02:47.6494172+08:00",
@@ -664,14 +664,14 @@
     "productionRemoteSeekChecked": false
   },
   "blobMigrationValidation": {
-    "status": "uploaded-and-applied",
+    "status": "production-verified",
     "provider": "vercel-blob",
     "access": "public",
     "region": "hnd1",
     "checkedAudioCount": 12,
     "failedChapterNumbers": [],
     "exactContentLengthChecked": true,
-    "remoteSeekChecked": false
+    "remoteSeekChecked": true
   },
   "integrityValidation": {
     "status": "complete",
