@@ -1,0 +1,353 @@
+{
+  "status": "passed",
+  "slug": "let-ai-understand-a-company",
+  "chapterCount": 16,
+  "txtCount": 16,
+  "ledgerEntryCount": 16,
+  "audioCount": 16,
+  "localAudioCount": 0,
+  "remoteAudioCount": 16,
+  "queueAudit": "complete",
+  "productionChecked": true,
+  "productionRemoteSeekChecked": true,
+  "warnings": [],
+  "errors": [],
+  "chapters": [
+    {
+      "chapterNumber": 1,
+      "expectedTitle": "01_第 1 章｜資料都在，AI 為什麼還是不懂這家公司？",
+      "status": "passed",
+      "production": {
+        "status": 200,
+        "contentType": "audio/mp4",
+        "contentLength": 8192130,
+        "remoteSeek": {
+          "seconds": 120,
+          "status": "passed"
+        }
+      },
+      "codec": "aac",
+      "container": "mov,mp4,m4a,3gp,3g2,mj2",
+      "durationSeconds": 777.218005,
+      "durationDeltaSeconds": 0.21800499999994827,
+      "lastPacketDurationSeconds": 777.2180040000001,
+      "fullDecode": true,
+      "storage": "vercel-blob"
+    },
+    {
+      "chapterNumber": 2,
+      "expectedTitle": "02_第 2 章｜本體這個名字，到底在說什麼？",
+      "status": "passed",
+      "production": {
+        "status": 200,
+        "contentType": "audio/mp4",
+        "contentLength": 9305656,
+        "remoteSeek": {
+          "seconds": 120,
+          "status": "passed"
+        }
+      },
+      "codec": "aac",
+      "container": "mov,mp4,m4a,3gp,3g2,mj2",
+      "durationSeconds": 886.329002,
+      "durationDeltaSeconds": 0.32900199999994584,
+      "lastPacketDurationSeconds": 886.329002,
+      "fullDecode": true,
+      "storage": "vercel-blob"
+    },
+    {
+      "chapterNumber": 3,
+      "expectedTitle": "03_第 3 章｜把人、事、物說清楚：類別、個體與關係",
+      "status": "passed",
+      "production": {
+        "status": 200,
+        "contentType": "audio/mp4",
+        "contentLength": 8959466,
+        "remoteSeek": {
+          "seconds": 120,
+          "status": "passed"
+        }
+      },
+      "codec": "aac",
+      "container": "mov,mp4,m4a,3gp,3g2,mj2",
+      "durationSeconds": 854.378005,
+      "durationDeltaSeconds": 0.3780050000000301,
+      "lastPacketDurationSeconds": 854.378004,
+      "fullDecode": true,
+      "storage": "vercel-blob"
+    },
+    {
+      "chapterNumber": 4,
+      "expectedTitle": "04_第 4 章｜資料庫、分類表、知識圖譜與語意層，誰做什麼？",
+      "status": "passed",
+      "production": {
+        "status": 200,
+        "contentType": "audio/mp4",
+        "contentLength": 12418804,
+        "remoteSeek": {
+          "seconds": 120,
+          "status": "passed"
+        }
+      },
+      "codec": "aac",
+      "container": "mov,mp4,m4a,3gp,3g2,mj2",
+      "durationSeconds": 1182.847007,
+      "durationDeltaSeconds": 0.847007000000076,
+      "lastPacketDurationSeconds": 1182.847007,
+      "fullDecode": true,
+      "storage": "vercel-blob"
+    },
+    {
+      "chapterNumber": 5,
+      "expectedTitle": "05_第 5 章｜先問什麼要被回答，再決定要建什麼",
+      "status": "passed",
+      "production": {
+        "status": 200,
+        "contentType": "audio/mp4",
+        "contentLength": 11187048,
+        "remoteSeek": {
+          "seconds": 120,
+          "status": "passed"
+        }
+      },
+      "codec": "aac",
+      "container": "mov,mp4,m4a,3gp,3g2,mj2",
+      "durationSeconds": 1066.376009,
+      "durationDeltaSeconds": 0.3760090000000673,
+      "lastPacketDurationSeconds": 1066.3760089999998,
+      "fullDecode": true,
+      "storage": "vercel-blob"
+    },
+    {
+      "chapterNumber": 6,
+      "expectedTitle": "06_第 6 章｜一起做出第一張可用的企業概念模型",
+      "status": "passed",
+      "production": {
+        "status": 200,
+        "contentType": "audio/mp4",
+        "contentLength": 11680040,
+        "remoteSeek": {
+          "seconds": 120,
+          "status": "passed"
+        }
+      },
+      "codec": "aac",
+      "container": "mov,mp4,m4a,3gp,3g2,mj2",
+      "durationSeconds": 1112.677007,
+      "durationDeltaSeconds": 0.6770070000000032,
+      "lastPacketDurationSeconds": 1112.677007,
+      "fullDecode": true,
+      "storage": "vercel-blob"
+    },
+    {
+      "chapterNumber": 7,
+      "expectedTitle": "07_第 7 章｜同一個人、不同時間：讓模型接上可信資料",
+      "status": "passed",
+      "production": {
+        "status": 200,
+        "contentType": "audio/mp4",
+        "contentLength": 15835463,
+        "remoteSeek": {
+          "seconds": 120,
+          "status": "passed"
+        }
+      },
+      "codec": "aac",
+      "container": "mov,mp4,m4a,3gp,3g2,mj2",
+      "durationSeconds": 1510.410998,
+      "durationDeltaSeconds": 0.41099800000006326,
+      "lastPacketDurationSeconds": 1510.410998,
+      "fullDecode": true,
+      "storage": "vercel-blob"
+    },
+    {
+      "chapterNumber": 8,
+      "expectedTitle": "08_第 8 章｜規則寫下來，不代表系統就會遵守",
+      "status": "passed",
+      "production": {
+        "status": 200,
+        "contentType": "audio/mp4",
+        "contentLength": 10499551,
+        "remoteSeek": {
+          "seconds": 120,
+          "status": "passed"
+        }
+      },
+      "codec": "aac",
+      "container": "mov,mp4,m4a,3gp,3g2,mj2",
+      "durationSeconds": 1003.170998,
+      "durationDeltaSeconds": 0.17099800000005416,
+      "lastPacketDurationSeconds": 1003.1709979999999,
+      "fullDecode": true,
+      "storage": "vercel-blob"
+    },
+    {
+      "chapterNumber": 9,
+      "expectedTitle": "09_第 9 章｜本體遇上大語言模型：怎麼找，怎麼答，怎麼有依據",
+      "status": "passed",
+      "production": {
+        "status": 200,
+        "contentType": "audio/mp4",
+        "contentLength": 11239319,
+        "remoteSeek": {
+          "seconds": 120,
+          "status": "passed"
+        }
+      },
+      "codec": "aac",
+      "container": "mov,mp4,m4a,3gp,3g2,mj2",
+      "durationSeconds": 1071.159002,
+      "durationDeltaSeconds": 0.15900200000010045,
+      "lastPacketDurationSeconds": 1071.159002,
+      "fullDecode": true,
+      "storage": "vercel-blob"
+    },
+    {
+      "chapterNumber": 10,
+      "expectedTitle": "10_第 10 章｜圖譜真的比較好嗎？把 GraphRAG 放回適合的位置",
+      "status": "passed",
+      "production": {
+        "status": 200,
+        "contentType": "audio/mp4",
+        "contentLength": 10088531,
+        "remoteSeek": {
+          "seconds": 120,
+          "status": "passed"
+        }
+      },
+      "codec": "aac",
+      "container": "mov,mp4,m4a,3gp,3g2,mj2",
+      "durationSeconds": 961.560998,
+      "durationDeltaSeconds": 0.5609980000000405,
+      "lastPacketDurationSeconds": 961.560998,
+      "fullDecode": true,
+      "storage": "vercel-blob"
+    },
+    {
+      "chapterNumber": 11,
+      "expectedTitle": "11_第 11 章｜讓 Agent 接上企業：情境、工具與 MCP 的分工",
+      "status": "passed",
+      "production": {
+        "status": 200,
+        "contentType": "audio/mp4",
+        "contentLength": 12079183,
+        "remoteSeek": {
+          "seconds": 120,
+          "status": "passed"
+        }
+      },
+      "codec": "aac",
+      "container": "mov,mp4,m4a,3gp,3g2,mj2",
+      "durationSeconds": 1150.247007,
+      "durationDeltaSeconds": 0.24700699999993958,
+      "lastPacketDurationSeconds": 1150.247006,
+      "fullDecode": true,
+      "storage": "vercel-blob"
+    },
+    {
+      "chapterNumber": 12,
+      "expectedTitle": "12_第 12 章｜AI 能提出方案，誰允許它真正動手？",
+      "status": "passed",
+      "production": {
+        "status": 200,
+        "contentType": "audio/mp4",
+        "contentLength": 11569775,
+        "remoteSeek": {
+          "seconds": 120,
+          "status": "passed"
+        }
+      },
+      "codec": "aac",
+      "container": "mov,mp4,m4a,3gp,3g2,mj2",
+      "durationSeconds": 1102.019002,
+      "durationDeltaSeconds": 1.0190020000000004,
+      "lastPacketDurationSeconds": 1102.019003,
+      "fullDecode": true,
+      "storage": "vercel-blob"
+    },
+    {
+      "chapterNumber": 13,
+      "expectedTitle": "13_第 13 章｜讓 AI 幫忙建本體，也要有人負責修正它",
+      "status": "passed",
+      "production": {
+        "status": 200,
+        "contentType": "audio/mp4",
+        "contentLength": 13057135,
+        "remoteSeek": {
+          "seconds": 120,
+          "status": "passed"
+        }
+      },
+      "codec": "aac",
+      "container": "mov,mp4,m4a,3gp,3g2,mj2",
+      "durationSeconds": 1248.397007,
+      "durationDeltaSeconds": 0.39700700000003053,
+      "lastPacketDurationSeconds": 1248.397007,
+      "fullDecode": true,
+      "storage": "vercel-blob"
+    },
+    {
+      "chapterNumber": 14,
+      "expectedTitle": "14_第 14 章｜從一個 Agent 到多個 Agent：共用什麼，保留什麼差異？",
+      "status": "passed",
+      "production": {
+        "status": 200,
+        "contentType": "audio/mp4",
+        "contentLength": 8994157,
+        "remoteSeek": {
+          "seconds": 120,
+          "status": "passed"
+        }
+      },
+      "codec": "aac",
+      "container": "mov,mp4,m4a,3gp,3g2,mj2",
+      "durationSeconds": 857.048005,
+      "durationDeltaSeconds": 0.048004999999989195,
+      "lastPacketDurationSeconds": 857.048004,
+      "fullDecode": true,
+      "storage": "vercel-blob"
+    },
+    {
+      "chapterNumber": 15,
+      "expectedTitle": "15_第 15 章｜什麼時候不該做本體？把成本與替代方案算進來",
+      "status": "passed",
+      "production": {
+        "status": 200,
+        "contentType": "audio/mp4",
+        "contentLength": 9288412,
+        "remoteSeek": {
+          "seconds": 120,
+          "status": "passed"
+        }
+      },
+      "codec": "aac",
+      "container": "mov,mp4,m4a,3gp,3g2,mj2",
+      "durationSeconds": 884.239002,
+      "durationDeltaSeconds": 0.2390020000000277,
+      "lastPacketDurationSeconds": 884.239002,
+      "fullDecode": true,
+      "storage": "vercel-blob"
+    },
+    {
+      "chapterNumber": 16,
+      "expectedTitle": "16_第 16 章｜從讀懂到教會別人：完成你的企業 AI 設計提案",
+      "status": "passed",
+      "production": {
+        "status": 200,
+        "contentType": "audio/mp4",
+        "contentLength": 8884885,
+        "remoteSeek": {
+          "seconds": 120,
+          "status": "passed"
+        }
+      },
+      "codec": "aac",
+      "container": "mov,mp4,m4a,3gp,3g2,mj2",
+      "durationSeconds": 846.413991,
+      "durationDeltaSeconds": 0.41399100000001,
+      "lastPacketDurationSeconds": 846.413991,
+      "fullDecode": true,
+      "storage": "vercel-blob"
+    }
+  ]
+}

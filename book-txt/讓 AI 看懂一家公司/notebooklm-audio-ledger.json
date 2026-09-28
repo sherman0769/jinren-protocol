@@ -6,7 +6,7 @@
   "expectedChapterCount": 16,
   "authorization": "2026-09-28 user explicitly requested full NotebookLM generation/download/ebook production release",
   "createdAt": "2026-09-28T09:29:41.279836+00:00",
-  "status": "selected_audio_locally_validated_production_pending",
+  "status": "complete",
   "generationFormat": "深入探索",
   "language": "中文（繁體）",
   "preflight": {
@@ -2489,7 +2489,7 @@
       }
     ]
   },
-  "updatedAt": "2026-09-28T11:28:41.186Z",
+  "updatedAt": "2026-09-28T11:45:44.226554+00:00",
   "downloadCompatibility": {
     "issue": "Chrome returned a .crdownload path that was renamed on completion; first transaction is not media-validated.",
     "resolution": "Retain first file; one repeat download of the same verified card using native download-completion event before controller set-difference.",
@@ -2533,7 +2533,7 @@
         "blobPathname": "books/let-ai-understand-a-company/audio/01_第 1 章｜資料都在，AI 為什麼還是不懂這家公司？.m4a",
         "blobEtag": "\"82354b0acd7ee5fe55a30b568b8e0123-1\"",
         "blobHeadVerified": true,
-        "blobRemoteSeekVerified": false
+        "blobRemoteSeekVerified": true
       },
       {
         "chapterNumber": 2,
@@ -2564,7 +2564,7 @@
         "blobPathname": "books/let-ai-understand-a-company/audio/02_第 2 章｜本體這個名字，到底在說什麼？.m4a",
         "blobEtag": "\"ca09f5a343309f5bc620fa42e5ba9c68-2\"",
         "blobHeadVerified": true,
-        "blobRemoteSeekVerified": false
+        "blobRemoteSeekVerified": true
       },
       {
         "chapterNumber": 3,
@@ -2595,7 +2595,7 @@
         "blobPathname": "books/let-ai-understand-a-company/audio/03_第 3 章｜把人、事、物說清楚：類別、個體與關係.m4a",
         "blobEtag": "\"25a22173afa491b88626b5f1e7d4be4c-2\"",
         "blobHeadVerified": true,
-        "blobRemoteSeekVerified": false
+        "blobRemoteSeekVerified": true
       },
       {
         "chapterNumber": 4,
@@ -2626,7 +2626,7 @@
         "blobPathname": "books/let-ai-understand-a-company/audio/04_第 4 章｜資料庫、分類表、知識圖譜與語意層，誰做什麼？.m4a",
         "blobEtag": "\"b7394cc16b9a9de964629153217b3ff5-2\"",
         "blobHeadVerified": true,
-        "blobRemoteSeekVerified": false
+        "blobRemoteSeekVerified": true
       },
       {
         "chapterNumber": 5,
@@ -2657,7 +2657,7 @@
         "blobPathname": "books/let-ai-understand-a-company/audio/05_第 5 章｜先問什麼要被回答，再決定要建什麼.m4a",
         "blobEtag": "\"71285703d16fca255020a75b826870b5-2\"",
         "blobHeadVerified": true,
-        "blobRemoteSeekVerified": false
+        "blobRemoteSeekVerified": true
       },
       {
         "chapterNumber": 6,
@@ -2688,7 +2688,7 @@
         "blobPathname": "books/let-ai-understand-a-company/audio/06_第 6 章｜一起做出第一張可用的企業概念模型.m4a",
         "blobEtag": "\"4861ef824f1524e28391e470af58a423-2\"",
         "blobHeadVerified": true,
-        "blobRemoteSeekVerified": false
+        "blobRemoteSeekVerified": true
       },
       {
         "chapterNumber": 7,
@@ -2718,7 +2718,7 @@
         "blobPathname": "books/let-ai-understand-a-company/audio/07_第 7 章｜同一個人、不同時間：讓模型接上可信資料.m4a",
         "blobEtag": "\"d06c6ee4cb92c2c299cf0a9b7fe7285d-2\"",
         "blobHeadVerified": true,
-        "blobRemoteSeekVerified": false
+        "blobRemoteSeekVerified": true
       },
       {
         "chapterNumber": 8,
@@ -2748,7 +2748,7 @@
         "blobPathname": "books/let-ai-understand-a-company/audio/08_第 8 章｜規則寫下來，不代表系統就會遵守.m4a",
         "blobEtag": "\"f678c96688002d995c37e8d8d1e5395b-2\"",
         "blobHeadVerified": true,
-        "blobRemoteSeekVerified": false
+        "blobRemoteSeekVerified": true
       },
       {
         "chapterNumber": 9,
@@ -2779,7 +2779,7 @@
         "blobPathname": "books/let-ai-understand-a-company/audio/09_第 9 章｜本體遇上大語言模型：怎麼找，怎麼答，怎麼有依據.m4a",
         "blobEtag": "\"09277877ab348da8402d8c676f5f4334-2\"",
         "blobHeadVerified": true,
-        "blobRemoteSeekVerified": false
+        "blobRemoteSeekVerified": true
       },
       {
         "chapterNumber": 10,
@@ -2809,7 +2809,7 @@
         "blobPathname": "books/let-ai-understand-a-company/audio/10_第 10 章｜圖譜真的比較好嗎？把 GraphRAG 放回適合的位置.m4a",
         "blobEtag": "\"7f88e38de10d9680a1596572f9fb7e44-2\"",
         "blobHeadVerified": true,
-        "blobRemoteSeekVerified": false
+        "blobRemoteSeekVerified": true
       },
       {
         "chapterNumber": 11,
@@ -2840,7 +2840,7 @@
         "blobPathname": "books/let-ai-understand-a-company/audio/11_第 11 章｜讓 Agent 接上企業：情境、工具與 MCP 的分工.m4a",
         "blobEtag": "\"418cb1044b8a2967bd60c2f707a4378e-2\"",
         "blobHeadVerified": true,
-        "blobRemoteSeekVerified": false
+        "blobRemoteSeekVerified": true
       },
       {
         "chapterNumber": 12,
@@ -2871,7 +2871,7 @@
         "blobPathname": "books/let-ai-understand-a-company/audio/12_第 12 章｜AI 能提出方案，誰允許它真正動手？.m4a",
         "blobEtag": "\"c031633881efc8646559c6dbcddd4207-2\"",
         "blobHeadVerified": true,
-        "blobRemoteSeekVerified": false
+        "blobRemoteSeekVerified": true
       },
       {
         "chapterNumber": 13,
@@ -2901,7 +2901,7 @@
         "blobPathname": "books/let-ai-understand-a-company/audio/13_第 13 章｜讓 AI 幫忙建本體，也要有人負責修正它.m4a",
         "blobEtag": "\"18976fe3852e6f489e66f9d3619ac2e8-2\"",
         "blobHeadVerified": true,
-        "blobRemoteSeekVerified": false
+        "blobRemoteSeekVerified": true
       },
       {
         "chapterNumber": 14,
@@ -2931,7 +2931,7 @@
         "blobPathname": "books/let-ai-understand-a-company/audio/14_第 14 章｜從一個 Agent 到多個 Agent：共用什麼，保留什麼差異？.m4a",
         "blobEtag": "\"bb5a36f0a763fecd8259c48ea979b363-2\"",
         "blobHeadVerified": true,
-        "blobRemoteSeekVerified": false
+        "blobRemoteSeekVerified": true
       },
       {
         "chapterNumber": 15,
@@ -2961,7 +2961,7 @@
         "blobPathname": "books/let-ai-understand-a-company/audio/15_第 15 章｜什麼時候不該做本體？把成本與替代方案算進來.m4a",
         "blobEtag": "\"4f1e4e3c76ad6bf4bcb44e9a356e6455-2\"",
         "blobHeadVerified": true,
-        "blobRemoteSeekVerified": false
+        "blobRemoteSeekVerified": true
       },
       {
         "chapterNumber": 16,
@@ -2991,9 +2991,10 @@
         "blobPathname": "books/let-ai-understand-a-company/audio/16_第 16 章｜從讀懂到教會別人：完成你的企業 AI 設計提案.m4a",
         "blobEtag": "\"84d4e7fbd940a062c7c70749d7d0db63-2\"",
         "blobHeadVerified": true,
-        "blobRemoteSeekVerified": false
+        "blobRemoteSeekVerified": true
       }
-    ]
+    ],
+    "localStagingRetainedAt": "tmp/ontology-validated-audio-release"
   },
   "generationValidation": {
     "status": "complete",
@@ -4649,7 +4650,9 @@
     "lastPacketDurationChecked": true,
     "fullLocalDecodeChecked": true,
     "uniqueFingerprintsChecked": true,
-    "productionRemoteSeekChecked": false
+    "productionRemoteSeekChecked": true,
+    "productionCheckedAudioCount": 16,
+    "productionBaseUrl": "https://jinren-protocol.vercel.app"
   },
   "integrityValidation": {
     "status": "complete",
@@ -4663,13 +4666,21 @@
     "evidence": "book-projects/ontology-book-li-shimin/06_quality/run_20260928_round18/transcode_manifest.json"
   },
   "blobMigrationValidation": {
-    "status": "uploaded-and-applied",
+    "status": "production-verified",
     "provider": "vercel-blob",
     "access": "public",
     "region": "hnd1",
     "checkedAudioCount": 16,
     "failedChapterNumbers": [],
     "exactContentLengthChecked": true,
-    "remoteSeekChecked": false
+    "remoteSeekChecked": true
+  },
+  "productionValidation": {
+    "status": "passed",
+    "checkedAt": "2026-09-28T11:45:44.226554+00:00",
+    "chapterCount": 16,
+    "productionRemoteSeekChecked": true,
+    "baseUrl": "https://jinren-protocol.vercel.app",
+    "evidence": "book-projects/ontology-book-li-shimin/06_quality/run_20260928_round18/production_audio_validation.json"
   }
 }

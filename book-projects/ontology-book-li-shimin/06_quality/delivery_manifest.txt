@@ -48,6 +48,7 @@
 05_execution/acceptance_criteria.md
 05_execution/environment.md
 05_execution/publication_handoff.md
+05_execution/release_receipt.md
 05_execution/task_board.md
 05_execution/templates/chapter_template.md
 05_execution/word_count_method.md
@@ -105,6 +106,11 @@
 06_quality/run_20260928_round18/generation_release_audit.json
 06_quality/run_20260928_round18/local_audio_validation.json
 06_quality/run_20260928_round18/notebooklm_source_observation.json
+06_quality/run_20260928_round18/production_audio_validation.json
+06_quality/run_20260928_round18/production_desktop.png
+06_quality/run_20260928_round18/production_mobile.png
+06_quality/run_20260928_round18/production_podcast_ux.json
+06_quality/run_20260928_round18/production_release.json
 06_quality/run_20260928_round18/selected_transcripts/01_transcript.json
 06_quality/run_20260928_round18/selected_transcripts/02_transcript.json
 06_quality/run_20260928_round18/selected_transcripts/03_transcript.json

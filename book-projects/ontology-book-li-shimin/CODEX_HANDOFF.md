@@ -102,11 +102,13 @@
 
 47. [05_execution/publication_handoff.md](#handoff-section-47)
 
-48. [05_execution/task_board.md](#handoff-section-48)
+48. [05_execution/release_receipt.md](#handoff-section-48)
 
-49. [05_execution/templates/chapter_template.md](#handoff-section-49)
+49. [05_execution/task_board.md](#handoff-section-49)
 
-50. [05_execution/word_count_method.md](#handoff-section-50)
+50. [05_execution/templates/chapter_template.md](#handoff-section-50)
+
+51. [05_execution/word_count_method.md](#handoff-section-51)
 
 
 ---
@@ -271,6 +273,13 @@
 <a id="handoff-section-04"></a>
 
 ## 分項來源：00_project/CHANGELOG.md
+
+## 1.23.0｜2026-09-28｜正式發布驗收
+
+- 41259eb已推送；Git部署dpl_J5YiFGxBFGHvp7SmvFKr3AcZ5hQb為READY，正式網域有16集及新版「本體入門」封面。
+- 全16集正式HEAD精確bytes及遠端seek通過；移出本機staging後再次通過，resume coordinator為16 complete-blob。
+- 指定本書六尺寸、拖曳／續聽／倍速保持／自動及手動換集／電子書入口通過，保存正式手機與Chrome畫面。
+- 代理自審、自動逐字稿、技術解碼、正式播放及真人／實體手機試聽分開記錄。
 
 ## 1.22.0｜2026-09-28
 
@@ -500,15 +509,20 @@ Codex 承接研究協作、專案執行、整編、測試與交付。正式章�
 
 ## 分項來源：00_project/project_status.md
 
-# 專案進度｜2026-09-28｜1.22.0
+# 專案進度｜2026-09-28｜1.23.0
 
-正式正文16／16、整編全書、逐章衍生文字、17 DOCX／259頁Word驗版及出版ZIP v1.0.3完成。封面已突出「本體入門」，本機手機尺寸預覽通過；來源已歸檔 published-books。
+《讓 AI 看懂一家公司》已上架詩塾書院：16章正文、16集NotebookLM Podcast，約4小時35分。封面已加入醒目的「本體入門」。
 
-NotebookLM：一本筆記本、16章來源、36次已接受生成交易＝16集所選音訊＋20份保留未採用候選。16集完成來源／標誌／標題核對、完整自動逐字稿比對及修訂。總長約4小時35分，AAC 80 kbps目標單聲道＋faststart壓縮後173,279,555 bytes。逐集時長、尾端、完整解碼、SHA通過；16個Blob完成上傳、精確大小及遠端跳轉解碼，書目已套用網址。
+- Podcast：https://jinren-protocol.vercel.app/books/let-ai-understand-a-company
+- 電子書：https://jinren-protocol.vercel.app/books/let-ai-understand-a-company/read
+- 正式正文16／16、全書整編、口播／演講／課程文字、17 DOCX／259頁Word驗版、出版ZIP v1.0.3完成。可編輯正式來源仍為chapter_XX_main.md。
+- 一本NotebookLM／16來源；36次已接受生成＝16集正式音訊＋20份保留未採用候選。來源、標誌、標題、逐字稿與音訊SHA對應。
+- 16集壓縮、時長尾端、完整解碼、唯一SHA通過；16 Blob精確大小及正式遠端跳轉解碼通過。移出本機staging後再次驗證通過。
+- lint／build與22交接tests通過。部署READY；六種尺寸、拖曳、90秒續聽、2.5x連播保持倍速、手動換集及電子書入口通過。Chrome另確認2x實際時間前進且無媒體錯誤。
 
-限制：自動逐字稿比對不是人耳逐句試聽、作者或獨立專家審稿；生成對談仍有比喻與較強口語。Podcast以正式章稿TXT生成，不聲稱逐字朗讀另備的口播稿。全書研究限定必要目標段落，未重現論文實驗或實測商業租戶。
+界線：代理章級自審及全篇自動逐字稿比對，不是作者／獨立專家審稿或人耳逐句試聽；手機尺寸瀏覽器測試不是實體手機測試。NotebookLM以章稿TXT生成，不是逐字朗讀另備口播稿。對談仍有生成式比喻與較強口語；名稱、編號及年份的自動轉錄可能有誤。研究查核為必要目標段落，未重現論文或實測商業租戶。
 
-next_task：U-04。正式部署及U-05手機版驗收尚未完成；正式Podcast完成數仍為0。
+交付與證據見05_execution/release_receipt.md。next_task=COMPLETE；沒有未完成的授權發布工作。
 
 
 ---
@@ -4513,18 +4527,65 @@ Podcast 文字稿完成、NotebookLM 卡片完成、本機音訊完成、上架�
 
 ## 目前進度
 
-修訂1.22.0：16章／16集已完成本機與Blob上傳驗證，來源歸檔、書目連結完成；發布前檢查中。正式部署與手機版播放驗收尚未完成。內容比對方式及限制見project_status.md。
+修訂1.23.0：U-01～U-05完成；16章／16集上架、正式Blob及手機尺寸互動驗收通過。交付、證據與未代為宣稱的人工驗收界線見release_receipt.md及project_status.md。
 
 
 ---
 
 <a id="handoff-section-48"></a>
 
+## 分項來源：05_execution/release_receipt.md
+
+# 《讓 AI 看懂一家公司》發布收據
+
+作者李詩民；slug：`let-ai-understand-a-company`。16章正式正文、16集NotebookLM Podcast，合計約4小時35分，音訊173,279,555 bytes。封面已突出「本體入門」。
+
+- [正式Podcast](https://jinren-protocol.vercel.app/books/let-ai-understand-a-company)
+- [電子書](https://jinren-protocol.vercel.app/books/let-ai-understand-a-company/read)
+- [NotebookLM筆記本](https://notebook.google.com/notebook/20c7a48e-8e5e-492d-8be4-400e856b088e)
+
+## 可編輯來源與出版檔案
+
+正式來源仍是`book_project/02_chapters/chapter_XX/chapter_XX_main.md`；全書在`book_project/01_master/full_book.md`。逐章口播稿、演講、投影片提綱及課程文字也保留，NotebookLM音訊直接由正式章稿TXT生成，不聲稱逐字朗讀另備的口播稿。
+
+`book_project/05_exports/`有17個DOCX；259頁原生Word驗版及來源／輸出SHA見docx_manifest.json。
+
+出版包：`../../published-books/讓AI看懂一家公司_出版包_v1.0.3.zip`，5,948,668 bytes，SHA-256 `5b1658bc00de56248bdb75aedc646aef1ee7677bc44dedcd6c0b0d6b81281f1a`。201檔及16章ZIP已解壓比對。這是文字出版包，Podcast由平台逐集下載，沒有宣稱ZIP內含音訊。
+
+TXT與ledger：`../../book-txt/讓 AI 看懂一家公司/`。每章`audio.src`均為公開Vercel Blob網址。本機staging在正式驗證後移至`../../tmp/ontology-validated-audio-release/`，未提交原始音訊二進位檔；原始下載與轉檔備份另保留在tmp內。
+
+## 發布及驗收
+
+內容commit `41259eb58d35dfcfb5419f438155da372bc92813`已推送origin/main。Git自動正式部署`dpl_J5YiFGxBFGHvp7SmvFKr3AcZ5hQb`為READY，沒有重複CLI部署。後續提交僅補交付狀態及驗收證據，最終提交見git log。
+
+lint／build通過（50頁）；交接檢查及22 tests通過。36次連續接受交易＝16集正式音訊＋20份保留未採用候選。來源、標誌、卡片、下載身分、全篇自動逐字稿與原始SHA互相對應，壓縮前後SHA鏈一致。
+
+十六集時長、最後封包、完整解碼、唯一指紋；Blob固定路徑、HTTP 200音訊類型、精確Content-Length及逐集120秒遠端跳轉解碼全部通過。移出本機staging後，`validate:notebooklm-audio`仍為`passed`及`productionRemoteSeekChecked: true`；resume coordinator為16個`complete-blob`。
+
+指定本書正式URL的`verify:podcast-ux`通過六尺寸：1440×900、1366×768、768×1024、390×844、360×640、844×390。控制項不重疊；90秒續聽、2.5x自動換集保速、手動換集、鍵盤拖曳、電子書及無音訊頁面回歸通過。Chrome另以2x播放確認時間前進、readyState=4、media error=null；測試後暫停。
+
+證據在`../06_quality/run_20260928_round18/`：generation_release_audit.json、transcode_manifest.json、blob_manifest.json、production_audio_validation.json、production_podcast_ux.json、production_release.json及production_mobile.png／production_desktop.png。
+
+## 驗收界線
+
+代理書稿自審及全篇自動逐字稿比對，不是作者或獨立專家審稿，也不是人耳逐句試聽。手機尺寸瀏覽器測試不是實體手機測試。NotebookLM仍有生成式比喻與較強口語；名稱、編號、年份的自動转錄可能有誤。來源閱讀層次、未複現論文與未商業租戶實測的限制均保留。
+
+## 優化試行
+
+本輪以音訊SHA綁定全篇自動逐字稿，保留未採用候選，驗證16集所選版本未混入20份淘汰音訊；它不替代人工聽測。函式區域內重新讀取ledger及分段驗證解決了舊閉包狀態回寫問題，恢復依據是既存卡片、接受交易與檔案雜湊。失敗helper沒有升級為固定流程。
+
+先前StrConv轉換樣本失敗，未寫入正式正文，保留逐處人工修訂路徑。建議把「逐字稿與音檔版本綁定」納入往後音訊模板，待使用者另行同意；本輪未修改全域記憶或技能。
+
+
+---
+
+<a id="handoff-section-49"></a>
+
 ## 分項來源：05_execution/task_board.md
 
-# 任務板｜2026-09-28 第二十二輪續作
+# 任務板｜2026-09-28 第二十三輪正式發布
 
-權威進度為 00_project/project_state.json。正式正文 16／16；next_task=U-04。EDITED 是代理章級自審，不等同作者試讀、獨立審稿或出版驗收。最終目標依最新授權延伸至 U-05 手機 Podcast 驗收。
+權威進度為 00_project/project_state.json。正式正文 16／16；next_task=COMPLETE。EDITED 是代理章級自審，不等同作者試讀、獨立審稿或出版驗收。最終目標依最新授權延伸至 U-05 手機 Podcast 驗收。
 
 | 任務 | 現況 | 依賴 | 可驗收產出 |
 |---|---|---|---|
@@ -4545,20 +4606,20 @@ Podcast 文字稿完成、NotebookLM 卡片完成、本機音訊完成、上架�
 | E-13～E-16 | 完成代理自審 | 對應 W | 結構、來源、術語、去重 |
 | D-01～D-16 | 01–16全套文字及NotebookLM音訊完成；未人耳逐句驗收 | 對應 E | Podcast、演講、簡報文字、金句與版本追蹤 |
 | B-01 全書整編 | 完成同源 Markdown／六附錄，正文 74,510 | 十六章 E | 序言、導讀、結語與 full_book.md |
-| Q-01 全書驗收 | 文字與全篇自動逐字稿比對完成；正式播放待驗 | B-01、各 D | 品質、來源、字元與衍生一致性 |
+| Q-01 全書驗收 | 文字與全篇自動逐字稿比對完成；正式播放通過；非人耳逐句驗收 | B-01、各 D | 品質、來源、字元與衍生一致性 |
 | P-01 正式出版包 | 完成 17 DOCX／259 頁驗版、16 章 ZIP／總 ZIP 解壓與 SHA | Q-01 | DOCX、逐章 ZIP、總 ZIP 與解壓驗證 |
 | U-01 書稿匯入及 TXT | 完成本機 16 章／TXT／封面；保留既有 22 書 | P-01 | 匯入預覽、書目、TXT、封面 |
 | U-02 NotebookLM 音訊 | 完成16集所選版本自動逐字稿比對；36次生成，保留20個未採用候選 | U-01 | 單一筆記本、逐章標誌及來源驗證 |
-| U-03 音訊下載與入庫 | 16集下載、整批壓縮、Blob上傳／大小／遠端解碼完成；正式頁面驗證待部署 | U-02 | 全數解碼、時長、SHA、Blob |
-| U-04 正式上架 | 發布前檢查中；已授權 | U-03 | 音訊連結、commit／push、部署 READY |
-| U-05 手機學習驗收 | 未開始；已授權 | U-04 | 正式音訊 HEAD／seek 及本書手機版播放驗收 |
+| U-03 音訊下載與入庫 | 完成16集下載／壓縮／Blob／正式HEAD精確大小與遠端seek | U-02 | 全數解碼、時長、SHA、Blob |
+| U-04 正式上架 | 完成；41259eb推送、Git部署READY | U-03 | 音訊連結、commit／push、部署 READY |
+| U-05 手機學習驗收 | 完成六種尺寸與互動；非實體手機測試 | U-04 | 正式音訊 HEAD／seek 及本書手機版播放驗收 |
 
 按近章問題補研究；全部後半部研究不是前章開始閘門。腳本通過、章稿完成與真正上架可以收聽是不同狀態，逐項記錄。
 
 
 ---
 
-<a id="handoff-section-49"></a>
+<a id="handoff-section-50"></a>
 
 ## 分項來源：05_execution/templates/chapter_template.md
 
@@ -4596,7 +4657,7 @@ Podcast 文字稿完成、NotebookLM 卡片完成、本機音訊完成、上架�
 
 ---
 
-<a id="handoff-section-50"></a>
+<a id="handoff-section-51"></a>
 
 ## 分項來源：05_execution/word_count_method.md
 
@@ -4627,7 +4688,7 @@ Podcast 文字稿完成、NotebookLM 卡片完成、本機音訊完成、上架�
   "date": "2026-09-28",
   "timezone": "Asia/Taipei",
   "handoff_status": "HANDOFF_VALIDATED",
-  "book_status": "AUDIO_PRODUCTION",
+  "book_status": "DELIVERED",
   "plan_status": "EDITORIAL_BASELINE_SET",
   "user_direction_confirmed": true,
   "chapter_count": 16,
@@ -4636,9 +4697,9 @@ Podcast 文字稿完成、NotebookLM 卡片完成、本機音訊完成、上架�
   "book_target_visible_characters": 84000,
   "word_count_is_editorial_budget_not_user_minimum": true,
   "manuscript_chapters_completed": 16,
-  "podcast_episodes_completed": 0,
-  "next_task": "U-04",
-  "next_task_description": "16集內容比對、整批壓縮及Blob上傳／連結完成；發布前檢查後commit／push並驗證正式播放。",
+  "podcast_episodes_completed": 16,
+  "next_task": "COMPLETE",
+  "next_task_description": "16章電子書及16集NotebookLM Podcast已上架詩塾書院，正式環境全音訊與手機尺寸播放驗收通過；不代為宣稱作者試讀、人耳逐句或實體手機試聽。",
   "drafting_policy": "Codex 可在當前已授權模型中逐章寫作，或整編使用者選擇的 Pro 長文；不預設跨產品控制或未授權 API。",
   "chapters": [
     {
@@ -4654,8 +4715,8 @@ Podcast 文字稿完成、NotebookLM 卡片完成、本機音訊完成、上架�
       "editorial_review": "book_project/02_chapters/chapter_01/chapter_01_review.md",
       "author_review_status": "NOT_YET_REVIEWED",
       "manuscript_sha256": "f983039578ef90a099c61a9b85fdfa7103e38caef8bd17c1a690464bef2e85e2",
-      "podcast_status": "NOTEBOOKLM_AUDIO_GENERATED_PRODUCTION_PENDING",
-      "derivatives_status": "TEXT_COMPLETE_NOTEBOOKLM_AUDIO_GENERATED",
+      "podcast_status": "PUBLISHED_PRODUCTION_VERIFIED",
+      "derivatives_status": "TEXT_AND_NOTEBOOKLM_AUDIO_COMPLETE",
       "derivation_file": "book_project/03_podcast/episode_01/derivation.json"
     },
     {
@@ -4671,8 +4732,8 @@ Podcast 文字稿完成、NotebookLM 卡片完成、本機音訊完成、上架�
       "editorial_review": "book_project/02_chapters/chapter_02/chapter_02_review.md",
       "author_review_status": "NOT_YET_REVIEWED",
       "manuscript_sha256": "55e8b4022956728ce36467b2de837d2a9fa63dfc67b9c4ce22ed214b31a45577",
-      "podcast_status": "NOTEBOOKLM_AUDIO_GENERATED_PRODUCTION_PENDING",
-      "derivatives_status": "TEXT_COMPLETE_NOTEBOOKLM_AUDIO_GENERATED",
+      "podcast_status": "PUBLISHED_PRODUCTION_VERIFIED",
+      "derivatives_status": "TEXT_AND_NOTEBOOKLM_AUDIO_COMPLETE",
       "derivation_file": "book_project/03_podcast/episode_02/derivation.json"
     },
     {
@@ -4688,8 +4749,8 @@ Podcast 文字稿完成、NotebookLM 卡片完成、本機音訊完成、上架�
       "editorial_review": "book_project/02_chapters/chapter_03/chapter_03_review.md",
       "author_review_status": "NOT_YET_REVIEWED",
       "manuscript_sha256": "4760c0e82d4d92dd84f48217907aa118871a72a929045a0549f4555ad8cfaa70",
-      "podcast_status": "NOTEBOOKLM_AUDIO_GENERATED_PRODUCTION_PENDING",
-      "derivatives_status": "TEXT_COMPLETE_NOTEBOOKLM_AUDIO_GENERATED",
+      "podcast_status": "PUBLISHED_PRODUCTION_VERIFIED",
+      "derivatives_status": "TEXT_AND_NOTEBOOKLM_AUDIO_COMPLETE",
       "derivation_file": "book_project/03_podcast/episode_03/derivation.json"
     },
     {
@@ -4705,8 +4766,8 @@ Podcast 文字稿完成、NotebookLM 卡片完成、本機音訊完成、上架�
       "editorial_review": "book_project/02_chapters/chapter_04/chapter_04_review.md",
       "author_review_status": "NOT_YET_REVIEWED",
       "manuscript_sha256": "da0adce929d15f65b33a5b22978928d9e136032ee095e747210bb39390b04a97",
-      "podcast_status": "NOTEBOOKLM_AUDIO_GENERATED_PRODUCTION_PENDING",
-      "derivatives_status": "TEXT_COMPLETE_NOTEBOOKLM_AUDIO_GENERATED",
+      "podcast_status": "PUBLISHED_PRODUCTION_VERIFIED",
+      "derivatives_status": "TEXT_AND_NOTEBOOKLM_AUDIO_COMPLETE",
       "derivation_file": "book_project/03_podcast/episode_04/derivation.json"
     },
     {
@@ -4722,8 +4783,8 @@ Podcast 文字稿完成、NotebookLM 卡片完成、本機音訊完成、上架�
       "editorial_review": "book_project/02_chapters/chapter_05/chapter_05_review.md",
       "author_review_status": "NOT_YET_REVIEWED",
       "manuscript_sha256": "9f167adb607eef6b28e97ff6a9ee4e19b614bf6baadbe35d33623ded3e4eafd0",
-      "podcast_status": "NOTEBOOKLM_AUDIO_GENERATED_PRODUCTION_PENDING",
-      "derivatives_status": "TEXT_COMPLETE_NOTEBOOKLM_AUDIO_GENERATED",
+      "podcast_status": "PUBLISHED_PRODUCTION_VERIFIED",
+      "derivatives_status": "TEXT_AND_NOTEBOOKLM_AUDIO_COMPLETE",
       "derivation_file": "book_project/03_podcast/episode_05/derivation.json"
     },
     {
@@ -4739,8 +4800,8 @@ Podcast 文字稿完成、NotebookLM 卡片完成、本機音訊完成、上架�
       "editorial_review": "book_project/02_chapters/chapter_06/chapter_06_review.md",
       "author_review_status": "NOT_YET_REVIEWED",
       "manuscript_sha256": "63c2742f1d323bad746e0b7e9b9e81f4802e5df3718bb1c2df25fc102097f261",
-      "podcast_status": "NOTEBOOKLM_AUDIO_GENERATED_PRODUCTION_PENDING",
-      "derivatives_status": "TEXT_COMPLETE_NOTEBOOKLM_AUDIO_GENERATED",
+      "podcast_status": "PUBLISHED_PRODUCTION_VERIFIED",
+      "derivatives_status": "TEXT_AND_NOTEBOOKLM_AUDIO_COMPLETE",
       "derivation_file": "book_project/03_podcast/episode_06/derivation.json"
     },
     {
@@ -4756,8 +4817,8 @@ Podcast 文字稿完成、NotebookLM 卡片完成、本機音訊完成、上架�
       "editorial_review": "book_project/02_chapters/chapter_07/chapter_07_review.md",
       "author_review_status": "NOT_YET_REVIEWED",
       "manuscript_sha256": "6aa2f562eb01f2561b1aa30978b76a71ec65cbefbe362f2beb5ab81709d58706",
-      "podcast_status": "NOTEBOOKLM_AUDIO_GENERATED_PRODUCTION_PENDING",
-      "derivatives_status": "TEXT_COMPLETE_NOTEBOOKLM_AUDIO_GENERATED",
+      "podcast_status": "PUBLISHED_PRODUCTION_VERIFIED",
+      "derivatives_status": "TEXT_AND_NOTEBOOKLM_AUDIO_COMPLETE",
       "derivation_file": "book_project/03_podcast/episode_07/derivation.json"
     },
     {
@@ -4773,8 +4834,8 @@ Podcast 文字稿完成、NotebookLM 卡片完成、本機音訊完成、上架�
       "editorial_review": "book_project/02_chapters/chapter_08/chapter_08_review.md",
       "author_review_status": "NOT_YET_REVIEWED",
       "manuscript_sha256": "883bda0441cd8c5b1fef5acca1ed204e42df026e6de0bc7e6e9df1c647ad128a",
-      "podcast_status": "NOTEBOOKLM_AUDIO_GENERATED_PRODUCTION_PENDING",
-      "derivatives_status": "TEXT_COMPLETE_NOTEBOOKLM_AUDIO_GENERATED",
+      "podcast_status": "PUBLISHED_PRODUCTION_VERIFIED",
+      "derivatives_status": "TEXT_AND_NOTEBOOKLM_AUDIO_COMPLETE",
       "derivation_file": "book_project/03_podcast/episode_08/derivation.json"
     },
     {
@@ -4790,8 +4851,8 @@ Podcast 文字稿完成、NotebookLM 卡片完成、本機音訊完成、上架�
       "editorial_review": "book_project/02_chapters/chapter_09/chapter_09_review.md",
       "author_review_status": "NOT_YET_REVIEWED",
       "manuscript_sha256": "3f4122a2eb9c6d6f2a6daa39d87208d41722370f54b0244c291edd9c04c29fd9",
-      "podcast_status": "NOTEBOOKLM_AUDIO_GENERATED_PRODUCTION_PENDING",
-      "derivatives_status": "TEXT_COMPLETE_NOTEBOOKLM_AUDIO_GENERATED",
+      "podcast_status": "PUBLISHED_PRODUCTION_VERIFIED",
+      "derivatives_status": "TEXT_AND_NOTEBOOKLM_AUDIO_COMPLETE",
       "derivation_file": "book_project/03_podcast/episode_09/derivation.json"
     },
     {
@@ -4807,8 +4868,8 @@ Podcast 文字稿完成、NotebookLM 卡片完成、本機音訊完成、上架�
       "editorial_review": "book_project/02_chapters/chapter_10/chapter_10_review.md",
       "author_review_status": "NOT_YET_REVIEWED",
       "manuscript_sha256": "18f1f5ffeb1d82b416a4f30f96cdc72553e5b60029772a9d8750563624e0727b",
-      "podcast_status": "NOTEBOOKLM_AUDIO_GENERATED_PRODUCTION_PENDING",
-      "derivatives_status": "TEXT_COMPLETE_NOTEBOOKLM_AUDIO_GENERATED",
+      "podcast_status": "PUBLISHED_PRODUCTION_VERIFIED",
+      "derivatives_status": "TEXT_AND_NOTEBOOKLM_AUDIO_COMPLETE",
       "derivation_file": "book_project/03_podcast/episode_10/derivation.json"
     },
     {
@@ -4824,8 +4885,8 @@ Podcast 文字稿完成、NotebookLM 卡片完成、本機音訊完成、上架�
       "editorial_review": "book_project/02_chapters/chapter_11/chapter_11_review.md",
       "author_review_status": "NOT_YET_REVIEWED",
       "manuscript_sha256": "78904e58bc6ad098ea60845493c5c8e814dd2754df8a71a3f6b1b119a8a7d42a",
-      "podcast_status": "NOTEBOOKLM_AUDIO_GENERATED_PRODUCTION_PENDING",
-      "derivatives_status": "TEXT_COMPLETE_NOTEBOOKLM_AUDIO_GENERATED",
+      "podcast_status": "PUBLISHED_PRODUCTION_VERIFIED",
+      "derivatives_status": "TEXT_AND_NOTEBOOKLM_AUDIO_COMPLETE",
       "derivation_file": "book_project/03_podcast/episode_11/derivation.json"
     },
     {
@@ -4841,8 +4902,8 @@ Podcast 文字稿完成、NotebookLM 卡片完成、本機音訊完成、上架�
       "editorial_review": "book_project/02_chapters/chapter_12/chapter_12_review.md",
       "author_review_status": "NOT_YET_REVIEWED",
       "manuscript_sha256": "9e624b8c405e0fd3b3917348cc0289c4579d5e0fbf2bb029bd0d9153d70d9175",
-      "podcast_status": "NOTEBOOKLM_AUDIO_GENERATED_PRODUCTION_PENDING",
-      "derivatives_status": "TEXT_COMPLETE_NOTEBOOKLM_AUDIO_GENERATED",
+      "podcast_status": "PUBLISHED_PRODUCTION_VERIFIED",
+      "derivatives_status": "TEXT_AND_NOTEBOOKLM_AUDIO_COMPLETE",
       "derivation_file": "book_project/03_podcast/episode_12/derivation.json"
     },
     {
@@ -4858,8 +4919,8 @@ Podcast 文字稿完成、NotebookLM 卡片完成、本機音訊完成、上架�
       "editorial_review": "book_project/02_chapters/chapter_13/chapter_13_review.md",
       "author_review_status": "NOT_YET_REVIEWED",
       "manuscript_sha256": "2b56455be7ab571b12dc22941a5703c91e199d9484c86828387cb9624f1d7bef",
-      "podcast_status": "NOTEBOOKLM_AUDIO_GENERATED_PRODUCTION_PENDING",
-      "derivatives_status": "TEXT_COMPLETE_NOTEBOOKLM_AUDIO_GENERATED",
+      "podcast_status": "PUBLISHED_PRODUCTION_VERIFIED",
+      "derivatives_status": "TEXT_AND_NOTEBOOKLM_AUDIO_COMPLETE",
       "derivation_file": "book_project/03_podcast/episode_13/derivation.json"
     },
     {
@@ -4875,8 +4936,8 @@ Podcast 文字稿完成、NotebookLM 卡片完成、本機音訊完成、上架�
       "editorial_review": "book_project/02_chapters/chapter_14/chapter_14_review.md",
       "author_review_status": "NOT_YET_REVIEWED",
       "manuscript_sha256": "d533baf1996a1348da673a604e19dea85b506e3fba32b3e97be10ed238ab1722",
-      "podcast_status": "NOTEBOOKLM_AUDIO_GENERATED_PRODUCTION_PENDING",
-      "derivatives_status": "TEXT_COMPLETE_NOTEBOOKLM_AUDIO_GENERATED",
+      "podcast_status": "PUBLISHED_PRODUCTION_VERIFIED",
+      "derivatives_status": "TEXT_AND_NOTEBOOKLM_AUDIO_COMPLETE",
       "derivation_file": "book_project/03_podcast/episode_14/derivation.json"
     },
     {
@@ -4892,8 +4953,8 @@ Podcast 文字稿完成、NotebookLM 卡片完成、本機音訊完成、上架�
       "editorial_review": "book_project/02_chapters/chapter_15/chapter_15_review.md",
       "author_review_status": "NOT_YET_REVIEWED",
       "manuscript_sha256": "d846d3566581a338751a67e5857aa45202f9567f239cfefd102cc3fcbd1c601a",
-      "podcast_status": "NOTEBOOKLM_AUDIO_GENERATED_PRODUCTION_PENDING",
-      "derivatives_status": "TEXT_COMPLETE_NOTEBOOKLM_AUDIO_GENERATED",
+      "podcast_status": "PUBLISHED_PRODUCTION_VERIFIED",
+      "derivatives_status": "TEXT_AND_NOTEBOOKLM_AUDIO_COMPLETE",
       "derivation_file": "book_project/03_podcast/episode_15/derivation.json"
     },
     {
@@ -4909,8 +4970,8 @@ Podcast 文字稿完成、NotebookLM 卡片完成、本機音訊完成、上架�
       "editorial_review": "book_project/02_chapters/chapter_16/chapter_16_review.md",
       "author_review_status": "NOT_YET_REVIEWED",
       "manuscript_sha256": "712781058d281e45bc04e97151e3db6b2f7d080d8cb04a6e14617dc33d8aeae1",
-      "podcast_status": "NOTEBOOKLM_AUDIO_GENERATED_PRODUCTION_PENDING",
-      "derivatives_status": "TEXT_COMPLETE_NOTEBOOKLM_AUDIO_GENERATED",
+      "podcast_status": "PUBLISHED_PRODUCTION_VERIFIED",
+      "derivatives_status": "TEXT_AND_NOTEBOOKLM_AUDIO_COMPLETE",
       "derivation_file": "book_project/03_podcast/episode_16/derivation.json"
     }
   ],
@@ -4927,7 +4988,7 @@ Podcast 文字稿完成、NotebookLM 卡片完成、本機音訊完成、上架�
     "R-07": "COMPLETED_ALTERNATIVES_AND_TEST_DESIGN_NO_COST_EXPERIMENT",
     "R-08": "CHAPTERS_01_16_SELF_REVIEWED"
   },
-  "working_revision": "1.22.0",
+  "working_revision": "1.23.0",
   "first_reader": "李詩民",
   "manuscript_completion_scope": "十六章 EDITED 為代理章級編輯完成；未經作者／獨立專家／實際朗讀驗收。",
   "body_visible_characters_actual": 70573,
@@ -4935,8 +4996,8 @@ Podcast 文字稿完成、NotebookLM 卡片完成、本機音訊完成、上架�
     "full_book": "ASSEMBLED_FROM_CANONICAL_SOURCES",
     "docx": "PASSED_WORD_RENDER_ALL_PAGES",
     "publication_zip": "CREATED_EXTRACTED_HASH_VERIFIED",
-    "audio": "16_BLOB_UPLOADED_PRODUCTION_PENDING",
-    "website_publication": "LOCAL_COMPLETE_DEPLOYMENT_PENDING"
+    "audio": "16_PRODUCTION_VERIFIED_BLOB_EPISODES",
+    "website_publication": "PRODUCTION_READY_MOBILE_VIEWPORT_VERIFIED"
   },
   "intake": {
     "source": "../../published-books/Ontology_Codex_Handoff_v1.0.0.zip",
@@ -4970,9 +5031,9 @@ Podcast 文字稿完成、NotebookLM 卡片完成、本機音訊完成、上架�
   "release_tasks": {
     "U-01": "COMPLETED_LOCAL_IMPORT_TXT_COVER",
     "U-02": "COMPLETED_16_SELECTED_20_REJECTED_RETAINED",
-    "U-03": "BLOB_UPLOADED_AND_APPLIED_PRODUCTION_VERIFY_PENDING",
-    "U-04": "PRE_DEPLOYMENT_CHECKS",
-    "U-05": "NOT_STARTED"
+    "U-03": "COMPLETE_BLOB_PRODUCTION_VERIFIED",
+    "U-04": "COMPLETE_PUSHED_GIT_DEPLOY_READY",
+    "U-05": "COMPLETE_PRODUCTION_BROWSER_MOBILE_VIEWPORT_NOT_PHYSICAL_PHONE"
   },
   "research_records": [
     "book_project/00_research/ch01_04_evidence.md",
@@ -4996,7 +5057,7 @@ Podcast 文字稿完成、NotebookLM 卡片完成、本機音訊完成、上架�
     "rollback": "no production file changed; retained explicit editorial corrections",
     "adopted": false
   },
-  "quality_status": "TEXT_AND_TRANSCRIPT_REVIEW_COMPLETE_WITH_LIMITS",
+  "quality_status": "AGENT_TEXT_TRANSCRIPT_REVIEW_AND_PRODUCTION_VALIDATION_COMPLETE",
   "publication_package": {
     "bytes": 5948668,
     "sha256": "5b1658bc00de56248bdb75aedc646aef1ee7677bc44dedcd6c0b0d6b81281f1a",
@@ -5011,9 +5072,9 @@ Podcast 文字稿完成、NotebookLM 卡片完成、本機音訊完成、上架�
     "accepted_generation_count": 36,
     "identity_verified_count": 16,
     "downloaded_validated_count": 16,
-    "production_audio_count": 0,
+    "production_audio_count": 16,
     "ledger": "../../book-txt/讓 AI 看懂一家公司/notebooklm-audio-ledger.json",
-    "content_review": "16_selected_versions_transcript_reviewed_with_limits",
+    "content_review": "16_transcripts_reviewed_with_limits_no_human_full_listening",
     "revision_required_chapters": [
       1,
       2,
@@ -5037,9 +5098,57 @@ Podcast 文字稿完成、NotebookLM 卡片完成、本機音訊完成、上架�
   "cover_revision": {
     "keyword": "本體入門",
     "sha256": "6ca1b9d7a8b4ab3f96d73297eb3674a28c2244add65acdf3fdd29b4b2bec8c14",
-    "status": "local_mobile_preview_verified_production_pending"
+    "status": "production_verified"
   },
-  "podcast_generation_source": "NotebookLM uses canonical chapter TXT; prepared episode scripts remain separately editable and are not claimed as verbatim narration."
+  "podcast_generation_source": "NotebookLM uses canonical chapter TXT; prepared episode scripts remain separately editable and are not claimed as verbatim narration.",
+  "production_release": {
+    "deploymentId": "dpl_J5YiFGxBFGHvp7SmvFKr3AcZ5hQb",
+    "url": "https://jinren-protocol.vercel.app",
+    "deploymentUrl": "https://jinren-protocol-izwf06edk-sherman0769s-projects.vercel.app",
+    "commit": "41259eb58d35dfcfb5419f438155da372bc92813",
+    "status": "READY",
+    "source": "git",
+    "verifiedAt": "2026-09-28T11:45:44.226554+00:00",
+    "bookTitle": "讓 AI 看懂一家公司",
+    "slug": "let-ai-understand-a-company",
+    "podcastUrl": "https://jinren-protocol.vercel.app/books/let-ai-understand-a-company",
+    "readerUrl": "https://jinren-protocol.vercel.app/books/let-ai-understand-a-company/read",
+    "chapterCount": 16,
+    "audioCount": 16,
+    "durationSeconds": 16514.491045,
+    "bytes": 173279555,
+    "audioValidation": "production_audio_validation.json",
+    "uxValidation": "production_podcast_ux.json",
+    "mobileViewportsVerified": true,
+    "physicalPhoneTested": false,
+    "humanFullListening": false,
+    "coverKeyword": "本體入門",
+    "visibleChromePlayback": {
+      "verified": true,
+      "playbackRate": 2,
+      "audioReadyState": 4,
+      "error": null,
+      "currentTimeObserved": 33.528326,
+      "viewport": "desktop; mobile validation separately in required UX script"
+    },
+    "localStagingArchive": "tmp/ontology-validated-audio-release",
+    "lint": "passed",
+    "build": "passed; 50 pages",
+    "handoffTests": "22 passed",
+    "existing22BooksUnchanged": true
+  },
+  "additional_optimization_trials": [
+    {
+      "method": "SHA-bound full automatic transcript review and retained rejected candidates",
+      "result": "16 selected recordings map to reviewed transcripts and compressed hashes; 20 rejected candidates excluded",
+      "adopted_as_global_standard": false
+    },
+    {
+      "method": "function-local fresh ledger writes and bounded download validation",
+      "result": "stale closure recovery verified against UI IDs, queue receipts and media hashes; failed helper not retained as a standard",
+      "adopted_as_global_standard": false
+    }
+  ]
 }
 ```
 
