@@ -1,0 +1,70 @@
+{
+  "schemaVersion": 1,
+  "bookSlug": "let-ai-understand-a-company",
+  "files": [
+    {
+      "filename": "01_第 1 章｜資料都在，AI 為什麼還是不懂這家公司？.txt",
+      "sha256": "3167863508743287b5461b266a0aff74d88eb72020667f9be67c77f43ddea848"
+    },
+    {
+      "filename": "02_第 2 章｜本體這個名字，到底在說什麼？.txt",
+      "sha256": "007fc44c80744297491c5f0f547358855e57828a1ad62f23e148942a4dda099d"
+    },
+    {
+      "filename": "03_第 3 章｜把人、事、物說清楚：類別、個體與關係.txt",
+      "sha256": "39fed9942b64c83b4c077c2a41c457f505045557b6792a95a084a601c2932ef9"
+    },
+    {
+      "filename": "04_第 4 章｜資料庫、分類表、知識圖譜與語意層，誰做什麼？.txt",
+      "sha256": "eee3c4718acd750da2e263889fe7237d54add50fafa9b69b0817e4a4e7e3af96"
+    },
+    {
+      "filename": "05_第 5 章｜先問什麼要被回答，再決定要建什麼.txt",
+      "sha256": "bd156ef500719a75824a646d0448d3e4eddd3d201d708d6c96810d99ed9c98a6"
+    },
+    {
+      "filename": "06_第 6 章｜一起做出第一張可用的企業概念模型.txt",
+      "sha256": "088c4b576aa9a89efe0111746e30e1cd9d14f64a2028e996bc571cfb40e878dc"
+    },
+    {
+      "filename": "07_第 7 章｜同一個人、不同時間：讓模型接上可信資料.txt",
+      "sha256": "e7b2eb662181a2102e83c8bcde4ba6d7555f3f34df43acee71dcd787c7bae804"
+    },
+    {
+      "filename": "08_第 8 章｜規則寫下來，不代表系統就會遵守.txt",
+      "sha256": "662e107c903faf5d598fa27e2bfaad42ce8026dec0f6ef3f1cd2d86a24ebb6fb"
+    },
+    {
+      "filename": "09_第 9 章｜本體遇上大語言模型：怎麼找，怎麼答，怎麼有依據.txt",
+      "sha256": "e24a808dd302740407f6544b4f36c1604a75b6b7b89a55e358b8b31768c9475b"
+    },
+    {
+      "filename": "10_第 10 章｜圖譜真的比較好嗎？把 GraphRAG 放回適合的位置.txt",
+      "sha256": "3b1ce37286ea8e68dee106f1d1972d297a5f2f69cec085bbb85eeff07c2a76ff"
+    },
+    {
+      "filename": "11_第 11 章｜讓 Agent 接上企業：情境、工具與 MCP 的分工.txt",
+      "sha256": "14ec44639615e12aff30765c84302bf633666fdc87fc1b6f1d0dcdde8afb8d52"
+    },
+    {
+      "filename": "12_第 12 章｜AI 能提出方案，誰允許它真正動手？.txt",
+      "sha256": "bc62fd297c174ff3e066ff24d8e23e8cd00b4bb0f2c6886bc14d161c3f342d0a"
+    },
+    {
+      "filename": "13_第 13 章｜讓 AI 幫忙建本體，也要有人負責修正它.txt",
+      "sha256": "782d32645ff9f99c72468727d31c5548321b4d1d74cf5081c9621439edcdfd20"
+    },
+    {
+      "filename": "14_第 14 章｜從一個 Agent 到多個 Agent：共用什麼，保留什麼差異？.txt",
+      "sha256": "67e0c64aaa1885e80a1e3878418cf4023deea09ceaa3dbb121870f1ba780cbd4"
+    },
+    {
+      "filename": "15_第 15 章｜什麼時候不該做本體？把成本與替代方案算進來.txt",
+      "sha256": "f9188dec1df2defd9fb6919a37883a834ac87028b736b75a7aa3e49a1c096f6b"
+    },
+    {
+      "filename": "16_第 16 章｜從讀懂到教會別人：完成你的企業 AI 設計提案.txt",
+      "sha256": "734c218ae021d62ecc29d4c5bd58d7e53fb5fc9f120fdfd2e9490bb5d92affe5"
+    }
+  ]
+}

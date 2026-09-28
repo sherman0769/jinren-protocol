@@ -1,0 +1,116 @@
+{
+  "status": "passed",
+  "documents": [
+    {
+      "file": "chapter_01_main.docx",
+      "pages": 6,
+      "blocks": 58,
+      "hyperlinks": 3
+    },
+    {
+      "file": "chapter_02_main.docx",
+      "pages": 7,
+      "blocks": 62,
+      "hyperlinks": 6
+    },
+    {
+      "file": "chapter_03_main.docx",
+      "pages": 6,
+      "blocks": 52,
+      "hyperlinks": 3
+    },
+    {
+      "file": "chapter_04_main.docx",
+      "pages": 6,
+      "blocks": 60,
+      "hyperlinks": 5
+    },
+    {
+      "file": "chapter_05_main.docx",
+      "pages": 7,
+      "blocks": 61,
+      "hyperlinks": 2
+    },
+    {
+      "file": "chapter_06_main.docx",
+      "pages": 6,
+      "blocks": 56,
+      "hyperlinks": 3
+    },
+    {
+      "file": "chapter_07_main.docx",
+      "pages": 7,
+      "blocks": 62,
+      "hyperlinks": 5
+    },
+    {
+      "file": "chapter_08_main.docx",
+      "pages": 7,
+      "blocks": 66,
+      "hyperlinks": 5
+    },
+    {
+      "file": "chapter_09_main.docx",
+      "pages": 7,
+      "blocks": 63,
+      "hyperlinks": 2
+    },
+    {
+      "file": "chapter_10_main.docx",
+      "pages": 6,
+      "blocks": 58,
+      "hyperlinks": 3
+    },
+    {
+      "file": "chapter_11_main.docx",
+      "pages": 6,
+      "blocks": 63,
+      "hyperlinks": 5
+    },
+    {
+      "file": "chapter_12_main.docx",
+      "pages": 7,
+      "blocks": 68,
+      "hyperlinks": 6
+    },
+    {
+      "file": "chapter_13_main.docx",
+      "pages": 6,
+      "blocks": 65,
+      "hyperlinks": 7
+    },
+    {
+      "file": "chapter_14_main.docx",
+      "pages": 6,
+      "blocks": 63,
+      "hyperlinks": 5
+    },
+    {
+      "file": "chapter_15_main.docx",
+      "pages": 6,
+      "blocks": 66,
+      "hyperlinks": 5
+    },
+    {
+      "file": "chapter_16_main.docx",
+      "pages": 7,
+      "blocks": 73,
+      "hyperlinks": 4
+    },
+    {
+      "file": "full_book.docx",
+      "pages": 156,
+      "blocks": 1930,
+      "hyperlinks": 119
+    }
+  ],
+  "pages": 259,
+  "review_evidence": "../../../../tmp/ontology-docx-render/word-final",
+  "checks": [
+    "all source visible blocks preserved in Word XML",
+    "real hyperlinks retained",
+    "Word open/update/repaginate/export succeeded",
+    "all pages visually checked for missing glyphs clipping and overlap"
+  ],
+  "render_fallback": "LibreOffice unavailable; existing Word used; no installation"
+}

@@ -1,0 +1,5 @@
+{
+  "errors": [],
+  "passed": true,
+  "scope": "offline_fixture_only"
+}

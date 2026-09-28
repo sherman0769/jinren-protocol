@@ -1,0 +1,80 @@
+{
+  "note": "本書朗讀選擇，非語言學發音標準；實際 TTS 發音需以所用引擎測試。",
+  "entries": [
+    {
+      "term": "Ontology",
+      "preferred_spoken_zh": "本體",
+      "note": "必要時再說英文名稱，不強制音譯。"
+    },
+    {
+      "term": "RAG",
+      "preferred_spoken_zh": "檢索增強生成",
+      "note": "中文首次解釋後，可逐字母說 R、A、G；全書統一。"
+    },
+    {
+      "term": "GraphRAG",
+      "preferred_spoken_zh": "圖式檢索增強生成",
+      "note": "不要當成所有圖譜技術的總稱。"
+    },
+    {
+      "term": "Knowledge Graph",
+      "preferred_spoken_zh": "知識圖譜",
+      "note": "口播以中文為主。"
+    },
+    {
+      "term": "OWL",
+      "preferred_spoken_zh": "本體語言",
+      "note": "首次書面標註 OWL，口播不用反覆念英文。"
+    },
+    {
+      "term": "SHACL",
+      "preferred_spoken_zh": "資料驗證語言 SHACL",
+      "note": "優先說明驗證作用，不要求聽眾記縮寫發音。"
+    },
+    {
+      "term": "MCP",
+      "preferred_spoken_zh": "模型情境協定",
+      "note": "需要辨識產品功能時，逐字母說 M、C、P。"
+    },
+    {
+      "term": "LLM",
+      "preferred_spoken_zh": "大語言模型",
+      "note": "不用連續念三個字母。"
+    },
+    {
+      "term": "Agent",
+      "preferred_spoken_zh": "智能體",
+      "note": "首次說是會依目標與回饋選下一步的系統。"
+    },
+    {
+      "term": "API",
+      "preferred_spoken_zh": "程式介面",
+      "note": "必要時逐字母 A、P、I。"
+    },
+    {
+      "term": "Schema",
+      "preferred_spoken_zh": "資料綱要",
+      "note": "本書不混用資料模式與本體。"
+    },
+    {
+      "term": "Grounding",
+      "preferred_spoken_zh": "找得到依據",
+      "note": "按語境補充中文，不硬把所有情境叫接地。"
+    },
+    {
+      "term": "Idempotency",
+      "preferred_spoken_zh": "重試不重複生效",
+      "note": "書面保留冪等性，口播先講效果。"
+    },
+    {
+      "term": "Provenance",
+      "preferred_spoken_zh": "來源沿革",
+      "note": "說清楚資料從哪裡來、怎麼處理過。"
+    },
+    {
+      "term": "Bounded Context",
+      "preferred_spoken_zh": "有邊界的業務語境",
+      "note": "先解釋部門範圍，再提供正式譯名。"
+    }
+  ]
+}

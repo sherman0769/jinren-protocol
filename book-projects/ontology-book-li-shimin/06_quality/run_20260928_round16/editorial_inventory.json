@@ -1,0 +1,98 @@
+{
+  "canonical_quotes_missing": [
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16
+  ],
+  "editorial_flags": [],
+  "all_chapter_sha_match_state": true,
+  "duplicate_long_body_paragraphs": [],
+  "podcast_characters": 58468,
+  "chapters": [
+    {
+      "id": 1,
+      "body": 4212,
+      "podcast": 3652
+    },
+    {
+      "id": 2,
+      "body": 4479,
+      "podcast": 3724
+    },
+    {
+      "id": 3,
+      "body": 4084,
+      "podcast": 3767
+    },
+    {
+      "id": 4,
+      "body": 4540,
+      "podcast": 3649
+    },
+    {
+      "id": 5,
+      "body": 4684,
+      "podcast": 3637
+    },
+    {
+      "id": 6,
+      "body": 4626,
+      "podcast": 3692
+    },
+    {
+      "id": 7,
+      "body": 4840,
+      "podcast": 3634
+    },
+    {
+      "id": 8,
+      "body": 4937,
+      "podcast": 3709
+    },
+    {
+      "id": 9,
+      "body": 4845,
+      "podcast": 3607
+    },
+    {
+      "id": 10,
+      "body": 4130,
+      "podcast": 3632
+    },
+    {
+      "id": 11,
+      "body": 4170,
+      "podcast": 3603
+    },
+    {
+      "id": 12,
+      "body": 4643,
+      "podcast": 3695
+    },
+    {
+      "id": 13,
+      "body": 4096,
+      "podcast": 3631
+    },
+    {
+      "id": 14,
+      "body": 3894,
+      "podcast": 3602
+    },
+    {
+      "id": 15,
+      "body": 3940,
+      "podcast": 3612
+    },
+    {
+      "id": 16,
+      "body": 4453,
+      "podcast": 3622
+    }
+  ]
+}

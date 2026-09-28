@@ -1,0 +1,147 @@
+{
+  "schema_version": "1.0",
+  "case_id": "morning-learning-studio",
+  "fictional": true,
+  "organization": "晨光學習工作室（完全虛構）",
+  "snapshot_id": "SNAP-001",
+  "observed_at": "2026-09-28T09:00:00+08:00",
+  "timezone": "Asia/Taipei",
+  "complete_scopes": [
+    "sessions in this fixture",
+    "enrollments in this fixture"
+  ],
+  "unknown_semantics": "null、未記錄與沒有對應列都不得直接解讀為否；付款快照未宣告完整。",
+  "persons": [
+    {
+      "id": "P001",
+      "name": "林沐安",
+      "roles": [
+        "learner"
+      ]
+    },
+    {
+      "id": "P002",
+      "name": "陳以樂",
+      "roles": [
+        "learner"
+      ]
+    },
+    {
+      "id": "P003",
+      "name": "林沐安",
+      "roles": [
+        "learner"
+      ]
+    },
+    {
+      "id": "P010",
+      "name": "周言青",
+      "roles": [
+        "instructor"
+      ],
+      "employment_relation": "external_contractor"
+    }
+  ],
+  "courses": [
+    {
+      "id": "C101",
+      "title": "AI 基礎應用"
+    }
+  ],
+  "sessions": [
+    {
+      "id": "S101",
+      "course_id": "C101",
+      "starts_at": "2026-10-15T14:00:00+08:00",
+      "capacity": 3,
+      "instructor_id": "P010",
+      "room": "教室 A"
+    },
+    {
+      "id": "S102",
+      "course_id": "C101",
+      "starts_at": "2026-10-17T09:00:00+08:00",
+      "capacity": 2,
+      "instructor_id": "P010",
+      "room": null
+    }
+  ],
+  "enrollments": [
+    {
+      "id": "E001",
+      "person_id": "P001",
+      "session_id": "S101",
+      "status": "confirmed"
+    },
+    {
+      "id": "E002",
+      "person_id": "P002",
+      "session_id": "S101",
+      "status": "confirmed"
+    },
+    {
+      "id": "E003",
+      "person_id": "P003",
+      "session_id": "S101",
+      "status": "waitlisted"
+    },
+    {
+      "id": "E004",
+      "person_id": "P003",
+      "session_id": "S102",
+      "status": "confirmed"
+    },
+    {
+      "id": "E005",
+      "person_id": "P001",
+      "session_id": "S101",
+      "status": "cancelled"
+    }
+  ],
+  "payments": [
+    {
+      "id": "PAY001",
+      "enrollment_id": "E001",
+      "amount": 3000,
+      "currency": "TWD",
+      "status": "settled"
+    },
+    {
+      "id": "PAY002",
+      "enrollment_id": "E004",
+      "amount": 3000,
+      "currency": "TWD",
+      "status": "settled"
+    }
+  ],
+  "policy": {
+    "version": "POL-001",
+    "effective_from": "2026-09-01T00:00:00+08:00",
+    "seat_consuming_statuses": [
+      "confirmed"
+    ],
+    "refund_requires_human_manager_approval": true,
+    "agent_allowed_actions": [
+      "read",
+      "propose"
+    ],
+    "refund_eligibility_policy_defined": false
+  },
+  "expected": {
+    "S101_confirmed": 2,
+    "S101_waitlisted": 1,
+    "S101_available": 1,
+    "S102_available": 1,
+    "same_name_distinct_person_ids": [
+      "P001",
+      "P003"
+    ],
+    "E002_payment_answer": "unknown",
+    "S102_delivery_mode": "unknown",
+    "refund_allowed_without_approval": false
+  },
+  "provenance": {
+    "source": "本書編輯建立的教學測試資料，不來自使用者或真實客戶",
+    "rule": "數字只描述 SNAP-001，不能回答執行時的即時名額"
+  }
+}

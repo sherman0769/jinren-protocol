@@ -1,0 +1,23 @@
+{
+  "checked_at": "2026-09-28T13:51:26.019432+08:00",
+  "source_zip": "D:\\MyGitHub\\漫畫自創作\\books\\Ontology_Codex_Handoff_v1.0.0.zip",
+  "bytes": 235989,
+  "sha256": "3f76a80cd1995f115849dbc347a72158d9f9691739f3596bde4c373b423f585f",
+  "zip_crc_passed": true,
+  "baseline_files_equal_zip": 70,
+  "baseline_handoff_validation": {
+    "scope": "handoff_only",
+    "passed": true,
+    "chapter_briefs": 16,
+    "seed_sources": 26,
+    "terms": 82,
+    "checksums_checked": true,
+    "errors": [],
+    "warnings": [
+      "正式章稿為 0／16；這是交接包，非完整書稿。",
+      "未連網驗證來源可用性，也未自動驗證論點、引用或音訊品質。"
+    ]
+  },
+  "initial_tests_observed_before_writing": 22,
+  "original_preserved": true
+}

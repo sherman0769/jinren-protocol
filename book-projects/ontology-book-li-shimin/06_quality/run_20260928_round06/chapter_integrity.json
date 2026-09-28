@@ -1,0 +1,90 @@
+{
+  "status": "passed",
+  "checks": [
+    {
+      "chapter": 1,
+      "sha256": "f983039578ef90a099c61a9b85fdfa7103e38caef8bd17c1a690464bef2e85e2",
+      "body": 4212
+    },
+    {
+      "chapter": 2,
+      "sha256": "55e8b4022956728ce36467b2de837d2a9fa63dfc67b9c4ce22ed214b31a45577",
+      "body": 4479
+    },
+    {
+      "chapter": 3,
+      "sha256": "4760c0e82d4d92dd84f48217907aa118871a72a929045a0549f4555ad8cfaa70",
+      "body": 4084
+    },
+    {
+      "chapter": 4,
+      "sha256": "da0adce929d15f65b33a5b22978928d9e136032ee095e747210bb39390b04a97",
+      "body": 4540
+    },
+    {
+      "chapter": 5,
+      "sha256": "9f167adb607eef6b28e97ff6a9ee4e19b614bf6baadbe35d33623ded3e4eafd0",
+      "body": 4684
+    },
+    {
+      "chapter": 6,
+      "sha256": "63c2742f1d323bad746e0b7e9b9e81f4802e5df3718bb1c2df25fc102097f261",
+      "body": 4626
+    },
+    {
+      "chapter": 7,
+      "sha256": "6aa2f562eb01f2561b1aa30978b76a71ec65cbefbe362f2beb5ab81709d58706",
+      "body": 4840
+    },
+    {
+      "chapter": 8,
+      "sha256": "883bda0441cd8c5b1fef5acca1ed204e42df026e6de0bc7e6e9df1c647ad128a",
+      "body": 4937
+    },
+    {
+      "chapter": 9,
+      "sha256": "2de60fa42c2becee67220d5ae16ba86c65e689362579f984481a6df5e9bd221e",
+      "body": 4845
+    },
+    {
+      "chapter": 10,
+      "sha256": "266d0d444c978d894eecfd25cb82289061f3588282cc728f9d7ec079db7023d1",
+      "body": 4130
+    },
+    {
+      "chapter": 11,
+      "sha256": "a35fbcb9b77981c096c49d484068b7a9704bb23e6c3369df2f24b27a572a4784",
+      "body": 4170
+    },
+    {
+      "chapter": 12,
+      "sha256": "db1ca9d015fc485bfaa4a6c233a9723673f175cb874766fbd8468525b9ec64ad",
+      "body": 4643
+    },
+    {
+      "chapter": 13,
+      "sha256": "a3fcdc5e98dc49dfc83bd709e66c38a6e6cb59b8061a2192badd0e73a2ead7dd",
+      "body": 4096
+    },
+    {
+      "chapter": 14,
+      "sha256": "0deff607a9e8e05fca3d24d36448b7572e9ebc3ddf003539249b93e87cbe66d0",
+      "body": 3894
+    },
+    {
+      "chapter": 15,
+      "sha256": "a82573b34986cc13b618e90c17e50bb44998c9e8595032bd95d0abfac71bbaf1",
+      "body": 3940
+    },
+    {
+      "chapter": 16,
+      "sha256": "db85559fdb320cd11cba64d49962ed753adb686bc226e9a5cf96ab3564348e83",
+      "body": 4453
+    }
+  ],
+  "total": 70573,
+  "registered_sources": 31,
+  "long_exact_paragraph_duplicates": [],
+  "baseline_scripts_tests_cases_unchanged": true,
+  "scope": "integrity_only_not_quality_or_listening"
+}

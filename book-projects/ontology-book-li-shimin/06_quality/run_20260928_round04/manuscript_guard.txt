@@ -1,0 +1,105 @@
+{
+  "scope": "manuscript_structure_only_not_publication_certification",
+  "chapters_present": 10,
+  "chapters_expected": 16,
+  "chapter_body_visible_characters": 45377,
+  "details": [
+    {
+      "id": 1,
+      "body_visible_characters": 4212,
+      "cjk_characters": 3603,
+      "letters_and_digits_including_cjk": 3772,
+      "punctuation_and_other_visible": 440,
+      "method": "BODY 內移除標記、空白、標題、程式區塊、圖片、網址、引用代號；主計數含標點，另報中文字與字母數字；非英語 word count。"
+    },
+    {
+      "id": 2,
+      "body_visible_characters": 4479,
+      "cjk_characters": 3863,
+      "letters_and_digits_including_cjk": 4023,
+      "punctuation_and_other_visible": 456,
+      "method": "BODY 內移除標記、空白、標題、程式區塊、圖片、網址、引用代號；主計數含標點，另報中文字與字母數字；非英語 word count。"
+    },
+    {
+      "id": 3,
+      "body_visible_characters": 4084,
+      "cjk_characters": 3324,
+      "letters_and_digits_including_cjk": 3654,
+      "punctuation_and_other_visible": 430,
+      "method": "BODY 內移除標記、空白、標題、程式區塊、圖片、網址、引用代號；主計數含標點，另報中文字與字母數字；非英語 word count。"
+    },
+    {
+      "id": 4,
+      "body_visible_characters": 4540,
+      "cjk_characters": 3881,
+      "letters_and_digits_including_cjk": 4104,
+      "punctuation_and_other_visible": 436,
+      "method": "BODY 內移除標記、空白、標題、程式區塊、圖片、網址、引用代號；主計數含標點，另報中文字與字母數字；非英語 word count。"
+    },
+    {
+      "id": 5,
+      "body_visible_characters": 4684,
+      "cjk_characters": 4049,
+      "letters_and_digits_including_cjk": 4231,
+      "punctuation_and_other_visible": 453,
+      "method": "BODY 內移除標記、空白、標題、程式區塊、圖片、網址、引用代號；主計數含標點，另報中文字與字母數字；非英語 word count。"
+    },
+    {
+      "id": 6,
+      "body_visible_characters": 4626,
+      "cjk_characters": 3765,
+      "letters_and_digits_including_cjk": 4176,
+      "punctuation_and_other_visible": 450,
+      "method": "BODY 內移除標記、空白、標題、程式區塊、圖片、網址、引用代號；主計數含標點，另報中文字與字母數字；非英語 word count。"
+    },
+    {
+      "id": 7,
+      "body_visible_characters": 4840,
+      "cjk_characters": 4105,
+      "letters_and_digits_including_cjk": 4385,
+      "punctuation_and_other_visible": 455,
+      "method": "BODY 內移除標記、空白、標題、程式區塊、圖片、網址、引用代號；主計數含標點，另報中文字與字母數字；非英語 word count。"
+    },
+    {
+      "id": 8,
+      "body_visible_characters": 4937,
+      "cjk_characters": 4208,
+      "letters_and_digits_including_cjk": 4466,
+      "punctuation_and_other_visible": 471,
+      "method": "BODY 內移除標記、空白、標題、程式區塊、圖片、網址、引用代號；主計數含標點，另報中文字與字母數字；非英語 word count。"
+    },
+    {
+      "id": 9,
+      "body_visible_characters": 4845,
+      "cjk_characters": 4160,
+      "letters_and_digits_including_cjk": 4365,
+      "punctuation_and_other_visible": 480,
+      "method": "BODY 內移除標記、空白、標題、程式區塊、圖片、網址、引用代號；主計數含標點，另報中文字與字母數字；非英語 word count。"
+    },
+    {
+      "id": 10,
+      "body_visible_characters": 4130,
+      "cjk_characters": 3541,
+      "letters_and_digits_including_cjk": 3704,
+      "punctuation_and_other_visible": 426,
+      "method": "BODY 內移除標記、空白、標題、程式區塊、圖片、網址、引用代號；主計數含標點，另報中文字與字母數字；非英語 word count。"
+    }
+  ],
+  "errors": [
+    "第 11 章正式正文不存在",
+    "第 12 章正式正文不存在",
+    "第 13 章正式正文不存在",
+    "第 14 章正式正文不存在",
+    "第 15 章正式正文不存在",
+    "第 16 章正式正文不存在",
+    "整書來源缺少 preface.md",
+    "整書來源缺少 reading_guide.md",
+    "整書來源缺少 conclusion.md",
+    "整書來源缺少 full_book.md"
+  ],
+  "warnings": [
+    "第 10 章偏離編輯預算，需記錄理由；不自動判定內容失敗"
+  ],
+  "structure_passed": false,
+  "note": "未檢驗全文深度、引文支持、DOCX 或 Podcast；通過也不等於正式出版完成。"
+}

@@ -1,0 +1,15 @@
+{
+  "status": "passed",
+  "package": "D:\\MyGitHub\\漫畫自創作\\books\\讓AI看懂一家公司_出版包_v1.0.3.zip",
+  "bytes": 5948668,
+  "sha256": "5b1658bc00de56248bdb75aedc646aef1ee7677bc44dedcd6c0b0d6b81281f1a",
+  "files_verified": 201,
+  "chapter_zips": 16,
+  "extracted": "D:\\MyGitHub\\漫畫自創作\\tmp\\ontology-publication-verified-v1.0.3",
+  "case_checks": {
+    "errors": [],
+    "passed": true,
+    "scope": "offline_fixture_only"
+  },
+  "audio_status": "pending"
+}

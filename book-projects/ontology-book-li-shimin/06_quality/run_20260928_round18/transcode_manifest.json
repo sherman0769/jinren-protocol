@@ -1,0 +1,541 @@
+{
+  "schemaVersion": 1,
+  "status": "applied-and-locally-validated",
+  "target": {
+    "codec": "aac",
+    "container": "m4a",
+    "bitRate": 80000,
+    "channels": 1
+  },
+  "checks": {
+    "metadataIdentity": "passed",
+    "lastPacketDuration": "passed",
+    "fullLocalDecode": "passed",
+    "uniqueFingerprints": "passed",
+    "deployedPlayback": "pending",
+    "destinationHash": "passed",
+    "destinationLastPacketDuration": "passed",
+    "destinationFullDecode": "passed"
+  },
+  "summary": {
+    "audioCount": 16,
+    "originalBytes": 531513877,
+    "transcodedBytes": 173279555,
+    "savedBytes": 358234322,
+    "reductionPercent": 67.39886529811149
+  },
+  "entries": [
+    {
+      "slug": "let-ai-understand-a-company",
+      "bookTitle": "讓 AI 看懂一家公司",
+      "chapterNumber": 1,
+      "chapterTitle": "第 1 章｜資料都在，AI 為什麼還是不懂這家公司？",
+      "audioSrc": "/books/let-ai-understand-a-company/audio/01_%E7%AC%AC%201%20%E7%AB%A0%EF%BD%9C%E8%B3%87%E6%96%99%E9%83%BD%E5%9C%A8%EF%BC%8CAI%20%E7%82%BA%E4%BB%80%E9%BA%BC%E9%82%84%E6%98%AF%E4%B8%8D%E6%87%82%E9%80%99%E5%AE%B6%E5%85%AC%E5%8F%B8%EF%BC%9F.m4a",
+      "relativePath": "public/books/let-ai-understand-a-company/audio/01_第 1 章｜資料都在，AI 為什麼還是不懂這家公司？.m4a",
+      "stagedPath": "tmp/ontology-audio-transcode-80k/staged/public/books/let-ai-understand-a-company/audio/01_第 1 章｜資料都在，AI 為什麼還是不懂這家公司？.m4a",
+      "original": {
+        "codec": "aac",
+        "channels": 2,
+        "sampleRate": 44100,
+        "bitRate": 256000,
+        "durationSeconds": 777.218322,
+        "bytes": 25014693,
+        "container": "mov,mp4,m4a,3gp,3g2,mj2",
+        "sha256": "0fee1ca4d0c27355ac5cb2000e80f0f7b8d9a4315174529348cbce0a78cc9fab"
+      },
+      "transcoded": {
+        "codec": "aac",
+        "channels": 1,
+        "sampleRate": 44100,
+        "bitRate": 82932,
+        "durationSeconds": 777.218005,
+        "bytes": 8192130,
+        "container": "mov,mp4,m4a,3gp,3g2,mj2",
+        "sha256": "2b5f9c9da3064f6ceb5ee24b105935fa9cfb277e0bc3a84e00c3886540f7c97f",
+        "lastPacketDurationSeconds": 777.2180040000001,
+        "durationDeltaSeconds": 0.0003169999999954598,
+        "fullDecode": true
+      }
+    },
+    {
+      "slug": "let-ai-understand-a-company",
+      "bookTitle": "讓 AI 看懂一家公司",
+      "chapterNumber": 2,
+      "chapterTitle": "第 2 章｜本體這個名字，到底在說什麼？",
+      "audioSrc": "/books/let-ai-understand-a-company/audio/02_%E7%AC%AC%202%20%E7%AB%A0%EF%BD%9C%E6%9C%AC%E9%AB%94%E9%80%99%E5%80%8B%E5%90%8D%E5%AD%97%EF%BC%8C%E5%88%B0%E5%BA%95%E5%9C%A8%E8%AA%AA%E4%BB%80%E9%BA%BC%EF%BC%9F.m4a",
+      "relativePath": "public/books/let-ai-understand-a-company/audio/02_第 2 章｜本體這個名字，到底在說什麼？.m4a",
+      "stagedPath": "tmp/ontology-audio-transcode-80k/staged/public/books/let-ai-understand-a-company/audio/02_第 2 章｜本體這個名字，到底在說什麼？.m4a",
+      "original": {
+        "codec": "aac",
+        "channels": 2,
+        "sampleRate": 44100,
+        "bitRate": 256000,
+        "durationSeconds": 886.328889,
+        "bytes": 28526303,
+        "container": "mov,mp4,m4a,3gp,3g2,mj2",
+        "sha256": "f57c102d8c8f218dfddde6dbc47b26c6a3c4149cec6a3961b9c392cbbf0b3604"
+      },
+      "transcoded": {
+        "codec": "aac",
+        "channels": 1,
+        "sampleRate": 44100,
+        "bitRate": 82604,
+        "durationSeconds": 886.329002,
+        "bytes": 9305656,
+        "container": "mov,mp4,m4a,3gp,3g2,mj2",
+        "sha256": "30d29141c069eecf292ec0784f52f84ea2b8e747450d735c62408a37ab83f92d",
+        "lastPacketDurationSeconds": 886.329002,
+        "durationDeltaSeconds": 0.0001129999999420761,
+        "fullDecode": true
+      }
+    },
+    {
+      "slug": "let-ai-understand-a-company",
+      "bookTitle": "讓 AI 看懂一家公司",
+      "chapterNumber": 3,
+      "chapterTitle": "第 3 章｜把人、事、物說清楚：類別、個體與關係",
+      "audioSrc": "/books/let-ai-understand-a-company/audio/03_%E7%AC%AC%203%20%E7%AB%A0%EF%BD%9C%E6%8A%8A%E4%BA%BA%E3%80%81%E4%BA%8B%E3%80%81%E7%89%A9%E8%AA%AA%E6%B8%85%E6%A5%9A%EF%BC%9A%E9%A1%9E%E5%88%A5%E3%80%81%E5%80%8B%E9%AB%94%E8%88%87%E9%97%9C%E4%BF%82.m4a",
+      "relativePath": "public/books/let-ai-understand-a-company/audio/03_第 3 章｜把人、事、物說清楚：類別、個體與關係.m4a",
+      "stagedPath": "tmp/ontology-audio-transcode-80k/staged/public/books/let-ai-understand-a-company/audio/03_第 3 章｜把人、事、物說清楚：類別、個體與關係.m4a",
+      "original": {
+        "codec": "aac",
+        "channels": 2,
+        "sampleRate": 44100,
+        "bitRate": 256000,
+        "durationSeconds": 854.378231,
+        "bytes": 27498030,
+        "container": "mov,mp4,m4a,3gp,3g2,mj2",
+        "sha256": "9c7c1c2dba27777ce72cb446eabafdbf595f635c6e72d59d9d2e0429709d9180"
+      },
+      "transcoded": {
+        "codec": "aac",
+        "channels": 1,
+        "sampleRate": 44100,
+        "bitRate": 82503,
+        "durationSeconds": 854.378005,
+        "bytes": 8959466,
+        "container": "mov,mp4,m4a,3gp,3g2,mj2",
+        "sha256": "c009f229291c2aba93a147230b577c963dca1199cb435c1398760d174cd4eff1",
+        "lastPacketDurationSeconds": 854.378004,
+        "durationDeltaSeconds": 0.00022599999999783904,
+        "fullDecode": true
+      }
+    },
+    {
+      "slug": "let-ai-understand-a-company",
+      "bookTitle": "讓 AI 看懂一家公司",
+      "chapterNumber": 4,
+      "chapterTitle": "第 4 章｜資料庫、分類表、知識圖譜與語意層，誰做什麼？",
+      "audioSrc": "/books/let-ai-understand-a-company/audio/04_%E7%AC%AC%204%20%E7%AB%A0%EF%BD%9C%E8%B3%87%E6%96%99%E5%BA%AB%E3%80%81%E5%88%86%E9%A1%9E%E8%A1%A8%E3%80%81%E7%9F%A5%E8%AD%98%E5%9C%96%E8%AD%9C%E8%88%87%E8%AA%9E%E6%84%8F%E5%B1%A4%EF%BC%8C%E8%AA%B0%E5%81%9A%E4%BB%80%E9%BA%BC%EF%BC%9F.m4a",
+      "relativePath": "public/books/let-ai-understand-a-company/audio/04_第 4 章｜資料庫、分類表、知識圖譜與語意層，誰做什麼？.m4a",
+      "stagedPath": "tmp/ontology-audio-transcode-80k/staged/public/books/let-ai-understand-a-company/audio/04_第 4 章｜資料庫、分類表、知識圖譜與語意層，誰做什麼？.m4a",
+      "original": {
+        "codec": "aac",
+        "channels": 2,
+        "sampleRate": 44100,
+        "bitRate": 256000,
+        "durationSeconds": 1182.84771,
+        "bytes": 38069465,
+        "container": "mov,mp4,m4a,3gp,3g2,mj2",
+        "sha256": "c9ee9c47506df5f11760828067a14a0954332006396ab9c7125d0a1506a5ed0c"
+      },
+      "transcoded": {
+        "codec": "aac",
+        "channels": 1,
+        "sampleRate": 44100,
+        "bitRate": 82606,
+        "durationSeconds": 1182.847007,
+        "bytes": 12418804,
+        "container": "mov,mp4,m4a,3gp,3g2,mj2",
+        "sha256": "bdd28d7064129357f35c7e1ab788c827925ed1f01b9d3d8bf279ffd56a59d4cb",
+        "lastPacketDurationSeconds": 1182.847007,
+        "durationDeltaSeconds": 0.0007029999999303982,
+        "fullDecode": true
+      }
+    },
+    {
+      "slug": "let-ai-understand-a-company",
+      "bookTitle": "讓 AI 看懂一家公司",
+      "chapterNumber": 5,
+      "chapterTitle": "第 5 章｜先問什麼要被回答，再決定要建什麼",
+      "audioSrc": "/books/let-ai-understand-a-company/audio/05_%E7%AC%AC%205%20%E7%AB%A0%EF%BD%9C%E5%85%88%E5%95%8F%E4%BB%80%E9%BA%BC%E8%A6%81%E8%A2%AB%E5%9B%9E%E7%AD%94%EF%BC%8C%E5%86%8D%E6%B1%BA%E5%AE%9A%E8%A6%81%E5%BB%BA%E4%BB%80%E9%BA%BC.m4a",
+      "relativePath": "public/books/let-ai-understand-a-company/audio/05_第 5 章｜先問什麼要被回答，再決定要建什麼.m4a",
+      "stagedPath": "tmp/ontology-audio-transcode-80k/staged/public/books/let-ai-understand-a-company/audio/05_第 5 章｜先問什麼要被回答，再決定要建什麼.m4a",
+      "original": {
+        "codec": "aac",
+        "channels": 2,
+        "sampleRate": 44100,
+        "bitRate": 256000,
+        "durationSeconds": 1066.376417,
+        "bytes": 34320928,
+        "container": "mov,mp4,m4a,3gp,3g2,mj2",
+        "sha256": "224be75f472aab7c073c13a07eadec146e68824dc40786f96839e93031fbdca6"
+      },
+      "transcoded": {
+        "codec": "aac",
+        "channels": 1,
+        "sampleRate": 44100,
+        "bitRate": 82538,
+        "durationSeconds": 1066.376009,
+        "bytes": 11187048,
+        "container": "mov,mp4,m4a,3gp,3g2,mj2",
+        "sha256": "83aa1cf47e1b8663d24b9a71560d6b64f50fbce4fa26553f35ed2649ec6c72f6",
+        "lastPacketDurationSeconds": 1066.3760089999998,
+        "durationDeltaSeconds": 0.0004079999998793937,
+        "fullDecode": true
+      }
+    },
+    {
+      "slug": "let-ai-understand-a-company",
+      "bookTitle": "讓 AI 看懂一家公司",
+      "chapterNumber": 6,
+      "chapterTitle": "第 6 章｜一起做出第一張可用的企業概念模型",
+      "audioSrc": "/books/let-ai-understand-a-company/audio/06_%E7%AC%AC%206%20%E7%AB%A0%EF%BD%9C%E4%B8%80%E8%B5%B7%E5%81%9A%E5%87%BA%E7%AC%AC%E4%B8%80%E5%BC%B5%E5%8F%AF%E7%94%A8%E7%9A%84%E4%BC%81%E6%A5%AD%E6%A6%82%E5%BF%B5%E6%A8%A1%E5%9E%8B.m4a",
+      "relativePath": "public/books/let-ai-understand-a-company/audio/06_第 6 章｜一起做出第一張可用的企業概念模型.m4a",
+      "stagedPath": "tmp/ontology-audio-transcode-80k/staged/public/books/let-ai-understand-a-company/audio/06_第 6 章｜一起做出第一張可用的企業概念模型.m4a",
+      "original": {
+        "codec": "aac",
+        "channels": 2,
+        "sampleRate": 44100,
+        "bitRate": 256000,
+        "durationSeconds": 1112.677007,
+        "bytes": 35811103,
+        "container": "mov,mp4,m4a,3gp,3g2,mj2",
+        "sha256": "3a135a67abd6d2d49c3d84dcea10f34b53f9dbfcde6aacea1404fdc9ee68478a"
+      },
+      "transcoded": {
+        "codec": "aac",
+        "channels": 1,
+        "sampleRate": 44100,
+        "bitRate": 82591,
+        "durationSeconds": 1112.677007,
+        "bytes": 11680040,
+        "container": "mov,mp4,m4a,3gp,3g2,mj2",
+        "sha256": "d1e501911280d498d2072209c1fd6e8ee682dcaf83013a78bc61a818a3aa924e",
+        "lastPacketDurationSeconds": 1112.677007,
+        "durationDeltaSeconds": 0,
+        "fullDecode": true
+      }
+    },
+    {
+      "slug": "let-ai-understand-a-company",
+      "bookTitle": "讓 AI 看懂一家公司",
+      "chapterNumber": 7,
+      "chapterTitle": "第 7 章｜同一個人、不同時間：讓模型接上可信資料",
+      "audioSrc": "/books/let-ai-understand-a-company/audio/07_%E7%AC%AC%207%20%E7%AB%A0%EF%BD%9C%E5%90%8C%E4%B8%80%E5%80%8B%E4%BA%BA%E3%80%81%E4%B8%8D%E5%90%8C%E6%99%82%E9%96%93%EF%BC%9A%E8%AE%93%E6%A8%A1%E5%9E%8B%E6%8E%A5%E4%B8%8A%E5%8F%AF%E4%BF%A1%E8%B3%87%E6%96%99.m4a",
+      "relativePath": "public/books/let-ai-understand-a-company/audio/07_第 7 章｜同一個人、不同時間：讓模型接上可信資料.m4a",
+      "stagedPath": "tmp/ontology-audio-transcode-80k/staged/public/books/let-ai-understand-a-company/audio/07_第 7 章｜同一個人、不同時間：讓模型接上可信資料.m4a",
+      "original": {
+        "codec": "aac",
+        "channels": 2,
+        "sampleRate": 44100,
+        "bitRate": 256000,
+        "durationSeconds": 1510.41161,
+        "bytes": 48611766,
+        "container": "mov,mp4,m4a,3gp,3g2,mj2",
+        "sha256": "253574cee304818a907244e98d96e75fe9c6622230ad73ec67f4d6e7c7795d2e"
+      },
+      "transcoded": {
+        "codec": "aac",
+        "channels": 1,
+        "sampleRate": 44100,
+        "bitRate": 82488,
+        "durationSeconds": 1510.410998,
+        "bytes": 15835463,
+        "container": "mov,mp4,m4a,3gp,3g2,mj2",
+        "sha256": "df8f560446cddfc8f6dc8b01f821f74e7f813c2d673ec7b945ea6f6552c4bcbe",
+        "lastPacketDurationSeconds": 1510.410998,
+        "durationDeltaSeconds": 0.0006120000000464643,
+        "fullDecode": true
+      }
+    },
+    {
+      "slug": "let-ai-understand-a-company",
+      "bookTitle": "讓 AI 看懂一家公司",
+      "chapterNumber": 8,
+      "chapterTitle": "第 8 章｜規則寫下來，不代表系統就會遵守",
+      "audioSrc": "/books/let-ai-understand-a-company/audio/08_%E7%AC%AC%208%20%E7%AB%A0%EF%BD%9C%E8%A6%8F%E5%89%87%E5%AF%AB%E4%B8%8B%E4%BE%86%EF%BC%8C%E4%B8%8D%E4%BB%A3%E8%A1%A8%E7%B3%BB%E7%B5%B1%E5%B0%B1%E6%9C%83%E9%81%B5%E5%AE%88.m4a",
+      "relativePath": "public/books/let-ai-understand-a-company/audio/08_第 8 章｜規則寫下來，不代表系統就會遵守.m4a",
+      "stagedPath": "tmp/ontology-audio-transcode-80k/staged/public/books/let-ai-understand-a-company/audio/08_第 8 章｜規則寫下來，不代表系統就會遵守.m4a",
+      "original": {
+        "codec": "aac",
+        "channels": 2,
+        "sampleRate": 44100,
+        "bitRate": 256000,
+        "durationSeconds": 1003.171701,
+        "bytes": 32286793,
+        "container": "mov,mp4,m4a,3gp,3g2,mj2",
+        "sha256": "6434bfc14ad3bbba15b2b8853a56e485e4683196e3fc8bae4be976a070e6a5b9"
+      },
+      "transcoded": {
+        "codec": "aac",
+        "channels": 1,
+        "sampleRate": 44100,
+        "bitRate": 82343,
+        "durationSeconds": 1003.170998,
+        "bytes": 10499551,
+        "container": "mov,mp4,m4a,3gp,3g2,mj2",
+        "sha256": "8f62158b91ab1ce3f127b3760bfbb6e5fb583633fdc8898ca626885aade675cd",
+        "lastPacketDurationSeconds": 1003.1709979999999,
+        "durationDeltaSeconds": 0.0007029999999303982,
+        "fullDecode": true
+      }
+    },
+    {
+      "slug": "let-ai-understand-a-company",
+      "bookTitle": "讓 AI 看懂一家公司",
+      "chapterNumber": 9,
+      "chapterTitle": "第 9 章｜本體遇上大語言模型：怎麼找，怎麼答，怎麼有依據",
+      "audioSrc": "/books/let-ai-understand-a-company/audio/09_%E7%AC%AC%209%20%E7%AB%A0%EF%BD%9C%E6%9C%AC%E9%AB%94%E9%81%87%E4%B8%8A%E5%A4%A7%E8%AA%9E%E8%A8%80%E6%A8%A1%E5%9E%8B%EF%BC%9A%E6%80%8E%E9%BA%BC%E6%89%BE%EF%BC%8C%E6%80%8E%E9%BA%BC%E7%AD%94%EF%BC%8C%E6%80%8E%E9%BA%BC%E6%9C%89%E4%BE%9D%E6%93%9A.m4a",
+      "relativePath": "public/books/let-ai-understand-a-company/audio/09_第 9 章｜本體遇上大語言模型：怎麼找，怎麼答，怎麼有依據.m4a",
+      "stagedPath": "tmp/ontology-audio-transcode-80k/staged/public/books/let-ai-understand-a-company/audio/09_第 9 章｜本體遇上大語言模型：怎麼找，怎麼答，怎麼有依據.m4a",
+      "original": {
+        "codec": "aac",
+        "channels": 2,
+        "sampleRate": 44100,
+        "bitRate": 256000,
+        "durationSeconds": 1071.159728,
+        "bytes": 34474934,
+        "container": "mov,mp4,m4a,3gp,3g2,mj2",
+        "sha256": "4d6143f612f0c71a7d0aaacb09b44643913640dc84efc36d44b587e9beff99a6"
+      },
+      "transcoded": {
+        "codec": "aac",
+        "channels": 1,
+        "sampleRate": 44100,
+        "bitRate": 82554,
+        "durationSeconds": 1071.159002,
+        "bytes": 11239319,
+        "container": "mov,mp4,m4a,3gp,3g2,mj2",
+        "sha256": "250d56bf9595361485b369c06a73eaa975233db4ee3ca4035c2c82eab4c51a04",
+        "lastPacketDurationSeconds": 1071.159002,
+        "durationDeltaSeconds": 0.0007259999999860156,
+        "fullDecode": true
+      }
+    },
+    {
+      "slug": "let-ai-understand-a-company",
+      "bookTitle": "讓 AI 看懂一家公司",
+      "chapterNumber": 10,
+      "chapterTitle": "第 10 章｜圖譜真的比較好嗎？把 GraphRAG 放回適合的位置",
+      "audioSrc": "/books/let-ai-understand-a-company/audio/10_%E7%AC%AC%2010%20%E7%AB%A0%EF%BD%9C%E5%9C%96%E8%AD%9C%E7%9C%9F%E7%9A%84%E6%AF%94%E8%BC%83%E5%A5%BD%E5%97%8E%EF%BC%9F%E6%8A%8A%20GraphRAG%20%E6%94%BE%E5%9B%9E%E9%81%A9%E5%90%88%E7%9A%84%E4%BD%8D%E7%BD%AE.m4a",
+      "relativePath": "public/books/let-ai-understand-a-company/audio/10_第 10 章｜圖譜真的比較好嗎？把 GraphRAG 放回適合的位置.m4a",
+      "stagedPath": "tmp/ontology-audio-transcode-80k/staged/public/books/let-ai-understand-a-company/audio/10_第 10 章｜圖譜真的比較好嗎？把 GraphRAG 放回適合的位置.m4a",
+      "original": {
+        "codec": "aac",
+        "channels": 2,
+        "sampleRate": 44100,
+        "bitRate": 256000,
+        "durationSeconds": 961.561542,
+        "bytes": 30947636,
+        "container": "mov,mp4,m4a,3gp,3g2,mj2",
+        "sha256": "e583ea06de6251e69bb8b21d32e61e7b9f51b0d7663f21d102143f7354e03443"
+      },
+      "transcoded": {
+        "codec": "aac",
+        "channels": 1,
+        "sampleRate": 44100,
+        "bitRate": 82546,
+        "durationSeconds": 961.560998,
+        "bytes": 10088531,
+        "container": "mov,mp4,m4a,3gp,3g2,mj2",
+        "sha256": "2b45bf7a864c666951b1a54c79024e5578010e17ae40d252b5082d2f4cd1edc3",
+        "lastPacketDurationSeconds": 961.560998,
+        "durationDeltaSeconds": 0.0005439999999907741,
+        "fullDecode": true
+      }
+    },
+    {
+      "slug": "let-ai-understand-a-company",
+      "bookTitle": "讓 AI 看懂一家公司",
+      "chapterNumber": 11,
+      "chapterTitle": "第 11 章｜讓 Agent 接上企業：情境、工具與 MCP 的分工",
+      "audioSrc": "/books/let-ai-understand-a-company/audio/11_%E7%AC%AC%2011%20%E7%AB%A0%EF%BD%9C%E8%AE%93%20Agent%20%E6%8E%A5%E4%B8%8A%E4%BC%81%E6%A5%AD%EF%BC%9A%E6%83%85%E5%A2%83%E3%80%81%E5%B7%A5%E5%85%B7%E8%88%87%20MCP%20%E7%9A%84%E5%88%86%E5%B7%A5.m4a",
+      "relativePath": "public/books/let-ai-understand-a-company/audio/11_第 11 章｜讓 Agent 接上企業：情境、工具與 MCP 的分工.m4a",
+      "stagedPath": "tmp/ontology-audio-transcode-80k/staged/public/books/let-ai-understand-a-company/audio/11_第 11 章｜讓 Agent 接上企業：情境、工具與 MCP 的分工.m4a",
+      "original": {
+        "codec": "aac",
+        "channels": 2,
+        "sampleRate": 44100,
+        "bitRate": 256000,
+        "durationSeconds": 1150.246893,
+        "bytes": 37020275,
+        "container": "mov,mp4,m4a,3gp,3g2,mj2",
+        "sha256": "e27ce0ee9394f7544b85b15b0e2b427ec038ade2eb38ba5e7b9b3fc164f51ae4"
+      },
+      "transcoded": {
+        "codec": "aac",
+        "channels": 1,
+        "sampleRate": 44100,
+        "bitRate": 82624,
+        "durationSeconds": 1150.247007,
+        "bytes": 12079183,
+        "container": "mov,mp4,m4a,3gp,3g2,mj2",
+        "sha256": "2951b22def626bde29616839426d702725ffa075197a72f42470a60f2b8c3002",
+        "lastPacketDurationSeconds": 1150.247006,
+        "durationDeltaSeconds": 0.00011399999993955134,
+        "fullDecode": true
+      }
+    },
+    {
+      "slug": "let-ai-understand-a-company",
+      "bookTitle": "讓 AI 看懂一家公司",
+      "chapterNumber": 12,
+      "chapterTitle": "第 12 章｜AI 能提出方案，誰允許它真正動手？",
+      "audioSrc": "/books/let-ai-understand-a-company/audio/12_%E7%AC%AC%2012%20%E7%AB%A0%EF%BD%9CAI%20%E8%83%BD%E6%8F%90%E5%87%BA%E6%96%B9%E6%A1%88%EF%BC%8C%E8%AA%B0%E5%85%81%E8%A8%B1%E5%AE%83%E7%9C%9F%E6%AD%A3%E5%8B%95%E6%89%8B%EF%BC%9F.m4a",
+      "relativePath": "public/books/let-ai-understand-a-company/audio/12_第 12 章｜AI 能提出方案，誰允許它真正動手？.m4a",
+      "stagedPath": "tmp/ontology-audio-transcode-80k/staged/public/books/let-ai-understand-a-company/audio/12_第 12 章｜AI 能提出方案，誰允許它真正動手？.m4a",
+      "original": {
+        "codec": "aac",
+        "channels": 2,
+        "sampleRate": 44100,
+        "bitRate": 256000,
+        "durationSeconds": 1102.019048,
+        "bytes": 35468096,
+        "container": "mov,mp4,m4a,3gp,3g2,mj2",
+        "sha256": "7bf96a8804551894afd53005c8bcf14bbebd4d52221ddfdd5b593beb684aed9e"
+      },
+      "transcoded": {
+        "codec": "aac",
+        "channels": 1,
+        "sampleRate": 44100,
+        "bitRate": 82602,
+        "durationSeconds": 1102.019002,
+        "bytes": 11569775,
+        "container": "mov,mp4,m4a,3gp,3g2,mj2",
+        "sha256": "92697eb2b44e324dc07f1672e6b7377bc0b76649c3f0954154c6f4905b4d802b",
+        "lastPacketDurationSeconds": 1102.019003,
+        "durationDeltaSeconds": 0.00004600000011123484,
+        "fullDecode": true
+      }
+    },
+    {
+      "slug": "let-ai-understand-a-company",
+      "bookTitle": "讓 AI 看懂一家公司",
+      "chapterNumber": 13,
+      "chapterTitle": "第 13 章｜讓 AI 幫忙建本體，也要有人負責修正它",
+      "audioSrc": "/books/let-ai-understand-a-company/audio/13_%E7%AC%AC%2013%20%E7%AB%A0%EF%BD%9C%E8%AE%93%20AI%20%E5%B9%AB%E5%BF%99%E5%BB%BA%E6%9C%AC%E9%AB%94%EF%BC%8C%E4%B9%9F%E8%A6%81%E6%9C%89%E4%BA%BA%E8%B2%A0%E8%B2%AC%E4%BF%AE%E6%AD%A3%E5%AE%83.m4a",
+      "relativePath": "public/books/let-ai-understand-a-company/audio/13_第 13 章｜讓 AI 幫忙建本體，也要有人負責修正它.m4a",
+      "stagedPath": "tmp/ontology-audio-transcode-80k/staged/public/books/let-ai-understand-a-company/audio/13_第 13 章｜讓 AI 幫忙建本體，也要有人負責修正它.m4a",
+      "original": {
+        "codec": "aac",
+        "channels": 2,
+        "sampleRate": 44100,
+        "bitRate": 256000,
+        "durationSeconds": 1248.397642,
+        "bytes": 40179167,
+        "container": "mov,mp4,m4a,3gp,3g2,mj2",
+        "sha256": "4e1634166baa8e5197fe5ffa2e24a88ef6f37986992080a5c5c5336122f848c2"
+      },
+      "transcoded": {
+        "codec": "aac",
+        "channels": 1,
+        "sampleRate": 44100,
+        "bitRate": 82286,
+        "durationSeconds": 1248.397007,
+        "bytes": 13057135,
+        "container": "mov,mp4,m4a,3gp,3g2,mj2",
+        "sha256": "eb1f2235461442328443cdc0484a571719009fb9b8bc914249b729c8e9ef0af4",
+        "lastPacketDurationSeconds": 1248.397007,
+        "durationDeltaSeconds": 0.000634999999874708,
+        "fullDecode": true
+      }
+    },
+    {
+      "slug": "let-ai-understand-a-company",
+      "bookTitle": "讓 AI 看懂一家公司",
+      "chapterNumber": 14,
+      "chapterTitle": "第 14 章｜從一個 Agent 到多個 Agent：共用什麼，保留什麼差異？",
+      "audioSrc": "/books/let-ai-understand-a-company/audio/14_%E7%AC%AC%2014%20%E7%AB%A0%EF%BD%9C%E5%BE%9E%E4%B8%80%E5%80%8B%20Agent%20%E5%88%B0%E5%A4%9A%E5%80%8B%20Agent%EF%BC%9A%E5%85%B1%E7%94%A8%E4%BB%80%E9%BA%BC%EF%BC%8C%E4%BF%9D%E7%95%99%E4%BB%80%E9%BA%BC%E5%B7%AE%E7%95%B0%EF%BC%9F.m4a",
+      "relativePath": "public/books/let-ai-understand-a-company/audio/14_第 14 章｜從一個 Agent 到多個 Agent：共用什麼，保留什麼差異？.m4a",
+      "stagedPath": "tmp/ontology-audio-transcode-80k/staged/public/books/let-ai-understand-a-company/audio/14_第 14 章｜從一個 Agent 到多個 Agent：共用什麼，保留什麼差異？.m4a",
+      "original": {
+        "codec": "aac",
+        "channels": 2,
+        "sampleRate": 44100,
+        "bitRate": 256000,
+        "durationSeconds": 857.048526,
+        "bytes": 27583939,
+        "container": "mov,mp4,m4a,3gp,3g2,mj2",
+        "sha256": "2c1836b549610e6a6a6da8d82e72cd27898dab52bcc6d8dfaf474bc6e8fc20b8"
+      },
+      "transcoded": {
+        "codec": "aac",
+        "channels": 1,
+        "sampleRate": 44100,
+        "bitRate": 82565,
+        "durationSeconds": 857.048005,
+        "bytes": 8994157,
+        "container": "mov,mp4,m4a,3gp,3g2,mj2",
+        "sha256": "19714af7212dc113b078406ddacc3a3a89161b22f09edbb0c60248efa8020ccc",
+        "lastPacketDurationSeconds": 857.048004,
+        "durationDeltaSeconds": 0.0005210000000488435,
+        "fullDecode": true
+      }
+    },
+    {
+      "slug": "let-ai-understand-a-company",
+      "bookTitle": "讓 AI 看懂一家公司",
+      "chapterNumber": 15,
+      "chapterTitle": "第 15 章｜什麼時候不該做本體？把成本與替代方案算進來",
+      "audioSrc": "/books/let-ai-understand-a-company/audio/15_%E7%AC%AC%2015%20%E7%AB%A0%EF%BD%9C%E4%BB%80%E9%BA%BC%E6%99%82%E5%80%99%E4%B8%8D%E8%A9%B2%E5%81%9A%E6%9C%AC%E9%AB%94%EF%BC%9F%E6%8A%8A%E6%88%90%E6%9C%AC%E8%88%87%E6%9B%BF%E4%BB%A3%E6%96%B9%E6%A1%88%E7%AE%97%E9%80%B2%E4%BE%86.m4a",
+      "relativePath": "public/books/let-ai-understand-a-company/audio/15_第 15 章｜什麼時候不該做本體？把成本與替代方案算進來.m4a",
+      "stagedPath": "tmp/ontology-audio-transcode-80k/staged/public/books/let-ai-understand-a-company/audio/15_第 15 章｜什麼時候不該做本體？把成本與替代方案算進來.m4a",
+      "original": {
+        "codec": "aac",
+        "channels": 2,
+        "sampleRate": 44100,
+        "bitRate": 256000,
+        "durationSeconds": 884.239093,
+        "bytes": 28459069,
+        "container": "mov,mp4,m4a,3gp,3g2,mj2",
+        "sha256": "ca3c16b918945d293501822912241a838d9553a29d47588224c163b4d99578c6"
+      },
+      "transcoded": {
+        "codec": "aac",
+        "channels": 1,
+        "sampleRate": 44100,
+        "bitRate": 82646,
+        "durationSeconds": 884.239002,
+        "bytes": 9288412,
+        "container": "mov,mp4,m4a,3gp,3g2,mj2",
+        "sha256": "214aaa05ec7fb261010c509dc8e14cb54d5ea91dc8e9d7ed078515ba186d1f2a",
+        "lastPacketDurationSeconds": 884.239002,
+        "durationDeltaSeconds": 0.00009099999999762076,
+        "fullDecode": true
+      }
+    },
+    {
+      "slug": "let-ai-understand-a-company",
+      "bookTitle": "讓 AI 看懂一家公司",
+      "chapterNumber": 16,
+      "chapterTitle": "第 16 章｜從讀懂到教會別人：完成你的企業 AI 設計提案",
+      "audioSrc": "/books/let-ai-understand-a-company/audio/16_%E7%AC%AC%2016%20%E7%AB%A0%EF%BD%9C%E5%BE%9E%E8%AE%80%E6%87%82%E5%88%B0%E6%95%99%E6%9C%83%E5%88%A5%E4%BA%BA%EF%BC%9A%E5%AE%8C%E6%88%90%E4%BD%A0%E7%9A%84%E4%BC%81%E6%A5%AD%20AI%20%E8%A8%AD%E8%A8%88%E6%8F%90%E6%A1%88.m4a",
+      "relativePath": "public/books/let-ai-understand-a-company/audio/16_第 16 章｜從讀懂到教會別人：完成你的企業 AI 設計提案.m4a",
+      "stagedPath": "tmp/ontology-audio-transcode-80k/staged/public/books/let-ai-understand-a-company/audio/16_第 16 章｜從讀懂到教會別人：完成你的企業 AI 設計提案.m4a",
+      "original": {
+        "codec": "aac",
+        "channels": 2,
+        "sampleRate": 44100,
+        "bitRate": 256000,
+        "durationSeconds": 846.413787,
+        "bytes": 27241680,
+        "container": "mov,mp4,m4a,3gp,3g2,mj2",
+        "sha256": "10cde1915e7a411cabf92680b5229947477610be7d6b052c9e62fc152940fd88"
+      },
+      "transcoded": {
+        "codec": "aac",
+        "channels": 1,
+        "sampleRate": 44100,
+        "bitRate": 82587,
+        "durationSeconds": 846.413991,
+        "bytes": 8884885,
+        "container": "mov,mp4,m4a,3gp,3g2,mj2",
+        "sha256": "08d9d4e80aee99c5813ad5a7ba22da01795803fd550ee2cd0472ed14c9c43483",
+        "lastPacketDurationSeconds": 846.413991,
+        "durationDeltaSeconds": 0.0002040000000533837,
+        "fullDecode": true
+      }
+    }
+  ]
+}

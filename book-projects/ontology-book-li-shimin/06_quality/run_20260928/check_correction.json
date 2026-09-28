@@ -1,0 +1,7 @@
+{
+  "failure": "chapter_01 review SHA stale after LF to CRLF serialization",
+  "old_lf_sha256": "aa5b803da1751a265a317b38350802b3c4c51ae88d8e3f52df068f4abf64203f",
+  "current_bytes_sha256": "f983039578ef90a099c61a9b85fdfa7103e38caef8bd17c1a690464bef2e85e2",
+  "lf_normalized_current_equals_original": true,
+  "repair": "update review hash to current raw bytes; no chapter content change; rerun identity checks"
+}

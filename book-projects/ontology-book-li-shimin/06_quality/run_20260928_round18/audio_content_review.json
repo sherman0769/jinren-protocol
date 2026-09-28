@@ -1,0 +1,310 @@
+{
+  "status": "selected_versions_transcript_reviewed_with_limits",
+  "method": "Local existing Whisper base on RTX 4090; full automatic transcript read against canonical chapter. Proper names, identifiers and dates can be ASR errors. Audio input is not supported by this model; no human listening claimed.",
+  "raw_download_count": 16,
+  "raw_decode_count": 16,
+  "publication_audio_approved_count": 0,
+  "chapters": {
+    "1": {
+      "status": "revision_required",
+      "issues": [
+        {
+          "seconds": "416–418",
+          "issue": "Unqualified arithmetic reliability claim is outside canonical source; replace with task-specific computation and verification."
+        },
+        {
+          "seconds": "34–40",
+          "issue": "Unneeded model capability/bar-exam claim adds unsupported detail."
+        }
+      ]
+    },
+    "2": {
+      "status": "revision_required",
+      "issues": [
+        {
+          "seconds": "471–477",
+          "issue": "Invents S102 in November and smaller classroom; canonical source does not provide these facts."
+        },
+        {
+          "seconds": "519–525,1168–1170",
+          "issue": "Dismisses philosophy as unimportant rather than limiting this book scope."
+        }
+      ]
+    },
+    "3": {
+      "status": "revision_required",
+      "issues": [
+        {
+          "issue": "Cookie analogy maps C101 to class and S101 to its instance. Correct: Course is class; C101 is its individual. Session is another class; S101/S102 are its individuals."
+        }
+      ]
+    },
+    "4": {
+      "status": "transcript_reviewed_with_limits",
+      "notes": "Schema versus business truth, SKOS versus formal axioms, RDF identity, dbt untested and unknown payment retained. Spoken IDs/names not independently heard. Dramatic metaphors are provider voice, not author experience."
+    },
+    "5": {
+      "status": "transcript_reviewed_with_limits",
+      "notes": "Five competency questions, unknown E002, lookup versus execution and no-ontology alternatives retained. Automatic transcript has uncertain research date/name tokens; not treated as new source evidence."
+    },
+    "6": {
+      "status": "revision_required",
+      "issues": [
+        {
+          "issue": "Introduces next-day E005 after E001, but fixed snapshot does not establish chronology."
+        },
+        {
+          "issue": "S102 evening is unprovided; avoid inventing a time even as a casual fixed-case example."
+        }
+      ]
+    },
+    "7": {
+      "status": "revision_required",
+      "issues": [
+        {
+          "issue": "Transaction time incorrectly equated with observation time; payment used as seat transition."
+        }
+      ]
+    },
+    "8": {
+      "status": "revision_required",
+      "issues": [
+        {
+          "issue": "SHACL report conflated with application enforcement; OWL entailment conflated with data mutation; unsupported refund eligibility."
+        }
+      ]
+    },
+    "10": {
+      "status": "revision_required",
+      "issues": [
+        {
+          "issue": "Overgeneralizes GraphRAG experiment coverage and cost outside task, dataset and LLM judge limits."
+        }
+      ]
+    },
+    "13": {
+      "status": "revision_required",
+      "issues": [
+        {
+          "issue": "E005 refund unknown called no; invented host experience and data scale."
+        }
+      ]
+    },
+    "14": {
+      "status": "revision_required",
+      "issues": [
+        {
+          "issue": "S102 changed to photography; incorrect Bounded Context attribution; provider deployment claim exceeds evidence."
+        }
+      ]
+    },
+    "15": {
+      "status": "revision_required",
+      "issues": [
+        {
+          "issue": "Ontology described as 100 percent shared meaning; unsupported 99 percent cause statistic."
+        }
+      ]
+    },
+    "16": {
+      "status": "revision_required",
+      "issues": [
+        {
+          "issue": "Invented lawsuit amount and V2 chronology; paper exercises described as real test success."
+        }
+      ]
+    },
+    "9": {
+      "status": "transcript_reviewed_with_limits",
+      "notes": "Retains retrieval routes, grounding, tool errors, unknown state and vendor limitation. Some conversational generalizations; no task outcome invented."
+    },
+    "11": {
+      "status": "transcript_reviewed_with_limits",
+      "notes": "Three contracts, dated MCP, Fabric preview/not deployed, data minimization and separate zero/not found/denied/error retained."
+    },
+    "12": {
+      "status": "transcript_reviewed_with_limits",
+      "notes": "Specific approval, read/propose-only AI, backend authority, idempotency, partial outcomes and authoritative readback retained."
+    }
+  },
+  "retry_policy_this_run": "Retain rejected provider cards with 未採用初稿-v1 prefix and raw downloads. Only corrected accepted versions will be published. Track total generated cards, retained rejected candidates and 16 selected chapters separately; never claim all generated candidates passed. This is a reversible book-specific trial, not a global workflow rule.",
+  "revised_chapters": [
+    1,
+    2,
+    3,
+    6,
+    7,
+    8,
+    10,
+    13,
+    14,
+    15,
+    16
+  ],
+  "first_pass_review_complete": true,
+  "selected_versions_review": {
+    "1": {
+      "status": "transcript_reviewed_with_limits",
+      "activeVersion": 3,
+      "artifactLabelId": "artifact-labels-d6de5cd7-dcfb-48b4-8f11-50e13d295ae6",
+      "audioSha256": "0fee1ca4d0c27355ac5cb2000e80f0f7b8d9a4315174529348cbce0a78cc9fab",
+      "transcriptSha256": "e2aaed047e8ed6190b13a7272b0e0f55eff58ee293dd4dc3a263a0aeaea08f4f",
+      "transcript": "selected_transcripts/01_transcript.json",
+      "notes": "新版無重複開場；固定快照、已確認佔位、付款未知及查詢不授權執行均保留。開場十／八／七為原稿明示的獨立假設。自動轉錄的算式與代碼有不確定性，未當作人聲發音驗收。",
+      "humanListening": false
+    },
+    "2": {
+      "status": "transcript_reviewed_with_limits",
+      "activeVersion": 2,
+      "artifactLabelId": "artifact-labels-78bb82f6-c512-4710-a714-75b27cd5029e",
+      "audioSha256": "f57c102d8c8f218dfddde6dbc47b26c6a3c4149cec6a3961b9c392cbbf0b3604",
+      "transcriptSha256": "4c84bec87459af8ca05b6e915d147e34326e1b092603b963a123f172b7b25763",
+      "transcript": "selected_transcripts/02_transcript.json",
+      "notes": "已修正班別月份與教室的虛構補寫；保留哲學脈絡與本書工程範圍。",
+      "humanListening": false
+    },
+    "3": {
+      "status": "transcript_reviewed_with_limits",
+      "activeVersion": 2,
+      "artifactLabelId": "artifact-labels-1948a184-2ffc-496f-b7f9-8c986a2f8ca1",
+      "audioSha256": "9c7c1c2dba27777ce72cb446eabafdbf595f635c6e72d59d9d2e0429709d9180",
+      "transcriptSha256": "48ed6a8327dc8fc6104fcf897f53c7772c115d0c97bc744e2ab74de823f94fef",
+      "transcript": "selected_transcripts/03_transcript.json",
+      "notes": "類別 Course／Session 與個體 C101／S101／S102 分清；外部講師、未知與取消不等於退款保留。",
+      "humanListening": false
+    },
+    "4": {
+      "status": "transcript_reviewed_with_limits",
+      "activeVersion": 1,
+      "artifactLabelId": "artifact-labels-f7aeacf8-1648-4471-a720-30452dd93a43",
+      "audioSha256": "c9ee9c47506df5f11760828067a14a0954332006396ab9c7125d0a1506a5ed0c",
+      "transcriptSha256": "f9ffe8c66e71b7b857dd81da81ec87b801110b4d896aa29919546dfa3f1d743f",
+      "transcript": "selected_transcripts/04_transcript.json",
+      "notes": "資料結構、業務真實、SKOS、RDF 與指標產品的範圍分開。",
+      "humanListening": false
+    },
+    "5": {
+      "status": "transcript_reviewed_with_limits",
+      "activeVersion": 1,
+      "artifactLabelId": "artifact-labels-feffe8ba-f791-4b38-9661-9ded20d9c17d",
+      "audioSha256": "224be75f472aab7c073c13a07eadec146e68824dc40786f96839e93031fbdca6",
+      "transcriptSha256": "65ba23723b06d6b42989df4ad6a6c775563a7bebd636d55503d157171400f6c3",
+      "transcript": "selected_transcripts/05_transcript.json",
+      "notes": "能力問題、範圍、未知與不導入替代保留。",
+      "humanListening": false
+    },
+    "6": {
+      "status": "transcript_reviewed_with_limits",
+      "activeVersion": 2,
+      "artifactLabelId": "artifact-labels-c809071b-20bb-414a-a7c5-bc5faf0010b1",
+      "audioSha256": "3a135a67abd6d2d49c3d84dcea10f34b53f9dbfcde6aacea1404fdc9ee68478a",
+      "transcriptSha256": "a605e0feae0e5bc8f902df64b3f5b2f9c939a08792c94c4707dde6af18aa4f5a",
+      "transcript": "selected_transcripts/06_transcript.json",
+      "notes": "E001／E005先後未知、映射與付款關聯保留。對晚間上課的猜測在同段被駁回，不採為固定案例事實。",
+      "humanListening": false
+    },
+    "8": {
+      "status": "transcript_reviewed_with_limits",
+      "activeVersion": 2,
+      "artifactLabelId": "artifact-labels-c1599347-ace0-4cba-b20a-68facba0d4a2",
+      "audioSha256": "6434bfc14ad3bbba15b2b8853a56e485e4683196e3fc8bae4be976a070e6a5b9",
+      "transcriptSha256": "d7e67ea53c1b66be92f04bcca73503ba0a5d3bca3a1ea20964172e63412f8f85",
+      "transcript": "selected_transcripts/08_transcript.json",
+      "notes": "校訂版區分 SHACL 報告與外部應用程式執行、OWL 邏輯同一性與實體資料合併；保留退款資格未知及併發限制。",
+      "humanListening": false
+    },
+    "9": {
+      "status": "transcript_reviewed_with_limits",
+      "activeVersion": 1,
+      "artifactLabelId": "artifact-labels-cff24330-ee0c-4c75-a878-28bd33a460da",
+      "audioSha256": "4d6143f612f0c71a7d0aaacb09b44643913640dc84efc36d44b587e9beff99a6",
+      "transcriptSha256": "200fd1c02938b930653e8cbfca8632590d49f86a9ac05a82ad70d466f91f2549",
+      "transcript": "selected_transcripts/09_transcript.json",
+      "notes": "保留檢索路徑、引用支持範圍、工具失敗與未知；未宣稱實際成效。",
+      "humanListening": false
+    },
+    "10": {
+      "status": "transcript_reviewed_with_limits",
+      "activeVersion": 2,
+      "artifactLabelId": "artifact-labels-2e3cbd5c-e5b2-47da-a9ae-42389bcb76b0",
+      "audioSha256": "e583ea06de6251e69bb8b21d32e61e7b9f51b0d7663f21d102143f7354e03443",
+      "transcriptSha256": "aaf2300549713463a2fda82aae27aeb326e8c8c609a4b1e1bff9a93186d00df9",
+      "transcript": "selected_transcripts/10_transcript.json",
+      "notes": "校訂版將 GraphRAG 結果限定在資料、題型與評分方法，不將涵蓋面等同事實準確率，不新增企業成本倍數。",
+      "humanListening": false
+    },
+    "11": {
+      "status": "transcript_reviewed_with_limits",
+      "activeVersion": 1,
+      "artifactLabelId": "artifact-labels-900681cf-1b72-4768-a1d6-2f1bd6a14627",
+      "audioSha256": "e27ce0ee9394f7544b85b15b0e2b427ec038ade2eb38ba5e7b9b3fc164f51ae4",
+      "transcriptSha256": "ab99b4ed2b66137716b5b87608b20531d49dd8b6be9c81ca78a4f8ac83800d94",
+      "transcript": "selected_transcripts/11_transcript.json",
+      "notes": "保留三契約、MCP版本、Fabric預覽未租戶實測、資料最小化及工具回傳差異。",
+      "humanListening": false
+    },
+    "12": {
+      "status": "transcript_reviewed_with_limits",
+      "activeVersion": 1,
+      "artifactLabelId": "artifact-labels-c2734518-fce1-4de5-a416-ef74badd10b3",
+      "audioSha256": "7bf96a8804551894afd53005c8bcf14bbebd4d52221ddfdd5b593beb684aed9e",
+      "transcriptSha256": "6da9ed7130b65939568b9a9641f3ea08dbdf0fafa3da9e7d3fd52e390a189b18",
+      "transcript": "selected_transcripts/12_transcript.json",
+      "notes": "具體核准、查議核做驗、後端權限、冪等與部分失敗皆保留。",
+      "humanListening": false
+    },
+    "13": {
+      "status": "transcript_reviewed_with_limits",
+      "activeVersion": 3,
+      "artifactLabelId": "artifact-labels-08792253-baff-4ceb-8ae9-d4d77cce8819",
+      "audioSha256": "4e1634166baa8e5197fe5ffa2e24a88ef6f37986992080a5c5c5336122f848c2",
+      "transcriptSha256": "c8daad57d00a6fb72f4d3b72a41320b9f76d50b898b1444596b6c46f5bea32a4",
+      "transcript": "selected_transcripts/13_transcript.json",
+      "notes": "第三版修正 OOPS! 是陷阱掃描而非完備推理器，雙向包含非必然矛盾；退款與付款未知、候選審查、四層品質及版本維護保留。",
+      "humanListening": false
+    },
+    "15": {
+      "status": "transcript_reviewed_with_limits",
+      "activeVersion": 3,
+      "artifactLabelId": "artifact-labels-5fde0d93-59a1-4272-99af-d8b1b00b71ad",
+      "audioSha256": "ca3c16b918945d293501822912241a838d9553a29d47588224c163b4d99578c6",
+      "transcriptSha256": "a25842c0724e67be8e6c3ef56e8e8ab5951b6a6b74acddcd0698253ffa952619",
+      "transcript": "selected_transcripts/15_transcript.json",
+      "notes": "第三版刪除文件整理可解決八成問題等無來源數據；五種替代、公平消融、持續成本、未知成本與退出條件保留。",
+      "humanListening": false
+    },
+    "16": {
+      "status": "transcript_reviewed_with_limits",
+      "activeVersion": 3,
+      "artifactLabelId": "artifact-labels-3d846f6a-8d69-4eb2-9c7f-4f9f28a42a1a",
+      "audioSha256": "10cde1915e7a411cabf92680b5229947477610be7d6b052c9e62fc152940fd88",
+      "transcriptSha256": "f4db277e8e0a7b06650564ef48caa6d5749c12779082f9dc32531cfe3f9eb61e",
+      "transcript": "selected_transcripts/16_transcript.json",
+      "notes": "第三版移除作者職稱、本體描述全部萬物的定義；版本與用途綁定、未驗收、公開授權未知、紙上測試不是系統实測、六份學習證據保留。",
+      "humanListening": false
+    },
+    "14": {
+      "status": "transcript_reviewed_with_limits",
+      "activeVersion": 4,
+      "artifactLabelId": "artifact-labels-4be597d3-db42-4463-8741-82e5bb329bbd",
+      "audioSha256": "2c1836b549610e6a6a6da8d82e72cd27898dab52bcc6d8dfaf474bc6e8fc20b8",
+      "transcriptSha256": "7e057737591da2878ea0785e5ec31936ee1dc4b13e66d452a384d01700baf558",
+      "transcript": "selected_transcripts/14_transcript.json",
+      "notes": "第四版清楚限定 confirmed 佔位、候補與取消不佔位，付款或退款不改变本案例名額規則；容量3／已確認2／剩1，E002付款與E005退款未知。多助理尚未部署、共用語意不共用權限、Fabric預覽與本書未租戶實測、因果與模擬限制均保留。",
+      "humanListening": false
+    },
+    "7": {
+      "status": "transcript_reviewed_with_limits",
+      "activeVersion": 5,
+      "artifactLabelId": "artifact-labels-a3bc5928-8f1d-4ce8-9004-a6cb04d39f1a",
+      "audioSha256": "253574cee304818a907244e98d96e75fe9c6622230ad73ec67f4d6e7c7795d2e",
+      "transcriptSha256": "5138a034ea27cd79d34f9fff7aed30fda4179f57081560107c7cd6cd33caaa1e",
+      "transcript": "selected_transcripts/07_transcript.json",
+      "notes": "第五版保留P002／E002付款未知，PAY001／E001與PAY002／E004關聯；POL001名額政策與PROV-O分清，PROV-O三概念非每筆強制齊備，時間意義不同但數值可相同。身份、快照、時效、事實卡、三練習及操作邊界均保留。比喻與戲劇性口語仍存在；英文、編號與年份自動轉錄有不確定性，未聲稱人耳發音驗收。",
+      "humanListening": false
+    }
+  },
+  "selected_reviewed_count": 16,
+  "pending_selected_review": [],
+  "limitations": "全篇自動逐字稿與正式章稿比對；不是人聲逐句聽測、作者或獨立專家驗收。音訊保留生成式對談口吻、比喻及修訂標籤等編輯瑕疵，不宣稱逐字等同正式正文。技術完整解碼不證明語音發音或所有口語表述正確。"
+}

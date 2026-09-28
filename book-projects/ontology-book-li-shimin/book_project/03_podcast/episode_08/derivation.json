@@ -1,0 +1,69 @@
+{
+  "episode": 8,
+  "source_chapter_path": "book_project/02_chapters/chapter_08/chapter_08_main.md",
+  "source_chapter_sha256": "883bda0441cd8c5b1fef5acca1ed204e42df026e6de0bc7e6e9df1c647ad128a",
+  "source_chapter_version": "1.0.0",
+  "script_version": "1.0.0",
+  "source_ids": [
+    "R03",
+    "R04",
+    "R05",
+    "R28"
+  ],
+  "generated_on": "2026-09-28",
+  "spoken_count": {
+    "body_visible_characters": 3709,
+    "cjk_characters": 3300,
+    "letters_and_digits_including_cjk": 3358,
+    "punctuation_and_other_visible": 351,
+    "method": "BODY 內移除標記、空白、標題、程式區塊、圖片、網址、引用代號；主計數含標點，另報中文字與字母數字；非英語 word count。"
+  },
+  "editorial_target_minutes": [
+    20,
+    25
+  ],
+  "actual_duration_seconds": null,
+  "audio_generated": false,
+  "quality": {
+    "text_self_review": "passed",
+    "independent_review": "not_performed",
+    "actual_aloud_or_listening": "not_performed",
+    "source_meaning_verified": true,
+    "no_new_unverified_claims": true,
+    "standalone_context": true,
+    "visual_reference_dependency": false,
+    "long_exact_source_paragraph_copies": 0
+  },
+  "files": [
+    {
+      "path": "book_project/03_podcast/episode_08/episode_08_script.md",
+      "sha256": "8a0da84ee1c6de58f06ef43cd6f6277b8e68d623ac74055bc78b1d8e3ff7b549",
+      "bytes": 12211
+    },
+    {
+      "path": "book_project/03_podcast/episode_08/episode_08_shownotes.md",
+      "sha256": "1ef68035bcf166bfde015277ad40579d9ea5bce1d0582775651c6dca0ddefc2d",
+      "bytes": 1786
+    },
+    {
+      "path": "book_project/02_chapters/chapter_08/chapter_08_speech_notes.md",
+      "sha256": "afebac3d563de3c6fba7edb2a082276677349d6b12410055e654d8cfb0507b28",
+      "bytes": 1369
+    },
+    {
+      "path": "book_project/02_chapters/chapter_08/chapter_08_slide_outline.md",
+      "sha256": "74af8cb060bfa286904eb4c86be4166f72bbc1a9e7539b201e69f6918991b4ca",
+      "bytes": 1387
+    },
+    {
+      "path": "book_project/02_chapters/chapter_08/chapter_08_quotes.md",
+      "sha256": "4926f3e6674fe1e146121b318d91f584cd3ebdcc87efda5a1e7bc373f889073e",
+      "bytes": 496
+    },
+    {
+      "path": "book_project/02_chapters/chapter_08/chapter_08_teaching.md",
+      "sha256": "93c2126207034ae08b57b12baf31635fb2b1837681bc48c5b56ed67ba0428ece",
+      "bytes": 1798
+    }
+  ]
+}

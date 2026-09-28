@@ -1,0 +1,27 @@
+test_available_counts (test_handoff.CaseTests.test_available_counts) ... ok
+test_capacity_preserves_time (test_handoff.CaseTests.test_capacity_preserves_time) ... ok
+test_duplicate_id_detected (test_handoff.CaseTests.test_duplicate_id_detected) ... ok
+test_fixture_valid (test_handoff.CaseTests.test_fixture_valid) ... ok
+test_incomplete_scope_rejected (test_handoff.CaseTests.test_incomplete_scope_rejected) ... ok
+test_null_room_is_not_online (test_handoff.CaseTests.test_null_room_is_not_online) ... ok
+test_refund_policy_not_engine_test (test_handoff.CaseTests.test_refund_policy_not_engine_test) ... ok
+test_same_name_different_people (test_handoff.CaseTests.test_same_name_different_people) ... ok
+test_settled_payment_record (test_handoff.CaseTests.test_settled_payment_record) ... ok
+test_unknown_payment_not_false (test_handoff.CaseTests.test_unknown_payment_not_false) ... ok
+test_unknown_session_rejected (test_handoff.CaseTests.test_unknown_session_rejected) ... ok
+test_unknown_status_rejected (test_handoff.CaseTests.test_unknown_status_rejected) ... ok
+test_handoff_structure (test_handoff.PackageTests.test_handoff_structure) ... ok
+test_manuscript_guard_rejects_missing_body (test_handoff.PackageTests.test_manuscript_guard_rejects_missing_body) ... ok
+test_tampering_detected (test_handoff.PackageTests.test_tampering_detected) ... ok
+test_chinese_and_english (test_handoff.WordCountTests.test_chinese_and_english) ... ok
+test_duplicate_markers_fail (test_handoff.WordCountTests.test_duplicate_markers_fail) ... ok
+test_excludes_appendix (test_handoff.WordCountTests.test_excludes_appendix) ... ok
+test_excludes_heading_code_url_citation (test_handoff.WordCountTests.test_excludes_heading_code_url_citation) ... ok
+test_keeps_link_label (test_handoff.WordCountTests.test_keeps_link_label) ... ok
+test_no_markers_fails (test_handoff.WordCountTests.test_no_markers_fails) ... ok
+test_order_fails (test_handoff.WordCountTests.test_order_fails) ... ok
+
+----------------------------------------------------------------------
+Ran 22 tests in 0.028s
+
+OK

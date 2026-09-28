@@ -1,0 +1,20 @@
+{
+  "status": "passed",
+  "episodes_checked": 4,
+  "entries": [
+    {
+      "episode": 3,
+      "source_sha256": "4760c0e82d4d92dd84f48217907aa118871a72a929045a0549f4555ad8cfaa70",
+      "script_sha256": "480955403428c7b18f0ba1a7aaf9bf1cc885108b17a0603bac21cd86d35771e4",
+      "body": 3767
+    },
+    {
+      "episode": 4,
+      "source_sha256": "da0adce929d15f65b33a5b22978928d9e136032ee095e747210bb39390b04a97",
+      "script_sha256": "cc692b2f998885799f4f309ec5616e1ed7fcb361dbd28992bc62ce99ca27795d",
+      "body": 3649
+    }
+  ],
+  "actual_audio": 0,
+  "actual_listening": false
+}

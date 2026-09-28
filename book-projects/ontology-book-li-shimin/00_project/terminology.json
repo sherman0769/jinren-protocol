@@ -1,0 +1,826 @@
+{
+  "schema_version": "1.0",
+  "term_count": 82,
+  "terms": [
+    {
+      "id": "T001",
+      "chapter": 1,
+      "english": "Ontology",
+      "chinese": "本體",
+      "plain_explanation": "在選定領域裡，明確描述有哪些概念、它們的意思及彼此關係的模型。",
+      "example": "先區分課程、某次開班和報名紀錄，才能問還有幾個名額。",
+      "boundary": "不等於所有資料的集合，也不保證模型描述符合現實。",
+      "source": "R01、R02、R04"
+    },
+    {
+      "id": "T002",
+      "chapter": 2,
+      "english": "Ontological Commitment",
+      "chinese": "本體承諾",
+      "plain_explanation": "採用一套模型，就接受它對事物如何區分與描述的基本約定。",
+      "example": "本書把「課程」與「班別」分開，後續資料與問答都要遵守此區分。",
+      "boundary": "這是表示世界的選擇，不是宣稱世界只有這一種正確分法。",
+      "source": "R01"
+    },
+    {
+      "id": "T003",
+      "chapter": 2,
+      "english": "Operational Ontology",
+      "chinese": "營運型本體",
+      "plain_explanation": "本書用來討論把業務概念連到資料、邏輯與可執行操作的企業平台做法。",
+      "example": "訂單物件旁可連到取消訂單的受控操作。",
+      "boundary": "譯名與範圍不是統一標準；不得把特定廠商產品定義當作所有本體的定義。",
+      "source": "R14、R16"
+    },
+    {
+      "id": "T004",
+      "chapter": 3,
+      "english": "Entity",
+      "chinese": "實體／業務對象",
+      "plain_explanation": "在這次建模範圍內，我們希望能指認並描述的對象。",
+      "example": "某位學員、某個班別、某筆報名。",
+      "boundary": "不必是摸得到的物品；資料列也不一定與一個實體一對一。",
+      "source": "R02、R14"
+    },
+    {
+      "id": "T005",
+      "chapter": 3,
+      "english": "Class / Type",
+      "chinese": "類別／型別",
+      "plain_explanation": "把具有某些共同意義的對象放在同一種概念下。",
+      "example": "學員屬於人；班別是一次實際開課安排。",
+      "boundary": "知識表示的 Class、資料型別與平台 Object Type 不必完全等義。",
+      "source": "R02、R04、R14"
+    },
+    {
+      "id": "T006",
+      "chapter": 3,
+      "english": "Individual / Instance",
+      "chinese": "個體／實例",
+      "plain_explanation": "模型中某個具體被指認的對象。",
+      "example": "P001 是一個人，S101 是一個班別。",
+      "boundary": "本體也可以包含個體陳述，不能說個體只能存在知識圖譜。",
+      "source": "R04"
+    },
+    {
+      "id": "T007",
+      "chapter": 3,
+      "english": "Property",
+      "chinese": "屬性",
+      "plain_explanation": "用來描述對象特徵，或在某些語言裡表達對象間關係。",
+      "example": "班別有開始時間，也有授課者。",
+      "boundary": "一般平台屬性與 OWL 的資料屬性、物件屬性要按語境區分。",
+      "source": "R04、R14"
+    },
+    {
+      "id": "T008",
+      "chapter": 3,
+      "english": "Relationship",
+      "chinese": "關係",
+      "plain_explanation": "兩個或多個對象之間有業務意義的連結。",
+      "example": "一筆報名連到一個人及一個班別。",
+      "boundary": "畫連線前先定義方向、適用對象與意思；同名連線未必同義。",
+      "source": "R02、R04"
+    },
+    {
+      "id": "T009",
+      "chapter": 3,
+      "english": "Role",
+      "chinese": "角色",
+      "plain_explanation": "對象在特定情境與時間扮演的身分。",
+      "example": "同一人可以同時是某班講師與另一班學員。",
+      "boundary": "講師不必是員工，角色也不必永久不變。",
+      "source": "R02、R04"
+    },
+    {
+      "id": "T010",
+      "chapter": 3,
+      "english": "Identifier / IRI",
+      "chinese": "識別碼／國際化資源識別符",
+      "plain_explanation": "讓系統穩定指向某個對象的標記；IRI 是一種可用於資源命名的形式。",
+      "example": "P001 與 P003 同名仍是不同的人；正式 RDF 可使用完整 IRI。",
+      "boundary": "名字不是可靠唯一識別碼；任意 JSON 字串也不因像網址就自動解決身分對齊。",
+      "source": "R03"
+    },
+    {
+      "id": "T011",
+      "chapter": 4,
+      "english": "Database",
+      "chinese": "資料庫",
+      "plain_explanation": "讓程式能保存、查詢及更新資料的系統。",
+      "example": "用資料表保存報名與付款。",
+      "boundary": "資料庫可以已有明確業務模型；不是本體的落後替代品。",
+      "source": "R04、R08"
+    },
+    {
+      "id": "T012",
+      "chapter": 4,
+      "english": "Schema",
+      "chinese": "資料綱要",
+      "plain_explanation": "規定資料怎麼組成，例如欄位、型別與結構限制。",
+      "example": "報名表有學員識別碼、班別識別碼、狀態。",
+      "boundary": "綱要與本體有重疊，但用途、語意與運算方式不必相同。",
+      "source": "R04、R08"
+    },
+    {
+      "id": "T013",
+      "chapter": 4,
+      "english": "Taxonomy",
+      "chinese": "分類體系",
+      "plain_explanation": "按照某種分類原則安排類目及上下層關係。",
+      "example": "課程分成基礎班、進階班。",
+      "boundary": "階層分類不是本體的全部；也不能把每種分類關係都當成邏輯上的子類。",
+      "source": "R06"
+    },
+    {
+      "id": "T014",
+      "chapter": 4,
+      "english": "Controlled Vocabulary",
+      "chinese": "受控詞彙",
+      "plain_explanation": "對一組名稱與用詞建立一致使用約定。",
+      "example": "統一使用「班別」，並把「梯次」列為特定情境下的別名。",
+      "boundary": "詞一致不表示部門的計算規則已一致。",
+      "source": "R06"
+    },
+    {
+      "id": "T015",
+      "chapter": 4,
+      "english": "Knowledge Graph (KG)",
+      "chinese": "知識圖譜",
+      "plain_explanation": "用圖的方式表示對象與關係，並可加入型別、語意與來源資訊。",
+      "example": "P001 透過 E001 報名 S101；S101 隸屬 C101。",
+      "boundary": "研究與產品定義有差異；不必使用 OWL，也不一定只能放實例。",
+      "source": "R08"
+    },
+    {
+      "id": "T016",
+      "chapter": 4,
+      "english": "Semantic Layer",
+      "chinese": "語意層",
+      "plain_explanation": "替底層資料提供可被業務共同使用的名稱、關聯或指標定義。",
+      "example": "「已確認報名數」有固定計算條件，分析者不必各寫一套。",
+      "boundary": "分析指標型語意層不必等於完整本體；也不能預設一定比本體低階。",
+      "source": "R26、R14"
+    },
+    {
+      "id": "T017",
+      "chapter": 4,
+      "english": "RDF — Resource Description Framework",
+      "chinese": "資源描述框架",
+      "plain_explanation": "W3C 用來表示圖式陳述的一套資料模型。",
+      "example": "用主詞「S101」、述詞「屬於課程」、受詞「C101」描述一個事實。",
+      "boundary": "RDF 本身不會提供所有業務意思，也不是本書案例 JSON 的別名。",
+      "source": "R03"
+    },
+    {
+      "id": "T018",
+      "chapter": 4,
+      "english": "Triple",
+      "chinese": "三元組",
+      "plain_explanation": "以主詞、述詞、受詞組成的一個陳述單位。",
+      "example": "「S101—授課者—P010」。",
+      "boundary": "不是所有圖資料庫都以 RDF 三元組作為唯一內部結構。",
+      "source": "R03、R08"
+    },
+    {
+      "id": "T019",
+      "chapter": 4,
+      "english": "SKOS — Simple Knowledge Organization System",
+      "chinese": "簡易知識組織系統",
+      "plain_explanation": "W3C 用來表達概念詞彙、名稱與概念關聯的模型。",
+      "example": "為課程主題維護偏好名稱、替代名稱及較廣／較窄概念。",
+      "boundary": "SKOS 的較廣概念關係，不能直接當作 OWL 子類推理。",
+      "source": "R06"
+    },
+    {
+      "id": "T020",
+      "chapter": 5,
+      "english": "Competency Question (CQ)",
+      "chinese": "能力問題",
+      "plain_explanation": "拿來判斷模型應能回答哪些問題的一組具體提問。",
+      "example": "「某班有哪些已確認報名？它們如何被計算？」",
+      "boundary": "能查詢的問題、資料品質測試與操作授權測試要分欄記錄。",
+      "source": "R02"
+    },
+    {
+      "id": "T021",
+      "chapter": 5,
+      "english": "Domain / Scope",
+      "chinese": "領域／範圍",
+      "plain_explanation": "這次要處理的知識領域與刻意納入的邊界。",
+      "example": "先做報名與名額，不同時做薪資、行銷與健康建議。",
+      "boundary": "範圍小不是定義含糊；不要把不建模誤寫成不存在。",
+      "source": "R02"
+    },
+    {
+      "id": "T022",
+      "chapter": 6,
+      "english": "Mapping",
+      "chinese": "對應關係",
+      "plain_explanation": "說明兩套名稱、欄位或模型如何連接。",
+      "example": "試算表的 student_id 對應案例的 person_id。",
+      "boundary": "同名不保證同義；多對一合併須記錄資訊損失。",
+      "source": "R08、R25"
+    },
+    {
+      "id": "T023",
+      "chapter": 6,
+      "english": "Data Binding",
+      "chinese": "資料綁定",
+      "plain_explanation": "讓概念模型中的對象與屬性連到實際資料來源。",
+      "example": "把班別名額屬性綁到排課系統的 capacity 欄位。",
+      "boundary": "平台更新方式不同；綁定成功不代表自動即時或永遠正確。",
+      "source": "R14"
+    },
+    {
+      "id": "T024",
+      "chapter": 7,
+      "english": "Entity Resolution",
+      "chinese": "實體對齊／實體消歧",
+      "plain_explanation": "判斷不同紀錄是否指向同一個實際對象。",
+      "example": "兩個系統都有林沐安，必須另查可靠識別資料。",
+      "boundary": "不能只靠姓名相同或模型高信心就合併。",
+      "source": "R08"
+    },
+    {
+      "id": "T025",
+      "chapter": 7,
+      "english": "Provenance",
+      "chinese": "來源沿革",
+      "plain_explanation": "記錄資料從哪裡來、經過什麼處理，以及由誰或哪個系統產生。",
+      "example": "可用名額使用哪次報名快照、哪版計算規則。",
+      "boundary": "有來源不等於來源可信；仍需核對內容與時效。",
+      "source": "R07"
+    },
+    {
+      "id": "T026",
+      "chapter": 7,
+      "english": "PROV-O — PROV Ontology",
+      "chinese": "來源沿革本體",
+      "plain_explanation": "W3C 用來描述實體、活動與負責者等來源關係的本體。",
+      "example": "某份統計由某次處理活動讀取某版報名資料產生。",
+      "boundary": "其中 Agent 指負有責任的主體，不專指今天的生成式 AI 智能體。",
+      "source": "R07"
+    },
+    {
+      "id": "T027",
+      "chapter": 7,
+      "english": "Valid Time / Observation Time",
+      "chinese": "有效時間／觀察時間",
+      "plain_explanation": "分別描述某個事實適用於何時，以及我們何時取得這個紀錄。",
+      "example": "退款政策十月起生效，但系統九月底已讀到公告。",
+      "boundary": "有效時間與觀察時間分開；觀察時間不自動等同資料庫交易時間，也不提供每筆事件時間。",
+      "source": "R27；本書觀察時間設計"
+    },
+    {
+      "id": "T028",
+      "chapter": 7,
+      "english": "Data Freshness",
+      "chinese": "資料新鮮度",
+      "plain_explanation": "資料距離它所代表狀態有多新，以及是否滿足這次任務的時效要求。",
+      "example": "昨天剩一席，今天不能直接照單接受。",
+      "boundary": "新鮮不表示正確；適合週報的時效不必適合即時報名。",
+      "source": "R14、R19"
+    },
+    {
+      "id": "T029",
+      "chapter": 8,
+      "english": "OWL — Web Ontology Language",
+      "chinese": "網頁本體語言",
+      "plain_explanation": "用明確語意表達類別、屬性與邏輯陳述的一組 W3C 本體語言規格。",
+      "example": "描述某些類別互斥，或兩個描述其實指同一個個體。",
+      "boundary": "不是用來替所有資料表自動做必填檢查的程式語言。",
+      "source": "R04"
+    },
+    {
+      "id": "T030",
+      "chapter": 8,
+      "english": "Open World Assumption",
+      "chinese": "開放世界假設",
+      "plain_explanation": "資料裡沒有寫某件事，不代表那件事就是假的。",
+      "example": "沒有付款陳述，不足以直接推論這個人沒有付款。",
+      "boundary": "這不等於所有應用都不能做封閉範圍統計；必須另說資料完整性契約。",
+      "source": "R04"
+    },
+    {
+      "id": "T031",
+      "chapter": 8,
+      "english": "Closed World Assumption",
+      "chinese": "封閉世界假設",
+      "plain_explanation": "在明確選定的查詢範圍裡，把未被收錄的命題視為不成立的一種處理約定。",
+      "example": "已確認名單宣告完整時，才能依那份名單計算佔位。",
+      "boundary": "必須說明作用範圍；不能套到所有企業事實。",
+      "source": "R04；應用界線屬本書設計"
+    },
+    {
+      "id": "T032",
+      "chapter": 8,
+      "english": "Reasoner / Inference",
+      "chinese": "推理器／推論",
+      "plain_explanation": "依所採形式語意與規則，推出可由前提導出的結果。",
+      "example": "從子類關係與個體所屬類別，推出更上層的類別歸屬。",
+      "boundary": "邏輯可推出不等於現實真實；模型生成合理文字也不等於形式推理。",
+      "source": "R04"
+    },
+    {
+      "id": "T033",
+      "chapter": 8,
+      "english": "Consistency",
+      "chinese": "一致性",
+      "plain_explanation": "在指定邏輯體系裡，一組陳述是否能同時成立。",
+      "example": "模型不能一邊要求某個個體屬於互斥類別，一邊又禁止那種情形。",
+      "boundary": "邏輯一致的模型仍可能描述錯誤事實。",
+      "source": "R04"
+    },
+    {
+      "id": "T034",
+      "chapter": 8,
+      "english": "Constraint",
+      "chinese": "約束",
+      "plain_explanation": "對允許資料狀態或業務狀態所加的限制；必須說明在哪一層生效。",
+      "example": "容量不可負數是一項驗證要求；不能超賣是操作層的不變條件。",
+      "boundary": "OWL 公理、SHACL 條件與交易檢查不能只因都叫約束就混為一談。",
+      "source": "R04、R05"
+    },
+    {
+      "id": "T035",
+      "chapter": 8,
+      "english": "SHACL — Shapes Constraint Language",
+      "chinese": "形狀約束語言",
+      "plain_explanation": "W3C 用來描述 RDF 圖資料應滿足哪些驗證條件的語言。",
+      "example": "檢查指定班別是否具有整數容量欄位。",
+      "boundary": "SHACL 驗證不會單獨完成使用者授權、排程鎖定或跨系統退款。",
+      "source": "R05"
+    },
+    {
+      "id": "T036",
+      "chapter": 8,
+      "english": "Cardinality",
+      "chinese": "基數／數量條件",
+      "plain_explanation": "描述某種關係或屬性的數量要求。",
+      "example": "一筆報名必須對應一個班別。",
+      "boundary": "OWL 的數量公理與資料驗證的筆數檢查，可能有不同語意與結果。",
+      "source": "R04、R05"
+    },
+    {
+      "id": "T037",
+      "chapter": 8,
+      "english": "Transaction / Invariant",
+      "chinese": "交易／不變條件",
+      "plain_explanation": "交易是一次應一致完成的資料變更；不變條件是操作前後都要守住的規則。",
+      "example": "兩個人同時搶最後一席，執行端仍不能賣出兩席。",
+      "boundary": "寫在提示詞或本體裡不足以保證；固定 PostgreSQL 17 文件僅校準隔離邊界，正式服務仍須實測。",
+      "source": "R28；本書不變條件設計"
+    },
+    {
+      "id": "T038",
+      "chapter": 9,
+      "english": "LLM — Large Language Model",
+      "chinese": "大語言模型",
+      "plain_explanation": "從大量資料學習模式，能處理與生成語言等內容的模型類型。",
+      "example": "把自然語言問題整理成查詢條件或解釋查詢結果。",
+      "boundary": "不是只有算力或聊天功能，也不能保證可靠讀懂所有業務意思。",
+      "source": "R09、R18、R19"
+    },
+    {
+      "id": "T039",
+      "chapter": 9,
+      "english": "RAG — Retrieval-Augmented Generation",
+      "chinese": "檢索增強生成",
+      "plain_explanation": "生成答案時引入從外部取回的相關資訊。",
+      "example": "回答退款流程前，取回適用版本政策並核對相關報名資料。",
+      "boundary": "不只搜尋 PDF；也不保證取回資訊正確、完整或被正確引用。",
+      "source": "R09"
+    },
+    {
+      "id": "T040",
+      "chapter": 9,
+      "english": "Embedding",
+      "chinese": "向量表示",
+      "plain_explanation": "把資料表示成數值向量，以支援相似性計算等用途。",
+      "example": "找出語意近似於「退費」的文件片段。",
+      "boundary": "相似不等於相同身分、邏輯等價或事實正確。",
+      "source": "R09、R10"
+    },
+    {
+      "id": "T041",
+      "chapter": 9,
+      "english": "Grounding",
+      "chinese": "依據連結／接地",
+      "plain_explanation": "把模型輸出連到本次任務可檢查的資料、對象或環境依據。",
+      "example": "回答剩幾席時，指出查詢時間、班別與計算規則。",
+      "boundary": "有依據仍可能引用錯誤；本書不用「接地」保證真實性。",
+      "source": "R14、R19"
+    },
+    {
+      "id": "T042",
+      "chapter": 9,
+      "english": "Evidence Traceability",
+      "chinese": "證據可追溯性",
+      "plain_explanation": "能從一項主張回查使用的資料與推導步驟。",
+      "example": "「剩一席」可回到 S101、E001、E002 與名額公式。",
+      "boundary": "連結到一份文件不是完整的證明；證據必須支持該項主張。",
+      "source": "R07；本書驗收設計"
+    },
+    {
+      "id": "T043",
+      "chapter": 10,
+      "english": "GraphRAG — Graph-based Retrieval-Augmented Generation",
+      "chinese": "圖式檢索增強生成",
+      "plain_explanation": "以圖結構支援檢索、組織證據或生成的多種做法。",
+      "example": "沿報名與班別關係找特定人相關紀錄，或為大量文件建立主題摘要。",
+      "boundary": "Microsoft GraphRAG 是其中一種方案；圖式檢索不等於企業本體。",
+      "source": "R10、R11、R24"
+    },
+    {
+      "id": "T044",
+      "chapter": 10,
+      "english": "Baseline",
+      "chinese": "比較基準方案",
+      "plain_explanation": "用來判斷新方案是否真的有幫助的較簡單或現有方案。",
+      "example": "先做 SQL 查詢或一般 RAG，再比較加圖譜的差異。",
+      "boundary": "不能故意挑弱基準，或讓一邊使用較新資料而另一邊沒有。",
+      "source": "R11、R18"
+    },
+    {
+      "id": "T045",
+      "chapter": 10,
+      "english": "Evaluation / Evals",
+      "chinese": "評測",
+      "plain_explanation": "用明確任務、資料、判準與結果紀錄來檢查系統表現。",
+      "example": "同一組問題比較正確率、可追溯性、延遲與成本。",
+      "boundary": "流暢文字、單次成功展示或另一個 LLM 的評分都不能單獨作為可靠性證明。",
+      "source": "R11、R12、R13"
+    },
+    {
+      "id": "T046",
+      "chapter": 11,
+      "english": "Agent",
+      "chinese": "智能體",
+      "plain_explanation": "能依目標、環境資訊與回饋選擇後續步驟或工具的系統角色。",
+      "example": "先查報名狀態，再決定需要哪項補充資料。",
+      "boundary": "自主程度不同；不是每個自動化流程都需升級成高自主 Agent。",
+      "source": "R18"
+    },
+    {
+      "id": "T047",
+      "chapter": 11,
+      "english": "Workflow",
+      "chinese": "工作流程",
+      "plain_explanation": "把一組工作步驟與分支條件安排成可執行流程。",
+      "example": "先查資格、再產生建議、等待核准後才處理。",
+      "boundary": "工作流程與 Agent 可混合使用；不是較落後的路線。",
+      "source": "R18"
+    },
+    {
+      "id": "T048",
+      "chapter": 11,
+      "english": "Context Engineering",
+      "chinese": "情境工程",
+      "plain_explanation": "設計模型在某次工作中會得到哪些資訊、工具結果與指示。",
+      "example": "只給客服本次任務需要的班別及政策，不把整間公司的資料全部塞入。",
+      "boundary": "本體可以提供部分情境，但不等於全部情境工程。",
+      "source": "R19"
+    },
+    {
+      "id": "T049",
+      "chapter": 11,
+      "english": "Tool / API — Application Programming Interface",
+      "chinese": "工具／應用程式介面",
+      "plain_explanation": "工具是系統可呼叫的能力；API 是程式之間交換請求與結果的介面。",
+      "example": "查詢班別容量與送出退款建議是兩個不同工具。",
+      "boundary": "能呼叫不表示有權執行；介面格式正確也不保證業務定義一致。",
+      "source": "R17、R18"
+    },
+    {
+      "id": "T050",
+      "chapter": 11,
+      "english": "MCP — Model Context Protocol",
+      "chinese": "模型情境協定",
+      "plain_explanation": "規範 AI 應用與提供工具、資源等能力的服務如何連接及互動的協定。",
+      "example": "把班別查詢以共同介面提供給相容的用戶端。",
+      "boundary": "不是企業概念的共同字典，也不會單靠協定替所有實作完成安全控制。",
+      "source": "R17"
+    },
+    {
+      "id": "T051",
+      "chapter": 11,
+      "english": "MCP Client / Server",
+      "chinese": "MCP 用戶端／伺服器",
+      "plain_explanation": "用戶端建立連線使用能力；伺服器透過協定提供能力。",
+      "example": "AI 應用透過用戶端連到只讀班別查詢伺服器。",
+      "boundary": "主機、用戶端與伺服器有區別；一個企業系統可能有多個連接。",
+      "source": "R17"
+    },
+    {
+      "id": "T052",
+      "chapter": 11,
+      "english": "Tool Contract",
+      "chinese": "工具契約",
+      "plain_explanation": "本書對工具輸入、輸出、語意、權限與失敗行為的明確約定。",
+      "example": "查剩餘名額必須回傳資料時間、規則版本與未知欄位。",
+      "boundary": "這是本書的設計說法，不是另一個正式協定。",
+      "source": "本書工作概念；R17、R18 校準"
+    },
+    {
+      "id": "T053",
+      "chapter": 12,
+      "english": "Authorization",
+      "chinese": "授權",
+      "plain_explanation": "判定某個主體在當下情況下是否可做特定操作。",
+      "example": "AI 可以準備退款申請，但只有主管能核准。",
+      "boundary": "可查詢不代表可修改；授權應在執行端再核對。",
+      "source": "R16、R17；案例政策"
+    },
+    {
+      "id": "T054",
+      "chapter": 12,
+      "english": "Human-in-the-Loop (HITL)",
+      "chinese": "人在迴路中／人工介入",
+      "plain_explanation": "在指定節點由人檢查、決定或修正系統工作。",
+      "example": "領域專家審查新概念；主管核准個別退款。",
+      "boundary": "有人按過同意不是萬靈丹；應看見對象、金額、資料版本與風險。",
+      "source": "R13、R17"
+    },
+    {
+      "id": "T055",
+      "chapter": 12,
+      "english": "Idempotency",
+      "chinese": "冪等性／重試不重複生效",
+      "plain_explanation": "對同一業務請求重送時，不應意外造成第二次相同變更的設計要求。",
+      "example": "網路重試退款要求，系統回同一筆結果而不再退一次。",
+      "boundary": "須按服務契約實作；請求識別、參數、身分與保留期均影響效果，不是所有服務都提供通用一次生效保證。",
+      "source": "R29；本書工具契約設計"
+    },
+    {
+      "id": "T056",
+      "chapter": 12,
+      "english": "Audit Trail",
+      "chinese": "稽核軌跡",
+      "plain_explanation": "保存誰在何時、依什麼理由與版本做了什麼變更及結果。",
+      "example": "退款紀錄包含提議者、核准者、工具請求與執行結果。",
+      "boundary": "日誌存在不代表記錄完整、不可竄改或符合任何特定法律。",
+      "source": "R16、R17；本書驗收設計"
+    },
+    {
+      "id": "T057",
+      "chapter": 12,
+      "english": "Guardrails",
+      "chinese": "防護措施",
+      "plain_explanation": "在輸入、處理與執行各處限制不允許行為的措施集合。",
+      "example": "工具採白名單、金額需核准、失敗時停止而非猜測。",
+      "boundary": "不是單一提示詞，也不能宣稱能消除所有風險。",
+      "source": "R17、R18"
+    },
+    {
+      "id": "T058",
+      "chapter": 13,
+      "english": "Ontology Engineering",
+      "chinese": "本體工程",
+      "plain_explanation": "從需求、範圍、建模、評估到維護的一系列工作。",
+      "example": "能力問題改變後，檢查概念、資料對應與測試是否一起更新。",
+      "boundary": "不是把文件一次轉成圖就結束。",
+      "source": "R02、R12、R13"
+    },
+    {
+      "id": "T059",
+      "chapter": 13,
+      "english": "Ontology Learning",
+      "chinese": "本體學習／本體抽取",
+      "plain_explanation": "研究從文字等資料辨識概念、關係或公理的做法。",
+      "example": "由課程說明抽出候選類別與關係。",
+      "boundary": "抽取的候選不自動成為公司批准的正式定義。",
+      "source": "R12、R21"
+    },
+    {
+      "id": "T060",
+      "chapter": 13,
+      "english": "Competency-driven Evaluation",
+      "chinese": "能力問題導向評估",
+      "plain_explanation": "以模型是否能支援事前定義的問題來檢查品質。",
+      "example": "重跑「哪些報名佔位」測試，確認新定義沒有破壞舊用途。",
+      "boundary": "本書使用此描述，不宣稱所有研究都採同一種標準程序。",
+      "source": "R02、R13"
+    },
+    {
+      "id": "T061",
+      "chapter": 13,
+      "english": "Versioning / Migration",
+      "chinese": "版本管理／移轉",
+      "plain_explanation": "版本管理保存可識別的模型內容與變更關係；移轉則處理舊資料、查詢與工具如何適應新規則。",
+      "example": "將報名狀態拆成報名流程與付款流程時，保留舊值對應。",
+      "boundary": "改名稱可能改意思；不能只看檔案差異就宣稱相容。",
+      "source": "R30、R31；本書版本流程"
+    },
+    {
+      "id": "T062",
+      "chapter": 13,
+      "english": "Drift",
+      "chinese": "漂移",
+      "plain_explanation": "現實用語、流程或資料分布逐漸偏離既有模型或假設。",
+      "example": "新增候補保留席規則後，原本的名額算法不再適用。",
+      "boundary": "發現漂移不表示可由 AI 未經審查自動修改正式政策。",
+      "source": "本書觀察框架；需以實例補證"
+    },
+    {
+      "id": "T063",
+      "chapter": 14,
+      "english": "Multi-Agent",
+      "chinese": "多智能體",
+      "plain_explanation": "由多個具不同責任的智能體共同參與任務。",
+      "example": "客服查狀態，行政提出安排，主管流程決定高風險操作。",
+      "boundary": "Agent 越多不等於效果越好，協調與權限成本也要計入。",
+      "source": "R18；本書架構推論"
+    },
+    {
+      "id": "T064",
+      "chapter": 14,
+      "english": "Bounded Context",
+      "chinese": "限界情境／有邊界的業務語境",
+      "plain_explanation": "在一個清楚界定的業務範圍內，維持一致的模型與語言。",
+      "example": "客服的有效學員與財務的已收款學員可不同，必須說明轉換。",
+      "boundary": "這是領域驅動設計概念，不是本體專屬術語。",
+      "source": "R25"
+    },
+    {
+      "id": "T065",
+      "chapter": 14,
+      "english": "Semantic Interoperability",
+      "chinese": "語意互通",
+      "plain_explanation": "不同系統交換資料後，仍能對重要意思達成可用的一致理解。",
+      "example": "A 系統的 confirmed 轉到 B 系統時，不被誤當成 paid。",
+      "boundary": "介面連通、欄位同名與資料能解析都不足以單獨保證。",
+      "source": "R01、R08、R25"
+    },
+    {
+      "id": "T066",
+      "chapter": 14,
+      "english": "Agent Memory",
+      "chinese": "智能體記憶",
+      "plain_explanation": "系統為後續任務保留的經驗、事件或資訊。",
+      "example": "保存上次問題與處理摘要，但政策仍以正式來源為準。",
+      "boundary": "記憶可能包含錯誤；不等於已核准的業務本體。",
+      "source": "R19；本書分工設計"
+    },
+    {
+      "id": "T067",
+      "chapter": 14,
+      "english": "World Model",
+      "chinese": "世界模型",
+      "plain_explanation": "本書在企業語境中，用來比喻對選定營運世界的可操作表徵。",
+      "example": "共同描述學員、班別、報名及狀態。",
+      "boundary": "這個限縮比喻不等於機器學習中的預測模型，也不保證因果推演能力。",
+      "source": "本書工作說法；R14、R22 校準"
+    },
+    {
+      "id": "T068",
+      "chapter": 14,
+      "english": "Digital Twin",
+      "chinese": "數位分身",
+      "plain_explanation": "把實際對象或系統的結構、狀態等以數位形式表示，並依目的與資料連接。",
+      "example": "持續反映教室、設備或營運狀態的數位模型。",
+      "boundary": "有本體或圖譜不代表已有可校準的模擬；聲稱預測能力需另外驗證。",
+      "source": "R22"
+    },
+    {
+      "id": "T069",
+      "chapter": 15,
+      "english": "Total Cost of Ownership (TCO)",
+      "chinese": "總持有成本",
+      "plain_explanation": "把建立、維護、運作、協調與退出等成本一起看。",
+      "example": "不只算模型費，也算定義協調、資料清理與版本移轉的人力。",
+      "boundary": "本書成本表是估算工具，不使用虛構 ROI 當產業數據。",
+      "source": "本書決策工作表；R11、R18 支持部分權衡"
+    },
+    {
+      "id": "T070",
+      "chapter": 15,
+      "english": "Vendor Lock-in",
+      "chinese": "供應商綁定",
+      "plain_explanation": "更換平台時因格式、功能或整合依賴而產生的切換困難。",
+      "example": "能匯出資料，卻未必能移出操作規則與權限邏輯。",
+      "boundary": "是否嚴重須看實際合約、匯出格式與遷移測試，不可僅憑品牌推定。",
+      "source": "本書風險項目；產品條款待專案查核"
+    },
+    {
+      "id": "T071",
+      "chapter": 15,
+      "english": "Proof of Concept (PoC)",
+      "chinese": "概念驗證",
+      "plain_explanation": "以小範圍測試確認特定能力或可行性的實作。",
+      "example": "先用十二道問題比較普通查詢與加語意模型的效果。",
+      "boundary": "概念展示成功不等於已具生產環境可靠性。",
+      "source": "R18；本書驗收設計"
+    },
+    {
+      "id": "T072",
+      "chapter": 16,
+      "english": "Transfer / Teach-back",
+      "chinese": "遷移／回教",
+      "plain_explanation": "把理解用到新案例，再用自己的話教給別人。",
+      "example": "把課程報名模型的區分原則用到攝影專案與交付版本。",
+      "boundary": "能背術語或照畫原圖，不能代替真正能遷移。",
+      "source": "本書教學驗收設計"
+    },
+    {
+      "id": "T073",
+      "chapter": 1,
+      "english": "Artificial Intelligence (AI)",
+      "chinese": "人工智慧",
+      "plain_explanation": "用系統完成通常需要辨識、推理、學習或決策能力的工作之研究與應用範圍。",
+      "example": "從分類資料到生成文字與使用工具，都可能是其中的不同方法。",
+      "boundary": "本書不把人工智慧等同於聊天機器人或某一家模型。",
+      "source": "本書入門工作解釋；R08、R18 校準"
+    },
+    {
+      "id": "T074",
+      "chapter": 1,
+      "english": "Business Semantics",
+      "chinese": "業務語意",
+      "plain_explanation": "某個詞或資料在特定業務裡實際代表的意思。",
+      "example": "已確認報名、已付款與已出席回答不同的問題。",
+      "boundary": "語法正確與欄位同名都不能自動證明業務意思相同。",
+      "source": "R14、R25、R26"
+    },
+    {
+      "id": "T075",
+      "chapter": 2,
+      "english": "Conceptualization",
+      "chinese": "概念化",
+      "plain_explanation": "為了處理某個問題，選擇怎麼區分對象、概念及關係。",
+      "example": "先決定把課程內容與一次開班看作兩種對象。",
+      "boundary": "概念化是一種建模選擇；本體把其中重要部分明確表達，不表示世界被完整收錄。",
+      "source": "R01、R02"
+    },
+    {
+      "id": "T076",
+      "chapter": 5,
+      "english": "Domain Expert",
+      "chinese": "領域專家",
+      "plain_explanation": "對特定工作範圍的意思、規則及例外具有可核對知識的人。",
+      "example": "行政說明報名何時佔位；財務說明收款狀態代表什麼。",
+      "boundary": "領域專家不必是技術工程師，也可能需要多人協調分歧，不能只由模型自封。",
+      "source": "R02、R13"
+    },
+    {
+      "id": "T077",
+      "chapter": 6,
+      "english": "Model Iteration",
+      "chinese": "模型迭代",
+      "plain_explanation": "根據問題、資料與測試回饋，逐次修改概念模型。",
+      "example": "發現候補和確認不同，就拆清狀態並重跑問題。",
+      "boundary": "迭代不代表可以未經核准隨時改正式語意；要記版本與受影響依賴。",
+      "source": "R02、R13"
+    },
+    {
+      "id": "T078",
+      "chapter": 9,
+      "english": "Hallucination",
+      "chinese": "幻覺／缺乏依據的生成",
+      "plain_explanation": "本書用來指模型生成了不受可用證據支持、或與事實不符的內容。",
+      "example": "未找到教室資料，卻回答「這班在線上」。",
+      "boundary": "不同研究對此詞的操作定義不一；錯誤也可能來自檢索、舊資料或業務定義，不全是模型生成。",
+      "source": "R09、R12；研究定義以原文為準"
+    },
+    {
+      "id": "T079",
+      "chapter": 10,
+      "english": "Multi-hop Query",
+      "chinese": "多跳查詢",
+      "plain_explanation": "沿著多段關係找到答案，而非只查一個欄位。",
+      "example": "先從人找到報名，再從報名找到班別，最後找講師。",
+      "boundary": "關聯式資料庫也能做多表連接；多跳不是圖資料庫的專利。",
+      "source": "R08、R11"
+    },
+    {
+      "id": "T080",
+      "chapter": 15,
+      "english": "Ablation Test",
+      "chinese": "消融測試",
+      "plain_explanation": "移除或替換系統的一個部分，觀察表現差異以檢查其貢獻。",
+      "example": "拿掉本體提示但保留同一資料、模型與工具，看答案是否真的變差。",
+      "boundary": "需要控制其他條件並說明互相依賴；單次變好或變差不足以證明因果。",
+      "source": "R11；本書比較設計"
+    },
+    {
+      "id": "T081",
+      "chapter": 4,
+      "english": "SQL — Structured Query Language",
+      "chinese": "結構化查詢語言",
+      "plain_explanation": "常用來對關聯式資料庫提出查詢與資料操作的語言。",
+      "example": "把班別表和報名表連起來，依狀態計算佔位數。",
+      "boundary": "SQL 能做關係查詢；不必先有圖譜才能處理跨表問題。不同資料庫支援細節需另查官方文件。",
+      "source": "本書入門說明；R08 校準資料模型比較"
+    },
+    {
+      "id": "T082",
+      "chapter": 6,
+      "english": "SPARQL — SPARQL Protocol and RDF Query Language",
+      "chinese": "RDF 圖資料查詢語言與協定",
+      "plain_explanation": "用圖式條件查詢 RDF 資料的語言與相關協定。",
+      "example": "尋找與某班別透過報名關係相連的人。",
+      "boundary": "不是 OWL 推理器，也不會自動做授權；本書先教意思，必要時才展示語法。",
+      "source": "R03、R08；正式語法範例另查 W3C 規格"
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "status": "passed",
+  "scope": "structural_and_identity_checks_not_editorial_certification",
+  "tests_passed": 22,
+  "chapters": [
+    {
+      "chapter": 1,
+      "file": "book_project/02_chapters/chapter_01/chapter_01_main.md",
+      "sha256": "f983039578ef90a099c61a9b85fdfa7103e38caef8bd17c1a690464bef2e85e2",
+      "body_visible_characters": 4212,
+      "cjk_characters": 3603,
+      "letters_and_digits_including_cjk": 3772,
+      "punctuation_and_other_visible": 440,
+      "method": "BODY 內移除標記、空白、標題、程式區塊、圖片、網址、引用代號；主計數含標點，另報中文字與字母數字；非英語 word count。",
+      "source_ids": [
+        "R01",
+        "R18",
+        "R26"
+      ],
+      "chapter_review_hash_matches": true
+    },
+    {
+      "chapter": 2,
+      "file": "book_project/02_chapters/chapter_02/chapter_02_main.md",
+      "sha256": "55e8b4022956728ce36467b2de837d2a9fa63dfc67b9c4ce22ed214b31a45577",
+      "body_visible_characters": 4479,
+      "cjk_characters": 3863,
+      "letters_and_digits_including_cjk": 4023,
+      "punctuation_and_other_visible": 456,
+      "method": "BODY 內移除標記、空白、標題、程式區塊、圖片、網址、引用代號；主計數含標點，另報中文字與字母數字；非英語 word count。",
+      "source_ids": [
+        "R01",
+        "R02",
+        "R04",
+        "R05",
+        "R14",
+        "R16"
+      ],
+      "chapter_review_hash_matches": true
+    }
+  ],
+  "total_body_visible_characters": 8691,
+  "same_paragraph_duplicates_within_or_between_chapters": 0,
+  "case_fixture_unchanged": true,
+  "original_scripts_and_tests_unchanged": true,
+  "all_json_parse": true,
+  "chapter_reviews_hash_bound": true,
+  "manuscript_guard_exit_code": 1,
+  "manuscript_guard_expected_incomplete": true,
+  "local_markdown_links_checked": 0,
+  "docx_and_publication_zip_created": false,
+  "author_or_independent_review_completed": false,
+  "audio_listening_test_completed": false
+}

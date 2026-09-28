@@ -1,0 +1,103 @@
+{
+  "chapters": [
+    {
+      "chapter": 1,
+      "body": 4212,
+      "source_and_derivative_hashes": "passed",
+      "quotes_outside_body": true
+    },
+    {
+      "chapter": 2,
+      "body": 4479,
+      "source_and_derivative_hashes": "passed",
+      "quotes_outside_body": true
+    },
+    {
+      "chapter": 3,
+      "body": 4084,
+      "source_and_derivative_hashes": "passed",
+      "quotes_outside_body": true
+    },
+    {
+      "chapter": 4,
+      "body": 4540,
+      "source_and_derivative_hashes": "passed",
+      "quotes_outside_body": true
+    },
+    {
+      "chapter": 5,
+      "body": 4684,
+      "source_and_derivative_hashes": "passed",
+      "quotes_outside_body": true
+    },
+    {
+      "chapter": 6,
+      "body": 4626,
+      "source_and_derivative_hashes": "passed",
+      "quotes_outside_body": true
+    },
+    {
+      "chapter": 7,
+      "body": 4840,
+      "source_and_derivative_hashes": "passed",
+      "quotes_outside_body": true
+    },
+    {
+      "chapter": 8,
+      "body": 4937,
+      "source_and_derivative_hashes": "passed",
+      "quotes_outside_body": true
+    },
+    {
+      "chapter": 9,
+      "body": 4845,
+      "source_and_derivative_hashes": "passed",
+      "quotes_outside_body": true
+    },
+    {
+      "chapter": 10,
+      "body": 4130,
+      "source_and_derivative_hashes": "passed",
+      "quotes_outside_body": true
+    },
+    {
+      "chapter": 11,
+      "body": 4170,
+      "source_and_derivative_hashes": "passed",
+      "quotes_outside_body": true
+    },
+    {
+      "chapter": 12,
+      "body": 4643,
+      "source_and_derivative_hashes": "passed",
+      "quotes_outside_body": true
+    },
+    {
+      "chapter": 13,
+      "body": 4096,
+      "source_and_derivative_hashes": "passed",
+      "quotes_outside_body": true
+    },
+    {
+      "chapter": 14,
+      "body": 3894,
+      "source_and_derivative_hashes": "passed",
+      "quotes_outside_body": true
+    },
+    {
+      "chapter": 15,
+      "body": 3940,
+      "source_and_derivative_hashes": "passed",
+      "quotes_outside_body": true
+    },
+    {
+      "chapter": 16,
+      "body": 4453,
+      "source_and_derivative_hashes": "passed",
+      "quotes_outside_body": true
+    }
+  ],
+  "script_count": 16,
+  "audio_count": 0,
+  "quality_scope": "structure_and_hashes_only"
+}

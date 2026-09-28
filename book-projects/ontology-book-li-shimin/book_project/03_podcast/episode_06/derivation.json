@@ -1,0 +1,73 @@
+{
+  "episode": 6,
+  "source_chapter_path": "book_project/02_chapters/chapter_06/chapter_06_main.md",
+  "source_chapter_sha256": "63c2742f1d323bad746e0b7e9b9e81f4802e5df3718bb1c2df25fc102097f261",
+  "source_chapter_version": "1.0.0",
+  "script_version": "1.0.0",
+  "source_ids": [
+    "R02",
+    "R03",
+    "R08"
+  ],
+  "generated_on": "2026-09-28",
+  "spoken_count": {
+    "body_visible_characters": 3692,
+    "cjk_characters": 3299,
+    "letters_and_digits_including_cjk": 3328,
+    "punctuation_and_other_visible": 364,
+    "method": "BODY 內移除標記、空白、標題、程式區塊、圖片、網址、引用代號；主計數含標點，另報中文字與字母數字；非英語 word count。"
+  },
+  "editorial_target_minutes": [
+    20,
+    25
+  ],
+  "actual_duration_seconds": null,
+  "audio_generated": false,
+  "quality": {
+    "text_self_review": "passed",
+    "independent_review": "not_performed",
+    "actual_aloud_or_listening": "not_performed",
+    "source_meaning_verified": true,
+    "no_new_unverified_claims": true,
+    "standalone_context": true,
+    "visual_reference_dependency": false,
+    "long_exact_source_paragraph_copies": 0
+  },
+  "files": [
+    {
+      "path": "book_project/03_podcast/episode_06/episode_06_script.md",
+      "sha256": "e6df7091ad7c757d748989f7ba561f6d5d2e18cf01e9ece724820bd9690f5ff3",
+      "bytes": 12014
+    },
+    {
+      "path": "book_project/03_podcast/episode_06/episode_06_shownotes.md",
+      "sha256": "60ae3fe07b0f7aa0f9e5e8260f7112aa2c0df6ff5f7dafa6d35adb75fdf1d597",
+      "bytes": 1433
+    },
+    {
+      "path": "book_project/02_chapters/chapter_06/chapter_06_speech_notes.md",
+      "sha256": "48b4cfe98d22517b657a37e3947c43c44010c4435a0abb56457cd20a5795c871",
+      "bytes": 1299
+    },
+    {
+      "path": "book_project/02_chapters/chapter_06/chapter_06_slide_outline.md",
+      "sha256": "436127c206870909984a8d928eafefcfcca432865f4ec4b7de754b8a851448d2",
+      "bytes": 1203
+    },
+    {
+      "path": "book_project/02_chapters/chapter_06/chapter_06_quotes.md",
+      "sha256": "d1fbf7d7f87e2f544e1ba4e1cd1e659c4098853cd8a3865fda088f5b6d559894",
+      "bytes": 553
+    },
+    {
+      "path": "book_project/02_chapters/chapter_06/chapter_06_teaching.md",
+      "sha256": "c36142dee6d45dc3fb8c0f7c9b83c051c31312a24fe416fe1559edfa03369d34",
+      "bytes": 1636
+    },
+    {
+      "path": "book_project/02_chapters/chapter_06/chapter_06_model_canvas.md",
+      "sha256": "fb138ab30459ab4ece4e690d4a37dd00c5582beddd74990f0050b9b921d3a7a6",
+      "bytes": 3760
+    }
+  ]
+}

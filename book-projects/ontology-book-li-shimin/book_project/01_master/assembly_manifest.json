@@ -1,0 +1,166 @@
+{
+  "book_version": "1.0.1",
+  "assembled_on": "2026-09-28",
+  "canonical_chapters": 16,
+  "sources": [
+    {
+      "path": "book_project/01_master/preface.md",
+      "sha256": "caa902bc2f81ed80096fe268c7aa81932b597fd2e4d9edcbf5c601e414ecbb2d",
+      "bytes": 4140
+    },
+    {
+      "path": "book_project/01_master/reading_guide.md",
+      "sha256": "f000703baca08d6cd729c4980b76ff2c9570a19d3476d8e66a3f39e128810939",
+      "bytes": 2905
+    },
+    {
+      "path": "book_project/02_chapters/chapter_01/chapter_01_main.md",
+      "sha256": "f983039578ef90a099c61a9b85fdfa7103e38caef8bd17c1a690464bef2e85e2",
+      "bytes": 14963
+    },
+    {
+      "path": "book_project/02_chapters/chapter_02/chapter_02_main.md",
+      "sha256": "55e8b4022956728ce36467b2de837d2a9fa63dfc67b9c4ce22ed214b31a45577",
+      "bytes": 16357
+    },
+    {
+      "path": "book_project/02_chapters/chapter_03/chapter_03_main.md",
+      "sha256": "4760c0e82d4d92dd84f48217907aa118871a72a929045a0549f4555ad8cfaa70",
+      "bytes": 13990
+    },
+    {
+      "path": "book_project/02_chapters/chapter_04/chapter_04_main.md",
+      "sha256": "da0adce929d15f65b33a5b22978928d9e136032ee095e747210bb39390b04a97",
+      "bytes": 16029
+    },
+    {
+      "path": "book_project/02_chapters/chapter_05/chapter_05_main.md",
+      "sha256": "9f167adb607eef6b28e97ff6a9ee4e19b614bf6baadbe35d33623ded3e4eafd0",
+      "bytes": 15934
+    },
+    {
+      "path": "book_project/02_chapters/chapter_06/chapter_06_main.md",
+      "sha256": "63c2742f1d323bad746e0b7e9b9e81f4802e5df3718bb1c2df25fc102097f261",
+      "bytes": 15014
+    },
+    {
+      "path": "book_project/02_chapters/chapter_07/chapter_07_main.md",
+      "sha256": "6aa2f562eb01f2561b1aa30978b76a71ec65cbefbe362f2beb5ab81709d58706",
+      "bytes": 16168
+    },
+    {
+      "path": "book_project/02_chapters/chapter_08/chapter_08_main.md",
+      "sha256": "883bda0441cd8c5b1fef5acca1ed204e42df026e6de0bc7e6e9df1c647ad128a",
+      "bytes": 16410
+    },
+    {
+      "path": "book_project/02_chapters/chapter_09/chapter_09_main.md",
+      "sha256": "3f4122a2eb9c6d6f2a6daa39d87208d41722370f54b0244c291edd9c04c29fd9",
+      "bytes": 15852
+    },
+    {
+      "path": "book_project/02_chapters/chapter_10/chapter_10_main.md",
+      "sha256": "18f1f5ffeb1d82b416a4f30f96cdc72553e5b60029772a9d8750563624e0727b",
+      "bytes": 13940
+    },
+    {
+      "path": "book_project/02_chapters/chapter_11/chapter_11_main.md",
+      "sha256": "78904e58bc6ad098ea60845493c5c8e814dd2754df8a71a3f6b1b119a8a7d42a",
+      "bytes": 14225
+    },
+    {
+      "path": "book_project/02_chapters/chapter_12/chapter_12_main.md",
+      "sha256": "9e624b8c405e0fd3b3917348cc0289c4579d5e0fbf2bb029bd0d9153d70d9175",
+      "bytes": 16083
+    },
+    {
+      "path": "book_project/02_chapters/chapter_13/chapter_13_main.md",
+      "sha256": "2b56455be7ab571b12dc22941a5703c91e199d9484c86828387cb9624f1d7bef",
+      "bytes": 14199
+    },
+    {
+      "path": "book_project/02_chapters/chapter_14/chapter_14_main.md",
+      "sha256": "d533baf1996a1348da673a604e19dea85b506e3fba32b3e97be10ed238ab1722",
+      "bytes": 13632
+    },
+    {
+      "path": "book_project/02_chapters/chapter_15/chapter_15_main.md",
+      "sha256": "d846d3566581a338751a67e5857aa45202f9567f239cfefd102cc3fcbd1c601a",
+      "bytes": 13703
+    },
+    {
+      "path": "book_project/02_chapters/chapter_16/chapter_16_main.md",
+      "sha256": "712781058d281e45bc04e97151e3db6b2f7d080d8cb04a6e14617dc33d8aeae1",
+      "bytes": 15094
+    },
+    {
+      "path": "book_project/01_master/conclusion.md",
+      "sha256": "40f1ed5787c8f8f306b341bc41fc23b9cbfdc4e1e50e455b0ac747b52353d73f",
+      "bytes": 5211
+    },
+    {
+      "path": "book_project/01_master/appendix_a_terms.md",
+      "sha256": "2e54ce7a03469a87d8f9db2f0312d683e7d2f858945e8f35ae8e79efc3651ece",
+      "bytes": 27814
+    },
+    {
+      "path": "book_project/01_master/appendix_b_case.md",
+      "sha256": "9203d9559e0c06f59c16a823550c88329189db8d50df2deb1d3cded5f17bd67b",
+      "bytes": 2765
+    },
+    {
+      "path": "book_project/01_master/appendix_c_contracts.md",
+      "sha256": "9da5e58eaee101b80757586bd3108f26e296f3fa346f649e837e61066f53f9ff",
+      "bytes": 2074
+    },
+    {
+      "path": "book_project/01_master/appendix_d_verification.md",
+      "sha256": "0275c8a40c3fd5ba252d01cb23f2bdf465dd4ee477a978d6674ebc2d46da61e4",
+      "bytes": 2350
+    },
+    {
+      "path": "book_project/01_master/appendix_e_sources.md",
+      "sha256": "bf0ff2b5c6665df4398c5a9960a2f739f5d810e657d4dafe48c3d30a7ae45a4e",
+      "bytes": 22931
+    },
+    {
+      "path": "book_project/01_master/appendix_f_teaching.md",
+      "sha256": "af3aa539d40daaa197aa4dc2deb3cb4370f6f2ddf0b87a93b20194e3345fd0e8",
+      "bytes": 2155
+    }
+  ],
+  "output": {
+    "path": "book_project/01_master/full_book.md",
+    "sha256": "b14647c0207b40bb03a3b4578421893851cd1dd710bdc8194011fffda11f5289",
+    "bytes": 312423
+  },
+  "counting": {
+    "chapter_body": 70573,
+    "front_back": {
+      "preface.md": {
+        "body_visible_characters": 1345,
+        "cjk_characters": 1203,
+        "letters_and_digits_including_cjk": 1214,
+        "punctuation_and_other_visible": 131,
+        "method": "BODY 內移除標記、空白、標題、程式區塊、圖片、網址、引用代號；主計數含標點，另報中文字與字母數字；非英語 word count。"
+      },
+      "reading_guide.md": {
+        "body_visible_characters": 937,
+        "cjk_characters": 817,
+        "letters_and_digits_including_cjk": 839,
+        "punctuation_and_other_visible": 98,
+        "method": "BODY 內移除標記、空白、標題、程式區塊、圖片、網址、引用代號；主計數含標點，另報中文字與字母數字；非英語 word count。"
+      },
+      "conclusion.md": {
+        "body_visible_characters": 1655,
+        "cjk_characters": 1483,
+        "letters_and_digits_including_cjk": 1493,
+        "punctuation_and_other_visible": 162,
+        "method": "BODY 內移除標記、空白、標題、程式區塊、圖片、網址、引用代號；主計數含標點，另報中文字與字母數字；非英語 word count。"
+      }
+    },
+    "appendices_excluded": true
+  },
+  "scope": "source_assembly_not_publication_or_audio_acceptance",
+  "assembly_policy": "Chapter title + canonical BODY + reader quotes/source notes; exclude editorial metadata/records outside BODY; no prose rewriting."
+}

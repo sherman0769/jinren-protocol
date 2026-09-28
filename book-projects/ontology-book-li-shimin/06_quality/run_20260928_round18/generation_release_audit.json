@@ -1,0 +1,165 @@
+{
+  "status": "passed",
+  "checkedAt": "2026-09-28T11:30:32.836482+00:00",
+  "sources": 16,
+  "selectedEpisodes": 16,
+  "acceptedGenerationCount": 36,
+  "retainedRejectedCandidates": 20,
+  "generating": 0,
+  "queueReceiptsContiguous": true,
+  "selectedPromptSourceTitleIdentityVerified": true,
+  "selectedRawAudioHashBoundToTranscriptReview": true,
+  "humanListening": false,
+  "note": "All work items = 16 selected episodes + retained rejected candidates. Revisions are not extra published episodes.",
+  "observation": {
+    "checkedAt": "2026-09-28T11:29:06.651Z",
+    "notebookUrl": "https://notebook.google.com/notebook/20c7a48e-8e5e-492d-8be4-400e856b088e",
+    "cards": [
+      {
+        "id": "artifact-labels-a3bc5928-8f1d-4ce8-9004-a6cb04d39f1a",
+        "label": "未讀\n07_第 7 章｜同一個人、不同時間：讓模型接上可信資料\n25:10 · 深入探索 · 1 個來源 · 1 分鐘前"
+      },
+      {
+        "id": "artifact-labels-ceac4428-d8e9-404b-bb3b-0ab26a047f76",
+        "label": "未讀\n未採用初稿-v4_07_第 7 章｜同一個人、不同時間：讓模型接上可信資料\n16:50 · 深入探索 · 1 個來源 · 11 分鐘前"
+      },
+      {
+        "id": "artifact-labels-4be597d3-db42-4463-8741-82e5bb329bbd",
+        "label": "未讀\n14_第 14 章｜從一個 Agent 到多個 Agent：共用什麼，保留什麼差異？\n14:17 · 深入探索 · 1 個來源 · 12 分鐘前"
+      },
+      {
+        "id": "artifact-labels-9553d6c1-c610-4656-a998-1eededf64f42",
+        "label": "未讀\n未採用初稿-v3_14_第 14 章｜從一個 Agent 到多個 Agent：共用什麼，保留什麼差異？\n21:28 · 深入探索 · 1 個來源 · 21 分鐘前"
+      },
+      {
+        "id": "artifact-labels-5fde0d93-59a1-4272-99af-d8b1b00b71ad",
+        "label": "未讀\n15_第 15 章｜什麼時候不該做本體？把成本與替代方案算進來\n14:44 · 深入探索 · 1 個來源 · 25 分鐘前"
+      },
+      {
+        "id": "artifact-labels-3d846f6a-8d69-4eb2-9c7f-4f9f28a42a1a",
+        "label": "未讀\n16_第 16 章｜從讀懂到教會別人：完成你的企業 AI 設計提案\n14:06 · 深入探索 · 1 個來源 · 25 分鐘前"
+      },
+      {
+        "id": "artifact-labels-04964f7f-38cb-4b23-9a1e-d1adbf59f7fb",
+        "label": "未讀\n未採用初稿-v3_07_第 7 章｜同一個人、不同時間：讓模型接上可信資料\n12:59 · 深入探索 · 1 個來源 · 27 分鐘前"
+      },
+      {
+        "id": "artifact-labels-08792253-baff-4ceb-8ae9-d4d77cce8819",
+        "label": "未讀\n13_第 13 章｜讓 AI 幫忙建本體，也要有人負責修正它\n20:48 · 深入探索 · 1 個來源 · 30 分鐘前"
+      },
+      {
+        "id": "artifact-labels-fbb0c701-2479-4351-b94b-dabbbc4b6c9f",
+        "label": "未讀\n未採用初稿-v2_16_第 16 章｜從讀懂到教會別人：完成你的企業 AI 設計提案\n17:04 · 深入探索 · 1 個來源 · 34 分鐘前"
+      },
+      {
+        "id": "artifact-labels-02a64db0-e3d6-40e5-ade1-9d40eb2d1d75",
+        "label": "未讀\n未採用初稿-v2_15_第 15 章｜什麼時候不該做本體？把成本與替代方案算進來\n23:26 · 深入探索 · 1 個來源 · 34 分鐘前"
+      },
+      {
+        "id": "artifact-labels-4f8091a6-f8e6-4b85-b0ff-16c62a6d8c78",
+        "label": "未讀\n未採用初稿-v2_14_第 14 章｜從一個 Agent 到多個 Agent：共用什麼，保留什麼差異？\n16:13 · 深入探索 · 1 個來源 · 35 分鐘前"
+      },
+      {
+        "id": "artifact-labels-39ac794a-fbb1-4b6e-9724-0a374bb6ff75",
+        "label": "未讀\n未採用初稿-v2_13_第 13 章｜讓 AI 幫忙建本體，也要有人負責修正它\n15:46 · 深入探索 · 1 個來源 · 42 分鐘前"
+      },
+      {
+        "id": "artifact-labels-a2a2144b-48c9-4a9c-bfc6-510b63fc84f4",
+        "label": "未讀\n未採用初稿-v2_07_第 7 章｜同一個人、不同時間：讓模型接上可信資料\n22:05 · 深入探索 · 1 個來源 · 43 分鐘前"
+      },
+      {
+        "id": "artifact-labels-d6de5cd7-dcfb-48b4-8f11-50e13d295ae6",
+        "label": "未讀\n01_第 1 章｜資料都在，AI 為什麼還是不懂這家公司？\n12:57 · 深入探索 · 1 個來源 · 45 分鐘前"
+      },
+      {
+        "id": "artifact-labels-bfeb8e0c-2d6a-4f88-8097-8b51fdf6c45d",
+        "label": "未讀\n未採用初稿-v2_01_第 1 章｜資料都在，AI 為什麼還是不懂這家公司？\n17:14 · 深入探索 · 1 個來源 · 57 分鐘前"
+      },
+      {
+        "id": "artifact-labels-c1599347-ace0-4cba-b20a-68facba0d4a2",
+        "label": "未讀\n08_第 8 章｜規則寫下來，不代表系統就會遵守\n16:43 · 深入探索 · 1 個來源 · 58 分鐘前"
+      },
+      {
+        "id": "artifact-labels-2e3cbd5c-e5b2-47da-a9ae-42389bcb76b0",
+        "label": "未讀\n10_第 10 章｜圖譜真的比較好嗎？把 GraphRAG 放回適合的位置\n16:01 · 深入探索 · 1 個來源 · 1 小時前"
+      },
+      {
+        "id": "artifact-labels-78bb82f6-c512-4710-a714-75b27cd5029e",
+        "label": "未讀\n02_第 2 章｜本體這個名字，到底在說什麼？\n14:46 · 深入探索 · 1 個來源 · 1 小時前"
+      },
+      {
+        "id": "artifact-labels-1948a184-2ffc-496f-b7f9-8c986a2f8ca1",
+        "label": "未讀\n03_第 3 章｜把人、事、物說清楚：類別、個體與關係\n14:14 · 深入探索 · 1 個來源 · 1 小時前"
+      },
+      {
+        "id": "artifact-labels-c809071b-20bb-414a-a7c5-bc5faf0010b1",
+        "label": "未讀\n06_第 6 章｜一起做出第一張可用的企業概念模型\n18:32 · 深入探索 · 1 個來源 · 1 小時前"
+      },
+      {
+        "id": "artifact-labels-849f428e-621e-4c69-be47-db6a1f6a95e9",
+        "label": "未讀\n未採用初稿-v1_16_第 16 章｜從讀懂到教會別人：完成你的企業 AI 設計提案\n16:01 · 深入探索 · 1 個來源 · 1 小時前"
+      },
+      {
+        "id": "artifact-labels-ec05b096-facc-4177-8897-bcf07a39d51a",
+        "label": "未讀\n未採用初稿-v1_15_第 15 章｜什麼時候不該做本體？把成本與替代方案算進來\n21:45 · 深入探索 · 1 個來源 · 1 小時前"
+      },
+      {
+        "id": "artifact-labels-ffa1d68f-23ea-4c28-af2b-f3f9c7880385",
+        "label": "未讀\n未採用初稿-v1_14_第 14 章｜從一個 Agent 到多個 Agent：共用什麼，保留什麼差異？\n28:11 · 深入探索 · 1 個來源 · 1 小時前"
+      },
+      {
+        "id": "artifact-labels-2bee5824-12bc-4fdb-b3e8-8e8ac00676c4",
+        "label": "未讀\n未採用初稿-v1_13_第 13 章｜讓 AI 幫忙建本體，也要有人負責修正它\n21:20 · 深入探索 · 1 個來源 · 1 小時前"
+      },
+      {
+        "id": "artifact-labels-5ed57f2c-9219-4ae4-b6b9-1255f69d0367",
+        "label": "未讀\n未採用初稿-v1_10_第 10 章｜圖譜真的比較好嗎？把 GraphRAG 放回適合的位置\n16:23 · 深入探索 · 1 個來源 · 1 小時前"
+      },
+      {
+        "id": "artifact-labels-c158405d-6ad0-425a-b263-4276aebcb61a",
+        "label": "未讀\n未採用初稿-v1_08_第 8 章｜規則寫下來，不代表系統就會遵守\n24:56 · 深入探索 · 1 個來源 · 1 小時前"
+      },
+      {
+        "id": "artifact-labels-a8ffbeb1-0fb7-41d5-ae7b-364110f1b2fb",
+        "label": "未讀\n未採用初稿-v1_07_第 7 章｜同一個人、不同時間：讓模型接上可信資料\n14:31 · 深入探索 · 1 個來源 · 1 小時前"
+      },
+      {
+        "id": "artifact-labels-c090d69f-bbbe-4ceb-8fb0-0e41ceb68afb",
+        "label": "未讀\n未採用初稿-v1_06_第 6 章｜一起做出第一張可用的企業概念模型\n22:36 · 深入探索 · 1 個來源 · 1 小時前"
+      },
+      {
+        "id": "artifact-labels-4ed59d4e-cbe6-4d98-b3ad-1657e2d60be9",
+        "label": "未採用初稿-v1_01_第 1 章｜資料都在，AI 為什麼還是不懂這家公司？\n 14:06 · 深入探索 · 1 個來源 · 1 小時前"
+      },
+      {
+        "id": "artifact-labels-a93071f0-ef80-4a6a-8d39-2060c51e5fd9",
+        "label": "未讀\n未採用初稿-v1_03_第 3 章｜把人、事、物說清楚：類別、個體與關係\n24:51 · 深入探索 · 1 個來源 · 1 小時前"
+      },
+      {
+        "id": "artifact-labels-77eb83da-f9fe-4ccf-b7fa-74513387076e",
+        "label": "未讀\n未採用初稿-v1_02_第 2 章｜本體這個名字，到底在說什麼？\n20:28 · 深入探索 · 1 個來源 · 1 小時前"
+      },
+      {
+        "id": "artifact-labels-f7aeacf8-1648-4471-a720-30452dd93a43",
+        "label": "未讀\n04_第 4 章｜資料庫、分類表、知識圖譜與語意層，誰做什麼？\n19:42 · 深入探索 · 1 個來源 · 1 小時前"
+      },
+      {
+        "id": "artifact-labels-feffe8ba-f791-4b38-9661-9ded20d9c17d",
+        "label": "未讀\n05_第 5 章｜先問什麼要被回答，再決定要建什麼\n17:46 · 深入探索 · 1 個來源 · 1 小時前"
+      },
+      {
+        "id": "artifact-labels-cff24330-ee0c-4c75-a878-28bd33a460da",
+        "label": "未讀\n09_第 9 章｜本體遇上大語言模型：怎麼找，怎麼答，怎麼有依據\n17:51 · 深入探索 · 1 個來源 · 1 小時前"
+      },
+      {
+        "id": "artifact-labels-900681cf-1b72-4768-a1d6-2f1bd6a14627",
+        "label": "未讀\n11_第 11 章｜讓 Agent 接上企業：情境、工具與 MCP 的分工\n19:10 · 深入探索 · 1 個來源 · 1 小時前"
+      },
+      {
+        "id": "artifact-labels-c2734518-fce1-4de5-a416-ef74badd10b3",
+        "label": "未讀\n12_第 12 章｜AI 能提出方案，誰允許它真正動手？\n18:21 · 深入探索 · 1 個來源 · 1 小時前"
+      }
+    ],
+    "generating": 0
+  }
+}

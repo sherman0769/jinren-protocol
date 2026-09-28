@@ -1,0 +1,75 @@
+{
+  "episode": 16,
+  "source_chapter_path": "book_project/02_chapters/chapter_16/chapter_16_main.md",
+  "source_chapter_sha256": "712781058d281e45bc04e97151e3db6b2f7d080d8cb04a6e14617dc33d8aeae1",
+  "source_chapter_version": "1.0.1",
+  "script_version": "1.0.0",
+  "source_ids": [
+    "R02",
+    "R11",
+    "R13",
+    "R17"
+  ],
+  "generated_on": "2026-09-28",
+  "spoken_count": {
+    "body_visible_characters": 3622,
+    "cjk_characters": 3202,
+    "letters_and_digits_including_cjk": 3242,
+    "punctuation_and_other_visible": 380,
+    "method": "BODY 內移除標記、空白、標題、程式區塊、圖片、網址、引用代號；主計數含標點，另報中文字與字母數字；非英語 word count。"
+  },
+  "editorial_target_minutes": [
+    20,
+    25
+  ],
+  "actual_duration_seconds": null,
+  "audio_generated": false,
+  "quality": {
+    "text_self_review": "passed",
+    "independent_review": "not_performed",
+    "actual_aloud_or_listening": "not_performed",
+    "source_meaning_verified": true,
+    "no_new_unverified_claims": true,
+    "standalone_context": true,
+    "visual_reference_dependency": false,
+    "long_exact_source_paragraph_copies": 0
+  },
+  "files": [
+    {
+      "path": "book_project/03_podcast/episode_16/episode_16_script.md",
+      "sha256": "b51321167a504ed420dd761256a2bab0867748fb5aab8ee3f579caf58c11f931",
+      "bytes": 11948
+    },
+    {
+      "path": "book_project/03_podcast/episode_16/episode_16_shownotes.md",
+      "sha256": "8153ad328849e5022af41af78a44fd9dd67b522f38ed9f659359da53958457d1",
+      "bytes": 1549
+    },
+    {
+      "path": "book_project/02_chapters/chapter_16/chapter_16_speech_notes.md",
+      "sha256": "2686bdd2ea3c7439a4e0456ae5d3d0b2f9f35543839c9e8fa1719920a43ca0ca",
+      "bytes": 1166
+    },
+    {
+      "path": "book_project/02_chapters/chapter_16/chapter_16_slide_outline.md",
+      "sha256": "d492087f885a62611a93c74d5f28c2a27b7b0352e640df8b07a441a8fdc239da",
+      "bytes": 1326
+    },
+    {
+      "path": "book_project/02_chapters/chapter_16/chapter_16_quotes.md",
+      "sha256": "c332c304f59a6d0c032f4e6fab542577233cfa2600dae1d354867049e2b5cb8d",
+      "bytes": 522
+    },
+    {
+      "path": "book_project/02_chapters/chapter_16/chapter_16_teaching.md",
+      "sha256": "9d94a6d6acdec60f9a0e9c0dc3715538e54308d420523a166ec57e72eb28f4c9",
+      "bytes": 1911
+    },
+    {
+      "path": "book_project/02_chapters/chapter_16/chapter_16_capstone.md",
+      "sha256": "3df616b87553b751876ea2ad5683042da92af9a05f777079ff65eb65eab35dc0",
+      "bytes": 2763
+    }
+  ],
+  "source_update_note": "Q-01：章末加入六句原創金句；BODY 與口播內容未變，口播正文版本保留。"
+}

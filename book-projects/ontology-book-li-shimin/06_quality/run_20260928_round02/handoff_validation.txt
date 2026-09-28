@@ -1,0 +1,12 @@
+{
+  "scope": "handoff_only",
+  "passed": true,
+  "chapter_briefs": 16,
+  "seed_sources": 26,
+  "terms": 82,
+  "checksums_checked": true,
+  "errors": [],
+  "warnings": [
+    "未連網驗證來源可用性，也未自動驗證論點、引用或音訊品質。"
+  ]
+}
