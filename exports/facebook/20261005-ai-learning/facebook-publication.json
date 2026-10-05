@@ -1,0 +1,119 @@
+{
+  "status": "published_verified",
+  "authorizedRequest": "發文到FB",
+  "account": "李詩民",
+  "destination": "https://www.facebook.com/li.shi.min.823327",
+  "postSha256": "a6dc3f8e7d7503651d80462e9dc9c9b91595bdeb0efebac9dcdb00fec3be4c57",
+  "postLength": 628,
+  "assets": [
+    {
+      "file": "01_book-cover.png",
+      "format": "png",
+      "width": 1024,
+      "height": 1536,
+      "bytes": 2522674,
+      "sha256": "40d593720d57d12e1d82f1387786d600a743718c02a48920c8ec4976845cd467",
+      "path": "D:/MyGitHub/漫畫自創作/exports/facebook/20261005-ai-learning/01_book-cover.png"
+    },
+    {
+      "file": "02_app-library.jpg",
+      "format": "jpeg",
+      "height": 712,
+      "width": 1265,
+      "bytes": 89852,
+      "sha256": "e199e2129e972e058e2dd08b8849d2fbf014a22ba75c7cfcc33fddd05525a321",
+      "path": "D:/MyGitHub/漫畫自創作/exports/facebook/20261005-ai-learning/02_app-library.jpg"
+    },
+    {
+      "file": "03_app-diagram.jpg",
+      "format": "jpeg",
+      "height": 712,
+      "width": 1265,
+      "bytes": 95992,
+      "sha256": "eeae4eccaa7f2987b62062c941ccdc5ab20a54744030a6717012f039e3b3f060",
+      "path": "D:/MyGitHub/漫畫自創作/exports/facebook/20261005-ai-learning/03_app-diagram.jpg"
+    },
+    {
+      "file": "04_app-verification.jpg",
+      "format": "jpeg",
+      "height": 712,
+      "width": 1265,
+      "bytes": 100305,
+      "sha256": "46f67e23841c68b534a33c4063a99346f88392e8d3c631814c6af5cf70860b8b",
+      "path": "D:/MyGitHub/漫畫自創作/exports/facebook/20261005-ai-learning/04_app-verification.jpg"
+    },
+    {
+      "file": "05_app-podcast-mobile.jpg",
+      "format": "jpeg",
+      "height": 844,
+      "width": 390,
+      "bytes": 33980,
+      "sha256": "cf43db02735f42440722bd16e443b75ac9cdbc95f4c74353cb2dcfdd7dfaef9c",
+      "path": "D:/MyGitHub/漫畫自創作/exports/facebook/20261005-ai-learning/05_app-podcast-mobile.jpg"
+    }
+  ],
+  "uploadAttempts": 1,
+  "publishAttempts": 1,
+  "createdAt": "2026-10-05T13:19:28.230Z",
+  "preflight": {
+    "recentProfilePost": "8小時前",
+    "matchingExistingPostFound": false
+  },
+  "audience": "所有人",
+  "recovery": {
+    "reason": "Photo button mouse click left composer unchanged",
+    "zeroSideEffectEvidence": {
+      "fileInputValues": [
+        "",
+        "",
+        "",
+        "",
+        ""
+      ],
+      "attachmentControls": 0,
+      "uploadAttempts": 0,
+      "publishAttempts": 0
+    },
+    "method": "same-control keyboard Enter with chooser wait armed first"
+  },
+  "receivedFileNames": [
+    "01_book-cover.png",
+    "02_app-library.jpg",
+    "03_app-diagram.jpg",
+    "04_app-verification.jpg",
+    "05_app-podcast-mobile.jpg"
+  ],
+  "aiLabel": true,
+  "textVerified": true,
+  "finalSettings": {
+    "audience": "所有人",
+    "timing": "立即發佈",
+    "storyShare": false,
+    "paidPromotion": false,
+    "groupShare": false,
+    "aiLabel": true
+  },
+  "submittedAt": "2026-10-05T13:21:56.312Z",
+  "postUrl": "https://www.facebook.com/li.shi.min.823327/posts/pfbid02hyAfeYd7FAfMkM99UBgCoSUcf8tkJtcenN7YcsVWNkYywNNP15Cqzs7PeUYdf6Z2l",
+  "postId": "1802380127463650",
+  "platformConfirmation": "已發佈貼文",
+  "verifiedAt": "2026-10-05T13:23:36.486Z",
+  "verification": {
+    "canonicalPostOpened": true,
+    "author": "李詩民",
+    "audience": "所有人",
+    "textMatches": true,
+    "imageCount": 5,
+    "photoIds": [
+      "1802379157463747",
+      "1802379100797086",
+      "1802379107463752",
+      "1802379094130420",
+      "1802379180797078"
+    ],
+    "aiLabelVisible": true,
+    "profileFeedVisible": true,
+    "screenshot": "facebook-published.jpg",
+    "screenshotSha256": "c08a9e534c7c44c7bb5f1253d7d7b626c73c29b4c430fe21c4ad045f88317cab"
+  }
+}

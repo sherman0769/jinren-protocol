@@ -1,7 +1,7 @@
 {
   "status": "passed",
   "purpose": "Facebook draft and five image share package",
-  "submittedToFacebook": false,
+  "submittedToFacebook": true,
   "fullUrlsInPost": false,
   "originalCoverPreserved": true,
   "imageCount": 5,
@@ -46,5 +46,13 @@
       "bytes": 33980,
       "sha256": "cf43db02735f42440722bd16e443b75ac9cdbc95f4c74353cb2dcfdd7dfaef9c"
     }
-  ]
+  ],
+  "facebookPublication": {
+    "status": "published_verified",
+    "url": "https://www.facebook.com/li.shi.min.823327/posts/pfbid02hyAfeYd7FAfMkM99UBgCoSUcf8tkJtcenN7YcsVWNkYywNNP15Cqzs7PeUYdf6Z2l",
+    "photoCount": 5,
+    "audience": "所有人",
+    "aiLabel": true,
+    "receipt": "facebook-publication.json"
+  }
 }

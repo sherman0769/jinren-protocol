@@ -1,6 +1,10 @@
 # AI 時代的學習：Facebook 分享包
 
-貼文：`post.txt`。文案以李詩民第一人稱分享一直在使用的學習方式，包含少量技術細節，不附完整網址。此包為文案與圖片交付，尚未提交 Facebook。
+貼文：`post.txt`。文案以李詩民第一人稱分享一直在使用的學習方式，包含少量技術細節，不附完整網址。2026-10-05 使用者另行授權「發文到FB」後，已於李詩民個人動態時報公開發布。
+
+發布連結：https://www.facebook.com/li.shi.min.823327/posts/pfbid02hyAfeYd7FAfMkM99UBgCoSUcf8tkJtcenN7YcsVWNkYywNNP15Cqzs7PeUYdf6Z2l
+
+`facebook-publication.json` 保存單次上傳／發布、來源身份、UI 恢復與發布後全文／五張照片驗證；`facebook-publication.lock` 已完成並保留，避免誤重發。`facebook-published.jpg` 為發布成功證據，屬紀錄圖片，未附加到 Facebook。
 
 ## 建議圖片順序與圖說
 
