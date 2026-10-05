@@ -1,0 +1,50 @@
+{
+  "status": "passed",
+  "purpose": "Facebook draft and five image share package",
+  "submittedToFacebook": false,
+  "fullUrlsInPost": false,
+  "originalCoverPreserved": true,
+  "imageCount": 5,
+  "assets": [
+    {
+      "file": "01_book-cover.png",
+      "format": "png",
+      "width": 1024,
+      "height": 1536,
+      "bytes": 2522674,
+      "sha256": "40d593720d57d12e1d82f1387786d600a743718c02a48920c8ec4976845cd467"
+    },
+    {
+      "file": "02_app-library.jpg",
+      "format": "jpeg",
+      "height": 712,
+      "width": 1265,
+      "bytes": 89852,
+      "sha256": "e199e2129e972e058e2dd08b8849d2fbf014a22ba75c7cfcc33fddd05525a321"
+    },
+    {
+      "file": "03_app-diagram.jpg",
+      "format": "jpeg",
+      "height": 712,
+      "width": 1265,
+      "bytes": 95992,
+      "sha256": "eeae4eccaa7f2987b62062c941ccdc5ab20a54744030a6717012f039e3b3f060"
+    },
+    {
+      "file": "04_app-verification.jpg",
+      "format": "jpeg",
+      "height": 712,
+      "width": 1265,
+      "bytes": 100305,
+      "sha256": "46f67e23841c68b534a33c4063a99346f88392e8d3c631814c6af5cf70860b8b"
+    },
+    {
+      "file": "05_app-podcast-mobile.jpg",
+      "format": "jpeg",
+      "height": 844,
+      "width": 390,
+      "bytes": 33980,
+      "sha256": "cf43db02735f42440722bd16e443b75ac9cdbc95f4c74353cb2dcfdd7dfaef9c"
+    }
+  ]
+}

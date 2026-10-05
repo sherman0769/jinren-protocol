@@ -141,6 +141,8 @@ Branding rules:
 
 Visual quality rules:
 
+- When sharing the user's AI learning practice on Facebook, describe it as a longstanding practice, with a small amount of concrete technical explanation. Use four or five images from existing selected book covers and actual app screenshots to show accumulated books, explanation, practice/verification, and chapter Podcast study. Omit full web URLs from the post body when requested; keep source provenance separately in the local share package. This is a copy/image preparation preference, not authorization to submit a Facebook post.
+
 - For this release of 《程式如何變成影片》, retain clean reader-facing chapter paragraphs and TXT exports. Store optional chapter `figure: { src, alt }` assets under `public/books/how-code-becomes-film/figures/`, with meaningful Chinese alternative text; present them responsively with a readable text comparison below the image, without changing paragraph IDs or narration order. Its optional `companionUrl` exposes a source/example ZIP that excludes credentials, font binaries, and private materials. Verify this book at a mobile viewport. Extending this book's presentation and download trials into a standard requires the user's adoption decision.
 
 - Book covers and major share images must be treated as high-quality designed assets, not simple placeholders.
