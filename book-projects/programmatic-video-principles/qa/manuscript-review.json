@@ -13,10 +13,10 @@
         "frames": 90,
         "lastIndex": 89,
         "times": [
-          0.0,
+          0,
           0.03333333333333333,
           0.9666666666666667,
-          1.0,
+          1,
           2.966666666666667
         ]
       },
@@ -53,10 +53,10 @@
       "mechanismFocus": "作品時間與耗時",
       "readerOpeningQuote": "你請程式畫第 120 幀，它花十分之一秒完成，或花十秒完成，都可以對應影片中的第四秒。這看似矛盾，其實因為我們用了兩種時間。一種是作品內部的位置，另一種是機器完成計算的耗時。離線製片的工作，是先算出要播的內容，不必以真正播放速度等待。",
       "numericalEvidence": [
-        200.0,
-        100.0,
-        150.0,
-        200.0
+        200,
+        100,
+        150,
+        200
       ],
       "technicalStatus": "passed-with-stated-scope",
       "beginnerRoleSimulation": "核對純中文因果、數值預測、錯誤定位及三題答案",
@@ -70,11 +70,11 @@
       "mechanismFocus": "端點與截斷進度",
       "readerOpeningQuote": "本章配套為教學重建，不是原片程式碼摘錄。",
       "numericalEvidence": [
-        100.0,
-        250.0,
-        400.0,
-        700.0,
-        700.0
+        100,
+        250,
+        400,
+        700,
+        700
       ],
       "technicalStatus": "passed-with-stated-scope",
       "beginnerRoleSimulation": "核對純中文因果、數值預測、錯誤定位及三題答案",
@@ -89,12 +89,14 @@
       "readerOpeningQuote": "把杯子推向桌面另一邊，人通常不會在開始那一瞬間直接達到全速，再於終點瞬間停止。你會先加快，再放慢。但電腦按第四章的線性位置規則，會讓每段等長時間走一樣遠。這不是錯誤，只是它忠實完成了等速要求；若想要另一種感覺，必須改規則。",
       "numericalEvidence": [
         193.75,
-        400.0,
+        400,
         606.25
       ],
       "technicalStatus": "passed-with-stated-scope",
       "beginnerRoleSimulation": "核對純中文因果、數值預測、錯誤定位及三題答案",
-      "humanReaderValidation": false
+      "humanReaderValidation": false,
+      "postEditorialSourceSha256": "9795a60a68f7a6afbb998cf4c378fbaec15a5038dba0a50e5ced015ec5297420",
+      "editorialRevalidation": "qa/editorial-source-audio-revalidation.json"
     },
     {
       "chapter": 6,
@@ -130,15 +132,15 @@
           "y": 0
         },
         {
-          "x": 25.0,
+          "x": 25,
           "y": 37.5
         },
         {
-          "x": 50.0,
-          "y": 50.0
+          "x": 50,
+          "y": 50
         },
         {
-          "x": 75.0,
+          "x": 75,
           "y": 37.5
         },
         {
@@ -159,17 +161,19 @@
       "readerOpeningQuote": "畫圓只需中心和半徑；畫「計算」還要知道字長什麼樣、如何排列、佔多少空間。你在程式裡看見正確文字，輸出卻出現方框，問題可能不在文字內容，而是選定字型沒有那個字。這兩層若混在一起，就會不停修改原文，卻始終無法修好畫面。",
       "numericalEvidence": {
         "drawingOrigin": [
-          148.0,
-          75.0
+          148,
+          75
         ],
         "visibleCenter": [
-          200.0,
-          100.0
+          200,
+          100
         ]
       },
       "technicalStatus": "passed-with-stated-scope",
       "beginnerRoleSimulation": "核對純中文因果、數值預測、錯誤定位及三題答案",
-      "humanReaderValidation": false
+      "humanReaderValidation": false,
+      "postEditorialSourceSha256": "bd87130014bce5dc8dfc6d9c0c11e644187c52e2c94d23b117776de7582ba809",
+      "editorialRevalidation": "qa/editorial-source-audio-revalidation.json"
     },
     {
       "chapter": 9,
@@ -214,10 +218,10 @@
       "mechanismFocus": "正弦非Perlin",
       "readerOpeningQuote": "請一顆點每張畫面換一個隨機位置，它會四處閃跳。請它隨時間逐漸偏移，觀眾卻可能覺得像在風中搖動。差別不只是「夠不夠亂」，而是附近時間的結果是否相關。自然感常需要連續關係，不能只靠獨立抽樣。",
       "numericalEvidence": [
-        0.0,
-        10.0,
+        0,
+        10,
         1.2246467991473533e-15,
-        -10.0,
+        -10,
         -2.4492935982947065e-15
       ],
       "technicalStatus": "passed-with-stated-scope",
@@ -256,14 +260,14 @@
       "readerOpeningQuote": "如果三根柱子看起來很漂亮，卻沒人知道高度對應什麼，它只是裝飾。圖表要把資料值明確對映到幾何，並告訴觀眾單位、範圍和資料來源。本章用教學假資料 10、20、30，不把它寫成真實營業額或調查結果。",
       "numericalEvidence": {
         "heights": [
-          50.0,
-          100.0,
-          150.0
+          50,
+          100,
+          150
         ],
         "tops": [
-          200.0,
-          150.0,
-          100.0
+          200,
+          150,
+          100
         ],
         "constantRangeRejected": true
       },
@@ -285,7 +289,9 @@
       },
       "technicalStatus": "passed-with-stated-scope",
       "beginnerRoleSimulation": "核對純中文因果、數值預測、錯誤定位及三題答案",
-      "humanReaderValidation": false
+      "humanReaderValidation": false,
+      "postEditorialSourceSha256": "3d3a35eb2dbf1b63d9fb9c901711da1c538b8ed83d7c32eba70e5c8fad1e9939",
+      "editorialRevalidation": "qa/editorial-source-audio-revalidation.json"
     },
     {
       "chapter": 15,
@@ -296,12 +302,12 @@
       "readerOpeningQuote": "你把點從 (x,y) 改成 (x,y,z)，得到三維資料，卻還沒告訴電腦怎麼看它。螢幕仍是平面，需要鏡頭位置、朝向與投影規則，才知道三維點應畫在哪。也要決定近處能不能遮住遠處，否則只是重疊的線，沒有一致的空間。",
       "numericalEvidence": {
         "near": [
-          450.0,
-          175.0
+          450,
+          175
         ],
         "far": [
-          425.0,
-          200.0
+          425,
+          200
         ],
         "behindRejected": true
       },
@@ -319,7 +325,7 @@
       "numericalEvidence": {
         "cpuNumericalTeaching": true,
         "brightness": [
-          1.0,
+          1,
           0.2,
           0.2
         ],
@@ -364,7 +370,9 @@
       },
       "technicalStatus": "passed-with-stated-scope",
       "beginnerRoleSimulation": "核對純中文因果、數值預測、錯誤定位及三題答案",
-      "humanReaderValidation": false
+      "humanReaderValidation": false,
+      "postEditorialSourceSha256": "e0a1dae5da2099776461c6c920d369c776958c3593fa038e171c8c26eae24a36",
+      "editorialRevalidation": "qa/editorial-source-audio-revalidation.json"
     },
     {
       "chapter": 19,
@@ -392,7 +400,7 @@
       "numericalEvidence": {
         "invalidInputsRejected": 5,
         "frames": 240,
-        "localAt5": 1.0
+        "localAt5": 1
       },
       "technicalStatus": "passed-with-stated-scope",
       "beginnerRoleSimulation": "核對純中文因果、數值預測、錯誤定位及三題答案",
@@ -423,11 +431,11 @@
       "mechanismFocus": "工具閱讀非實跑",
       "readerOpeningQuote": "學會某個框架的函式，當然能幫助完成作品；但如果所有理解都靠函式名，換框架就像重新學一次。更穩定的知識是：位置如何定義、時間怎麼輸入、狀態是否依賴過去、畫面怎麼輸出，以及怎樣驗收。",
       "numericalEvidence": [
-        100.0,
-        250.0,
-        400.0,
-        700.0,
-        700.0
+        100,
+        250,
+        400,
+        700,
+        700
       ],
       "technicalStatus": "passed-with-stated-scope",
       "beginnerRoleSimulation": "核對純中文因果、數值預測、錯誤定位及三題答案",
@@ -443,7 +451,7 @@
       "numericalEvidence": {
         "invalidInputsRejected": 5,
         "frames": 240,
-        "localAt5": 1.0
+        "localAt5": 1
       },
       "technicalStatus": "passed-with-stated-scope",
       "beginnerRoleSimulation": "核對純中文因果、數值預測、錯誤定位及三題答案",

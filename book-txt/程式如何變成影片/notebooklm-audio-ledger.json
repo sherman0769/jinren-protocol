@@ -6,7 +6,7 @@
   "expectedChapterCount": 24,
   "createdAt": "2026-10-05T10:44:04.667Z",
   "authorization": "2026-10-05 使用者要求執行交接包直到電子書平台上架；依母專案規則包含NotebookLM章節音訊、下載、Blob與production",
-  "status": "locally-validated",
+  "status": "production-complete",
   "generationFormat": "深入探索",
   "language": "中文（繁體）",
   "preflight": {
@@ -184,7 +184,7 @@
         "blobPathname": "books/how-code-becomes-film/audio/01_影片為什麼不是一張會動的照片.m4a",
         "blobEtag": "\"26e302f508322473b910a91d6edfed47-2\"",
         "blobHeadVerified": true,
-        "blobRemoteSeekVerified": false
+        "blobRemoteSeekVerified": true
       },
       {
         "chapterNumber": 2,
@@ -214,7 +214,7 @@
         "blobPathname": "books/how-code-becomes-film/audio/02_電腦怎麼知道白點在哪裡.m4a",
         "blobEtag": "\"31eb9f0595f1670310ec7a547eb685a5-2\"",
         "blobHeadVerified": true,
-        "blobRemoteSeekVerified": false
+        "blobRemoteSeekVerified": true
       },
       {
         "chapterNumber": 3,
@@ -244,7 +244,7 @@
         "blobPathname": "books/how-code-becomes-film/audio/03_如何把現在交給程式.m4a",
         "blobEtag": "\"7a474e0452662b8d5d4768dda1b89003-2\"",
         "blobHeadVerified": true,
-        "blobRemoteSeekVerified": false
+        "blobRemoteSeekVerified": true
       },
       {
         "chapterNumber": 4,
@@ -274,7 +274,7 @@
         "blobPathname": "books/how-code-becomes-film/audio/04_圓點為什麼會動.m4a",
         "blobEtag": "\"f1dcf7a022bd17b1553a6b0e47a683bb-1\"",
         "blobHeadVerified": true,
-        "blobRemoteSeekVerified": false
+        "blobRemoteSeekVerified": true
       },
       {
         "chapterNumber": 5,
@@ -304,7 +304,7 @@
         "blobPathname": "books/how-code-becomes-film/audio/05_為什麼等速看起來像機器.m4a",
         "blobEtag": "\"08cf769108b05f8cdb99e07cc92a7b11-2\"",
         "blobHeadVerified": true,
-        "blobRemoteSeekVerified": false
+        "blobRemoteSeekVerified": true
       },
       {
         "chapterNumber": 6,
@@ -334,7 +334,7 @@
         "blobPathname": "books/how-code-becomes-film/audio/06_好幾件事如何同時發生.m4a",
         "blobEtag": "\"68ef782b527ccea66a983a9ad4be13b2-2\"",
         "blobHeadVerified": true,
-        "blobRemoteSeekVerified": false
+        "blobRemoteSeekVerified": true
       },
       {
         "chapterNumber": 7,
@@ -364,7 +364,7 @@
         "blobPathname": "books/how-code-becomes-film/audio/07_線條怎麼自己長出來.m4a",
         "blobEtag": "\"5e0b37a83ccdec0032b41d7f24632aae-2\"",
         "blobHeadVerified": true,
-        "blobRemoteSeekVerified": false
+        "blobRemoteSeekVerified": true
       },
       {
         "chapterNumber": 8,
@@ -394,7 +394,7 @@
         "blobPathname": "books/how-code-becomes-film/audio/08_中文字為什麼比畫圓麻煩.m4a",
         "blobEtag": "\"a9016bedf267a9f6928caca403b26c8a-2\"",
         "blobHeadVerified": true,
-        "blobRemoteSeekVerified": false
+        "blobRemoteSeekVerified": true
       },
       {
         "chapterNumber": 9,
@@ -424,7 +424,7 @@
         "blobPathname": "books/how-code-becomes-film/audio/09_一千顆小點怎麼一起管理.m4a",
         "blobEtag": "\"4017cb5cd9ed7e0f0a2439b778050460-2\"",
         "blobHeadVerified": true,
-        "blobRemoteSeekVerified": false
+        "blobRemoteSeekVerified": true
       },
       {
         "chapterNumber": 10,
@@ -454,7 +454,7 @@
         "blobPathname": "books/how-code-becomes-film/audio/10_散點怎麼排成一個字.m4a",
         "blobEtag": "\"e727f07d2dac44f335efe8bbf0c8f1ec-2\"",
         "blobHeadVerified": true,
-        "blobRemoteSeekVerified": false
+        "blobRemoteSeekVerified": true
       },
       {
         "chapterNumber": 11,
@@ -484,7 +484,7 @@
         "blobPathname": "books/how-code-becomes-film/audio/11_混亂為什麼有時很自然.m4a",
         "blobEtag": "\"ea64883d1c204fc27371ad14c3b6e1b4-2\"",
         "blobHeadVerified": true,
-        "blobRemoteSeekVerified": false
+        "blobRemoteSeekVerified": true
       },
       {
         "chapterNumber": 12,
@@ -514,7 +514,7 @@
         "blobPathname": "books/how-code-becomes-film/audio/12_動畫怎麼有重量與回彈.m4a",
         "blobEtag": "\"2c5f13b220ec1d76a433fe0e3016e28d-2\"",
         "blobHeadVerified": true,
-        "blobRemoteSeekVerified": false
+        "blobRemoteSeekVerified": true
       },
       {
         "chapterNumber": 13,
@@ -544,7 +544,7 @@
         "blobPathname": "books/how-code-becomes-film/audio/13_數字怎麼變成可以看懂的圖.m4a",
         "blobEtag": "\"22d862b5d08f46da995e381a5590428e-2\"",
         "blobHeadVerified": true,
-        "blobRemoteSeekVerified": false
+        "blobRemoteSeekVerified": true
       },
       {
         "chapterNumber": 14,
@@ -574,7 +574,7 @@
         "blobPathname": "books/how-code-becomes-film/audio/14_關係怎麼變成一張網.m4a",
         "blobEtag": "\"10b7104237a250a9b9782f378a90350c-2\"",
         "blobHeadVerified": true,
-        "blobRemoteSeekVerified": false
+        "blobRemoteSeekVerified": true
       },
       {
         "chapterNumber": 15,
@@ -604,7 +604,7 @@
         "blobPathname": "books/how-code-becomes-film/audio/15_平面怎麼看起來有深度.m4a",
         "blobEtag": "\"a6f32e0cb6dc707a01b63d88c7acb9cb-2\"",
         "blobHeadVerified": true,
-        "blobRemoteSeekVerified": false
+        "blobRemoteSeekVerified": true
       },
       {
         "chapterNumber": 16,
@@ -634,7 +634,7 @@
         "blobPathname": "books/how-code-becomes-film/audio/16_光影與著色程式在算什麼.m4a",
         "blobEtag": "\"b0bd5bda6debf1ddd225316b960452d3-2\"",
         "blobHeadVerified": true,
-        "blobRemoteSeekVerified": false
+        "blobRemoteSeekVerified": true
       },
       {
         "chapterNumber": 17,
@@ -664,7 +664,7 @@
         "blobPathname": "books/how-code-becomes-film/audio/17_聲音有另一條時鐘.m4a",
         "blobEtag": "\"995289b54f3ab2570ef0e84005497dca-2\"",
         "blobHeadVerified": true,
-        "blobRemoteSeekVerified": false
+        "blobRemoteSeekVerified": true
       },
       {
         "chapterNumber": 18,
@@ -694,7 +694,7 @@
         "blobPathname": "books/how-code-becomes-film/audio/18_說話和畫面怎麼對齊.m4a",
         "blobEtag": "\"cabdf38cad9992ae15b0afc513f25d9e-2\"",
         "blobHeadVerified": true,
-        "blobRemoteSeekVerified": false
+        "blobRemoteSeekVerified": true
       },
       {
         "chapterNumber": 19,
@@ -724,7 +724,7 @@
         "blobPathname": "books/how-code-becomes-film/audio/19_為什麼能預覽卻不一定有影片檔.m4a",
         "blobEtag": "\"72fdcff6ea9e11b105ec4616eaa90c89-2\"",
         "blobHeadVerified": true,
-        "blobRemoteSeekVerified": false
+        "blobRemoteSeekVerified": true
       },
       {
         "chapterNumber": 20,
@@ -754,7 +754,7 @@
         "blobPathname": "books/how-code-becomes-film/audio/20_怎麼知道影片真的做對了.m4a",
         "blobEtag": "\"20f8da2f013d3ea65d43b8bcc16e652b-2\"",
         "blobHeadVerified": true,
-        "blobRemoteSeekVerified": false
+        "blobRemoteSeekVerified": true
       },
       {
         "chapterNumber": 21,
@@ -784,7 +784,7 @@
         "blobPathname": "books/how-code-becomes-film/audio/21_怎麼把一句願望拆成能驗收的要求.m4a",
         "blobEtag": "\"0508bb4a3accce915c7f7d7dcfcd7124-2\"",
         "blobHeadVerified": true,
-        "blobRemoteSeekVerified": false
+        "blobRemoteSeekVerified": true
       },
       {
         "chapterNumber": 22,
@@ -814,7 +814,7 @@
         "blobPathname": "books/how-code-becomes-film/audio/22_選工具時如何不被工具綁住.m4a",
         "blobEtag": "\"193aac8f567d7cee57eab4dfcc302f92-1\"",
         "blobHeadVerified": true,
-        "blobRemoteSeekVerified": false
+        "blobRemoteSeekVerified": true
       },
       {
         "chapterNumber": 23,
@@ -844,7 +844,7 @@
         "blobPathname": "books/how-code-becomes-film/audio/23_怎麼組出自己的影片引擎.m4a",
         "blobEtag": "\"fe745ec1b976edbfe22297ebb2e4bb00-2\"",
         "blobHeadVerified": true,
-        "blobRemoteSeekVerified": false
+        "blobRemoteSeekVerified": true
       },
       {
         "chapterNumber": 24,
@@ -874,7 +874,7 @@
         "blobPathname": "books/how-code-becomes-film/audio/24_完成一支你能解釋的影片.m4a",
         "blobEtag": "\"2356336fed2eaf8483aa5045a35efddb-2\"",
         "blobHeadVerified": true,
-        "blobRemoteSeekVerified": false
+        "blobRemoteSeekVerified": true
       }
     ]
   },
@@ -1014,7 +1014,7 @@
     },
     {
       "chapterNumber": 5,
-      "sourcePath": "book-txt/程式如何變成影片/05_為什麼等速看起來像機器.txt",
+      "sourcePath": "book-txt/程式如何變成影片/notebooklm-source-snapshots/v1/05_為什麼等速看起來像機器.txt",
       "sourceFilename": "05_為什麼等速看起來像機器.txt",
       "sourceSha256": "aadad96c1bfd6aba2e9e5bbb66b211158ba7f9dbe047ed91bf39cfb31af1d9d9",
       "sourceBytes": 4906,
@@ -1043,7 +1043,13 @@
       "renameVerifiedAt": "2026-10-05T11:14:21.372Z",
       "generationState": "complete",
       "promptSourceVerification": "complete",
-      "queueAcceptedAt": "2026-10-05T10:54:05.617Z"
+      "queueAcceptedAt": "2026-10-05T10:54:05.617Z",
+      "readerSource": {
+        "path": "book-txt/程式如何變成影片/05_為什麼等速看起來像機器.txt",
+        "sha256": "f3614560b69c59e1332a75c38e3475756a32dd0f508b6b76fd1e9591aa426f7e",
+        "bytes": 4906,
+        "revision": "orthographic-v2"
+      }
     },
     {
       "chapterNumber": 6,
@@ -1113,7 +1119,7 @@
     },
     {
       "chapterNumber": 8,
-      "sourcePath": "book-txt/程式如何變成影片/08_中文字為什麼比畫圓麻煩.txt",
+      "sourcePath": "book-txt/程式如何變成影片/notebooklm-source-snapshots/v1/08_中文字為什麼比畫圓麻煩.txt",
       "sourceFilename": "08_中文字為什麼比畫圓麻煩.txt",
       "sourceSha256": "0653f5a05a1d2d82e811189af04f646ea6a8d6936fd95682a9b570f9839afd5f",
       "sourceBytes": 5032,
@@ -1142,7 +1148,13 @@
       "renameVerifiedAt": "2026-10-05T11:14:37.769Z",
       "generationState": "complete",
       "promptSourceVerification": "complete",
-      "queueAcceptedAt": "2026-10-05T10:54:58.489Z"
+      "queueAcceptedAt": "2026-10-05T10:54:58.489Z",
+      "readerSource": {
+        "path": "book-txt/程式如何變成影片/08_中文字為什麼比畫圓麻煩.txt",
+        "sha256": "95a34618f7a8db0da02aaf38acc788238e8d0a90141eb009f7bb37aab04d1478",
+        "bytes": 5026,
+        "revision": "orthographic-v2"
+      }
     },
     {
       "chapterNumber": 9,
@@ -1311,7 +1323,7 @@
     },
     {
       "chapterNumber": 14,
-      "sourcePath": "book-txt/程式如何變成影片/14_關係怎麼變成一張網.txt",
+      "sourcePath": "book-txt/程式如何變成影片/notebooklm-source-snapshots/v1/14_關係怎麼變成一張網.txt",
       "sourceFilename": "14_關係怎麼變成一張網.txt",
       "sourceSha256": "c6524e6a9e0885ddbb6fff551e2b33908018f46fa6c6592a200e208621cd15dc",
       "sourceBytes": 4118,
@@ -1340,7 +1352,13 @@
       "renameVerifiedAt": "2026-10-05T11:15:06.277Z",
       "generationState": "complete",
       "promptSourceVerification": "complete",
-      "queueAcceptedAt": "2026-10-05T10:57:06.589Z"
+      "queueAcceptedAt": "2026-10-05T10:57:06.589Z",
+      "readerSource": {
+        "path": "book-txt/程式如何變成影片/14_關係怎麼變成一張網.txt",
+        "sha256": "263082ec465cdd5b041c5fa6723c6d850520a6a3dbe64dad6f1c948cb6781a6a",
+        "bytes": 4118,
+        "revision": "orthographic-v2"
+      }
     },
     {
       "chapterNumber": 15,
@@ -1443,7 +1461,7 @@
     },
     {
       "chapterNumber": 18,
-      "sourcePath": "book-txt/程式如何變成影片/18_說話和畫面怎麼對齊.txt",
+      "sourcePath": "book-txt/程式如何變成影片/notebooklm-source-snapshots/v1/18_說話和畫面怎麼對齊.txt",
       "sourceFilename": "18_說話和畫面怎麼對齊.txt",
       "sourceSha256": "05cba9b0af363dc6df0e5ab79f0645545ec9561df0629b92c224a8fed9659729",
       "sourceBytes": 4289,
@@ -1472,7 +1490,13 @@
       "renameVerifiedAt": "2026-10-05T11:15:29.437Z",
       "generationState": "complete",
       "promptSourceVerification": "complete",
-      "queueAcceptedAt": "2026-10-05T10:58:17.017Z"
+      "queueAcceptedAt": "2026-10-05T10:58:17.017Z",
+      "readerSource": {
+        "path": "book-txt/程式如何變成影片/18_說話和畫面怎麼對齊.txt",
+        "sha256": "a7b5ffccef01d138b5d9dbf1f5837d71ad0053f61d7d04d36700bd0bc4ea75c0",
+        "bytes": 4289,
+        "revision": "orthographic-v2"
+      }
     },
     {
       "chapterNumber": 19,
@@ -4459,7 +4483,8 @@
     "lastPacketDurationChecked": true,
     "fullLocalDecodeChecked": true,
     "uniqueFingerprintsChecked": true,
-    "productionRemoteSeekChecked": false
+    "productionRemoteSeekChecked": true,
+    "productionCheckedAudioCount": 24
   },
   "integrityValidation": {
     "status": "complete",
@@ -4477,13 +4502,118 @@
     "method": "Alias already observed generation/queue fields to project validator schema; verify source SHA and batch media evidence first"
   },
   "blobMigrationValidation": {
-    "status": "uploaded-and-applied",
+    "status": "production-verified",
     "provider": "vercel-blob",
     "access": "public",
     "region": "hnd1",
     "checkedAudioCount": 24,
     "failedChapterNumbers": [],
     "exactContentLengthChecked": true,
-    "remoteSeekChecked": false
+    "remoteSeekChecked": true
+  },
+  "productionValidation": {
+    "status": "passed",
+    "productionBaseUrl": "https://jinren-protocol.vercel.app",
+    "contentCommit": "eeeb3c6fcf9cec086d2a06b681fc09d6d3e7b437",
+    "deploymentId": "dpl_2n9caiGwDgDtcUSxLDHXFDjT3wwK",
+    "checkedAudioCount": 24,
+    "productionRemoteSeekChecked": true,
+    "checkedAt": "2026-10-05T11:56:43.681Z"
+  },
+  "localStageArchive": {
+    "status": "hash-verified-and-archived-after-production",
+    "folder": "tmp/programmatic-validated-audio",
+    "count": 24,
+    "trackedInGit": false
+  },
+  "finalInvariant": {
+    "status": "passed",
+    "txtSources": 24,
+    "notebookSources": 24,
+    "acceptedQueueItems": 24,
+    "completedCards": 24,
+    "expectedTitles": 24,
+    "verifiedLedgerEntries": 24,
+    "locallyValidatedDownloads": 24,
+    "blobAssets": 24,
+    "linkedChapters": 24,
+    "missing": [],
+    "duplicateMarkers": []
+  },
+  "editorialRevalidation": {
+    "status": "passed-with-preserved-audio-source",
+    "readerRevision": "orthographic-v2",
+    "audioSourceRevision": "uploaded-v1",
+    "regeneratedAudio": false,
+    "chapterNumbers": [
+      5,
+      8,
+      14,
+      18
+    ],
+    "reviewer": "model editorial comparison; not human listening acceptance",
+    "changes": [
+      {
+        "number": 5,
+        "before": "秒錶示",
+        "after": "秒表示",
+        "reason": "秒作單位；更正誤轉為秒錶的字形",
+        "paragraphIndex": 10,
+        "uploadedSourceSha256": "aadad96c1bfd6aba2e9e5bbb66b211158ba7f9dbe047ed91bf39cfb31af1d9d9",
+        "readerSourceSha256": "f3614560b69c59e1332a75c38e3475756a32dd0f508b6b76fd1e9591aa426f7e",
+        "uploadedSourceSnapshot": "book-txt/程式如何變成影片/notebooklm-source-snapshots/v1/05_為什麼等速看起來像機器.txt",
+        "audioSrc": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/how-code-becomes-film/audio/05_%E7%82%BA%E4%BB%80%E9%BA%BC%E7%AD%89%E9%80%9F%E7%9C%8B%E8%B5%B7%E4%BE%86%E5%83%8F%E6%A9%9F%E5%99%A8.m4a",
+        "audioSha256": "27d85847e3ac6f3bbd9360e6b67c7a7a5b83c486e0c375f0dc9c9ab68be335be",
+        "audioDisposition": "retain-existing-verified-podcast",
+        "semanticReview": "Orthography only; same concept, chapter, order, numerical statements and examples. Podcast is an explanatory overview of the preserved v1 upload, not a verbatim reading of revised typography.",
+        "mediaValidation": "production HEAD exact length and 120s remote decode passed"
+      },
+      {
+        "number": 8,
+        "before": "擴充套件成",
+        "after": "擴展成",
+        "reason": "更正擴展動詞，不指軟體擴充套件",
+        "paragraphIndex": 23,
+        "uploadedSourceSha256": "0653f5a05a1d2d82e811189af04f646ea6a8d6936fd95682a9b570f9839afd5f",
+        "readerSourceSha256": "95a34618f7a8db0da02aaf38acc788238e8d0a90141eb009f7bb37aab04d1478",
+        "uploadedSourceSnapshot": "book-txt/程式如何變成影片/notebooklm-source-snapshots/v1/08_中文字為什麼比畫圓麻煩.txt",
+        "audioSrc": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/how-code-becomes-film/audio/08_%E4%B8%AD%E6%96%87%E5%AD%97%E7%82%BA%E4%BB%80%E9%BA%BC%E6%AF%94%E7%95%AB%E5%9C%93%E9%BA%BB%E7%85%A9.m4a",
+        "audioSha256": "9ad10be0b861bbec2e81378dbd8e760fb138c0ee6f95f33433f6712361405976",
+        "audioDisposition": "retain-existing-verified-podcast",
+        "semanticReview": "Orthography only; same concept, chapter, order, numerical statements and examples. Podcast is an explanatory overview of the preserved v1 upload, not a verbatim reading of revised typography.",
+        "mediaValidation": "production HEAD exact length and 120s remote decode passed"
+      },
+      {
+        "number": 14,
+        "before": "変更",
+        "after": "變更",
+        "reason": "日文字形更正為繁體中文",
+        "paragraphIndex": 15,
+        "uploadedSourceSha256": "c6524e6a9e0885ddbb6fff551e2b33908018f46fa6c6592a200e208621cd15dc",
+        "readerSourceSha256": "263082ec465cdd5b041c5fa6723c6d850520a6a3dbe64dad6f1c948cb6781a6a",
+        "uploadedSourceSnapshot": "book-txt/程式如何變成影片/notebooklm-source-snapshots/v1/14_關係怎麼變成一張網.txt",
+        "audioSrc": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/how-code-becomes-film/audio/14_%E9%97%9C%E4%BF%82%E6%80%8E%E9%BA%BC%E8%AE%8A%E6%88%90%E4%B8%80%E5%BC%B5%E7%B6%B2.m4a",
+        "audioSha256": "bb95c5709f0901b1dddf34816f45389c300a4361e0d53363df41172808754e54",
+        "audioDisposition": "retain-existing-verified-podcast",
+        "semanticReview": "Orthography only; same concept, chapter, order, numerical statements and examples. Podcast is an explanatory overview of the preserved v1 upload, not a verbatim reading of revised typography.",
+        "mediaValidation": "production HEAD exact length and 120s remote decode passed"
+      },
+      {
+        "number": 18,
+        "before": "発音與聲音身份透過驗收",
+        "after": "發音與聲音身分通過驗收",
+        "reason": "日文字形及臺灣常用詞校正",
+        "paragraphIndex": 6,
+        "uploadedSourceSha256": "05cba9b0af363dc6df0e5ab79f0645545ec9561df0629b92c224a8fed9659729",
+        "readerSourceSha256": "a7b5ffccef01d138b5d9dbf1f5837d71ad0053f61d7d04d36700bd0bc4ea75c0",
+        "uploadedSourceSnapshot": "book-txt/程式如何變成影片/notebooklm-source-snapshots/v1/18_說話和畫面怎麼對齊.txt",
+        "audioSrc": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/how-code-becomes-film/audio/18_%E8%AA%AA%E8%A9%B1%E5%92%8C%E7%95%AB%E9%9D%A2%E6%80%8E%E9%BA%BC%E5%B0%8D%E9%BD%8A.m4a",
+        "audioSha256": "0a8a35a306316d2cb71ee5fb6e7e8783872217825b49da3e6e5326384408b4bc",
+        "audioDisposition": "retain-existing-verified-podcast",
+        "semanticReview": "Orthography only; same concept, chapter, order, numerical statements and examples. Podcast is an explanatory overview of the preserved v1 upload, not a verbatim reading of revised typography.",
+        "mediaValidation": "production HEAD exact length and 120s remote decode passed"
+      }
+    ],
+    "checkedAt": "2026-10-05T12:04:47.017Z"
   }
 }

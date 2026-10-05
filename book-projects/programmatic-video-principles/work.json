@@ -2,7 +2,7 @@
   "project_id": "programmatic-video-principles-book",
   "handoff_version": "1.0.0",
   "updated_date": "2026-10-05",
-  "phase": "production_preparation",
+  "phase": "published",
   "completed": [
     "context_capture",
     "book_positioning",
@@ -20,22 +20,23 @@
     "60_second_transfer_baseline",
     "Windows_Python_FFmpeg_baseline",
     "NotebookLM_24_validated_downloads",
-    "24_chapter_audio_batch_normalized"
+    "24_chapter_audio_batch_normalized",
+    "Blob_24_public_assets",
+    "production_release",
+    "24_production_remote_seek_checks"
   ],
   "not_completed": [
     "human_reader_validation",
     "human_audio_content_acceptance",
-    "full_case_source_inspection",
-    "Blob_24_public_assets",
-    "production_release"
+    "full_case_source_inspection"
   ],
   "sample_chapter": {
     "id": "CH04",
     "status": "calibration_draft_not_user_approved",
     "counts_as_finished_manuscript": false
   },
-  "current_task": "Blob公開資產與正式上架驗證",
-  "next_action": "完成Blob、app驗證、Git與production",
+  "current_task": "電子書平台上架與正式技術驗證已完成",
+  "next_action": "使用者需要時安排真人試讀與完整聽審；任何修稿另行重驗來源與音訊",
   "blockers": [
     {
       "item": "原案例完整原始碼 ZIP",
@@ -52,168 +53,168 @@
   ],
   "chapter_states": {
     "CH01": {
-      "status": "manuscript_and_local_audio_validated",
+      "status": "published_text_and_validated_podcast",
       "file": "MANUSCRIPT/chapters/chapter_01_main.md",
       "technical_review": "model-reviewed-numerical-check-passed",
       "reader_review": "model-role-simulation-only",
       "human_approved": false
     },
     "CH02": {
-      "status": "manuscript_and_local_audio_validated",
+      "status": "published_text_and_validated_podcast",
       "file": "MANUSCRIPT/chapters/chapter_02_main.md",
       "technical_review": "model-reviewed-numerical-check-passed",
       "reader_review": "model-role-simulation-only",
       "human_approved": false
     },
     "CH03": {
-      "status": "manuscript_and_local_audio_validated",
+      "status": "published_text_and_validated_podcast",
       "file": "MANUSCRIPT/chapters/chapter_03_main.md",
       "technical_review": "model-reviewed-numerical-check-passed",
       "reader_review": "model-role-simulation-only",
       "human_approved": false
     },
     "CH04": {
-      "status": "manuscript_and_local_audio_validated",
+      "status": "published_text_and_validated_podcast",
       "file": "MANUSCRIPT/chapters/chapter_04_main.md",
       "technical_review": "model-reviewed-numerical-check-passed",
       "reader_review": "model-role-simulation-only",
       "human_approved": false
     },
     "CH05": {
-      "status": "manuscript_and_local_audio_validated",
+      "status": "published_text_and_validated_podcast",
       "file": "MANUSCRIPT/chapters/chapter_05_main.md",
       "technical_review": "model-reviewed-numerical-check-passed",
       "reader_review": "model-role-simulation-only",
       "human_approved": false
     },
     "CH06": {
-      "status": "manuscript_and_local_audio_validated",
+      "status": "published_text_and_validated_podcast",
       "file": "MANUSCRIPT/chapters/chapter_06_main.md",
       "technical_review": "model-reviewed-numerical-check-passed",
       "reader_review": "model-role-simulation-only",
       "human_approved": false
     },
     "CH07": {
-      "status": "manuscript_and_local_audio_validated",
+      "status": "published_text_and_validated_podcast",
       "file": "MANUSCRIPT/chapters/chapter_07_main.md",
       "technical_review": "model-reviewed-numerical-check-passed",
       "reader_review": "model-role-simulation-only",
       "human_approved": false
     },
     "CH08": {
-      "status": "manuscript_and_local_audio_validated",
+      "status": "published_text_and_validated_podcast",
       "file": "MANUSCRIPT/chapters/chapter_08_main.md",
       "technical_review": "model-reviewed-numerical-check-passed",
       "reader_review": "model-role-simulation-only",
       "human_approved": false
     },
     "CH09": {
-      "status": "manuscript_and_local_audio_validated",
+      "status": "published_text_and_validated_podcast",
       "file": "MANUSCRIPT/chapters/chapter_09_main.md",
       "technical_review": "model-reviewed-numerical-check-passed",
       "reader_review": "model-role-simulation-only",
       "human_approved": false
     },
     "CH10": {
-      "status": "manuscript_and_local_audio_validated",
+      "status": "published_text_and_validated_podcast",
       "file": "MANUSCRIPT/chapters/chapter_10_main.md",
       "technical_review": "model-reviewed-numerical-check-passed",
       "reader_review": "model-role-simulation-only",
       "human_approved": false
     },
     "CH11": {
-      "status": "manuscript_and_local_audio_validated",
+      "status": "published_text_and_validated_podcast",
       "file": "MANUSCRIPT/chapters/chapter_11_main.md",
       "technical_review": "model-reviewed-numerical-check-passed",
       "reader_review": "model-role-simulation-only",
       "human_approved": false
     },
     "CH12": {
-      "status": "manuscript_and_local_audio_validated",
+      "status": "published_text_and_validated_podcast",
       "file": "MANUSCRIPT/chapters/chapter_12_main.md",
       "technical_review": "model-reviewed-numerical-check-passed",
       "reader_review": "model-role-simulation-only",
       "human_approved": false
     },
     "CH13": {
-      "status": "manuscript_and_local_audio_validated",
+      "status": "published_text_and_validated_podcast",
       "file": "MANUSCRIPT/chapters/chapter_13_main.md",
       "technical_review": "model-reviewed-numerical-check-passed",
       "reader_review": "model-role-simulation-only",
       "human_approved": false
     },
     "CH14": {
-      "status": "manuscript_and_local_audio_validated",
+      "status": "published_text_and_validated_podcast",
       "file": "MANUSCRIPT/chapters/chapter_14_main.md",
       "technical_review": "model-reviewed-numerical-check-passed",
       "reader_review": "model-role-simulation-only",
       "human_approved": false
     },
     "CH15": {
-      "status": "manuscript_and_local_audio_validated",
+      "status": "published_text_and_validated_podcast",
       "file": "MANUSCRIPT/chapters/chapter_15_main.md",
       "technical_review": "model-reviewed-numerical-check-passed",
       "reader_review": "model-role-simulation-only",
       "human_approved": false
     },
     "CH16": {
-      "status": "manuscript_and_local_audio_validated",
+      "status": "published_text_and_validated_podcast",
       "file": "MANUSCRIPT/chapters/chapter_16_main.md",
       "technical_review": "model-reviewed-numerical-check-passed",
       "reader_review": "model-role-simulation-only",
       "human_approved": false
     },
     "CH17": {
-      "status": "manuscript_and_local_audio_validated",
+      "status": "published_text_and_validated_podcast",
       "file": "MANUSCRIPT/chapters/chapter_17_main.md",
       "technical_review": "model-reviewed-numerical-check-passed",
       "reader_review": "model-role-simulation-only",
       "human_approved": false
     },
     "CH18": {
-      "status": "manuscript_and_local_audio_validated",
+      "status": "published_text_and_validated_podcast",
       "file": "MANUSCRIPT/chapters/chapter_18_main.md",
       "technical_review": "model-reviewed-numerical-check-passed",
       "reader_review": "model-role-simulation-only",
       "human_approved": false
     },
     "CH19": {
-      "status": "manuscript_and_local_audio_validated",
+      "status": "published_text_and_validated_podcast",
       "file": "MANUSCRIPT/chapters/chapter_19_main.md",
       "technical_review": "model-reviewed-numerical-check-passed",
       "reader_review": "model-role-simulation-only",
       "human_approved": false
     },
     "CH20": {
-      "status": "manuscript_and_local_audio_validated",
+      "status": "published_text_and_validated_podcast",
       "file": "MANUSCRIPT/chapters/chapter_20_main.md",
       "technical_review": "model-reviewed-numerical-check-passed",
       "reader_review": "model-role-simulation-only",
       "human_approved": false
     },
     "CH21": {
-      "status": "manuscript_and_local_audio_validated",
+      "status": "published_text_and_validated_podcast",
       "file": "MANUSCRIPT/chapters/chapter_21_main.md",
       "technical_review": "model-reviewed-numerical-check-passed",
       "reader_review": "model-role-simulation-only",
       "human_approved": false
     },
     "CH22": {
-      "status": "manuscript_and_local_audio_validated",
+      "status": "published_text_and_validated_podcast",
       "file": "MANUSCRIPT/chapters/chapter_22_main.md",
       "technical_review": "model-reviewed-numerical-check-passed",
       "reader_review": "model-role-simulation-only",
       "human_approved": false
     },
     "CH23": {
-      "status": "manuscript_and_local_audio_validated",
+      "status": "published_text_and_validated_podcast",
       "file": "MANUSCRIPT/chapters/chapter_23_main.md",
       "technical_review": "model-reviewed-numerical-check-passed",
       "reader_review": "model-role-simulation-only",
       "human_approved": false
     },
     "CH24": {
-      "status": "manuscript_and_local_audio_validated",
+      "status": "published_text_and_validated_podcast",
       "file": "MANUSCRIPT/chapters/chapter_24_main.md",
       "technical_review": "model-reviewed-numerical-check-passed",
       "reader_review": "model-role-simulation-only",
@@ -221,5 +222,14 @@
     }
   },
   "resume_policy": "逐批保存，可接續；不聲稱任何未啟動的背景任務",
-  "qa_report": "qa/HANDOFF_QA.md"
+  "qa_report": "qa/HANDOFF_QA.md",
+  "production": {
+    "status": "passed",
+    "productionBaseUrl": "https://jinren-protocol.vercel.app",
+    "contentCommit": "eeeb3c6fcf9cec086d2a06b681fc09d6d3e7b437",
+    "deploymentId": "dpl_2n9caiGwDgDtcUSxLDHXFDjT3wwK",
+    "checkedAudioCount": 24,
+    "productionRemoteSeekChecked": true,
+    "checkedAt": "2026-10-05T11:56:43.681Z"
+  }
 }

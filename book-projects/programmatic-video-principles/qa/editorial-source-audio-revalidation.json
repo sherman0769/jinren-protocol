@@ -1,0 +1,76 @@
+{
+  "status": "passed-with-preserved-audio-source",
+  "readerRevision": "orthographic-v2",
+  "audioSourceRevision": "uploaded-v1",
+  "regeneratedAudio": false,
+  "chapterNumbers": [
+    5,
+    8,
+    14,
+    18
+  ],
+  "reviewer": "model editorial comparison; not human listening acceptance",
+  "changes": [
+    {
+      "number": 5,
+      "before": "秒錶示",
+      "after": "秒表示",
+      "reason": "秒作單位；更正誤轉為秒錶的字形",
+      "paragraphIndex": 10,
+      "uploadedSourceSha256": "aadad96c1bfd6aba2e9e5bbb66b211158ba7f9dbe047ed91bf39cfb31af1d9d9",
+      "readerSourceSha256": "f3614560b69c59e1332a75c38e3475756a32dd0f508b6b76fd1e9591aa426f7e",
+      "uploadedSourceSnapshot": "book-txt/程式如何變成影片/notebooklm-source-snapshots/v1/05_為什麼等速看起來像機器.txt",
+      "audioSrc": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/how-code-becomes-film/audio/05_%E7%82%BA%E4%BB%80%E9%BA%BC%E7%AD%89%E9%80%9F%E7%9C%8B%E8%B5%B7%E4%BE%86%E5%83%8F%E6%A9%9F%E5%99%A8.m4a",
+      "audioSha256": "27d85847e3ac6f3bbd9360e6b67c7a7a5b83c486e0c375f0dc9c9ab68be335be",
+      "audioDisposition": "retain-existing-verified-podcast",
+      "semanticReview": "Orthography only; same concept, chapter, order, numerical statements and examples. Podcast is an explanatory overview of the preserved v1 upload, not a verbatim reading of revised typography.",
+      "mediaValidation": "production HEAD exact length and 120s remote decode passed"
+    },
+    {
+      "number": 8,
+      "before": "擴充套件成",
+      "after": "擴展成",
+      "reason": "更正擴展動詞，不指軟體擴充套件",
+      "paragraphIndex": 23,
+      "uploadedSourceSha256": "0653f5a05a1d2d82e811189af04f646ea6a8d6936fd95682a9b570f9839afd5f",
+      "readerSourceSha256": "95a34618f7a8db0da02aaf38acc788238e8d0a90141eb009f7bb37aab04d1478",
+      "uploadedSourceSnapshot": "book-txt/程式如何變成影片/notebooklm-source-snapshots/v1/08_中文字為什麼比畫圓麻煩.txt",
+      "audioSrc": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/how-code-becomes-film/audio/08_%E4%B8%AD%E6%96%87%E5%AD%97%E7%82%BA%E4%BB%80%E9%BA%BC%E6%AF%94%E7%95%AB%E5%9C%93%E9%BA%BB%E7%85%A9.m4a",
+      "audioSha256": "9ad10be0b861bbec2e81378dbd8e760fb138c0ee6f95f33433f6712361405976",
+      "audioDisposition": "retain-existing-verified-podcast",
+      "semanticReview": "Orthography only; same concept, chapter, order, numerical statements and examples. Podcast is an explanatory overview of the preserved v1 upload, not a verbatim reading of revised typography.",
+      "mediaValidation": "production HEAD exact length and 120s remote decode passed"
+    },
+    {
+      "number": 14,
+      "before": "変更",
+      "after": "變更",
+      "reason": "日文字形更正為繁體中文",
+      "paragraphIndex": 15,
+      "uploadedSourceSha256": "c6524e6a9e0885ddbb6fff551e2b33908018f46fa6c6592a200e208621cd15dc",
+      "readerSourceSha256": "263082ec465cdd5b041c5fa6723c6d850520a6a3dbe64dad6f1c948cb6781a6a",
+      "uploadedSourceSnapshot": "book-txt/程式如何變成影片/notebooklm-source-snapshots/v1/14_關係怎麼變成一張網.txt",
+      "audioSrc": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/how-code-becomes-film/audio/14_%E9%97%9C%E4%BF%82%E6%80%8E%E9%BA%BC%E8%AE%8A%E6%88%90%E4%B8%80%E5%BC%B5%E7%B6%B2.m4a",
+      "audioSha256": "bb95c5709f0901b1dddf34816f45389c300a4361e0d53363df41172808754e54",
+      "audioDisposition": "retain-existing-verified-podcast",
+      "semanticReview": "Orthography only; same concept, chapter, order, numerical statements and examples. Podcast is an explanatory overview of the preserved v1 upload, not a verbatim reading of revised typography.",
+      "mediaValidation": "production HEAD exact length and 120s remote decode passed"
+    },
+    {
+      "number": 18,
+      "before": "発音與聲音身份透過驗收",
+      "after": "發音與聲音身分通過驗收",
+      "reason": "日文字形及臺灣常用詞校正",
+      "paragraphIndex": 6,
+      "uploadedSourceSha256": "05cba9b0af363dc6df0e5ab79f0645545ec9561df0629b92c224a8fed9659729",
+      "readerSourceSha256": "a7b5ffccef01d138b5d9dbf1f5837d71ad0053f61d7d04d36700bd0bc4ea75c0",
+      "uploadedSourceSnapshot": "book-txt/程式如何變成影片/notebooklm-source-snapshots/v1/18_說話和畫面怎麼對齊.txt",
+      "audioSrc": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/how-code-becomes-film/audio/18_%E8%AA%AA%E8%A9%B1%E5%92%8C%E7%95%AB%E9%9D%A2%E6%80%8E%E9%BA%BC%E5%B0%8D%E9%BD%8A.m4a",
+      "audioSha256": "0a8a35a306316d2cb71ee5fb6e7e8783872217825b49da3e6e5326384408b4bc",
+      "audioDisposition": "retain-existing-verified-podcast",
+      "semanticReview": "Orthography only; same concept, chapter, order, numerical statements and examples. Podcast is an explanatory overview of the preserved v1 upload, not a verbatim reading of revised typography.",
+      "mediaValidation": "production HEAD exact length and 120s remote decode passed"
+    }
+  ],
+  "checkedAt": "2026-10-05T12:04:47.017Z"
+}

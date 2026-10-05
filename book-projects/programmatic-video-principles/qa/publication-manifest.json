@@ -40,8 +40,8 @@
     {
       "number": 5,
       "source": "MANUSCRIPT\\chapters\\chapter_05_main.md",
-      "sourceSha256": "e5ce6e1cf8920958bc3dd52eff43990b97abba728c5d1c4b02254bc08bd4af6d",
-      "readerSha256": "fa594b4a701084f218210ea5821e63350a5c95e9a17fae6b20160ec2dd9f4d1a",
+      "sourceSha256": "9795a60a68f7a6afbb998cf4c378fbaec15a5038dba0a50e5ced015ec5297420",
+      "readerSha256": "2ed56bd062aa137abe1ee53ed66ffb940d54f5816f0564728a6ce62eab73a0a2",
       "figure": "/books/how-code-becomes-film/figures/chapter_05.svg",
       "figureAlt": "為什麼等速看起來像機器：半秒：u=0.25，等速250；緩動193.75；一秒：u=0.5，兩者400；只看中點不足；一點五秒：u=0.75，等速550；緩動606.25",
       "chineseCharacters": 1271
@@ -67,11 +67,11 @@
     {
       "number": 8,
       "source": "MANUSCRIPT\\chapters\\chapter_08_main.md",
-      "sourceSha256": "840137c3efdc016747c68606a2c91589cd625c0b52a88c75009d55783b3cb4f7",
-      "readerSha256": "3fa402a926f8638bde127bd1b4ae1b0655627c3bcc607025cca849d77ef8516e",
+      "sourceSha256": "bd87130014bce5dc8dfc6d9c0c11e644187c52e2c94d23b117776de7582ba809",
+      "readerSha256": "94799d6e39cd93488aa741dc058df0f1a3a8afd102f5d839386df690e1649256",
       "figure": "/books/how-code-becomes-film/figures/chapter_08.svg",
       "figureAlt": "中文字為什麼比畫圓麻煩：量得字框，左2，上5，右102，下45；繪字原點，(148,75)；可見中心，(200,100)；位置先固定，再改透明度",
-      "chineseCharacters": 1312
+      "chineseCharacters": 1310
     },
     {
       "number": 9,
@@ -121,8 +121,8 @@
     {
       "number": 14,
       "source": "MANUSCRIPT\\chapters\\chapter_14_main.md",
-      "sourceSha256": "bb8f56ec08d2d0bba43084d2f99e59b682f1ae008622e4fb160e144914e7e84e",
-      "readerSha256": "636ff0bcfcf60c1b7a1a957547f75737e1e61b67faa37ba813e7509b0549dd5a",
+      "sourceSha256": "3d3a35eb2dbf1b63d9fb9c901711da1c538b8ed83d7c32eba70e5c8fad1e9939",
+      "readerSha256": "257c1b81cb4bf634644baa020c051cc4b50fb0a33095333160252bacd8f02ded",
       "figure": "/books/how-code-becomes-film/figures/chapter_14.svg",
       "figureAlt": "關係怎麼變成一張網：先備關係，A→B、A→C、B→D、C→D、D→E；資料，5節點，5邊；D有2條入邊；佈局與語意，交換位置不改關係；近不代表強",
       "chineseCharacters": 1060
@@ -157,8 +157,8 @@
     {
       "number": 18,
       "source": "MANUSCRIPT\\chapters\\chapter_18_main.md",
-      "sourceSha256": "e1a8470684a43c296d3de6ab244ebca47d224cc2bd3450919a2a31eea1e11144",
-      "readerSha256": "8736c9d4d2ac345bea3d239eea172180373d4cb4749af29f93fa8f6c534b3749",
+      "sourceSha256": "e0a1dae5da2099776461c6c920d369c776958c3593fa038e171c8c26eae24a36",
+      "readerSha256": "2239e1b5374649fd4e9fdecb6c1b45f8e4d8667e29b67dee1d73ffbf2a6fec80",
       "figure": "/books/how-code-becomes-film/figures/chapter_18.svg",
       "figureAlt": "說話和畫面怎麼對齊：三句開始時間，0，2，4秒；各2秒窗口；教學假音長，1.6，1.8，1.9 → 結束1.6，3.8，5.9；第二句改長2.4秒，結束4.4；超窗0.4秒，先拒絕",
       "chineseCharacters": 1152
@@ -218,6 +218,6 @@
       "chineseCharacters": 1182
     }
   ],
-  "chineseCharacters": 29638,
+  "chineseCharacters": 29636,
   "originalHandoffPreserved": true
 }

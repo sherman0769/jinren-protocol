@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "status": "applied",
+  "status": "production-verified",
   "access": "public",
   "region": "hnd1",
   "storeIdentity": {
@@ -16,7 +16,7 @@
     "remoteSeek": "passed",
     "exactStorePathnameSet": "passed",
     "booksJsonApplied": "passed",
-    "productionReader": "pending"
+    "productionReader": "passed"
   },
   "summary": {
     "audioCount": 24,
@@ -647,5 +647,180 @@
         "remoteSeekVerified": true
       }
     }
-  ]
+  ],
+  "production": {
+    "baseUrl": "https://jinren-protocol.vercel.app",
+    "status": "passed",
+    "checkedAudioCount": 24,
+    "checks": [
+      {
+        "slug": "how-code-becomes-film",
+        "chapterNumber": 1,
+        "url": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/how-code-becomes-film/audio/01_%E5%BD%B1%E7%89%87%E7%82%BA%E4%BB%80%E9%BA%BC%E4%B8%8D%E6%98%AF%E4%B8%80%E5%BC%B5%E6%9C%83%E5%8B%95%E7%9A%84%E7%85%A7%E7%89%87.m4a",
+        "bytes": 9040540,
+        "seekSeconds": 120
+      },
+      {
+        "slug": "how-code-becomes-film",
+        "chapterNumber": 2,
+        "url": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/how-code-becomes-film/audio/02_%E9%9B%BB%E8%85%A6%E6%80%8E%E9%BA%BC%E7%9F%A5%E9%81%93%E7%99%BD%E9%BB%9E%E5%9C%A8%E5%93%AA%E8%A3%A1.m4a",
+        "bytes": 9330667,
+        "seekSeconds": 120
+      },
+      {
+        "slug": "how-code-becomes-film",
+        "chapterNumber": 3,
+        "url": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/how-code-becomes-film/audio/03_%E5%A6%82%E4%BD%95%E6%8A%8A%E7%8F%BE%E5%9C%A8%E4%BA%A4%E7%B5%A6%E7%A8%8B%E5%BC%8F.m4a",
+        "bytes": 15660459,
+        "seekSeconds": 120
+      },
+      {
+        "slug": "how-code-becomes-film",
+        "chapterNumber": 4,
+        "url": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/how-code-becomes-film/audio/04_%E5%9C%93%E9%BB%9E%E7%82%BA%E4%BB%80%E9%BA%BC%E6%9C%83%E5%8B%95.m4a",
+        "bytes": 8100792,
+        "seekSeconds": 120
+      },
+      {
+        "slug": "how-code-becomes-film",
+        "chapterNumber": 5,
+        "url": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/how-code-becomes-film/audio/05_%E7%82%BA%E4%BB%80%E9%BA%BC%E7%AD%89%E9%80%9F%E7%9C%8B%E8%B5%B7%E4%BE%86%E5%83%8F%E6%A9%9F%E5%99%A8.m4a",
+        "bytes": 12596206,
+        "seekSeconds": 120
+      },
+      {
+        "slug": "how-code-becomes-film",
+        "chapterNumber": 6,
+        "url": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/how-code-becomes-film/audio/06_%E5%A5%BD%E5%B9%BE%E4%BB%B6%E4%BA%8B%E5%A6%82%E4%BD%95%E5%90%8C%E6%99%82%E7%99%BC%E7%94%9F.m4a",
+        "bytes": 9650341,
+        "seekSeconds": 120
+      },
+      {
+        "slug": "how-code-becomes-film",
+        "chapterNumber": 7,
+        "url": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/how-code-becomes-film/audio/07_%E7%B7%9A%E6%A2%9D%E6%80%8E%E9%BA%BC%E8%87%AA%E5%B7%B1%E9%95%B7%E5%87%BA%E4%BE%86.m4a",
+        "bytes": 12168495,
+        "seekSeconds": 120
+      },
+      {
+        "slug": "how-code-becomes-film",
+        "chapterNumber": 8,
+        "url": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/how-code-becomes-film/audio/08_%E4%B8%AD%E6%96%87%E5%AD%97%E7%82%BA%E4%BB%80%E9%BA%BC%E6%AF%94%E7%95%AB%E5%9C%93%E9%BA%BB%E7%85%A9.m4a",
+        "bytes": 13950505,
+        "seekSeconds": 120
+      },
+      {
+        "slug": "how-code-becomes-film",
+        "chapterNumber": 9,
+        "url": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/how-code-becomes-film/audio/09_%E4%B8%80%E5%8D%83%E9%A1%86%E5%B0%8F%E9%BB%9E%E6%80%8E%E9%BA%BC%E4%B8%80%E8%B5%B7%E7%AE%A1%E7%90%86.m4a",
+        "bytes": 9204398,
+        "seekSeconds": 120
+      },
+      {
+        "slug": "how-code-becomes-film",
+        "chapterNumber": 10,
+        "url": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/how-code-becomes-film/audio/10_%E6%95%A3%E9%BB%9E%E6%80%8E%E9%BA%BC%E6%8E%92%E6%88%90%E4%B8%80%E5%80%8B%E5%AD%97.m4a",
+        "bytes": 10486620,
+        "seekSeconds": 120
+      },
+      {
+        "slug": "how-code-becomes-film",
+        "chapterNumber": 11,
+        "url": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/how-code-becomes-film/audio/11_%E6%B7%B7%E4%BA%82%E7%82%BA%E4%BB%80%E9%BA%BC%E6%9C%89%E6%99%82%E5%BE%88%E8%87%AA%E7%84%B6.m4a",
+        "bytes": 10664522,
+        "seekSeconds": 120
+      },
+      {
+        "slug": "how-code-becomes-film",
+        "chapterNumber": 12,
+        "url": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/how-code-becomes-film/audio/12_%E5%8B%95%E7%95%AB%E6%80%8E%E9%BA%BC%E6%9C%89%E9%87%8D%E9%87%8F%E8%88%87%E5%9B%9E%E5%BD%88.m4a",
+        "bytes": 11193174,
+        "seekSeconds": 120
+      },
+      {
+        "slug": "how-code-becomes-film",
+        "chapterNumber": 13,
+        "url": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/how-code-becomes-film/audio/13_%E6%95%B8%E5%AD%97%E6%80%8E%E9%BA%BC%E8%AE%8A%E6%88%90%E5%8F%AF%E4%BB%A5%E7%9C%8B%E6%87%82%E7%9A%84%E5%9C%96.m4a",
+        "bytes": 11463833,
+        "seekSeconds": 120
+      },
+      {
+        "slug": "how-code-becomes-film",
+        "chapterNumber": 14,
+        "url": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/how-code-becomes-film/audio/14_%E9%97%9C%E4%BF%82%E6%80%8E%E9%BA%BC%E8%AE%8A%E6%88%90%E4%B8%80%E5%BC%B5%E7%B6%B2.m4a",
+        "bytes": 13209252,
+        "seekSeconds": 120
+      },
+      {
+        "slug": "how-code-becomes-film",
+        "chapterNumber": 15,
+        "url": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/how-code-becomes-film/audio/15_%E5%B9%B3%E9%9D%A2%E6%80%8E%E9%BA%BC%E7%9C%8B%E8%B5%B7%E4%BE%86%E6%9C%89%E6%B7%B1%E5%BA%A6.m4a",
+        "bytes": 9474591,
+        "seekSeconds": 120
+      },
+      {
+        "slug": "how-code-becomes-film",
+        "chapterNumber": 16,
+        "url": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/how-code-becomes-film/audio/16_%E5%85%89%E5%BD%B1%E8%88%87%E8%91%97%E8%89%B2%E7%A8%8B%E5%BC%8F%E5%9C%A8%E7%AE%97%E4%BB%80%E9%BA%BC.m4a",
+        "bytes": 13752556,
+        "seekSeconds": 120
+      },
+      {
+        "slug": "how-code-becomes-film",
+        "chapterNumber": 17,
+        "url": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/how-code-becomes-film/audio/17_%E8%81%B2%E9%9F%B3%E6%9C%89%E5%8F%A6%E4%B8%80%E6%A2%9D%E6%99%82%E9%90%98.m4a",
+        "bytes": 15565253,
+        "seekSeconds": 120
+      },
+      {
+        "slug": "how-code-becomes-film",
+        "chapterNumber": 18,
+        "url": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/how-code-becomes-film/audio/18_%E8%AA%AA%E8%A9%B1%E5%92%8C%E7%95%AB%E9%9D%A2%E6%80%8E%E9%BA%BC%E5%B0%8D%E9%BD%8A.m4a",
+        "bytes": 10682753,
+        "seekSeconds": 120
+      },
+      {
+        "slug": "how-code-becomes-film",
+        "chapterNumber": 19,
+        "url": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/how-code-becomes-film/audio/19_%E7%82%BA%E4%BB%80%E9%BA%BC%E8%83%BD%E9%A0%90%E8%A6%BD%E5%8D%BB%E4%B8%8D%E4%B8%80%E5%AE%9A%E6%9C%89%E5%BD%B1%E7%89%87%E6%AA%94.m4a",
+        "bytes": 10499005,
+        "seekSeconds": 120
+      },
+      {
+        "slug": "how-code-becomes-film",
+        "chapterNumber": 20,
+        "url": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/how-code-becomes-film/audio/20_%E6%80%8E%E9%BA%BC%E7%9F%A5%E9%81%93%E5%BD%B1%E7%89%87%E7%9C%9F%E7%9A%84%E5%81%9A%E5%B0%8D%E4%BA%86.m4a",
+        "bytes": 11479032,
+        "seekSeconds": 120
+      },
+      {
+        "slug": "how-code-becomes-film",
+        "chapterNumber": 21,
+        "url": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/how-code-becomes-film/audio/21_%E6%80%8E%E9%BA%BC%E6%8A%8A%E4%B8%80%E5%8F%A5%E9%A1%98%E6%9C%9B%E6%8B%86%E6%88%90%E8%83%BD%E9%A9%97%E6%94%B6%E7%9A%84%E8%A6%81%E6%B1%82.m4a",
+        "bytes": 13263154,
+        "seekSeconds": 120
+      },
+      {
+        "slug": "how-code-becomes-film",
+        "chapterNumber": 22,
+        "url": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/how-code-becomes-film/audio/22_%E9%81%B8%E5%B7%A5%E5%85%B7%E6%99%82%E5%A6%82%E4%BD%95%E4%B8%8D%E8%A2%AB%E5%B7%A5%E5%85%B7%E7%B6%81%E4%BD%8F.m4a",
+        "bytes": 8386318,
+        "seekSeconds": 120
+      },
+      {
+        "slug": "how-code-becomes-film",
+        "chapterNumber": 23,
+        "url": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/how-code-becomes-film/audio/23_%E6%80%8E%E9%BA%BC%E7%B5%84%E5%87%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%BD%B1%E7%89%87%E5%BC%95%E6%93%8E.m4a",
+        "bytes": 10674275,
+        "seekSeconds": 120
+      },
+      {
+        "slug": "how-code-becomes-film",
+        "chapterNumber": 24,
+        "url": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/how-code-becomes-film/audio/24_%E5%AE%8C%E6%88%90%E4%B8%80%E6%94%AF%E4%BD%A0%E8%83%BD%E8%A7%A3%E9%87%8B%E7%9A%84%E5%BD%B1%E7%89%87.m4a",
+        "bytes": 13838555,
+        "seekSeconds": 120
+      }
+    ]
+  }
 }

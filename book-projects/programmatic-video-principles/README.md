@@ -2,7 +2,7 @@
 
 **從一個畫面中的小點，到能指揮 AI 完成可驗收影片。**
 
-2026-10-05 母專案出版整合：24 章正式主稿、24 張原理圖、24 份 TXT 及 NotebookLM 音訊已建立。最新出版證據見 [整合紀錄](INTEGRATION.md)、`qa/RELEASE.md` 與 `work.json`。原交接說明及 `qa/HANDOFF_QA.md` 保留為當時證據，不代表本輪現況。真人试讀、完整聽審與原案例完整原始碼審查尚未完成。
+2026-10-05 母專案出版整合：24 章正式主稿、24 張原理圖、24 份 TXT 及 NotebookLM 音訊已建立。最新出版證據見 [整合紀錄](INTEGRATION.md)、`qa/RELEASE.md` 與 `work.json`。原交接說明及 `qa/HANDOFF_QA.md` 保留為當時證據，不代表本輪現況。真人試讀、完整聽審與原案例完整原始碼審查尚未完成。
 
 閱讀入口：[START_HERE.html](START_HERE.html) · [中文開始頁](00_START_HERE.md) · [Codex 主指令](CODEX_INSTRUCTIONS/MASTER_PROMPT.md)
 

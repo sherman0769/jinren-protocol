@@ -46,7 +46,7 @@ AI 指令：「先量完整『計算 AI 2026』的實際字框與基線，再安
 
 ## 七、來源與下一步
 
-[S11] HarfBuzz〈What is HarfBuzz?〉，2026-10-05 核對字串到字形與位置的分工。https://harfbuzz.github.io/what-is-harfbuzz.html 。[S15] Unicode UAX #29〈Text Segmentation〉，同日核對字素叢集概念。https://www.unicode.org/reports/tr29/ 。接下來把單個物件擴充套件成一羣資料。
+[S11] HarfBuzz〈What is HarfBuzz?〉，2026-10-05 核對字串到字形與位置的分工。https://harfbuzz.github.io/what-is-harfbuzz.html 。[S15] Unicode UAX #29〈Text Segmentation〉，同日核對字素叢集概念。https://www.unicode.org/reports/tr29/ 。接下來把單個物件擴展成一羣資料。
 
 ## 八、術語回顧
 

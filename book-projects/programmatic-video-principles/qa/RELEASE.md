@@ -2,7 +2,7 @@
 
 2026-10-05；作者李詩民；slug `how-code-becomes-film`。
 
-本輪依交接章綱實際撰寫 24 章，主稿約 29,638 個中文字；網站 707 段、24 張原理图。24 份 UTF-8 TXT 保存於母專案 `book-txt/程式如何變成影片/`。封面與可下載原稿／範例包位於 `public/books/how-code-becomes-film/`。原交接 ZIP 保留並歸檔，SHA-256 與來源一致；其他 23 本書及頂層目錄資料保持一致。
+本輪依交接章綱實際撰寫 24 章，主稿約 29,638 個中文字；網站 707 段、24 張原理圖。24 份 UTF-8 TXT 保存於母專案 `book-txt/程式如何變成影片/`。封面與可下載原稿／範例包位於 `public/books/how-code-becomes-film/`。原交接 ZIP 保留並歸檔，SHA-256 與來源一致；其他 23 本書及頂層目錄資料保持一致。
 
 ## 已通過
 
@@ -18,9 +18,15 @@
 
 ## 正式部署
 
-待本輪 Git push 的 Vercel production READY 與每章 production HEAD/remote seek。此檔會在驗收後更新，不把本機 build 或 Blob 上傳當正式部署。
+內容提交 `eeeb3c6fcf9cec086d2a06b681fc09d6d3e7b437` 已 push main；單一 Git-triggered production `dpl_2n9caiGwDgDtcUSxLDHXFDjT3wwK` 為 READY，alias 為 `https://jinren-protocol.vercel.app`。閱讀頁：`/books/how-code-becomes-film/read`；主要 Podcast 頁：`/books/how-code-becomes-film`。
+
+正式 24/24 音訊 HTTP 200、audio content type、Content-Length 精確吻合驗證檔案；每章在 120 秒處五秒遠端完整解碼通過。`production-audio-validation.json` 為 passed，`productionRemoteSeekChecked: true`；26 個封面／圖解／ZIP 資產連結通過，正式六種版面與續播回歸通過。正式手機 screenshot 為 `podcast-production-mobile.png`。
+
+Blob 完成 production 驗證後，24 個本機暫存音訊逐檔核對 bytes/SHA，再移至母專案 `tmp/programmatic-validated-audio/`；未刪除 Downloads 原始檔或轉檔備份，Git 不含本機音訊。移走暫存後仍通過完整專案音訊驗證；resume execute 回報 already-complete、零寫入。書籍／TXT／NotebookLM／Blob／連結皆 24，無缺章或重複標誌。
 
 ## 範圍與優化
+
+最終校字更正第 5、8、14、18 章四處字形／用詞；書稿、網站段落、TXT、可下載 ZIP 同步更新。受保護 writer 的 preview 零寫入通過，僅 allowlist 四處更正、數字及章節順序不變，24 個 audio 物件完整保留；原 NotebookLM 上傳 TXT 保存為 `book-txt/程式如何變成影片/notebooklm-source-snapshots/v1/`，其原 SHA 仍為音訊生成的來源證據。現行閱讀 TXT 使用另列的 `readerSource` SHA。Podcast 是原來源的解說摘要，沒有宣稱重新生成或逐字念出校字版；來源／音訊差異重驗見 `editorial-source-audio-revalidation.json`。這是已明列的純校字修訂，不是自動放行內容改寫。
 
 真人試讀、逐章完整聽審與原案例完整原始碼審查未完成；模型自審不等於獨立專家驗收。內容為完整精簡版，交接包的 6.5–9 萬字為編輯提案，未用重複文字填充。
 

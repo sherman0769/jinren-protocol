@@ -1,0 +1,162 @@
+{
+  "status": "passed",
+  "checked": 26,
+  "results": [
+    {
+      "path": "/books/how-code-becomes-film/cover.png",
+      "status": 200,
+      "type": "image/png",
+      "bytes": 2522674
+    },
+    {
+      "path": "/books/how-code-becomes-film/companion.zip",
+      "status": 200,
+      "type": "application/zip",
+      "bytes": 2623804
+    },
+    {
+      "path": "/books/how-code-becomes-film/figures/chapter_01.svg",
+      "status": 200,
+      "type": "image/svg+xml",
+      "bytes": 0
+    },
+    {
+      "path": "/books/how-code-becomes-film/figures/chapter_02.svg",
+      "status": 200,
+      "type": "image/svg+xml",
+      "bytes": 0
+    },
+    {
+      "path": "/books/how-code-becomes-film/figures/chapter_03.svg",
+      "status": 200,
+      "type": "image/svg+xml",
+      "bytes": 0
+    },
+    {
+      "path": "/books/how-code-becomes-film/figures/chapter_04.svg",
+      "status": 200,
+      "type": "image/svg+xml",
+      "bytes": 0
+    },
+    {
+      "path": "/books/how-code-becomes-film/figures/chapter_05.svg",
+      "status": 200,
+      "type": "image/svg+xml",
+      "bytes": 0
+    },
+    {
+      "path": "/books/how-code-becomes-film/figures/chapter_06.svg",
+      "status": 200,
+      "type": "image/svg+xml",
+      "bytes": 0
+    },
+    {
+      "path": "/books/how-code-becomes-film/figures/chapter_07.svg",
+      "status": 200,
+      "type": "image/svg+xml",
+      "bytes": 0
+    },
+    {
+      "path": "/books/how-code-becomes-film/figures/chapter_08.svg",
+      "status": 200,
+      "type": "image/svg+xml",
+      "bytes": 0
+    },
+    {
+      "path": "/books/how-code-becomes-film/figures/chapter_09.svg",
+      "status": 200,
+      "type": "image/svg+xml",
+      "bytes": 0
+    },
+    {
+      "path": "/books/how-code-becomes-film/figures/chapter_10.svg",
+      "status": 200,
+      "type": "image/svg+xml",
+      "bytes": 0
+    },
+    {
+      "path": "/books/how-code-becomes-film/figures/chapter_11.svg",
+      "status": 200,
+      "type": "image/svg+xml",
+      "bytes": 0
+    },
+    {
+      "path": "/books/how-code-becomes-film/figures/chapter_12.svg",
+      "status": 200,
+      "type": "image/svg+xml",
+      "bytes": 0
+    },
+    {
+      "path": "/books/how-code-becomes-film/figures/chapter_13.svg",
+      "status": 200,
+      "type": "image/svg+xml",
+      "bytes": 0
+    },
+    {
+      "path": "/books/how-code-becomes-film/figures/chapter_14.svg",
+      "status": 200,
+      "type": "image/svg+xml",
+      "bytes": 0
+    },
+    {
+      "path": "/books/how-code-becomes-film/figures/chapter_15.svg",
+      "status": 200,
+      "type": "image/svg+xml",
+      "bytes": 0
+    },
+    {
+      "path": "/books/how-code-becomes-film/figures/chapter_16.svg",
+      "status": 200,
+      "type": "image/svg+xml",
+      "bytes": 0
+    },
+    {
+      "path": "/books/how-code-becomes-film/figures/chapter_17.svg",
+      "status": 200,
+      "type": "image/svg+xml",
+      "bytes": 0
+    },
+    {
+      "path": "/books/how-code-becomes-film/figures/chapter_18.svg",
+      "status": 200,
+      "type": "image/svg+xml",
+      "bytes": 0
+    },
+    {
+      "path": "/books/how-code-becomes-film/figures/chapter_19.svg",
+      "status": 200,
+      "type": "image/svg+xml",
+      "bytes": 0
+    },
+    {
+      "path": "/books/how-code-becomes-film/figures/chapter_20.svg",
+      "status": 200,
+      "type": "image/svg+xml",
+      "bytes": 0
+    },
+    {
+      "path": "/books/how-code-becomes-film/figures/chapter_21.svg",
+      "status": 200,
+      "type": "image/svg+xml",
+      "bytes": 0
+    },
+    {
+      "path": "/books/how-code-becomes-film/figures/chapter_22.svg",
+      "status": 200,
+      "type": "image/svg+xml",
+      "bytes": 0
+    },
+    {
+      "path": "/books/how-code-becomes-film/figures/chapter_23.svg",
+      "status": 200,
+      "type": "image/svg+xml",
+      "bytes": 0
+    },
+    {
+      "path": "/books/how-code-becomes-film/figures/chapter_24.svg",
+      "status": 200,
+      "type": "image/svg+xml",
+      "bytes": 0
+    }
+  ]
+}

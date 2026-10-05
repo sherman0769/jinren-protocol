@@ -46,6 +46,8 @@ manifest=[]; master=['# '+metadata['title'],'',metadata['subtitle'],'']
 for chapter in plan['chapters']:
     n=chapter['number']; source=ROOT/f'MANUSCRIPT/chapters/chapter_{n:02d}_main.md'
     raw=converter.convert(source.read_text(encoding='utf-8')).replace('區域性','局部').replace('声音','聲音').replace('畫素','像素').replace('引數','參數')
+    # Preserve this book's reviewed spelling after automatic conversion.
+    raw=raw.replace('秒錶示','秒表示').replace('擴充套件成','擴展成').replace('変更','變更').replace('発音與聲音身份透過驗收','發音與聲音身分通過驗收')
     raw=raw.replace('第二字只是在局部時間上錯開二十分之一秒的十倍，也就是 0.2 秒','第二字只是在局部時間上錯開 0.2 秒')
     raw=raw.replace('本章依交接校準樣章修訂為正式章稿；配套均為教學重建。','本章配套為教學重建，不是原片程式碼摘錄。')
     raw=raw.replace('透明度零到一描述可見程度','不透明度從零到一描述可見程度')
