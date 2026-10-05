@@ -1,0 +1,7 @@
+{
+  "processId": 22176,
+  "action": "stop owned stalled uploader, read provider state, resume existing deterministic pathname workflow",
+  "command": "migrate-book-audio-to-blob.mjs --upload",
+  "stoppedAt": "2026-10-05T19:48:48.7590959+08:00",
+  "reason": "Five minutes without completion, provider lists 23 assets with chapter 21 absent"
+}

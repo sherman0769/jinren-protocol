@@ -1,0 +1,819 @@
+{
+  "parts": [
+    {
+      "id": 1,
+      "title": "一張畫如何走進時間"
+    },
+    {
+      "id": 2,
+      "title": "動得自然，也能組織多幕"
+    },
+    {
+      "id": 3,
+      "title": "很多小東西如何形成規律"
+    },
+    {
+      "id": 4,
+      "title": "資料、關係與立體空間"
+    },
+    {
+      "id": 5,
+      "title": "聲音、輸出與品質"
+    },
+    {
+      "id": 6,
+      "title": "把原理變成 AI 協作能力"
+    }
+  ],
+  "chapters": [
+    {
+      "id": "CH01",
+      "number": 1,
+      "part": 1,
+      "title": "影片為什麼不是一張會動的照片",
+      "question": "一支三秒影片，電腦到底需要準備什麼？",
+      "takeaway": "畫面中的小格與影片中的整張畫面是不同層級；播放幀率、尺寸和片長是三個不同旋鈕。",
+      "demo": "先翻三張位置略不同的圖；再以 30 張／秒算出三秒共 90 張。",
+      "pitfalls": "把像素數當成幀數；說 60 fps 一定兩倍快；把顯示器更新率與影片幀率等同。",
+      "depends_on": [],
+      "core_terms": [
+        "Pixel",
+        "Frame",
+        "FPS",
+        "Resolution"
+      ],
+      "source_ids": [
+        "S01"
+      ],
+      "exercise": "紙上列出第 0、1、29、30、89 幀的秒數。",
+      "answer": "分別是 0、1/30、29/30、1、89/30 秒；三秒片段的最後取樣不是第 90 幀。",
+      "figure_brief": "三張白點示意與一秒刻度；標清一格像素和一張畫面的差別。",
+      "status": "not_started",
+      "target_main_text_characters": [
+        2400,
+        3400
+      ],
+      "brief_path": "OUTLINE/CHAPTER_BRIEFS/CH01.md"
+    },
+    {
+      "id": "CH02",
+      "number": 2,
+      "part": 1,
+      "title": "電腦怎麼知道白點在哪裡",
+      "question": "說放在中間，為什麼電腦還需要一組數字？",
+      "takeaway": "座標需要原點、方向與單位；形狀的位置和尺寸要分開。",
+      "demo": "960×540 畫布中央是 (480,270)，把同一圓移至四角並標示座標。",
+      "pitfalls": "預設所有系統 y 軸向下；忘記圓的半徑而把邊緣裁掉；把 CSS 尺寸與輸出像素混用。",
+      "depends_on": [
+        "CH01"
+      ],
+      "core_terms": [
+        "Coordinate",
+        "Origin",
+        "Canvas",
+        "Raster"
+      ],
+      "source_ids": [
+        "S02"
+      ],
+      "exercise": "在 640×360 畫布放半徑 20 的圓，距左邊 20 像素、距上邊 20 像素。",
+      "answer": "圓心可設 (40,40)；所謂距邊須說清楚是圓心距離還是圓外緣距離。",
+      "figure_brief": "座標軸、四角、圓心與半徑；同圖示範移動原點。",
+      "status": "not_started",
+      "target_main_text_characters": [
+        2400,
+        3400
+      ],
+      "brief_path": "OUTLINE/CHAPTER_BRIEFS/CH02.md"
+    },
+    {
+      "id": "CH03",
+      "number": 3,
+      "part": 1,
+      "title": "如何把現在交給程式",
+      "question": "為什麼輸出第 120 幀，不必真的等四秒？",
+      "takeaway": "影片時間是計算輸入，不是電腦牆上的時鐘；規則可直接算出某一時點。",
+      "demo": "建立 t=frame/fps；打亂順序請程式畫第 60、0、30、60 幀。",
+      "pitfalls": "用 sleep 或真實時鐘控制離線畫面；每次重畫改變全域隨機狀態。",
+      "depends_on": [
+        "CH01",
+        "CH02"
+      ],
+      "core_terms": [
+        "Time",
+        "Function",
+        "Deterministic"
+      ],
+      "source_ids": [
+        "S01",
+        "S04"
+      ],
+      "exercise": "30 fps 的第 45 幀對應幾秒？重畫兩次應如何驗證？",
+      "answer": "1.5 秒；在固定資料與執行條件下比較狀態或畫面，不要求不同版本編碼器的 MP4 位元相同。",
+      "figure_brief": "一條影片時間線與另一條實際運算耗時線，避免混在一起。",
+      "status": "not_started",
+      "target_main_text_characters": [
+        2400,
+        3400
+      ],
+      "brief_path": "OUTLINE/CHAPTER_BRIEFS/CH03.md"
+    },
+    {
+      "id": "CH04",
+      "number": 4,
+      "part": 1,
+      "title": "圓點為什麼會動",
+      "question": "只有起點和終點，要怎樣算出中間每張圖的位置？",
+      "takeaway": "移動是位置參數隨時間改變；先求進度，再求中間值。",
+      "demo": "圓心 x 從 100 到 700，移動兩秒，另留一秒終點停留。",
+      "pitfalls": "把完成進度當速度；用總幀數作最後幀索引；沒有處理超出時間。",
+      "depends_on": [
+        "CH03"
+      ],
+      "core_terms": [
+        "Property",
+        "Parameter",
+        "Progress",
+        "Interpolation"
+      ],
+      "source_ids": [
+        "S01"
+      ],
+      "exercise": "經過 0.5 秒時 x 是多少？換成四秒移動有何變化？",
+      "answer": "兩秒動畫的進度是 0.25，x=250；四秒動畫此時 x=175，終點不變而速度下降。",
+      "figure_brief": "起點、四分之一處與終點，用一條直尺讓讀者先算再看公式。",
+      "status": "not_started",
+      "target_main_text_characters": [
+        2400,
+        3400
+      ],
+      "brief_path": "OUTLINE/CHAPTER_BRIEFS/CH04.md"
+    },
+    {
+      "id": "CH05",
+      "number": 5,
+      "part": 2,
+      "title": "為什麼等速看起來像機器",
+      "question": "同樣兩秒、同樣距離，如何讓起步和停下不同？",
+      "takeaway": "緩動改變時間進度的映射；插值負責把該進度換成位置，兩者不是同一件事。",
+      "demo": "同一條路徑對照等速與 u²(3−2u)，在 25% 時間比較位置。",
+      "pitfalls": "只比較中點而看不出差異；把所有緩動說成先慢後快；把彈簧當唯一自然動畫。",
+      "depends_on": [
+        "CH04"
+      ],
+      "core_terms": [
+        "Easing",
+        "Velocity",
+        "Acceleration"
+      ],
+      "source_ids": [
+        "S16"
+      ],
+      "exercise": "等速與本例緩動在 u=0.25 時分別走完多少比例？",
+      "answer": "0.25 與 0.15625；中點兩者都是 0.5，所以只截中點不足以驗證動態。",
+      "figure_brief": "上方路徑位置，下方時間—進度曲線；不混淆速度曲線與位置曲線。",
+      "status": "not_started",
+      "target_main_text_characters": [
+        2400,
+        3400
+      ],
+      "brief_path": "OUTLINE/CHAPTER_BRIEFS/CH05.md"
+    },
+    {
+      "id": "CH06",
+      "number": 6,
+      "part": 2,
+      "title": "好幾件事如何同時發生",
+      "question": "文字先出現、圓再動、下一幕切換，怎麼不互相打架？",
+      "takeaway": "場景是編排單位，時間軸決定何時啟用；物件可成組，同時或錯開，不限面向物件語言。",
+      "demo": "兩幕各三秒；第二幕在全片第三秒開始，本幕時間重設為零。",
+      "pitfalls": "把物件類型當成唯一架構；邊界同時啟用兩幕；全域與局部時間混用。",
+      "depends_on": [
+        "CH03",
+        "CH04"
+      ],
+      "core_terms": [
+        "Object",
+        "Scene",
+        "Timeline",
+        "Local Time",
+        "Transform"
+      ],
+      "source_ids": [
+        "S05",
+        "S14"
+      ],
+      "exercise": "第一幕用 [0,3)，第二幕用 [3,6)，在三秒時屬於哪幕？",
+      "answer": "只屬於第二幕，局部時間是零；若要交疊轉場，要明確定義交疊長度與合成順序。",
+      "figure_brief": "全片時間與兩條局部時間，另畫父子物件的變換示意。",
+      "status": "not_started",
+      "target_main_text_characters": [
+        2400,
+        3400
+      ],
+      "brief_path": "OUTLINE/CHAPTER_BRIEFS/CH06.md"
+    },
+    {
+      "id": "CH07",
+      "number": 7,
+      "part": 2,
+      "title": "線條怎麼自己長出來",
+      "question": "一條彎曲的線，如何看起來像正在被畫出來？",
+      "takeaway": "先有完整路徑的幾何，再控制可見範圍；路徑參數進度不保證等弧長速度。",
+      "demo": "三個點構成二次貝茲曲線，分別顯示 25%、50%、100% 的參數取樣。",
+      "pitfalls": "用貝茲參數當均勻路程；把揭露遮罩效果說成真實植物生長模擬。",
+      "depends_on": [
+        "CH04",
+        "CH05"
+      ],
+      "core_terms": [
+        "Path",
+        "Bezier Curve",
+        "Control Point",
+        "Stroke"
+      ],
+      "source_ids": [
+        "S03"
+      ],
+      "exercise": "同樣每次增加 0.1 的曲線參數，點在路徑上必然等距嗎？",
+      "answer": "不一定。要等速走路徑，可先量取曲線弧長再依距離反查參數。",
+      "figure_brief": "控制點、控制線和實際曲線分開樣式；各點標準確數字。",
+      "status": "not_started",
+      "target_main_text_characters": [
+        2400,
+        3400
+      ],
+      "brief_path": "OUTLINE/CHAPTER_BRIEFS/CH07.md"
+    },
+    {
+      "id": "CH08",
+      "number": 8,
+      "part": 2,
+      "title": "中文字為什麼比畫圓麻煩",
+      "question": "字串明明正確，為什麼畫面會缺字、跳字或不居中？",
+      "takeaway": "文字內容、字形選擇、排版尺寸與實際繪圖不同；逐字動畫也要先知道一個可見字如何切分。",
+      "demo": "中文「計算」混英數，量字框與基線，再做透明度逐字出現。",
+      "pitfalls": "把字元程式碼等同字形；拿估計字數算排版寬；略過 fallback；分享字型檔。",
+      "depends_on": [
+        "CH02",
+        "CH06",
+        "CH07"
+      ],
+      "core_terms": [
+        "Typography",
+        "Glyph",
+        "Font",
+        "Bounding Box",
+        "Baseline"
+      ],
+      "source_ids": [
+        "S11",
+        "S15"
+      ],
+      "exercise": "一個看起來是一字的表情符號，程式一定只佔一個文字程式碼嗎？",
+      "answer": "不一定；需理解使用者感知字元的分段。字形、分段與排列又是不同層次。",
+      "figure_brief": "字框與基線、同文不同字型、缺字反例；不得用亂碼當已完成圖。",
+      "status": "not_started",
+      "target_main_text_characters": [
+        2400,
+        3400
+      ],
+      "brief_path": "OUTLINE/CHAPTER_BRIEFS/CH08.md"
+    },
+    {
+      "id": "CH09",
+      "number": 9,
+      "part": 3,
+      "title": "一千顆小點怎麼一起管理",
+      "question": "難道每顆粒子都要單獨寫一段程式？",
+      "takeaway": "同一規則套在一組資料上；粒子可只是資料記錄，不需每點都是複雜物件。",
+      "demo": "固定種子建立兩百個起點，對每點套同一時間函數，重畫同幀。",
+      "pitfalls": "每幀重抽全部亂數；漏掉時間單位；認為粒子一定有真實物理。",
+      "depends_on": [
+        "CH03",
+        "CH04"
+      ],
+      "core_terms": [
+        "Array",
+        "Particle",
+        "Particle System",
+        "Seed"
+      ],
+      "source_ids": [
+        "S04"
+      ],
+      "exercise": "兩次用同一種子，但取亂數的呼叫順序不同，結果必然相同嗎？",
+      "answer": "不保證。種子、演算法、呼叫順序及相關環境都要受控；不把跨裝置逐位相同當預設保證。",
+      "figure_brief": "兩百條資料的一小段表格與畫面點群，強調一組規則而非兩百段程式碼。",
+      "status": "not_started",
+      "target_main_text_characters": [
+        2400,
+        3400
+      ],
+      "brief_path": "OUTLINE/CHAPTER_BRIEFS/CH09.md"
+    },
+    {
+      "id": "CH10",
+      "number": 10,
+      "part": 3,
+      "title": "散點怎麼排成一個字",
+      "question": "每個小點怎麼知道它最後該站哪裡？",
+      "takeaway": "先做字形遮罩，抽出目標位置，再安排點對應到哪個位置，最後決定移動規則。",
+      "demo": "用自繪「井」形幾何遮罩取樣，再由散點聚合；標示不是通用字型轉換器。",
+      "pitfalls": "點數與目標數不相等卻假裝一對一；任意配對導致大量交叉；模糊掩蓋缺字。",
+      "depends_on": [
+        "CH08",
+        "CH09"
+      ],
+      "core_terms": [
+        "Mask",
+        "Sampling",
+        "Target",
+        "Mapping"
+      ],
+      "source_ids": [
+        "S03",
+        "S11"
+      ],
+      "exercise": "當 500 個粒子只有 300 個目標，要先決定什麼？",
+      "answer": "決定補取樣、讓多點共享或減少粒子，寫清楚規則；不能越界索引或悄悄丟掉資料。",
+      "figure_brief": "四步：字形遮罩、目標點、配對線、聚合結果；每步有輸入輸出。",
+      "status": "not_started",
+      "target_main_text_characters": [
+        2400,
+        3400
+      ],
+      "brief_path": "OUTLINE/CHAPTER_BRIEFS/CH10.md"
+    },
+    {
+      "id": "CH11",
+      "number": 11,
+      "part": 3,
+      "title": "混亂為什麼有時很自然",
+      "question": "為什麼有些亂數像抖動，有些卻像煙或風？",
+      "takeaway": "獨立亂數與連續變化場不同；鄰近位置與時刻的相關性決定視覺連續性。",
+      "demo": "先用平滑正弦場，再比較逐幀抽樣亂數；另在進階節介紹平滑雜訊。",
+      "pitfalls": "宣稱所有 noise 都平滑；把正弦波標成 Perlin Noise；認為更亂就是更自然。",
+      "depends_on": [
+        "CH05",
+        "CH09"
+      ],
+      "core_terms": [
+        "Noise",
+        "Noise Field",
+        "Frequency",
+        "Amplitude"
+      ],
+      "source_ids": [
+        "S19"
+      ],
+      "exercise": "把時間變化頻率加倍，空間圖案必然更密嗎？",
+      "answer": "不必然；時間頻率控制變化快慢，空間頻率控制圖案密度，需分開參數。",
+      "figure_brief": "同一組點的逐幀跳動與平滑位移；展示相鄰時點而不只一張截圖。",
+      "status": "not_started",
+      "target_main_text_characters": [
+        2400,
+        3400
+      ],
+      "brief_path": "OUTLINE/CHAPTER_BRIEFS/CH11.md"
+    },
+    {
+      "id": "CH12",
+      "number": 12,
+      "part": 3,
+      "title": "動畫怎麼有重量與回彈",
+      "question": "拉開的東西鬆手，為什麼會越過終點再回來？",
+      "takeaway": "彈簧可用力、速度與阻尼建模；直接時間函數與逐步模擬都能用，但可重現策略不同。",
+      "demo": "一維彈簧，用固定步長更新，與解析位置函數比較；保存可重播起點。",
+      "pitfalls": "x+=v 漏乘 dt；拿渲染耗時當物理步長；跳幀時延用錯誤狀態。",
+      "depends_on": [
+        "CH05",
+        "CH09",
+        "CH11"
+      ],
+      "core_terms": [
+        "Spring",
+        "Damping",
+        "Time Step",
+        "Simulation"
+      ],
+      "source_ids": [
+        "S18"
+      ],
+      "exercise": "若速度以像素／秒錶示，跨 0.1 秒的位置增量怎麼算？",
+      "answer": "增量是速度乘 0.1 秒；若速度本身也在變，還需按選定積分方法逐步更新。",
+      "figure_brief": "同一時長的無阻尼、適度阻尼與過大阻尼；標示是教學模型。",
+      "status": "not_started",
+      "target_main_text_characters": [
+        2400,
+        3400
+      ],
+      "brief_path": "OUTLINE/CHAPTER_BRIEFS/CH12.md"
+    },
+    {
+      "id": "CH13",
+      "number": 13,
+      "part": 4,
+      "title": "數字怎麼變成可以看懂的圖",
+      "question": "十筆資料如何變成十根高度合理的柱子？",
+      "takeaway": "資料到幾何是明確映射；比例尺、單位、來源、缺值及非觀測中間值要交代。",
+      "demo": "以清楚標示的教學假資料畫柱形圖，並只動長條的進場，不杜撰真實測量。",
+      "pitfalls": "把插值出的中間數值說成已觀測；截斷軸造成誤導；所有相同值時除以零。",
+      "depends_on": [
+        "CH04",
+        "CH06"
+      ],
+      "core_terms": [
+        "Data",
+        "Scale",
+        "Normalization",
+        "Data Visualization"
+      ],
+      "source_ids": [
+        "S02"
+      ],
+      "exercise": "資料最小值與最大值相同時，如何做正規化？",
+      "answer": "先定義政策，例如置中或零基準固定尺度；不能直接除以最大減最小的零值。",
+      "figure_brief": "資料表→尺度→幾何→標籤的連續關係，假資料標籤始終可見。",
+      "status": "not_started",
+      "target_main_text_characters": [
+        2400,
+        3400
+      ],
+      "brief_path": "OUTLINE/CHAPTER_BRIEFS/CH13.md"
+    },
+    {
+      "id": "CH14",
+      "number": 14,
+      "part": 4,
+      "title": "關係怎麼變成一張網",
+      "question": "畫面上的線，到底代表真的關係，還是裝飾？",
+      "takeaway": "節點和連線是資料；排版只決定位置，位置接近不自動等於真實關係強。",
+      "demo": "五個節點先用固定座標，再示範力導向佈局的差異；清楚交代邊代表什麼。",
+      "pitfalls": "把線多說成知識多；把力導向算法當唯一排版；在每幀無限模擬。",
+      "depends_on": [
+        "CH06",
+        "CH09",
+        "CH13"
+      ],
+      "core_terms": [
+        "Graph",
+        "Node",
+        "Edge",
+        "Layout"
+      ],
+      "source_ids": [
+        "S12"
+      ],
+      "exercise": "網路圖兩個節點距離近，可以直接說它們高度相關嗎？",
+      "answer": "除非資料與佈局定義支持這種讀法，否則不能。先說明線、距離與大小各代表什麼。",
+      "figure_brief": "同一節點連線資料配兩種佈局，證明幾何佈局不是事實本身。",
+      "status": "not_started",
+      "target_main_text_characters": [
+        2400,
+        3400
+      ],
+      "brief_path": "OUTLINE/CHAPTER_BRIEFS/CH14.md"
+    },
+    {
+      "id": "CH15",
+      "number": 15,
+      "part": 4,
+      "title": "平面怎麼看起來有深度",
+      "question": "明明螢幕是平的，遠的東西為什麼顯得小？",
+      "takeaway": "三維資料經鏡頭投影成二維畫面；深度、遮擋和視角要有規則。",
+      "demo": "旋轉一個線框立方體，以正交與透視對照；點靠近鏡頭前先裁切。",
+      "pitfalls": "只加 z 就宣稱完整三維；把鏡頭後的點直接除以深度；漏掉投影約定。",
+      "depends_on": [
+        "CH02",
+        "CH06",
+        "CH14"
+      ],
+      "core_terms": [
+        "2.5D",
+        "3D",
+        "Camera",
+        "Projection",
+        "Matrix"
+      ],
+      "source_ids": [
+        "S07"
+      ],
+      "exercise": "為什麼深度接近零時畫面可能突然爆開？",
+      "answer": "簡化透視除以深度時分母過小；必須定義近裁切面和鏡頭方向，不是靠加模糊掩蓋。",
+      "figure_brief": "相機、近遠平面、同尺寸物體的投影；用平面圖先解釋視錐。",
+      "status": "not_started",
+      "target_main_text_characters": [
+        2400,
+        3400
+      ],
+      "brief_path": "OUTLINE/CHAPTER_BRIEFS/CH15.md"
+    },
+    {
+      "id": "CH16",
+      "number": 16,
+      "part": 4,
+      "title": "光影與著色程式在算什麼",
+      "question": "為什麼一個灰球加上亮暗就像有立體感？",
+      "takeaway": "幾何、光、材質、著色與合成不同；GPU 擅長平行工作，但不讓算法自己正確。",
+      "demo": "把位置轉顏色的簡單片段著色與頂點移動分開；另示範把亮區模糊再合回的光暈。",
+      "pitfalls": "把所有 Shader 都說成算像素；用光暈補救爛構圖；假稱 CPU 示例真的用了 GPU。",
+      "depends_on": [
+        "CH07",
+        "CH15"
+      ],
+      "core_terms": [
+        "GPU",
+        "Shader",
+        "Material",
+        "Compositing"
+      ],
+      "source_ids": [
+        "S06",
+        "S07"
+      ],
+      "exercise": "頂點著色器和片段著色器的工作相同嗎？",
+      "answer": "不同，前者處理頂點相關輸出，後者處理片段等；片段不是嚴格一個最終像素。",
+      "figure_brief": "幾何→投影／光柵化→著色→合成的分工，進階名詞置於已說明的對應位置。",
+      "status": "not_started",
+      "target_main_text_characters": [
+        2400,
+        3400
+      ],
+      "brief_path": "OUTLINE/CHAPTER_BRIEFS/CH16.md"
+    },
+    {
+      "id": "CH17",
+      "number": 17,
+      "part": 5,
+      "title": "聲音有另一條時鐘",
+      "question": "畫面每秒三十張，聲音也只能每秒變三十次嗎？",
+      "takeaway": "聲音以取樣率記錄，比畫面更密；同步的共同基準是時間，不是相同資料格數。",
+      "demo": "生成一條兩秒的 48,000 取樣／秒測試音，與 30 fps 的畫面對時。",
+      "pitfalls": "把 fps 當音訊取樣率；一聲道與雙聲道計數混用；振幅當響度的完整描述。",
+      "depends_on": [
+        "CH01",
+        "CH03"
+      ],
+      "core_terms": [
+        "Sample Rate",
+        "Sample",
+        "PCM",
+        "Timestamp"
+      ],
+      "source_ids": [
+        "S10"
+      ],
+      "exercise": "48 kHz 單聲道的兩秒音訊有多少取樣？第 45 幀對應哪個音訊取樣時點？",
+      "answer": "96,000 個；30 fps 第 45 幀為 1.5 秒，對應從零起算的第 72,000 個取樣時點。",
+      "figure_brief": "兩種不同密度的刻度在同一秒軸對齊，標單位及每聲道限制。",
+      "status": "not_started",
+      "target_main_text_characters": [
+        2400,
+        3400
+      ],
+      "brief_path": "OUTLINE/CHAPTER_BRIEFS/CH17.md"
+    },
+    {
+      "id": "CH18",
+      "number": 18,
+      "part": 5,
+      "title": "說話和畫面怎麼對齊",
+      "question": "換一個聲音，為什麼原本的字幕突然跟不上？",
+      "takeaway": "旁白內容、實際長度、事件時間窗和混音相互影響；有介面不等於配音完成。",
+      "demo": "把三句音檔放進明確時間窗；示範長度超出時拒絕或重排，不默默切掉尾字。",
+      "pitfalls": "用預估字數當最終時間；無限加速；把工程聲音標正式；拿峰值當整合響度。",
+      "depends_on": [
+        "CH06",
+        "CH17"
+      ],
+      "core_terms": [
+        "Cue",
+        "Subtitle",
+        "TTS",
+        "Voice Clone",
+        "Ducking"
+      ],
+      "source_ids": [
+        "S08"
+      ],
+      "exercise": "六秒新旁白放進四秒窗口，需要 1.5 倍語速；若上限 1.15 倍，怎麼辦？",
+      "answer": "回報超限，縮稿、另錄或調整時間窗與畫面；不得自動截斷或宣稱免重做。",
+      "figure_brief": "文字→實際音訊→時間碼→畫面事件→混音，每個箭頭指出需要檢查的資料。",
+      "status": "not_started",
+      "target_main_text_characters": [
+        2400,
+        3400
+      ],
+      "brief_path": "OUTLINE/CHAPTER_BRIEFS/CH18.md"
+    },
+    {
+      "id": "CH19",
+      "number": 19,
+      "part": 5,
+      "title": "為什麼能預覽卻不一定有影片檔",
+      "question": "畫面已經動了，為什麼還得算圖、壓縮與封裝？",
+      "takeaway": "渲染、編碼與封裝是不同階段；可把影格經記憶體管線交給編碼器，不一定存成萬張 PNG。",
+      "demo": "用附帶八秒示範串出 H.264／MP4，再檢查音軌、像素格式、時長與幀數。",
+      "pitfalls": "把 MP4 當 codec；只改副檔名；輸入輸出 fps 不一致導致意外變速；快取來源變了仍復用。",
+      "depends_on": [
+        "CH06",
+        "CH17",
+        "CH18"
+      ],
+      "core_terms": [
+        "Render",
+        "Renderer",
+        "Encoding",
+        "Codec",
+        "Container",
+        "Muxing"
+      ],
+      "source_ids": [
+        "S08"
+      ],
+      "exercise": "把 .mov 改名 .mp4，內容就變成 H.264 了嗎？",
+      "answer": "沒有。副檔名不是編碼操作，也未重新封裝；要檢查內部流及必要轉換。",
+      "figure_brief": "資料→影格→編碼封包→容器；音訊另一支流最後合入。",
+      "status": "not_started",
+      "target_main_text_characters": [
+        2400,
+        3400
+      ],
+      "brief_path": "OUTLINE/CHAPTER_BRIEFS/CH19.md"
+    },
+    {
+      "id": "CH20",
+      "number": 20,
+      "part": 5,
+      "title": "怎麼知道影片真的做對了",
+      "question": "有一個 MP4 檔，就能說專案完成了嗎？",
+      "takeaway": "數值測試、可重現測試、中繼資料、完整解碼、視覺檢查與聽審證明的是不同事情。",
+      "demo": "檢查長度、frame count、首中末畫面；故意輸入錯誤時序看測試能否擋下。",
+      "pitfalls": "把單元測試數量當美術品質；只看片頭；把過去的測試當本輪驗收；快取無版本。",
+      "depends_on": [
+        "CH03",
+        "CH12",
+        "CH19"
+      ],
+      "core_terms": [
+        "QA",
+        "Unit Test",
+        "Cache",
+        "Checksum"
+      ],
+      "source_ids": [
+        "S08"
+      ],
+      "exercise": "完整解碼成功可不可以證明中文發音都正確？",
+      "answer": "不行；它只證明選定流可被解碼等結構條件，語言正確與聽感需要相應的審查。",
+      "figure_brief": "檢核金字塔分層：資料、可算圖、可編碼、可解碼、可看懂、可聽懂。",
+      "status": "not_started",
+      "target_main_text_characters": [
+        2400,
+        3400
+      ],
+      "brief_path": "OUTLINE/CHAPTER_BRIEFS/CH20.md"
+    },
+    {
+      "id": "CH21",
+      "number": 21,
+      "part": 6,
+      "title": "怎麼把一句願望拆成能驗收的要求",
+      "question": "我說像被無形力量吸引，AI 真正需要補哪些決定？",
+      "takeaway": "意圖先拆成輸入、規則、時間、限制與觀察點；模型幫寫和改，使用者仍決定目標與證據。",
+      "demo": "把三千粒子成字拆成遮罩、取樣、配對、運動、停留、輸出與測試契約。",
+      "pitfalls": "只堆電影感、震撼等形容詞；盲目接受模型的完成聲明；偷用非授權資產。",
+      "depends_on": [
+        "CH10",
+        "CH12",
+        "CH20"
+      ],
+      "core_terms": [
+        "Coding Agent",
+        "Prompt",
+        "Constraint",
+        "Acceptance Criteria"
+      ],
+      "source_ids": [
+        "S13"
+      ],
+      "exercise": "如何把自然一點變成至少兩個可檢查條件？",
+      "answer": "指定起終速度、總時間、允許回彈幅度或最後字形可讀停留時間；審美仍需畫面比較。",
+      "figure_brief": "自然語句拆成一張規格卡，每項連到測試或人工判斷。",
+      "status": "not_started",
+      "target_main_text_characters": [
+        2400,
+        3400
+      ],
+      "brief_path": "OUTLINE/CHAPTER_BRIEFS/CH21.md"
+    },
+    {
+      "id": "CH22",
+      "number": 22,
+      "part": 6,
+      "title": "選工具時如何不被工具綁住",
+      "question": "換框架之後，我之前學到的東西還剩下甚麼？",
+      "takeaway": "問題與機制不等於函式庫名稱；同一時間函數可被不同渲染方式承載。",
+      "demo": "以同一小圓規格對照 Python、SVG、Remotion、Motion Canvas、Manim 的概念位置。",
+      "pitfalls": "要求初學者先裝五套框架；拿歷史方案當實際實現；比較未經查證版本功能。",
+      "depends_on": [
+        "CH07",
+        "CH16",
+        "CH19",
+        "CH21"
+      ],
+      "core_terms": [
+        "Framework",
+        "Library",
+        "API",
+        "Dependency"
+      ],
+      "source_ids": [
+        "S01",
+        "S05",
+        "S14"
+      ],
+      "exercise": "若改用另一工具，哪三樣應先不變？",
+      "answer": "教學目的、時間／幾何規格與驗收條件；語法、部署、渲染實現再調整。",
+      "figure_brief": "相同原理橫向映射，不畫產品排名；API 與安裝步驟放可更新附錄。",
+      "status": "not_started",
+      "target_main_text_characters": [
+        2400,
+        3400
+      ],
+      "brief_path": "OUTLINE/CHAPTER_BRIEFS/CH22.md"
+    },
+    {
+      "id": "CH23",
+      "number": 23,
+      "part": 6,
+      "title": "怎麼組出自己的影片引擎",
+      "question": "每次做新片都要重寫同一套時間軸嗎？",
+      "takeaway": "內容資料、運動規則、繪圖與輸出分開；資料規範與有效快取讓更換內容可控。",
+      "demo": "以小型 Scene JSON 定義兩幕，驗證區間連續、欄位型別、總長與資源存在。",
+      "pitfalls": "把 JSON 當智能導演；默許缺欄位；資料換了不清快取；掛個 Agent 名稱就宣稱全自動。",
+      "depends_on": [
+        "CH06",
+        "CH19",
+        "CH20",
+        "CH22"
+      ],
+      "core_terms": [
+        "Engine",
+        "Schema",
+        "Pipeline",
+        "Asset",
+        "Adapter"
+      ],
+      "source_ids": [
+        "S01",
+        "S08"
+      ],
+      "exercise": "改了文字但影片沒變，優先查哪裡？",
+      "answer": "確認渲染讀到新資料、快取鍵包含文稿／樣式／字型等變更，再查看是否播放舊文件。",
+      "figure_brief": "腳本資料→場景狀態→圖形→影格→影音輸出；每層一個可測介面。",
+      "status": "not_started",
+      "target_main_text_characters": [
+        2400,
+        3400
+      ],
+      "brief_path": "OUTLINE/CHAPTER_BRIEFS/CH23.md"
+    },
+    {
+      "id": "CH24",
+      "number": 24,
+      "part": 6,
+      "title": "完成一支你能解釋的影片",
+      "question": "不是複製範例，怎樣證明自己已經理解？",
+      "takeaway": "完成小作品與講清關鍵取捨，比巨型片長更適合首次遷移驗證；之後再擴展規模。",
+      "demo": "做 60～90 秒、4～6 幕說明片：字、粒子、路徑、數據或關係，配時間碼與可替換聲音。",
+      "pitfalls": "為時長硬塞重復效果；一口氣長片不驗證；學會一個例子就宣稱任意文章全自動。",
+      "depends_on": [
+        "CH10",
+        "CH13",
+        "CH14",
+        "CH15",
+        "CH16",
+        "CH18",
+        "CH20",
+        "CH21",
+        "CH23"
+      ],
+      "core_terms": [],
+      "source_ids": [
+        "S01",
+        "S08"
+      ],
+      "exercise": "若從九十秒擴充到七百五十秒，哪些規則不變、哪些成本變？",
+      "answer": "取樣、座標與同步原則不變；幀數、素材量、渲染與審查成本增加，需分段輸出與明確快取。",
+      "figure_brief": "從四幕小作品到長片的擴展圖；附逐幕解釋與驗收證據，而非只放漂亮結果。",
+      "status": "not_started",
+      "target_main_text_characters": [
+        2400,
+        3400
+      ],
+      "brief_path": "OUTLINE/CHAPTER_BRIEFS/CH24.md"
+    }
+  ]
+}

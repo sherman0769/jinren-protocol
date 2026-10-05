@@ -1,0 +1,14 @@
+{
+  "kind": "teaching_demo_not_case_film",
+  "frames": 240,
+  "fps": 30,
+  "duration_seconds": 8,
+  "width": 1280,
+  "height": 720,
+  "audio": "original synthesized cue only; no TTS",
+  "uses_gpu": false,
+  "font_bundled": false,
+  "particle_count": 330,
+  "output": "principles_demo.mp4",
+  "bytes": 536838
+}

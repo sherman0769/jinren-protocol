@@ -1,0 +1,59 @@
+{
+  "status": "passed",
+  "baseUrl": "http://localhost:3036",
+  "slug": "how-code-becomes-film",
+  "emptySlug": "exponential-ai-life",
+  "layouts": [
+    {
+      "name": "desktop",
+      "width": 1440,
+      "height": 900,
+      "controls": 13,
+      "screenshotPath": "D:\\MyGitHub\\漫畫自創作\\tmp\\podcast-ux-desktop.png"
+    },
+    {
+      "name": "desktop-compact",
+      "width": 1366,
+      "height": 768,
+      "controls": 13,
+      "screenshotPath": "D:\\MyGitHub\\漫畫自創作\\tmp\\podcast-ux-desktop-compact.png"
+    },
+    {
+      "name": "tablet",
+      "width": 768,
+      "height": 1024,
+      "controls": 13,
+      "screenshotPath": "D:\\MyGitHub\\漫畫自創作\\tmp\\podcast-ux-tablet.png"
+    },
+    {
+      "name": "mobile",
+      "width": 390,
+      "height": 844,
+      "controls": 13,
+      "screenshotPath": "D:\\MyGitHub\\漫畫自創作\\tmp\\podcast-ux-mobile.png"
+    },
+    {
+      "name": "mobile-compact",
+      "width": 360,
+      "height": 640,
+      "controls": 12,
+      "screenshotPath": "D:\\MyGitHub\\漫畫自創作\\tmp\\podcast-ux-mobile-compact.png"
+    },
+    {
+      "name": "mobile-landscape",
+      "width": 844,
+      "height": 390,
+      "controls": 12,
+      "screenshotPath": "D:\\MyGitHub\\漫畫自創作\\tmp\\podcast-ux-mobile-landscape.png"
+    }
+  ],
+  "interaction": {
+    "resumeSeconds": 90,
+    "rate": 2.5,
+    "autoAdvanceRatePreserved": true,
+    "episodeIndex": 1,
+    "nextEpisodeTitle": "電腦怎麼知道白點在哪裡",
+    "ebookRoute": "/books/how-code-becomes-film/read",
+    "emptyState": true
+  }
+}

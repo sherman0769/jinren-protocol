@@ -1,0 +1,1590 @@
+{
+  "version": "1.0",
+  "note": "原創教學釋義；來源欄是該概念群的核對入口，不代表逐字翻譯。辨認級詞不必全在初讀時教完。",
+  "terms": [
+    {
+      "id": "T001",
+      "english": "Pixel",
+      "chinese": "像素",
+      "plain_language": "一張數位畫面中，用來記錄顏色的小格位置。",
+      "example_or_analogy": "像拼貼畫中的小色塊；先用十格乘十格畫一個圓。",
+      "analogy_limit": "不是影片的一張畫面，也不是螢幕實體結構的完整描述。",
+      "first_chapter": "CH01",
+      "level": "core",
+      "source_ids": [
+        "S01"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "T002",
+      "english": "Frame",
+      "chinese": "影格；單張畫面",
+      "plain_language": "影片在一個指定時刻要顯示的整張圖。",
+      "example_or_analogy": "翻頁小冊子的一頁；一頁裡仍有很多像素。",
+      "analogy_limit": "不是一個像素；壓縮影片內部也未必逐張存完整圖片。",
+      "first_chapter": "CH01",
+      "level": "core",
+      "source_ids": [
+        "S01"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "T003",
+      "english": "FPS",
+      "chinese": "每秒影格數；幀率",
+      "plain_language": "說明影片時間每一秒包含多少張畫面。",
+      "example_or_analogy": "每秒翻三十頁，三秒就需要九十頁。",
+      "analogy_limit": "不等於每秒能渲染幾張，也不等於螢幕更新率。",
+      "first_chapter": "CH01",
+      "level": "core",
+      "source_ids": [
+        "S01"
+      ],
+      "aliases": [
+        "Frames Per Second",
+        "frame rate",
+        "幀率"
+      ]
+    },
+    {
+      "id": "T004",
+      "english": "Resolution",
+      "chinese": "解析度",
+      "plain_language": "本書主要指輸出畫面的寬、高各有多少像素。",
+      "example_or_analogy": "960×540 是橫向九百六十格、直向五百四十格。",
+      "analogy_limit": "較大不保證設計較好；也不要把畫面尺寸與像素密度混為一談。",
+      "first_chapter": "CH01",
+      "level": "core",
+      "source_ids": [
+        "S01"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "T005",
+      "english": "Coordinate",
+      "chinese": "座標",
+      "plain_language": "用數值說明位置，前提是先約定從哪裡量、往哪裡算。",
+      "example_or_analogy": "像先說教室左上角為起點，再數橫向與直向格數。",
+      "analogy_limit": "不能只給兩個數字而不說單位或方向。",
+      "first_chapter": "CH02",
+      "level": "core",
+      "source_ids": [
+        "S02"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "T006",
+      "english": "Origin",
+      "chinese": "原點",
+      "plain_language": "座標量測的零點。",
+      "example_or_analogy": "拿尺之前，先決定尺的零刻度放在哪裡。",
+      "analogy_limit": "左上角只是一些二維畫布的預設，不是所有系統的唯一原點。",
+      "first_chapter": "CH02",
+      "level": "core",
+      "source_ids": [
+        "S02"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "T007",
+      "english": "Canvas",
+      "chinese": "畫布",
+      "plain_language": "承載繪圖的區域；在網頁中也指特定繪圖元素。",
+      "example_or_analogy": "一張先決定寬高的紙，再往上畫圖。",
+      "analogy_limit": "泛指畫布與網頁 Canvas API 不是完全相同層次。",
+      "first_chapter": "CH02",
+      "level": "core",
+      "source_ids": [
+        "S02"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "T008",
+      "english": "Raster",
+      "chinese": "點陣影像",
+      "plain_language": "以規則排列的像素記錄畫面。",
+      "example_or_analogy": "把圖畫分成一格一格，記下每格顏色。",
+      "analogy_limit": "放大後插值不能憑空取回原先沒記錄的細節。",
+      "first_chapter": "CH02",
+      "level": "core",
+      "source_ids": [
+        "S02"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "T009",
+      "english": "Time",
+      "chinese": "時間",
+      "plain_language": "本書主要指影片內經過幾秒，而不是目前時鐘時間。",
+      "example_or_analogy": "排演時說第三秒開始走，不必真等三秒才計算那個位置。",
+      "analogy_limit": "影片時間、聲音取樣時間與渲染耗時要分清楚。",
+      "first_chapter": "CH03",
+      "level": "core",
+      "source_ids": [
+        "S01",
+        "S04"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "T010",
+      "english": "Function",
+      "chinese": "函數；對應規則",
+      "plain_language": "給定輸入，按明確規則得到輸出。",
+      "example_or_analogy": "輸入幾秒，算出圓現在離左邊多遠。",
+      "analogy_limit": "程式函式可能讀寫外部狀態，不一定天然是純粹的數學函數。",
+      "first_chapter": "CH03",
+      "level": "core",
+      "source_ids": [
+        "S01",
+        "S04"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "T011",
+      "english": "Deterministic",
+      "chinese": "可決定；同條件可重現",
+      "plain_language": "在相同輸入及已約定條件下，結果能重做出來。",
+      "example_or_analogy": "同一份配方、材料與步驟順序，重算同一張圖。",
+      "analogy_limit": "不是只設種子就保證跨版本、跨 GPU 或不同字型逐位元相同。",
+      "first_chapter": "CH03",
+      "level": "core",
+      "source_ids": [
+        "S01",
+        "S04"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "T012",
+      "english": "Property",
+      "chinese": "屬性",
+      "plain_language": "某個物件具有、可以描述或改變的特徵。",
+      "example_or_analogy": "同一個圓可以有位置、大小和透明度。",
+      "analogy_limit": "屬性是特徵；參數是給規則使用的設定，兩者可重疊但概念不同。",
+      "first_chapter": "CH04",
+      "level": "core",
+      "source_ids": [
+        "S01"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "T013",
+      "english": "Parameter",
+      "chinese": "參數",
+      "plain_language": "交給一個規則或工具的設定值。",
+      "example_or_analogy": "把移動時間改成兩秒，其他程式照樣用。",
+      "analogy_limit": "不是所有參數都要隨時間變；不要混淆值、名稱與單位。",
+      "first_chapter": "CH04",
+      "level": "core",
+      "source_ids": [
+        "S01"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "T014",
+      "english": "Progress",
+      "chinese": "完成進度",
+      "plain_language": "從開始到結束，目前走完多少比例。",
+      "example_or_analogy": "兩秒任務經過半秒，時間進度是四分之一。",
+      "analogy_limit": "進度沒有速度單位；改過的進度也不一定代表直線路程比例。",
+      "first_chapter": "CH04",
+      "level": "core",
+      "source_ids": [
+        "S01"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "T015",
+      "english": "Interpolation",
+      "chinese": "插值",
+      "plain_language": "已知幾個值，按選定方法求它們之間的值。",
+      "example_or_analogy": "起點 100、終點 700，四分之一處是 250。",
+      "analogy_limit": "不是所有插值都是直線；單用這個詞不能說明變速方式。",
+      "first_chapter": "CH04",
+      "level": "core",
+      "source_ids": [
+        "S01"
+      ],
+      "aliases": [
+        "插值",
+        "內插",
+        "lerp"
+      ]
+    },
+    {
+      "id": "T016",
+      "english": "Easing",
+      "chinese": "緩動；進度變化規則",
+      "plain_language": "決定動畫一開始、中間、結尾各走得多快。",
+      "example_or_analogy": "車子可先慢起步再停穩，同樣距離也能有不同節奏。",
+      "analogy_limit": "不是所有緩動都先慢後快，也不保證符合真實物理。",
+      "first_chapter": "CH05",
+      "level": "core",
+      "source_ids": [
+        "S16"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "T017",
+      "english": "Velocity",
+      "chinese": "速度向量",
+      "plain_language": "位置隨時間改變的方向與快慢。",
+      "example_or_analogy": "往右每秒移動一百像素。",
+      "analogy_limit": "若用像素／秒，更新位置必須乘經過秒數；不能把速率與方向混掉。",
+      "first_chapter": "CH05",
+      "level": "core",
+      "source_ids": [
+        "S16"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "T018",
+      "english": "Acceleration",
+      "chinese": "加速度",
+      "plain_language": "速度隨時間改變的快慢。",
+      "example_or_analogy": "每過一秒，往右的速度又增加一些。",
+      "analogy_limit": "速度快不代表加速度大，等速時加速度可以是零。",
+      "first_chapter": "CH05",
+      "level": "core",
+      "source_ids": [
+        "S16"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "T019",
+      "english": "Object",
+      "chinese": "物件",
+      "plain_language": "把一個可描述、可操作的元素當成單位。",
+      "example_or_analogy": "把標題與它的位置、大小放在同一張資料卡。",
+      "analogy_limit": "不強迫一定用類別或面向物件程式，資料結構也能表達。",
+      "first_chapter": "CH06",
+      "level": "core",
+      "source_ids": [
+        "S05",
+        "S14"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "T020",
+      "english": "Scene",
+      "chinese": "場景",
+      "plain_language": "在作品中一起安排的一組畫面與事件。",
+      "example_or_analogy": "一幕講測量，另一幕講模型，各有自己的畫面任務。",
+      "analogy_limit": "框架的 Scene 類別與敘事的一幕不必一對一。",
+      "first_chapter": "CH06",
+      "level": "core",
+      "source_ids": [
+        "S05",
+        "S14"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "T021",
+      "english": "Timeline",
+      "chinese": "時間軸",
+      "plain_language": "安排事件何時開始、結束與交疊的結構。",
+      "example_or_analogy": "舞台提示表記著燈、文字與聲音各幾秒進場。",
+      "analogy_limit": "有時間軸不等於只有順序；多件事能同時發生。",
+      "first_chapter": "CH06",
+      "level": "core",
+      "source_ids": [
+        "S05",
+        "S14"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "T022",
+      "english": "Local Time",
+      "chinese": "局部時間",
+      "plain_language": "從目前場景或片段開始算的時間。",
+      "example_or_analogy": "全片第八秒開始第二幕，全片第九秒是本幕第一秒。",
+      "analogy_limit": "不能直接拿全片秒數套進局部動畫而不扣開始時間。",
+      "first_chapter": "CH06",
+      "level": "core",
+      "source_ids": [
+        "S05",
+        "S14"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "T023",
+      "english": "Transform",
+      "chinese": "幾何變換",
+      "plain_language": "改變位置、方向、尺寸或座標參考的運算。",
+      "example_or_analogy": "先把一張紙轉向，再移到旁邊。",
+      "analogy_limit": "先轉再移與先移再轉常得到不同結果。",
+      "first_chapter": "CH06",
+      "level": "core",
+      "source_ids": [
+        "S05",
+        "S14"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "T024",
+      "english": "Path",
+      "chinese": "繪圖路徑",
+      "plain_language": "用直線、曲線等規則描述的一條走法或輪廓。",
+      "example_or_analogy": "像筆尖依照指定路線走過紙面。",
+      "analogy_limit": "程式中的檔案路徑也叫 path，但不是本章的幾何路徑。",
+      "first_chapter": "CH07",
+      "level": "core",
+      "source_ids": [
+        "S03"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "T025",
+      "english": "Bezier Curve",
+      "chinese": "貝茲曲線",
+      "plain_language": "由端點與控制點按特定規則決定的平滑曲線。",
+      "example_or_analogy": "用幾個把手調整線條往哪個方向彎。",
+      "analogy_limit": "控制點通常不在曲線上；平均增加參數不保證等距。",
+      "first_chapter": "CH07",
+      "level": "core",
+      "source_ids": [
+        "S03"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "T026",
+      "english": "Control Point",
+      "chinese": "控制點",
+      "plain_language": "用來決定曲線形狀的參考位置。",
+      "example_or_analogy": "像把手，拉動它會改變曲線走向。",
+      "analogy_limit": "它不一定是曲線要經過的位置。",
+      "first_chapter": "CH07",
+      "level": "core",
+      "source_ids": [
+        "S03"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "T027",
+      "english": "Stroke",
+      "chinese": "描邊；筆畫",
+      "plain_language": "沿幾何路徑畫出的線，具有寬度與端點樣式。",
+      "example_or_analogy": "筆尖走同一條路，粗筆與細筆畫出不同邊界。",
+      "analogy_limit": "描邊寬度會越過路徑中心線；不是填滿形狀內部。",
+      "first_chapter": "CH07",
+      "level": "core",
+      "source_ids": [
+        "S03"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "T028",
+      "english": "Typography",
+      "chinese": "文字排印",
+      "plain_language": "安排文字的字形、大小、間距與版面層級。",
+      "example_or_analogy": "同一句話換行、放大或拉開距離，讀起來節奏就不同。",
+      "analogy_limit": "不是挑一個好看的字型就全部完成。",
+      "first_chapter": "CH08",
+      "level": "core",
+      "source_ids": [
+        "S11",
+        "S15"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "T029",
+      "english": "Glyph",
+      "chinese": "字形",
+      "plain_language": "文字被畫出時實際使用的形狀。",
+      "example_or_analogy": "同一個「人」在不同字型裡輪廓不同。",
+      "analogy_limit": "文字程式碼、讀者感知的一個字與字形未必一對一。",
+      "first_chapter": "CH08",
+      "level": "core",
+      "source_ids": [
+        "S11",
+        "S15"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "T030",
+      "english": "Font",
+      "chinese": "字型",
+      "plain_language": "提供文字形狀與相關排版資訊的資源。",
+      "example_or_analogy": "像有一整套字樣與尺寸規則的印字工具。",
+      "analogy_limit": "不能假設每套字型都有全部中文字；本包不分享字型檔。",
+      "first_chapter": "CH08",
+      "level": "core",
+      "source_ids": [
+        "S11",
+        "S15"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "T031",
+      "english": "Bounding Box",
+      "chinese": "外框；包圍盒",
+      "plain_language": "用矩形包住某個圖形或文字的範圍。",
+      "example_or_analogy": "先量字真正佔的框，再判斷有沒有超出畫面。",
+      "analogy_limit": "排版框、墨水實際範圍與字型度量可能不同，需說明量的是哪一種。",
+      "first_chapter": "CH08",
+      "level": "core",
+      "source_ids": [
+        "S11",
+        "S15"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "T032",
+      "english": "Baseline",
+      "chinese": "文字基線；基準線",
+      "plain_language": "排文字時用來對齊的一條參考線。",
+      "example_or_analogy": "英文單字像站在同一條線上，部分筆畫會伸到下方。",
+      "analogy_limit": "在測試情境 baseline 是比較基準，不一定指文字基線。",
+      "first_chapter": "CH08",
+      "level": "core",
+      "source_ids": [
+        "S11",
+        "S15"
+      ],
+      "aliases": [
+        "比較基準"
+      ]
+    },
+    {
+      "id": "T033",
+      "english": "Array",
+      "chinese": "陣列",
+      "plain_language": "依順序裝著一組資料的容器。",
+      "example_or_analogy": "班級點名表可按順序查每個人的座位。",
+      "analogy_limit": "索引常從零開始；順序和元素數量必須一致。",
+      "first_chapter": "CH09",
+      "level": "core",
+      "source_ids": [
+        "S04"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "T034",
+      "english": "Particle",
+      "chinese": "粒子",
+      "plain_language": "一個按規則顯示與變化的小元素。",
+      "example_or_analogy": "一顆可記錄位置、尺寸或速度的小光點。",
+      "analogy_limit": "不一定模擬真實微粒；也能畫成線段或小圖片。",
+      "first_chapter": "CH09",
+      "level": "core",
+      "source_ids": [
+        "S04"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "T035",
+      "english": "Particle System",
+      "chinese": "粒子系統",
+      "plain_language": "管理許多粒子的資料、行為與繪圖方式。",
+      "example_or_analogy": "一套規則安排整群小點，不逐顆手動畫。",
+      "analogy_limit": "有大量點不代表需要物理引擎，也不必然需要 GPU。",
+      "first_chapter": "CH09",
+      "level": "core",
+      "source_ids": [
+        "S04"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "T036",
+      "english": "Seed",
+      "chinese": "亂數種子",
+      "plain_language": "用來初始化某種偽亂數序列的設定值。",
+      "example_or_analogy": "選同一套發牌起點，並按同一流程取牌。",
+      "analogy_limit": "種子不是萬能重現保證；演算法與取用順序也會影響結果。",
+      "first_chapter": "CH09",
+      "level": "core",
+      "source_ids": [
+        "S04"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "T037",
+      "english": "Mask",
+      "chinese": "遮罩",
+      "plain_language": "用數值指示哪些地方可見、保留或參與處理。",
+      "example_or_analogy": "鏤空紙板讓顏料只通過指定區域。",
+      "analogy_limit": "不只能是黑白；灰階可表示部分透明或權重。",
+      "first_chapter": "CH10",
+      "level": "core",
+      "source_ids": [
+        "S03",
+        "S11"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "T038",
+      "english": "Sampling",
+      "chinese": "取樣",
+      "plain_language": "從連續或更密的資訊中，選出代表性的點或值。",
+      "example_or_analogy": "沿字的實心區每隔幾格挑一個位置。",
+      "analogy_limit": "取太稀會失去細節，取多也不等於更均勻。",
+      "first_chapter": "CH10",
+      "level": "core",
+      "source_ids": [
+        "S03",
+        "S11"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "T039",
+      "english": "Target",
+      "chinese": "目標",
+      "plain_language": "此處指運動想抵達的位置或狀態。",
+      "example_or_analogy": "每個座位貼好號碼，等小點過去。",
+      "analogy_limit": "不代表粒子已知道怎麼走，也不代表配對完成。",
+      "first_chapter": "CH10",
+      "level": "core",
+      "source_ids": [
+        "S03",
+        "S11"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "T040",
+      "english": "Mapping",
+      "chinese": "映射；對應",
+      "plain_language": "說清楚哪個輸入對應到哪個輸出。",
+      "example_or_analogy": "把一個數值對應柱高，或把粒子編號對應座位。",
+      "analogy_limit": "通用映射不一定一對一；需另外定義規則。",
+      "first_chapter": "CH10",
+      "level": "core",
+      "source_ids": [
+        "S03",
+        "S11"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "T041",
+      "english": "Noise",
+      "chinese": "雜訊",
+      "plain_language": "常指帶有不規則變化的訊號或程序值。",
+      "example_or_analogy": "可用來加入不是完全重復的擾動。",
+      "analogy_limit": "不是所有雜訊都平滑；本書要分獨立亂數與平滑程序雜訊。",
+      "first_chapter": "CH11",
+      "level": "core",
+      "source_ids": [
+        "S19"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "T042",
+      "english": "Noise Field",
+      "chinese": "雜訊場",
+      "plain_language": "在不同位置或時間查詢，可取得一組不規則值的規則。",
+      "example_or_analogy": "像地圖每個地點都有自己的風向與風速。",
+      "analogy_limit": "是否平滑、連續或可微要看使用的算法。",
+      "first_chapter": "CH11",
+      "level": "core",
+      "source_ids": [
+        "S19"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "T043",
+      "english": "Frequency",
+      "chinese": "頻率",
+      "plain_language": "每單位時間或空間中重複多少次。",
+      "example_or_analogy": "一秒上下兩次，和一米出現兩個波峰，是不同單位。",
+      "analogy_limit": "時間頻率與空間頻率不能混成同一個旋鈕。",
+      "first_chapter": "CH11",
+      "level": "core",
+      "source_ids": [
+        "S19"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "T044",
+      "english": "Amplitude",
+      "chinese": "振幅",
+      "plain_language": "相對基準的變化幅度。",
+      "example_or_analogy": "小點上下擺動最多離中心多遠。",
+      "analogy_limit": "在聲音裡，振幅不是感知響度的全部。",
+      "first_chapter": "CH11",
+      "level": "core",
+      "source_ids": [
+        "S19"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "T045",
+      "english": "Spring",
+      "chinese": "彈簧模型",
+      "plain_language": "用回復趨勢等規則模擬被拉開後的回彈。",
+      "example_or_analogy": "橡皮帶被拉開又鬆手，會往原位回去。",
+      "analogy_limit": "教學彈簧不等於完整物理世界；不同阻尼下未必來回振盪。",
+      "first_chapter": "CH12",
+      "level": "core",
+      "source_ids": [
+        "S18"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "T046",
+      "english": "Damping",
+      "chinese": "阻尼",
+      "plain_language": "讓振動或運動逐漸減弱的因素。",
+      "example_or_analogy": "像回彈時有人輕輕煞住它。",
+      "analogy_limit": "過大可能回得慢；不是把每幀位置隨便減一點就必然正確。",
+      "first_chapter": "CH12",
+      "level": "core",
+      "source_ids": [
+        "S18"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "T047",
+      "english": "Time Step",
+      "chinese": "時間步長",
+      "plain_language": "模擬每次往前推進多少時間。",
+      "example_or_analogy": "把一秒切成一百小步計算。",
+      "analogy_limit": "渲染一張圖花多久，不該直接當成這一步物理時間。",
+      "first_chapter": "CH12",
+      "level": "core",
+      "source_ids": [
+        "S18"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "T048",
+      "english": "Simulation",
+      "chinese": "模擬",
+      "plain_language": "用規則和狀態演進近似某種行為。",
+      "example_or_analogy": "每一步先更新速度，再依選定方法更新位置。",
+      "analogy_limit": "看起來像物理不等於使用真實物理或精確解。",
+      "first_chapter": "CH12",
+      "level": "core",
+      "source_ids": [
+        "S18"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "T049",
+      "english": "Data",
+      "chinese": "資料",
+      "plain_language": "用來描述、計算或判斷的一組已記錄值。",
+      "example_or_analogy": "十筆教學數字先是一張表，再成為畫面。",
+      "analogy_limit": "畫面中的資料可能是合成或假資料，必須標明來源。",
+      "first_chapter": "CH13",
+      "level": "core",
+      "source_ids": [
+        "S02"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "T050",
+      "english": "Scale",
+      "chinese": "比例尺；尺度映射",
+      "plain_language": "把某範圍的數值換成畫面位置或大小的規則。",
+      "example_or_analogy": "零到一百分，對應零到三百像素的柱高。",
+      "analogy_limit": "動畫中的 scale 也可能指幾何縮放，不是資料比例尺。",
+      "first_chapter": "CH13",
+      "level": "core",
+      "source_ids": [
+        "S02"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "T051",
+      "english": "Normalization",
+      "chinese": "正規化",
+      "plain_language": "按明確規則把數值換到便於比較或處理的範圍。",
+      "example_or_analogy": "把最小到最大整理到零至一之間。",
+      "analogy_limit": "不只有最小最大法；範圍為零或缺值時要有政策。",
+      "first_chapter": "CH13",
+      "level": "core",
+      "source_ids": [
+        "S02"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "T052",
+      "english": "Data Visualization",
+      "chinese": "資料視覺化",
+      "plain_language": "用位置、長度等視覺特徵表達資料關係。",
+      "example_or_analogy": "數字表變成有單位的長條圖。",
+      "analogy_limit": "裝飾圖不自動成為證據；必須能追溯資料與尺度。",
+      "first_chapter": "CH13",
+      "level": "core",
+      "source_ids": [
+        "S02"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "T053",
+      "english": "Graph",
+      "chinese": "圖；關係網路",
+      "plain_language": "用節點與連線表達一組關係的資料結構。",
+      "example_or_analogy": "誰和誰有連結，先記成表再決定怎麼畫。",
+      "analogy_limit": "英文 graph 也能泛指圖表，要依情境區分。",
+      "first_chapter": "CH14",
+      "level": "core",
+      "source_ids": [
+        "S12"
+      ],
+      "aliases": [
+        "network graph"
+      ]
+    },
+    {
+      "id": "T054",
+      "english": "Node",
+      "chinese": "節點",
+      "plain_language": "關係網路中的一個項目。",
+      "example_or_analogy": "可以是一個人、一個概念或一台設備。",
+      "analogy_limit": "不是畫圓才叫節點；它首先是資料中的單位。",
+      "first_chapter": "CH14",
+      "level": "core",
+      "source_ids": [
+        "S12"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "T055",
+      "english": "Edge",
+      "chinese": "邊；連線",
+      "plain_language": "網路中兩個節點之間的關係。",
+      "example_or_analogy": "用一條線表示誰把資料交給誰。",
+      "analogy_limit": "是否有方向、權重或多重關係都要說清楚。",
+      "first_chapter": "CH14",
+      "level": "core",
+      "source_ids": [
+        "S12"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "T056",
+      "english": "Layout",
+      "chinese": "佈局；排版",
+      "plain_language": "決定元素在畫面上的位置與相對安排。",
+      "example_or_analogy": "把同一群人安排成一排或幾個小組。",
+      "analogy_limit": "佈局產生的接近不一定是資料上接近。",
+      "first_chapter": "CH14",
+      "level": "core",
+      "source_ids": [
+        "S12"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "T057",
+      "english": "2.5D",
+      "chinese": "二點五維表現",
+      "plain_language": "常用於描述帶深度、層次或透視感的混合呈現。",
+      "example_or_analogy": "把幾張平面卡片放前後，讓近的移動得明顯。",
+      "analogy_limit": "不是嚴格通用標準；不能只憑風格判斷是真三維還是平面模擬。",
+      "first_chapter": "CH15",
+      "level": "core",
+      "source_ids": [
+        "S07"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "T058",
+      "english": "3D",
+      "chinese": "三維",
+      "plain_language": "用三個空間維度描述幾何位置與形狀。",
+      "example_or_analogy": "除了左右、上下，再加前後。",
+      "analogy_limit": "實際渲染還要處理鏡頭、投影與遮擋，不只多一個 z。",
+      "first_chapter": "CH15",
+      "level": "core",
+      "source_ids": [
+        "S07"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "T059",
+      "english": "Camera",
+      "chinese": "虛擬相機",
+      "plain_language": "決定從哪裡、往哪裡看，以及如何投影的設定。",
+      "example_or_analogy": "像先選站位和鏡頭，再拍同一座模型。",
+      "analogy_limit": "相機移動與物體移動可有不同效果；必須說明座標約定。",
+      "first_chapter": "CH15",
+      "level": "core",
+      "source_ids": [
+        "S07"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "T060",
+      "english": "Projection",
+      "chinese": "投影",
+      "plain_language": "把空間點換成畫面位置的規則。",
+      "example_or_analogy": "把立體物件從某視角投到平面上。",
+      "analogy_limit": "正交與透視不同；鏡頭後或太近的點需裁切。",
+      "first_chapter": "CH15",
+      "level": "core",
+      "source_ids": [
+        "S07"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "T061",
+      "english": "Matrix",
+      "chinese": "矩陣",
+      "plain_language": "按行列排列、可用特定運算組合的數值。",
+      "example_or_analogy": "把轉向、縮放和移動的計算整理成可組合表格。",
+      "analogy_limit": "不是神祕的三維專用字；矩陣乘法順序通常不能任意交換。",
+      "first_chapter": "CH15",
+      "level": "core",
+      "source_ids": [
+        "S07"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "T062",
+      "english": "GPU",
+      "chinese": "圖形處理器",
+      "plain_language": "擅長同時處理大量合適計算工作的處理器。",
+      "example_or_analogy": "像許多工位按規則一起處理一批資料。",
+      "analogy_limit": "不是所有工作都會更快；搬資料與硬體限制也有成本。",
+      "first_chapter": "CH16",
+      "level": "core",
+      "source_ids": [
+        "S06",
+        "S07"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "T063",
+      "english": "Shader",
+      "chinese": "著色器；圖形運算程式",
+      "plain_language": "在圖形處理流程中特定階段執行的程式。",
+      "example_or_analogy": "可分別安排頂點如何變換，或畫面片段如何著色。",
+      "analogy_limit": "不能一概說成只算最終像素；也有非傳統著色用途。",
+      "first_chapter": "CH16",
+      "level": "core",
+      "source_ids": [
+        "S06",
+        "S07"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "T064",
+      "english": "Material",
+      "chinese": "材質",
+      "plain_language": "描述表面如何呈現或回應光等條件的一組設定。",
+      "example_or_analogy": "同一顆球，可以像紙、金屬或玻璃。",
+      "analogy_limit": "材質不是光源；不同模型的參數意義可能不同。",
+      "first_chapter": "CH16",
+      "level": "core",
+      "source_ids": [
+        "S06",
+        "S07"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "T065",
+      "english": "Compositing",
+      "chinese": "合成",
+      "plain_language": "把多層影像按規則合成結果。",
+      "example_or_analogy": "透明紙一層層疊起來，但還要規定顏色怎麼混。",
+      "analogy_limit": "不是簡單相加而已；透明度、先後順序與色彩空間會影響結果。",
+      "first_chapter": "CH16",
+      "level": "core",
+      "source_ids": [
+        "S06",
+        "S07"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "T066",
+      "english": "Sample Rate",
+      "chinese": "取樣率",
+      "plain_language": "音訊每秒、每聲道記錄多少取樣值。",
+      "example_or_analogy": "四萬八千赫茲代表每秒四萬八千個取樣時點。",
+      "analogy_limit": "不是影片 fps；雙聲道不把播放時間加倍。",
+      "first_chapter": "CH17",
+      "level": "core",
+      "source_ids": [
+        "S10"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "T067",
+      "english": "Sample",
+      "chinese": "取樣值",
+      "plain_language": "在某個指定時點記錄的一個值。",
+      "example_or_analogy": "先在一條波形上挑一個時刻，再記其振幅。",
+      "analogy_limit": "一個取樣值不等於一個聲音片段；壓縮聲音的封包也另有結構。",
+      "first_chapter": "CH17",
+      "level": "core",
+      "source_ids": [
+        "S10"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "T068",
+      "english": "PCM",
+      "chinese": "脈衝編碼調變",
+      "plain_language": "以離散數值記錄音訊取樣的一種表示方式。",
+      "example_or_analogy": "把一連串波形高度寫進數值表。",
+      "analogy_limit": "取樣率、位元深度與聲道仍需另外指定；不等於所有音訊格式。",
+      "first_chapter": "CH17",
+      "level": "core",
+      "source_ids": [
+        "S10"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "T069",
+      "english": "Timestamp",
+      "chinese": "時間戳記",
+      "plain_language": "標示某資料或事件對應哪個時間的值。",
+      "example_or_analogy": "在每個要顯示的畫面旁寫上播放時刻。",
+      "analogy_limit": "播放時間與計算完成時間不同；媒體內部還有時間基準。",
+      "first_chapter": "CH17",
+      "level": "core",
+      "source_ids": [
+        "S10"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "T070",
+      "english": "Cue",
+      "chinese": "事件提示；時間提示點",
+      "plain_language": "指定某項內容或動作何時發生的記錄。",
+      "example_or_analogy": "旁白說到「開始」時，標題也開始出現。",
+      "analogy_limit": "提示點可以手動或依音訊取得，不必全部由語音模型預測。",
+      "first_chapter": "CH18",
+      "level": "core",
+      "source_ids": [
+        "S08"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "T071",
+      "english": "Subtitle",
+      "chinese": "字幕",
+      "plain_language": "有時間安排的文字顯示。",
+      "example_or_analogy": "把某句話放在對應的播放區間。",
+      "analogy_limit": "燒錄字幕和可關閉字幕軌不是同一交付方式。",
+      "first_chapter": "CH18",
+      "level": "core",
+      "source_ids": [
+        "S08"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "T072",
+      "english": "TTS",
+      "chinese": "文字轉語音",
+      "plain_language": "把文字內容轉成可播放的說話聲。",
+      "example_or_analogy": "把三句文稿分別轉成音檔。",
+      "analogy_limit": "不代表能模仿指定本人，也不保證中文發音或節奏正確。",
+      "first_chapter": "CH18",
+      "level": "core",
+      "source_ids": [
+        "S08"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "T073",
+      "english": "Voice Clone",
+      "chinese": "聲音克隆；聲線仿製",
+      "plain_language": "在授權前提下，依參考聲音或聲線資源生成近似聲音。",
+      "example_or_analogy": "先有當事人同意的聲線，再製作旁白。",
+      "analogy_limit": "有介面不是已有聲線；相似度、可用性與授權都需驗證。",
+      "first_chapter": "CH18",
+      "level": "core",
+      "source_ids": [
+        "S08"
+      ],
+      "aliases": [
+        "voice cloning"
+      ]
+    },
+    {
+      "id": "T074",
+      "english": "Ducking",
+      "chinese": "旁白時壓低背景聲",
+      "plain_language": "讓主要人聲出現時，背景音量適度降低。",
+      "example_or_analogy": "有人講話時，音樂先往後退一些。",
+      "analogy_limit": "不等於把整首音樂都一律變小，也不自動確保每字聽得清楚。",
+      "first_chapter": "CH18",
+      "level": "core",
+      "source_ids": [
+        "S08"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "T075",
+      "english": "Render",
+      "chinese": "渲染；把描述畫出來",
+      "plain_language": "依場景資料與繪圖規則計算出畫面。",
+      "example_or_analogy": "資料寫著「圓心 480,270」，執行後真的得到一張圖。",
+      "analogy_limit": "在某些工具里 render 被用作整體輸出，本書需注明精確階段。",
+      "first_chapter": "CH19",
+      "level": "core",
+      "source_ids": [
+        "S08"
+      ],
+      "aliases": [
+        "Rendering",
+        "算圖"
+      ]
+    },
+    {
+      "id": "T076",
+      "english": "Renderer",
+      "chinese": "渲染器",
+      "plain_language": "負責把場景或圖形描述轉成畫面的系統。",
+      "example_or_analogy": "像接收圖樣並畫出每張圖的工作站。",
+      "analogy_limit": "不是編碼器；渲染器不一定自己包成 MP4。",
+      "first_chapter": "CH19",
+      "level": "core",
+      "source_ids": [
+        "S08"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "T077",
+      "english": "Encoding",
+      "chinese": "編碼",
+      "plain_language": "按指定編碼方法表示媒體資料，常包含壓縮。",
+      "example_or_analogy": "把連續影格轉成可被指定解碼器讀取的形式。",
+      "analogy_limit": "不是只改副檔名；有損與無損的代價不同。",
+      "first_chapter": "CH19",
+      "level": "core",
+      "source_ids": [
+        "S08"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "T078",
+      "english": "Codec",
+      "chinese": "編解碼格式或實作",
+      "plain_language": "描述媒體如何編碼和解碼的規則或對應實作。",
+      "example_or_analogy": "H.264 是影片編碼標準的一個例子。",
+      "analogy_limit": "標準、encoder 程式、container 三者不要混叫同一件事。",
+      "first_chapter": "CH19",
+      "level": "core",
+      "source_ids": [
+        "S08"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "T079",
+      "english": "Container",
+      "chinese": "容器格式",
+      "plain_language": "把不同媒體流和相關資訊組織在一起的格式。",
+      "example_or_analogy": "像資料夾同時裝影片、聲音與時間資訊。",
+      "analogy_limit": "MP4 是容器，不保證內部每段都是同一種編碼。",
+      "first_chapter": "CH19",
+      "level": "core",
+      "source_ids": [
+        "S08"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "T080",
+      "english": "Muxing",
+      "chinese": "多工封裝",
+      "plain_language": "把已編碼的不同媒體流按照格式組織到輸出中。",
+      "example_or_analogy": "依時間把畫面封包與聲音封包放入同個容器。",
+      "analogy_limit": "不等於把兩條音樂混成一條；也不一定需要重新編碼。",
+      "first_chapter": "CH19",
+      "level": "core",
+      "source_ids": [
+        "S08"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "T081",
+      "english": "QA",
+      "chinese": "品質檢查",
+      "plain_language": "按明確項目檢查結果是否符合要求。",
+      "example_or_analogy": "先檢查可播放，再檢查字有沒有錯、聲音聽不聽得懂。",
+      "analogy_limit": "程序測試與人類視聽審查不可互相冒充。",
+      "first_chapter": "CH20",
+      "level": "core",
+      "source_ids": [
+        "S08"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "T082",
+      "english": "Unit Test",
+      "chinese": "單元測試",
+      "plain_language": "針對一小塊程式行為做可重複的檢查。",
+      "example_or_analogy": "確認兩秒時圓正好抵達終點。",
+      "analogy_limit": "測試通過不證明整支影片美觀或所有情境都正確。",
+      "first_chapter": "CH20",
+      "level": "core",
+      "source_ids": [
+        "S08"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "T083",
+      "english": "Cache",
+      "chinese": "快取",
+      "plain_language": "保存已算結果，條件相同時可重用。",
+      "example_or_analogy": "同一張複雜圖不必每次重新畫。",
+      "analogy_limit": "輸入、字型、程式或參數變更時可能要失效；舊畫面不是新結果。",
+      "first_chapter": "CH20",
+      "level": "core",
+      "source_ids": [
+        "S08"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "T084",
+      "english": "Checksum",
+      "chinese": "檢查碼；雜湊摘要",
+      "plain_language": "對資料計算出便於比較的摘要。",
+      "example_or_analogy": "檢查文件是否在傳輸後改變。",
+      "analogy_limit": "摘要相同不是語意正確或品質好的證明；不同摘要也可能只差中繼資料。",
+      "first_chapter": "CH20",
+      "level": "core",
+      "source_ids": [
+        "S08"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "T085",
+      "english": "Coding Agent",
+      "chinese": "程式協作代理",
+      "plain_language": "能依任務使用工具來寫、執行、檢查與修改程式的系統。",
+      "example_or_analogy": "先讀規格、做一幕、檢查錯誤再修。",
+      "analogy_limit": "能力取決於模型、工具、權限與工作方式，不等於模型本身。",
+      "first_chapter": "CH21",
+      "level": "core",
+      "source_ids": [
+        "S13"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "T086",
+      "english": "Prompt",
+      "chinese": "提示；任務指令",
+      "plain_language": "交給 AI 的需求與相關上下文。",
+      "example_or_analogy": "說清楚要畫甚麼、何時動、哪項不能改以及怎麼驗收。",
+      "analogy_limit": "寫得長不代表清楚；不是所有要求都能被模型確實執行。",
+      "first_chapter": "CH21",
+      "level": "core",
+      "source_ids": [
+        "S13"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "T087",
+      "english": "Constraint",
+      "chinese": "限制條件",
+      "plain_language": "解決問題時必須遵守的邊界。",
+      "example_or_analogy": "三秒內完成、不使用付費素材、最後一秒保持可讀。",
+      "analogy_limit": "限制互相衝突時需顯式處理，不能靜默忽略。",
+      "first_chapter": "CH21",
+      "level": "core",
+      "source_ids": [
+        "S13"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "T088",
+      "english": "Acceptance Criteria",
+      "chinese": "驗收條件",
+      "plain_language": "用來判斷結果是否符合需求的具體標準。",
+      "example_or_analogy": "輸出 90 幀、沒有裁字、指定秒點停穩。",
+      "analogy_limit": "有數值條件仍不能完全代替審美與敘事判斷。",
+      "first_chapter": "CH21",
+      "level": "core",
+      "source_ids": [
+        "S13"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "T089",
+      "english": "Framework",
+      "chinese": "框架",
+      "plain_language": "提供組織方式與運作規則的開發基礎。",
+      "example_or_analogy": "先給舞台的排演方式，作品照它的入口與生命流程接入。",
+      "analogy_limit": "與函式庫邊界不總是絕對；不需為了學原理先裝所有框架。",
+      "first_chapter": "CH22",
+      "level": "core",
+      "source_ids": [
+        "S01",
+        "S05",
+        "S14"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "T090",
+      "english": "Library",
+      "chinese": "函式庫",
+      "plain_language": "可以被程式呼叫的一組可重用功能。",
+      "example_or_analogy": "從工具箱取一個畫圓或讀圖的工具。",
+      "analogy_limit": "不是素材資料夾，也不保證所有版本行為不變。",
+      "first_chapter": "CH22",
+      "level": "core",
+      "source_ids": [
+        "S01",
+        "S05",
+        "S14"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "T091",
+      "english": "API",
+      "chinese": "程式介面",
+      "plain_language": "軟體讓其他程式以規定方式使用其功能的入口。",
+      "example_or_analogy": "像一張可點的菜單，說明要提供甚麼、會得到甚麼。",
+      "analogy_limit": "不一定是網路服務，也不一定付費；身份與權限可能另需處理。",
+      "first_chapter": "CH22",
+      "level": "core",
+      "source_ids": [
+        "S01",
+        "S05",
+        "S14"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "T092",
+      "english": "Dependency",
+      "chinese": "相依套件；相依項",
+      "plain_language": "目前工作要依靠的其他軟體或資源。",
+      "example_or_analogy": "這個繪圖例子需要先有繪圖函式庫。",
+      "analogy_limit": "有套件名不代表已安裝或版本兼容；應記錄實際環境。",
+      "first_chapter": "CH22",
+      "level": "core",
+      "source_ids": [
+        "S01",
+        "S05",
+        "S14"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "T093",
+      "english": "Engine",
+      "chinese": "引擎",
+      "plain_language": "把一組相關規則與執行機制整理成可重用核心。",
+      "example_or_analogy": "換內容資料，仍由同一套時間、運動與輸出機制執行。",
+      "analogy_limit": "名字叫引擎不代表能自動理解任意文章或自行導演。",
+      "first_chapter": "CH23",
+      "level": "core",
+      "source_ids": [
+        "S01",
+        "S08"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "T094",
+      "english": "Schema",
+      "chinese": "資料規格",
+      "plain_language": "說明資料應有哪些欄位、型別與限制的約定。",
+      "example_or_analogy": "每幕資料卡必須有開始時間、長度與類型。",
+      "analogy_limit": "一份 JSON 範例不是完整驗證；未知欄位與錯誤值要有政策。",
+      "first_chapter": "CH23",
+      "level": "core",
+      "source_ids": [
+        "S01",
+        "S08"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "T095",
+      "english": "Pipeline",
+      "chinese": "處理流程；管線",
+      "plain_language": "按依賴關係把工作階段連接起來的方式。",
+      "example_or_analogy": "內容先成場景資料，再算圖，之後編碼與封裝。",
+      "analogy_limit": "不是每一階段都只能順序執行；也不等於獨立的 AI agent。",
+      "first_chapter": "CH23",
+      "level": "core",
+      "source_ids": [
+        "S01",
+        "S08"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "T096",
+      "english": "Asset",
+      "chinese": "素材；資產",
+      "plain_language": "作品使用的字、圖、聲音或其他資料檔案。",
+      "example_or_analogy": "一段已授權錄音與一張背景圖都是素材。",
+      "analogy_limit": "擁有路徑不代表有授權，也不證明文件真的存在。",
+      "first_chapter": "CH23",
+      "level": "core",
+      "source_ids": [
+        "S01",
+        "S08"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "T097",
+      "english": "Adapter",
+      "chinese": "轉接層",
+      "plain_language": "把一種系統的輸入輸出轉成另一套介面需要的形式。",
+      "example_or_analogy": "換語音服務時，仍統一產出音檔與時間資訊。",
+      "analogy_limit": "有轉接程式不等於第三方服務已經實測成功。",
+      "first_chapter": "CH23",
+      "level": "core",
+      "source_ids": [
+        "S01",
+        "S08"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "T099",
+      "english": "Target Mapping",
+      "chinese": "目標配對",
+      "plain_language": "安排每個起點對應到哪個目標位置。",
+      "example_or_analogy": "像讓每位學生知道自己要坐哪個座位。",
+      "analogy_limit": "配對規則與移動規則不同；任意配對可能產生大量交叉。",
+      "first_chapter": "CH10",
+      "level": "recognition",
+      "source_ids": [
+        "S03",
+        "S11"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "T100",
+      "english": "Opacity",
+      "chinese": "不透明度",
+      "plain_language": "決定一個圖層在合成時有多實。",
+      "example_or_analogy": "透明紙上墨水淡一些，下面的圖就透得出來。",
+      "analogy_limit": "透明度與不透明度方向相反；混色結果還受合成規則影響。",
+      "first_chapter": "CH06",
+      "level": "recognition",
+      "source_ids": [
+        "S05",
+        "S14"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "T101",
+      "english": "Vector",
+      "chinese": "向量",
+      "plain_language": "帶有多個分量、可表示方向和大小等資訊的量。",
+      "example_or_analogy": "一支箭頭同時說明往右多遠、往上多遠。",
+      "analogy_limit": "位置座標與位移向量可以使用同樣數字形式，但意義不同。",
+      "first_chapter": "CH15",
+      "level": "recognition",
+      "source_ids": [
+        "S07"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "T102",
+      "english": "Vertex Shader",
+      "chinese": "頂點著色器",
+      "plain_language": "圖形流程中處理頂點相關輸入與輸出的程式。",
+      "example_or_analogy": "先決定模型各頂點如何被轉換到投影需要的位置。",
+      "analogy_limit": "不是逐個最終像素上色；也不等於只做一種坐標變換。",
+      "first_chapter": "CH16",
+      "level": "recognition",
+      "source_ids": [
+        "S06",
+        "S07"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "T103",
+      "english": "Fragment Shader",
+      "chinese": "片段著色器",
+      "plain_language": "對光柵化後產生的片段計算輸出的程式。",
+      "example_or_analogy": "依顏色資料、紋理或位置算出這一小片該怎麼呈現。",
+      "analogy_limit": "片段不是嚴格的一對一最終像素，還可能經深度、混合與多重取樣處理。",
+      "first_chapter": "CH16",
+      "level": "recognition",
+      "source_ids": [
+        "S06",
+        "S07"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "T104",
+      "english": "Compute Shader",
+      "chinese": "計算著色器",
+      "plain_language": "以適合平行的工作組織方式在支援的 GPU 環境執行一般計算。",
+      "example_or_analogy": "讓許多工作單元分別更新一群粒子資料。",
+      "analogy_limit": "不是 WebGLShader 的第三種類型；平台支援須另外查核。",
+      "first_chapter": "CH16",
+      "level": "recognition",
+      "source_ids": [
+        "S06",
+        "S07"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "T105",
+      "english": "Rasterization",
+      "chinese": "光柵化",
+      "plain_language": "把幾何覆蓋到像素格的過程。",
+      "example_or_analogy": "判斷一個三角形會蓋住畫布哪些格子。",
+      "analogy_limit": "不是編碼，也不是所有渲染都只靠光柵化。",
+      "first_chapter": "CH16",
+      "level": "recognition",
+      "source_ids": [
+        "S06",
+        "S07"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "T106",
+      "english": "Grapheme Cluster",
+      "chinese": "字素叢集；感知字元分段",
+      "plain_language": "將若干文字程式碼視為一個使用者通常感知的字元單位。",
+      "example_or_analogy": "有些字母與重音或表情符號組合，不該被逐字動畫拆散。",
+      "analogy_limit": "是分段近似與規則，不等同實際字形或所有語言的完整排版單位。",
+      "first_chapter": "CH08",
+      "level": "recognition",
+      "source_ids": [
+        "S11",
+        "S15"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "T107",
+      "english": "Bitrate",
+      "chinese": "位元率",
+      "plain_language": "每單位時間媒體資料的位元數量。",
+      "example_or_analogy": "一秒影片平均用了多少資料量。",
+      "analogy_limit": "較高不保證畫面更好，也不能脫離編碼方法和內容複雜度比較。",
+      "first_chapter": "CH19",
+      "level": "recognition",
+      "source_ids": [
+        "S08"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "T108",
+      "english": "LUFS",
+      "chinese": "整合響度等量測所用的響度單位",
+      "plain_language": "以規定的方式衡量音訊響度的單位；要指出量的是瞬時、短期或整合。",
+      "example_or_analogy": "不是只看最高尖峰，而是用約定方式看聽覺相關能量。",
+      "analogy_limit": "不能拿峰值分貝直接當 LUFS；不同發佈目標需另查規範。",
+      "first_chapter": "CH18",
+      "level": "recognition",
+      "source_ids": [
+        "S08"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "T109",
+      "english": "Render Pipeline",
+      "chinese": "渲染流程",
+      "plain_language": "從資料準備到畫面結果的多階段處理。",
+      "example_or_analogy": "先擺場景，再變換幾何、計算著色並合成畫面。",
+      "analogy_limit": "有些工具把編碼也包含在 render 字眼中，本書要說清楚範圍。",
+      "first_chapter": "CH19",
+      "level": "recognition",
+      "source_ids": [
+        "S08"
+      ],
+      "aliases": []
+    },
+    {
+      "id": "T110",
+      "english": "Keyframe",
+      "chinese": "關鍵影格；關鍵設定",
+      "plain_language": "在動畫編排中，用來指定某時點參數值的設定。",
+      "example_or_analogy": "零秒在左邊，兩秒在右邊，中間由規則補出。",
+      "analogy_limit": "壓縮影片中的關鍵影格屬於編碼概念，與動畫參數關鍵設定不同。",
+      "first_chapter": "CH04",
+      "level": "recognition",
+      "source_ids": [
+        "S01"
+      ],
+      "aliases": []
+    }
+  ]
+}

@@ -1,0 +1,102 @@
+{
+  "schemaVersion": 1,
+  "bookSlug": "how-code-becomes-film",
+  "files": [
+    {
+      "filename": "01_影片為什麼不是一張會動的照片.txt",
+      "sha256": "31334faf039a448778a9ea35d17559ed17814277df3b239ff6c87b9f82d34f5e"
+    },
+    {
+      "filename": "02_電腦怎麼知道白點在哪裡.txt",
+      "sha256": "bd2f3c0286d4d3ab464c2e31064b420172d5a784e8fd01015592d6f9775673a4"
+    },
+    {
+      "filename": "03_如何把現在交給程式.txt",
+      "sha256": "8f5cf32d0ec305fc1f24a97877d88e10305ba619fbe0995c0bbe9091a27bfd5f"
+    },
+    {
+      "filename": "04_圓點為什麼會動.txt",
+      "sha256": "f19960783c486d7e07de215018efb09e0733b5af3ac830d69b862324722aeb41"
+    },
+    {
+      "filename": "05_為什麼等速看起來像機器.txt",
+      "sha256": "aadad96c1bfd6aba2e9e5bbb66b211158ba7f9dbe047ed91bf39cfb31af1d9d9"
+    },
+    {
+      "filename": "06_好幾件事如何同時發生.txt",
+      "sha256": "901205ba58e056281f4c9ffeb1d532d9199836689e8b82da96e3807c144f76d9"
+    },
+    {
+      "filename": "07_線條怎麼自己長出來.txt",
+      "sha256": "08e7cbe3ec6e8d609303d791b5ff255d27b9c2949a01186b4d81c4b7352e18ad"
+    },
+    {
+      "filename": "08_中文字為什麼比畫圓麻煩.txt",
+      "sha256": "0653f5a05a1d2d82e811189af04f646ea6a8d6936fd95682a9b570f9839afd5f"
+    },
+    {
+      "filename": "09_一千顆小點怎麼一起管理.txt",
+      "sha256": "07d9fd5452e83ab50aa1ae6ac5c407694ee1aacb03e6e79d7cc969450653c733"
+    },
+    {
+      "filename": "10_散點怎麼排成一個字.txt",
+      "sha256": "fe195aa4d3f3aaa3af801f3ce7730732648292a89ae912d4174b77e268dfe68d"
+    },
+    {
+      "filename": "11_混亂為什麼有時很自然.txt",
+      "sha256": "89d4ebe9c1f04d59d5d027deee91b273a83488c65e9696f39506aaaaba19049a"
+    },
+    {
+      "filename": "12_動畫怎麼有重量與回彈.txt",
+      "sha256": "8a292249aefbbee5ebd50425ef9575f9022db04dd51d2ec5c2a5ffcfb59697e7"
+    },
+    {
+      "filename": "13_數字怎麼變成可以看懂的圖.txt",
+      "sha256": "84814c15e1498a346495735f9bbc577c1c44e80d2de427ff2ef28f66c798c945"
+    },
+    {
+      "filename": "14_關係怎麼變成一張網.txt",
+      "sha256": "c6524e6a9e0885ddbb6fff551e2b33908018f46fa6c6592a200e208621cd15dc"
+    },
+    {
+      "filename": "15_平面怎麼看起來有深度.txt",
+      "sha256": "981c1e8459921b20ce6e8addf8e8582dcf94e58c86d9bc36f6d7e360d8cdcf98"
+    },
+    {
+      "filename": "16_光影與著色程式在算什麼.txt",
+      "sha256": "38f567bb14488d06786e77bbae45af2ebf90df3bf39628fa371d616e9a5784c9"
+    },
+    {
+      "filename": "17_聲音有另一條時鐘.txt",
+      "sha256": "a4a984850e97962b274c27c83b8b6f0653170b3aed30a24122acb3e0e7d78094"
+    },
+    {
+      "filename": "18_說話和畫面怎麼對齊.txt",
+      "sha256": "05cba9b0af363dc6df0e5ab79f0645545ec9561df0629b92c224a8fed9659729"
+    },
+    {
+      "filename": "19_為什麼能預覽卻不一定有影片檔.txt",
+      "sha256": "e4ce62bb501bcea82d858c7b70d8c3e0b6fef7cb04535439309e05975c70191a"
+    },
+    {
+      "filename": "20_怎麼知道影片真的做對了.txt",
+      "sha256": "1de88201580525522192ed24db87175f29d4c021949dc7c9d1e4e86924f5c195"
+    },
+    {
+      "filename": "21_怎麼把一句願望拆成能驗收的要求.txt",
+      "sha256": "2ca4330754d6770aa360331189d0957b75d95e97911275640eb067a7a2e2ae37"
+    },
+    {
+      "filename": "22_選工具時如何不被工具綁住.txt",
+      "sha256": "73725a73db014f446eb1df0aac87dd05cbdc661d0106513085d3e70db3159dea"
+    },
+    {
+      "filename": "23_怎麼組出自己的影片引擎.txt",
+      "sha256": "550a9e07220256415b5d4fad06b0cd3f515e3fb3c16b0a6ff13751c927c401e6"
+    },
+    {
+      "filename": "24_完成一支你能解釋的影片.txt",
+      "sha256": "96bfd28add330a823742cddaa0a4c0f783e4f1b963380dd2aac532593619265d"
+    }
+  ]
+}

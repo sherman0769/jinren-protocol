@@ -1,0 +1,12 @@
+{
+  "generated_by": "examples/build_examples.py",
+  "kind": "teaching_reconstruction",
+  "svg_files": [
+    "01_coordinate.svg",
+    "02_interpolation.svg",
+    "03_easing.svg",
+    "04_path.svg",
+    "05_particles.svg",
+    "06_projection.svg"
+  ]
+}

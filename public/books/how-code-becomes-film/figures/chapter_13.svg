@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="520" viewBox="0 0 1000 520">
+<title>數字怎麼變成可以看懂的圖</title>
+<rect width="1000" height="520" rx="18" fill="#f7f5ef"/>
+<text x="46" y="68" font-size="30" font-family="sans-serif" fill="#172b3a">第13章｜數字怎麼變成可以看懂的圖</text>
+<rect x="36" y="105" width="928" height="98" rx="12" fill="#e1efea"/>
+<text x="58" y="138" font-size="21" font-family="sans-serif" fill="#0b746b">教學假資料</text>
+<text x="58" y="177" font-size="22" font-family="sans-serif" fill="#172b3a">10，20，30；不是觀測</text>
+<rect x="36" y="220" width="928" height="98" rx="12" fill="#edf0f2"/>
+<text x="58" y="253" font-size="21" font-family="sans-serif" fill="#0b746b">高度（像素）</text>
+<text x="58" y="292" font-size="22" font-family="sans-serif" fill="#172b3a">50，100，150；零到40映射200</text>
+<rect x="36" y="335" width="928" height="98" rx="12" fill="#fff0d7"/>
+<text x="58" y="368" font-size="21" font-family="sans-serif" fill="#0b746b">柱頂y</text>
+<text x="58" y="407" font-size="22" font-family="sans-serif" fill="#172b3a">200，150，100；共同底線250</text>
+<text x="46" y="496" font-size="18" font-family="sans-serif" fill="#60717a">原創教學對照｜數字見逐章檢查｜無原片演算法推定</text>
+</svg>

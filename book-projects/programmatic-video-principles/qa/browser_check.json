@@ -1,0 +1,47 @@
+{
+  "transport": "Inline document preview with embedded local assets; container policy blocked file:// and localhost navigation. No policy was changed.",
+  "pages": [
+    {
+      "path": "START_HERE.html",
+      "overflow_px": 0
+    },
+    {
+      "path": "READING/sample_chapter.html",
+      "overflow_px": 0
+    },
+    {
+      "path": "READING/glossary.html",
+      "overflow_px": 0
+    },
+    {
+      "path": "READING/outline.html",
+      "overflow_px": 0
+    },
+    {
+      "path": "START_HERE.html",
+      "viewport": "390x844",
+      "overflow_px": 0
+    },
+    {
+      "path": "READING/sample_chapter.html",
+      "viewport": "390x844",
+      "overflow_px": 0
+    },
+    {
+      "path": "READING/glossary.html",
+      "viewport": "390x844",
+      "overflow_px": 0
+    }
+  ],
+  "errors": [],
+  "relative_link_errors": [],
+  "search_result": "1 張符合的術語卡",
+  "search_visible_cards": 1,
+  "video_metadata": {
+    "duration": 8,
+    "width": 1280,
+    "height": 720,
+    "readyState": 4,
+    "error": null
+  }
+}

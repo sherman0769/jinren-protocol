@@ -1,0 +1,132 @@
+<!doctype html><html lang="zh-Hant-TW"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>六部二十四章完整目錄｜程式如何變成影片</title><link rel="stylesheet" href="site.css"></head><body><div class="shell"><header class="top"><a class="brand" href="../START_HERE.html">程式如何變成影片</a><span class="pill">寫書交接包 · V1</span></header><article class="article"><h1>全書章綱｜程式如何變成影片</h1>
+<p>六部二十四章是本次編輯提案。章名故意先寫成中文問題；正式英文在章內理解後出現。原案的八章論述結構不等於這本書的二十四章技術學習結構。</p>
+<h2>第 1 部｜一張畫如何走進時間</h2>
+<h3>第 1 章｜影片為什麼不是一張會動的照片</h3>
+<p><strong>要回答：</strong>一支三秒影片，電腦到底需要準備什麼？</p>
+<p><strong>帶走：</strong>畫面中的小格與影片中的整張畫面是不同層級；播放幀率、尺寸和片長是三個不同旋鈕。</p>
+<p><strong>做一次：</strong>先翻三張位置略不同的圖；再以 30 張／秒算出三秒共 90 張。</p>
+<p>詳見 <a href="../OUTLINE/CHAPTER_BRIEFS/CH01.md">寫作任務卡</a>。</p>
+<h3>第 2 章｜電腦怎麼知道白點在哪裡</h3>
+<p><strong>要回答：</strong>說放在中間，為什麼電腦還需要一組數字？</p>
+<p><strong>帶走：</strong>座標需要原點、方向與單位；形狀的位置和尺寸要分開。</p>
+<p><strong>做一次：</strong>960×540 畫布中央是 (480,270)，把同一圓移至四角並標示座標。</p>
+<p>詳見 <a href="../OUTLINE/CHAPTER_BRIEFS/CH02.md">寫作任務卡</a>。</p>
+<h3>第 3 章｜如何把現在交給程式</h3>
+<p><strong>要回答：</strong>為什麼輸出第 120 幀，不必真的等四秒？</p>
+<p><strong>帶走：</strong>影片時間是計算輸入，不是電腦牆上的時鐘；規則可直接算出某一時點。</p>
+<p><strong>做一次：</strong>建立 t=frame/fps；打亂順序請程式畫第 60、0、30、60 幀。</p>
+<p>詳見 <a href="../OUTLINE/CHAPTER_BRIEFS/CH03.md">寫作任務卡</a>。</p>
+<h3>第 4 章｜圓點為什麼會動</h3>
+<p><strong>要回答：</strong>只有起點和終點，要怎樣算出中間每張圖的位置？</p>
+<p><strong>帶走：</strong>移動是位置參數隨時間改變；先求進度，再求中間值。</p>
+<p><strong>做一次：</strong>圓心 x 從 100 到 700，移動兩秒，另留一秒終點停留。</p>
+<p>詳見 <a href="../OUTLINE/CHAPTER_BRIEFS/CH04.md">寫作任務卡</a>。</p>
+<h2>第 2 部｜動得自然，也能組織多幕</h2>
+<h3>第 5 章｜為什麼等速看起來像機器</h3>
+<p><strong>要回答：</strong>同樣兩秒、同樣距離，如何讓起步和停下不同？</p>
+<p><strong>帶走：</strong>緩動改變時間進度的映射；插值負責把該進度換成位置，兩者不是同一件事。</p>
+<p><strong>做一次：</strong>同一條路徑對照等速與 u²(3−2u)，在 25% 時間比較位置。</p>
+<p>詳見 <a href="../OUTLINE/CHAPTER_BRIEFS/CH05.md">寫作任務卡</a>。</p>
+<h3>第 6 章｜好幾件事如何同時發生</h3>
+<p><strong>要回答：</strong>文字先出現、圓再動、下一幕切換，怎麼不互相打架？</p>
+<p><strong>帶走：</strong>場景是編排單位，時間軸決定何時啟用；物件可成組，同時或錯開，不限面向物件語言。</p>
+<p><strong>做一次：</strong>兩幕各三秒；第二幕在全片第三秒開始，本幕時間重設為零。</p>
+<p>詳見 <a href="../OUTLINE/CHAPTER_BRIEFS/CH06.md">寫作任務卡</a>。</p>
+<h3>第 7 章｜線條怎麼自己長出來</h3>
+<p><strong>要回答：</strong>一條彎曲的線，如何看起來像正在被畫出來？</p>
+<p><strong>帶走：</strong>先有完整路徑的幾何，再控制可見範圍；路徑參數進度不保證等弧長速度。</p>
+<p><strong>做一次：</strong>三個點構成二次貝茲曲線，分別顯示 25%、50%、100% 的參數取樣。</p>
+<p>詳見 <a href="../OUTLINE/CHAPTER_BRIEFS/CH07.md">寫作任務卡</a>。</p>
+<h3>第 8 章｜中文字為什麼比畫圓麻煩</h3>
+<p><strong>要回答：</strong>字串明明正確，為什麼畫面會缺字、跳字或不居中？</p>
+<p><strong>帶走：</strong>文字內容、字形選擇、排版尺寸與實際繪圖不同；逐字動畫也要先知道一個可見字如何切分。</p>
+<p><strong>做一次：</strong>中文「計算」混英數，量字框與基線，再做透明度逐字出現。</p>
+<p>詳見 <a href="../OUTLINE/CHAPTER_BRIEFS/CH08.md">寫作任務卡</a>。</p>
+<h2>第 3 部｜很多小東西如何形成規律</h2>
+<h3>第 9 章｜一千顆小點怎麼一起管理</h3>
+<p><strong>要回答：</strong>難道每顆粒子都要單獨寫一段程式？</p>
+<p><strong>帶走：</strong>同一規則套在一組資料上；粒子可只是資料記錄，不需每點都是複雜物件。</p>
+<p><strong>做一次：</strong>固定種子建立兩百個起點，對每點套同一時間函數，重畫同幀。</p>
+<p>詳見 <a href="../OUTLINE/CHAPTER_BRIEFS/CH09.md">寫作任務卡</a>。</p>
+<h3>第 10 章｜散點怎麼排成一個字</h3>
+<p><strong>要回答：</strong>每個小點怎麼知道它最後該站哪裡？</p>
+<p><strong>帶走：</strong>先做字形遮罩，抽出目標位置，再安排點對應到哪個位置，最後決定移動規則。</p>
+<p><strong>做一次：</strong>用自繪「井」形幾何遮罩取樣，再由散點聚合；標示不是通用字型轉換器。</p>
+<p>詳見 <a href="../OUTLINE/CHAPTER_BRIEFS/CH10.md">寫作任務卡</a>。</p>
+<h3>第 11 章｜混亂為什麼有時很自然</h3>
+<p><strong>要回答：</strong>為什麼有些亂數像抖動，有些卻像煙或風？</p>
+<p><strong>帶走：</strong>獨立亂數與連續變化場不同；鄰近位置與時刻的相關性決定視覺連續性。</p>
+<p><strong>做一次：</strong>先用平滑正弦場，再比較逐幀抽樣亂數；另在進階節介紹平滑雜訊。</p>
+<p>詳見 <a href="../OUTLINE/CHAPTER_BRIEFS/CH11.md">寫作任務卡</a>。</p>
+<h3>第 12 章｜動畫怎麼有重量與回彈</h3>
+<p><strong>要回答：</strong>拉開的東西鬆手，為什麼會越過終點再回來？</p>
+<p><strong>帶走：</strong>彈簧可用力、速度與阻尼建模；直接時間函數與逐步模擬都能用，但可重現策略不同。</p>
+<p><strong>做一次：</strong>一維彈簧，用固定步長更新，與解析位置函數比較；保存可重播起點。</p>
+<p>詳見 <a href="../OUTLINE/CHAPTER_BRIEFS/CH12.md">寫作任務卡</a>。</p>
+<h2>第 4 部｜資料、關係與立體空間</h2>
+<h3>第 13 章｜數字怎麼變成可以看懂的圖</h3>
+<p><strong>要回答：</strong>十筆資料如何變成十根高度合理的柱子？</p>
+<p><strong>帶走：</strong>資料到幾何是明確映射；比例尺、單位、來源、缺值及非觀測中間值要交代。</p>
+<p><strong>做一次：</strong>以清楚標示的教學假資料畫柱形圖，並只動長條的進場，不杜撰真實測量。</p>
+<p>詳見 <a href="../OUTLINE/CHAPTER_BRIEFS/CH13.md">寫作任務卡</a>。</p>
+<h3>第 14 章｜關係怎麼變成一張網</h3>
+<p><strong>要回答：</strong>畫面上的線，到底代表真的關係，還是裝飾？</p>
+<p><strong>帶走：</strong>節點和連線是資料；排版只決定位置，位置接近不自動等於真實關係強。</p>
+<p><strong>做一次：</strong>五個節點先用固定座標，再示範力導向佈局的差異；清楚交代邊代表什麼。</p>
+<p>詳見 <a href="../OUTLINE/CHAPTER_BRIEFS/CH14.md">寫作任務卡</a>。</p>
+<h3>第 15 章｜平面怎麼看起來有深度</h3>
+<p><strong>要回答：</strong>明明螢幕是平的，遠的東西為什麼顯得小？</p>
+<p><strong>帶走：</strong>三維資料經鏡頭投影成二維畫面；深度、遮擋和視角要有規則。</p>
+<p><strong>做一次：</strong>旋轉一個線框立方體，以正交與透視對照；點靠近鏡頭前先裁切。</p>
+<p>詳見 <a href="../OUTLINE/CHAPTER_BRIEFS/CH15.md">寫作任務卡</a>。</p>
+<h3>第 16 章｜光影與著色程式在算什麼</h3>
+<p><strong>要回答：</strong>為什麼一個灰球加上亮暗就像有立體感？</p>
+<p><strong>帶走：</strong>幾何、光、材質、著色與合成不同；GPU 擅長平行工作，但不讓算法自己正確。</p>
+<p><strong>做一次：</strong>把位置轉顏色的簡單片段著色與頂點移動分開；另示範把亮區模糊再合回的光暈。</p>
+<p>詳見 <a href="../OUTLINE/CHAPTER_BRIEFS/CH16.md">寫作任務卡</a>。</p>
+<h2>第 5 部｜聲音、輸出與品質</h2>
+<h3>第 17 章｜聲音有另一條時鐘</h3>
+<p><strong>要回答：</strong>畫面每秒三十張，聲音也只能每秒變三十次嗎？</p>
+<p><strong>帶走：</strong>聲音以取樣率記錄，比畫面更密；同步的共同基準是時間，不是相同資料格數。</p>
+<p><strong>做一次：</strong>生成一條兩秒的 48,000 取樣／秒測試音，與 30 fps 的畫面對時。</p>
+<p>詳見 <a href="../OUTLINE/CHAPTER_BRIEFS/CH17.md">寫作任務卡</a>。</p>
+<h3>第 18 章｜說話和畫面怎麼對齊</h3>
+<p><strong>要回答：</strong>換一個聲音，為什麼原本的字幕突然跟不上？</p>
+<p><strong>帶走：</strong>旁白內容、實際長度、事件時間窗和混音相互影響；有介面不等於配音完成。</p>
+<p><strong>做一次：</strong>把三句音檔放進明確時間窗；示範長度超出時拒絕或重排，不默默切掉尾字。</p>
+<p>詳見 <a href="../OUTLINE/CHAPTER_BRIEFS/CH18.md">寫作任務卡</a>。</p>
+<h3>第 19 章｜為什麼能預覽卻不一定有影片檔</h3>
+<p><strong>要回答：</strong>畫面已經動了，為什麼還得算圖、壓縮與封裝？</p>
+<p><strong>帶走：</strong>渲染、編碼與封裝是不同階段；可把影格經記憶體管線交給編碼器，不一定存成萬張 PNG。</p>
+<p><strong>做一次：</strong>用附帶八秒示範串出 H.264／MP4，再檢查音軌、像素格式、時長與幀數。</p>
+<p>詳見 <a href="../OUTLINE/CHAPTER_BRIEFS/CH19.md">寫作任務卡</a>。</p>
+<h3>第 20 章｜怎麼知道影片真的做對了</h3>
+<p><strong>要回答：</strong>有一個 MP4 檔，就能說專案完成了嗎？</p>
+<p><strong>帶走：</strong>數值測試、可重現測試、中繼資料、完整解碼、視覺檢查與聽審證明的是不同事情。</p>
+<p><strong>做一次：</strong>檢查長度、frame count、首中末畫面；故意輸入錯誤時序看測試能否擋下。</p>
+<p>詳見 <a href="../OUTLINE/CHAPTER_BRIEFS/CH20.md">寫作任務卡</a>。</p>
+<h2>第 6 部｜把原理變成 AI 協作能力</h2>
+<h3>第 21 章｜怎麼把一句願望拆成能驗收的要求</h3>
+<p><strong>要回答：</strong>我說像被無形力量吸引，AI 真正需要補哪些決定？</p>
+<p><strong>帶走：</strong>意圖先拆成輸入、規則、時間、限制與觀察點；模型幫寫和改，使用者仍決定目標與證據。</p>
+<p><strong>做一次：</strong>把三千粒子成字拆成遮罩、取樣、配對、運動、停留、輸出與測試契約。</p>
+<p>詳見 <a href="../OUTLINE/CHAPTER_BRIEFS/CH21.md">寫作任務卡</a>。</p>
+<h3>第 22 章｜選工具時如何不被工具綁住</h3>
+<p><strong>要回答：</strong>換框架之後，我之前學到的東西還剩下甚麼？</p>
+<p><strong>帶走：</strong>問題與機制不等於函式庫名稱；同一時間函數可被不同渲染方式承載。</p>
+<p><strong>做一次：</strong>以同一小圓規格對照 Python、SVG、Remotion、Motion Canvas、Manim 的概念位置。</p>
+<p>詳見 <a href="../OUTLINE/CHAPTER_BRIEFS/CH22.md">寫作任務卡</a>。</p>
+<h3>第 23 章｜怎麼組出自己的影片引擎</h3>
+<p><strong>要回答：</strong>每次做新片都要重寫同一套時間軸嗎？</p>
+<p><strong>帶走：</strong>內容資料、運動規則、繪圖與輸出分開；資料規範與有效快取讓更換內容可控。</p>
+<p><strong>做一次：</strong>以小型 Scene JSON 定義兩幕，驗證區間連續、欄位型別、總長與資源存在。</p>
+<p>詳見 <a href="../OUTLINE/CHAPTER_BRIEFS/CH23.md">寫作任務卡</a>。</p>
+<h3>第 24 章｜完成一支你能解釋的影片</h3>
+<p><strong>要回答：</strong>不是複製範例，怎樣證明自己已經理解？</p>
+<p><strong>帶走：</strong>完成小作品與講清關鍵取捨，比巨型片長更適合首次遷移驗證；之後再擴展規模。</p>
+<p><strong>做一次：</strong>做 60～90 秒、4～6 幕說明片：字、粒子、路徑、數據或關係，配時間碼與可替換聲音。</p>
+<p>詳見 <a href="../OUTLINE/CHAPTER_BRIEFS/CH24.md">寫作任務卡</a>。</p>
+<h2>全書之外的可更新附錄</h2>
+<p>A. 常用英文辨認與中文索引。B. 命令列、檔案路徑與最小環境。C. 框架概念對照與版本查核日期。D. 常見出錯畫面與定位方式。E. 案例證據、來源與作者修訂紀錄。</p>
+<p>附錄不替代正文首次解釋，正文不依賴某個付費服務開通。</p>
+</article><footer class="footer">李詩民的原理學習書專案 · 2026-10-05<br>本頁是交接資料，不代表全書已完成。所有核心檔案均保留可編輯文字版本。</footer></div></body></html>

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="520" viewBox="0 0 1000 520">
+<title>聲音有另一條時鐘</title>
+<rect width="1000" height="520" rx="18" fill="#f7f5ef"/>
+<text x="46" y="68" font-size="30" font-family="sans-serif" fill="#172b3a">第17章｜聲音有另一條時鐘</text>
+<rect x="36" y="105" width="928" height="98" rx="12" fill="#e1efea"/>
+<text x="58" y="138" font-size="21" font-family="sans-serif" fill="#0b746b">兩秒畫面</text>
+<text x="58" y="177" font-size="22" font-family="sans-serif" fill="#172b3a">30fps → 60張</text>
+<rect x="36" y="220" width="928" height="98" rx="12" fill="#edf0f2"/>
+<text x="58" y="253" font-size="21" font-family="sans-serif" fill="#0b746b">兩秒單聲道聲音</text>
+<text x="58" y="292" font-size="22" font-family="sans-serif" fill="#172b3a">48kHz → 96,000個取樣</text>
+<rect x="36" y="335" width="928" height="98" rx="12" fill="#fff0d7"/>
+<text x="58" y="368" font-size="21" font-family="sans-serif" fill="#0b746b">共同半秒</text>
+<text x="58" y="407" font-size="22" font-family="sans-serif" fill="#172b3a">影格索引15；音訊索引24,000</text>
+<text x="46" y="496" font-size="18" font-family="sans-serif" fill="#60717a">原創教學對照｜數字見逐章檢查｜無原片演算法推定</text>
+</svg>

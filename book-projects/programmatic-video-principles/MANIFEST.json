@@ -1,0 +1,608 @@
+{
+  "project": "程式如何變成影片｜Codex 寫書交接",
+  "version": "1.0.0",
+  "created_date": "2026-10-05",
+  "note": "不包含本清單自身的雜湊；修改任何原檔後，需重新建立新版清單。",
+  "files": [
+    {
+      "path": ".gitignore",
+      "bytes": 102,
+      "sha256": "6cd6e0571e29dddd2c18e1d9ddc9899924a9d8a7ba90a7d29baa573e18483676"
+    },
+    {
+      "path": "00_START_HERE.md",
+      "bytes": 2968,
+      "sha256": "539c562f919464457974f7deabded52f4c1e1601e8aff5a21cb2fda2d2f55e05"
+    },
+    {
+      "path": "01_驗證交接.cmd",
+      "bytes": 493,
+      "sha256": "55a4ab417256ff1ed7498c41c87f4150b88de3386a7acf078175da20d5c339f6"
+    },
+    {
+      "path": "02_重建圖解.cmd",
+      "bytes": 423,
+      "sha256": "12755155654256adc466e77f1435597756d4fa61ef7ca48badd5583c9d74118c"
+    },
+    {
+      "path": "AGENTS.md",
+      "bytes": 3348,
+      "sha256": "a70d0cbef1728cd6c18bb74582b25067afee0d6741de93beb02123a73cbfcc98"
+    },
+    {
+      "path": "CASE_STUDY/CASE_BRIEF.md",
+      "bytes": 2016,
+      "sha256": "ea3db090efeac793cec01cb0bac2d97e660d2300c661a52c20793f39c26a378b"
+    },
+    {
+      "path": "CASE_STUDY/EVIDENCE_AND_LIMITS.md",
+      "bytes": 1060,
+      "sha256": "95b4c8c69fee7069a7426392e4f37451e24acf3ce123e719eb33d44835be29ce"
+    },
+    {
+      "path": "CASE_STUDY/OBSERVED_FRAMES.md",
+      "bytes": 1517,
+      "sha256": "d67fa3f69ec29cd4e1aee75a7bdc3e4f1b03e83ce9763c937e08134fce044c51"
+    },
+    {
+      "path": "CASE_STUDY/SCREENSHOT_REVIEW.md",
+      "bytes": 983,
+      "sha256": "cd2c54e617089355e7ca472c3b70aa72b7a82d46e3a80e75b0b843b74536a214"
+    },
+    {
+      "path": "CASE_STUDY/evidence/QA_REPORT_original.md",
+      "bytes": 4677,
+      "sha256": "1fb53457c1e609505af1b06a51db0f3f2e4e5bd5584f05e5fb34efa43cf05a0d"
+    },
+    {
+      "path": "CASE_STUDY/evidence/World_Becomes_Computable_1080p_EngineeringVoice_ffprobe.json",
+      "bytes": 782,
+      "sha256": "195e94420576228c503d8385a0af35a2f256864fd502e8f8528149475a788d20"
+    },
+    {
+      "path": "CASE_STUDY/evidence/World_Becomes_Computable_1080p_MusicSubtitles_ffprobe.json",
+      "bytes": 606,
+      "sha256": "46e7d08a2eb2b15350a9b34bc5579710365b8859cf946d79ac79d3eeff42a8e9"
+    },
+    {
+      "path": "CASE_STUDY/evidence/case_t120.jpg",
+      "bytes": 24063,
+      "sha256": "8d5fa3e32ff664779aa319a69a20d3e9964e78a9b993f5d912f982c2ad1fa6ed"
+    },
+    {
+      "path": "CASE_STUDY/evidence/case_t300.jpg",
+      "bytes": 31117,
+      "sha256": "16c3a538dc346ad4d8c1cef2445a4326a98f73567e286c7686e27d697d46d4dc"
+    },
+    {
+      "path": "CASE_STUDY/evidence/case_t540.jpg",
+      "bytes": 27258,
+      "sha256": "c29fbf5aae8a4e6ba232f4b7af1357252c1a278ece52793106bf6fecb505b8d0"
+    },
+    {
+      "path": "CASE_STUDY/evidence/case_t660.jpg",
+      "bytes": 24221,
+      "sha256": "032e932dae78c77a8b1723d7e3942fce6bf20e6e34f6e7b68a87ccffb5fa87f6"
+    },
+    {
+      "path": "CASE_STUDY/evidence/media_inventory.json",
+      "bytes": 2160,
+      "sha256": "4121c8f471a3b4fff85758af66d2d205e20018581994ccd6394b0d785933404d"
+    },
+    {
+      "path": "CODEX_INSTRUCTIONS/BEGINNER_REVIEW_PROMPT.md",
+      "bytes": 860,
+      "sha256": "eee05cf6d79505aa21e94ecefa7ce299fccb44256ee28b3110a1250e6fda8303"
+    },
+    {
+      "path": "CODEX_INSTRUCTIONS/CHAPTER_WRITER_PROMPT.md",
+      "bytes": 832,
+      "sha256": "5c0030291a6ff3cfba57a0854e2bb81a17ed2c5fa29729af87a0b65c4b66e0b2"
+    },
+    {
+      "path": "CODEX_INSTRUCTIONS/DEFINITION_OF_DONE.md",
+      "bytes": 953,
+      "sha256": "b3924e660d0074dae611106858ab4994ab4b3ff95ed76f6d2bc1cc0acb11f429"
+    },
+    {
+      "path": "CODEX_INSTRUCTIONS/FINAL_EDITOR_PROMPT.md",
+      "bytes": 903,
+      "sha256": "bef94d283b33fe11ffd0af2203541a1d3069eb5ea09f1294b55d79ab8c46fa30"
+    },
+    {
+      "path": "CODEX_INSTRUCTIONS/MASTER_PROMPT.md",
+      "bytes": 3248,
+      "sha256": "e0433518e7e53d392edc28df3874955c1dc9cbb74e4bfd246ff955c344a2b3b0"
+    },
+    {
+      "path": "CODEX_INSTRUCTIONS/RESUME_PROMPT.md",
+      "bytes": 528,
+      "sha256": "ab4fa9303ec886f518b0f54d16b9d2bcaeac24f6c3231191e2e958fcc67870e5"
+    },
+    {
+      "path": "CODEX_INSTRUCTIONS/TECHNICAL_REVIEW_PROMPT.md",
+      "bytes": 995,
+      "sha256": "4a3cf856d488c29fc42335da195352c3bdbecbc9ad0a09c717ec569c2b042841"
+    },
+    {
+      "path": "CONTEXT/AUTHOR_INTENT.md",
+      "bytes": 1193,
+      "sha256": "0c24e9dfb53a23ea65255dbff8fb7e15fb74d4cbdc4af5bfc62226cdf4a35483"
+    },
+    {
+      "path": "CONTEXT/DECISIONS_AND_BOUNDARIES.md",
+      "bytes": 2594,
+      "sha256": "749cf32bf102b94ed1d98b6872fdeb120921b14bb7c6934b5f551bda6325ad67"
+    },
+    {
+      "path": "CONTEXT/EXISTING_PROJECT_INTEGRATION.md",
+      "bytes": 826,
+      "sha256": "b92638e84047113db7cb207bb9647e603a51a915bdeb5336734bd0d275fe01fa"
+    },
+    {
+      "path": "CONTEXT/TARGET_READER.md",
+      "bytes": 900,
+      "sha256": "d08125e66d63e03843bfaeae80a314e2e1e04528227d3568805f723744a08d27"
+    },
+    {
+      "path": "GLOSSARY/ABBREVIATIONS_AND_CONFUSIONS.md",
+      "bytes": 1127,
+      "sha256": "7c57297786c82583a5717842490443eb8c50219d994006761065bf3ddf9669fe"
+    },
+    {
+      "path": "GLOSSARY/TERMINOLOGY_RULES.md",
+      "bytes": 2082,
+      "sha256": "52e45922d4c361284ed3c033a972413618a44452323d04480d97ed42e58ae5e3"
+    },
+    {
+      "path": "GLOSSARY/terms.json",
+      "bytes": 53374,
+      "sha256": "4305a934dc852c635987f44b13c4654ba5ad60d68708a79c18953a0b1f9dc181"
+    },
+    {
+      "path": "GLOSSARY/中英術語卡.md",
+      "bytes": 39791,
+      "sha256": "a2ca313ac90b2ce75413392365ce1bc6bc1d5329ac6d80252f4d42d7218034bd"
+    },
+    {
+      "path": "MANUSCRIPT/README.md",
+      "bytes": 644,
+      "sha256": "838eaf481bf244373815a4799d26b720a9b155cabbe60c3d100513f945948b47"
+    },
+    {
+      "path": "OUTLINE/CHAPTER_BRIEFS/CH01.md",
+      "bytes": 2463,
+      "sha256": "f4c986f343bc6c3fbf4693609eeef638e0992a2710a1b4cda6be8d41236a5e92"
+    },
+    {
+      "path": "OUTLINE/CHAPTER_BRIEFS/CH02.md",
+      "bytes": 2427,
+      "sha256": "6b3144687a0d4f12eac3217ab73652eca48d3cca4f5b3bcdfd91876a0ac3b40f"
+    },
+    {
+      "path": "OUTLINE/CHAPTER_BRIEFS/CH03.md",
+      "bytes": 2438,
+      "sha256": "4c7dbc9c9507eea5e394f123b86429a6b57a029c04d70dbd6aa4cfd2e9b4eb6d"
+    },
+    {
+      "path": "OUTLINE/CHAPTER_BRIEFS/CH04.md",
+      "bytes": 2404,
+      "sha256": "98d8e1ed4ec412f22de579d0a9ef9b47cfb358a23f3204b8aa5042307dca4232"
+    },
+    {
+      "path": "OUTLINE/CHAPTER_BRIEFS/CH05.md",
+      "bytes": 2453,
+      "sha256": "6731e7be305b3dda02d516a2960e6705a24f461ca2bb8c1138ed2cd659935e78"
+    },
+    {
+      "path": "OUTLINE/CHAPTER_BRIEFS/CH06.md",
+      "bytes": 2507,
+      "sha256": "e122669099e3e9ad9a28adce5d69b024a545bfdd4b48513e3b92a7a4c2d91f9e"
+    },
+    {
+      "path": "OUTLINE/CHAPTER_BRIEFS/CH07.md",
+      "bytes": 2445,
+      "sha256": "585caf69386c36671eccbb21ac9dca90ebfcc88106fb1a4e58121fc70f45e257"
+    },
+    {
+      "path": "OUTLINE/CHAPTER_BRIEFS/CH08.md",
+      "bytes": 2550,
+      "sha256": "133d0ee820b6b5c0fa504ed9d16fb411a0cf59bf61d20ee42a4215d11ebc785f"
+    },
+    {
+      "path": "OUTLINE/CHAPTER_BRIEFS/CH09.md",
+      "bytes": 2500,
+      "sha256": "e008cb101c338bdfe690a52c4bff603f5fafae46770561aa2b2bd2e3389b4d4b"
+    },
+    {
+      "path": "OUTLINE/CHAPTER_BRIEFS/CH10.md",
+      "bytes": 2491,
+      "sha256": "0ea8041aefaecac5599b82df8a357ed4bdee51516ca7999793ae5cf5c54a730b"
+    },
+    {
+      "path": "OUTLINE/CHAPTER_BRIEFS/CH11.md",
+      "bytes": 2466,
+      "sha256": "12c4ae55880e38399a62d981799dbb5a7a5eb651c04227a44c6b9339313c7a6c"
+    },
+    {
+      "path": "OUTLINE/CHAPTER_BRIEFS/CH12.md",
+      "bytes": 2486,
+      "sha256": "e462a5578b8ff61688bfcd4fbd7f6d2db39b08874899c80a194c58af56b5beae"
+    },
+    {
+      "path": "OUTLINE/CHAPTER_BRIEFS/CH13.md",
+      "bytes": 2494,
+      "sha256": "a3d5fae232d9e00739aff2a8beac1b6f94913482d54d9aae849fc7d63e568735"
+    },
+    {
+      "path": "OUTLINE/CHAPTER_BRIEFS/CH14.md",
+      "bytes": 2476,
+      "sha256": "38f30449873244402c58304610fcaefcb95709a9e075350bd878446ca465040b"
+    },
+    {
+      "path": "OUTLINE/CHAPTER_BRIEFS/CH15.md",
+      "bytes": 2451,
+      "sha256": "5b1e7c7fbbe82ee2c50565cbd1d4cccdb2896be4e7cb80943fd81fe394745f69"
+    },
+    {
+      "path": "OUTLINE/CHAPTER_BRIEFS/CH16.md",
+      "bytes": 2511,
+      "sha256": "2fc28555163d7b0d010b3ff4ac053c5b7ff0f00606e0542a7177169c852d2d65"
+    },
+    {
+      "path": "OUTLINE/CHAPTER_BRIEFS/CH17.md",
+      "bytes": 2480,
+      "sha256": "53789d0245971b2341bc093657b3da2f09fd6085581796ef5495f3fad5c716b9"
+    },
+    {
+      "path": "OUTLINE/CHAPTER_BRIEFS/CH18.md",
+      "bytes": 2532,
+      "sha256": "4d7e17c284a11580fa772455a7e33cd0b4e5f98317e20c1505802bc8e2064119"
+    },
+    {
+      "path": "OUTLINE/CHAPTER_BRIEFS/CH19.md",
+      "bytes": 2520,
+      "sha256": "863226bc0907ddd7b93954a18a8560eb3bf71c8885fa37fb4c6a0415066b5f1f"
+    },
+    {
+      "path": "OUTLINE/CHAPTER_BRIEFS/CH20.md",
+      "bytes": 2497,
+      "sha256": "c3f2f236886131429aece59340b901ce63e4de4fd12cae774ad663d0505c1d35"
+    },
+    {
+      "path": "OUTLINE/CHAPTER_BRIEFS/CH21.md",
+      "bytes": 2541,
+      "sha256": "f597c88e683b50f44270228f7a4f37a2fd1753c25b22f33b9b81a0454719bc89"
+    },
+    {
+      "path": "OUTLINE/CHAPTER_BRIEFS/CH22.md",
+      "bytes": 2487,
+      "sha256": "c6de48b743036b8b0239d19fe72662ffbcfdf940678ef5c227f84989861457df"
+    },
+    {
+      "path": "OUTLINE/CHAPTER_BRIEFS/CH23.md",
+      "bytes": 2519,
+      "sha256": "99ea7139fba4dc37a4ba8a9c2fe725f3184f200293e3f5f4b10a660225744ab2"
+    },
+    {
+      "path": "OUTLINE/CHAPTER_BRIEFS/CH24.md",
+      "bytes": 2640,
+      "sha256": "ae426f54c82130e5b0ae549f52f76b6c08b25d9e7f797399cf2a47352dfb567a"
+    },
+    {
+      "path": "OUTLINE/CHAPTER_DEPENDENCIES.md",
+      "bytes": 1643,
+      "sha256": "14df10204522cc5e13b028fba6d58dfabb1f955845783430fa3d86d0d5f98e2e"
+    },
+    {
+      "path": "OUTLINE/FULL_BOOK_OUTLINE.md",
+      "bytes": 10608,
+      "sha256": "7685a1b08a6af8de1f51a0b57de9986b88fcb48de697113df5eb761f99fc3f73"
+    },
+    {
+      "path": "OUTLINE/LEARNING_PATH.md",
+      "bytes": 1389,
+      "sha256": "28ef568f79278f0a0223486ffb0c1f438521cda7f44aebc254ad7a8cae431452"
+    },
+    {
+      "path": "OUTLINE/chapter_plan.json",
+      "bytes": 30827,
+      "sha256": "0447d4d87849c7b05373fba1ba10a4e39df82fb45a52452bfaa2084fa87733ee"
+    },
+    {
+      "path": "PROJECT_MAP.md",
+      "bytes": 1732,
+      "sha256": "866d1479f5bd246a7338236c8479bc03113fdcd387ecf885adef6f4e458ec99c"
+    },
+    {
+      "path": "READING/glossary.html",
+      "bytes": 73416,
+      "sha256": "dcacbf5087677baa8db51aa682f32bd14ef651134ffe5c0e875383b55bf54765"
+    },
+    {
+      "path": "READING/outline.html",
+      "bytes": 13435,
+      "sha256": "e2d2bc7cace0d81e049783569491e6518fbc838f2d379fb4206b0a0dbc45f53e"
+    },
+    {
+      "path": "READING/sample_chapter.html",
+      "bytes": 12069,
+      "sha256": "4c80d6585101edefd9efc263b116c21d130607de57709d10fec4644c855e0d2f"
+    },
+    {
+      "path": "READING/site.css",
+      "bytes": 5193,
+      "sha256": "aaedba6573ce885d1e03fc140bf667147fc30745bed45560a31a5b59efefea91"
+    },
+    {
+      "path": "README.md",
+      "bytes": 2512,
+      "sha256": "b3a0a05bad5bc875c2c3fac49dfac9795e8796c4fe5039fe5fa3be0bb3cd7de6"
+    },
+    {
+      "path": "RESEARCH/FACT_CHECK_POLICY.md",
+      "bytes": 1398,
+      "sha256": "31c26a2c88636ce131f9372f5acb535fd4237ce44573d1ffcfab0eab4d71a293"
+    },
+    {
+      "path": "RESEARCH/SOURCE_INDEX.md",
+      "bytes": 5066,
+      "sha256": "33f63998c6462f3409d9ce0496b3d3e78cddbae8261d36a856ee16c90a729852"
+    },
+    {
+      "path": "RESEARCH/claim_ledger.seed.json",
+      "bytes": 1132,
+      "sha256": "109d6a4916f0d7e111d3488aed3ddac81fa45aaee76a4b34027bb53d185ea44e"
+    },
+    {
+      "path": "RESEARCH/sources.json",
+      "bytes": 6316,
+      "sha256": "da7d74338ad1e6d838a0ef09b7b9dcf18284da828deba9b98a11429f44aeffb7"
+    },
+    {
+      "path": "RIGHTS_AND_PROVENANCE.md",
+      "bytes": 1025,
+      "sha256": "4da259bbe1fbdbb1acdaf072f625953e668101b9c6595a71a9469bc5ce811fe4"
+    },
+    {
+      "path": "SAMPLE_CHAPTER/CH04_圓點為什麼會動.md",
+      "bytes": 10210,
+      "sha256": "b7a7d82427fce742675be533a3e6c2d10fb873a56a4c8603256f232aff86bd4e"
+    },
+    {
+      "path": "SAMPLE_CHAPTER/EDITOR_NOTES.md",
+      "bytes": 693,
+      "sha256": "3ead869c6e490d5ca6e511e3a32cef15337ba1dddf6abc34aec90e7f49984227"
+    },
+    {
+      "path": "START_HERE.html",
+      "bytes": 11220,
+      "sha256": "ac4ac78ef5c008fdef63499529c1903617964410309e76ed0bdac98e0b95e189"
+    },
+    {
+      "path": "STYLE_GUIDE/BEGINNER_REVIEW_CHECKLIST.md",
+      "bytes": 914,
+      "sha256": "56b46b73df305b1a1b68180de4ace2ada613975e5982d6eb6d975e8b90228996"
+    },
+    {
+      "path": "STYLE_GUIDE/CHAPTER_TEMPLATE.md",
+      "bytes": 1353,
+      "sha256": "8596a72ece72218dbd86827c0e049f0ada50968169d9caa55f5cef4af88617bf"
+    },
+    {
+      "path": "STYLE_GUIDE/FIGURE_SPEC.md",
+      "bytes": 1307,
+      "sha256": "f4f3cb959ec10df1848d562d54897887bf88c0f93576655afc856f8bc3c13250"
+    },
+    {
+      "path": "STYLE_GUIDE/MATH_AND_CODE.md",
+      "bytes": 1710,
+      "sha256": "5c95d686610628d6cc1fd5e8418d87d531ae5190139f7bb361f383a50180de8e"
+    },
+    {
+      "path": "STYLE_GUIDE/TECHNICAL_ACCURACY.md",
+      "bytes": 3310,
+      "sha256": "9e21cf6dc7a5b5daa65735bec39d0c8016dbfe1d7a67441a5d798c10f02c62fd"
+    },
+    {
+      "path": "STYLE_GUIDE/WRITING_VOICE.md",
+      "bytes": 1606,
+      "sha256": "bb58e72cb212c8feecbef62097f881c0c3a9a0f04c4db2ea1efda7cb69b45abc"
+    },
+    {
+      "path": "book.json",
+      "bytes": 2076,
+      "sha256": "a4296f7054fb6f84c29713830d1110a3df0e9df14451e2c47d2bb0fd8600e50e"
+    },
+    {
+      "path": "examples/README.md",
+      "bytes": 3031,
+      "sha256": "14a4007b33e1bef5ce8e0c6f951acdfa8e46504c88a66e7ae75e6b126cce3d26"
+    },
+    {
+      "path": "examples/build_examples.py",
+      "bytes": 5444,
+      "sha256": "c6f7f9b35a829273edc61fc48d3a075d99ce1f41f9edd8619cb236c94d27ae73"
+    },
+    {
+      "path": "examples/motion_core.py",
+      "bytes": 5126,
+      "sha256": "083e930210d2db274565730b606829022d6a15de8f5ccfd2fa0abd5baffd6ba6"
+    },
+    {
+      "path": "examples/output/01_coordinate.svg",
+      "bytes": 3180,
+      "sha256": "ced0b8f7c5bb88ea4b8d9672bf2d42532c8dda8d6411fc7ab5bc6e1ed12c66fa"
+    },
+    {
+      "path": "examples/output/02_interpolation.svg",
+      "bytes": 1967,
+      "sha256": "1048bb2ba429daa20d72480a6523ced8e99c482f2a03dc14a4e0d410c8b279af"
+    },
+    {
+      "path": "examples/output/03_easing.svg",
+      "bytes": 2514,
+      "sha256": "1d9a344e83455445c240d207b699f14d2793f7e8ba0bfff344f6962c82e455fb"
+    },
+    {
+      "path": "examples/output/04_path.svg",
+      "bytes": 3444,
+      "sha256": "2fb1bf18af40a870484750e4d61dc1b495776a68925d170fb58467c372ce6b98"
+    },
+    {
+      "path": "examples/output/05_particles.svg",
+      "bytes": 61406,
+      "sha256": "9edcc4f36002dfbe016058396ec93cc9d722d9880b2e5a6dd20c34c346be0f61"
+    },
+    {
+      "path": "examples/output/06_projection.svg",
+      "bytes": 2461,
+      "sha256": "3d62d161a79ec073e8c3cc5c08e83533267ddc603e58708a09bf527cd85c9a71"
+    },
+    {
+      "path": "examples/output/demo_cue.wav",
+      "bytes": 768044,
+      "sha256": "c4df5322460afb58dd1876e97f263b9cf3e23a32d5adae1a4753736494d9fab6"
+    },
+    {
+      "path": "examples/output/demo_still.png",
+      "bytes": 50153,
+      "sha256": "c5f0b3ad716314fe257a8182807cc36f898e1e9d1368cd56a7bd82ccea598f03"
+    },
+    {
+      "path": "examples/output/examples_index.json",
+      "bytes": 250,
+      "sha256": "7fb250646975f5e76bb30b54f1e181cd0412eadb5128b0999805ab1f0a9f91d7"
+    },
+    {
+      "path": "examples/output/principles_demo.ffmpeg.log",
+      "bytes": 4261,
+      "sha256": "cf7eeb736fb252dfb65f58f25ea1b755e6534a610f54bfff3873ba3a27f1e0e7"
+    },
+    {
+      "path": "examples/output/principles_demo.json",
+      "bytes": 309,
+      "sha256": "3b2727b09b4b133107ca497b872ab112badb190b9d2db69e90a17635cef01b4d"
+    },
+    {
+      "path": "examples/output/principles_demo.mp4",
+      "bytes": 536838,
+      "sha256": "e837ced19f152be4d01e881bfddf25dcf54242dab5d40e69b60c218d0f5dc82b"
+    },
+    {
+      "path": "examples/render_demo.py",
+      "bytes": 5366,
+      "sha256": "1603eae3c53f232f5d432e334ba7f50c9b9d0c282b131e17c5034b1f0bff4967"
+    },
+    {
+      "path": "qa/HANDOFF_QA.md",
+      "bytes": 4005,
+      "sha256": "3202457d08c27c50d3435955d960d3fe282b70910718705db5d94debabc190e3"
+    },
+    {
+      "path": "qa/REVIEW_TEMPLATE.md",
+      "bytes": 472,
+      "sha256": "51be941b947283be9077cd0f8875501058f8eecd40aac27e9b6d0a451b900230"
+    },
+    {
+      "path": "qa/browser_check.json",
+      "bytes": 1026,
+      "sha256": "54463815385fe7b31749f80a35dc4186a4044faeabbd8c7fd51bbe6a1eaf11e3"
+    },
+    {
+      "path": "qa/demo_decode.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "qa/demo_ffprobe.json",
+      "bytes": 4345,
+      "sha256": "1901197bb971171f79f509a25328c3f11fc71be6877df4f92740ad9176f912ba"
+    },
+    {
+      "path": "qa/manuscript_lint_status.json",
+      "bytes": 101,
+      "sha256": "2350adb368309bf76d11e0ed390fdbe331bf76acc920820ad2f43cdda205e21a"
+    },
+    {
+      "path": "qa/previews/06_projection_browser.png",
+      "bytes": 37777,
+      "sha256": "c1e2f5f079b5cc229ea4bd724558396a3a8e6bc853839cd42329068a8e5be6bb"
+    },
+    {
+      "path": "qa/previews/demo_particles_browser.png",
+      "bytes": 166288,
+      "sha256": "d0992191ab8daccc9b878a57f5c55f936c320be73486cdbe7d19345ed4ed2699"
+    },
+    {
+      "path": "qa/previews/glossary_search.png",
+      "bytes": 94935,
+      "sha256": "da50e3d77234eb1dcd1ae2233436924b12fe08a5f1daf466ba2295ef53243e89"
+    },
+    {
+      "path": "qa/previews/landing_desktop.png",
+      "bytes": 104596,
+      "sha256": "a5b275f8c572614055798910fb03df10f07280bf40d2add736f630e96ec19cc4"
+    },
+    {
+      "path": "qa/previews/landing_mobile.png",
+      "bytes": 76486,
+      "sha256": "f63c2c9f0e3fe67fe1b32ae7e0e8341b1bb48a82af767c0aa05358d2fec12af9"
+    },
+    {
+      "path": "qa/previews/sample_desktop.png",
+      "bytes": 146249,
+      "sha256": "0c5df6df6dc56e44ce9a58eaadd3885be5b5f4768c0a7af2ae997c62887bef0b"
+    },
+    {
+      "path": "qa/sample_lint_hints.json",
+      "bytes": 334,
+      "sha256": "a0488d5ad9d236595c665ad7c30e9b75a6d9e92f48fe9f2a03468daf2e83fe9c"
+    },
+    {
+      "path": "qa/structure_check.json",
+      "bytes": 171,
+      "sha256": "1ebd47fa5895f221e37cf49cf6aeca4bb6cebf943e6dcab4de035732cdcf9555"
+    },
+    {
+      "path": "qa/tests.log",
+      "bytes": 3007,
+      "sha256": "b110b7917615ae51bbc9424d1256e1af0e4c8a6c19467b8d247fa9085019ddf5"
+    },
+    {
+      "path": "requirements-demo.txt",
+      "bytes": 15,
+      "sha256": "41b54a6fb2918667ca47a61d73b522629d84490f3d78f0f20b21135faba10d35"
+    },
+    {
+      "path": "requirements-docs.txt",
+      "bytes": 146,
+      "sha256": "19a15d6368576014fbd505531d2d99dd3f2466343de636252c9007e55007a42b"
+    },
+    {
+      "path": "scripts/build_reading.py",
+      "bytes": 15789,
+      "sha256": "8a250f2b7de7335b0b52875fb49a3b4baa536a2f95dceae38bdb8901b0bd6fe4"
+    },
+    {
+      "path": "scripts/lint_manuscript.py",
+      "bytes": 2555,
+      "sha256": "492e4c0cc573f101061c63497002edb8225dd8b4f3db9763569bee95ec50b810"
+    },
+    {
+      "path": "scripts/validate_package.py",
+      "bytes": 4708,
+      "sha256": "3812d7e01a7b643153c9e999d783c2ca413941d26b63ff849e16d478905c2077"
+    },
+    {
+      "path": "tests/test_motion_core.py",
+      "bytes": 3924,
+      "sha256": "88a5d4f5696809137cc9ba34e0299aa07ad3bfb7672183deb7026f504eed8f57"
+    },
+    {
+      "path": "work.json",
+      "bytes": 4608,
+      "sha256": "3cfae476cd3d781dbae9b2a11410f45883b4772a60efb273ff77a3a7a4e620b2"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "scope": "啟發式提示，不是語意驗收分數。每個提示可由人工判定不適用。",
+  "files": [
+    {
+      "path": "/mnt/data/Programmatic_Video_Book_Handoff_v1/SAMPLE_CHAPTER/CH04_圓點為什麼會動.md",
+      "chinese_character_count": 2431,
+      "hints": [],
+      "status": "REVIEW_REQUIRED"
+    }
+  ]
+}

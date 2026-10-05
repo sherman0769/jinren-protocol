@@ -1,0 +1,23 @@
+{
+  "status": "asset-selection-passed",
+  "checks": [
+    "封面主標、副標及作者可讀",
+    "影片面板正面朝鏡头；無反面透字",
+    "無人物，地域設定不適用",
+    "四幕代表幀0015/0465/0975/1425已查看，數值與因果相符"
+  ],
+  "secondGate": {
+    "status": "passed",
+    "viewport": [
+      390,
+      844
+    ],
+    "captionFontPixels": 17,
+    "documentWidth": 375,
+    "noHorizontalOverflow": true,
+    "imageLoaded": true,
+    "screenshot": "qa/reader-mobile.png",
+    "noDirectedSurfaceConflict": true,
+    "personRegionCheck": "no people"
+  }
+}

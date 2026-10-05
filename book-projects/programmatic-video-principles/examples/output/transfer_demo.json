@@ -1,0 +1,9 @@
+{
+  "kind": "teaching_transfer_baseline",
+  "frames": 1800,
+  "fps": 30,
+  "durationSeconds": 60,
+  "scenes": 4,
+  "audio": "quiet original cue; no narration",
+  "bytes": 1093371
+}

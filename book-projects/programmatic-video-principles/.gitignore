@@ -1,0 +1,12 @@
+__pycache__/
+*.py[cod]
+.venv/
+node_modules/
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+.DS_Store
+Thumbs.db
+examples/output/*.ffmpeg.log

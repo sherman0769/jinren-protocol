@@ -1,0 +1,223 @@
+{
+  "slug": "how-code-becomes-film",
+  "chapters": [
+    {
+      "number": 1,
+      "source": "MANUSCRIPT\\chapters\\chapter_01_main.md",
+      "sourceSha256": "04c059907f3f409864dbae08d61a8ad84e929d07dc8c37643abd0edc9fdf3a9c",
+      "readerSha256": "2ab7f1db027578cc9079cd71418ba5f395d399bf14338a05360371b0034eac52",
+      "figure": "/books/how-code-becomes-film/figures/chapter_01.svg",
+      "figureAlt": "影片為什麼不是一張會動的照片：尺寸，960 × 540 = 518,400 像素位置；片長與幀率，3 秒 × 30 張／秒 = 90 張；索引與取樣，0 … 89；最後 89/30 ≈ 2.9667 秒",
+      "chineseCharacters": 1472
+    },
+    {
+      "number": 2,
+      "source": "MANUSCRIPT\\chapters\\chapter_02_main.md",
+      "sourceSha256": "85eded51303735a509c206edbca0728a5c665b8122c25d8c6aa69251afbeec31",
+      "readerSha256": "b4887d38090c65a5aadda45e368379641953eef01db8b7a2fe06881b501c50cf",
+      "figure": "/books/how-code-becomes-film/figures/chapter_02.svg",
+      "figureAlt": "電腦怎麼知道白點在哪裡：畫布幾何中心，960/2，540/2 → (480,270)；外緣距離20，半徑20，圓心 → (40,40)；座標約定，左上原點；x 向右；y 向下",
+      "chineseCharacters": 1307
+    },
+    {
+      "number": 3,
+      "source": "MANUSCRIPT\\chapters\\chapter_03_main.md",
+      "sourceSha256": "89482c731c3771197a7759a5e84d95142bd46bd697b34657f96aab3735df0a86",
+      "readerSha256": "199fd933d1bfdb5aa869418fbcfd19843c07d1b24a689322b1c4b31d58160fd2",
+      "figure": "/books/how-code-becomes-film/figures/chapter_03.svg",
+      "figureAlt": "如何把現在交給程式：亂序索引，60 → 0 → 30 → 60；作品時間（秒），2 → 0 → 1 → 2；位置（像素），200 → 100 → 150 → 200",
+      "chineseCharacters": 1305
+    },
+    {
+      "number": 4,
+      "source": "MANUSCRIPT\\chapters\\chapter_04_main.md",
+      "sourceSha256": "f6cacd474e59272d9c11a1def66fc1a21e13ba10fc64aba5daac68c54d7f304b",
+      "readerSha256": "7b45ddb9e99e9e957f8706b290e50e08885e29c39fc6b193fa0be3876f88cc11",
+      "figure": "/books/how-code-becomes-film/figures/chapter_04.svg",
+      "figureAlt": "圓點為什麼會動：時間（秒），0 → 0.5 → 1 → 1.5 → 2；位置（像素），100 → 250 → 400 → 550 → 700；結束之後，把進度限制在1，保持700",
+      "chineseCharacters": 2573
+    },
+    {
+      "number": 5,
+      "source": "MANUSCRIPT\\chapters\\chapter_05_main.md",
+      "sourceSha256": "e5ce6e1cf8920958bc3dd52eff43990b97abba728c5d1c4b02254bc08bd4af6d",
+      "readerSha256": "fa594b4a701084f218210ea5821e63350a5c95e9a17fae6b20160ec2dd9f4d1a",
+      "figure": "/books/how-code-becomes-film/figures/chapter_05.svg",
+      "figureAlt": "為什麼等速看起來像機器：半秒：u=0.25，等速250；緩動193.75；一秒：u=0.5，兩者400；只看中點不足；一點五秒：u=0.75，等速550；緩動606.25",
+      "chineseCharacters": 1271
+    },
+    {
+      "number": 6,
+      "source": "MANUSCRIPT\\chapters\\chapter_06_main.md",
+      "sourceSha256": "3830d99befb8862960762132acbbde825e48a48d8b8476af45cdf716563dcb1b",
+      "readerSha256": "2f378e58bcedf547683e077fe7a907d9c5cc2719e0606e0a9d04a49a0a0648b8",
+      "figure": "/books/how-code-becomes-film/figures/chapter_06.svg",
+      "figureAlt": "好幾件事如何同時發生：第一幕，[0,3) 秒；第二幕，[3,6) 秒；全片4.2秒，第二幕局部時間1.2秒",
+      "chineseCharacters": 1242
+    },
+    {
+      "number": 7,
+      "source": "MANUSCRIPT\\chapters\\chapter_07_main.md",
+      "sourceSha256": "2bae8a0bb5a673aad9a2b9059dfedf42820b20e272986cee593a4e23fad9b57f",
+      "readerSha256": "9ab9324347d28d000c76e07c7b7406eb0ffa694f477143367252db32e4823cf5",
+      "figure": "/books/how-code-becomes-film/figures/chapter_07.svg",
+      "figureAlt": "線條怎麼自己長出來：三個控制資料，A=(0,0)，C=(50,100)，B=(100,0)；u=0.25，R=(25,37.5)；u=0.5，R=(50,50)，沒有穿過C",
+      "chineseCharacters": 1068
+    },
+    {
+      "number": 8,
+      "source": "MANUSCRIPT\\chapters\\chapter_08_main.md",
+      "sourceSha256": "840137c3efdc016747c68606a2c91589cd625c0b52a88c75009d55783b3cb4f7",
+      "readerSha256": "3fa402a926f8638bde127bd1b4ae1b0655627c3bcc607025cca849d77ef8516e",
+      "figure": "/books/how-code-becomes-film/figures/chapter_08.svg",
+      "figureAlt": "中文字為什麼比畫圓麻煩：量得字框，左2，上5，右102，下45；繪字原點，(148,75)；可見中心，(200,100)；位置先固定，再改透明度",
+      "chineseCharacters": 1312
+    },
+    {
+      "number": 9,
+      "source": "MANUSCRIPT\\chapters\\chapter_09_main.md",
+      "sourceSha256": "96f0f87f867f776e998710c0f25a238cfbf5cd28f90b02598d6be031839117f4",
+      "readerSha256": "f2535629c58ab097801a77ddb864f0bf595039c20b591eb653b956cb8e86758b",
+      "figure": "/books/how-code-becomes-film/figures/chapter_09.svg",
+      "figureAlt": "一千顆小點怎麼一起管理：起點／速度，10/20；50/−10；90/0；兩秒位置，50；30；90 像素；固定初始資料，編號 → 固定起點 → 同一時間規則",
+      "chineseCharacters": 1237
+    },
+    {
+      "number": 10,
+      "source": "MANUSCRIPT\\chapters\\chapter_10_main.md",
+      "sourceSha256": "3a993f1e14c423a7b7489c6271c30ef50f7f1918c66a64ad4005a1ad298ee2e9",
+      "readerSha256": "be1d22088845efdcf2b8f630f5666f0317b9988af750bf027a0d2231b369decb",
+      "figure": "/books/how-code-becomes-film/figures/chapter_10.svg",
+      "figureAlt": "散點怎麼排成一個字：形狀，四條矩形筆畫：自繪井形；取樣，本基準330個不重複目標；資料到運動，同數起點 → 穩定索引配對 → 插值",
+      "chineseCharacters": 1211
+    },
+    {
+      "number": 11,
+      "source": "MANUSCRIPT\\chapters\\chapter_11_main.md",
+      "sourceSha256": "d5449b5093c56c95bc639cfb912e62c22c7ad72cce2b08210cfec1e882c4e61d",
+      "readerSha256": "2221b7fe0d8311350cf42114eac881f2bdf2253dc47696d9d50ff42d0590f086",
+      "figure": "/books/how-code-becomes-film/figures/chapter_11.svg",
+      "figureAlt": "混亂為什麼有時很自然：時間（秒），0 → 0.5 → 1 → 1.5 → 2；偏移（像素），0 → 10 → 0 → −10 → 0；條件，A=10，f=0.5，φ=0；正弦不是Perlin",
+      "chineseCharacters": 1020
+    },
+    {
+      "number": 12,
+      "source": "MANUSCRIPT\\chapters\\chapter_12_main.md",
+      "sourceSha256": "f61f01090e26d835aefb68d6a675d6313eb01174cdf2664e3ced7f8f2d4e90b1",
+      "readerSha256": "01de0f7d948cbb5892eaf1e3df68e39185e6f6d7419b85b831a5f6d2084b1af3",
+      "figure": "/books/how-code-becomes-film/figures/chapter_12.svg",
+      "figureAlt": "動畫怎麼有重量與回彈：初始條件，m=1，k=4，c=1，x=1，v=0；dt=0.1秒第一步，a=−4 → v=−0.4 → x=0.96；兩秒誤差縮小，1/60：0.00953；1/120：0.00473；1/240：0.00236",
+      "chineseCharacters": 1020
+    },
+    {
+      "number": 13,
+      "source": "MANUSCRIPT\\chapters\\chapter_13_main.md",
+      "sourceSha256": "580b58e28de02434859032f358693338207a5d9058f9a75d470aa606b366eb58",
+      "readerSha256": "35150d10549867e562246cb74340dfbafe9486a9c794c55d85a24e1c9792a0be",
+      "figure": "/books/how-code-becomes-film/figures/chapter_13.svg",
+      "figureAlt": "數字怎麼變成可以看懂的圖：教學假資料，10，20，30；不是觀測；高度（像素），50，100，150；零到40映射200；柱頂y，200，150，100；共同底線250",
+      "chineseCharacters": 1157
+    },
+    {
+      "number": 14,
+      "source": "MANUSCRIPT\\chapters\\chapter_14_main.md",
+      "sourceSha256": "bb8f56ec08d2d0bba43084d2f99e59b682f1ae008622e4fb160e144914e7e84e",
+      "readerSha256": "636ff0bcfcf60c1b7a1a957547f75737e1e61b67faa37ba813e7509b0549dd5a",
+      "figure": "/books/how-code-becomes-film/figures/chapter_14.svg",
+      "figureAlt": "關係怎麼變成一張網：先備關係，A→B、A→C、B→D、C→D、D→E；資料，5節點，5邊；D有2條入邊；佈局與語意，交換位置不改關係；近不代表強",
+      "chineseCharacters": 1060
+    },
+    {
+      "number": 15,
+      "source": "MANUSCRIPT\\chapters\\chapter_15_main.md",
+      "sourceSha256": "86536ae23237b22b3d0ed0481f9ad00523d2ad098f167b35d94f96125aaf0cd3",
+      "readerSha256": "d62329e27c892abf09503fff61637e718556800a7b17dbda2c263c5789a344b6",
+      "figure": "/books/how-code-becomes-film/figures/chapter_15.svg",
+      "figureAlt": "平面怎麼看起來有深度：鏡頭約定，z=−4，朝+z；q=z+4；近點(1,1,0)，畫布(450,175)；遠點(1,1,4)，畫布(425,200)；q≤0.1不畫",
+      "chineseCharacters": 1100
+    },
+    {
+      "number": 16,
+      "source": "MANUSCRIPT\\chapters\\chapter_16_main.md",
+      "sourceSha256": "3f7514e11f044873ddc02f4b6c803edfed1aab922ec632c14b4288844ea44a78",
+      "readerSha256": "2ce19ee6f3954deb2cf92755903737a5f4eb33e54461801166a4a0dc5e5216cd",
+      "figure": "/books/how-code-becomes-film/figures/chapter_16.svg",
+      "figureAlt": "光影與著色程式在算什麼：單位方向內積，正對1；垂直0；背向−1；I=0.2+0.8max(0,d)，亮度1；0.2；0.2；不同分工，幾何 → 著色 → 測試與合成；CPU數值教學",
+      "chineseCharacters": 1102
+    },
+    {
+      "number": 17,
+      "source": "MANUSCRIPT\\chapters\\chapter_17_main.md",
+      "sourceSha256": "ff35d3a49dd1d85db7ec3bb901f91c6cd162de2e8e2ce183f96419df6d1f36e5",
+      "readerSha256": "c1e910ec21189021a2b678b0ef5095c834e883a06924879f81429d77a2ad3c04",
+      "figure": "/books/how-code-becomes-film/figures/chapter_17.svg",
+      "figureAlt": "聲音有另一條時鐘：兩秒畫面，30fps → 60張；兩秒單聲道聲音，48kHz → 96,000個取樣；共同半秒，影格索引15；音訊索引24,000",
+      "chineseCharacters": 1076
+    },
+    {
+      "number": 18,
+      "source": "MANUSCRIPT\\chapters\\chapter_18_main.md",
+      "sourceSha256": "e1a8470684a43c296d3de6ab244ebca47d224cc2bd3450919a2a31eea1e11144",
+      "readerSha256": "8736c9d4d2ac345bea3d239eea172180373d4cb4749af29f93fa8f6c534b3749",
+      "figure": "/books/how-code-becomes-film/figures/chapter_18.svg",
+      "figureAlt": "說話和畫面怎麼對齊：三句開始時間，0，2，4秒；各2秒窗口；教學假音長，1.6，1.8，1.9 → 結束1.6，3.8，5.9；第二句改長2.4秒，結束4.4；超窗0.4秒，先拒絕",
+      "chineseCharacters": 1152
+    },
+    {
+      "number": 19,
+      "source": "MANUSCRIPT\\chapters\\chapter_19_main.md",
+      "sourceSha256": "a0f4a7ebb9a0674f9e371f61c8d87048297cccc4d0f6c0d5be641dcfd6a38a9c",
+      "readerSha256": "ce1438ec7958f616db6733595976f8b36efc0522968a673ca29db77a5b590611",
+      "figure": "/books/how-code-becomes-film/figures/chapter_19.svg",
+      "figureAlt": "為什麼能預覽卻不一定有影片檔：渲染，資料與時間 → RGB影格；編碼，影格／聲音 → H.264／AAC資料流；封裝，流與時間資訊 → MP4容器",
+      "chineseCharacters": 1142
+    },
+    {
+      "number": 20,
+      "source": "MANUSCRIPT\\chapters\\chapter_20_main.md",
+      "sourceSha256": "416b275368877c24914a48b0b78b89d4b2be6a279b8d43d9facff17384f6e97d",
+      "readerSha256": "ad1223f03d031db0ffe34af9ac3b04cf564fb500470b0827dd7b08f9260df980",
+      "figure": "/books/how-code-becomes-film/figures/chapter_20.svg",
+      "figureAlt": "怎麼知道影片真的做對了：數值與重現，規則、邊界、同一輸入；媒體，中繼資料 → 完整解碼；觀看與聽審，構圖／正反面／發音／理解，各有證據",
+      "chineseCharacters": 1144
+    },
+    {
+      "number": 21,
+      "source": "MANUSCRIPT\\chapters\\chapter_21_main.md",
+      "sourceSha256": "5a2afdd592962f9144122584bc32794fecef009e5d17393a5549bad86fa77a57",
+      "readerSha256": "962fce73dcde1bb4fbf153b314243ace0f984f3550b453ce9b5000e6fa953494",
+      "figure": "/books/how-code-becomes-film/figures/chapter_21.svg",
+      "figureAlt": "怎麼把一句願望拆成能驗收的要求：意圖拆解，輸入 → 規則 → 時間 → 限制 → 觀察點；五秒30fps，150張；最後索引149；四秒線性聚合，第60幀＝兩秒＝進度0.5",
+      "chineseCharacters": 1184
+    },
+    {
+      "number": 22,
+      "source": "MANUSCRIPT\\chapters\\chapter_22_main.md",
+      "sourceSha256": "972773a29b3d7b16c773e8a6223866d32c9d0e3d275cbf21a3e123b63252df2f",
+      "readerSha256": "b6a17885391c4644bcd78bca3de0f63c0a57f987a8f1f54d418ff6e7ac6a5ef1",
+      "figure": "/books/how-code-becomes-film/figures/chapter_22.svg",
+      "figureAlt": "選工具時如何不被工具綁住：可遷移的契約，資料 → 時間到狀態 → 繪圖 → 輸出；共同位置表，第15幀250；第60幀700；第89幀700；證據邊界，官方文件閱讀 ≠ 五套工具實跑",
+      "chineseCharacters": 1132
+    },
+    {
+      "number": 23,
+      "source": "MANUSCRIPT\\chapters\\chapter_23_main.md",
+      "sourceSha256": "b6ab3cfde076d4469b2cb69ee7da1fdb908f91c4a05bcf6be1f47f1a4bab78d7",
+      "readerSha256": "aee9ee4e832a5b056699718af8a7bc13321204ad205e28bb375c8d9165693dfe",
+      "figure": "/books/how-code-becomes-film/figures/chapter_23.svg",
+      "figureAlt": "怎麼組出自己的影片引擎：最小場景資料，id／start／duration／type；連續時間，[0,4) → [4,8)；240幀；入口驗證，重複ID、空洞、負長度、未知欄位先拒絕",
+      "chineseCharacters": 1169
+    },
+    {
+      "number": 24,
+      "source": "MANUSCRIPT\\chapters\\chapter_24_main.md",
+      "sourceSha256": "aec2e8389ec6ee4da444526bdc4f60284f47c7322ac1ed27aea28f4a1e827b68",
+      "readerSha256": "3aee959fb8ba8bfd10078ac9611bdbcae159daa5b3faabc087711e33a181302b",
+      "figure": "/books/how-code-becomes-film/figures/chapter_24.svg",
+      "figureAlt": "完成一支你能解釋的影片：四幕時間帳，[0,15) → [15,30) → [30,45) → [45,60)；輸出規格，60秒 × 30fps = 1,800幀；十五秒邊界，第450幀 → 第二幕局部零秒",
+      "chineseCharacters": 1182
+    }
+  ],
+  "chineseCharacters": 29638,
+  "originalHandoffPreserved": true
+}

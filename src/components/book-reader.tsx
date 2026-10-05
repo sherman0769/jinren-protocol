@@ -1933,6 +1933,27 @@ export function BookReader({ book, showPodcast = true }: BookReaderProps) {
         </section>
 
         <section className="book-prose">
+          {chapter.figure && (
+            <figure className="chapter-figure">
+              <Image
+                src={chapter.figure.src}
+                alt={chapter.figure.alt}
+                width={1000}
+                height={520}
+                unoptimized
+              />
+              <figcaption>
+                <strong>{chapter.title}｜數字與因果對照</strong>
+                <p className="chapter-figure-description">{chapter.figure.alt}</p>
+              </figcaption>
+            </figure>
+          )}
+          {book.companionUrl && (
+            <a className="book-companion-download" href={book.companionUrl} download>
+              <Download aria-hidden="true" size={18} />
+              下載本書圖解、範例與 Markdown 書稿
+            </a>
+          )}
           {chapter.paragraphs.map((paragraph, index) => {
             const isSubhead = isSubheading(paragraph, index);
             const paragraphId = getParagraphId(chapter.id, index);

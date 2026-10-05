@@ -1,0 +1,51 @@
+{
+  "checked_date": "2026-10-05",
+  "media": [
+    {
+      "file_name": "World_Becomes_Computable_1080p_MusicSubtitles.mp4",
+      "bytes": 68125798,
+      "sha256": "69014c17a924a91e796bdefccd41e7110938a70a082dfa329c11f1e03b08da9d",
+      "checked_this_run": "ffprobe metadata only; no full-film decode or listening this run",
+      "included_in_book_zip": false
+    },
+    {
+      "file_name": "World_Becomes_Computable_1080p_EngineeringVoice.mp4",
+      "bytes": 87150034,
+      "sha256": "b8036340c37083a82186f93a19dfba2be972c88ad2bd167162a743227e08077e",
+      "checked_this_run": "ffprobe metadata only; no full-film decode or listening this run",
+      "included_in_book_zip": false
+    }
+  ],
+  "frames": [
+    {
+      "file": "case_t120.jpg",
+      "requested_time_seconds": 120,
+      "source_file": "World_Becomes_Computable_1080p_MusicSubtitles.mp4",
+      "method": "ffmpeg input seek + decode, one frame, scale width 960",
+      "claim_limit": "可證明截圖可見內容，不能證明原始演算法或原始碼行號"
+    },
+    {
+      "file": "case_t300.jpg",
+      "requested_time_seconds": 300,
+      "source_file": "World_Becomes_Computable_1080p_MusicSubtitles.mp4",
+      "method": "ffmpeg input seek + decode, one frame, scale width 960",
+      "claim_limit": "可證明截圖可見內容，不能證明原始演算法或原始碼行號"
+    },
+    {
+      "file": "case_t540.jpg",
+      "requested_time_seconds": 540,
+      "source_file": "World_Becomes_Computable_1080p_MusicSubtitles.mp4",
+      "method": "ffmpeg input seek + decode, one frame, scale width 960",
+      "claim_limit": "可證明截圖可見內容，不能證明原始演算法或原始碼行號"
+    },
+    {
+      "file": "case_t660.jpg",
+      "requested_time_seconds": 660,
+      "source_file": "World_Becomes_Computable_1080p_MusicSubtitles.mp4",
+      "method": "ffmpeg input seek + decode, one frame, scale width 960",
+      "claim_limit": "可證明截圖可見內容，不能證明原始演算法或原始碼行號"
+    }
+  ],
+  "qa_copy_sha256": "1fb53457c1e609505af1b06a51db0f3f2e4e5bd5584f05e5fb34efa43cf05a0d",
+  "original_source_zip_present": false
+}

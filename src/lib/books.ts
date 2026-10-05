@@ -14,6 +14,10 @@ export type Chapter = {
     storage?: "local" | "vercel-blob";
   };
   paragraphs: string[];
+  figure?: {
+    src: string;
+    alt: string;
+  };
 };
 
 export type Book = {
@@ -29,6 +33,7 @@ export type Book = {
   cover: string;
   ogImage: string;
   sourceUrl: string;
+  companionUrl?: string;
   chapters: Chapter[];
 };
 

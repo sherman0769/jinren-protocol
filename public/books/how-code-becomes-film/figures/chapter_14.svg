@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="520" viewBox="0 0 1000 520">
+<title>關係怎麼變成一張網</title>
+<rect width="1000" height="520" rx="18" fill="#f7f5ef"/>
+<text x="46" y="68" font-size="30" font-family="sans-serif" fill="#172b3a">第14章｜關係怎麼變成一張網</text>
+<rect x="36" y="105" width="928" height="98" rx="12" fill="#e1efea"/>
+<text x="58" y="138" font-size="21" font-family="sans-serif" fill="#0b746b">先備關係</text>
+<text x="58" y="177" font-size="22" font-family="sans-serif" fill="#172b3a">A→B、A→C、B→D、C→D、D→E</text>
+<rect x="36" y="220" width="928" height="98" rx="12" fill="#edf0f2"/>
+<text x="58" y="253" font-size="21" font-family="sans-serif" fill="#0b746b">資料</text>
+<text x="58" y="292" font-size="22" font-family="sans-serif" fill="#172b3a">5節點，5邊；D有2條入邊</text>
+<rect x="36" y="335" width="928" height="98" rx="12" fill="#fff0d7"/>
+<text x="58" y="368" font-size="21" font-family="sans-serif" fill="#0b746b">佈局與語意</text>
+<text x="58" y="407" font-size="22" font-family="sans-serif" fill="#172b3a">交換位置不改關係；近不代表強</text>
+<text x="46" y="496" font-size="18" font-family="sans-serif" fill="#60717a">原創教學對照｜數字見逐章檢查｜無原片演算法推定</text>
+</svg>

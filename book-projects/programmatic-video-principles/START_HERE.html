@@ -1,0 +1,36 @@
+<!doctype html><html lang="zh-Hant-TW"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>程式如何變成影片｜Codex 寫書交接</title><link rel="stylesheet" href="READING/site.css"></head><body><div class="shell"><header class="top"><span class="brand">LI’S MEET · 原理學習書</span><span class="pill">Codex 交接包 1.0.0</span></header>
+<section class="hero"><p class="eyebrow">從一個位置、一張畫面，到 AI 協作</p><h1>程式如何變成影片</h1><p class="subtitle">不背術語，也能看懂 AI<br>如何用程式寫出一部電影</p><p class="muted">模型可以換，理解留下來。這個專案不以工具操作為主軸，而是把視覺意圖拆成時間、座標、數學、資料與可以驗收的畫面。</p><a class="button" href="READING/sample_chapter.html">先讀一章看看</a><a class="button secondary" href="#codex">交給 Codex 開始寫</a></section>
+<div class="note"><strong>這是可接手的寫書專案，不是全書完稿。</strong><p>二十四章已有完整寫作任務；第四章提供校準樣章，尚未經李詩民確認。正式書稿由 Codex 接手後逐章產生、檢核與保存。</p></div>
+<div class="metrics"><div class="metric"><strong>24</strong><span>六部章節任務</span></div><div class="metric"><strong>109</strong><span>白話中英術語卡</span></div><div class="metric"><strong>6</strong><span>可重建原理圖解</span></div><div class="metric"><strong>8 秒</strong><span>已輸出的示範影片</span></div></div>
+<section><h2>不是先考英文，才准進入技術</h2><p>每一章先從一個看得見的問題出發，再介紹工程師給它取的名字。</p><div class="grid"><article class="card"><h3>讀者先理解</h3><p>「起點和終點已經知道，現在該走到哪裡？」<br>先拿數字算一遍，再認識「插值」。</p><a href="READING/sample_chapter.html">閱讀第四章校準樣章 →</a></article><article class="card"><h3>術語不再堵住理解</h3><p>每張卡都有白話意思、例子和比喻的限制。需要讀官方文件時，也找得到英文名稱。</p><a href="READING/glossary.html">搜尋 109 張術語卡 →</a></article></div></section>
+<section><h2>學習地圖：從白點走到完整作品</h2><div class="grid"><article class="card"><h3>前半本：看懂畫面如何形成</h3><p>影格、座標、時間、插值、緩動、場景、路徑、中文字形、粒子、噪聲與運動規則。</p></article><article class="card"><h3>後半本：讓作品可靠完成</h3><p>資料與網路、三維與相機、著色器、聲音同步、渲染與編碼、測試、AI 協作與小型引擎。</p></article></div><p style="margin-top:18px"><a href="READING/outline.html">查看六部二十四章完整目錄 →</a></p></section>
+<section><h2>真正執行過，而不是只有提示詞</h2><div class="video-wrap"><video controls preload="metadata" poster="examples/output/demo_still.png" aria-label="八秒原理示範"><source src="examples/output/principles_demo.mp4" type="video/mp4">瀏覽器不支援此格式，請用本機播放器開啟 examples/output/principles_demo.mp4。</video><div class="caption">8 秒 · 1280×720 · 30 fps · 等速／緩動對照，再以粒子形成「井」字形。聲音只有兩個原創提示音，沒有旁白、語音服務或聲音克隆。這是新寫的教學重建，不是原影片引擎摘錄。</div></div><p style="margin-top:18px">最小原理附有 34 項單元測試。測試能檢查數值、邊界與可重現性，不能代替人類讀者的理解與審美判斷。<a href="qa/HANDOFF_QA.md">檢視本次驗收紀錄</a></p><div class="figure-grid"><figure><a href="examples/output/01_coordinate.svg"><img src="examples/output/01_coordinate.svg" alt="座標：把「中間」說成可計算的位置" loading="lazy"></a><figcaption>座標：把「中間」說成可計算的位置</figcaption></figure><figure><a href="examples/output/02_interpolation.svg"><img src="examples/output/02_interpolation.svg" alt="插值：算出現在走到哪裡" loading="lazy"></a><figcaption>插值：算出現在走到哪裡</figcaption></figure><figure><a href="examples/output/03_easing.svg"><img src="examples/output/03_easing.svg" alt="緩動：同樣終點，不同節奏" loading="lazy"></a><figcaption>緩動：同樣終點，不同節奏</figcaption></figure><figure><a href="examples/output/04_path.svg"><img src="examples/output/04_path.svg" alt="路徑：用少量位置描述曲線" loading="lazy"></a><figcaption>路徑：用少量位置描述曲線</figcaption></figure><figure><a href="examples/output/05_particles.svg"><img src="examples/output/05_particles.svg" alt="粒子：每個點都有一個目的地" loading="lazy"></a><figcaption>粒子：每個點都有一個目的地</figcaption></figure><figure><a href="examples/output/06_projection.svg"><img src="examples/output/06_projection.svg" alt="投影：把三維空間畫回平面" loading="lazy"></a><figcaption>投影：把三維空間畫回平面</figcaption></figure></div></section>
+<section id="codex"><h2>如何交給 Codex</h2><div class="steps"><div class="step"><p><strong>解壓縮到一個獨立資料夾</strong>把這個完整資料夾作為 Codex 的工作目錄；已有寫書專案時，先讀其規約並保留既有修改，不假定任何 D 槽位置。</p></div><div class="step"><p><strong>給它下面這段啟動指令</strong>讓它讀取專案內的完整主指令，不只憑一句話猜方向。</p></div><div class="step"><p><strong>從真正的章節初稿開始</strong>先做前言與第 1～3 章，再依序完成其餘章節。每章審查並更新 work.json；停止時留下下一步，不宣稱背景自動續寫。</p></div></div><pre id="copy-text">請先完整讀取這個資料夾的 AGENTS.md、00_START_HERE.md、book.json 與 work.json，再執行 CODEX_INSTRUCTIONS/MASTER_PROMPT.md。
+這是《程式如何變成影片》的寫書專案，不是製作影片續作。驗證交接包後，直接開始前言及第 1～3 章完整初稿，逐章完成技術與初學者閱讀審查，並保存進度。</pre><button type="button" id="copy" class="button">複製啟動指令</button><span id="copy-status" class="copy-status" aria-live="polite"></span><details><summary>展開完整主指令</summary><pre>你現在接手一個正式寫書專案：《程式如何變成影片》。請把本交接包當成可獨立工作的完整背景，而不是再向使用者詢問已確認的方向。
+
+這不是影片續作，也不是 Programmatic Motion Engine V1 操作手冊。要寫的是一本讓非工程背景的成人，看懂「人的視覺意圖如何變成資料、數學、時間、程式與可播放影片」的原理書。模型與框架可以換，核心理解要能遷移。
+
+請先完整讀取 AGENTS.md、00_START_HERE.md、book.json、work.json、CONTEXT/DECISIONS_AND_BOUNDARIES.md。再讀取 OUTLINE/FULL_BOOK_OUTLINE.md、OUTLINE/chapter_plan.json、GLOSSARY/TERMINOLOGY_RULES.md、STYLE_GUIDE/TECHNICAL_ACCURACY.md 與第 4 章校准樣章。依當前目錄的既有規則安全整合；不要覆蓋其他書稿，不猜使用者本機路徑。
+
+最高優先的寫作規則是：任何新英文術語，不准用另一個讀者還不懂的術語來解釋。順序是問題、生活理解、圖解與比喻邊界、中文名稱、英文名稱、具體數字、必要公式與最小程式。讓讀者不背英文也能說清楚機制，但仍能辨認官方文件里的名稱。用繁體中文，尊重有 AI 實務經驗的讀者。
+
+先執行：
+python scripts/validate_package.py
+python -m unittest discover -s tests -v
+python examples/build_examples.py
+
+確認文件完整與範例基準後，直接開始前言以及第 1、2、3 章的完整初稿，寫入 MANUSCRIPT/chapters/；不要只再給一份計劃或目錄。第 4 章樣章是語氣參考，尚未獲使用者確認，不計為正式完稿。
+
+每章必須有：完整連貫敘述、能觀察的圖或對照、至少一組數字實算、術語首次解釋、最小可執行例子或明確圖解、一個錯誤與修正、三題含答案、讓 AI 協作的指令及驗收、可追溯來源。查驗必要技術事實，用官方或原始技術來源，不猜模型排名、最新 API 或許可證。
+
+按技術審查→初學者視角審查→引用核對→修稿的流程完成每章；可由同一模型分角色工作，但不得稱為獨立人類專家驗收。工作目標是逐批完成整本書，而不是停在第一批規劃。每批完成後更新 work.json、章節狀態、審查檔案與可重建輸出，再繼續下一批；若本次執行必須結束，保存真實進度與下一步，不聲稱之後會自動背景續寫。
+
+《當世界開始被計算》僅為案例。本包提供 QA 副本、影片中繼資料與四張截圖；未附完整長片與原引擎原始碼。不要虛構原函數、行號、參數或測試。原案報告記載 Python/Cairo 與 Linux CPU，不是 Remotion／4090；eSpeak 是工程旁白，正式聲線沒有完成。缺原始碼時用新的教學重建例子，不妨礙本書原理寫作，且明確標「教學重建」。
+
+正文不綁定付費語音與單一框架。最小範例不需 API 金鑰或 GPU；不可上傳私人素材、使用聲紋、付費調用、部署、發佈或修改全域設置。最終交付以可維護 Markdown 主稿、圖解、例子、測試、術語索引與來源為核心；排版不取代寫作。
+
+現在開始檢查專案並撰寫第一批完整書稿，把結果真正寫進文件。
+</pre></details><p><a href="CODEX_INSTRUCTIONS/MASTER_PROMPT.md">主指令 Markdown</a>　·　<a href="CODEX_INSTRUCTIONS/RESUME_PROMPT.md">中斷後續寫指令</a>　·　<a href="PROJECT_MAP.md">全部檔案怎麼用</a></p></section>
+<section><h2>案例的真實邊界，也要教進書裡</h2><div class="note"><p>《當世界開始被計算》是案例，不是本書唯一技術答案。本包附原驗收報告、這次讀取的媒體規格與四張成片截圖；未附原案完整原始碼或長片。不能依截圖虛構函式、行號或算法。</p><p>原案記載採 Python／Cairo、Linux CPU；正式旁白仍未完成。案例的歷史測試和這次教學範例的測試，分開記錄。</p><a href="CASE_STUDY/EVIDENCE_AND_LIMITS.md">閱讀證據與限制 →</a></div></section>
+<footer class="footer">發起與主要讀者：李詩民 · 暫定書名與副標 · 2026-10-05<br>不需要登入即可閱讀本包；沒有附字型檔、金鑰或個人聲線。Windows 腳本尚未在使用者電腦實測。</footer></div>
+<script>document.querySelector('#copy').addEventListener('click',async()=>{const text=document.querySelector('#copy-text').textContent;try{await navigator.clipboard.writeText(text);document.querySelector('#copy-status').textContent='已複製';}catch(e){const range=document.createRange();range.selectNodeContents(document.querySelector('#copy-text'));const s=window.getSelection();s.removeAllRanges();s.addRange(range);document.querySelector('#copy-status').textContent='已選取文字，請使用複製功能。';}});</script></body></html>

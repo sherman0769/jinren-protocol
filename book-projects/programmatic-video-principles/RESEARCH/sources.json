@@ -1,0 +1,177 @@
+{
+  "checked_date": "2026-10-05",
+  "policy": "只登記實際檢視的頁面為 read；讀取失敗也保留狀態，不能用於支撐未看過的內容。原理推導和教學習題為本包原創。",
+  "sources": [
+    {
+      "id": "S01",
+      "title": "The fundamentals",
+      "organization": "Remotion",
+      "url": "https://www.remotion.dev/docs/the-fundamentals",
+      "scope": "按幀數描述畫面與影片基本參數。",
+      "status": "read",
+      "checked_date": "2026-10-05"
+    },
+    {
+      "id": "S02",
+      "title": "Drawing shapes with canvas",
+      "organization": "MDN Web Docs",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes",
+      "scope": "畫布座標、形狀和像素邊界。",
+      "status": "read",
+      "checked_date": "2026-10-05"
+    },
+    {
+      "id": "S03",
+      "title": "Paths",
+      "organization": "MDN Web Docs",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorials/SVG_from_scratch/Paths",
+      "scope": "SVG 路徑與二次、三次貝茲曲線的表示。",
+      "status": "read",
+      "checked_date": "2026-10-05"
+    },
+    {
+      "id": "S04",
+      "title": "random — Generate pseudo-random numbers",
+      "organization": "Python documentation",
+      "url": "https://docs.python.org/3/library/random.html",
+      "scope": "偽隨機數的種子與重現限制。",
+      "status": "read",
+      "checked_date": "2026-10-05"
+    },
+    {
+      "id": "S05",
+      "title": "A deep dive into Manim’s internals",
+      "organization": "Manim Community",
+      "url": "https://docs.manim.community/en/stable/guides/deep_dive.html",
+      "scope": "場景、繪圖物件和動畫渲染內部結構的一個實現例。",
+      "status": "read",
+      "checked_date": "2026-10-05"
+    },
+    {
+      "id": "S06",
+      "title": "WebGLShader",
+      "organization": "MDN Web Docs",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/API/WebGLShader",
+      "scope": "WebGL 頂點與片段著色器的區別。",
+      "status": "read",
+      "checked_date": "2026-10-05"
+    },
+    {
+      "id": "S07",
+      "title": "Matrix math for the web",
+      "organization": "MDN Web Docs",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/Matrix_math_for_the_web",
+      "scope": "幾何變換與投影的矩陣表達。",
+      "status": "read",
+      "checked_date": "2026-10-05"
+    },
+    {
+      "id": "S08",
+      "title": "ffmpeg Documentation",
+      "organization": "FFmpeg",
+      "url": "https://www.ffmpeg.org/ffmpeg.html",
+      "scope": "媒體流、解碼、編碼、過濾與封裝階段。",
+      "status": "read",
+      "checked_date": "2026-10-05"
+    },
+    {
+      "id": "S09",
+      "title": "ffprobe Documentation",
+      "organization": "FFmpeg",
+      "url": "https://www.ffmpeg.org/ffprobe.html",
+      "scope": "預定用於中繼資料查驗；本輪網頁讀取逾時。",
+      "status": "fetch_failed",
+      "checked_date": "2026-10-05"
+    },
+    {
+      "id": "S10",
+      "title": "BaseAudioContext: sampleRate",
+      "organization": "MDN Web Docs",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/API/BaseAudioContext/sampleRate",
+      "scope": "音訊取樣率的意義與單位。",
+      "status": "read",
+      "checked_date": "2026-10-05"
+    },
+    {
+      "id": "S11",
+      "title": "What is HarfBuzz?",
+      "organization": "HarfBuzz",
+      "url": "https://harfbuzz.github.io/what-is-harfbuzz.html",
+      "scope": "文字輸入到字形及位置的 shaping 分工。",
+      "status": "read",
+      "checked_date": "2026-10-05"
+    },
+    {
+      "id": "S12",
+      "title": "Force simulations",
+      "organization": "D3 by Observable",
+      "url": "https://d3js.org/d3-force/simulation",
+      "scope": "節點佈局與狀態模擬的一種實現。",
+      "status": "read",
+      "checked_date": "2026-10-05"
+    },
+    {
+      "id": "S13",
+      "title": "Custom instructions with AGENTS.md",
+      "organization": "OpenAI",
+      "url": "https://developers.openai.com/codex/guides/agents-md",
+      "scope": "Codex 專案指令的發現與層級；實讀後轉址至官方 ChatGPT Learn。",
+      "status": "read",
+      "checked_date": "2026-10-05"
+    },
+    {
+      "id": "S14",
+      "title": "Animation flow",
+      "organization": "Motion Canvas",
+      "url": "https://motioncanvas.io/docs/flow/",
+      "scope": "生成器式動畫流程的框架案例。",
+      "status": "read",
+      "checked_date": "2026-10-05"
+    },
+    {
+      "id": "S15",
+      "title": "Unicode Text Segmentation, UAX #29",
+      "organization": "Unicode Consortium",
+      "url": "https://www.unicode.org/reports/tr29/",
+      "scope": "感知字元分段與編碼及字形不同層次。",
+      "status": "read",
+      "checked_date": "2026-10-05"
+    },
+    {
+      "id": "S16",
+      "title": "CSS Easing Functions Module Level 2",
+      "organization": "CSS Working Group",
+      "url": "https://drafts.csswg.org/css-easing/",
+      "scope": "時間進度映射與緩動類型；這是草案入口，應記錄成稿時版本。",
+      "status": "read",
+      "checked_date": "2026-10-05"
+    },
+    {
+      "id": "S17",
+      "title": "FFmpeg Filters Documentation",
+      "organization": "FFmpeg",
+      "url": "https://ffmpeg.org/ffmpeg-filters.html",
+      "scope": "預定補聲音濾鏡與響度工具；本輪網頁讀取未成功。",
+      "status": "fetch_failed",
+      "checked_date": "2026-10-05"
+    },
+    {
+      "id": "S18",
+      "title": "Fix Your Timestep!",
+      "organization": "Glenn Fiedler / Gaffer On Games",
+      "url": "https://gafferongames.com/post/fix_your_timestep/",
+      "scope": "固定步長、模擬狀態與渲染時間分開；作者原始技術文章。",
+      "status": "read",
+      "checked_date": "2026-10-05"
+    },
+    {
+      "id": "S19",
+      "title": "Implementing Improved Perlin Noise",
+      "organization": "NVIDIA GPU Gems / Ken Perlin",
+      "url": "https://developer.nvidia.com/gpugems/gpugems/part-i-natural-effects/chapter-5-implementing-improved-perlin-noise",
+      "scope": "平滑程序噪聲的一種具體方法；不代表全部噪聲類型。",
+      "status": "read",
+      "checked_date": "2026-10-05"
+    }
+  ]
+}

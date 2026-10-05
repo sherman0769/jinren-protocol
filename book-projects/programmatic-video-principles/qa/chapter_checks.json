@@ -1,0 +1,206 @@
+{
+  "status": "passed",
+  "scope": "numerical teaching examples, not human reading or original-case tests",
+  "chapters": {
+    "CH01": {
+      "frames": 90,
+      "lastIndex": 89,
+      "times": [
+        0.0,
+        0.03333333333333333,
+        0.9666666666666667,
+        1.0,
+        2.966666666666667
+      ]
+    },
+    "CH02": {
+      "center": [
+        480,
+        270
+      ],
+      "safeCenter": [
+        40,
+        40
+      ]
+    },
+    "CH03": [
+      200.0,
+      100.0,
+      150.0,
+      200.0
+    ],
+    "CH04": [
+      100.0,
+      250.0,
+      400.0,
+      700.0,
+      700.0
+    ],
+    "CH05": [
+      193.75,
+      400.0,
+      606.25
+    ],
+    "CH06": {
+      "boundary": [
+        "b",
+        0
+      ],
+      "at4.2": [
+        "b",
+        1.2000000000000002
+      ]
+    },
+    "CH07": [
+      {
+        "x": 0,
+        "y": 0
+      },
+      {
+        "x": 25.0,
+        "y": 37.5
+      },
+      {
+        "x": 50.0,
+        "y": 50.0
+      },
+      {
+        "x": 75.0,
+        "y": 37.5
+      },
+      {
+        "x": 100,
+        "y": 0
+      }
+    ],
+    "CH08": {
+      "drawingOrigin": [
+        148.0,
+        75.0
+      ],
+      "visibleCenter": [
+        200.0,
+        100.0
+      ]
+    },
+    "CH09": {
+      "count": 200,
+      "firstPoint": {
+        "x": 221.4616808037861,
+        "y": 118.531833290572
+      },
+      "globalRandomUnchanged": true
+    },
+    "CH10": {
+      "targetCount": 330,
+      "unique": true,
+      "endMatches": true
+    },
+    "CH11": [
+      0.0,
+      10.0,
+      1.2246467991473533e-15,
+      -10.0,
+      -2.4492935982947065e-15
+    ],
+    "CH12": {
+      "firstStep": [
+        0.96,
+        -0.4
+      ],
+      "exactAt2": -0.3372345973335527,
+      "stepErrors": [
+        0.00952882067799593,
+        0.004730364734612524,
+        0.002356778789726177
+      ]
+    },
+    "CH13": {
+      "heights": [
+        50.0,
+        100.0,
+        150.0
+      ],
+      "tops": [
+        200.0,
+        150.0,
+        100.0
+      ],
+      "constantRangeRejected": true
+    },
+    "CH14": {
+      "nodes": 5,
+      "edges": 5,
+      "DInDegree": 2
+    },
+    "CH15": {
+      "near": [
+        450.0,
+        175.0
+      ],
+      "far": [
+        425.0,
+        200.0
+      ],
+      "behindRejected": true
+    },
+    "CH16": {
+      "cpuNumericalTeaching": true,
+      "brightness": [
+        1.0,
+        0.2,
+        0.2
+      ],
+      "gpuRun": false
+    },
+    "CH17": {
+      "file": "examples\\output\\chapter17_two_seconds.wav",
+      "duration": 2,
+      "samples": 96000,
+      "dataBytes": 192000
+    },
+    "CH18": {
+      "hypotheticalDurations": true,
+      "ends": [
+        1.6,
+        3.8,
+        5.9
+      ],
+      "overflowRejected": true
+    },
+    "CH19": {
+      "rawFrameBytes": 2764800,
+      "rawEightSecondsBytes": 663552000,
+      "frames": 240
+    },
+    "CH20": {
+      "invalidInputsRejected": 5,
+      "frames": 240,
+      "localAt5": 1.0
+    },
+    "CH21": {
+      "frames": 150,
+      "lastIndex": 149,
+      "halfProgress": 0.5,
+      "lastTime": 4.966666666666667
+    },
+    "CH22": [
+      100.0,
+      250.0,
+      400.0,
+      700.0,
+      700.0
+    ],
+    "CH23": {
+      "invalidInputsRejected": 5,
+      "frames": 240,
+      "localAt5": 1.0
+    },
+    "CH24": {
+      "frames": 1800,
+      "lastIndex": 1799,
+      "lastTime": 59.96666666666667,
+      "sceneAt450": 2
+    }
+  }
+}

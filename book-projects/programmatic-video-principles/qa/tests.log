@@ -1,0 +1,39 @@
+test_01_frame_time (test_motion_core.MotionTests.test_01_frame_time) ... ok
+test_02_invalid_fps (test_motion_core.MotionTests.test_02_invalid_fps) ... ok
+test_03_invalid_frame (test_motion_core.MotionTests.test_03_invalid_frame) ... ok
+test_04_last_frame (test_motion_core.MotionTests.test_04_last_frame) ... ok
+test_05_progress_before (test_motion_core.MotionTests.test_05_progress_before) ... ok
+test_06_progress_after (test_motion_core.MotionTests.test_06_progress_after) ... ok
+test_07_progress_middle (test_motion_core.MotionTests.test_07_progress_middle) ... ok
+test_08_bad_duration (test_motion_core.MotionTests.test_08_bad_duration) ... ok
+test_09_lerp_start (test_motion_core.MotionTests.test_09_lerp_start) ... ok
+test_10_lerp_end (test_motion_core.MotionTests.test_10_lerp_end) ... ok
+test_11_lerp_quarter (test_motion_core.MotionTests.test_11_lerp_quarter) ... ok
+test_12_ease_quarter (test_motion_core.MotionTests.test_12_ease_quarter) ... ok
+test_13_ease_monotonic (test_motion_core.MotionTests.test_13_ease_monotonic) ... ok
+test_14_duration_change (test_motion_core.MotionTests.test_14_duration_change) ... ok
+test_15_end_hold (test_motion_core.MotionTests.test_15_end_hold) ... ok
+test_16_seed_same (test_motion_core.MotionTests.test_16_seed_same) ... ok
+test_17_seed_change (test_motion_core.MotionTests.test_17_seed_change) ... ok
+test_18_no_global_rng_change (test_motion_core.MotionTests.test_18_no_global_rng_change) ... ok
+test_19_points_in_bounds (test_motion_core.MotionTests.test_19_points_in_bounds) ... ok
+test_20_particle_start (test_motion_core.MotionTests.test_20_particle_start) ... ok
+test_21_particle_end (test_motion_core.MotionTests.test_21_particle_end) ... ok
+test_22_particle_random_access (test_motion_core.MotionTests.test_22_particle_random_access) ... ok
+test_23_curve_endpoints (test_motion_core.MotionTests.test_23_curve_endpoints) ... ok
+test_24_projection_clip (test_motion_core.MotionTests.test_24_projection_clip) ... ok
+test_25_projection_near_far (test_motion_core.MotionTests.test_25_projection_near_far) ... ok
+test_26_scene_boundary (test_motion_core.MotionTests.test_26_scene_boundary) ... ok
+test_27_scene_end_excluded (test_motion_core.MotionTests.test_27_scene_end_excluded) ... ok
+test_28_valid_scenes (test_motion_core.MotionTests.test_28_valid_scenes) ... ok
+test_29_reject_scene_gap (test_motion_core.MotionTests.test_29_reject_scene_gap) ... ok
+test_30_reject_nan (test_motion_core.MotionTests.test_30_reject_nan) ... ok
+test_31_reject_duplicate_scene_id (test_motion_core.MotionTests.test_31_reject_duplicate_scene_id) ... ok
+test_32_reject_unknown_scene_field (test_motion_core.MotionTests.test_32_reject_unknown_scene_field) ... ok
+test_33_reject_invalid_target_step (test_motion_core.MotionTests.test_33_reject_invalid_target_step) ... ok
+test_34_particle_targets_unique (test_motion_core.MotionTests.test_34_particle_targets_unique) ... ok
+
+----------------------------------------------------------------------
+Ran 34 tests in 0.019s
+
+OK

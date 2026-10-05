@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="520" viewBox="0 0 1000 520">
+<title>一千顆小點怎麼一起管理</title>
+<rect width="1000" height="520" rx="18" fill="#f7f5ef"/>
+<text x="46" y="68" font-size="30" font-family="sans-serif" fill="#172b3a">第9章｜一千顆小點怎麼一起管理</text>
+<rect x="36" y="105" width="928" height="98" rx="12" fill="#e1efea"/>
+<text x="58" y="138" font-size="21" font-family="sans-serif" fill="#0b746b">起點／速度</text>
+<text x="58" y="177" font-size="22" font-family="sans-serif" fill="#172b3a">10/20；50/−10；90/0</text>
+<rect x="36" y="220" width="928" height="98" rx="12" fill="#edf0f2"/>
+<text x="58" y="253" font-size="21" font-family="sans-serif" fill="#0b746b">兩秒位置</text>
+<text x="58" y="292" font-size="22" font-family="sans-serif" fill="#172b3a">50；30；90 像素</text>
+<rect x="36" y="335" width="928" height="98" rx="12" fill="#fff0d7"/>
+<text x="58" y="368" font-size="21" font-family="sans-serif" fill="#0b746b">固定初始資料</text>
+<text x="58" y="407" font-size="22" font-family="sans-serif" fill="#172b3a">編號 → 固定起點 → 同一時間規則</text>
+<text x="46" y="496" font-size="18" font-family="sans-serif" fill="#60717a">原創教學對照｜數字見逐章檢查｜無原片演算法推定</text>
+</svg>

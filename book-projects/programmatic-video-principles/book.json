@@ -1,0 +1,73 @@
+{
+  "schema_version": "1.0",
+  "project_id": "programmatic-video-principles-book",
+  "version": "1.0.0",
+  "created_date": "2026-10-05",
+  "language": "zh-Hant-TW",
+  "title": "程式如何變成影片",
+  "subtitle": "不背術語，也能看懂 AI 如何用程式寫出一部電影",
+  "title_status": "provisional",
+  "initiator": "李詩民",
+  "mode": "book_writing_handoff",
+  "reader": "具 AI 教學與實作經驗，但不預設英文術語、圖學或程式設計背景的成人學習者",
+  "core_promise": "看懂從意圖、數學、資料、時間、畫面到可播放影片的因果關係，能指揮與驗收 AI 寫程式影片",
+  "editorial_proposals": {
+    "parts": 6,
+    "chapters": 24,
+    "main_text_chinese_characters_range": [
+      65000,
+      90000
+    ],
+    "include_code_in_word_target": false,
+    "page_count": null,
+    "note": "本次編輯提案，非使用者已批准篇幅；內容清楚優先，不為字數灌水"
+  },
+  "teaching_sequence": [
+    "問題與可觀察結果",
+    "生活理解",
+    "圖示及比喻邊界",
+    "中文名稱",
+    "正式英文名稱",
+    "數字實算",
+    "最小程式",
+    "反例及驗收",
+    "讓 AI 幫忙的指令"
+  ],
+  "baseline": {
+    "core_examples": "Python standard library; SVG output",
+    "video_demo": "Pillow + system FFmpeg",
+    "required_gpu": false,
+    "paid_api_required": false
+  },
+  "non_goals": [
+    "單一 AI 模型使用指南",
+    "單一框架操作百科",
+    "影片原案原始碼的虛構逐行解說",
+    "僅用生活比喻不解釋真正機制",
+    "一次裝齊所有圖學框架",
+    "正式出版或自動上架"
+  ],
+  "case_study": {
+    "id": "world-becomes-computable-v1",
+    "title": "當世界開始被計算",
+    "use": "案例與限制教學",
+    "source_zip_available_in_this_handoff": false
+  },
+  "default_next_batch": [
+    "前言",
+    "CH01",
+    "CH02",
+    "CH03"
+  ],
+  "final_practice": {
+    "duration_seconds": [
+      60,
+      90
+    ],
+    "scenes": [
+      4,
+      6
+    ],
+    "scale_up_case_seconds": 750
+  }
+}

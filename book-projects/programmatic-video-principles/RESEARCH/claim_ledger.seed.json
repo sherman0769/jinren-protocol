@@ -1,0 +1,47 @@
+{
+  "claims": [
+    {
+      "id": "C01",
+      "claim": "本書採用給定時間計算畫面的主線",
+      "type": "editorial_design_with_technical_basis",
+      "sources": [
+        "S01"
+      ],
+      "status": "supported"
+    },
+    {
+      "id": "C02",
+      "claim": "原案實際採用 Python/Cairo，正式聲線未完成",
+      "type": "project_report",
+      "sources": [
+        "CASE_STUDY/evidence/QA_REPORT_original.md"
+      ],
+      "status": "reported_not_source_code_audited"
+    },
+    {
+      "id": "C03",
+      "claim": "任一新模型的程式影片表現代表全面模型能力排名",
+      "type": "unsupported_generalization",
+      "sources": [],
+      "status": "do_not_assert"
+    },
+    {
+      "id": "C04",
+      "claim": "所有 Shader 都只負責算最終像素",
+      "type": "overgeneralization",
+      "sources": [
+        "S06"
+      ],
+      "status": "must_correct"
+    },
+    {
+      "id": "C05",
+      "claim": "本包範例正確且可重建",
+      "type": "local_test",
+      "sources": [
+        "qa/HANDOFF_QA.md"
+      ],
+      "status": "use_actual_test_results"
+    }
+  ]
+}

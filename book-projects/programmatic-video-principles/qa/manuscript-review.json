@@ -1,0 +1,481 @@
+{
+  "reviewedAt": "2026-10-05",
+  "status": "model-review-complete",
+  "chapters": [
+    {
+      "chapter": 1,
+      "reviewerType": "模型自審",
+      "scope": "逐章正文復讀與實際數值檢查，非獨立專家或真人試讀",
+      "manuscriptSha256": "04c059907f3f409864dbae08d61a8ad84e929d07dc8c37643abd0edc9fdf3a9c",
+      "mechanismFocus": "末幀與片長",
+      "readerOpeningQuote": "看見一羣亮點聚成文字，我們常先問哪個 AI 能做。本書把問題往前移：電腦需要哪些資料，才知道每個時刻該畫什麼？你不必先熟悉英文，但要能說出輸入、規則、結果與檢查方法。這些理解能帶著你換工具，而不必每次從名稱重新開始。",
+      "numericalEvidence": {
+        "frames": 90,
+        "lastIndex": 89,
+        "times": [
+          0.0,
+          0.03333333333333333,
+          0.9666666666666667,
+          1.0,
+          2.966666666666667
+        ]
+      },
+      "technicalStatus": "passed-with-stated-scope",
+      "beginnerRoleSimulation": "核對純中文因果、數值預測、錯誤定位及三題答案",
+      "humanReaderValidation": false
+    },
+    {
+      "chapter": 2,
+      "reviewerType": "模型自審",
+      "scope": "逐章正文復讀與實際數值檢查，非獨立專家或真人試讀",
+      "manuscriptSha256": "85eded51303735a509c206edbca0728a5c665b8122c25d8c6aa69251afbeec31",
+      "mechanismFocus": "圓心與外緣",
+      "readerOpeningQuote": "你請人把磁鐵放在白板中央，他會看白板邊緣，找出寬高的一半。電腦也需要這些邊界，還要知道你說的是磁鐵中心還是左上角。位置不只是兩個數字；少了起算點、方向或單位，同一組數字可能畫到完全不同的地方。",
+      "numericalEvidence": {
+        "center": [
+          480,
+          270
+        ],
+        "safeCenter": [
+          40,
+          40
+        ]
+      },
+      "technicalStatus": "passed-with-stated-scope",
+      "beginnerRoleSimulation": "核對純中文因果、數值預測、錯誤定位及三題答案",
+      "humanReaderValidation": false
+    },
+    {
+      "chapter": 3,
+      "reviewerType": "模型自審",
+      "scope": "逐章正文復讀與實際數值檢查，非獨立專家或真人試讀",
+      "manuscriptSha256": "89482c731c3771197a7759a5e84d95142bd46bd697b34657f96aab3735df0a86",
+      "mechanismFocus": "作品時間與耗時",
+      "readerOpeningQuote": "你請程式畫第 120 幀，它花十分之一秒完成，或花十秒完成，都可以對應影片中的第四秒。這看似矛盾，其實因為我們用了兩種時間。一種是作品內部的位置，另一種是機器完成計算的耗時。離線製片的工作，是先算出要播的內容，不必以真正播放速度等待。",
+      "numericalEvidence": [
+        200.0,
+        100.0,
+        150.0,
+        200.0
+      ],
+      "technicalStatus": "passed-with-stated-scope",
+      "beginnerRoleSimulation": "核對純中文因果、數值預測、錯誤定位及三題答案",
+      "humanReaderValidation": false
+    },
+    {
+      "chapter": 4,
+      "reviewerType": "模型自審",
+      "scope": "逐章正文復讀與實際數值檢查，非獨立專家或真人試讀",
+      "manuscriptSha256": "f6cacd474e59272d9c11a1def66fc1a21e13ba10fc64aba5daac68c54d7f304b",
+      "mechanismFocus": "端點與截斷進度",
+      "readerOpeningQuote": "本章配套為教學重建，不是原片程式碼摘錄。",
+      "numericalEvidence": [
+        100.0,
+        250.0,
+        400.0,
+        700.0,
+        700.0
+      ],
+      "technicalStatus": "passed-with-stated-scope",
+      "beginnerRoleSimulation": "核對純中文因果、數值預測、錯誤定位及三題答案",
+      "humanReaderValidation": false
+    },
+    {
+      "chapter": 5,
+      "reviewerType": "模型自審",
+      "scope": "逐章正文復讀與實際數值檢查，非獨立專家或真人試讀",
+      "manuscriptSha256": "e5ce6e1cf8920958bc3dd52eff43990b97abba728c5d1c4b02254bc08bd4af6d",
+      "mechanismFocus": "緩動與累加錯誤",
+      "readerOpeningQuote": "把杯子推向桌面另一邊，人通常不會在開始那一瞬間直接達到全速，再於終點瞬間停止。你會先加快，再放慢。但電腦按第四章的線性位置規則，會讓每段等長時間走一樣遠。這不是錯誤，只是它忠實完成了等速要求；若想要另一種感覺，必須改規則。",
+      "numericalEvidence": [
+        193.75,
+        400.0,
+        606.25
+      ],
+      "technicalStatus": "passed-with-stated-scope",
+      "beginnerRoleSimulation": "核對純中文因果、數值預測、錯誤定位及三題答案",
+      "humanReaderValidation": false
+    },
+    {
+      "chapter": 6,
+      "reviewerType": "模型自審",
+      "scope": "逐章正文復讀與實際數值檢查，非獨立專家或真人試讀",
+      "manuscriptSha256": "3830d99befb8862960762132acbbde825e48a48d8b8476af45cdf716563dcb1b",
+      "mechanismFocus": "半開區間與局部時間",
+      "readerOpeningQuote": "想像第一幕先出標題，半秒後圓開始移動，三秒時切第二幕。若每個效果都自行記「現在過了多久」，場景重畫和切換就很容易出錯。需要的不是更多等待，而是一張共同的安排表：全片到什麼時間，哪個單位應該啟用，它內部又過了多久。",
+      "numericalEvidence": {
+        "boundary": [
+          "b",
+          0
+        ],
+        "at4.2": [
+          "b",
+          1.2000000000000002
+        ]
+      },
+      "technicalStatus": "passed-with-stated-scope",
+      "beginnerRoleSimulation": "核對純中文因果、數值預測、錯誤定位及三題答案",
+      "humanReaderValidation": false
+    },
+    {
+      "chapter": 7,
+      "reviewerType": "模型自審",
+      "scope": "逐章正文復讀與實際數值檢查，非獨立專家或真人試讀",
+      "manuscriptSha256": "2bae8a0bb5a673aad9a2b9059dfedf42820b20e272986cee593a4e23fad9b57f",
+      "mechanismFocus": "控制點與弧長",
+      "readerOpeningQuote": "看到一條路線從起點向前延伸，容易以為程式正像鉛筆那樣逐步留下墨水。這是一種做法，但還有另一種：先備好完整線形，再按時間控制可見範圍。前者累積畫過的痕跡，後者可以隨時重算任意時刻的畫面。",
+      "numericalEvidence": [
+        {
+          "x": 0,
+          "y": 0
+        },
+        {
+          "x": 25.0,
+          "y": 37.5
+        },
+        {
+          "x": 50.0,
+          "y": 50.0
+        },
+        {
+          "x": 75.0,
+          "y": 37.5
+        },
+        {
+          "x": 100,
+          "y": 0
+        }
+      ],
+      "technicalStatus": "passed-with-stated-scope",
+      "beginnerRoleSimulation": "核對純中文因果、數值預測、錯誤定位及三題答案",
+      "humanReaderValidation": false
+    },
+    {
+      "chapter": 8,
+      "reviewerType": "模型自審",
+      "scope": "逐章正文復讀與實際數值檢查，非獨立專家或真人試讀",
+      "manuscriptSha256": "840137c3efdc016747c68606a2c91589cd625c0b52a88c75009d55783b3cb4f7",
+      "mechanismFocus": "字框偏移與字元",
+      "readerOpeningQuote": "畫圓只需中心和半徑；畫「計算」還要知道字長什麼樣、如何排列、佔多少空間。你在程式裡看見正確文字，輸出卻出現方框，問題可能不在文字內容，而是選定字型沒有那個字。這兩層若混在一起，就會不停修改原文，卻始終無法修好畫面。",
+      "numericalEvidence": {
+        "drawingOrigin": [
+          148.0,
+          75.0
+        ],
+        "visibleCenter": [
+          200.0,
+          100.0
+        ]
+      },
+      "technicalStatus": "passed-with-stated-scope",
+      "beginnerRoleSimulation": "核對純中文因果、數值預測、錯誤定位及三題答案",
+      "humanReaderValidation": false
+    },
+    {
+      "chapter": 9,
+      "reviewerType": "模型自審",
+      "scope": "逐章正文復讀與實際數值檢查，非獨立專家或真人試讀",
+      "manuscriptSha256": "96f0f87f867f776e998710c0f25a238cfbf5cd28f90b02598d6be031839117f4",
+      "mechanismFocus": "固定亂數與身份",
+      "readerOpeningQuote": "假設一百人依座位表入座，你不必替每個人寫一套走路原理；需要的是每個人的資料與共同規則。動畫中的一千顆點也可以這樣。每顆記起點、速度、顏色或目標，程式逐筆讀取，再用同一方法計算當前位置。",
+      "numericalEvidence": {
+        "count": 200,
+        "firstPoint": {
+          "x": 221.4616808037861,
+          "y": 118.531833290572
+        },
+        "globalRandomUnchanged": true
+      },
+      "technicalStatus": "passed-with-stated-scope",
+      "beginnerRoleSimulation": "核對純中文因果、數值預測、錯誤定位及三題答案",
+      "humanReaderValidation": false
+    },
+    {
+      "chapter": 10,
+      "reviewerType": "模型自審",
+      "scope": "逐章正文復讀與實際數值檢查，非獨立專家或真人試讀",
+      "manuscriptSha256": "3a993f1e14c423a7b7489c6271c30ef50f7f1918c66a64ad4005a1ad298ee2e9",
+      "mechanismFocus": "重建遮罩與配對",
+      "readerOpeningQuote": "畫面中點從四處飛來，最後排列成「井」，很容易被說成點懂得組合文字。更可檢查的描述是：我們先取得一組目標位置，再為每顆點決定去哪裡。字的含義由人提供，程式處理的是幾何和對應關係。",
+      "numericalEvidence": {
+        "targetCount": 330,
+        "unique": true,
+        "endMatches": true
+      },
+      "technicalStatus": "passed-with-stated-scope",
+      "beginnerRoleSimulation": "核對純中文因果、數值預測、錯誤定位及三題答案",
+      "humanReaderValidation": false
+    },
+    {
+      "chapter": 11,
+      "reviewerType": "模型自審",
+      "scope": "逐章正文復讀與實際數值檢查，非獨立專家或真人試讀",
+      "manuscriptSha256": "d5449b5093c56c95bc639cfb912e62c22c7ad72cce2b08210cfec1e882c4e61d",
+      "mechanismFocus": "正弦非Perlin",
+      "readerOpeningQuote": "請一顆點每張畫面換一個隨機位置，它會四處閃跳。請它隨時間逐漸偏移，觀眾卻可能覺得像在風中搖動。差別不只是「夠不夠亂」，而是附近時間的結果是否相關。自然感常需要連續關係，不能只靠獨立抽樣。",
+      "numericalEvidence": [
+        0.0,
+        10.0,
+        1.2246467991473533e-15,
+        -10.0,
+        -2.4492935982947065e-15
+      ],
+      "technicalStatus": "passed-with-stated-scope",
+      "beginnerRoleSimulation": "核對純中文因果、數值預測、錯誤定位及三題答案",
+      "humanReaderValidation": false
+    },
+    {
+      "chapter": 12,
+      "reviewerType": "模型自審",
+      "scope": "逐章正文復讀與實際數值檢查，非獨立專家或真人試讀",
+      "manuscriptSha256": "f61f01090e26d835aefb68d6a675d6313eb01174cdf2664e3ced7f8f2d4e90b1",
+      "mechanismFocus": "半隱式步長與誤差",
+      "readerOpeningQuote": "把彈簧拉開再鬆手，物體回到原位時仍可能帶著速度，因此越過原位。要讓動畫有這種行為，不能只說「到達即停止」，而要說明速度如何累積、反向力如何作用、能量如何逐漸減少。這是一種模型；畫面有回彈並不自動證明用了真實彈簧。",
+      "numericalEvidence": {
+        "firstStep": [
+          0.96,
+          -0.4
+        ],
+        "exactAt2": -0.3372345973335527,
+        "stepErrors": [
+          0.00952882067799593,
+          0.004730364734612524,
+          0.002356778789726177
+        ]
+      },
+      "technicalStatus": "passed-with-stated-scope",
+      "beginnerRoleSimulation": "核對純中文因果、數值預測、錯誤定位及三題答案",
+      "humanReaderValidation": false
+    },
+    {
+      "chapter": 13,
+      "reviewerType": "模型自審",
+      "scope": "逐章正文復讀與實際數值檢查，非獨立專家或真人試讀",
+      "manuscriptSha256": "580b58e28de02434859032f358693338207a5d9058f9a75d470aa606b366eb58",
+      "mechanismFocus": "假資料與過渡",
+      "readerOpeningQuote": "如果三根柱子看起來很漂亮，卻沒人知道高度對應什麼，它只是裝飾。圖表要把資料值明確對映到幾何，並告訴觀眾單位、範圍和資料來源。本章用教學假資料 10、20、30，不把它寫成真實營業額或調查結果。",
+      "numericalEvidence": {
+        "heights": [
+          50.0,
+          100.0,
+          150.0
+        ],
+        "tops": [
+          200.0,
+          150.0,
+          100.0
+        ],
+        "constantRangeRejected": true
+      },
+      "technicalStatus": "passed-with-stated-scope",
+      "beginnerRoleSimulation": "核對純中文因果、數值預測、錯誤定位及三題答案",
+      "humanReaderValidation": false
+    },
+    {
+      "chapter": 14,
+      "reviewerType": "模型自審",
+      "scope": "逐章正文復讀與實際數值檢查，非獨立專家或真人試讀",
+      "manuscriptSha256": "bb8f56ec08d2d0bba43084d2f99e59b682f1ae008622e4fb160e144914e7e84e",
+      "mechanismFocus": "關係非佈局距離",
+      "readerOpeningQuote": "五個點、六條線可以像人際網、交通網或知識圖，也可以只是裝飾。外觀相似，意義卻不同。真正開始畫之前，先定義每個點代表什麼、每條線代表什麼，以及方向或權重是否存在。沒有這份資料契約，越多線只會增加猜測。",
+      "numericalEvidence": {
+        "nodes": 5,
+        "edges": 5,
+        "DInDegree": 2
+      },
+      "technicalStatus": "passed-with-stated-scope",
+      "beginnerRoleSimulation": "核對純中文因果、數值預測、錯誤定位及三題答案",
+      "humanReaderValidation": false
+    },
+    {
+      "chapter": 15,
+      "reviewerType": "模型自審",
+      "scope": "逐章正文復讀與實際數值檢查，非獨立專家或真人試讀",
+      "manuscriptSha256": "86536ae23237b22b3d0ed0481f9ad00523d2ad098f167b35d94f96125aaf0cd3",
+      "mechanismFocus": "鏡頭與近裁切",
+      "readerOpeningQuote": "你把點從 (x,y) 改成 (x,y,z)，得到三維資料，卻還沒告訴電腦怎麼看它。螢幕仍是平面，需要鏡頭位置、朝向與投影規則，才知道三維點應畫在哪。也要決定近處能不能遮住遠處，否則只是重疊的線，沒有一致的空間。",
+      "numericalEvidence": {
+        "near": [
+          450.0,
+          175.0
+        ],
+        "far": [
+          425.0,
+          200.0
+        ],
+        "behindRejected": true
+      },
+      "technicalStatus": "passed-with-stated-scope",
+      "beginnerRoleSimulation": "核對純中文因果、數值預測、錯誤定位及三題答案",
+      "humanReaderValidation": false
+    },
+    {
+      "chapter": 16,
+      "reviewerType": "模型自審",
+      "scope": "逐章正文復讀與實際數值檢查，非獨立專家或真人試讀",
+      "manuscriptSha256": "3f7514e11f044873ddc02f4b6c803edfed1aab922ec632c14b4288844ea44a78",
+      "mechanismFocus": "著色階段與CPU範圍",
+      "readerOpeningQuote": "一個純灰圓可能像平面；加上明暗漸變，觀眾會讀成球。關鍵不是「加高階效果」，而是讓亮暗與表面方向、光線方向保持關係。光暈能強調亮處，但若每個方向都隨機發亮，立體感可能反而消失。",
+      "numericalEvidence": {
+        "cpuNumericalTeaching": true,
+        "brightness": [
+          1.0,
+          0.2,
+          0.2
+        ],
+        "gpuRun": false
+      },
+      "technicalStatus": "passed-with-stated-scope",
+      "beginnerRoleSimulation": "核對純中文因果、數值預測、錯誤定位及三題答案",
+      "humanReaderValidation": false
+    },
+    {
+      "chapter": 17,
+      "reviewerType": "模型自審",
+      "scope": "逐章正文復讀與實際數值檢查，非獨立專家或真人試讀",
+      "manuscriptSha256": "ff35d3a49dd1d85db7ec3bb901f91c6cd162de2e8e2ce183f96419df6d1f36e5",
+      "mechanismFocus": "取樣聲道與資料量",
+      "readerOpeningQuote": "一段影片每秒三十張，聲音卻可以每秒記錄四萬八千個時間取樣。這兩種資料不必有同樣的格數；共同基準是秒。若強迫聲音只在每張影格更新一次，就不能完整表示快速的聲波變化。",
+      "numericalEvidence": {
+        "file": "examples\\output\\chapter17_two_seconds.wav",
+        "duration": 2,
+        "samples": 96000,
+        "dataBytes": 192000
+      },
+      "technicalStatus": "passed-with-stated-scope",
+      "beginnerRoleSimulation": "核對純中文因果、數值預測、錯誤定位及三題答案",
+      "humanReaderValidation": false
+    },
+    {
+      "chapter": 18,
+      "reviewerType": "模型自審",
+      "scope": "逐章正文復讀與實際數值檢查，非獨立專家或真人試讀",
+      "manuscriptSha256": "e1a8470684a43c296d3de6ab244ebca47d224cc2bd3450919a2a31eea1e11144",
+      "mechanismFocus": "語音窗與假值範圍",
+      "readerOpeningQuote": "同一句話由不同聲音說出，停頓、重音與速度可能不同。文字完全一致，音長卻可能從三秒變成四秒。若畫面在第三秒切走，尾字就會落到下一幕，或被截掉。因此「換聲音」是不是隻換一條音軌，要先看內容與時間窗是否仍成立。",
+      "numericalEvidence": {
+        "hypotheticalDurations": true,
+        "ends": [
+          1.6,
+          3.8,
+          5.9
+        ],
+        "overflowRejected": true
+      },
+      "technicalStatus": "passed-with-stated-scope",
+      "beginnerRoleSimulation": "核對純中文因果、數值預測、錯誤定位及三題答案",
+      "humanReaderValidation": false
+    },
+    {
+      "chapter": 19,
+      "reviewerType": "模型自審",
+      "scope": "逐章正文復讀與實際數值檢查，非獨立專家或真人試讀",
+      "manuscriptSha256": "a0f4a7ebb9a0674f9e371f61c8d87048297cccc4d0f6c0d5be641dcfd6a38a9c",
+      "mechanismFocus": "渲染編碼封裝",
+      "readerOpeningQuote": "瀏覽器可以按時間計算畫面，卻不一定已經把它存成通用影片。要交付一個MP4，還要確定每張畫、壓縮後的資料流與封裝資訊。預覽和輸出共用原理，完成條件卻不同。",
+      "numericalEvidence": {
+        "rawFrameBytes": 2764800,
+        "rawEightSecondsBytes": 663552000,
+        "frames": 240
+      },
+      "technicalStatus": "passed-with-stated-scope",
+      "beginnerRoleSimulation": "核對純中文因果、數值預測、錯誤定位及三題答案",
+      "humanReaderValidation": false
+    },
+    {
+      "chapter": 20,
+      "reviewerType": "模型自審",
+      "scope": "逐章正文復讀與實際數值檢查，非獨立專家或真人試讀",
+      "manuscriptSha256": "416b275368877c24914a48b0b78b89d4b2be6a279b8d43d9facff17384f6e97d",
+      "mechanismFocus": "歷史證據與本輪分層",
+      "readerOpeningQuote": "有一個MP4，只能說明某個路徑有檔案；能開啟片頭，也不能保證後半段完整。數值測試、媒體資訊、完整解碼、視覺檢查與聽審回答不同問題。如果把它們統稱「測試透過」，讀者就不知道哪些風險已經檢查。",
+      "numericalEvidence": {
+        "invalidInputsRejected": 5,
+        "frames": 240,
+        "localAt5": 1.0
+      },
+      "technicalStatus": "passed-with-stated-scope",
+      "beginnerRoleSimulation": "核對純中文因果、數值預測、錯誤定位及三題答案",
+      "humanReaderValidation": false
+    },
+    {
+      "chapter": 21,
+      "reviewerType": "模型自審",
+      "scope": "逐章正文復讀與實際數值檢查，非獨立專家或真人試讀",
+      "manuscriptSha256": "5a2afdd592962f9144122584bc32794fecef009e5d17393a5549bad86fa77a57",
+      "mechanismFocus": "可驗收規格",
+      "readerOpeningQuote": "「像被無形力量吸引，最後成為一個字」是有價值的創作意圖，但它留下許多未決定的事情：什麼字、多少點、起點在哪、花多久、是否碰撞、最後停留多久。AI可以補提案，卻不能把每個自行決定的參數都說成你早已指定。",
+      "numericalEvidence": {
+        "frames": 150,
+        "lastIndex": 149,
+        "halfProgress": 0.5,
+        "lastTime": 4.966666666666667
+      },
+      "technicalStatus": "passed-with-stated-scope",
+      "beginnerRoleSimulation": "核對純中文因果、數值預測、錯誤定位及三題答案",
+      "humanReaderValidation": false
+    },
+    {
+      "chapter": 22,
+      "reviewerType": "模型自審",
+      "scope": "逐章正文復讀與實際數值檢查，非獨立專家或真人試讀",
+      "manuscriptSha256": "972773a29b3d7b16c773e8a6223866d32c9d0e3d275cbf21a3e123b63252df2f",
+      "mechanismFocus": "工具閱讀非實跑",
+      "readerOpeningQuote": "學會某個框架的函式，當然能幫助完成作品；但如果所有理解都靠函式名，換框架就像重新學一次。更穩定的知識是：位置如何定義、時間怎麼輸入、狀態是否依賴過去、畫面怎麼輸出，以及怎樣驗收。",
+      "numericalEvidence": [
+        100.0,
+        250.0,
+        400.0,
+        700.0,
+        700.0
+      ],
+      "technicalStatus": "passed-with-stated-scope",
+      "beginnerRoleSimulation": "核對純中文因果、數值預測、錯誤定位及三題答案",
+      "humanReaderValidation": false
+    },
+    {
+      "chapter": 23,
+      "reviewerType": "模型自審",
+      "scope": "逐章正文復讀與實際數值檢查，非獨立專家或真人試讀",
+      "manuscriptSha256": "b6ab3cfde076d4469b2cb69ee7da1fdb908f91c4a05bcf6be1f47f1a4bab78d7",
+      "mechanismFocus": "入口語義驗證",
+      "readerOpeningQuote": "每次製作都重寫時間表與輸出命令，會讓修改變慢；直接複製舊片程式，卻可能把舊標題、時長與快取一起帶來。可維護的引擎應讓內容更換有明確位置，並檢查新內容是否仍符合規則。",
+      "numericalEvidence": {
+        "invalidInputsRejected": 5,
+        "frames": 240,
+        "localAt5": 1.0
+      },
+      "technicalStatus": "passed-with-stated-scope",
+      "beginnerRoleSimulation": "核對純中文因果、數值預測、錯誤定位及三題答案",
+      "humanReaderValidation": false
+    },
+    {
+      "chapter": 24,
+      "reviewerType": "模型自審",
+      "scope": "逐章正文復讀與實際數值檢查，非獨立專家或真人試讀",
+      "manuscriptSha256": "aec2e8389ec6ee4da444526bdc4f60284f47c7322ac1ed27aea28f4a1e827b68",
+      "mechanismFocus": "四幕遷移與真人驗收",
+      "readerOpeningQuote": "跑完一個預設例子可以證明環境與鏈路，但不能證明你能決定新作品。最後練習是一支六十到九十秒、四到六幕的說明片，主題由你選。你要能解釋每個數字、動作和證據，而不只是說「AI幫我做了」。",
+      "numericalEvidence": {
+        "frames": 1800,
+        "lastIndex": 1799,
+        "lastTime": 59.96666666666667,
+        "sceneAt450": 2
+      },
+      "technicalStatus": "passed-with-stated-scope",
+      "beginnerRoleSimulation": "核對純中文因果、數值預測、錯誤定位及三題答案",
+      "humanReaderValidation": false
+    }
+  ],
+  "correctionsBeforeSourceLock": [
+    "CH08錯開時間改為直接描述0.2秒",
+    "區域性改局部；畫素改像素；引數改參數",
+    "不透明度的零到一描述",
+    "CH04移除校準草稿狀態語"
+  ],
+  "limits": [
+    "未進行人類試讀或整章真人聽審",
+    "沒有原案例完整引擎原碼或五套框架實跑",
+    "區域繁體詞彙可留待後續編輯；NotebookLM現行來源以鎖定TXT為準"
+  ]
+}

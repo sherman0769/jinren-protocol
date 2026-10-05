@@ -1,0 +1,353 @@
+{
+  "scope": "啟發式提示，不是語意驗收分數。每個提示可由人工判定不適用。",
+  "files": [
+    {
+      "path": "D:\\MyGitHub\\漫畫自創作\\book-projects\\programmatic-video-principles\\MANUSCRIPT\\chapters\\chapter_01_main.md",
+      "chinese_character_count": 1472,
+      "hints": [],
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "path": "D:\\MyGitHub\\漫畫自創作\\book-projects\\programmatic-video-principles\\MANUSCRIPT\\chapters\\chapter_02_main.md",
+      "chinese_character_count": 1307,
+      "hints": [
+        {
+          "kind": "術語首次解釋",
+          "term": "Raster",
+          "message": "附近未找到術語卡的中文名稱；請確認先前章節是否已教過，或此處是否需補解釋。"
+        },
+        {
+          "kind": "術語首次解釋",
+          "term": "API",
+          "message": "附近未找到術語卡的中文名稱；請確認先前章節是否已教過，或此處是否需補解釋。"
+        },
+        {
+          "kind": "術語首次解釋",
+          "term": "Rasterization",
+          "message": "附近未找到術語卡的中文名稱；請確認先前章節是否已教過，或此處是否需補解釋。"
+        }
+      ],
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "path": "D:\\MyGitHub\\漫畫自創作\\book-projects\\programmatic-video-principles\\MANUSCRIPT\\chapters\\chapter_03_main.md",
+      "chinese_character_count": 1305,
+      "hints": [
+        {
+          "kind": "術語首次解釋",
+          "term": "FPS",
+          "message": "附近未找到術語卡的中文名稱；請確認先前章節是否已教過，或此處是否需補解釋。"
+        },
+        {
+          "kind": "術語首次解釋",
+          "term": "Function",
+          "message": "附近未找到術語卡的中文名稱；請確認先前章節是否已教過，或此處是否需補解釋。"
+        },
+        {
+          "kind": "術語首次解釋",
+          "term": "Deterministic",
+          "message": "附近未找到術語卡的中文名稱；請確認先前章節是否已教過，或此處是否需補解釋。"
+        },
+        {
+          "kind": "術語首次解釋",
+          "term": "Library",
+          "message": "附近未找到術語卡的中文名稱；請確認先前章節是否已教過，或此處是否需補解釋。"
+        }
+      ],
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "path": "D:\\MyGitHub\\漫畫自創作\\book-projects\\programmatic-video-principles\\MANUSCRIPT\\chapters\\chapter_04_main.md",
+      "chinese_character_count": 2505,
+      "hints": [],
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "path": "D:\\MyGitHub\\漫畫自創作\\book-projects\\programmatic-video-principles\\MANUSCRIPT\\chapters\\chapter_05_main.md",
+      "chinese_character_count": 1271,
+      "hints": [
+        {
+          "kind": "術語首次解釋",
+          "term": "Velocity",
+          "message": "附近未找到術語卡的中文名稱；請確認先前章節是否已教過，或此處是否需補解釋。"
+        },
+        {
+          "kind": "術語首次解釋",
+          "term": "API",
+          "message": "附近未找到術語卡的中文名稱；請確認先前章節是否已教過，或此處是否需補解釋。"
+        }
+      ],
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "path": "D:\\MyGitHub\\漫畫自創作\\book-projects\\programmatic-video-principles\\MANUSCRIPT\\chapters\\chapter_06_main.md",
+      "chinese_character_count": 1242,
+      "hints": [
+        {
+          "kind": "術語首次解釋",
+          "term": "FPS",
+          "message": "附近未找到術語卡的中文名稱；請確認先前章節是否已教過，或此處是否需補解釋。"
+        },
+        {
+          "kind": "術語首次解釋",
+          "term": "Canvas",
+          "message": "附近未找到術語卡的中文名稱；請確認先前章節是否已教過，或此處是否需補解釋。"
+        }
+      ],
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "path": "D:\\MyGitHub\\漫畫自創作\\book-projects\\programmatic-video-principles\\MANUSCRIPT\\chapters\\chapter_07_main.md",
+      "chinese_character_count": 1068,
+      "hints": [
+        {
+          "kind": "術語首次解釋",
+          "term": "Path",
+          "message": "附近未找到術語卡的中文名稱；請確認先前章節是否已教過，或此處是否需補解釋。"
+        }
+      ],
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "path": "D:\\MyGitHub\\漫畫自創作\\book-projects\\programmatic-video-principles\\MANUSCRIPT\\chapters\\chapter_08_main.md",
+      "chinese_character_count": 1312,
+      "hints": [
+        {
+          "kind": "術語首次解釋",
+          "term": "Bounding Box",
+          "message": "附近未找到術語卡的中文名稱；請確認先前章節是否已教過，或此處是否需補解釋。"
+        },
+        {
+          "kind": "術語首次解釋",
+          "term": "Baseline",
+          "message": "附近未找到術語卡的中文名稱；請確認先前章節是否已教過，或此處是否需補解釋。"
+        }
+      ],
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "path": "D:\\MyGitHub\\漫畫自創作\\book-projects\\programmatic-video-principles\\MANUSCRIPT\\chapters\\chapter_09_main.md",
+      "chinese_character_count": 1237,
+      "hints": [
+        {
+          "kind": "術語首次解釋",
+          "term": "Seed",
+          "message": "附近未找到術語卡的中文名稱；請確認先前章節是否已教過，或此處是否需補解釋。"
+        },
+        {
+          "kind": "術語首次解釋",
+          "term": "Library",
+          "message": "附近未找到術語卡的中文名稱；請確認先前章節是否已教過，或此處是否需補解釋。"
+        }
+      ],
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "path": "D:\\MyGitHub\\漫畫自創作\\book-projects\\programmatic-video-principles\\MANUSCRIPT\\chapters\\chapter_10_main.md",
+      "chinese_character_count": 1211,
+      "hints": [],
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "path": "D:\\MyGitHub\\漫畫自創作\\book-projects\\programmatic-video-principles\\MANUSCRIPT\\chapters\\chapter_11_main.md",
+      "chinese_character_count": 1020,
+      "hints": [
+        {
+          "kind": "術語首次解釋",
+          "term": "GPU",
+          "message": "附近未找到術語卡的中文名稱；請確認先前章節是否已教過，或此處是否需補解釋。"
+        }
+      ],
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "path": "D:\\MyGitHub\\漫畫自創作\\book-projects\\programmatic-video-principles\\MANUSCRIPT\\chapters\\chapter_12_main.md",
+      "chinese_character_count": 1020,
+      "hints": [
+        {
+          "kind": "術語首次解釋",
+          "term": "Spring",
+          "message": "附近未找到術語卡的中文名稱；請確認先前章節是否已教過，或此處是否需補解釋。"
+        }
+      ],
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "path": "D:\\MyGitHub\\漫畫自創作\\book-projects\\programmatic-video-principles\\MANUSCRIPT\\chapters\\chapter_13_main.md",
+      "chinese_character_count": 1157,
+      "hints": [
+        {
+          "kind": "術語首次解釋",
+          "term": "Canvas",
+          "message": "附近未找到術語卡的中文名稱；請確認先前章節是否已教過，或此處是否需補解釋。"
+        },
+        {
+          "kind": "術語首次解釋",
+          "term": "API",
+          "message": "附近未找到術語卡的中文名稱；請確認先前章節是否已教過，或此處是否需補解釋。"
+        }
+      ],
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "path": "D:\\MyGitHub\\漫畫自創作\\book-projects\\programmatic-video-principles\\MANUSCRIPT\\chapters\\chapter_14_main.md",
+      "chinese_character_count": 1060,
+      "hints": [],
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "path": "D:\\MyGitHub\\漫畫自創作\\book-projects\\programmatic-video-principles\\MANUSCRIPT\\chapters\\chapter_15_main.md",
+      "chinese_character_count": 1100,
+      "hints": [
+        {
+          "kind": "術語首次解釋",
+          "term": "API",
+          "message": "附近未找到術語卡的中文名稱；請確認先前章節是否已教過，或此處是否需補解釋。"
+        }
+      ],
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "path": "D:\\MyGitHub\\漫畫自創作\\book-projects\\programmatic-video-principles\\MANUSCRIPT\\chapters\\chapter_16_main.md",
+      "chinese_character_count": 1102,
+      "hints": [
+        {
+          "kind": "術語首次解釋",
+          "term": "Matrix",
+          "message": "附近未找到術語卡的中文名稱；請確認先前章節是否已教過，或此處是否需補解釋。"
+        },
+        {
+          "kind": "術語首次解釋",
+          "term": "API",
+          "message": "附近未找到術語卡的中文名稱；請確認先前章節是否已教過，或此處是否需補解釋。"
+        }
+      ],
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "path": "D:\\MyGitHub\\漫畫自創作\\book-projects\\programmatic-video-principles\\MANUSCRIPT\\chapters\\chapter_17_main.md",
+      "chinese_character_count": 1076,
+      "hints": [
+        {
+          "kind": "術語首次解釋",
+          "term": "Sample",
+          "message": "附近未找到術語卡的中文名稱；請確認先前章節是否已教過，或此處是否需補解釋。"
+        },
+        {
+          "kind": "術語首次解釋",
+          "term": "API",
+          "message": "附近未找到術語卡的中文名稱；請確認先前章節是否已教過，或此處是否需補解釋。"
+        }
+      ],
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "path": "D:\\MyGitHub\\漫畫自創作\\book-projects\\programmatic-video-principles\\MANUSCRIPT\\chapters\\chapter_18_main.md",
+      "chinese_character_count": 1152,
+      "hints": [
+        {
+          "kind": "術語首次解釋",
+          "term": "QA",
+          "message": "附近未找到術語卡的中文名稱；請確認先前章節是否已教過，或此處是否需補解釋。"
+        }
+      ],
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "path": "D:\\MyGitHub\\漫畫自創作\\book-projects\\programmatic-video-principles\\MANUSCRIPT\\chapters\\chapter_19_main.md",
+      "chinese_character_count": 1142,
+      "hints": [
+        {
+          "kind": "術語首次解釋",
+          "term": "Codec",
+          "message": "附近未找到術語卡的中文名稱；請確認先前章節是否已教過，或此處是否需補解釋。"
+        },
+        {
+          "kind": "術語首次解釋",
+          "term": "Container",
+          "message": "附近未找到術語卡的中文名稱；請確認先前章節是否已教過，或此處是否需補解釋。"
+        },
+        {
+          "kind": "術語首次解釋",
+          "term": "Muxing",
+          "message": "附近未找到術語卡的中文名稱；請確認先前章節是否已教過，或此處是否需補解釋。"
+        }
+      ],
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "path": "D:\\MyGitHub\\漫畫自創作\\book-projects\\programmatic-video-principles\\MANUSCRIPT\\chapters\\chapter_20_main.md",
+      "chinese_character_count": 1144,
+      "hints": [],
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "path": "D:\\MyGitHub\\漫畫自創作\\book-projects\\programmatic-video-principles\\MANUSCRIPT\\chapters\\chapter_21_main.md",
+      "chinese_character_count": 1184,
+      "hints": [
+        {
+          "kind": "術語首次解釋",
+          "term": "FPS",
+          "message": "附近未找到術語卡的中文名稱；請確認先前章節是否已教過，或此處是否需補解釋。"
+        }
+      ],
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "path": "D:\\MyGitHub\\漫畫自創作\\book-projects\\programmatic-video-principles\\MANUSCRIPT\\chapters\\chapter_22_main.md",
+      "chinese_character_count": 1132,
+      "hints": [
+        {
+          "kind": "術語首次解釋",
+          "term": "FPS",
+          "message": "附近未找到術語卡的中文名稱；請確認先前章節是否已教過，或此處是否需補解釋。"
+        },
+        {
+          "kind": "術語首次解釋",
+          "term": "Canvas",
+          "message": "附近未找到術語卡的中文名稱；請確認先前章節是否已教過，或此處是否需補解釋。"
+        },
+        {
+          "kind": "術語首次解釋",
+          "term": "GPU",
+          "message": "附近未找到術語卡的中文名稱；請確認先前章節是否已教過，或此處是否需補解釋。"
+        }
+      ],
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "path": "D:\\MyGitHub\\漫畫自創作\\book-projects\\programmatic-video-principles\\MANUSCRIPT\\chapters\\chapter_23_main.md",
+      "chinese_character_count": 1169,
+      "hints": [
+        {
+          "kind": "術語首次解釋",
+          "term": "FPS",
+          "message": "附近未找到術語卡的中文名稱；請確認先前章節是否已教過，或此處是否需補解釋。"
+        },
+        {
+          "kind": "術語首次解釋",
+          "term": "Easing",
+          "message": "附近未找到術語卡的中文名稱；請確認先前章節是否已教過，或此處是否需補解釋。"
+        }
+      ],
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "path": "D:\\MyGitHub\\漫畫自創作\\book-projects\\programmatic-video-principles\\MANUSCRIPT\\chapters\\chapter_24_main.md",
+      "chinese_character_count": 1182,
+      "hints": [
+        {
+          "kind": "術語首次解釋",
+          "term": "FPS",
+          "message": "附近未找到術語卡的中文名稱；請確認先前章節是否已教過，或此處是否需補解釋。"
+        },
+        {
+          "kind": "術語首次解釋",
+          "term": "Render",
+          "message": "附近未找到術語卡的中文名稱；請確認先前章節是否已教過，或此處是否需補解釋。"
+        }
+      ],
+      "status": "REVIEW_REQUIRED"
+    }
+  ]
+}
