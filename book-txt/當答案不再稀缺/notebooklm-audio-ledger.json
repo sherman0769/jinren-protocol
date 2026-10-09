@@ -1,0 +1,2075 @@
+{
+  "bookTitle": "當答案不再稀缺",
+  "slug": "when-answers-are-abundant",
+  "notebookTitle": "當答案不再稀缺｜章節音頻",
+  "notebookUrl": "https://notebook.google.com/notebook/c24667f1-d44f-4205-802f-da5b45c54cf9",
+  "expectedChapterCount": 12,
+  "createdAt": "2026-10-09T02:54:17.2988371+00:00",
+  "authorization": "2026-10-09 使用者在本書接件與上架流程中重傳完整書稿；依使用者提供的專案規則，包含 NotebookLM 逐章生成、下載、Blob、commit/push 與正式部署。",
+  "status": "blob-applied-awaiting-production-validation",
+  "generationFormat": "深入探索",
+  "language": "中文（繁體）",
+  "preflight": {
+    "nonempty": true,
+    "existing24BooksUnchanged": true,
+    "contiguous": true,
+    "count": 12,
+    "txtMatchesBooksJson": true
+  },
+  "uploadTransaction": {
+    "status": "verified",
+    "preExistingSourceCount": 0,
+    "id": "when-answers-txt12-20261009",
+    "sourceFiles": [
+      {
+        "sha256": "ea31a09194699c9f89943fa9ecc22fdc02e6c537e713679cccc3ede1fe99c0e9",
+        "bytes": 27927,
+        "file": "01_第一章｜當機器開始探索未知，我該震撼的是什麼？.txt"
+      },
+      {
+        "sha256": "94932792953571ebf01d9c1f231fde9f7a4e2b813d7aac468960c9272ba19455",
+        "bytes": 17122,
+        "file": "02_第二章｜答案變多，為什麼不等於知識變多？.txt"
+      },
+      {
+        "sha256": "6b7bb8d5d96ff49a43be8ca4c59224127d3eb0c2535f2f303d79229e0062f1c2",
+        "bytes": 18394,
+        "file": "03_第三章｜為什麼模型變強，生活沒有等速改變？.txt"
+      },
+      {
+        "sha256": "4c306ec741ca6989d6d71ae125ff835083888f08ecac0b1d50d27fb0391ff42d",
+        "bytes": 17887,
+        "file": "04_第四章｜當 AI 比我會做，我的專業還剩什麼？.txt"
+      },
+      {
+        "sha256": "0b4fe614c6c208d0beb9fbbea0b82deba1e281797204f5fd4ad81abfc93cb4dc",
+        "bytes": 18982,
+        "file": "05_第五章｜越能把知識交給 AI，為什麼越不能停止學習？.txt"
+      },
+      {
+        "sha256": "0871a9e81d600a595ac12d530da702a090dc345e966d1939c80b82da801e1b76",
+        "bytes": 18729,
+        "file": "06_第六章｜面對比我懂更多的系統，我如何決定相信多少？.txt"
+      },
+      {
+        "sha256": "9ff01f0bc0f5fc35fa000855c121e2f610264c9865cdc19a9d5267cca7f5d9f9",
+        "bytes": 18652,
+        "file": "07_第七章｜做得出來之後，怎樣才算真正交付？.txt"
+      },
+      {
+        "sha256": "5a9a83a1b507641f3eabf12b945f5dedce65def4085c5f5a3a5467a655bc0cf1",
+        "bytes": 17871,
+        "file": "08_第八章｜效率變高了，為什麼不一定輪到我受益？.txt"
+      },
+      {
+        "sha256": "9d2e0441e79cd8cb36a457ce23bfd89f6d870a593ee90b88d0239b91f20dca67",
+        "bytes": 17698,
+        "file": "09_第九章｜如果不再靠比機器厲害，我怎麼理解自己的價值？.txt"
+      },
+      {
+        "sha256": "4baea9bdf5d0b067d109f4870d51a46742fa659c2dc47f2a22efff5ffec4c80f",
+        "bytes": 17121,
+        "file": "10_第十章｜身為講師、實作者與推廣者，我要如何重新站位？.txt"
+      },
+      {
+        "sha256": "2863436b5455e77282780ff53b1aff4486e3a2f0f613be48876355d8af1d8f87",
+        "bytes": 16705,
+        "file": "11_第十一章｜未來不能確定，我還是能做哪些穩健準備？.txt"
+      },
+      {
+        "sha256": "27da684c30d996e46e4c99b637dd4d5ccdf0fcea0ec3a403c8b0b1ee22052245",
+        "bytes": 34548,
+        "file": "12_第十二章｜不是追上 AI，而是建立能持續修正的自己.txt"
+      }
+    ],
+    "triggerStartedAt": "2026-10-09T02:54:52.317Z",
+    "verifiedSourceCount": 12,
+    "verifiedAt": "2026-10-09T02:55:38.974Z"
+  },
+  "entries": [
+    {
+      "chapterNumber": 1,
+      "sourcePath": "book-txt/當答案不再稀缺/01_第一章｜當機器開始探索未知，我該震撼的是什麼？.txt",
+      "sourceFilename": "01_第一章｜當機器開始探索未知，我該震撼的是什麼？.txt",
+      "sourceSha256": "ea31a09194699c9f89943fa9ecc22fdc02e6c537e713679cccc3ede1fe99c0e9",
+      "sourceBytes": 27927,
+      "promptMarker": "章節標誌：01_第一章｜當機器開始探索未知，我該震撼的是什麼？",
+      "expectedAudioTitle": "01_第一章｜當機器開始探索未知，我該震撼的是什麼？",
+      "selectedSourceCount": 1,
+      "generationStatus": "complete",
+      "promptSourceVerified": true,
+      "finalAudioCardTitle": "01_第一章｜當機器開始探索未知，我該震撼的是什麼？",
+      "selectionRecovery": {
+        "actionReportedFailure": true,
+        "authoritativeReadback": "第一章 Value=1，其餘十一章 Value=0，1 個來源",
+        "duplicateSelectionAction": false
+      },
+      "selectedSourceVerified": true,
+      "prompt": "章節標誌：01_第一章｜當機器開始探索未知，我該震撼的是什麼？\n請只根據目前選取的本章來源，用自然的台灣繁體中文口語，讓兩位主持人深入解說本章。先從核心問題和具體情境開始，再說清概念關係、推理、強反方與適用邊界，保留練習與可採取的行動。區分研究事實、發布者主張、作者推論、假設案例和價值立場；說明數字的時間與分母，不把形式化等同學界接受，不捏造作者經驗或試行成果。英文術語首次出現用白話解釋。不要逐字朗讀網址、來源代碼或金句清單，不加入來源外的新結論。",
+      "submissionOrdinal": 1,
+      "preSubmitCardCount": 0,
+      "submittedAt": "2026-10-09T02:56:21.070Z",
+      "postSubmitCardCount": 1,
+      "queueAcceptanceState": "accepted",
+      "acceptanceTimestamp": "2026-10-09T02:57:04.990Z",
+      "cardDuration": "16:40",
+      "completedAt": "2026-10-09T03:08:51.814Z",
+      "identityVerifiedAt": "2026-10-09T03:18:39.177Z",
+      "queueAcceptedAt": "2026-10-09T02:57:04.990Z",
+      "generationState": "complete",
+      "promptSourceVerification": "complete",
+      "duration": "16:40"
+    },
+    {
+      "chapterNumber": 2,
+      "sourcePath": "book-txt/當答案不再稀缺/02_第二章｜答案變多，為什麼不等於知識變多？.txt",
+      "sourceFilename": "02_第二章｜答案變多，為什麼不等於知識變多？.txt",
+      "sourceSha256": "94932792953571ebf01d9c1f231fde9f7a4e2b813d7aac468960c9272ba19455",
+      "sourceBytes": 17122,
+      "promptMarker": "章節標誌：02_第二章｜答案變多，為什麼不等於知識變多？",
+      "expectedAudioTitle": "02_第二章｜答案變多，為什麼不等於知識變多？",
+      "selectedSourceCount": 1,
+      "generationStatus": "complete",
+      "promptSourceVerified": true,
+      "finalAudioCardTitle": "02_第二章｜答案變多，為什麼不等於知識變多？",
+      "selectedSourceVerified": true,
+      "selectionMethod": "select-all checkbox Space twice then exact chapter Space; zero and one source DOM verified",
+      "prompt": "章節標誌：02_第二章｜答案變多，為什麼不等於知識變多？\n請只根據目前選取的本章來源，用自然的台灣繁體中文口語，讓兩位主持人深入解說本章。先從核心問題和具體情境開始，再說清概念關係、推理、強反方與適用邊界，保留練習與可採取的行動。區分研究事實、發布者主張、作者推論、假設案例和價值立場；說明數字的時間與分母，不把形式化等同學界接受，不捏造作者經驗或試行成果。英文術語首次出現用白話解釋。不要逐字朗讀網址、來源代碼或金句清單，不加入來源外的新結論。",
+      "submissionOrdinal": 2,
+      "preSubmitCardCount": 1,
+      "submittedAt": "2026-10-09T03:00:52.227Z",
+      "postSubmitCardCount": 2,
+      "queueAcceptanceState": "accepted",
+      "acceptanceTimestamp": "2026-10-09T03:01:05.877Z",
+      "queueAcceptedAt": "2026-10-09T03:01:05.877Z",
+      "duration": "21:06",
+      "cardDuration": "21:06",
+      "generatedCardTitle": "AI給的只是候選答案",
+      "firstIdentityVerifiedAt": "2026-10-09T03:16:49.277Z",
+      "generationState": "complete",
+      "promptSourceVerification": "complete",
+      "completedAt": "2026-10-09T03:18:42.162Z",
+      "identityVerifiedAt": "2026-10-09T03:18:42.162Z"
+    },
+    {
+      "chapterNumber": 3,
+      "sourcePath": "book-txt/當答案不再稀缺/03_第三章｜為什麼模型變強，生活沒有等速改變？.txt",
+      "sourceFilename": "03_第三章｜為什麼模型變強，生活沒有等速改變？.txt",
+      "sourceSha256": "6b7bb8d5d96ff49a43be8ca4c59224127d3eb0c2535f2f303d79229e0062f1c2",
+      "sourceBytes": 18394,
+      "promptMarker": "章節標誌：03_第三章｜為什麼模型變強，生活沒有等速改變？",
+      "expectedAudioTitle": "03_第三章｜為什麼模型變強，生活沒有等速改變？",
+      "selectedSourceCount": 1,
+      "generationStatus": "complete",
+      "promptSourceVerified": true,
+      "finalAudioCardTitle": "03_第三章｜為什麼模型變強，生活沒有等速改變？",
+      "selectionMethod": "select-all checkbox Space twice then exact chapter Space; DOM checked state and selected-source count readback",
+      "selectedSourceVerified": true,
+      "prompt": "章節標誌：03_第三章｜為什麼模型變強，生活沒有等速改變？\n請只根據目前選取的本章來源，用自然的台灣繁體中文口語，讓兩位主持人深入解說本章。先從核心問題和具體情境開始，再說清概念關係、推理、強反方與適用邊界，保留練習與可採取的行動。區分研究事實、發布者主張、作者推論、假設案例和價值立場；說明數字的時間與分母，不把形式化等同學界接受，不捏造作者經驗或試行成果。英文術語首次出現用白話解釋。不要逐字朗讀網址、來源代碼或金句清單，不加入來源外的新結論。",
+      "submissionOrdinal": 3,
+      "preSubmitCardCount": 2,
+      "submittedAt": "2026-10-09T03:01:37.415Z",
+      "postSubmitCardCount": 3,
+      "queueAcceptanceState": "accepted",
+      "acceptanceTimestamp": "2026-10-09T03:02:16.570Z",
+      "queueAcceptedAt": "2026-10-09T03:02:16.570Z",
+      "duration": "23:07",
+      "cardDuration": "23:07",
+      "generatedCardTitle": "AI展示與真實工作的落差",
+      "firstIdentityVerifiedAt": "2026-10-09T03:14:24.491Z",
+      "generationState": "complete",
+      "promptSourceVerification": "complete",
+      "completedAt": "2026-10-09T03:18:44.901Z",
+      "identityVerifiedAt": "2026-10-09T03:18:44.901Z"
+    },
+    {
+      "chapterNumber": 4,
+      "sourcePath": "book-txt/當答案不再稀缺/04_第四章｜當 AI 比我會做，我的專業還剩什麼？.txt",
+      "sourceFilename": "04_第四章｜當 AI 比我會做，我的專業還剩什麼？.txt",
+      "sourceSha256": "4c306ec741ca6989d6d71ae125ff835083888f08ecac0b1d50d27fb0391ff42d",
+      "sourceBytes": 17887,
+      "promptMarker": "章節標誌：04_第四章｜當 AI 比我會做，我的專業還剩什麼？",
+      "expectedAudioTitle": "04_第四章｜當 AI 比我會做，我的專業還剩什麼？",
+      "selectedSourceCount": 1,
+      "generationStatus": "complete",
+      "promptSourceVerified": true,
+      "finalAudioCardTitle": "04_第四章｜當 AI 比我會做，我的專業還剩什麼？",
+      "prompt": "章節標誌：04_第四章｜當 AI 比我會做，我的專業還剩什麼？\n請只根據目前選取的本章來源，用自然的台灣繁體中文口語，讓兩位主持人深入解說本章。先從核心問題和具體情境開始，再說清概念關係、推理、強反方與適用邊界，保留練習與可採取的行動。區分研究事實、發布者主張、作者推論、假設案例和價值立場；說明數字的時間與分母，不把形式化等同學界接受，不捏造作者經驗或試行成果。英文術語首次出現用白話解釋。不要逐字朗讀網址、來源代碼或金句清單，不加入來源外的新結論。",
+      "selectedSourceVerified": true,
+      "selectionMethod": "select-all checkbox Space twice and exact chapter Space with DOM readback",
+      "submissionOrdinal": 4,
+      "preSubmitCardCount": 3,
+      "submittedAt": "2026-10-09T03:02:19.354Z",
+      "postSubmitCardCount": 4,
+      "queueAcceptanceState": "accepted",
+      "acceptanceTimestamp": "2026-10-09T03:02:32.076Z",
+      "queueAcceptedAt": "2026-10-09T03:02:32.076Z",
+      "duration": "21:06",
+      "cardDuration": "21:06",
+      "generatedCardTitle": "當AI比你會做你剩什麼",
+      "firstIdentityVerifiedAt": "2026-10-09T03:14:30.457Z",
+      "generationState": "complete",
+      "promptSourceVerification": "complete",
+      "completedAt": "2026-10-09T03:18:47.664Z",
+      "identityVerifiedAt": "2026-10-09T03:18:47.664Z"
+    },
+    {
+      "chapterNumber": 5,
+      "sourcePath": "book-txt/當答案不再稀缺/05_第五章｜越能把知識交給 AI，為什麼越不能停止學習？.txt",
+      "sourceFilename": "05_第五章｜越能把知識交給 AI，為什麼越不能停止學習？.txt",
+      "sourceSha256": "0b4fe614c6c208d0beb9fbbea0b82deba1e281797204f5fd4ad81abfc93cb4dc",
+      "sourceBytes": 18982,
+      "promptMarker": "章節標誌：05_第五章｜越能把知識交給 AI，為什麼越不能停止學習？",
+      "expectedAudioTitle": "05_第五章｜越能把知識交給 AI，為什麼越不能停止學習？",
+      "selectedSourceCount": 1,
+      "generationStatus": "complete",
+      "promptSourceVerified": true,
+      "finalAudioCardTitle": "05_第五章｜越能把知識交給 AI，為什麼越不能停止學習？",
+      "prompt": "章節標誌：05_第五章｜越能把知識交給 AI，為什麼越不能停止學習？\n請只根據目前選取的本章來源，用自然的台灣繁體中文口語，讓兩位主持人深入解說本章。先從核心問題和具體情境開始，再說清概念關係、推理、強反方與適用邊界，保留練習與可採取的行動。區分研究事實、發布者主張、作者推論、假設案例和價值立場；說明數字的時間與分母，不把形式化等同學界接受，不捏造作者經驗或試行成果。英文術語首次出現用白話解釋。不要逐字朗讀網址、來源代碼或金句清單，不加入來源外的新結論。",
+      "selectedSourceVerified": true,
+      "selectionMethod": "select-all checkbox Space twice and exact chapter Space with DOM readback",
+      "submissionOrdinal": 5,
+      "preSubmitCardCount": 4,
+      "submittedAt": "2026-10-09T03:02:34.500Z",
+      "postSubmitCardCount": 5,
+      "queueAcceptanceState": "accepted",
+      "acceptanceTimestamp": "2026-10-09T03:03:15.054Z",
+      "queueAcceptedAt": "2026-10-09T03:03:15.054Z",
+      "duration": "23:50",
+      "cardDuration": "23:50",
+      "generatedCardTitle": "越用AI大腦越退化",
+      "firstIdentityVerifiedAt": "2026-10-09T03:15:08.754Z",
+      "generationState": "complete",
+      "promptSourceVerification": "complete",
+      "completedAt": "2026-10-09T03:18:54.242Z",
+      "identityVerifiedAt": "2026-10-09T03:18:54.242Z"
+    },
+    {
+      "chapterNumber": 6,
+      "sourcePath": "book-txt/當答案不再稀缺/06_第六章｜面對比我懂更多的系統，我如何決定相信多少？.txt",
+      "sourceFilename": "06_第六章｜面對比我懂更多的系統，我如何決定相信多少？.txt",
+      "sourceSha256": "0871a9e81d600a595ac12d530da702a090dc345e966d1939c80b82da801e1b76",
+      "sourceBytes": 18729,
+      "promptMarker": "章節標誌：06_第六章｜面對比我懂更多的系統，我如何決定相信多少？",
+      "expectedAudioTitle": "06_第六章｜面對比我懂更多的系統，我如何決定相信多少？",
+      "selectedSourceCount": 1,
+      "generationStatus": "complete",
+      "promptSourceVerified": true,
+      "finalAudioCardTitle": "06_第六章｜面對比我懂更多的系統，我如何決定相信多少？",
+      "prompt": "章節標誌：06_第六章｜面對比我懂更多的系統，我如何決定相信多少？\n請只根據目前選取的本章來源，用自然的台灣繁體中文口語，讓兩位主持人深入解說本章。先從核心問題和具體情境開始，再說清概念關係、推理、強反方與適用邊界，保留練習與可採取的行動。區分研究事實、發布者主張、作者推論、假設案例和價值立場；說明數字的時間與分母，不把形式化等同學界接受，不捏造作者經驗或試行成果。英文術語首次出現用白話解釋。不要逐字朗讀網址、來源代碼或金句清單，不加入來源外的新結論。",
+      "selectedSourceVerified": true,
+      "selectionMethod": "select-all checkbox Space twice and exact chapter Space with DOM readback",
+      "submissionOrdinal": 6,
+      "preSubmitCardCount": 5,
+      "submittedAt": "2026-10-09T03:03:17.967Z",
+      "postSubmitCardCount": 6,
+      "queueAcceptanceState": "accepted",
+      "acceptanceTimestamp": "2026-10-09T03:03:40.221Z",
+      "queueAcceptedAt": "2026-10-09T03:03:40.221Z",
+      "duration": "17:05",
+      "cardDuration": "17:05",
+      "generatedCardTitle": "02_第二章｜答案變多，為什麼不等於知識變多？",
+      "firstIdentityVerifiedAt": "2026-10-09T03:17:03.692Z",
+      "generationState": "complete",
+      "promptSourceVerification": "complete",
+      "completedAt": "2026-10-09T03:18:58.265Z",
+      "identityVerifiedAt": "2026-10-09T03:18:58.265Z"
+    },
+    {
+      "chapterNumber": 7,
+      "sourcePath": "book-txt/當答案不再稀缺/07_第七章｜做得出來之後，怎樣才算真正交付？.txt",
+      "sourceFilename": "07_第七章｜做得出來之後，怎樣才算真正交付？.txt",
+      "sourceSha256": "9ff01f0bc0f5fc35fa000855c121e2f610264c9865cdc19a9d5267cca7f5d9f9",
+      "sourceBytes": 18652,
+      "promptMarker": "章節標誌：07_第七章｜做得出來之後，怎樣才算真正交付？",
+      "expectedAudioTitle": "07_第七章｜做得出來之後，怎樣才算真正交付？",
+      "selectedSourceCount": 1,
+      "generationStatus": "complete",
+      "promptSourceVerified": true,
+      "finalAudioCardTitle": "07_第七章｜做得出來之後，怎樣才算真正交付？",
+      "prompt": "章節標誌：07_第七章｜做得出來之後，怎樣才算真正交付？\n請只根據目前選取的本章來源，用自然的台灣繁體中文口語，讓兩位主持人深入解說本章。先從核心問題和具體情境開始，再說清概念關係、推理、強反方與適用邊界，保留練習與可採取的行動。區分研究事實、發布者主張、作者推論、假設案例和價值立場；說明數字的時間與分母，不把形式化等同學界接受，不捏造作者經驗或試行成果。英文術語首次出現用白話解釋。不要逐字朗讀網址、來源代碼或金句清單，不加入來源外的新結論。",
+      "selectedSourceVerified": true,
+      "selectionMethod": "select-all checkbox Space twice and exact chapter Space with DOM readback",
+      "submissionOrdinal": 7,
+      "preSubmitCardCount": 6,
+      "submittedAt": "2026-10-09T03:03:41.946Z",
+      "postSubmitCardCount": 7,
+      "queueAcceptanceState": "accepted",
+      "acceptanceTimestamp": "2026-10-09T03:03:55.879Z",
+      "queueAcceptedAt": "2026-10-09T03:03:55.879Z",
+      "duration": "13:41",
+      "cardDuration": "13:41",
+      "generationState": "complete",
+      "promptSourceVerification": "complete",
+      "completedAt": "2026-10-09T03:19:01.259Z",
+      "identityVerifiedAt": "2026-10-09T03:19:01.259Z"
+    },
+    {
+      "chapterNumber": 8,
+      "sourcePath": "book-txt/當答案不再稀缺/08_第八章｜效率變高了，為什麼不一定輪到我受益？.txt",
+      "sourceFilename": "08_第八章｜效率變高了，為什麼不一定輪到我受益？.txt",
+      "sourceSha256": "5a9a83a1b507641f3eabf12b945f5dedce65def4085c5f5a3a5467a655bc0cf1",
+      "sourceBytes": 17871,
+      "promptMarker": "章節標誌：08_第八章｜效率變高了，為什麼不一定輪到我受益？",
+      "expectedAudioTitle": "08_第八章｜效率變高了，為什麼不一定輪到我受益？",
+      "selectedSourceCount": 1,
+      "generationStatus": "complete",
+      "promptSourceVerified": true,
+      "finalAudioCardTitle": "08_第八章｜效率變高了，為什麼不一定輪到我受益？",
+      "prompt": "章節標誌：08_第八章｜效率變高了，為什麼不一定輪到我受益？\n請只根據目前選取的本章來源，用自然的台灣繁體中文口語，讓兩位主持人深入解說本章。先從核心問題和具體情境開始，再說清概念關係、推理、強反方與適用邊界，保留練習與可採取的行動。區分研究事實、發布者主張、作者推論、假設案例和價值立場；說明數字的時間與分母，不把形式化等同學界接受，不捏造作者經驗或試行成果。英文術語首次出現用白話解釋。不要逐字朗讀網址、來源代碼或金句清單，不加入來源外的新結論。",
+      "selectedSourceVerified": true,
+      "selectionMethod": "select-all checkbox Space twice and exact chapter Space with DOM readback",
+      "submissionOrdinal": 8,
+      "preSubmitCardCount": 7,
+      "submittedAt": "2026-10-09T03:04:05.060Z",
+      "postSubmitCardCount": 8,
+      "queueAcceptanceState": "accepted",
+      "acceptanceTimestamp": "2026-10-09T03:04:27.993Z",
+      "queueAcceptedAt": "2026-10-09T03:04:27.993Z",
+      "duration": "15:57",
+      "cardDuration": "15:57",
+      "generatedCardTitle": "AI省下的時間去哪了",
+      "firstIdentityVerifiedAt": "2026-10-09T03:17:10.474Z",
+      "generationState": "complete",
+      "promptSourceVerification": "complete",
+      "completedAt": "2026-10-09T03:19:04.344Z",
+      "identityVerifiedAt": "2026-10-09T03:19:04.344Z"
+    },
+    {
+      "chapterNumber": 9,
+      "sourcePath": "book-txt/當答案不再稀缺/09_第九章｜如果不再靠比機器厲害，我怎麼理解自己的價值？.txt",
+      "sourceFilename": "09_第九章｜如果不再靠比機器厲害，我怎麼理解自己的價值？.txt",
+      "sourceSha256": "9d2e0441e79cd8cb36a457ce23bfd89f6d870a593ee90b88d0239b91f20dca67",
+      "sourceBytes": 17698,
+      "promptMarker": "章節標誌：09_第九章｜如果不再靠比機器厲害，我怎麼理解自己的價值？",
+      "expectedAudioTitle": "09_第九章｜如果不再靠比機器厲害，我怎麼理解自己的價值？",
+      "selectedSourceCount": 1,
+      "generationStatus": "complete",
+      "promptSourceVerified": true,
+      "finalAudioCardTitle": "09_第九章｜如果不再靠比機器厲害，我怎麼理解自己的價值？",
+      "prompt": "章節標誌：09_第九章｜如果不再靠比機器厲害，我怎麼理解自己的價值？\n請只根據目前選取的本章來源，用自然的台灣繁體中文口語，讓兩位主持人深入解說本章。先從核心問題和具體情境開始，再說清概念關係、推理、強反方與適用邊界，保留練習與可採取的行動。區分研究事實、發布者主張、作者推論、假設案例和價值立場；說明數字的時間與分母，不把形式化等同學界接受，不捏造作者經驗或試行成果。英文術語首次出現用白話解釋。不要逐字朗讀網址、來源代碼或金句清單，不加入來源外的新結論。",
+      "selectedSourceVerified": true,
+      "selectionMethod": "select-all checkbox Space twice and exact chapter Space with DOM readback",
+      "submissionOrdinal": 9,
+      "preSubmitCardCount": 8,
+      "submittedAt": "2026-10-09T03:04:38.436Z",
+      "postSubmitCardCount": 9,
+      "queueAcceptanceState": "accepted",
+      "acceptanceTimestamp": "2026-10-09T03:04:50.026Z",
+      "queueAcceptedAt": "2026-10-09T03:04:50.026Z",
+      "duration": "21:39",
+      "cardDuration": "21:39",
+      "generatedCardTitle": "被AI超越後的自我價值",
+      "firstIdentityVerifiedAt": "2026-10-09T03:17:20.821Z",
+      "generationState": "complete",
+      "promptSourceVerification": "complete",
+      "completedAt": "2026-10-09T03:19:14.887Z",
+      "identityVerifiedAt": "2026-10-09T03:19:14.887Z"
+    },
+    {
+      "chapterNumber": 10,
+      "sourcePath": "book-txt/當答案不再稀缺/10_第十章｜身為講師、實作者與推廣者，我要如何重新站位？.txt",
+      "sourceFilename": "10_第十章｜身為講師、實作者與推廣者，我要如何重新站位？.txt",
+      "sourceSha256": "4baea9bdf5d0b067d109f4870d51a46742fa659c2dc47f2a22efff5ffec4c80f",
+      "sourceBytes": 17121,
+      "promptMarker": "章節標誌：10_第十章｜身為講師、實作者與推廣者，我要如何重新站位？",
+      "expectedAudioTitle": "10_第十章｜身為講師、實作者與推廣者，我要如何重新站位？",
+      "selectedSourceCount": 1,
+      "generationStatus": "complete",
+      "promptSourceVerified": true,
+      "finalAudioCardTitle": "10_第十章｜身為講師、實作者與推廣者，我要如何重新站位？",
+      "prompt": "章節標誌：10_第十章｜身為講師、實作者與推廣者，我要如何重新站位？\n請只根據目前選取的本章來源，用自然的台灣繁體中文口語，讓兩位主持人深入解說本章。先從核心問題和具體情境開始，再說清概念關係、推理、強反方與適用邊界，保留練習與可採取的行動。區分研究事實、發布者主張、作者推論、假設案例和價值立場；說明數字的時間與分母，不把形式化等同學界接受，不捏造作者經驗或試行成果。英文術語首次出現用白話解釋。不要逐字朗讀網址、來源代碼或金句清單，不加入來源外的新結論。",
+      "selectedSourceVerified": true,
+      "selectionMethod": "select-all checkbox Space twice and exact chapter Space with DOM readback",
+      "submissionOrdinal": 10,
+      "preSubmitCardCount": 9,
+      "submittedAt": "2026-10-09T03:05:00.199Z",
+      "postSubmitCardCount": 10,
+      "queueAcceptanceState": "accepted",
+      "acceptanceTimestamp": "2026-10-09T03:05:43.799Z",
+      "queueAcceptedAt": "2026-10-09T03:05:43.799Z",
+      "duration": "15:40",
+      "cardDuration": "15:40",
+      "generatedCardTitle": "AI角色的減法",
+      "firstIdentityVerifiedAt": "2026-10-09T03:17:26.745Z",
+      "generationState": "complete",
+      "promptSourceVerification": "complete",
+      "completedAt": "2026-10-09T03:19:17.901Z",
+      "identityVerifiedAt": "2026-10-09T03:19:17.901Z"
+    },
+    {
+      "chapterNumber": 11,
+      "sourcePath": "book-txt/當答案不再稀缺/11_第十一章｜未來不能確定，我還是能做哪些穩健準備？.txt",
+      "sourceFilename": "11_第十一章｜未來不能確定，我還是能做哪些穩健準備？.txt",
+      "sourceSha256": "2863436b5455e77282780ff53b1aff4486e3a2f0f613be48876355d8af1d8f87",
+      "sourceBytes": 16705,
+      "promptMarker": "章節標誌：11_第十一章｜未來不能確定，我還是能做哪些穩健準備？",
+      "expectedAudioTitle": "11_第十一章｜未來不能確定，我還是能做哪些穩健準備？",
+      "selectedSourceCount": 1,
+      "generationStatus": "complete",
+      "promptSourceVerified": true,
+      "finalAudioCardTitle": "11_第十一章｜未來不能確定，我還是能做哪些穩健準備？",
+      "prompt": "章節標誌：11_第十一章｜未來不能確定，我還是能做哪些穩健準備？\n請只根據目前選取的本章來源，用自然的台灣繁體中文口語，讓兩位主持人深入解說本章。先從核心問題和具體情境開始，再說清概念關係、推理、強反方與適用邊界，保留練習與可採取的行動。區分研究事實、發布者主張、作者推論、假設案例和價值立場；說明數字的時間與分母，不把形式化等同學界接受，不捏造作者經驗或試行成果。英文術語首次出現用白話解釋。不要逐字朗讀網址、來源代碼或金句清單，不加入來源外的新結論。",
+      "selectedSourceVerified": true,
+      "selectionMethod": "select-all checkbox Space twice and exact chapter Space with DOM readback",
+      "submissionOrdinal": 11,
+      "preSubmitCardCount": 10,
+      "submittedAt": "2026-10-09T03:05:53.768Z",
+      "postSubmitCardCount": 11,
+      "queueAcceptanceState": "accepted",
+      "acceptanceTimestamp": "2026-10-09T03:06:08.445Z",
+      "queueAcceptedAt": "2026-10-09T03:06:08.445Z",
+      "duration": "22:33",
+      "cardDuration": "22:33",
+      "generatedCardTitle": "AI焦慮下的穩健準備",
+      "firstIdentityVerifiedAt": "2026-10-09T03:17:37.360Z",
+      "generationState": "complete",
+      "promptSourceVerification": "complete",
+      "completedAt": "2026-10-09T03:19:20.917Z",
+      "identityVerifiedAt": "2026-10-09T03:19:20.917Z"
+    },
+    {
+      "chapterNumber": 12,
+      "sourcePath": "book-txt/當答案不再稀缺/12_第十二章｜不是追上 AI，而是建立能持續修正的自己.txt",
+      "sourceFilename": "12_第十二章｜不是追上 AI，而是建立能持續修正的自己.txt",
+      "sourceSha256": "27da684c30d996e46e4c99b637dd4d5ccdf0fcea0ec3a403c8b0b1ee22052245",
+      "sourceBytes": 34548,
+      "promptMarker": "章節標誌：12_第十二章｜不是追上 AI，而是建立能持續修正的自己",
+      "expectedAudioTitle": "12_第十二章｜不是追上 AI，而是建立能持續修正的自己",
+      "selectedSourceCount": 1,
+      "generationStatus": "complete",
+      "promptSourceVerified": true,
+      "finalAudioCardTitle": "12_第十二章｜不是追上 AI，而是建立能持續修正的自己",
+      "prompt": "章節標誌：12_第十二章｜不是追上 AI，而是建立能持續修正的自己\n請只根據目前選取的本章來源，用自然的台灣繁體中文口語，讓兩位主持人深入解說本章。先從核心問題和具體情境開始，再說清概念關係、推理、強反方與適用邊界，保留練習與可採取的行動。區分研究事實、發布者主張、作者推論、假設案例和價值立場；說明數字的時間與分母，不把形式化等同學界接受，不捏造作者經驗或試行成果。英文術語首次出現用白話解釋。不要逐字朗讀網址、來源代碼或金句清單，不加入來源外的新結論。",
+      "selectedSourceVerified": true,
+      "selectionMethod": "select-all checkbox Space twice and exact chapter Space with DOM readback",
+      "submissionOrdinal": 12,
+      "preSubmitCardCount": 11,
+      "submittedAt": "2026-10-09T03:06:10.657Z",
+      "postSubmitCardCount": 12,
+      "queueAcceptanceState": "accepted",
+      "acceptanceTimestamp": "2026-10-09T03:06:34.579Z",
+      "queueAcceptedAt": "2026-10-09T03:06:34.579Z",
+      "duration": "22:06",
+      "cardDuration": "22:06",
+      "generatedCardTitle": "握緊AI方向盤",
+      "firstIdentityVerifiedAt": "2026-10-09T03:17:43.303Z",
+      "generationState": "complete",
+      "promptSourceVerification": "complete",
+      "completedAt": "2026-10-09T03:19:23.927Z",
+      "identityVerifiedAt": "2026-10-09T03:19:23.927Z"
+    }
+  ],
+  "notebookCreation": {
+    "status": "created",
+    "verifiedAt": "2026-10-09T02:54:40.981Z"
+  },
+  "batchCheckpoints": [
+    {
+      "submitted": 5,
+      "acceptedQueueItems": 5,
+      "ledgerQueuedEntries": 5,
+      "duplicateMarkers": false,
+      "at": "2026-10-09T03:03:15.114Z"
+    },
+    {
+      "submitted": 10,
+      "acceptedQueueItems": 10,
+      "ledgerQueuedEntries": 10,
+      "duplicateMarkers": false,
+      "at": "2026-10-09T03:05:43.817Z"
+    },
+    {
+      "submitted": 12,
+      "acceptedQueueItems": 12,
+      "ledgerQueuedEntries": 12,
+      "duplicateMarkers": false,
+      "at": "2026-10-09T03:06:34.603Z"
+    }
+  ],
+  "generationQueueCompletedAt": "2026-10-09T03:16:43.168Z",
+  "renameRecovery": {
+    "reason": "During active generation, new cards reordered while editing; all final card mappings will be reverified after queue completion.",
+    "finalIdentityAuditPending": false,
+    "status": "corrected-and-12-identities-reverified"
+  },
+  "studioValidation": {
+    "status": "complete",
+    "sourceCount": 12,
+    "acceptedQueueItems": 12,
+    "completedCards": 12,
+    "expectedCardTitles": 12,
+    "verifiedLedgerEntries": 12,
+    "generatingCards": 0,
+    "checkedAt": "2026-10-09T03:19:25.126Z"
+  },
+  "downloadAdapter": {
+    "controller": "bundled skill 1.0.0",
+    "adapter": "bundled Chrome adapter with optional visible 未讀 prefix in exact-card locator",
+    "reason": "Current ready-card accessible labels include 未讀; exact final title and verified duration still required.",
+    "projectEntrypointDryRun": "resume-required; all 12 durations and identities passed",
+    "validation": "project createValidatedDownloadStore in non-browser Node process, invoked from coordinator callback"
+  },
+  "downloadResumeAudit": {
+    "coordinatorVersion": "1.0.0",
+    "runCount": 12,
+    "updatedAt": "2026-10-09T03:31:43.810Z",
+    "runs": [
+      {
+        "runId": "4afc6f18-c994-4fbc-be61-c8de9dda5e95",
+        "startedAt": "2026-10-09T03:20:07.974Z",
+        "outcome": "failed",
+        "initialCompletedChapterNumbers": [],
+        "initialRemainingChapterNumbers": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "events": [
+          {
+            "event": "resume-plan-created",
+            "at": "2026-10-09T03:20:07.974Z",
+            "firstIncompleteChapterNumber": 1
+          },
+          {
+            "event": "chapter-download-started",
+            "at": "2026-10-09T03:20:07.977Z",
+            "chapterNumber": 1,
+            "priorState": "pending"
+          },
+          {
+            "event": "resume-failed",
+            "at": "2026-10-09T03:20:13.263Z",
+            "code": "RESUME_FAILED",
+            "message": "node_repl exec context not found"
+          }
+        ],
+        "error": {
+          "code": "RESUME_FAILED",
+          "message": "node_repl exec context not found"
+        },
+        "completedAt": "2026-10-09T03:20:13.263Z"
+      },
+      {
+        "runId": "86a16d2d-8748-4626-8f5b-d86a4bdb6835",
+        "startedAt": "2026-10-09T03:21:27.205Z",
+        "outcome": "interrupted-and-reconciled",
+        "initialCompletedChapterNumbers": [],
+        "initialRemainingChapterNumbers": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "events": [
+          {
+            "event": "resume-plan-created",
+            "at": "2026-10-09T03:21:27.205Z",
+            "firstIncompleteChapterNumber": 1
+          },
+          {
+            "event": "chapter-download-started",
+            "at": "2026-10-09T03:21:27.206Z",
+            "chapterNumber": 1,
+            "priorState": "prior-trigger-failed"
+          },
+          {
+            "event": "chapter-download-path-detected",
+            "at": "2026-10-09T03:21:30.728Z",
+            "chapterNumber": 1,
+            "transactionId": "63f4c5a1-221b-4b6b-ba1a-9d8a05cafbc5",
+            "triggerMethod": "mouse",
+            "newFilename": "尚未確認的 788041.crdownload"
+          },
+          {
+            "event": "chapter-validation-complete-after-session-timeout",
+            "chapterNumber": 1,
+            "at": "2026-10-09T03:23:44.119Z"
+          }
+        ],
+        "completedAt": "2026-10-09T03:23:44.119Z"
+      },
+      {
+        "runId": "c7567c01-3394-4389-93d8-006485cd372b",
+        "startedAt": "2026-10-09T03:24:17.752Z",
+        "outcome": "interrupted-at-ui-boundary",
+        "initialCompletedChapterNumbers": [
+          1
+        ],
+        "initialRemainingChapterNumbers": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "events": [
+          {
+            "event": "resume-plan-created",
+            "at": "2026-10-09T03:24:17.753Z",
+            "firstIncompleteChapterNumber": 2
+          },
+          {
+            "event": "chapter-download-started",
+            "at": "2026-10-09T03:24:17.756Z",
+            "chapterNumber": 2,
+            "priorState": "pending"
+          },
+          {
+            "event": "chapter-download-path-detected",
+            "at": "2026-10-09T03:24:32.807Z",
+            "chapterNumber": 2,
+            "transactionId": "41817c06-9ed8-4646-a65b-9d94b48fdd4d",
+            "triggerMethod": "mouse",
+            "newFilename": "02_第二章｜答案變多，為什麼不等於知識變多？.m4a"
+          },
+          {
+            "event": "chapter-validation-complete",
+            "at": "2026-10-09T03:24:34.962Z",
+            "chapterNumber": 2,
+            "completionState": "complete-local"
+          },
+          {
+            "event": "chapter-download-started",
+            "at": "2026-10-09T03:25:25.261Z",
+            "chapterNumber": 3,
+            "priorState": "pending"
+          }
+        ]
+      },
+      {
+        "runId": "fa395872-2577-41d3-86df-5e772a375021",
+        "startedAt": "2026-10-09T03:27:06.426Z",
+        "outcome": "interrupted-and-reconciled",
+        "initialCompletedChapterNumbers": [
+          1,
+          2
+        ],
+        "initialRemainingChapterNumbers": [
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "events": [
+          {
+            "event": "resume-plan-created",
+            "at": "2026-10-09T03:27:06.426Z",
+            "firstIncompleteChapterNumber": 3
+          },
+          {
+            "event": "chapter-download-started",
+            "at": "2026-10-09T03:27:06.428Z",
+            "chapterNumber": 3,
+            "priorState": "pending"
+          },
+          {
+            "event": "chapter-download-path-detected",
+            "at": "2026-10-09T03:27:51.724Z",
+            "chapterNumber": 3,
+            "transactionId": "588700b9-b6b6-4209-ad5a-1c92d26cf666",
+            "triggerMethod": "keyboard-recovery",
+            "newFilename": "03_第三章｜為什麼模型變強，生活沒有等速改變？.m4a"
+          },
+          {
+            "event": "chapter-validation-complete",
+            "at": "2026-10-09T03:27:53.992Z",
+            "chapterNumber": 3,
+            "completionState": "complete-local"
+          },
+          {
+            "event": "chapter-download-started",
+            "at": "2026-10-09T03:27:53.993Z",
+            "chapterNumber": 4,
+            "priorState": "pending"
+          },
+          {
+            "event": "chapter-validation-complete-after-session-timeout",
+            "chapterNumber": 4,
+            "at": "2026-10-09T03:29:33.779Z"
+          }
+        ]
+      },
+      {
+        "runId": "695d1332-fb13-4338-bda0-d94a0d462d38",
+        "startedAt": "2026-10-09T03:29:49.250Z",
+        "outcome": "checkpointed-at-validated-boundary",
+        "initialCompletedChapterNumbers": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "initialRemainingChapterNumbers": [
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "events": [
+          {
+            "event": "resume-plan-created",
+            "at": "2026-10-09T03:29:49.250Z",
+            "firstIncompleteChapterNumber": 5
+          },
+          {
+            "event": "chapter-download-started",
+            "at": "2026-10-09T03:29:49.254Z",
+            "chapterNumber": 5,
+            "priorState": "pending"
+          },
+          {
+            "event": "chapter-download-path-detected",
+            "at": "2026-10-09T03:30:00.533Z",
+            "chapterNumber": 5,
+            "transactionId": "d9bb5572-40f2-484a-a16d-22cce5f03bcf",
+            "triggerMethod": "keyboard-preferred",
+            "newFilename": "05_第五章｜越能把知識交給_AI，為什麼越不能停止學習？.m4a"
+          },
+          {
+            "event": "chapter-validation-complete",
+            "at": "2026-10-09T03:30:02.877Z",
+            "chapterNumber": 5,
+            "completionState": "complete-local"
+          },
+          {
+            "event": "resume-failed",
+            "at": "2026-10-09T03:30:02.878Z",
+            "code": "BOUNDED_REPL_CHECKPOINT",
+            "message": "Validated boundary for a bounded live browser invocation"
+          }
+        ],
+        "error": {
+          "code": "BOUNDED_REPL_CHECKPOINT",
+          "message": "Validated boundary for a bounded live browser invocation"
+        },
+        "completedAt": "2026-10-09T03:30:02.878Z",
+        "boundaryReason": "One chapter per live call; current chapter already classified complete-local."
+      },
+      {
+        "runId": "b20bfc77-9ee6-433c-a7cb-76dc7a84da8c",
+        "startedAt": "2026-10-09T03:30:12.139Z",
+        "outcome": "checkpointed-at-validated-boundary",
+        "initialCompletedChapterNumbers": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "initialRemainingChapterNumbers": [
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "events": [
+          {
+            "event": "resume-plan-created",
+            "at": "2026-10-09T03:30:12.139Z",
+            "firstIncompleteChapterNumber": 6
+          },
+          {
+            "event": "chapter-download-started",
+            "at": "2026-10-09T03:30:12.143Z",
+            "chapterNumber": 6,
+            "priorState": "pending"
+          },
+          {
+            "event": "chapter-download-path-detected",
+            "at": "2026-10-09T03:30:18.876Z",
+            "chapterNumber": 6,
+            "transactionId": "8277b528-82a0-4411-b611-5141e067f75e",
+            "triggerMethod": "keyboard-preferred",
+            "newFilename": "06_第六章｜面對比我懂更多的系統，我如何決定相信多少？.m4a"
+          },
+          {
+            "event": "chapter-validation-complete",
+            "at": "2026-10-09T03:30:20.739Z",
+            "chapterNumber": 6,
+            "completionState": "complete-local"
+          },
+          {
+            "event": "resume-failed",
+            "at": "2026-10-09T03:30:20.741Z",
+            "code": "BOUNDED_REPL_CHECKPOINT",
+            "message": "Validated boundary for a bounded live browser invocation"
+          }
+        ],
+        "error": {
+          "code": "BOUNDED_REPL_CHECKPOINT",
+          "message": "Validated boundary for a bounded live browser invocation"
+        },
+        "completedAt": "2026-10-09T03:30:20.741Z",
+        "boundaryReason": "One chapter per live call; current chapter already classified complete-local."
+      },
+      {
+        "runId": "15df3613-a7ef-4318-bc38-7c11e2450aca",
+        "startedAt": "2026-10-09T03:30:20.755Z",
+        "outcome": "checkpointed-at-validated-boundary",
+        "initialCompletedChapterNumbers": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "initialRemainingChapterNumbers": [
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "events": [
+          {
+            "event": "resume-plan-created",
+            "at": "2026-10-09T03:30:20.755Z",
+            "firstIncompleteChapterNumber": 7
+          },
+          {
+            "event": "chapter-download-started",
+            "at": "2026-10-09T03:30:20.757Z",
+            "chapterNumber": 7,
+            "priorState": "pending"
+          },
+          {
+            "event": "chapter-download-path-detected",
+            "at": "2026-10-09T03:30:27.227Z",
+            "chapterNumber": 7,
+            "transactionId": "18918b00-ecc4-44fc-b3b9-323e83495b5d",
+            "triggerMethod": "keyboard-preferred",
+            "newFilename": "07_第七章｜做得出來之後，怎樣才算真正交付？.m4a"
+          },
+          {
+            "event": "chapter-validation-complete",
+            "at": "2026-10-09T03:30:28.790Z",
+            "chapterNumber": 7,
+            "completionState": "complete-local"
+          },
+          {
+            "event": "resume-failed",
+            "at": "2026-10-09T03:30:28.792Z",
+            "code": "BOUNDED_REPL_CHECKPOINT",
+            "message": "Validated boundary for a bounded live browser invocation"
+          }
+        ],
+        "error": {
+          "code": "BOUNDED_REPL_CHECKPOINT",
+          "message": "Validated boundary for a bounded live browser invocation"
+        },
+        "completedAt": "2026-10-09T03:30:28.792Z",
+        "boundaryReason": "One chapter per live call; current chapter already classified complete-local."
+      },
+      {
+        "runId": "609ff397-fc1f-46f0-b8ef-81873643acad",
+        "startedAt": "2026-10-09T03:30:38.102Z",
+        "outcome": "checkpointed-at-validated-boundary",
+        "initialCompletedChapterNumbers": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "initialRemainingChapterNumbers": [
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "events": [
+          {
+            "event": "resume-plan-created",
+            "at": "2026-10-09T03:30:38.102Z",
+            "firstIncompleteChapterNumber": 8
+          },
+          {
+            "event": "chapter-download-started",
+            "at": "2026-10-09T03:30:38.104Z",
+            "chapterNumber": 8,
+            "priorState": "pending"
+          },
+          {
+            "event": "chapter-download-path-detected",
+            "at": "2026-10-09T03:30:46.304Z",
+            "chapterNumber": 8,
+            "transactionId": "9e792fca-1b36-451b-9836-35c7664ef0ac",
+            "triggerMethod": "keyboard-preferred",
+            "newFilename": "08_第八章｜效率變高了，為什麼不一定輪到我受益？.m4a"
+          },
+          {
+            "event": "chapter-validation-complete",
+            "at": "2026-10-09T03:30:48.015Z",
+            "chapterNumber": 8,
+            "completionState": "complete-local"
+          },
+          {
+            "event": "resume-failed",
+            "at": "2026-10-09T03:30:48.017Z",
+            "code": "BOUNDED_REPL_CHECKPOINT",
+            "message": "Validated boundary for a bounded live browser invocation"
+          }
+        ],
+        "error": {
+          "code": "BOUNDED_REPL_CHECKPOINT",
+          "message": "Validated boundary for a bounded live browser invocation"
+        },
+        "completedAt": "2026-10-09T03:30:48.017Z",
+        "boundaryReason": "One chapter per live call; current chapter already classified complete-local."
+      },
+      {
+        "runId": "4078bea3-85ae-4388-91cf-df0ea39cb553",
+        "startedAt": "2026-10-09T03:30:48.034Z",
+        "outcome": "checkpointed-at-validated-boundary",
+        "initialCompletedChapterNumbers": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "initialRemainingChapterNumbers": [
+          9,
+          10,
+          11,
+          12
+        ],
+        "events": [
+          {
+            "event": "resume-plan-created",
+            "at": "2026-10-09T03:30:48.034Z",
+            "firstIncompleteChapterNumber": 9
+          },
+          {
+            "event": "chapter-download-started",
+            "at": "2026-10-09T03:30:48.035Z",
+            "chapterNumber": 9,
+            "priorState": "pending"
+          },
+          {
+            "event": "chapter-download-path-detected",
+            "at": "2026-10-09T03:30:59.562Z",
+            "chapterNumber": 9,
+            "transactionId": "4dbee7c2-fed8-44eb-8228-f0b233f1d0b8",
+            "triggerMethod": "keyboard-preferred",
+            "newFilename": "09_第九章｜如果不再靠比機器厲害，我怎麼理解自己的價值？.m4a"
+          },
+          {
+            "event": "chapter-validation-complete",
+            "at": "2026-10-09T03:31:01.757Z",
+            "chapterNumber": 9,
+            "completionState": "complete-local"
+          },
+          {
+            "event": "resume-failed",
+            "at": "2026-10-09T03:31:01.759Z",
+            "code": "BOUNDED_REPL_CHECKPOINT",
+            "message": "Validated boundary for a bounded live browser invocation"
+          }
+        ],
+        "error": {
+          "code": "BOUNDED_REPL_CHECKPOINT",
+          "message": "Validated boundary for a bounded live browser invocation"
+        },
+        "completedAt": "2026-10-09T03:31:01.759Z",
+        "boundaryReason": "One chapter per live call; current chapter already classified complete-local."
+      },
+      {
+        "runId": "30a198f2-ad62-4cf7-982b-ef6971a5f670",
+        "startedAt": "2026-10-09T03:31:08.282Z",
+        "outcome": "checkpointed-at-validated-boundary",
+        "initialCompletedChapterNumbers": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "initialRemainingChapterNumbers": [
+          10,
+          11,
+          12
+        ],
+        "events": [
+          {
+            "event": "resume-plan-created",
+            "at": "2026-10-09T03:31:08.282Z",
+            "firstIncompleteChapterNumber": 10
+          },
+          {
+            "event": "chapter-download-started",
+            "at": "2026-10-09T03:31:08.284Z",
+            "chapterNumber": 10,
+            "priorState": "pending"
+          },
+          {
+            "event": "chapter-download-path-detected",
+            "at": "2026-10-09T03:31:17.496Z",
+            "chapterNumber": 10,
+            "transactionId": "0519e173-3463-47d6-a7dd-d286192d83d3",
+            "triggerMethod": "keyboard-preferred",
+            "newFilename": "10_第十章｜身為講師、實作者與推廣者，我要如何重新站位？.m4a"
+          },
+          {
+            "event": "chapter-validation-complete",
+            "at": "2026-10-09T03:31:19.291Z",
+            "chapterNumber": 10,
+            "completionState": "complete-local"
+          },
+          {
+            "event": "resume-failed",
+            "at": "2026-10-09T03:31:19.292Z",
+            "code": "BOUNDED_REPL_CHECKPOINT",
+            "message": "Validated boundary for a bounded live browser invocation"
+          }
+        ],
+        "error": {
+          "code": "BOUNDED_REPL_CHECKPOINT",
+          "message": "Validated boundary for a bounded live browser invocation"
+        },
+        "completedAt": "2026-10-09T03:31:19.292Z",
+        "boundaryReason": "One chapter per live call; current chapter already classified complete-local."
+      },
+      {
+        "runId": "c9baed0a-5ace-4c8d-832b-be73774f347c",
+        "startedAt": "2026-10-09T03:31:19.310Z",
+        "outcome": "checkpointed-at-validated-boundary",
+        "initialCompletedChapterNumbers": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "initialRemainingChapterNumbers": [
+          11,
+          12
+        ],
+        "events": [
+          {
+            "event": "resume-plan-created",
+            "at": "2026-10-09T03:31:19.310Z",
+            "firstIncompleteChapterNumber": 11
+          },
+          {
+            "event": "chapter-download-started",
+            "at": "2026-10-09T03:31:19.312Z",
+            "chapterNumber": 11,
+            "priorState": "pending"
+          },
+          {
+            "event": "chapter-download-path-detected",
+            "at": "2026-10-09T03:31:27.014Z",
+            "chapterNumber": 11,
+            "transactionId": "e9ea1901-d533-4237-9305-ec81a478d415",
+            "triggerMethod": "keyboard-preferred",
+            "newFilename": "11_第十一章｜未來不能確定，我還是能做哪些穩健準備？.m4a"
+          },
+          {
+            "event": "chapter-validation-complete",
+            "at": "2026-10-09T03:31:29.274Z",
+            "chapterNumber": 11,
+            "completionState": "complete-local"
+          },
+          {
+            "event": "resume-failed",
+            "at": "2026-10-09T03:31:29.275Z",
+            "code": "BOUNDED_REPL_CHECKPOINT",
+            "message": "Validated boundary for a bounded live browser invocation"
+          }
+        ],
+        "error": {
+          "code": "BOUNDED_REPL_CHECKPOINT",
+          "message": "Validated boundary for a bounded live browser invocation"
+        },
+        "completedAt": "2026-10-09T03:31:29.275Z",
+        "boundaryReason": "One chapter per live call; current chapter already classified complete-local."
+      },
+      {
+        "runId": "1e92aa3f-16e5-49b3-9631-20f974b3a1f3",
+        "startedAt": "2026-10-09T03:31:33.304Z",
+        "outcome": "complete",
+        "initialCompletedChapterNumbers": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "initialRemainingChapterNumbers": [
+          12
+        ],
+        "events": [
+          {
+            "event": "resume-plan-created",
+            "at": "2026-10-09T03:31:33.304Z",
+            "firstIncompleteChapterNumber": 12
+          },
+          {
+            "event": "chapter-download-started",
+            "at": "2026-10-09T03:31:33.306Z",
+            "chapterNumber": 12,
+            "priorState": "pending"
+          },
+          {
+            "event": "chapter-download-path-detected",
+            "at": "2026-10-09T03:31:41.392Z",
+            "chapterNumber": 12,
+            "transactionId": "6ab6b1de-8420-4b68-bc63-ec9d65c43347",
+            "triggerMethod": "keyboard-preferred",
+            "newFilename": "12_第十二章｜不是追上_AI，而是建立能持續修正的自己.m4a"
+          },
+          {
+            "event": "chapter-validation-complete",
+            "at": "2026-10-09T03:31:43.804Z",
+            "chapterNumber": 12,
+            "completionState": "complete-local"
+          },
+          {
+            "event": "resume-complete",
+            "at": "2026-10-09T03:31:43.810Z",
+            "completedChapterCount": 12
+          }
+        ],
+        "completedAt": "2026-10-09T03:31:43.810Z",
+        "finalCompletedChapterNumbers": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ]
+      }
+    ]
+  },
+  "updatedAt": "2026-10-09T03:31:43.810Z",
+  "downloadTriggerAudit": {
+    "controllerVersion": "1.0.0",
+    "preferredTrigger": "keyboard",
+    "transactionCount": 14,
+    "updatedAt": "2026-10-09T03:31:41.391Z",
+    "transactions": [
+      {
+        "transactionId": "4083c26d-3b6e-40cb-9b94-ee6c20ca2182",
+        "chapterNumber": 1,
+        "expectedTitle": "01_第一章｜當機器開始探索未知，我該震撼的是什麼？",
+        "expectedDuration": "16:40",
+        "startedAt": "2026-10-09T03:20:07.988Z",
+        "preferredTriggerAtStart": "mouse",
+        "events": [
+          {
+            "event": "download-snapshot",
+            "at": "2026-10-09T03:20:07.988Z",
+            "existingFileCount": 15
+          },
+          {
+            "event": "mouse-click-error",
+            "at": "2026-10-09T03:20:07.990Z",
+            "message": "node_repl exec context not found"
+          },
+          {
+            "event": "transaction-failed",
+            "at": "2026-10-09T03:20:13.257Z",
+            "code": "DOWNLOAD_TRIGGER_FAILED",
+            "message": "node_repl exec context not found"
+          }
+        ],
+        "outcome": "failed",
+        "error": {
+          "code": "DOWNLOAD_TRIGGER_FAILED",
+          "message": "node_repl exec context not found"
+        },
+        "completedAt": "2026-10-09T03:20:13.257Z"
+      },
+      {
+        "transactionId": "63f4c5a1-221b-4b6b-ba1a-9d8a05cafbc5",
+        "chapterNumber": 1,
+        "expectedTitle": "01_第一章｜當機器開始探索未知，我該震撼的是什麼？",
+        "expectedDuration": "16:40",
+        "startedAt": "2026-10-09T03:21:27.210Z",
+        "preferredTriggerAtStart": "mouse",
+        "events": [
+          {
+            "event": "download-snapshot",
+            "at": "2026-10-09T03:21:27.211Z",
+            "existingFileCount": 15
+          },
+          {
+            "event": "mouse-click-requested",
+            "at": "2026-10-09T03:21:28.594Z"
+          },
+          {
+            "event": "new-path-detected",
+            "at": "2026-10-09T03:21:30.717Z",
+            "triggerMethod": "mouse",
+            "newFilename": "尚未確認的 788041.crdownload"
+          }
+        ],
+        "outcome": "new-path-detected",
+        "triggerMethod": "mouse",
+        "newFilename": "尚未確認的 788041.crdownload",
+        "completedAt": "2026-10-09T03:21:30.717Z",
+        "completionReconciliation": {
+          "temporaryFilename": "尚未確認的 788041.crdownload",
+          "completedFilename": "01_第一章｜當機器開始探索未知，我該震撼的是什麼？.m4a",
+          "completedPath": "C:/Users/User/Downloads/01_第一章｜當機器開始探索未知，我該震撼的是什麼？.m4a",
+          "reason": "Chrome renamed the controller-detected .crdownload to the final expected filename; exactly one new chapter file present, no second trigger.",
+          "validated": true,
+          "at": "2026-10-09T03:23:44.119Z"
+        }
+      },
+      {
+        "transactionId": "41817c06-9ed8-4646-a65b-9d94b48fdd4d",
+        "chapterNumber": 2,
+        "expectedTitle": "02_第二章｜答案變多，為什麼不等於知識變多？",
+        "expectedDuration": "21:06",
+        "startedAt": "2026-10-09T03:24:17.765Z",
+        "preferredTriggerAtStart": "mouse",
+        "events": [
+          {
+            "event": "download-snapshot",
+            "at": "2026-10-09T03:24:17.765Z",
+            "existingFileCount": 16
+          },
+          {
+            "event": "mouse-click-error",
+            "at": "2026-10-09T03:24:32.794Z",
+            "message": "Timed out after 15000ms waiting for download."
+          },
+          {
+            "event": "new-path-detected",
+            "at": "2026-10-09T03:24:32.802Z",
+            "triggerMethod": "mouse",
+            "newFilename": "02_第二章｜答案變多，為什麼不等於知識變多？.m4a"
+          }
+        ],
+        "outcome": "new-path-detected",
+        "triggerMethod": "mouse",
+        "newFilename": "02_第二章｜答案變多，為什麼不等於知識變多？.m4a",
+        "completedAt": "2026-10-09T03:24:32.802Z"
+      },
+      {
+        "transactionId": "6a102f0d-044d-4eac-96f6-bafb78da5c68",
+        "chapterNumber": 3,
+        "expectedTitle": "03_第三章｜為什麼模型變強，生活沒有等速改變？",
+        "expectedDuration": "23:07",
+        "startedAt": "2026-10-09T03:25:25.278Z",
+        "preferredTriggerAtStart": "mouse",
+        "events": [
+          {
+            "event": "download-snapshot",
+            "at": "2026-10-09T03:25:25.278Z",
+            "existingFileCount": 17
+          },
+          {
+            "event": "zero-new-files-reconciled",
+            "at": "2026-10-09T03:27:06.419Z"
+          }
+        ],
+        "outcome": "interrupted-before-ui-action"
+      },
+      {
+        "transactionId": "588700b9-b6b6-4209-ad5a-1c92d26cf666",
+        "chapterNumber": 3,
+        "expectedTitle": "03_第三章｜為什麼模型變強，生活沒有等速改變？",
+        "expectedDuration": "23:07",
+        "startedAt": "2026-10-09T03:27:06.438Z",
+        "preferredTriggerAtStart": "mouse",
+        "events": [
+          {
+            "event": "download-snapshot",
+            "at": "2026-10-09T03:27:06.438Z",
+            "existingFileCount": 17
+          },
+          {
+            "event": "mouse-click-error",
+            "at": "2026-10-09T03:27:37.668Z",
+            "message": "Final filename not confirmed; reconcile transaction"
+          },
+          {
+            "event": "mouse-no-new-path",
+            "at": "2026-10-09T03:27:42.929Z",
+            "titleEditorActive": true,
+            "downloadMenuOpen": false
+          },
+          {
+            "event": "keyboard-enter-requested",
+            "at": "2026-10-09T03:27:51.708Z",
+            "attempt": 1
+          },
+          {
+            "event": "new-path-detected",
+            "at": "2026-10-09T03:27:51.716Z",
+            "triggerMethod": "keyboard-recovery",
+            "newFilename": "03_第三章｜為什麼模型變強，生活沒有等速改變？.m4a"
+          }
+        ],
+        "outcome": "new-path-detected",
+        "triggerMethod": "keyboard-recovery",
+        "newFilename": "03_第三章｜為什麼模型變強，生活沒有等速改變？.m4a",
+        "completedAt": "2026-10-09T03:27:51.716Z"
+      },
+      {
+        "transactionId": "4a85d4c8-4e01-4d2a-b298-0b09639f1d1c",
+        "chapterNumber": 4,
+        "expectedTitle": "04_第四章｜當 AI 比我會做，我的專業還剩什麼？",
+        "expectedDuration": "21:06",
+        "startedAt": "2026-10-09T03:27:54.000Z",
+        "preferredTriggerAtStart": "keyboard",
+        "events": [
+          {
+            "event": "download-snapshot",
+            "at": "2026-10-09T03:27:54.000Z",
+            "existingFileCount": 18
+          }
+        ],
+        "outcome": "new-path-detected",
+        "triggerMethod": "keyboard",
+        "newFilename": "04_第四章｜當_AI_比我會做，我的專業還剩什麼？.m4a",
+        "completedAt": "2026-10-09T03:29:33.779Z",
+        "completionReconciliation": {
+          "reason": "One final new M4A exists after the original UI trigger; provider normalized spaces to underscores. No second download.",
+          "validated": true
+        }
+      },
+      {
+        "transactionId": "d9bb5572-40f2-484a-a16d-22cce5f03bcf",
+        "chapterNumber": 5,
+        "expectedTitle": "05_第五章｜越能把知識交給 AI，為什麼越不能停止學習？",
+        "expectedDuration": "23:50",
+        "startedAt": "2026-10-09T03:29:49.270Z",
+        "preferredTriggerAtStart": "keyboard",
+        "events": [
+          {
+            "event": "download-snapshot",
+            "at": "2026-10-09T03:29:49.270Z",
+            "existingFileCount": 19
+          },
+          {
+            "event": "keyboard-enter-requested",
+            "at": "2026-10-09T03:30:00.516Z",
+            "attempt": 1
+          },
+          {
+            "event": "new-path-detected",
+            "at": "2026-10-09T03:30:00.525Z",
+            "triggerMethod": "keyboard-preferred",
+            "newFilename": "05_第五章｜越能把知識交給_AI，為什麼越不能停止學習？.m4a"
+          }
+        ],
+        "outcome": "new-path-detected",
+        "triggerMethod": "keyboard-preferred",
+        "newFilename": "05_第五章｜越能把知識交給_AI，為什麼越不能停止學習？.m4a",
+        "completedAt": "2026-10-09T03:30:00.525Z"
+      },
+      {
+        "transactionId": "8277b528-82a0-4411-b611-5141e067f75e",
+        "chapterNumber": 6,
+        "expectedTitle": "06_第六章｜面對比我懂更多的系統，我如何決定相信多少？",
+        "expectedDuration": "17:05",
+        "startedAt": "2026-10-09T03:30:12.149Z",
+        "preferredTriggerAtStart": "keyboard",
+        "events": [
+          {
+            "event": "download-snapshot",
+            "at": "2026-10-09T03:30:12.149Z",
+            "existingFileCount": 20
+          },
+          {
+            "event": "keyboard-enter-requested",
+            "at": "2026-10-09T03:30:18.839Z",
+            "attempt": 1
+          },
+          {
+            "event": "new-path-detected",
+            "at": "2026-10-09T03:30:18.847Z",
+            "triggerMethod": "keyboard-preferred",
+            "newFilename": "06_第六章｜面對比我懂更多的系統，我如何決定相信多少？.m4a"
+          }
+        ],
+        "outcome": "new-path-detected",
+        "triggerMethod": "keyboard-preferred",
+        "newFilename": "06_第六章｜面對比我懂更多的系統，我如何決定相信多少？.m4a",
+        "completedAt": "2026-10-09T03:30:18.847Z"
+      },
+      {
+        "transactionId": "18918b00-ecc4-44fc-b3b9-323e83495b5d",
+        "chapterNumber": 7,
+        "expectedTitle": "07_第七章｜做得出來之後，怎樣才算真正交付？",
+        "expectedDuration": "13:41",
+        "startedAt": "2026-10-09T03:30:20.763Z",
+        "preferredTriggerAtStart": "keyboard",
+        "events": [
+          {
+            "event": "download-snapshot",
+            "at": "2026-10-09T03:30:20.764Z",
+            "existingFileCount": 21
+          },
+          {
+            "event": "keyboard-enter-requested",
+            "at": "2026-10-09T03:30:27.212Z",
+            "attempt": 1
+          },
+          {
+            "event": "new-path-detected",
+            "at": "2026-10-09T03:30:27.220Z",
+            "triggerMethod": "keyboard-preferred",
+            "newFilename": "07_第七章｜做得出來之後，怎樣才算真正交付？.m4a"
+          }
+        ],
+        "outcome": "new-path-detected",
+        "triggerMethod": "keyboard-preferred",
+        "newFilename": "07_第七章｜做得出來之後，怎樣才算真正交付？.m4a",
+        "completedAt": "2026-10-09T03:30:27.220Z"
+      },
+      {
+        "transactionId": "9e792fca-1b36-451b-9836-35c7664ef0ac",
+        "chapterNumber": 8,
+        "expectedTitle": "08_第八章｜效率變高了，為什麼不一定輪到我受益？",
+        "expectedDuration": "15:57",
+        "startedAt": "2026-10-09T03:30:38.113Z",
+        "preferredTriggerAtStart": "keyboard",
+        "events": [
+          {
+            "event": "download-snapshot",
+            "at": "2026-10-09T03:30:38.113Z",
+            "existingFileCount": 22
+          },
+          {
+            "event": "keyboard-enter-requested",
+            "at": "2026-10-09T03:30:46.276Z",
+            "attempt": 1
+          },
+          {
+            "event": "new-path-detected",
+            "at": "2026-10-09T03:30:46.295Z",
+            "triggerMethod": "keyboard-preferred",
+            "newFilename": "08_第八章｜效率變高了，為什麼不一定輪到我受益？.m4a"
+          }
+        ],
+        "outcome": "new-path-detected",
+        "triggerMethod": "keyboard-preferred",
+        "newFilename": "08_第八章｜效率變高了，為什麼不一定輪到我受益？.m4a",
+        "completedAt": "2026-10-09T03:30:46.295Z"
+      },
+      {
+        "transactionId": "4dbee7c2-fed8-44eb-8228-f0b233f1d0b8",
+        "chapterNumber": 9,
+        "expectedTitle": "09_第九章｜如果不再靠比機器厲害，我怎麼理解自己的價值？",
+        "expectedDuration": "21:39",
+        "startedAt": "2026-10-09T03:30:48.041Z",
+        "preferredTriggerAtStart": "keyboard",
+        "events": [
+          {
+            "event": "download-snapshot",
+            "at": "2026-10-09T03:30:48.041Z",
+            "existingFileCount": 23
+          },
+          {
+            "event": "keyboard-enter-requested",
+            "at": "2026-10-09T03:30:59.552Z",
+            "attempt": 1
+          },
+          {
+            "event": "new-path-detected",
+            "at": "2026-10-09T03:30:59.558Z",
+            "triggerMethod": "keyboard-preferred",
+            "newFilename": "09_第九章｜如果不再靠比機器厲害，我怎麼理解自己的價值？.m4a"
+          }
+        ],
+        "outcome": "new-path-detected",
+        "triggerMethod": "keyboard-preferred",
+        "newFilename": "09_第九章｜如果不再靠比機器厲害，我怎麼理解自己的價值？.m4a",
+        "completedAt": "2026-10-09T03:30:59.558Z"
+      },
+      {
+        "transactionId": "0519e173-3463-47d6-a7dd-d286192d83d3",
+        "chapterNumber": 10,
+        "expectedTitle": "10_第十章｜身為講師、實作者與推廣者，我要如何重新站位？",
+        "expectedDuration": "15:40",
+        "startedAt": "2026-10-09T03:31:08.293Z",
+        "preferredTriggerAtStart": "keyboard",
+        "events": [
+          {
+            "event": "download-snapshot",
+            "at": "2026-10-09T03:31:08.293Z",
+            "existingFileCount": 24
+          },
+          {
+            "event": "keyboard-enter-requested",
+            "at": "2026-10-09T03:31:17.480Z",
+            "attempt": 1
+          },
+          {
+            "event": "new-path-detected",
+            "at": "2026-10-09T03:31:17.488Z",
+            "triggerMethod": "keyboard-preferred",
+            "newFilename": "10_第十章｜身為講師、實作者與推廣者，我要如何重新站位？.m4a"
+          }
+        ],
+        "outcome": "new-path-detected",
+        "triggerMethod": "keyboard-preferred",
+        "newFilename": "10_第十章｜身為講師、實作者與推廣者，我要如何重新站位？.m4a",
+        "completedAt": "2026-10-09T03:31:17.488Z"
+      },
+      {
+        "transactionId": "e9ea1901-d533-4237-9305-ec81a478d415",
+        "chapterNumber": 11,
+        "expectedTitle": "11_第十一章｜未來不能確定，我還是能做哪些穩健準備？",
+        "expectedDuration": "22:33",
+        "startedAt": "2026-10-09T03:31:19.320Z",
+        "preferredTriggerAtStart": "keyboard",
+        "events": [
+          {
+            "event": "download-snapshot",
+            "at": "2026-10-09T03:31:19.320Z",
+            "existingFileCount": 25
+          },
+          {
+            "event": "keyboard-enter-requested",
+            "at": "2026-10-09T03:31:26.999Z",
+            "attempt": 1
+          },
+          {
+            "event": "new-path-detected",
+            "at": "2026-10-09T03:31:27.006Z",
+            "triggerMethod": "keyboard-preferred",
+            "newFilename": "11_第十一章｜未來不能確定，我還是能做哪些穩健準備？.m4a"
+          }
+        ],
+        "outcome": "new-path-detected",
+        "triggerMethod": "keyboard-preferred",
+        "newFilename": "11_第十一章｜未來不能確定，我還是能做哪些穩健準備？.m4a",
+        "completedAt": "2026-10-09T03:31:27.006Z"
+      },
+      {
+        "transactionId": "6ab6b1de-8420-4b68-bc63-ec9d65c43347",
+        "chapterNumber": 12,
+        "expectedTitle": "12_第十二章｜不是追上 AI，而是建立能持續修正的自己",
+        "expectedDuration": "22:06",
+        "startedAt": "2026-10-09T03:31:33.311Z",
+        "preferredTriggerAtStart": "keyboard",
+        "events": [
+          {
+            "event": "download-snapshot",
+            "at": "2026-10-09T03:31:33.311Z",
+            "existingFileCount": 26
+          },
+          {
+            "event": "keyboard-enter-requested",
+            "at": "2026-10-09T03:31:41.374Z",
+            "attempt": 1
+          },
+          {
+            "event": "new-path-detected",
+            "at": "2026-10-09T03:31:41.386Z",
+            "triggerMethod": "keyboard-preferred",
+            "newFilename": "12_第十二章｜不是追上_AI，而是建立能持續修正的自己.m4a"
+          }
+        ],
+        "outcome": "new-path-detected",
+        "triggerMethod": "keyboard-preferred",
+        "newFilename": "12_第十二章｜不是追上_AI，而是建立能持續修正的自己.m4a",
+        "completedAt": "2026-10-09T03:31:41.386Z"
+      }
+    ]
+  },
+  "downloadValidation": {
+    "status": "complete",
+    "assetFolder": "public/books/when-answers-are-abundant/audio",
+    "expectedChapterCount": 12,
+    "downloadedCount": 12,
+    "linkedCount": 12,
+    "missingChapterNumbers": [],
+    "chapters": [
+      {
+        "chapterNumber": 1,
+        "audioFilename": "01_第一章｜當機器開始探索未知，我該震撼的是什麼？.m4a",
+        "audioPath": "public/books/when-answers-are-abundant/audio/01_第一章｜當機器開始探索未知，我該震撼的是什麼？.m4a",
+        "audioSrc": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/when-answers-are-abundant/audio/01_%E7%AC%AC%E4%B8%80%E7%AB%A0%EF%BD%9C%E7%95%B6%E6%A9%9F%E5%99%A8%E9%96%8B%E5%A7%8B%E6%8E%A2%E7%B4%A2%E6%9C%AA%E7%9F%A5%EF%BC%8C%E6%88%91%E8%A9%B2%E9%9C%87%E6%92%BC%E7%9A%84%E6%98%AF%E4%BB%80%E9%BA%BC%EF%BC%9F.m4a",
+        "durationSeconds": 1000.570998,
+        "lastPacketDurationSeconds": 1000.570998,
+        "codec": "aac",
+        "container": "mov,mp4,m4a,3gp,3g2,mj2",
+        "bitRate": 82605,
+        "sampleRate": 44100,
+        "channels": 1,
+        "fileSizeBytes": 10505148,
+        "sha256": "8ad5f0f5c3bc77be444dbe9ed29c4daf0131c4cfc157255af6b2e3023ea12878",
+        "fullDecode": true,
+        "linkedInBooksJson": true,
+        "transcodedFrom": {
+          "codec": "aac",
+          "bitRate": 256000,
+          "channels": 2,
+          "fileSizeBytes": 32203125,
+          "sha256": "be94ac6382c15c7d7738ea883cf6198e5972de573a59402b5073f28b9c92f13a"
+        },
+        "storage": "vercel-blob",
+        "blobUrl": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/when-answers-are-abundant/audio/01_%E7%AC%AC%E4%B8%80%E7%AB%A0%EF%BD%9C%E7%95%B6%E6%A9%9F%E5%99%A8%E9%96%8B%E5%A7%8B%E6%8E%A2%E7%B4%A2%E6%9C%AA%E7%9F%A5%EF%BC%8C%E6%88%91%E8%A9%B2%E9%9C%87%E6%92%BC%E7%9A%84%E6%98%AF%E4%BB%80%E9%BA%BC%EF%BC%9F.m4a",
+        "blobPathname": "books/when-answers-are-abundant/audio/01_第一章｜當機器開始探索未知，我該震撼的是什麼？.m4a",
+        "blobEtag": "\"aa12885f5ee9f239300fbf84bccc35bf-2\"",
+        "blobHeadVerified": true,
+        "blobRemoteSeekVerified": false
+      },
+      {
+        "chapterNumber": 2,
+        "audioFilename": "02_第二章｜答案變多，為什麼不等於知識變多？.m4a",
+        "audioPath": "public/books/when-answers-are-abundant/audio/02_第二章｜答案變多，為什麼不等於知識變多？.m4a",
+        "audioSrc": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/when-answers-are-abundant/audio/02_%E7%AC%AC%E4%BA%8C%E7%AB%A0%EF%BD%9C%E7%AD%94%E6%A1%88%E8%AE%8A%E5%A4%9A%EF%BC%8C%E7%82%BA%E4%BB%80%E9%BA%BC%E4%B8%8D%E7%AD%89%E6%96%BC%E7%9F%A5%E8%AD%98%E8%AE%8A%E5%A4%9A%EF%BC%9F.m4a",
+        "durationSeconds": 1266.439002,
+        "lastPacketDurationSeconds": 1266.439003,
+        "codec": "aac",
+        "container": "mov,mp4,m4a,3gp,3g2,mj2",
+        "bitRate": 82691,
+        "sampleRate": 44100,
+        "channels": 1,
+        "fileSizeBytes": 13309855,
+        "sha256": "13015fec6d6dbfd9536cf28b96a727b948431833265d36ddde2fcf6ea38df5f3",
+        "fullDecode": true,
+        "linkedInBooksJson": true,
+        "transcodedFrom": {
+          "codec": "aac",
+          "bitRate": 256000,
+          "channels": 2,
+          "fileSizeBytes": 40759732,
+          "sha256": "169c1cf340b0393b23a3bd546f50d608a0f32447f178769bc50a712c50382b11"
+        },
+        "storage": "vercel-blob",
+        "blobUrl": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/when-answers-are-abundant/audio/02_%E7%AC%AC%E4%BA%8C%E7%AB%A0%EF%BD%9C%E7%AD%94%E6%A1%88%E8%AE%8A%E5%A4%9A%EF%BC%8C%E7%82%BA%E4%BB%80%E9%BA%BC%E4%B8%8D%E7%AD%89%E6%96%BC%E7%9F%A5%E8%AD%98%E8%AE%8A%E5%A4%9A%EF%BC%9F.m4a",
+        "blobPathname": "books/when-answers-are-abundant/audio/02_第二章｜答案變多，為什麼不等於知識變多？.m4a",
+        "blobEtag": "\"8cb8585ca3a0c402e231247f8b0f2d14-2\"",
+        "blobHeadVerified": true,
+        "blobRemoteSeekVerified": false
+      },
+      {
+        "chapterNumber": 3,
+        "audioFilename": "03_第三章｜為什麼模型變強，生活沒有等速改變？.m4a",
+        "audioPath": "public/books/when-answers-are-abundant/audio/03_第三章｜為什麼模型變強，生活沒有等速改變？.m4a",
+        "audioSrc": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/when-answers-are-abundant/audio/03_%E7%AC%AC%E4%B8%89%E7%AB%A0%EF%BD%9C%E7%82%BA%E4%BB%80%E9%BA%BC%E6%A8%A1%E5%9E%8B%E8%AE%8A%E5%BC%B7%EF%BC%8C%E7%94%9F%E6%B4%BB%E6%B2%92%E6%9C%89%E7%AD%89%E9%80%9F%E6%94%B9%E8%AE%8A%EF%BC%9F.m4a",
+        "durationSeconds": 1387.647007,
+        "lastPacketDurationSeconds": 1387.647007,
+        "codec": "aac",
+        "container": "mov,mp4,m4a,3gp,3g2,mj2",
+        "bitRate": 82641,
+        "sampleRate": 44100,
+        "channels": 1,
+        "fileSizeBytes": 14575039,
+        "sha256": "2127f95b178123123071babfa51d31e0e48e82aa61c37be0844c586c9650a31d",
+        "fullDecode": true,
+        "linkedInBooksJson": true,
+        "transcodedFrom": {
+          "codec": "aac",
+          "bitRate": 256012,
+          "channels": 2,
+          "fileSizeBytes": 44660665,
+          "sha256": "23ac33fb66fa5f7deaa2d5d7938c591eb5aef7c9d8004e97754fa54a6a05b8e7"
+        },
+        "storage": "vercel-blob",
+        "blobUrl": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/when-answers-are-abundant/audio/03_%E7%AC%AC%E4%B8%89%E7%AB%A0%EF%BD%9C%E7%82%BA%E4%BB%80%E9%BA%BC%E6%A8%A1%E5%9E%8B%E8%AE%8A%E5%BC%B7%EF%BC%8C%E7%94%9F%E6%B4%BB%E6%B2%92%E6%9C%89%E7%AD%89%E9%80%9F%E6%94%B9%E8%AE%8A%EF%BC%9F.m4a",
+        "blobPathname": "books/when-answers-are-abundant/audio/03_第三章｜為什麼模型變強，生活沒有等速改變？.m4a",
+        "blobEtag": "\"1a15f750786cbe10d847cb563d6d9149-2\"",
+        "blobHeadVerified": true,
+        "blobRemoteSeekVerified": false
+      },
+      {
+        "chapterNumber": 4,
+        "audioFilename": "04_第四章｜當 AI 比我會做，我的專業還剩什麼？.m4a",
+        "audioPath": "public/books/when-answers-are-abundant/audio/04_第四章｜當 AI 比我會做，我的專業還剩什麼？.m4a",
+        "audioSrc": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/when-answers-are-abundant/audio/04_%E7%AC%AC%E5%9B%9B%E7%AB%A0%EF%BD%9C%E7%95%B6%20AI%20%E6%AF%94%E6%88%91%E6%9C%83%E5%81%9A%EF%BC%8C%E6%88%91%E7%9A%84%E5%B0%88%E6%A5%AD%E9%82%84%E5%89%A9%E4%BB%80%E9%BA%BC%EF%BC%9F.m4a",
+        "durationSeconds": 1266.486009,
+        "lastPacketDurationSeconds": 1266.4860090000002,
+        "codec": "aac",
+        "container": "mov,mp4,m4a,3gp,3g2,mj2",
+        "bitRate": 82431,
+        "sampleRate": 44100,
+        "channels": 1,
+        "fileSizeBytes": 13269141,
+        "sha256": "dc290216086d0c6f657630524d53a8418c9876febf4c5460ee685a60fe1ff857",
+        "fullDecode": true,
+        "linkedInBooksJson": true,
+        "transcodedFrom": {
+          "codec": "aac",
+          "bitRate": 256000,
+          "channels": 2,
+          "fileSizeBytes": 40761226,
+          "sha256": "5ea8dcb7426984707ead35ca8a6b1974ac02dad703828528a7092ebe28bf5ed9"
+        },
+        "storage": "vercel-blob",
+        "blobUrl": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/when-answers-are-abundant/audio/04_%E7%AC%AC%E5%9B%9B%E7%AB%A0%EF%BD%9C%E7%95%B6%20AI%20%E6%AF%94%E6%88%91%E6%9C%83%E5%81%9A%EF%BC%8C%E6%88%91%E7%9A%84%E5%B0%88%E6%A5%AD%E9%82%84%E5%89%A9%E4%BB%80%E9%BA%BC%EF%BC%9F.m4a",
+        "blobPathname": "books/when-answers-are-abundant/audio/04_第四章｜當 AI 比我會做，我的專業還剩什麼？.m4a",
+        "blobEtag": "\"38d81debc421ebec144c799641a11341-2\"",
+        "blobHeadVerified": true,
+        "blobRemoteSeekVerified": false
+      },
+      {
+        "chapterNumber": 5,
+        "audioFilename": "05_第五章｜越能把知識交給 AI，為什麼越不能停止學習？.m4a",
+        "audioPath": "public/books/when-answers-are-abundant/audio/05_第五章｜越能把知識交給 AI，為什麼越不能停止學習？.m4a",
+        "audioSrc": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/when-answers-are-abundant/audio/05_%E7%AC%AC%E4%BA%94%E7%AB%A0%EF%BD%9C%E8%B6%8A%E8%83%BD%E6%8A%8A%E7%9F%A5%E8%AD%98%E4%BA%A4%E7%B5%A6%20AI%EF%BC%8C%E7%82%BA%E4%BB%80%E9%BA%BC%E8%B6%8A%E4%B8%8D%E8%83%BD%E5%81%9C%E6%AD%A2%E5%AD%B8%E7%BF%92%EF%BC%9F.m4a",
+        "durationSeconds": 1430.929002,
+        "lastPacketDurationSeconds": 1430.929002,
+        "codec": "aac",
+        "container": "mov,mp4,m4a,3gp,3g2,mj2",
+        "bitRate": 82493,
+        "sampleRate": 44100,
+        "channels": 1,
+        "fileSizeBytes": 15003064,
+        "sha256": "ac31a4763d51b39f69bba2e98309fa5adcc97cba742bcaa81cb53460755ddd34",
+        "fullDecode": true,
+        "linkedInBooksJson": true,
+        "transcodedFrom": {
+          "codec": "aac",
+          "bitRate": 256000,
+          "channels": 2,
+          "fileSizeBytes": 46053725,
+          "sha256": "aca0928508ad7aa5c3620c51ca0a88c1c03572e24862d3b610df79733de27395"
+        },
+        "storage": "vercel-blob",
+        "blobUrl": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/when-answers-are-abundant/audio/05_%E7%AC%AC%E4%BA%94%E7%AB%A0%EF%BD%9C%E8%B6%8A%E8%83%BD%E6%8A%8A%E7%9F%A5%E8%AD%98%E4%BA%A4%E7%B5%A6%20AI%EF%BC%8C%E7%82%BA%E4%BB%80%E9%BA%BC%E8%B6%8A%E4%B8%8D%E8%83%BD%E5%81%9C%E6%AD%A2%E5%AD%B8%E7%BF%92%EF%BC%9F.m4a",
+        "blobPathname": "books/when-answers-are-abundant/audio/05_第五章｜越能把知識交給 AI，為什麼越不能停止學習？.m4a",
+        "blobEtag": "\"a219e95dac2d20d271829d2e25dfccdd-2\"",
+        "blobHeadVerified": true,
+        "blobRemoteSeekVerified": false
+      },
+      {
+        "chapterNumber": 6,
+        "audioFilename": "06_第六章｜面對比我懂更多的系統，我如何決定相信多少？.m4a",
+        "audioPath": "public/books/when-answers-are-abundant/audio/06_第六章｜面對比我懂更多的系統，我如何決定相信多少？.m4a",
+        "audioSrc": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/when-answers-are-abundant/audio/06_%E7%AC%AC%E5%85%AD%E7%AB%A0%EF%BD%9C%E9%9D%A2%E5%B0%8D%E6%AF%94%E6%88%91%E6%87%82%E6%9B%B4%E5%A4%9A%E7%9A%84%E7%B3%BB%E7%B5%B1%EF%BC%8C%E6%88%91%E5%A6%82%E4%BD%95%E6%B1%BA%E5%AE%9A%E7%9B%B8%E4%BF%A1%E5%A4%9A%E5%B0%91%EF%BC%9F.m4a",
+        "durationSeconds": 1025.416009,
+        "lastPacketDurationSeconds": 1025.416009,
+        "codec": "aac",
+        "container": "mov,mp4,m4a,3gp,3g2,mj2",
+        "bitRate": 82704,
+        "sampleRate": 44100,
+        "channels": 1,
+        "fileSizeBytes": 10778670,
+        "sha256": "566998f5228809f32dbaa9432eabc7a94d3bac76338a3de2c02faa47819e14c6",
+        "fullDecode": true,
+        "linkedInBooksJson": true,
+        "transcodedFrom": {
+          "codec": "aac",
+          "bitRate": 256000,
+          "channels": 2,
+          "fileSizeBytes": 33002688,
+          "sha256": "424d2ec111ee74f66eeccb6973ea1d370ab1a226dab8e4afe42cb4e18f70c2f2"
+        },
+        "storage": "vercel-blob",
+        "blobUrl": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/when-answers-are-abundant/audio/06_%E7%AC%AC%E5%85%AD%E7%AB%A0%EF%BD%9C%E9%9D%A2%E5%B0%8D%E6%AF%94%E6%88%91%E6%87%82%E6%9B%B4%E5%A4%9A%E7%9A%84%E7%B3%BB%E7%B5%B1%EF%BC%8C%E6%88%91%E5%A6%82%E4%BD%95%E6%B1%BA%E5%AE%9A%E7%9B%B8%E4%BF%A1%E5%A4%9A%E5%B0%91%EF%BC%9F.m4a",
+        "blobPathname": "books/when-answers-are-abundant/audio/06_第六章｜面對比我懂更多的系統，我如何決定相信多少？.m4a",
+        "blobEtag": "\"091658bf32a34d34654ea53659948508-2\"",
+        "blobHeadVerified": true,
+        "blobRemoteSeekVerified": false
+      },
+      {
+        "chapterNumber": 7,
+        "audioFilename": "07_第七章｜做得出來之後，怎樣才算真正交付？.m4a",
+        "audioPath": "public/books/when-answers-are-abundant/audio/07_第七章｜做得出來之後，怎樣才算真正交付？.m4a",
+        "audioSrc": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/when-answers-are-abundant/audio/07_%E7%AC%AC%E4%B8%83%E7%AB%A0%EF%BD%9C%E5%81%9A%E5%BE%97%E5%87%BA%E4%BE%86%E4%B9%8B%E5%BE%8C%EF%BC%8C%E6%80%8E%E6%A8%A3%E6%89%8D%E7%AE%97%E7%9C%9F%E6%AD%A3%E4%BA%A4%E4%BB%98%EF%BC%9F.m4a",
+        "durationSeconds": 821.336009,
+        "lastPacketDurationSeconds": 821.336009,
+        "codec": "aac",
+        "container": "mov,mp4,m4a,3gp,3g2,mj2",
+        "bitRate": 82788,
+        "sampleRate": 44100,
+        "channels": 1,
+        "fileSizeBytes": 8642309,
+        "sha256": "95101066dfd9967917eea2341ecf3b5b7a9adb935761d1fd60649ff041038216",
+        "fullDecode": true,
+        "linkedInBooksJson": true,
+        "transcodedFrom": {
+          "codec": "aac",
+          "bitRate": 256000,
+          "channels": 2,
+          "fileSizeBytes": 26434646,
+          "sha256": "c3b52064f09b63e874c777a94f3e90c6b0e603b6bb8bf4e2e863c557d37adc7b"
+        },
+        "storage": "vercel-blob",
+        "blobUrl": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/when-answers-are-abundant/audio/07_%E7%AC%AC%E4%B8%83%E7%AB%A0%EF%BD%9C%E5%81%9A%E5%BE%97%E5%87%BA%E4%BE%86%E4%B9%8B%E5%BE%8C%EF%BC%8C%E6%80%8E%E6%A8%A3%E6%89%8D%E7%AE%97%E7%9C%9F%E6%AD%A3%E4%BA%A4%E4%BB%98%EF%BC%9F.m4a",
+        "blobPathname": "books/when-answers-are-abundant/audio/07_第七章｜做得出來之後，怎樣才算真正交付？.m4a",
+        "blobEtag": "\"abaaf7a49e73c7e363d5b498ddd6b11e-2\"",
+        "blobHeadVerified": true,
+        "blobRemoteSeekVerified": false
+      },
+      {
+        "chapterNumber": 8,
+        "audioFilename": "08_第八章｜效率變高了，為什麼不一定輪到我受益？.m4a",
+        "audioPath": "public/books/when-answers-are-abundant/audio/08_第八章｜效率變高了，為什麼不一定輪到我受益？.m4a",
+        "audioSrc": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/when-answers-are-abundant/audio/08_%E7%AC%AC%E5%85%AB%E7%AB%A0%EF%BD%9C%E6%95%88%E7%8E%87%E8%AE%8A%E9%AB%98%E4%BA%86%EF%BC%8C%E7%82%BA%E4%BB%80%E9%BA%BC%E4%B8%8D%E4%B8%80%E5%AE%9A%E8%BC%AA%E5%88%B0%E6%88%91%E5%8F%97%E7%9B%8A%EF%BC%9F.m4a",
+        "durationSeconds": 957.498005,
+        "lastPacketDurationSeconds": 957.498005,
+        "codec": "aac",
+        "container": "mov,mp4,m4a,3gp,3g2,mj2",
+        "bitRate": 82766,
+        "sampleRate": 44100,
+        "channels": 1,
+        "fileSizeBytes": 10072251,
+        "sha256": "b305466d293899875b1b2115cb048fd04222edbf5ec7454761419f99ecf397f3",
+        "fullDecode": true,
+        "linkedInBooksJson": true,
+        "transcodedFrom": {
+          "codec": "aac",
+          "bitRate": 256000,
+          "channels": 2,
+          "fileSizeBytes": 30816788,
+          "sha256": "8545d696c4fd9ce40d5b19e0326be645687f21bd5a63e9396d685b4b24fd9cb1"
+        },
+        "storage": "vercel-blob",
+        "blobUrl": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/when-answers-are-abundant/audio/08_%E7%AC%AC%E5%85%AB%E7%AB%A0%EF%BD%9C%E6%95%88%E7%8E%87%E8%AE%8A%E9%AB%98%E4%BA%86%EF%BC%8C%E7%82%BA%E4%BB%80%E9%BA%BC%E4%B8%8D%E4%B8%80%E5%AE%9A%E8%BC%AA%E5%88%B0%E6%88%91%E5%8F%97%E7%9B%8A%EF%BC%9F.m4a",
+        "blobPathname": "books/when-answers-are-abundant/audio/08_第八章｜效率變高了，為什麼不一定輪到我受益？.m4a",
+        "blobEtag": "\"3d749b1ed65d46616f8ac4ba7559c7ce-2\"",
+        "blobHeadVerified": true,
+        "blobRemoteSeekVerified": false
+      },
+      {
+        "chapterNumber": 9,
+        "audioFilename": "09_第九章｜如果不再靠比機器厲害，我怎麼理解自己的價值？.m4a",
+        "audioPath": "public/books/when-answers-are-abundant/audio/09_第九章｜如果不再靠比機器厲害，我怎麼理解自己的價值？.m4a",
+        "audioSrc": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/when-answers-are-abundant/audio/09_%E7%AC%AC%E4%B9%9D%E7%AB%A0%EF%BD%9C%E5%A6%82%E6%9E%9C%E4%B8%8D%E5%86%8D%E9%9D%A0%E6%AF%94%E6%A9%9F%E5%99%A8%E5%8E%B2%E5%AE%B3%EF%BC%8C%E6%88%91%E6%80%8E%E9%BA%BC%E7%90%86%E8%A7%A3%E8%87%AA%E5%B7%B1%E7%9A%84%E5%83%B9%E5%80%BC%EF%BC%9F.m4a",
+        "durationSeconds": 1299.156009,
+        "lastPacketDurationSeconds": 1299.156009,
+        "codec": "aac",
+        "container": "mov,mp4,m4a,3gp,3g2,mj2",
+        "bitRate": 82543,
+        "sampleRate": 44100,
+        "channels": 1,
+        "fileSizeBytes": 13629577,
+        "sha256": "84dc9df16235514dc632d08902698248a60d5f9cfee74b34f2bc1212e5f95399",
+        "fullDecode": true,
+        "linkedInBooksJson": true,
+        "transcodedFrom": {
+          "codec": "aac",
+          "bitRate": 256000,
+          "channels": 2,
+          "fileSizeBytes": 41812773,
+          "sha256": "66f3fd519afd97df120aedbea6fd1f831c2aee2046e9cc66e439c3bb97b0e16a"
+        },
+        "storage": "vercel-blob",
+        "blobUrl": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/when-answers-are-abundant/audio/09_%E7%AC%AC%E4%B9%9D%E7%AB%A0%EF%BD%9C%E5%A6%82%E6%9E%9C%E4%B8%8D%E5%86%8D%E9%9D%A0%E6%AF%94%E6%A9%9F%E5%99%A8%E5%8E%B2%E5%AE%B3%EF%BC%8C%E6%88%91%E6%80%8E%E9%BA%BC%E7%90%86%E8%A7%A3%E8%87%AA%E5%B7%B1%E7%9A%84%E5%83%B9%E5%80%BC%EF%BC%9F.m4a",
+        "blobPathname": "books/when-answers-are-abundant/audio/09_第九章｜如果不再靠比機器厲害，我怎麼理解自己的價值？.m4a",
+        "blobEtag": "\"c4ed96e1bff151e47a6310c0488a7845-2\"",
+        "blobHeadVerified": true,
+        "blobRemoteSeekVerified": false
+      },
+      {
+        "chapterNumber": 10,
+        "audioFilename": "10_第十章｜身為講師、實作者與推廣者，我要如何重新站位？.m4a",
+        "audioPath": "public/books/when-answers-are-abundant/audio/10_第十章｜身為講師、實作者與推廣者，我要如何重新站位？.m4a",
+        "audioSrc": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/when-answers-are-abundant/audio/10_%E7%AC%AC%E5%8D%81%E7%AB%A0%EF%BD%9C%E8%BA%AB%E7%82%BA%E8%AC%9B%E5%B8%AB%E3%80%81%E5%AF%A6%E4%BD%9C%E8%80%85%E8%88%87%E6%8E%A8%E5%BB%A3%E8%80%85%EF%BC%8C%E6%88%91%E8%A6%81%E5%A6%82%E4%BD%95%E9%87%8D%E6%96%B0%E7%AB%99%E4%BD%8D%EF%BC%9F.m4a",
+        "durationSeconds": 940.919002,
+        "lastPacketDurationSeconds": 940.9190020000001,
+        "codec": "aac",
+        "container": "mov,mp4,m4a,3gp,3g2,mj2",
+        "bitRate": 82616,
+        "sampleRate": 44100,
+        "channels": 1,
+        "fileSizeBytes": 9880216,
+        "sha256": "a0a2b8dd4557e501720db81614c798cf46e344e176f36086cc5073dec4ec81c4",
+        "fullDecode": true,
+        "linkedInBooksJson": true,
+        "transcodedFrom": {
+          "codec": "aac",
+          "bitRate": 256000,
+          "channels": 2,
+          "fileSizeBytes": 30283287,
+          "sha256": "dce5b0e8b6f752423e8c434864a4cd995cccfe35f85ed901af53a1a8ecd248f7"
+        },
+        "storage": "vercel-blob",
+        "blobUrl": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/when-answers-are-abundant/audio/10_%E7%AC%AC%E5%8D%81%E7%AB%A0%EF%BD%9C%E8%BA%AB%E7%82%BA%E8%AC%9B%E5%B8%AB%E3%80%81%E5%AF%A6%E4%BD%9C%E8%80%85%E8%88%87%E6%8E%A8%E5%BB%A3%E8%80%85%EF%BC%8C%E6%88%91%E8%A6%81%E5%A6%82%E4%BD%95%E9%87%8D%E6%96%B0%E7%AB%99%E4%BD%8D%EF%BC%9F.m4a",
+        "blobPathname": "books/when-answers-are-abundant/audio/10_第十章｜身為講師、實作者與推廣者，我要如何重新站位？.m4a",
+        "blobEtag": "\"4c734e391b4a6933c7d8f6f7f91e8c42-2\"",
+        "blobHeadVerified": true,
+        "blobRemoteSeekVerified": false
+      },
+      {
+        "chapterNumber": 11,
+        "audioFilename": "11_第十一章｜未來不能確定，我還是能做哪些穩健準備？.m4a",
+        "audioPath": "public/books/when-answers-are-abundant/audio/11_第十一章｜未來不能確定，我還是能做哪些穩健準備？.m4a",
+        "audioSrc": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/when-answers-are-abundant/audio/11_%E7%AC%AC%E5%8D%81%E4%B8%80%E7%AB%A0%EF%BD%9C%E6%9C%AA%E4%BE%86%E4%B8%8D%E8%83%BD%E7%A2%BA%E5%AE%9A%EF%BC%8C%E6%88%91%E9%82%84%E6%98%AF%E8%83%BD%E5%81%9A%E5%93%AA%E4%BA%9B%E7%A9%A9%E5%81%A5%E6%BA%96%E5%82%99%EF%BC%9F.m4a",
+        "durationSeconds": 1353.677007,
+        "lastPacketDurationSeconds": 1353.677007,
+        "codec": "aac",
+        "container": "mov,mp4,m4a,3gp,3g2,mj2",
+        "bitRate": 82464,
+        "sampleRate": 44100,
+        "channels": 1,
+        "fileSizeBytes": 14188230,
+        "sha256": "49961518ae225d1c463e5d6607a37d7fbde434e1a1cd60a5abc266648dcb6951",
+        "fullDecode": true,
+        "linkedInBooksJson": true,
+        "transcodedFrom": {
+          "codec": "aac",
+          "bitRate": 256000,
+          "channels": 2,
+          "fileSizeBytes": 43567400,
+          "sha256": "59513570203e5ada42fe13c12b2ea39b1d24b6db5437b69248c9726575efaafb"
+        },
+        "storage": "vercel-blob",
+        "blobUrl": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/when-answers-are-abundant/audio/11_%E7%AC%AC%E5%8D%81%E4%B8%80%E7%AB%A0%EF%BD%9C%E6%9C%AA%E4%BE%86%E4%B8%8D%E8%83%BD%E7%A2%BA%E5%AE%9A%EF%BC%8C%E6%88%91%E9%82%84%E6%98%AF%E8%83%BD%E5%81%9A%E5%93%AA%E4%BA%9B%E7%A9%A9%E5%81%A5%E6%BA%96%E5%82%99%EF%BC%9F.m4a",
+        "blobPathname": "books/when-answers-are-abundant/audio/11_第十一章｜未來不能確定，我還是能做哪些穩健準備？.m4a",
+        "blobEtag": "\"57db149aebc2de685979e3a2d36dfc23-2\"",
+        "blobHeadVerified": true,
+        "blobRemoteSeekVerified": false
+      },
+      {
+        "chapterNumber": 12,
+        "audioFilename": "12_第十二章｜不是追上 AI，而是建立能持續修正的自己.m4a",
+        "audioPath": "public/books/when-answers-are-abundant/audio/12_第十二章｜不是追上 AI，而是建立能持續修正的自己.m4a",
+        "audioSrc": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/when-answers-are-abundant/audio/12_%E7%AC%AC%E5%8D%81%E4%BA%8C%E7%AB%A0%EF%BD%9C%E4%B8%8D%E6%98%AF%E8%BF%BD%E4%B8%8A%20AI%EF%BC%8C%E8%80%8C%E6%98%AF%E5%BB%BA%E7%AB%8B%E8%83%BD%E6%8C%81%E7%BA%8C%E4%BF%AE%E6%AD%A3%E7%9A%84%E8%87%AA%E5%B7%B1.m4a",
+        "durationSeconds": 1326.649002,
+        "lastPacketDurationSeconds": 1326.649002,
+        "codec": "aac",
+        "container": "mov,mp4,m4a,3gp,3g2,mj2",
+        "bitRate": 82612,
+        "sampleRate": 44100,
+        "channels": 1,
+        "fileSizeBytes": 13929494,
+        "sha256": "0ad4562368798ea17ddfc663bf2c6711dff77fbf854e0ae62b57a926d352fde1",
+        "fullDecode": true,
+        "linkedInBooksJson": true,
+        "transcodedFrom": {
+          "codec": "aac",
+          "bitRate": 256000,
+          "channels": 2,
+          "fileSizeBytes": 42697499,
+          "sha256": "91b998f3221082081232fa4698d4858e994fffe18bce0a0ebbd32083e46f4462"
+        },
+        "storage": "vercel-blob",
+        "blobUrl": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/when-answers-are-abundant/audio/12_%E7%AC%AC%E5%8D%81%E4%BA%8C%E7%AB%A0%EF%BD%9C%E4%B8%8D%E6%98%AF%E8%BF%BD%E4%B8%8A%20AI%EF%BC%8C%E8%80%8C%E6%98%AF%E5%BB%BA%E7%AB%8B%E8%83%BD%E6%8C%81%E7%BA%8C%E4%BF%AE%E6%AD%A3%E7%9A%84%E8%87%AA%E5%B7%B1.m4a",
+        "blobPathname": "books/when-answers-are-abundant/audio/12_第十二章｜不是追上 AI，而是建立能持續修正的自己.m4a",
+        "blobEtag": "\"3192b803aa4cb7c34f21d9a77694e277-2\"",
+        "blobHeadVerified": true,
+        "blobRemoteSeekVerified": false
+      }
+    ]
+  },
+  "downloadRecovery": {
+    "status": "complete-and-all-12-validated",
+    "cause": "Controller detected Chrome temporary .crdownload before final rename; validation waited for a path which Chrome had renamed.",
+    "nextMethod": "Original bundled controller and coordinator, bounded live invocations, final renamed filename set difference, exact-card keyboard download path; all 12 chapter identities and files passed.",
+    "nativeEventAttempt": {
+      "chapterNumber": 2,
+      "eventAvailable": false,
+      "outcome": "event timeout; controller reconciled exactly one completed new M4A and validated without a second trigger"
+    },
+    "failedTrials": [
+      "Background UI after invocation lifetime rejected before action.",
+      "Native download event timed out; completed new file reconciled without another trigger.",
+      "Exact provider filename expectation failed because provider changes ASCII spaces to underscores; original transaction reconciled."
+    ],
+    "stablePath": "Bundled NotebookLM controller and resume coordinator; chapter validation uses existing project createValidatedDownloadStore."
+  },
+  "transcodeValidation": {
+    "status": "complete",
+    "codec": "aac",
+    "container": "m4a",
+    "targetBitRate": 80000,
+    "channels": 1,
+    "checkedAudioCount": 12,
+    "failedChapterNumbers": [],
+    "metadataIdentityChecked": true,
+    "lastPacketDurationChecked": true,
+    "fullLocalDecodeChecked": true,
+    "uniqueFingerprintsChecked": true,
+    "productionRemoteSeekChecked": false
+  },
+  "integrityValidation": {
+    "status": "complete",
+    "checkedChapterCount": 12,
+    "failedChapterNumbers": [],
+    "verifiedAt": "2026-10-09T03:34:31.147Z",
+    "fourLayerStatus": {
+      "metadataIdentity": "passed",
+      "lastPacketDuration": "passed",
+      "fullLocalDecode": "passed",
+      "deployedPlayback": "pending"
+    },
+    "batchTranscode": {
+      "codec": "aac",
+      "channels": 1,
+      "bitRate": 80000,
+      "faststart": true,
+      "originalBytes": 453053554,
+      "streamableBytes": 147782994,
+      "fullBatchValidatedBeforeApply": true
+    }
+  },
+  "blobMigrationValidation": {
+    "status": "uploaded-and-applied",
+    "provider": "vercel-blob",
+    "access": "public",
+    "region": "hnd1",
+    "checkedAudioCount": 12,
+    "failedChapterNumbers": [],
+    "exactContentLengthChecked": true,
+    "remoteSeekChecked": false
+  }
+}

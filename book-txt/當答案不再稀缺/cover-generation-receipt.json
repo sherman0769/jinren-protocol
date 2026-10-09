@@ -1,0 +1,20 @@
+{
+  "provider": "Codex built-in image generation",
+  "createdAt": "2026-10-09T03:03:08.126Z",
+  "source": "C:/Users/User/.codex/generated_images/01a11bf6-737e-79c3-af51-74bb3b08e505/exec-057fc6e3-eacf-4b04-836d-796487303076.png",
+  "destination": "public/books/when-answers-are-abundant/cover.png",
+  "bytes": 2843429,
+  "sha256": "bd829d5127be9855a581319a6385331dd8911b2446fdfcdf551b705280fb8269",
+  "width": 1024,
+  "height": 1536,
+  "prompt": "Use case: ads-marketing. Asset type: final ebook front cover, flat front-facing design, portrait 2:3 (ideally 1024x1536). Design a premium Traditional Chinese Taiwan nonfiction book cover about AI, evidence, understanding and human agency. Title EXACTLY 「當答案不再稀缺」, very large beautifully typeset Chinese serif, arranged as two lines 「當答案」「不再稀缺」 in upper half, unmistakably readable at small mobile bookshelf size. Subtitle EXACTLY 「當 AI 開始探索未知，我們如何重新學習、工作與選擇」 set in 2-3 balanced lines below title. Author EXACTLY 「李詩民」 near bottom. Restrained deep forest green and warm ivory with subtle antique gold details, refined paper grain and foil-like detailing. Lower half contains a compelling original abstract illustration: abundant fine luminous particles coalescing into one clear winding path toward an open horizon, suggesting considered choices amid plentiful possibilities. Large deliberate negative space, editorial hierarchy, sophisticated Taiwanese book design, coherent and elegant rather than generic sci-fi. This is the complete designed cover artwork, no book mockup, no spine, no external frame, no people, no faces, no devices, no invented formulas, no logos, no extra wording or watermark. Camera orthogonal to the visible front cover; all text on the same front-facing plane.",
+  "visualReview": {
+    "title": "passed",
+    "subtitle": "passed",
+    "author": "passed",
+    "frontSurfaceDirection": "passed",
+    "people": "none",
+    "note": "Generated cover and mobile-sized thumbnail visually inspected; title and author readable.",
+    "mobileThumbnail": "passed at 140x210"
+  }
+}

@@ -1,0 +1,253 @@
+{
+  "schemaVersion": 1,
+  "bookTitle": "當答案不再稀缺",
+  "sourceZip": "published-books/When_Answers_Are_Abundant_Complete_Manuscript_V1.zip",
+  "sourceZipSha256": "08d79e14710bbdf94d1abbda3302b8f572da171888d4b0f4e76f7c49cc6866f0",
+  "chapterCount": 12,
+  "presentation": "序言放入第一章；結語及四份附錄放入第十二章；各章附上所引用的原稿來源條目。原稿正文及案例不改寫。",
+  "canonicalSources": [
+    {
+      "file": "01_master/preface.md",
+      "sha256": "0a318d637831e9c6f7247ca50d95188a30f1ddcdf27d30bfea5a8af25d14bc5e"
+    },
+    {
+      "file": "02_chapters/chapter_01_breakthrough/chapter_01_main.md",
+      "sha256": "19c412481aa3bd286b0ceccd69cfb5e9b035d21e28c27bcc7e76293d8839afaf"
+    },
+    {
+      "file": "02_chapters/chapter_02_knowledge/chapter_02_main.md",
+      "sha256": "62895aa4f616cb7d75fb2e08cafe015bb6e3467252659e0a0e81b319cac8960a"
+    },
+    {
+      "file": "02_chapters/chapter_03_transmission/chapter_03_main.md",
+      "sha256": "2a86a1e377bea1a9a215142220255475b43f2f2ffca2fabb0c477f29756f1709"
+    },
+    {
+      "file": "02_chapters/chapter_04_expertise/chapter_04_main.md",
+      "sha256": "1d2df5c03895c8d985c23a8791aea8de92681c54dc7dfb5338e343571ac1c7fa"
+    },
+    {
+      "file": "02_chapters/chapter_05_learning/chapter_05_main.md",
+      "sha256": "576209a277ea2d03e207455973805c935737f2af5439b8f786d5fb3c97ec07db"
+    },
+    {
+      "file": "02_chapters/chapter_06_trust/chapter_06_main.md",
+      "sha256": "5f3719e2bee609f35ff5d78562adc3033afaa9ff7f611f3cccf93b4a89293fde"
+    },
+    {
+      "file": "02_chapters/chapter_07_delivery/chapter_07_main.md",
+      "sha256": "2d96f56f70bdc00375f77b22629722f86c5440afcf7737165a1e297027fb3858"
+    },
+    {
+      "file": "02_chapters/chapter_08_distribution/chapter_08_main.md",
+      "sha256": "6ac425526cd4d0a16524d876402876688eae3af9abbdaff5dee8c0c627e4adc1"
+    },
+    {
+      "file": "02_chapters/chapter_09_value/chapter_09_main.md",
+      "sha256": "66e1b10181306618df9031eecf8051dc90111af419fd6f16e886ccb366bc65bd"
+    },
+    {
+      "file": "02_chapters/chapter_10_positioning/chapter_10_main.md",
+      "sha256": "f38999b59214f524ec27d0c932757cd093c72b52dd43a98d64c3080ec249adb5"
+    },
+    {
+      "file": "02_chapters/chapter_11_scenarios/chapter_11_main.md",
+      "sha256": "140a1e10e485f7de508c2bf8862798961376db8d06673802f9587f824f60ed30"
+    },
+    {
+      "file": "02_chapters/chapter_12_revisable_agency/chapter_12_main.md",
+      "sha256": "0008b564042a52827b819f443a923eba47b6c5f28b55a5b5f34dc639acaf2208"
+    },
+    {
+      "file": "01_master/conclusion.md",
+      "sha256": "b5ee16ed138db96f401d5e624a222f8fbe0dfc3f0b43b3ca11be1cbb9ce9a1e5"
+    },
+    {
+      "file": "01_master/appendices.md",
+      "sha256": "88cf65a6d9011e4c90ce38b034453037c94dfe6e6b15bf949abb97dcd7fcdb27"
+    },
+    {
+      "file": "01_master/references.md",
+      "sha256": "be47e3ea0f5e014f6079a1c45e80749dffd79860a68c7a90e139bd1b2c6217ad"
+    }
+  ],
+  "chapters": [
+    {
+      "number": 1,
+      "title": "第一章｜當機器開始探索未知，我該震撼的是什麼？",
+      "sourceFiles": [
+        "01_master/preface.md",
+        "02_chapters/chapter_01_breakthrough/chapter_01_main.md"
+      ],
+      "references": [
+        "S01",
+        "S02",
+        "S03",
+        "S04",
+        "S05",
+        "S11",
+        "S12"
+      ],
+      "publicationFile": "02_chapters/chapter_01_breakthrough/chapter_01_main.md",
+      "publicationSha256": "ede65646886422c1fa3ed604cbf4fafde8c64857b53b6618d7d25b2416245fa0",
+      "canonicalBlocksPreserved": true
+    },
+    {
+      "number": 2,
+      "title": "第二章｜答案變多，為什麼不等於知識變多？",
+      "sourceFiles": [
+        "02_chapters/chapter_02_knowledge/chapter_02_main.md"
+      ],
+      "references": [],
+      "publicationFile": "02_chapters/chapter_02_knowledge/chapter_02_main.md",
+      "publicationSha256": "055f378514138eb9bcaa7052dd148a88cc8e532044fe0e78e9818d083d286a39",
+      "canonicalBlocksPreserved": true
+    },
+    {
+      "number": 3,
+      "title": "第三章｜為什麼模型變強，生活沒有等速改變？",
+      "sourceFiles": [
+        "02_chapters/chapter_03_transmission/chapter_03_main.md"
+      ],
+      "references": [
+        "S06",
+        "S07",
+        "S09",
+        "S10",
+        "S21"
+      ],
+      "publicationFile": "02_chapters/chapter_03_transmission/chapter_03_main.md",
+      "publicationSha256": "1adcc4abf4e0839feec0e93e7a2ffb02a60ba1aa7ad8d67bc5953b51d75d58c1",
+      "canonicalBlocksPreserved": true
+    },
+    {
+      "number": 4,
+      "title": "第四章｜當 AI 比我會做，我的專業還剩什麼？",
+      "sourceFiles": [
+        "02_chapters/chapter_04_expertise/chapter_04_main.md"
+      ],
+      "references": [
+        "S20"
+      ],
+      "publicationFile": "02_chapters/chapter_04_expertise/chapter_04_main.md",
+      "publicationSha256": "a6e78c98b57f30be1864fbbc1189aeb7a716920e682bd363f2224af2250af749",
+      "canonicalBlocksPreserved": true
+    },
+    {
+      "number": 5,
+      "title": "第五章｜越能把知識交給 AI，為什麼越不能停止學習？",
+      "sourceFiles": [
+        "02_chapters/chapter_05_learning/chapter_05_main.md"
+      ],
+      "references": [
+        "S08",
+        "S13",
+        "S14"
+      ],
+      "publicationFile": "02_chapters/chapter_05_learning/chapter_05_main.md",
+      "publicationSha256": "594d1675992d367731efb185c767437f8f93b317b5d6b27a331723a8b6969014",
+      "canonicalBlocksPreserved": true
+    },
+    {
+      "number": 6,
+      "title": "第六章｜面對比我懂更多的系統，我如何決定相信多少？",
+      "sourceFiles": [
+        "02_chapters/chapter_06_trust/chapter_06_main.md"
+      ],
+      "references": [
+        "S17",
+        "S18",
+        "S19",
+        "S23"
+      ],
+      "publicationFile": "02_chapters/chapter_06_trust/chapter_06_main.md",
+      "publicationSha256": "075baa493ef0097e2adce8423506d416ff2c5cb8e6599febb03db9cc8d3f4536",
+      "canonicalBlocksPreserved": true
+    },
+    {
+      "number": 7,
+      "title": "第七章｜做得出來之後，怎樣才算真正交付？",
+      "sourceFiles": [
+        "02_chapters/chapter_07_delivery/chapter_07_main.md"
+      ],
+      "references": [
+        "S11",
+        "S16"
+      ],
+      "publicationFile": "02_chapters/chapter_07_delivery/chapter_07_main.md",
+      "publicationSha256": "b1a1baa3b84786fce1dc44e8083950c67b2bce26470e807defcea05d964b36f2",
+      "canonicalBlocksPreserved": true
+    },
+    {
+      "number": 8,
+      "title": "第八章｜效率變高了，為什麼不一定輪到我受益？",
+      "sourceFiles": [
+        "02_chapters/chapter_08_distribution/chapter_08_main.md"
+      ],
+      "references": [
+        "S04",
+        "S10",
+        "S20"
+      ],
+      "publicationFile": "02_chapters/chapter_08_distribution/chapter_08_main.md",
+      "publicationSha256": "5aa587e863e89a5d7e984ea51f95fbbf11bf9246df359a1db92725c1437fe300",
+      "canonicalBlocksPreserved": true
+    },
+    {
+      "number": 9,
+      "title": "第九章｜如果不再靠比機器厲害，我怎麼理解自己的價值？",
+      "sourceFiles": [
+        "02_chapters/chapter_09_value/chapter_09_main.md"
+      ],
+      "references": [
+        "S15"
+      ],
+      "publicationFile": "02_chapters/chapter_09_value/chapter_09_main.md",
+      "publicationSha256": "bede338ba2ca9b302ee522f41b5d99600ec79022e180d90e21fcd553b66b0853",
+      "canonicalBlocksPreserved": true
+    },
+    {
+      "number": 10,
+      "title": "第十章｜身為講師、實作者與推廣者，我要如何重新站位？",
+      "sourceFiles": [
+        "02_chapters/chapter_10_positioning/chapter_10_main.md"
+      ],
+      "references": [],
+      "publicationFile": "02_chapters/chapter_10_positioning/chapter_10_main.md",
+      "publicationSha256": "b2647c4d35d456bd47268c3a7082e0ba947e1d067054435f1310368c9f2d30de",
+      "canonicalBlocksPreserved": true
+    },
+    {
+      "number": 11,
+      "title": "第十一章｜未來不能確定，我還是能做哪些穩健準備？",
+      "sourceFiles": [
+        "02_chapters/chapter_11_scenarios/chapter_11_main.md"
+      ],
+      "references": [
+        "S22"
+      ],
+      "publicationFile": "02_chapters/chapter_11_scenarios/chapter_11_main.md",
+      "publicationSha256": "97934187c67d6aaec1f8a647c2f3dcaefbe83bc4d82eb77b0367792f87710967",
+      "canonicalBlocksPreserved": true
+    },
+    {
+      "number": 12,
+      "title": "第十二章｜不是追上 AI，而是建立能持續修正的自己",
+      "sourceFiles": [
+        "02_chapters/chapter_12_revisable_agency/chapter_12_main.md",
+        "01_master/conclusion.md",
+        "01_master/appendices.md"
+      ],
+      "references": [
+        "S12",
+        "S16",
+        "S18"
+      ],
+      "publicationFile": "02_chapters/chapter_12_revisable_agency/chapter_12_main.md",
+      "publicationSha256": "b2ce26b3b75e503c1c4fba884ffb422738a806d6616320633832965be7d7146f",
+      "canonicalBlocksPreserved": true
+    }
+  ],
+  "referenceCoverage": 23,
+  "canonicalSourcesUnchanged": true
+}

@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 1,
+  "bookSlug": "when-answers-are-abundant",
+  "files": [
+    {
+      "filename": "01_第一章｜當機器開始探索未知，我該震撼的是什麼？.txt",
+      "sha256": "ea31a09194699c9f89943fa9ecc22fdc02e6c537e713679cccc3ede1fe99c0e9"
+    },
+    {
+      "filename": "02_第二章｜答案變多，為什麼不等於知識變多？.txt",
+      "sha256": "94932792953571ebf01d9c1f231fde9f7a4e2b813d7aac468960c9272ba19455"
+    },
+    {
+      "filename": "03_第三章｜為什麼模型變強，生活沒有等速改變？.txt",
+      "sha256": "6b7bb8d5d96ff49a43be8ca4c59224127d3eb0c2535f2f303d79229e0062f1c2"
+    },
+    {
+      "filename": "04_第四章｜當 AI 比我會做，我的專業還剩什麼？.txt",
+      "sha256": "4c306ec741ca6989d6d71ae125ff835083888f08ecac0b1d50d27fb0391ff42d"
+    },
+    {
+      "filename": "05_第五章｜越能把知識交給 AI，為什麼越不能停止學習？.txt",
+      "sha256": "0b4fe614c6c208d0beb9fbbea0b82deba1e281797204f5fd4ad81abfc93cb4dc"
+    },
+    {
+      "filename": "06_第六章｜面對比我懂更多的系統，我如何決定相信多少？.txt",
+      "sha256": "0871a9e81d600a595ac12d530da702a090dc345e966d1939c80b82da801e1b76"
+    },
+    {
+      "filename": "07_第七章｜做得出來之後，怎樣才算真正交付？.txt",
+      "sha256": "9ff01f0bc0f5fc35fa000855c121e2f610264c9865cdc19a9d5267cca7f5d9f9"
+    },
+    {
+      "filename": "08_第八章｜效率變高了，為什麼不一定輪到我受益？.txt",
+      "sha256": "5a9a83a1b507641f3eabf12b945f5dedce65def4085c5f5a3a5467a655bc0cf1"
+    },
+    {
+      "filename": "09_第九章｜如果不再靠比機器厲害，我怎麼理解自己的價值？.txt",
+      "sha256": "9d2e0441e79cd8cb36a457ce23bfd89f6d870a593ee90b88d0239b91f20dca67"
+    },
+    {
+      "filename": "10_第十章｜身為講師、實作者與推廣者，我要如何重新站位？.txt",
+      "sha256": "4baea9bdf5d0b067d109f4870d51a46742fa659c2dc47f2a22efff5ffec4c80f"
+    },
+    {
+      "filename": "11_第十一章｜未來不能確定，我還是能做哪些穩健準備？.txt",
+      "sha256": "2863436b5455e77282780ff53b1aff4486e3a2f0f613be48876355d8af1d8f87"
+    },
+    {
+      "filename": "12_第十二章｜不是追上 AI，而是建立能持續修正的自己.txt",
+      "sha256": "27da684c30d996e46e4c99b637dd4d5ccdf0fcea0ec3a403c8b0b1ee22052245"
+    }
+  ]
+}
