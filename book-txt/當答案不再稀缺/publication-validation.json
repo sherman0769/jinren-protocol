@@ -118,7 +118,7 @@
   "appValidation": {
     "lint": "passed",
     "build": "passed after final Blob references",
-    "production": "pending",
+    "production": "passed",
     "podcastUx": {
       "status": "passed",
       "baseUrl": "http://127.0.0.1:3016",
@@ -130,7 +130,15 @@
       "playbackRate": 2.5,
       "autoAdvanceRatePreserved": true,
       "resumeSeconds": 90
-    }
+    },
+    "productionPodcastUx": {
+      "status": "passed",
+      "report": "podcast-ux-validation.json",
+      "viewportCount": 6,
+      "autoAdvanceRatePreserved": true,
+      "playbackRate": 2.5
+    },
+    "visualProof": "tmp/when-answers-complete-v1-20261009-08d79e14/evidence/production-podcast-mobile.png"
   },
   "adaptationTrial": {
     "status": "passed",
@@ -160,13 +168,31 @@
     ]
   },
   "blobValidation": {
-    "status": "uploaded-and-applied",
+    "status": "production-verified",
     "count": 12,
     "uniqueSha256": 12,
     "exactContentLength": true,
     "deterministicPathnames": true,
     "remoteSeek": "passed",
-    "production": "pending",
-    "manifest": "audio-blob-manifest.json"
+    "production": "passed",
+    "manifest": "audio-blob-manifest.json",
+    "audioReport": "audio-production-validation.json"
+  },
+  "status": "production-validated",
+  "completedAt": "2026-10-09T03:44:29.446Z",
+  "deployment": {
+    "source": "git",
+    "status": "READY",
+    "productionBaseUrl": "https://jinren-protocol.vercel.app",
+    "bookUrl": "https://jinren-protocol.vercel.app/books/when-answers-are-abundant",
+    "releaseCommit": "af0b4256e6cb6a7ca2e9af2230577d7cacbd6f59",
+    "deploymentId": "dpl_7fDevxVq85fJEva5FFLwnucuKy8Y",
+    "deploymentUrl": "https://jinren-protocol-kln90tmjw-sherman0769s-projects.vercel.app"
+  },
+  "localStaging": {
+    "status": "preserved-outside-public",
+    "count": 12,
+    "archiveFolder": "tmp/when-answers-complete-v1-20261009-08d79e14/validated-audio-staging",
+    "sha256Checked": true
   }
 }

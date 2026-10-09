@@ -1,0 +1,269 @@
+{
+  "status": "passed",
+  "slug": "when-answers-are-abundant",
+  "chapterCount": 12,
+  "txtCount": 12,
+  "ledgerEntryCount": 12,
+  "audioCount": 12,
+  "localAudioCount": 0,
+  "remoteAudioCount": 12,
+  "queueAudit": "complete",
+  "productionChecked": true,
+  "productionRemoteSeekChecked": true,
+  "warnings": [],
+  "errors": [],
+  "chapters": [
+    {
+      "chapterNumber": 1,
+      "expectedTitle": "01_第一章｜當機器開始探索未知，我該震撼的是什麼？",
+      "status": "passed",
+      "production": {
+        "status": 200,
+        "contentType": "audio/mp4",
+        "contentLength": 10505148,
+        "remoteSeek": {
+          "seconds": 120,
+          "status": "passed"
+        }
+      },
+      "codec": "aac",
+      "container": "mov,mp4,m4a,3gp,3g2,mj2",
+      "durationSeconds": 1000.570998,
+      "durationDeltaSeconds": 0.5709980000000314,
+      "lastPacketDurationSeconds": 1000.570998,
+      "fullDecode": true,
+      "storage": "vercel-blob"
+    },
+    {
+      "chapterNumber": 2,
+      "expectedTitle": "02_第二章｜答案變多，為什麼不等於知識變多？",
+      "status": "passed",
+      "production": {
+        "status": 200,
+        "contentType": "audio/mp4",
+        "contentLength": 13309855,
+        "remoteSeek": {
+          "seconds": 120,
+          "status": "passed"
+        }
+      },
+      "codec": "aac",
+      "container": "mov,mp4,m4a,3gp,3g2,mj2",
+      "durationSeconds": 1266.439002,
+      "durationDeltaSeconds": 0.43900200000007317,
+      "lastPacketDurationSeconds": 1266.439003,
+      "fullDecode": true,
+      "storage": "vercel-blob"
+    },
+    {
+      "chapterNumber": 3,
+      "expectedTitle": "03_第三章｜為什麼模型變強，生活沒有等速改變？",
+      "status": "passed",
+      "production": {
+        "status": 200,
+        "contentType": "audio/mp4",
+        "contentLength": 14575039,
+        "remoteSeek": {
+          "seconds": 120,
+          "status": "passed"
+        }
+      },
+      "codec": "aac",
+      "container": "mov,mp4,m4a,3gp,3g2,mj2",
+      "durationSeconds": 1387.647007,
+      "durationDeltaSeconds": 0.6470070000000305,
+      "lastPacketDurationSeconds": 1387.647007,
+      "fullDecode": true,
+      "storage": "vercel-blob"
+    },
+    {
+      "chapterNumber": 4,
+      "expectedTitle": "04_第四章｜當 AI 比我會做，我的專業還剩什麼？",
+      "status": "passed",
+      "production": {
+        "status": 200,
+        "contentType": "audio/mp4",
+        "contentLength": 13269141,
+        "remoteSeek": {
+          "seconds": 120,
+          "status": "passed"
+        }
+      },
+      "codec": "aac",
+      "container": "mov,mp4,m4a,3gp,3g2,mj2",
+      "durationSeconds": 1266.486009,
+      "durationDeltaSeconds": 0.4860089999999673,
+      "lastPacketDurationSeconds": 1266.4860090000002,
+      "fullDecode": true,
+      "storage": "vercel-blob"
+    },
+    {
+      "chapterNumber": 5,
+      "expectedTitle": "05_第五章｜越能把知識交給 AI，為什麼越不能停止學習？",
+      "status": "passed",
+      "production": {
+        "status": 200,
+        "contentType": "audio/mp4",
+        "contentLength": 15003064,
+        "remoteSeek": {
+          "seconds": 120,
+          "status": "passed"
+        }
+      },
+      "codec": "aac",
+      "container": "mov,mp4,m4a,3gp,3g2,mj2",
+      "durationSeconds": 1430.929002,
+      "durationDeltaSeconds": 0.9290020000000823,
+      "lastPacketDurationSeconds": 1430.929002,
+      "fullDecode": true,
+      "storage": "vercel-blob"
+    },
+    {
+      "chapterNumber": 6,
+      "expectedTitle": "06_第六章｜面對比我懂更多的系統，我如何決定相信多少？",
+      "status": "passed",
+      "production": {
+        "status": 200,
+        "contentType": "audio/mp4",
+        "contentLength": 10778670,
+        "remoteSeek": {
+          "seconds": 120,
+          "status": "passed"
+        }
+      },
+      "codec": "aac",
+      "container": "mov,mp4,m4a,3gp,3g2,mj2",
+      "durationSeconds": 1025.416009,
+      "durationDeltaSeconds": 0.41600900000003094,
+      "lastPacketDurationSeconds": 1025.416009,
+      "fullDecode": true,
+      "storage": "vercel-blob"
+    },
+    {
+      "chapterNumber": 7,
+      "expectedTitle": "07_第七章｜做得出來之後，怎樣才算真正交付？",
+      "status": "passed",
+      "production": {
+        "status": 200,
+        "contentType": "audio/mp4",
+        "contentLength": 8642309,
+        "remoteSeek": {
+          "seconds": 120,
+          "status": "passed"
+        }
+      },
+      "codec": "aac",
+      "container": "mov,mp4,m4a,3gp,3g2,mj2",
+      "durationSeconds": 821.336009,
+      "durationDeltaSeconds": 0.33600899999999,
+      "lastPacketDurationSeconds": 821.336009,
+      "fullDecode": true,
+      "storage": "vercel-blob"
+    },
+    {
+      "chapterNumber": 8,
+      "expectedTitle": "08_第八章｜效率變高了，為什麼不一定輪到我受益？",
+      "status": "passed",
+      "production": {
+        "status": 200,
+        "contentType": "audio/mp4",
+        "contentLength": 10072251,
+        "remoteSeek": {
+          "seconds": 120,
+          "status": "passed"
+        }
+      },
+      "codec": "aac",
+      "container": "mov,mp4,m4a,3gp,3g2,mj2",
+      "durationSeconds": 957.498005,
+      "durationDeltaSeconds": 0.49800500000003467,
+      "lastPacketDurationSeconds": 957.498005,
+      "fullDecode": true,
+      "storage": "vercel-blob"
+    },
+    {
+      "chapterNumber": 9,
+      "expectedTitle": "09_第九章｜如果不再靠比機器厲害，我怎麼理解自己的價值？",
+      "status": "passed",
+      "production": {
+        "status": 200,
+        "contentType": "audio/mp4",
+        "contentLength": 13629577,
+        "remoteSeek": {
+          "seconds": 120,
+          "status": "passed"
+        }
+      },
+      "codec": "aac",
+      "container": "mov,mp4,m4a,3gp,3g2,mj2",
+      "durationSeconds": 1299.156009,
+      "durationDeltaSeconds": 0.15600900000004003,
+      "lastPacketDurationSeconds": 1299.156009,
+      "fullDecode": true,
+      "storage": "vercel-blob"
+    },
+    {
+      "chapterNumber": 10,
+      "expectedTitle": "10_第十章｜身為講師、實作者與推廣者，我要如何重新站位？",
+      "status": "passed",
+      "production": {
+        "status": 200,
+        "contentType": "audio/mp4",
+        "contentLength": 9880216,
+        "remoteSeek": {
+          "seconds": 120,
+          "status": "passed"
+        }
+      },
+      "codec": "aac",
+      "container": "mov,mp4,m4a,3gp,3g2,mj2",
+      "durationSeconds": 940.919002,
+      "durationDeltaSeconds": 0.9190019999999777,
+      "lastPacketDurationSeconds": 940.9190020000001,
+      "fullDecode": true,
+      "storage": "vercel-blob"
+    },
+    {
+      "chapterNumber": 11,
+      "expectedTitle": "11_第十一章｜未來不能確定，我還是能做哪些穩健準備？",
+      "status": "passed",
+      "production": {
+        "status": 200,
+        "contentType": "audio/mp4",
+        "contentLength": 14188230,
+        "remoteSeek": {
+          "seconds": 120,
+          "status": "passed"
+        }
+      },
+      "codec": "aac",
+      "container": "mov,mp4,m4a,3gp,3g2,mj2",
+      "durationSeconds": 1353.677007,
+      "durationDeltaSeconds": 0.6770070000000032,
+      "lastPacketDurationSeconds": 1353.677007,
+      "fullDecode": true,
+      "storage": "vercel-blob"
+    },
+    {
+      "chapterNumber": 12,
+      "expectedTitle": "12_第十二章｜不是追上 AI，而是建立能持續修正的自己",
+      "status": "passed",
+      "production": {
+        "status": 200,
+        "contentType": "audio/mp4",
+        "contentLength": 13929494,
+        "remoteSeek": {
+          "seconds": 120,
+          "status": "passed"
+        }
+      },
+      "codec": "aac",
+      "container": "mov,mp4,m4a,3gp,3g2,mj2",
+      "durationSeconds": 1326.649002,
+      "durationDeltaSeconds": 0.6490020000001095,
+      "lastPacketDurationSeconds": 1326.649002,
+      "fullDecode": true,
+      "storage": "vercel-blob"
+    }
+  ]
+}

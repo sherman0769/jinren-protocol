@@ -6,7 +6,7 @@
   "expectedChapterCount": 12,
   "createdAt": "2026-10-09T02:54:17.2988371+00:00",
   "authorization": "2026-10-09 使用者在本書接件與上架流程中重傳完整書稿；依使用者提供的專案規則，包含 NotebookLM 逐章生成、下載、Blob、commit/push 與正式部署。",
-  "status": "blob-applied-awaiting-production-validation",
+  "status": "production-complete",
   "generationFormat": "深入探索",
   "language": "中文（繁體）",
   "preflight": {
@@ -1677,7 +1677,7 @@
         "blobPathname": "books/when-answers-are-abundant/audio/01_第一章｜當機器開始探索未知，我該震撼的是什麼？.m4a",
         "blobEtag": "\"aa12885f5ee9f239300fbf84bccc35bf-2\"",
         "blobHeadVerified": true,
-        "blobRemoteSeekVerified": false
+        "blobRemoteSeekVerified": true
       },
       {
         "chapterNumber": 2,
@@ -1707,7 +1707,7 @@
         "blobPathname": "books/when-answers-are-abundant/audio/02_第二章｜答案變多，為什麼不等於知識變多？.m4a",
         "blobEtag": "\"8cb8585ca3a0c402e231247f8b0f2d14-2\"",
         "blobHeadVerified": true,
-        "blobRemoteSeekVerified": false
+        "blobRemoteSeekVerified": true
       },
       {
         "chapterNumber": 3,
@@ -1737,7 +1737,7 @@
         "blobPathname": "books/when-answers-are-abundant/audio/03_第三章｜為什麼模型變強，生活沒有等速改變？.m4a",
         "blobEtag": "\"1a15f750786cbe10d847cb563d6d9149-2\"",
         "blobHeadVerified": true,
-        "blobRemoteSeekVerified": false
+        "blobRemoteSeekVerified": true
       },
       {
         "chapterNumber": 4,
@@ -1767,7 +1767,7 @@
         "blobPathname": "books/when-answers-are-abundant/audio/04_第四章｜當 AI 比我會做，我的專業還剩什麼？.m4a",
         "blobEtag": "\"38d81debc421ebec144c799641a11341-2\"",
         "blobHeadVerified": true,
-        "blobRemoteSeekVerified": false
+        "blobRemoteSeekVerified": true
       },
       {
         "chapterNumber": 5,
@@ -1797,7 +1797,7 @@
         "blobPathname": "books/when-answers-are-abundant/audio/05_第五章｜越能把知識交給 AI，為什麼越不能停止學習？.m4a",
         "blobEtag": "\"a219e95dac2d20d271829d2e25dfccdd-2\"",
         "blobHeadVerified": true,
-        "blobRemoteSeekVerified": false
+        "blobRemoteSeekVerified": true
       },
       {
         "chapterNumber": 6,
@@ -1827,7 +1827,7 @@
         "blobPathname": "books/when-answers-are-abundant/audio/06_第六章｜面對比我懂更多的系統，我如何決定相信多少？.m4a",
         "blobEtag": "\"091658bf32a34d34654ea53659948508-2\"",
         "blobHeadVerified": true,
-        "blobRemoteSeekVerified": false
+        "blobRemoteSeekVerified": true
       },
       {
         "chapterNumber": 7,
@@ -1857,7 +1857,7 @@
         "blobPathname": "books/when-answers-are-abundant/audio/07_第七章｜做得出來之後，怎樣才算真正交付？.m4a",
         "blobEtag": "\"abaaf7a49e73c7e363d5b498ddd6b11e-2\"",
         "blobHeadVerified": true,
-        "blobRemoteSeekVerified": false
+        "blobRemoteSeekVerified": true
       },
       {
         "chapterNumber": 8,
@@ -1887,7 +1887,7 @@
         "blobPathname": "books/when-answers-are-abundant/audio/08_第八章｜效率變高了，為什麼不一定輪到我受益？.m4a",
         "blobEtag": "\"3d749b1ed65d46616f8ac4ba7559c7ce-2\"",
         "blobHeadVerified": true,
-        "blobRemoteSeekVerified": false
+        "blobRemoteSeekVerified": true
       },
       {
         "chapterNumber": 9,
@@ -1917,7 +1917,7 @@
         "blobPathname": "books/when-answers-are-abundant/audio/09_第九章｜如果不再靠比機器厲害，我怎麼理解自己的價值？.m4a",
         "blobEtag": "\"c4ed96e1bff151e47a6310c0488a7845-2\"",
         "blobHeadVerified": true,
-        "blobRemoteSeekVerified": false
+        "blobRemoteSeekVerified": true
       },
       {
         "chapterNumber": 10,
@@ -1947,7 +1947,7 @@
         "blobPathname": "books/when-answers-are-abundant/audio/10_第十章｜身為講師、實作者與推廣者，我要如何重新站位？.m4a",
         "blobEtag": "\"4c734e391b4a6933c7d8f6f7f91e8c42-2\"",
         "blobHeadVerified": true,
-        "blobRemoteSeekVerified": false
+        "blobRemoteSeekVerified": true
       },
       {
         "chapterNumber": 11,
@@ -1977,7 +1977,7 @@
         "blobPathname": "books/when-answers-are-abundant/audio/11_第十一章｜未來不能確定，我還是能做哪些穩健準備？.m4a",
         "blobEtag": "\"57db149aebc2de685979e3a2d36dfc23-2\"",
         "blobHeadVerified": true,
-        "blobRemoteSeekVerified": false
+        "blobRemoteSeekVerified": true
       },
       {
         "chapterNumber": 12,
@@ -2007,7 +2007,7 @@
         "blobPathname": "books/when-answers-are-abundant/audio/12_第十二章｜不是追上 AI，而是建立能持續修正的自己.m4a",
         "blobEtag": "\"3192b803aa4cb7c34f21d9a77694e277-2\"",
         "blobHeadVerified": true,
-        "blobRemoteSeekVerified": false
+        "blobRemoteSeekVerified": true
       }
     ]
   },
@@ -2050,7 +2050,7 @@
       "metadataIdentity": "passed",
       "lastPacketDuration": "passed",
       "fullLocalDecode": "passed",
-      "deployedPlayback": "pending"
+      "deployedPlayback": "passed"
     },
     "batchTranscode": {
       "codec": "aac",
@@ -2063,13 +2063,40 @@
     }
   },
   "blobMigrationValidation": {
-    "status": "uploaded-and-applied",
+    "status": "production-verified",
     "provider": "vercel-blob",
     "access": "public",
     "region": "hnd1",
     "checkedAudioCount": 12,
     "failedChapterNumbers": [],
     "exactContentLengthChecked": true,
-    "remoteSeekChecked": false
+    "remoteSeekChecked": true
+  },
+  "completedAt": "2026-10-09T03:44:29.446Z",
+  "productionVerification": {
+    "status": "passed",
+    "baseUrl": "https://jinren-protocol.vercel.app",
+    "checkedChapterCount": 12,
+    "exactContentLengthChecked": true,
+    "productionRemoteSeekChecked": true,
+    "audioReport": "audio-production-validation.json",
+    "podcastUxReport": "podcast-ux-validation.json",
+    "chapterCountInvariant": {
+      "txt": 12,
+      "notebookSources": 12,
+      "acceptedQueueItems": 12,
+      "completedCards": 12,
+      "expectedTitles": 12,
+      "verifiedEntries": 12,
+      "locallyValidatedDownloads": 12,
+      "blobAssets": 12,
+      "linkedChapters": 12
+    }
+  },
+  "stagingDisposition": {
+    "status": "preserved-outside-public",
+    "count": 12,
+    "archiveFolder": "tmp/when-answers-complete-v1-20261009-08d79e14/validated-audio-staging",
+    "sha256Checked": true
   }
 }

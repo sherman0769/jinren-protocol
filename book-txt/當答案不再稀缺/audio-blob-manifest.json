@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "status": "applied",
+  "status": "production-verified",
   "access": "public",
   "region": "hnd1",
   "storeIdentity": {
@@ -16,7 +16,7 @@
     "remoteSeek": "passed",
     "exactStorePathnameSet": "passed",
     "booksJsonApplied": "passed",
-    "productionReader": "pending"
+    "productionReader": "passed"
   },
   "summary": {
     "audioCount": 12,
@@ -335,5 +335,102 @@
         "remoteSeekVerified": true
       }
     }
-  ]
+  ],
+  "production": {
+    "baseUrl": "https://jinren-protocol.vercel.app",
+    "status": "passed",
+    "checkedAudioCount": 12,
+    "checks": [
+      {
+        "slug": "when-answers-are-abundant",
+        "chapterNumber": 1,
+        "url": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/when-answers-are-abundant/audio/01_%E7%AC%AC%E4%B8%80%E7%AB%A0%EF%BD%9C%E7%95%B6%E6%A9%9F%E5%99%A8%E9%96%8B%E5%A7%8B%E6%8E%A2%E7%B4%A2%E6%9C%AA%E7%9F%A5%EF%BC%8C%E6%88%91%E8%A9%B2%E9%9C%87%E6%92%BC%E7%9A%84%E6%98%AF%E4%BB%80%E9%BA%BC%EF%BC%9F.m4a",
+        "bytes": 10505148,
+        "seekSeconds": 120
+      },
+      {
+        "slug": "when-answers-are-abundant",
+        "chapterNumber": 2,
+        "url": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/when-answers-are-abundant/audio/02_%E7%AC%AC%E4%BA%8C%E7%AB%A0%EF%BD%9C%E7%AD%94%E6%A1%88%E8%AE%8A%E5%A4%9A%EF%BC%8C%E7%82%BA%E4%BB%80%E9%BA%BC%E4%B8%8D%E7%AD%89%E6%96%BC%E7%9F%A5%E8%AD%98%E8%AE%8A%E5%A4%9A%EF%BC%9F.m4a",
+        "bytes": 13309855,
+        "seekSeconds": 120
+      },
+      {
+        "slug": "when-answers-are-abundant",
+        "chapterNumber": 3,
+        "url": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/when-answers-are-abundant/audio/03_%E7%AC%AC%E4%B8%89%E7%AB%A0%EF%BD%9C%E7%82%BA%E4%BB%80%E9%BA%BC%E6%A8%A1%E5%9E%8B%E8%AE%8A%E5%BC%B7%EF%BC%8C%E7%94%9F%E6%B4%BB%E6%B2%92%E6%9C%89%E7%AD%89%E9%80%9F%E6%94%B9%E8%AE%8A%EF%BC%9F.m4a",
+        "bytes": 14575039,
+        "seekSeconds": 120
+      },
+      {
+        "slug": "when-answers-are-abundant",
+        "chapterNumber": 4,
+        "url": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/when-answers-are-abundant/audio/04_%E7%AC%AC%E5%9B%9B%E7%AB%A0%EF%BD%9C%E7%95%B6%20AI%20%E6%AF%94%E6%88%91%E6%9C%83%E5%81%9A%EF%BC%8C%E6%88%91%E7%9A%84%E5%B0%88%E6%A5%AD%E9%82%84%E5%89%A9%E4%BB%80%E9%BA%BC%EF%BC%9F.m4a",
+        "bytes": 13269141,
+        "seekSeconds": 120
+      },
+      {
+        "slug": "when-answers-are-abundant",
+        "chapterNumber": 5,
+        "url": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/when-answers-are-abundant/audio/05_%E7%AC%AC%E4%BA%94%E7%AB%A0%EF%BD%9C%E8%B6%8A%E8%83%BD%E6%8A%8A%E7%9F%A5%E8%AD%98%E4%BA%A4%E7%B5%A6%20AI%EF%BC%8C%E7%82%BA%E4%BB%80%E9%BA%BC%E8%B6%8A%E4%B8%8D%E8%83%BD%E5%81%9C%E6%AD%A2%E5%AD%B8%E7%BF%92%EF%BC%9F.m4a",
+        "bytes": 15003064,
+        "seekSeconds": 120
+      },
+      {
+        "slug": "when-answers-are-abundant",
+        "chapterNumber": 6,
+        "url": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/when-answers-are-abundant/audio/06_%E7%AC%AC%E5%85%AD%E7%AB%A0%EF%BD%9C%E9%9D%A2%E5%B0%8D%E6%AF%94%E6%88%91%E6%87%82%E6%9B%B4%E5%A4%9A%E7%9A%84%E7%B3%BB%E7%B5%B1%EF%BC%8C%E6%88%91%E5%A6%82%E4%BD%95%E6%B1%BA%E5%AE%9A%E7%9B%B8%E4%BF%A1%E5%A4%9A%E5%B0%91%EF%BC%9F.m4a",
+        "bytes": 10778670,
+        "seekSeconds": 120
+      },
+      {
+        "slug": "when-answers-are-abundant",
+        "chapterNumber": 7,
+        "url": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/when-answers-are-abundant/audio/07_%E7%AC%AC%E4%B8%83%E7%AB%A0%EF%BD%9C%E5%81%9A%E5%BE%97%E5%87%BA%E4%BE%86%E4%B9%8B%E5%BE%8C%EF%BC%8C%E6%80%8E%E6%A8%A3%E6%89%8D%E7%AE%97%E7%9C%9F%E6%AD%A3%E4%BA%A4%E4%BB%98%EF%BC%9F.m4a",
+        "bytes": 8642309,
+        "seekSeconds": 120
+      },
+      {
+        "slug": "when-answers-are-abundant",
+        "chapterNumber": 8,
+        "url": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/when-answers-are-abundant/audio/08_%E7%AC%AC%E5%85%AB%E7%AB%A0%EF%BD%9C%E6%95%88%E7%8E%87%E8%AE%8A%E9%AB%98%E4%BA%86%EF%BC%8C%E7%82%BA%E4%BB%80%E9%BA%BC%E4%B8%8D%E4%B8%80%E5%AE%9A%E8%BC%AA%E5%88%B0%E6%88%91%E5%8F%97%E7%9B%8A%EF%BC%9F.m4a",
+        "bytes": 10072251,
+        "seekSeconds": 120
+      },
+      {
+        "slug": "when-answers-are-abundant",
+        "chapterNumber": 9,
+        "url": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/when-answers-are-abundant/audio/09_%E7%AC%AC%E4%B9%9D%E7%AB%A0%EF%BD%9C%E5%A6%82%E6%9E%9C%E4%B8%8D%E5%86%8D%E9%9D%A0%E6%AF%94%E6%A9%9F%E5%99%A8%E5%8E%B2%E5%AE%B3%EF%BC%8C%E6%88%91%E6%80%8E%E9%BA%BC%E7%90%86%E8%A7%A3%E8%87%AA%E5%B7%B1%E7%9A%84%E5%83%B9%E5%80%BC%EF%BC%9F.m4a",
+        "bytes": 13629577,
+        "seekSeconds": 120
+      },
+      {
+        "slug": "when-answers-are-abundant",
+        "chapterNumber": 10,
+        "url": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/when-answers-are-abundant/audio/10_%E7%AC%AC%E5%8D%81%E7%AB%A0%EF%BD%9C%E8%BA%AB%E7%82%BA%E8%AC%9B%E5%B8%AB%E3%80%81%E5%AF%A6%E4%BD%9C%E8%80%85%E8%88%87%E6%8E%A8%E5%BB%A3%E8%80%85%EF%BC%8C%E6%88%91%E8%A6%81%E5%A6%82%E4%BD%95%E9%87%8D%E6%96%B0%E7%AB%99%E4%BD%8D%EF%BC%9F.m4a",
+        "bytes": 9880216,
+        "seekSeconds": 120
+      },
+      {
+        "slug": "when-answers-are-abundant",
+        "chapterNumber": 11,
+        "url": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/when-answers-are-abundant/audio/11_%E7%AC%AC%E5%8D%81%E4%B8%80%E7%AB%A0%EF%BD%9C%E6%9C%AA%E4%BE%86%E4%B8%8D%E8%83%BD%E7%A2%BA%E5%AE%9A%EF%BC%8C%E6%88%91%E9%82%84%E6%98%AF%E8%83%BD%E5%81%9A%E5%93%AA%E4%BA%9B%E7%A9%A9%E5%81%A5%E6%BA%96%E5%82%99%EF%BC%9F.m4a",
+        "bytes": 14188230,
+        "seekSeconds": 120
+      },
+      {
+        "slug": "when-answers-are-abundant",
+        "chapterNumber": 12,
+        "url": "https://hc19wx0kv1haeerb.public.blob.vercel-storage.com/books/when-answers-are-abundant/audio/12_%E7%AC%AC%E5%8D%81%E4%BA%8C%E7%AB%A0%EF%BD%9C%E4%B8%8D%E6%98%AF%E8%BF%BD%E4%B8%8A%20AI%EF%BC%8C%E8%80%8C%E6%98%AF%E5%BB%BA%E7%AB%8B%E8%83%BD%E6%8C%81%E7%BA%8C%E4%BF%AE%E6%AD%A3%E7%9A%84%E8%87%AA%E5%B7%B1.m4a",
+        "bytes": 13929494,
+        "seekSeconds": 120
+      }
+    ]
+  },
+  "localStaging": {
+    "status": "preserved-outside-public",
+    "count": 12,
+    "archiveFolder": "tmp/when-answers-complete-v1-20261009-08d79e14/validated-audio-staging",
+    "sha256Checked": true
+  }
 }
